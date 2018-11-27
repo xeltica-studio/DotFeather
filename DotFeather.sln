@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotFeather", "DotFeather\DotFeather.csproj", "{2ACE8212-D057-459D-A088-21F734BC7A3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotFeather.Test.NetCore", "DotFeather.Test.NetCore\DotFeather.Test.NetCore.csproj", "{87982A1E-FCFD-481B-91A0-A5A94B68496A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ACE8212-D057-459D-A088-21F734BC7A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACE8212-D057-459D-A088-21F734BC7A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ACE8212-D057-459D-A088-21F734BC7A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ACE8212-D057-459D-A088-21F734BC7A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87982A1E-FCFD-481B-91A0-A5A94B68496A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87982A1E-FCFD-481B-91A0-A5A94B68496A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87982A1E-FCFD-481B-91A0-A5A94B68496A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87982A1E-FCFD-481B-91A0-A5A94B68496A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

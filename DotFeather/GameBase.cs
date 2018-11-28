@@ -25,6 +25,15 @@ namespace DotFeather
 			RefreshRate = refreshRate;
 
 			window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow);
+			window.UpdateFrame += (object sender, FrameEventArgs e) => OnUpdate(this, new DFEventArgs
+			{
+				DeltaTime = e.Time,
+			});
+		}
+
+		protected virtual void OnUpdate(object sender, DFEventArgs e)
+		{
+
 		}
 
 		public int Run()
@@ -37,6 +46,7 @@ namespace DotFeather
 		{
 			statusCode = status;
 			window.Close();
+
 		}
 	}
 }

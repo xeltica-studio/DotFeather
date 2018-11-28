@@ -1,18 +1,33 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using OpenTK;
 using OpenTK.Graphics;
+using OpenTK.Input;
 
 namespace DotFeather
 {
 	public abstract partial class GameBase
 	{
-		public int Width { get; }
-		public int Height { get;}
+		public int Width
+		{
+			get => window?.Width ?? 0;
+			set => window.Width = value;
+		}
+
+		public int Height
+		{
+			get => window?.Height ?? 0;
+			set => window.Height = value;
+		}
 
 		public int RefreshRate { get; }
 
-		public string Title { get; }
+		public string Title
+		{
+			get => window?.Title;
+			set => window.Title = value;
+		}
+
+		public Input Input { get; } = new Input();
 
 		private int? statusCode;
 
@@ -20,8 +35,6 @@ namespace DotFeather
 
 		protected GameBase(int width, int height, string title = null, int refreshRate = 60)
 		{
-			Width = width;
-			Height = height;
 			RefreshRate = refreshRate;
 
 			window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow);

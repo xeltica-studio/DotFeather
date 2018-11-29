@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using OpenTK;
 using OpenTK.Graphics;
+using OpenTK.Graphics.OpenGL;
+//using OpenTK.Graphics.ES20;
 using OpenTK.Input;
 
 namespace DotFeather
@@ -49,11 +51,29 @@ namespace DotFeather
 				DeltaTime = e.Time,
 			});
 
+			//window.VSync = VSyncMode.On;
+
 			window.RenderFrame += (object sender, FrameEventArgs e) => 
 			{
+				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 				Layers.ForEach(l => l.Draw(this));
+				window.SwapBuffers();
 			};
 
+			window.Load += (object sender, EventArgs e) => 
+			{
+				GL.ClearColor(Color.Black);
+				GL.LineWidth(1);
+				window.VSync = VSyncMode.On;
+
+				GL.Enable(EnableCap.DepthTest);
+				window.WindowBorder = WindowBorder.Resizable;
+			};
+
+			window.Resize += (object sender, EventArgs e) => 
+			{
+				GL.Viewport(window.ClientRectangle);
+			};
 		}
 
 		protected virtual void OnUpdate(object sender, DFEventArgs e)

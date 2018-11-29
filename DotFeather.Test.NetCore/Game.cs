@@ -4,10 +4,6 @@ namespace DotFeather.Test.NetCore
 {
 	class Game : GameBase
 	{
-		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
-		{
-			this.title = Title;
-		}
 
 		string title;
 
@@ -18,6 +14,10 @@ namespace DotFeather.Test.NetCore
 				g.Run();
 			}
 		}
+
+		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
+		{
+			this.title = Title;
 		}
 
 		protected override void OnUpdate(object sender, DFEventArgs e)
@@ -31,6 +31,12 @@ namespace DotFeather.Test.NetCore
 				title = "いぬ";
 			if (Input.Keyboard.F3.IsPressed)
 				title = "さる";
+			if (Input.Keyboard.F4.IsPressed)
+			{
+				Width = Random.Next(64, 256);
+				Height = Random.Next(64, 256);
+			}
+
 
 			Title = $"{title} - {(int)(1 / e.DeltaTime + .5)}fps";
 		}

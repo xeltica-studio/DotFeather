@@ -31,6 +31,7 @@ namespace DotFeather
 
 		public Input Input { get; } = new Input();
 
+		public List<ILayer> Layers { get; } = new List<ILayer>();
 
 
 		public void Randomize(int? seed = null)
@@ -47,6 +48,12 @@ namespace DotFeather
 			{
 				DeltaTime = e.Time,
 			});
+
+			window.RenderFrame += (object sender, FrameEventArgs e) => 
+			{
+				Layers.ForEach(l => l.Draw(this));
+			};
+
 		}
 
 		protected virtual void OnUpdate(object sender, DFEventArgs e)

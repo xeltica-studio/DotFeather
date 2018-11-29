@@ -1,8 +1,5 @@
 ﻿using System;
 namespace DotFeather
 {
-	public interface ILayer
-	{
-		
-	}
+	public interface ILayer : IDrawable { }
 }

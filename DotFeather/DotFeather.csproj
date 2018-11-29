@@ -10,5 +10,6 @@
   <ItemGroup>
     <Folder Include="Layer\" />
     <Folder Include="Input\" />
+    <Folder Include="Layer\Graphic\" />
   </ItemGroup>
 </Project>

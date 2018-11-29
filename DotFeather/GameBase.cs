@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Input;
@@ -29,9 +31,7 @@ namespace DotFeather
 
 		public Input Input { get; } = new Input();
 
-		private int? statusCode;
 
-		private readonly GameWindow window;
 
 		public void Randomize(int? seed = null)
 		{
@@ -66,6 +66,9 @@ namespace DotFeather
 			window.Close();
 
 		}
+
+		private int? statusCode;
+		private readonly GameWindow window;
 		protected Random Random { get; private set; } = new Random();
 	}
 }

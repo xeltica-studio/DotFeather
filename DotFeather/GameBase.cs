@@ -9,14 +9,14 @@ namespace DotFeather
 	{
 		public int Width
 		{
-			get => window?.Width ?? 0;
-			set => window.Width = value;
+			get => window.Size.Width;
+			set => window.Size = new Size(value, window.Size.Height);
 		}
 
 		public int Height
 		{
-			get => window?.Height ?? 0;
-			set => window.Height = value;
+			get => window.Size.Height;
+			set => window.Size = new Size(window.Size.Width, value);
 		}
 
 		public int RefreshRate { get; }

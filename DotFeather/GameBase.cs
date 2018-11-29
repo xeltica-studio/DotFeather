@@ -33,6 +33,11 @@ namespace DotFeather
 
 		private readonly GameWindow window;
 
+		public void Randomize(int? seed = null)
+		{
+			Random = seed is int s ? new Random(s) : new Random();
+		}
+
 		protected GameBase(int width, int height, string title = null, int refreshRate = 60)
 		{
 			RefreshRate = refreshRate;
@@ -61,5 +66,6 @@ namespace DotFeather
 			window.Close();
 
 		}
+		protected Random Random { get; private set; } = new Random();
 	}
 }

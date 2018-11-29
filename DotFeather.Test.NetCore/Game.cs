@@ -13,7 +13,11 @@ namespace DotFeather.Test.NetCore
 
 		static void Main(string[] args)
 		{
-			new Game(640, 480).Run();
+			using (var g = new Game(640, 480))
+			{
+				g.Run();
+			}
+		}
 		}
 
 		protected override void OnUpdate(object sender, DFEventArgs e)

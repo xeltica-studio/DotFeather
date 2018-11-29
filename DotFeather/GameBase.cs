@@ -7,7 +7,7 @@ using OpenTK.Input;
 
 namespace DotFeather
 {
-	public abstract partial class GameBase
+	public abstract class GameBase : IDisposable
 	{
 		public int Width
 		{
@@ -64,7 +64,11 @@ namespace DotFeather
 		{
 			statusCode = status;
 			window.Close();
+		}
 
+		public void Dispose()
+		{
+			window.Dispose();
 		}
 
 		private int? statusCode;

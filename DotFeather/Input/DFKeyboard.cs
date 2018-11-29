@@ -2,6 +2,9 @@
 
 namespace DotFeather
 {
+	/// <summary>
+	/// キーボード入力
+	/// </summary>
 	public class DFKeyboard
 	{
 		public DFKey Unknown { get; } = new DFKey(Key.Unknown);

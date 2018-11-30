@@ -3,9 +3,9 @@
 namespace DotFeather
 {
 	/// <summary>
-	/// キーボード入力
+	/// キーボードのキーが押されているかどうか判別するクラスです。
 	/// </summary>
-	public class DFKeyboard
+	public sealed class DFKeyboard
 	{
 		public DFKey Unknown { get; } = new DFKey(Key.Unknown);
 		public DFKey ShiftLeft { get; } = new DFKey(Key.ShiftLeft);

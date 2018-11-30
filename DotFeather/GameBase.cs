@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Drawing.Imaging;
+using SDBitmap = System.Drawing.Bitmap;
+using SDRect = System.Drawing.Rectangle;
+using SDPixelFormat = System.Drawing.Imaging.PixelFormat;
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
-//using OpenTK.Graphics.ES20;
-using OpenTK.Input;
 
 namespace DotFeather
 {
@@ -109,7 +110,7 @@ namespace DotFeather
 			RefreshRate = refreshRate;
 
 			window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow);
-			window.UpdateFrame += (object sender, FrameEventArgs e) => OnUpdate(this, new DFEventArgs
+			window.UpdateFrame += (object sender, FrameEventArgs e) => OnUpdate(sender, new DFEventArgs
 			{
 				DeltaTime = e.Time,
 			});
@@ -140,6 +141,8 @@ namespace DotFeather
 
 		{
 
+				OnUnload(sender, e);
+			};
 		}
 
 		/// <summary>
@@ -147,6 +150,18 @@ namespace DotFeather
 		/// </summary>
 		protected virtual void OnUpdate(object sender, DFEventArgs e) { }
 
+		/// <summary>
+		/// ウィンドウが開かれたときに一度だけ呼び出されます。
+		/// </summary>
+		protected virtual void OnLoad(object sender, EventArgs e) { }
+		/// <summary>
+		/// ウィンドウが閉じられるときに一度だけ呼び出されます。
+		/// </summary>
+		protected virtual void OnUnload(object sender, EventArgs e) { }
+		/// <summary>
+		/// ウィンドウがリサイズされたときに呼び出されます。
+		/// </summary>
+		protected virtual void OnResize(object sender, EventArgs e) { }
 
 		{
 		}

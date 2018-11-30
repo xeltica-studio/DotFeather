@@ -25,6 +25,10 @@ namespace DotFeather.Test.NetCore
 			this.title = Title;
 			g = new GraphicLayer();
 			this.Layers.Add(g);
+		}
+
+		protected override void OnLoad(object sender, EventArgs e)
+		{
 			g.Line(0, 0, 320, 240, Color.Red);
 			g.Line(320, 0, 0, 240, Color.Blue);
 			g.Line(0, 120, 320, 120, Color.Lime);

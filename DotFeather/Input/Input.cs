@@ -1,8 +1,7 @@
 ﻿namespace DotFeather
 {
-	public class Input
+	public static class Input
 	{
-		public DFKeyboard Keyboard { get; } = new DFKeyboard();
+		public static DFKeyboard Keyboard { get; } = new DFKeyboard();
 	}
-
 }

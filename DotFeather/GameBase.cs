@@ -134,6 +134,8 @@ namespace DotFeather
 			window.Close();
 		}
 
+		public float Dpi { get; private set; }
+
 		/// <summary>
 		/// Releases all resource used by the <see cref="T:DotFeather.GameBase"/> object.
 		/// </summary>
@@ -168,6 +170,7 @@ namespace DotFeather
 				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 				Layers.ForEach(l => l.Draw(this));
 				window.SwapBuffers();
+				Dpi = (float)window.ClientSize.Width / window.Size.Width;
 			};
 
 			window.Load += (object sender, EventArgs e) =>
@@ -178,7 +181,6 @@ namespace DotFeather
 
 				GL.Enable(EnableCap.DepthTest);
 				window.WindowBorder = WindowBorder.Resizable;
-
 				OnLoad(sender, e);
 			};
 
@@ -193,6 +195,11 @@ namespace DotFeather
 				// テクスチャを全て解放する
 				textures?.ForEach(t => GL.DeleteTexture(t.Handle));
 				OnUnload(sender, e);
+			};
+
+			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
+			{
+				Input.Mouse.Position = new System.Drawing.Point((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
 			};
 		}
 

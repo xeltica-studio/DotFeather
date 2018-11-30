@@ -13,14 +13,7 @@ namespace DotFeather
 		/// マウスカーソルの座標を取得します。
 		/// </summary>
 		/// <value>The position.</value>
-		public Point Position
-		{
-			get
-			{
-				var s = Mouse.GetState();
-				return new Point(s.X, s.Y);
-			}
-		}
+		public Point Position { get; internal set; }
 
 		public bool IsLeftClicked => Mouse.GetState().LeftButton == ButtonState.Pressed;
 		public bool IsRightClicked => Mouse.GetState().RightButton == ButtonState.Pressed;
@@ -34,7 +27,5 @@ namespace DotFeather
 				return (s.X, s.Y);
 			}
 		}
-
-
 	}
 }

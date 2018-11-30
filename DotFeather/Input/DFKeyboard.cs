@@ -3,7 +3,7 @@
 namespace DotFeather
 {
 	/// <summary>
-	/// キーボードのキーが押されているかどうか判別するクラスです。
+	/// キーボードのキーが押されているかどうか判別するクラスです。このクラスは継承できません。
 	/// </summary>
 	public sealed class DFKeyboard
 	{

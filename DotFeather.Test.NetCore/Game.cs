@@ -22,9 +22,9 @@ namespace DotFeather.Test.NetCore
 		Texture2D[] catTexture;
 		//readonly TextureDrawable catDrawable;
 
-		Vector2 nekoPos;
+		Vector nekoPos;
 
-		Vector2 nekoVel;
+		Vector nekoVel;
 
 		int ground;
 
@@ -34,7 +34,7 @@ namespace DotFeather.Test.NetCore
 			this.title = Title;
 			g = new GraphicLayer();
 			this.Layers.Add(g);
-			nekoPos = new Vector2(width / 2, height / 2);
+			nekoPos = new Vector(width / 2, height / 2);
 			ground = height - 96;
 		}
 

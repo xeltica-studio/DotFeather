@@ -6,6 +6,6 @@ namespace DotFeather
 	public static class SpaceConverter
 	{
 		public static Vector2 ToViewportPoint(this Vector2 dp, float halfWidth, float halfHeight) 
-			=> new Vector2((int)((dp.X - halfWidth) / halfWidth), (int)(-(dp.Y - halfHeight) / halfHeight));
+			=> new Vector2((dp.X - halfWidth) / halfWidth, -(dp.Y - halfHeight) / halfHeight);
 	}
 }

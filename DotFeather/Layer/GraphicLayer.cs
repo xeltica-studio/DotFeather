@@ -100,6 +100,17 @@ namespace DotFeather
 		}
 
 		/// <summary>
+		/// テクスチャを描画します。
+		/// </summary>
+		/// <param name="x">The first x value.</param>
+		/// <param name="y">The first y value.</param>
+		/// <param name="texture">テクスチャ。</param>
+		public void Texture(int x, int y, Texture2D texture)
+		{
+			Drawables.Add(new TextureDrawable(texture, x, y));
+		}
+
+		/// <summary>
 		/// このグラフィックレイヤーを削除します。
 		/// </summary>
 		public void Clear()

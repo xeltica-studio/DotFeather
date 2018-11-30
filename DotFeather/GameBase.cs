@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing.Imaging;
 using SDBitmap = System.Drawing.Bitmap;
 using SDRect = System.Drawing.Rectangle;
+using SDSize = System.Drawing.Size;
 using SDPixelFormat = System.Drawing.Imaging.PixelFormat;
 using OpenTK;
 using OpenTK.Graphics;
@@ -66,7 +67,7 @@ namespace DotFeather
 		{
 			using (var file = new SDBitmap(path))
 			{
-				return RegisterTexture(file.LockBits(new SDRect(0, 0, file.Width, file.Height), ImageLockMode.ReadOnly, SDPixelFormat.Format32bppArgb));
+				return　RegisterTexture(file.LockBits(new SDRect(0, 0, file.Width, file.Height), ImageLockMode.ReadOnly, SDPixelFormat.Format32bppArgb));
 			}
 		}
 
@@ -78,7 +79,7 @@ namespace DotFeather
 		/// <param name="horizonalCount">横方向の画像の枚数。</param>
 		/// <param name="verticalCount">盾向の画像の枚数。</param>
 		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
-		public Texture2D[] LoadDividedImage(string path, int horizonalCount, int verticalCount, Size sizeOfCroppedImage)
+		public Texture2D[] LoadDividedImage(string path, int horizonalCount, int verticalCount, SDSize sizeOfCroppedImage)
 		{
 			using (var file = new SDBitmap(path))
 			{
@@ -89,16 +90,18 @@ namespace DotFeather
 					for (int x = 0; x < horizonalCount; x++)
 					{
 						(var px, var py) = (x * sizeOfCroppedImage.Width, y * sizeOfCroppedImage.Height);
-						if (px + sizeOfCroppedImage.Width >= file.Width)
+						if (px + sizeOfCroppedImage.Width > file.Width)
 						{
 							throw new ArgumentException(nameof(horizonalCount));
 						}
-						if (py + sizeOfCroppedImage.Height >= file.Height)
+						if (py + sizeOfCroppedImage.Height > file.Height)
 						{
-							throw new ArgumentException(nameof(horizonalCount));
+							throw new ArgumentException(nameof(verticalCount));
 						}
-
-						datas.Add(RegisterTexture(file.LockBits(new SDRect(px, py, sizeOfCroppedImage.Width, sizeOfCroppedImage.Height), ImageLockMode.ReadOnly, SDPixelFormat.Format32bppArgb)));
+						var locked = file.LockBits(new SDRect(px, py, sizeOfCroppedImage.Width, sizeOfCroppedImage.Height), ImageLockMode.ReadOnly, SDPixelFormat.Format32bppArgb);
+						Console.WriteLine($"{locked.Scan0.ToInt64()}");
+						datas.Add(RegisterTexture(locked));
+						file.UnlockBits(locked);
 					}
 				}
 				return datas.ToArray();
@@ -231,9 +234,9 @@ namespace DotFeather
 
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
-
+			Console.WriteLine(texture);
 			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, bmp.Width, bmp.Height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Bgra, PixelType.UnsignedByte, bmp.Scan0);
-			return new Texture2D(texture, new System.Drawing.Size(bmp.Width, bmp.Height));
+			return new Texture2D(texture, new SDSize(bmp.Width, bmp.Height));
 		}
 
 		private int? statusCode;

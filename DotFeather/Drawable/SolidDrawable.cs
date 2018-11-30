@@ -31,15 +31,16 @@ namespace DotFeather
 			var hw = game.Width / 2;
 			var hh = game.Height / 2;
 
-			GL.Begin(Primitive);
-			foreach (var dp in Buffer)
+			using (new GLContext(Primitive))
 			{
-				// Convert device point to viewport point
-				var vp = dp.ToViewportPoint(hw, hh);
-				GL.Color4(color);
-				GL.Vertex2(vp);
+				foreach (var dp in Buffer)
+				{
+					// Convert device point to viewport point
+					var vp = dp.ToViewportPoint(hw, hh);
+					GL.Color4(color);
+					GL.Vertex2(vp);
+				}
 			}
-			GL.End();
 		}
 	}
 

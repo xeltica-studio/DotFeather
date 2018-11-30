@@ -27,8 +27,8 @@ namespace DotFeather
 			var v2 = new Vector2(Location.X + Texture.Size.Width, Location.Y).ToViewportPoint(hw, hh);
 			var v3 = new Vector2(Location.X, Location.Y + Texture.Size.Height).ToViewportPoint(hw, hh);
 			var v4 = new Vector2(Location.X + Texture.Size.Width, Location.Y + Texture.Size.Height).ToViewportPoint(hw, hh);
-
-			GL.Begin(PrimitiveType.Quads);
+			using (new GLContext(PrimitiveType.Quads))
+			{
 				GL.TexCoord2(1.0, 1.0);
 				GL.Vertex3(v2.X, v2.X, 0);
 
@@ -40,7 +40,7 @@ namespace DotFeather
 
 				GL.TexCoord2(1.0, 0.0);
 				GL.Vertex3(v4.X, v4.Y, 0);
-			GL.End();
+			}
 		}
 	}
 }

@@ -3,9 +3,9 @@ namespace DotFeather
 {
 	public struct Vector : IEquatable<Vector>
 	{
-		public int X { get; set; }
-		public int Y { get; set; }
-		public Vector(int x, int y)
+		public float X { get; set; }
+		public float Y { get; set; }
+		public Vector(float x, float y)
 		{
 			X = x;
 			Y = y;
@@ -13,8 +13,8 @@ namespace DotFeather
 
 		public static Vector operator +(Vector v1, Vector v2) => new Vector(v1.X + v2.X, v1.Y + v2.Y);
 		public static Vector operator -(Vector v1, Vector v2) => new Vector(v1.X - v2.X, v1.Y - v2.Y);
-		public static Vector operator *(Vector v1, int v2) => new Vector(v1.X * v2, v1.Y - v2);
-		public static Vector operator /(Vector v1, int v2) => new Vector(v1.X / v2, v1.Y / v2);
+		public static Vector operator *(Vector v1, float v2) => new Vector(v1.X * v2, v1.Y - v2);
+		public static Vector operator /(Vector v1, float v2) => new Vector(v1.X / v2, v1.Y / v2);
 		public static Vector operator -(Vector v1) => new Vector(-v1.X, -v1.Y);
 
 		public static bool operator ==(Vector v1, Vector v2) => v1.X == v2.X && v1.Y == v2.Y;
@@ -38,5 +38,7 @@ namespace DotFeather
 			hashCode = hashCode * -1521134295 + Y.GetHashCode();
 			return hashCode;
 		}
+
+		public override string ToString() => $"({X}, {Y})";
 	}
 }

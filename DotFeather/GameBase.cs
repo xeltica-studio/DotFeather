@@ -163,6 +163,8 @@ namespace DotFeather
 			RefreshRate = refreshRate;
 
 			window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow);
+			window.VSync = VSyncMode.On;
+			window.TargetRenderFrequency = window.TargetUpdateFrequency = refreshRate;
 			window.UpdateFrame += (object sender, FrameEventArgs e) => OnUpdate(sender, new DFEventArgs
 			{
 				DeltaTime = e.Time,

@@ -1,6 +1,6 @@
 ﻿using OpenTK.Input;
 
-namespace DotFeather
+namespace DotFeather.InputSystems
 {
 	/// <summary>
 	/// DotFeather APIにおいて、キーボードのキーを表します。ユーザーがインスタンスを初期化するものではありません。

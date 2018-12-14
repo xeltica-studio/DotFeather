@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
-namespace DotFeather
+namespace DotFeather.Drawable
 {
 	/// <summary>
 	/// テクスチャを描画します。

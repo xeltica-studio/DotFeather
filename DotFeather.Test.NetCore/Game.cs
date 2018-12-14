@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Drawing;
+using DotFeather.Drawable;
+using DotFeather.InputSystems;
+using DotFeather.Layer;
 
 namespace DotFeather.Test.NetCore
 {

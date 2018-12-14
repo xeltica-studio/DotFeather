@@ -3,7 +3,7 @@ using OpenTK;
 using System.Linq;
 using OpenTK.Graphics.OpenGL;
 
-namespace DotFeather
+namespace DotFeather.Drawable
 {
 	public class SolidDrawable : IDrawable
 	{

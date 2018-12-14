@@ -17,6 +17,7 @@ namespace DotFeather
 		public static Vector operator /(Vector v1, float v2) => new Vector(v1.X / v2, v1.Y / v2);
 		public static Vector operator -(Vector v1) => new Vector(-v1.X, -v1.Y);
 
+#pragma warning disable RECS0018
 		public static bool operator ==(Vector v1, Vector v2) => v1.X == v2.X && v1.Y == v2.Y;
 		public static bool operator !=(Vector v1, Vector v2) => v1.X != v2.X || v1.Y != v2.Y;
 
@@ -29,6 +30,7 @@ namespace DotFeather
 		{
 			return X == other.X &&
 				   Y == other.Y;
+#pragma warning restore RECS0018
 		}
 
 		public override int GetHashCode()

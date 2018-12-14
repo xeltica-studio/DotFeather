@@ -1,6 +1,6 @@
 ﻿using OpenTK.Input;
 
-namespace DotFeather
+namespace DotFeather.InputSystems
 {
 	/// <summary>
 	/// キーボードのキーが押されているかどうか判別するクラスです。このクラスは継承できません。

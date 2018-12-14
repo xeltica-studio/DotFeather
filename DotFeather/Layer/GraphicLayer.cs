@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using DotFeather.Drawable;
 using OpenTK.Graphics.OpenGL;
 
-namespace DotFeather
+namespace DotFeather.Layer
 {
 	/// <summary>
 	/// 図形描画を行える、グラフィック用のレイヤーです。
@@ -124,5 +125,4 @@ namespace DotFeather
 			throw new NotImplementedException("Wait!");
 		}
 	}
-
 }

@@ -1,4 +1,4 @@
-﻿namespace DotFeather
+﻿namespace DotFeather.Drawable
 {
 	/// <summary>
 	/// 描画処理を行うクラスはすべてこのインターフェイスを実装します。

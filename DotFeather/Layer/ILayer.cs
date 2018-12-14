@@ -1,5 +1,7 @@
 ﻿using System;
-namespace DotFeather
+using DotFeather.Drawable;
+
+namespace DotFeather.Layer
 {
 	/// <summary>
 	/// DotFeather レイヤーはこのインターフェイスを実装します。

@@ -2,7 +2,7 @@
 using OpenTK.Input;
 
 
-namespace DotFeather
+namespace DotFeather.InputSystems
 {
 	/// <summary>
 	/// マウス カーソルの位置、マウスボタンの状態などを取得するクラスです。このクラスは継承できません。

@@ -14,11 +14,13 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="OpenTK.NetStandard" Version="1.0.4" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Layer\" />
-    <Folder Include="Input\" />
-    <Folder Include="Layer\Graphic\" />
+    <Folder Include="InputSystems\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Drawable\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

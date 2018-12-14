@@ -1,11 +1,11 @@
 ﻿using OpenTK.Input;
 
-namespace DotFeather
+namespace DotFeather.InputSystems
 {
 	/// <summary>
-	/// キーボード入力
+	/// キーボードのキーが押されているかどうか判別するクラスです。このクラスは継承できません。
 	/// </summary>
-	public class DFKeyboard
+	public sealed class DFKeyboard
 	{
 		public DFKey Unknown { get; } = new DFKey(Key.Unknown);
 		public DFKey ShiftLeft { get; } = new DFKey(Key.ShiftLeft);

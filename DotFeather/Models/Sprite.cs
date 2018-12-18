@@ -13,7 +13,7 @@ namespace DotFeather.Models
 		/// このスプライトの角度情報を取得または設定します。
 		/// </summary>
 		/// <value>The rotation.</value>
-		public Vector Rotation { get; set; }
+		public float Angle { get; set; }
 
 		/// <summary>
 		/// スプライトのタグを取得または設定します。

@@ -13,8 +13,6 @@ namespace DotFeather.Drawable
 
 		public PrimitiveType Primitive { get; }
 
-		//private readonly float[] colorArray;
-
 		public SolidDrawable(Color c, PrimitiveType primitive, params PointF[] vertexs)
 		{
 			color = c;

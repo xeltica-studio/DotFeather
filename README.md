@@ -16,7 +16,29 @@ nuget restore
 dotnet build
 ```
 
-I'm going to publish DotFeather to nuget ASAP.
+## Example
+
+### Draw Shapes
+
+```cs
+// in class Game : GameBase
+var g = new GraphicLayer();
+this.Layers.Add(g);
+
+g.Line(0, 0, 400, 400, Color.Red);
+g.Line(0, 400, 0, 400, Color.Blue);
+g.Circle(0, 0, 400, 400, Color.Green);
+```
+
+[Full Sample code](DotFeather.Test.NetCore)
+
+## Contributing
+
+coming soon
+
+## Donate
+
+You want to donate for me? Thank you very much! Please see [this page](//citringo.net/en/donation.html) how to pay me.
 
 ## LICENSE
 

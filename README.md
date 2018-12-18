@@ -7,6 +7,8 @@
 
 DotFeather is a lightweight generic 2D gameengine for C#/.NET Standard 2.0.
 
+[日本語](README-ja.md) ・ English
+
 ## To Build
 
 ```

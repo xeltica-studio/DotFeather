@@ -30,11 +30,5 @@ namespace DotFeather.Models
 		/// スプライトのスケールを取得または設定します。
 		/// </summary>
 		public Vector Scale { get; set; }
-
-
-		public Sprite()
-		{
-
-		}
 	}
 }

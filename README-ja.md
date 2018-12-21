@@ -1,4 +1,4 @@
-# DotFeather [![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg?style=flat-square)][issues] [![GitHub pull requests](https://img.shields.io/github/issues-pr/cdnjs/cdnjs.svg?style=flat-square)][pulls] [![GitHub Releases](https://img.shields.io/github/release/xeltica/DotFeather.svg?style=flat-square)][releases] [![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=flat-square)](LICENSE)
+# DotFeather [![GitHub issues](https://img.shields.io/github/issues/xeltica/dotfeather.svg?style=flat-square)][issues] [![GitHub pull requests](https://img.shields.io/github/issues-pr/xeltica/dotfeather.svg?style=flat-square)][pulls] [![GitHub Releases](https://img.shields.io/github/release/xeltica/DotFeather.svg?style=flat-square)][releases] [![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=flat-square)](LICENSE)
 
 [issues]: /xeltica/dotfeather/issues
 [pulls]: /xeltica/dotfeather/pulls

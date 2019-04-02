@@ -15,6 +15,9 @@ namespace DotFeather.Drawable
 
 		public int ZOrder { get; set; }
 		public string Name { get; set; }
+		public Vector Location { get; set; }
+		public float Angle { get; set; }
+		public Vector Scale { get; set; }
 
 		public PrimitiveDrawable(Color c, PrimitiveType primitive, params PointF[] vertexs)
 		{
@@ -36,8 +39,9 @@ namespace DotFeather.Drawable
 			{
 				foreach (var dp in Buffer)
 				{
+					var vec = dp + new Vector2(Location.X, Location.Y);
 					// Convert device point to viewport point
-					var vp = dp.ToViewportPoint(hw, hh);
+					var vp = vec.ToViewportPoint(hw, hh);
 					GL.Color4(color);
 					GL.Vertex2(vp);
 				}

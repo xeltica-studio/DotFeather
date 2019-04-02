@@ -17,6 +17,12 @@
 		int ZOrder { get; set; }
 
 		string Name { get; set; }
+
+		Vector Location { get; set; }
+
+		float Angle { get; set; }
+
+		Vector Scale { get; set; }
 	}
 
 }

@@ -17,6 +17,10 @@ namespace DotFeather.Drawable
 		/// <value>描画可能オブジェクトのリスト。</value>
 		public List<IDrawable> Drawables { get; } = new List<IDrawable>();
 
+		public Vector Location { get; set; }
+		public float Angle { get; set; }
+		public Vector Scale { get; set; }
+
 		/// <summary>
 		/// 実際に画面へ描画を行います。
 		/// </summary>
@@ -24,7 +28,10 @@ namespace DotFeather.Drawable
 		public void Draw(GameBase game)
 		{
 			// Drawables を用いて毎フレーム描画を行う
-			Drawables.ForEach(d => d.Draw(game));
+			Drawables.ForEach(d => {
+				d.Location = Location;
+				d.Draw(game);
+			});
 		}
 
 		public int ZOrder { get; set; }

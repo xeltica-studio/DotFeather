@@ -13,7 +13,7 @@ namespace DotFeather
 
 		public static Vector operator +(Vector v1, Vector v2) => new Vector(v1.X + v2.X, v1.Y + v2.Y);
 		public static Vector operator -(Vector v1, Vector v2) => new Vector(v1.X - v2.X, v1.Y - v2.Y);
-		public static Vector operator *(Vector v1, float v2) => new Vector(v1.X * v2, v1.Y - v2);
+		public static Vector operator *(Vector v1, float v2) => new Vector(v1.X * v2, v1.Y * v2);
 		public static Vector operator /(Vector v1, float v2) => new Vector(v1.X / v2, v1.Y / v2);
 		public static Vector operator -(Vector v1) => new Vector(-v1.X, -v1.Y);
 
@@ -42,5 +42,8 @@ namespace DotFeather
 		}
 
 		public override string ToString() => $"({X}, {Y})";
+
+		public static readonly Vector Zero = new Vector(0, 0);
+		public static readonly Vector One = new Vector(1, 1);
 	}
 }

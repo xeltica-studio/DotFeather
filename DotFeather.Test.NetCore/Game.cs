@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using DotFeather.Drawable;
 using DotFeather.InputSystems;
 using DotFeather.Models;
@@ -8,9 +9,25 @@ namespace DotFeather.Test.NetCore
 {
 	class Game : GameBase
 	{
+		Texture2D[] chars;
+		Texture2D[] field;
+
+		int charIndex;
+		int animIndex;
+
+		bool prevIsWalking;
+		bool isWalking;
+
+		Container sprite;
+		Sprite spriteChar;
+
+		int prevSecond, fps, f;
+
+		double time;
+
 		static void Main(string[] args)
 		{
-			using (var g = new Game(640, 480))
+			using (var g = new Game(320, 240))
 			{
 				g.Run();
 			}
@@ -19,21 +36,103 @@ namespace DotFeather.Test.NetCore
 
 		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{
-			Title = "New Game";
+
 		}
 
 		protected override void OnLoad(object sender, EventArgs e)
 		{
-			var texture = LoadImage("cat.png");
-			var sprite = new Sprite(texture, 4, 1, 0, new Vector(16, 24));
+			chars = LoadDividedImage("Char.png", 6, 4, new Size(14, 20));
+			//field = LoadDividedImage("Field.png", 1, 5, new Size(16, 16));
 
-			this.Children.Add(sprite);
+			sprite = new Container
+			{
+				Location = new Vector(32, 32)
+			};
+
+			var s = spriteChar = new Sprite(chars[0], 0, 0, 0, Vector.One);
+			sprite.Children.Add(new Sprite(LoadImage("Shadow.png"), 0, 14));
+			sprite.Children.Add(s);
+			sprite.Location = new Vector(Width / 2, Height / 2);
+
+			s.ZOrder = -1;
+
+			Task.Factory.StartNew(() =>
+			{
+				for (int _ = 0; _ < 10; _++)
+				{
+					Task.Factory.StartNew(async () =>
+					{
+						var sp = new Sprite(chars[0], Random.Next(-Width, Width * 2), Random.Next(-Height, Height * 2));
+						Children.Add(sp);
+
+						while (!Input.Keyboard.F1.IsPressed)
+							await Task.Delay(10);
+
+						while (true)
+							for (int i = 0; i < 8; i++)
+							{
+								sp.Texture = chars[i * 3];
+								await Task.Delay(64);
+							}
+					});
+				}
+			});
+
+			BackgroundColor = Color.SpringGreen;
+			Children.Add(sprite);
 		}
 
 		protected override void OnUpdate(object sender, DFEventArgs e)
 		{
 			if (Input.Keyboard.Escape.IsPressed)
 				Exit(0);
+
+			var sec = DateTime.Now.Second;
+
+			var x = Input.Keyboard.Left.IsPressed ? -1 : Input.Keyboard.Right.IsPressed ? 1 : 0;
+			var y = Input.Keyboard.Up.IsPressed ? -1 : Input.Keyboard.Down.IsPressed ? 1 : 0;
+
+			if (x != 0 || y != 0)
+			{
+				charIndex = y == +1 ? (x == -1 ? 1 : x == +1 ? 3 : 0) :
+							y == -1 ? (x == -1 ? 5 : x == +1 ? 7 : 6) :
+									  (x == -1 ? 2 : x == +1 ? 4 : charIndex);
+				charIndex *= 3;
+				sprite.Location += new Vector(x, y) * 2;
+				Root.Location -= new Vector(x, y) * 2;
+				time += e.DeltaTime;
+				isWalking = true;
+			}
+			else
+			{
+				animIndex = 1;
+				time = 0;
+				isWalking = false;
+			}
+
+			if (time > 0.08f)
+			{
+				animIndex++;
+				if (animIndex > 3)
+					animIndex = 0;
+
+				time = 0;
+			}
+
+			if (sec != prevSecond)
+			{
+				fps = f;
+				f = 0;
+				prevSecond = sec;
+			}
+
+			f++;
+
+			spriteChar.Texture = chars[charIndex + (animIndex == 3 ? 1 : animIndex)];
+
+			Title = $"DotFeather Window {fps}fps";
+
+			prevIsWalking = isWalking;
 		}
 	}
 }

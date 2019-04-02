@@ -28,6 +28,8 @@ namespace DotFeather.Helpers
 
 			GL.Enable(EnableCap.Texture2D);
 			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
+			GL.Enable(EnableCap.AlphaTest);
+			GL.AlphaFunc(AlphaFunction.Notequal, 0);
 
 			if (angle != 0)
 			{

@@ -10,13 +10,13 @@ namespace DotFeather.Drawable
 	/// </summary>
 	public class Sprite : IDrawable
 	{
-		public Texture2D Texture { get; }
+		public Texture2D Texture { get; set; }
 
-		public Vector Location { get; }
+		public Vector Location { get; set; }
 
-		public float Angle { get; }
+		public float Angle { get; set; }
 
-		public Vector Scale { get; }
+		public Vector Scale { get; set; }
 
 		public int ZOrder { get; set; }
 		public string Name { get; set; }
@@ -29,9 +29,9 @@ namespace DotFeather.Drawable
 			Scale = scale != default ? scale : new Vector(1, 1);
 		}
 
-		public void Draw(GameBase game)
+		public void Draw(GameBase game, Vector location)
 		{
-			TextureDrawer.Draw(game, Texture, Location, Scale, Angle);
+			TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle);
 		}
 	}
 }

@@ -24,12 +24,21 @@ dotnet build
 
 ```cs
 // in class Game : GameBase
-var g = new GraphicLayer();
-this.Layers.Add(g);
+var g = new Graphic();
+this.Children.Add(g);
 
 g.Line(0, 0, 400, 400, Color.Red);
 g.Line(0, 400, 0, 400, Color.Blue);
 g.Circle(0, 0, 400, 400, Color.Green);
+```
+
+### Draw a sprite
+
+```cs
+// in class Game : GameBase
+Texture2D[] textures = LoadDividedImage("./player.png", 4, 1, new System.Drawing.Size(16, 16);
+var sprite = new Sprite(textures[0], 0, 0, 0, new Vector(16, 16));
+this.Children.Add(sprite);
 ```
 
 [Full Sample code](DotFeather.Test.NetCore)
@@ -40,7 +49,7 @@ coming soon
 
 ## Donate
 
-You want to donate for me? Thank you very much! Please see [this page](//citringo.net/en/donation.html) how to pay me.
+You want to donate for me? Thank you very much! Please see [this page](//xeltica.work/en/donation.html) how to pay me.
 
 ## LICENSE
 

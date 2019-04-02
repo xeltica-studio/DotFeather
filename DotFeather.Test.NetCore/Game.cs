@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using DotFeather.Drawable;
 using DotFeather.InputSystems;
 using DotFeather.Models;
@@ -51,6 +52,27 @@ namespace DotFeather.Test.NetCore
 			sprite.Children.Add(s);
 
 			s.ZOrder = -1;
+
+			for (int _ = 0; _ < 100; _++)
+			{
+				Task.Factory.StartNew(async () =>
+				{
+					var sp = new Sprite(chars[0], Random.Next(0, Width), Random.Next(0, Height));
+					Children.Add(sp);
+
+					while (!Input.Keyboard.F1.IsPressed)
+						await Task.Delay(10);
+
+					while (true)
+						for (int i = 0; i < 8; i++)
+						{
+							sp.Texture = chars[i * 3];
+							await Task.Delay(64);
+						}
+				});
+			}
+
+			BackgroundColor = Color.SpringGreen;
 			Children.Add(sprite);
 		}
 

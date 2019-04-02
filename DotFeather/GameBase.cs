@@ -4,6 +4,7 @@ using System.Drawing.Imaging;
 using SDBitmap = System.Drawing.Bitmap;
 using SDRect = System.Drawing.Rectangle;
 using SDSize = System.Drawing.Size;
+using SDColor = System.Drawing.Color;
 using SDPixelFormat = System.Drawing.Imaging.PixelFormat;
 using OpenTK;
 using OpenTK.Graphics;
@@ -38,6 +39,8 @@ namespace DotFeather
 			get => window.Size.Height;
 			set => window.Size = new Size(window.Size.Width, value);
 		}
+
+		public SDColor BackgroundColor { get; set; }
 
 		/// <summary>
 		/// このウィンドウのリフレッシュレートを取得または設定します。
@@ -175,6 +178,7 @@ namespace DotFeather
 
 			window.RenderFrame += (object sender, FrameEventArgs e) =>
 			{
+				GL.ClearColor(BackgroundColor.ToGL());
 				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 				Children.ForEach(l => l.Draw(this));
 				window.SwapBuffers();

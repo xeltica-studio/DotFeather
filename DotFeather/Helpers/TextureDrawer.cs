@@ -1,21 +1,32 @@
 ﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
+using System;
 using DotFeather.Models;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 
 namespace DotFeather.Helpers
 {
-	internal static class TextureDrawer
+	public static class TextureDrawer
 	{
-		internal static void Draw(Texture2D texture, Vector location, Vector scale, float angle)
+		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle)
 		{
-			var verts = new []
+			var hw = game.Width / 2;
+			var hh = game.Height / 2;
+
+			scale = new Vector(2, 2);
+
+			var verts = new[]
 			{
-				(location.X, location.Y),
-				(location.X + texture.Size.Width, location.Y),
-				(location.X * scale.X, (location.Y + texture.Size.Height) * scale.Y),
+				(location.X, location.Y)
+					.ToViewportPoint(hw, hh),
+				((location.X + texture.Size.Width) * scale.X, location.Y)
+					.ToViewportPoint(hw, hh),
+				(location.X, (location.Y + texture.Size.Height) * scale.Y)
+					.ToViewportPoint(hw, hh),
 				((location.X + texture.Size.Width) * scale.X, (location.Y + texture.Size.Height) * scale.Y)
+					.ToViewportPoint(hw, hh)
 			};
+
 
 			GL.Enable(EnableCap.Texture2D);
 			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);

@@ -31,7 +31,7 @@ namespace DotFeather.Drawable
 
 		public void Draw(GameBase game)
 		{
-			TextureDrawer.Draw(Texture, Location, Scale, Angle);
+			TextureDrawer.Draw(game, Texture, Location, Scale, Angle);
 		}
 	}
 }

@@ -10,6 +10,13 @@
 		/// </summary>
 		/// <param name="game">Game.</param>
 		void Draw(GameBase game);
+
+		/// <summary>
+		/// この描画可能オブジェクトの描画優先順位を指定します。数値が低いほど奥に描画されます。
+		/// </summary>
+		int ZOrder { get; set; }
+
+		string Name { get; set; }
 	}
 
 }

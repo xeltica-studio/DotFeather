@@ -2,7 +2,6 @@
 using System.Drawing;
 using DotFeather.Drawable;
 using DotFeather.InputSystems;
-using DotFeather.Layer;
 
 namespace DotFeather.Test.NetCore
 {
@@ -19,7 +18,7 @@ namespace DotFeather.Test.NetCore
 			}
 		}
 
-		GraphicLayer g;
+		readonly Graphic g;
 
 		bool isCatMode = false;
 		Texture2D[] catTexture;
@@ -37,8 +36,8 @@ namespace DotFeather.Test.NetCore
 		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{
 			this.title = Title;
-			g = new GraphicLayer();
-			this.Layers.Add(g);
+			g = new Graphic();
+			this.Children.Add(g);
 			nekoPos = new Vector(width / 2, height / 2);
 			ground = height - 96;
 		}

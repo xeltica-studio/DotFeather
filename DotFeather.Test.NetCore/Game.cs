@@ -21,6 +21,8 @@ namespace DotFeather.Test.NetCore
 		Container sprite;
 		Sprite spriteChar;
 
+		int prevSecond, fps, f;
+
 		double time;
 
 		static void Main(string[] args)
@@ -50,27 +52,31 @@ namespace DotFeather.Test.NetCore
 			var s = spriteChar = new Sprite(chars[0], 0, 0, 0, Vector.One);
 			sprite.Children.Add(new Sprite(LoadImage("Shadow.png"), 0, 14));
 			sprite.Children.Add(s);
+			sprite.Location = new Vector(Width / 2, Height / 2);
 
 			s.ZOrder = -1;
 
-			for (int _ = 0; _ < 100; _++)
+			Task.Factory.StartNew(() =>
 			{
-				Task.Factory.StartNew(async () =>
+				for (int _ = 0; _ < 10000; _++)
 				{
-					var sp = new Sprite(chars[0], Random.Next(0, Width), Random.Next(0, Height));
-					Children.Add(sp);
+					Task.Factory.StartNew(async () =>
+					{
+						var sp = new Sprite(chars[0], Random.Next(-Width, Width * 2), Random.Next(-Height, Height * 2));
+						Children.Add(sp);
 
-					while (!Input.Keyboard.F1.IsPressed)
-						await Task.Delay(10);
+						while (!Input.Keyboard.F1.IsPressed)
+							await Task.Delay(10);
 
-					while (true)
-						for (int i = 0; i < 8; i++)
-						{
-							sp.Texture = chars[i * 3];
-							await Task.Delay(64);
-						}
-				});
-			}
+						while (true)
+							for (int i = 0; i < 8; i++)
+							{
+								sp.Texture = chars[i * 3];
+								await Task.Delay(64);
+							}
+					});
+				}
+			});
 
 			BackgroundColor = Color.SpringGreen;
 			Children.Add(sprite);
@@ -80,6 +86,8 @@ namespace DotFeather.Test.NetCore
 		{
 			if (Input.Keyboard.Escape.IsPressed)
 				Exit(0);
+
+			var sec = DateTime.Now.Second;
 
 			var x = Input.Keyboard.Left.IsPressed ? -1 : Input.Keyboard.Right.IsPressed ? 1 : 0;
 			var y = Input.Keyboard.Up.IsPressed ? -1 : Input.Keyboard.Down.IsPressed ? 1 : 0;
@@ -91,6 +99,7 @@ namespace DotFeather.Test.NetCore
 									  (x == -1 ? 2 : x == +1 ? 4 : charIndex);
 				charIndex *= 3;
 				sprite.Location += new Vector(x, y) * 2;
+				Root.Location -= new Vector(x, y) * 2;
 				time += e.DeltaTime;
 				isWalking = true;
 			}
@@ -109,7 +118,19 @@ namespace DotFeather.Test.NetCore
 
 				time = 0;
 			}
+
+			if (sec != prevSecond)
+			{
+				fps = f;
+				f = 0;
+				prevSecond = sec;
+			}
+
+			f++;
+
 			spriteChar.Texture = chars[charIndex + (animIndex == 3 ? 1 : animIndex)];
+
+			Title = $"DotFeather Window {fps}fps";
 
 			prevIsWalking = isWalking;
 		}

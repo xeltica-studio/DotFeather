@@ -11,11 +11,12 @@ namespace DotFeather.Drawable
 		public float Angle { get; set; }
 		public Vector Scale { get; set; }
 
-		public List<IDrawable> Children { get; } = new List<IDrawable>();
+		public List<IDrawable> Children { get; } = new List<IDrawable>(10000);
 
 		public void Draw(GameBase game, Vector location)
 		{
-			foreach (var child in Children.OrderBy(child => child.ZOrder))
+			Children.Sort((d1, d2) => d1.ZOrder < d2.ZOrder ? - 1 : d1.ZOrder > d2.ZOrder ? 1 : 0);
+			foreach (var child in Children.ToList())
 				child.Draw(game, Location + location);
 		}
 	}

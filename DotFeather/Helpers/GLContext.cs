@@ -11,7 +11,7 @@ namespace DotFeather
 		#region IDisposable Support
 		private bool disposedValue;
 
-		void Dispose(bool disposing)
+		void Dispose(bool _)
 		{
 			if (!disposedValue)
 			{

@@ -5,7 +5,7 @@ using OpenTK.Graphics.OpenGL;
 
 namespace DotFeather.Drawable
 {
-	public class SolidDrawable : IDrawable
+	internal class PrimitiveDrawable : IDrawable
 	{
 		readonly Color color;
 
@@ -13,7 +13,10 @@ namespace DotFeather.Drawable
 
 		public PrimitiveType Primitive { get; }
 
-		public SolidDrawable(Color c, PrimitiveType primitive, params PointF[] vertexs)
+		public int ZOrder { get; set; }
+		public string Name { get; set; }
+
+		public PrimitiveDrawable(Color c, PrimitiveType primitive, params PointF[] vertexs)
 		{
 			color = c;
 

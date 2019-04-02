@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using DotFeather.Drawable;
+using DotFeather.Models;
 using OpenTK.Graphics.OpenGL;
 
-namespace DotFeather.Layer
+namespace DotFeather.Drawable
 {
 	/// <summary>
 	/// 図形描画を行える、グラフィック用のレイヤーです。
 	/// </summary>
-	public class GraphicLayer : ILayer
+	public class Graphic : IDrawable
 	{
 		/// <summary>
-		/// 現在の <see cref="GraphicLayer"/> が持つ描画オブジェクトのリストを取得します。
+		/// 現在の <see cref="Graphic"/> が持つ描画オブジェクトのリストを取得します。
 		/// </summary>
 		/// <value>描画可能オブジェクトのリスト。</value>
 		public List<IDrawable> Drawables { get; } = new List<IDrawable>();
@@ -27,6 +27,10 @@ namespace DotFeather.Layer
 			Drawables.ForEach(d => d.Draw(game));
 		}
 
+		public int ZOrder { get; set; }
+		public string Name { get; set; }
+
+
 		/// <summary>
 		/// 点を描画します。
 		/// </summary>
@@ -34,7 +38,7 @@ namespace DotFeather.Layer
 		/// <param name="color">色.</param>
 		public void Pixel(Point pos, Color color)
 		{
-			Drawables.Add(new SolidDrawable(color.ToGL(), PrimitiveType.Points, ((PointF)pos).ToGL()));
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Points, ((PointF)pos).ToGL()));
 		}
 
 		/// <summary>
@@ -56,7 +60,7 @@ namespace DotFeather.Layer
 		/// <param name="color">色.</param>
 		public void Line(Point begin, Point end, Color color)
 		{
-			Drawables.Add(new SolidDrawable(color.ToGL(), PrimitiveType.Lines, ((PointF)begin).ToGL(), ((PointF)end).ToGL()));
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Lines, ((PointF)begin).ToGL(), ((PointF)end).ToGL()));
 		}
 
 		/// <summary>
@@ -93,7 +97,7 @@ namespace DotFeather.Layer
 		/// <param name="color">色.</param>
 		public void Rect(int x1, int y1, int x2, int y2, Color color)
 		{
-			Drawables.Add(new SolidDrawable(color.ToGL(), PrimitiveType.Quads,
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Quads,
 				new OpenTK.PointF(x1, y1), 
 				new OpenTK.PointF(x1, y2), 
 				new OpenTK.PointF(x2, y2),
@@ -108,7 +112,7 @@ namespace DotFeather.Layer
 		/// <param name="texture">テクスチャ。</param>
 		public void Texture(int x, int y, Texture2D texture)
 		{
-			Drawables.Add(new TextureDrawable(texture, x, y));
+			Drawables.Add(new Sprite(texture, x, y));
 		}
 
 		/// <summary>
@@ -121,7 +125,9 @@ namespace DotFeather.Layer
 
 		public void Text(Rectangle range, string text, Color color, Font font = default)
 		{
-			//todo Implement this. Reference: https://github.com/mono/opentk/blob/master/Source/Examples/OpenGL/1.x/TextRendering.cs
+			//todo Implement this.
+			// Use https://github.com/opcon/QuickFont
+
 			throw new NotImplementedException("Wait!");
 		}
 	}

@@ -58,7 +58,7 @@ namespace DotFeather.Test.NetCore
 
 			Task.Factory.StartNew(() =>
 			{
-				for (int _ = 0; _ < 10000; _++)
+				for (int _ = 0; _ < 10; _++)
 				{
 					Task.Factory.StartNew(async () =>
 					{

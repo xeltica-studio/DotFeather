@@ -13,8 +13,6 @@ namespace DotFeather.Helpers
 			var hw = game.Width / 2;
 			var hh = game.Height / 2;
 
-			scale = new Vector(2, 2);
-
 			var verts = new[]
 			{
 				(location.X, location.Y)

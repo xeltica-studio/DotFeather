@@ -2,6 +2,7 @@
 using System.Drawing;
 using DotFeather.Drawable;
 using DotFeather.InputSystems;
+using DotFeather.Models;
 
 namespace DotFeather.Test.NetCore
 {
@@ -20,7 +21,7 @@ namespace DotFeather.Test.NetCore
 
 		readonly Graphic g;
 
-		bool isCatMode = false;
+		bool isCatMode;
 		Texture2D[] catTexture;
 		//readonly TextureDrawable catDrawable;
 
@@ -91,7 +92,7 @@ namespace DotFeather.Test.NetCore
 				if ((int)(nekoVel.X + .5) == 0) 
 					tex = catTexture[0];
 
-				nekoVel.Y = nekoVel.Y + 9.8f * (float)e.DeltaTime;
+				nekoVel.Y += 9.8f * (float)e.DeltaTime;
 
 				if (Input.Keyboard.Space.IsPressed && !prevSpace)
 				{

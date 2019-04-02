@@ -1,5 +1,5 @@
 ﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
-using DotFeather.Drawable;
+using DotFeather.Models;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 

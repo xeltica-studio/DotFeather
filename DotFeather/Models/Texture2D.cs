@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace DotFeather.Drawable
+namespace DotFeather.Models
 {
 	/// <summary>
 	/// テクスチャのハンドルを持ちます。

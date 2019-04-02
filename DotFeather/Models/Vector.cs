@@ -42,5 +42,8 @@ namespace DotFeather
 		}
 
 		public override string ToString() => $"({X}, {Y})";
+
+		public static readonly Vector Zero = new Vector(0, 0);
+		public static readonly Vector One = new Vector(1, 1);
 	}
 }

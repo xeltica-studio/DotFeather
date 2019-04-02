@@ -25,13 +25,10 @@ namespace DotFeather.Drawable
 		/// 実際に画面へ描画を行います。
 		/// </summary>
 		/// <param name="game">Game.</param>
-		public void Draw(GameBase game)
+		public void Draw(GameBase game, Vector location)
 		{
 			// Drawables を用いて毎フレーム描画を行う
-			Drawables.ForEach(d => {
-				d.Location = Location;
-				d.Draw(game);
-			});
+			Drawables.ForEach(d => d.Draw(game, Location + location));
 		}
 
 		public int ZOrder { get; set; }

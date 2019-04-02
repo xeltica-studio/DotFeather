@@ -9,7 +9,7 @@
 		/// 画面への描画を開始します。
 		/// </summary>
 		/// <param name="game">Game.</param>
-		void Draw(GameBase game);
+		void Draw(GameBase game, Vector location);
 
 		/// <summary>
 		/// この描画可能オブジェクトの描画優先順位を指定します。数値が低いほど奥に描画されます。

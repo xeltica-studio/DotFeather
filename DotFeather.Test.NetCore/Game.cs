@@ -17,7 +17,8 @@ namespace DotFeather.Test.NetCore
 		bool prevIsWalking;
 		bool isWalking;
 
-		Sprite sprite;
+		Container sprite;
+		Sprite spriteChar;
 
 		double time;
 
@@ -39,8 +40,17 @@ namespace DotFeather.Test.NetCore
 		{
 			chars = LoadDividedImage("Char.png", 6, 4, new Size(14, 20));
 			//field = LoadDividedImage("Field.png", 1, 5, new Size(16, 16));
-			sprite = new Sprite(chars[0], 32, 32, 0, Vector.One);
-			BackgroundColor = Color.Green;
+
+			sprite = new Container
+			{
+				Location = new Vector(32, 32)
+			};
+
+			var s = spriteChar = new Sprite(chars[0], 0, 0, 0, Vector.One);
+			sprite.Children.Add(new Sprite(LoadImage("Shadow.png"), 0, 14));
+			sprite.Children.Add(s);
+
+			s.ZOrder = -1;
 			Children.Add(sprite);
 		}
 
@@ -77,7 +87,7 @@ namespace DotFeather.Test.NetCore
 
 				time = 0;
 			}
-			sprite.Texture = chars[charIndex + (animIndex == 3 ? 1 : animIndex)];
+			spriteChar.Texture = chars[charIndex + (animIndex == 3 ? 1 : animIndex)];
 
 			prevIsWalking = isWalking;
 		}

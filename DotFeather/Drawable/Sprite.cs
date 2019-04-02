@@ -29,9 +29,9 @@ namespace DotFeather.Drawable
 			Scale = scale != default ? scale : new Vector(1, 1);
 		}
 
-		public void Draw(GameBase game)
+		public void Draw(GameBase game, Vector location)
 		{
-			TextureDrawer.Draw(game, Texture, Location, Scale, Angle);
+			TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle);
 		}
 	}
 }

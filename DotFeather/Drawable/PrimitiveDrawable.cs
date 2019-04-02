@@ -27,7 +27,7 @@ namespace DotFeather.Drawable
 			Primitive = primitive;
 		}
 
-		public virtual void Draw(GameBase game)
+		public virtual void Draw(GameBase game, Vector location)
 		{
 			if (Buffer == null)
 				throw new InvalidOperationException("Buffer is null(It seems be a bug.)");
@@ -39,7 +39,7 @@ namespace DotFeather.Drawable
 			{
 				foreach (var dp in Buffer)
 				{
-					var vec = dp + new Vector2(Location.X, Location.Y);
+					var vec = dp + new Vector2(Location.X + location.X, Location.Y + location.Y);
 					// Convert device point to viewport point
 					var vp = vec.ToViewportPoint(hw, hh);
 					GL.Color4(color);

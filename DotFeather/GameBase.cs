@@ -61,7 +61,9 @@ namespace DotFeather
 		/// <summary>
 		/// このゲームの現在のレイヤー一覧を取得します。
 		/// </summary>
-		public List<IDrawable> Children { get; } = new List<IDrawable>();
+		public List<IDrawable> Children => Root.Children;
+
+		public Container Root { get; } = new Container();
 
 
 		/// <summary>
@@ -180,7 +182,7 @@ namespace DotFeather
 			{
 				GL.ClearColor(BackgroundColor.ToGL());
 				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-				Children.ForEach(l => l.Draw(this));
+				Root.Draw(this, Vector.Zero);
 				window.SwapBuffers();
 				Dpi = (float)window.ClientSize.Width / window.Size.Width;
 			};

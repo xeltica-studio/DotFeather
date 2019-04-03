@@ -31,7 +31,7 @@ namespace DotFeather.Drawable.Tiles
 			Texture = Animations[0];
 		}
 
-		public void Draw(GameBase game, Vector location)
+		public void Draw(GameBase game, Vector location, ITile[,] _, int __, int ___)
 		{
 			if (Animations != default)
 			{

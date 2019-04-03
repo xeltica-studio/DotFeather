@@ -3,6 +3,6 @@ namespace DotFeather.Drawable.Tiles
 {
 	public interface ITile
 	{
-		void Draw(GameBase game, Vector location, ITile[,] tiles, int x, int y);
+		void Draw(GameBase game, Tilemap map, Vector location);
 	}
 }

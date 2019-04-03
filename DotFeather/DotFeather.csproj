@@ -21,5 +21,6 @@
     <Folder Include="Extensions\" />
     <Folder Include="Drawable\" />
     <Folder Include="Models\" />
+    <Folder Include="Drawable\Tiles\" />
   </ItemGroup>
 </Project>

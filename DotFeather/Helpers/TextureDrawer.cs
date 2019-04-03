@@ -8,7 +8,7 @@ namespace DotFeather.Helpers
 {
 	public static class TextureDrawer
 	{
-		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle)
+		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, Color? color = null)
 		{
 			var hw = game.Width / 2;
 			var hh = game.Height / 2;
@@ -34,6 +34,11 @@ namespace DotFeather.Helpers
 			if (angle != 0)
 			{
 				GL.Rotate(angle, Vector3d.UnitZ);
+			}
+
+			if (color is Color c)
+			{
+				GL.Color4(c);
 			}
 
 			using (new GLContext(PrimitiveType.Quads))

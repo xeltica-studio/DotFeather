@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using DotFeather.Helpers;
 using DotFeather.Models;
 
@@ -31,7 +32,7 @@ namespace DotFeather.Drawable.Tiles
 			Texture = Animations[0];
 		}
 
-		public void Draw(GameBase game, Tilemap _, Vector location)
+		public void Draw(GameBase game, Tilemap _, Vector location, Color? color)
 		{
 			if (Animations != default)
 			{
@@ -47,7 +48,7 @@ namespace DotFeather.Drawable.Tiles
 				timer += Time.DeltaTime;
 			}
 
-			TextureDrawer.Draw(game, Texture, location, Vector.One, 0);
+			TextureDrawer.Draw(game, Texture, location, Vector.One, 0, color);
 		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using DotFeather.Drawable.Tiles;
 using DotFeather.Helpers;
 
@@ -12,14 +13,14 @@ namespace DotFeather.Drawable
 		public Vector Location { get; set; }
 		public float Angle { get; set; }
 		public Vector Scale { get; set; }
-		
-		private Dictionary<(int x, int y), ITile> Tiles { get; set; }
+		public Color? DefaultColor { get; set; }		
 		public Vector TileSize { get; set; }
-		
+		private Dictionary<(int x, int y), (ITile tile, Color? color)> Tiles { get; set; }
+
 		public Tilemap(Vector tileSize)
 		{
 			TileSize = tileSize;
-			Tiles = new Dictionary<(int, int), ITile>();
+			Tiles = new Dictionary<(int, int), (ITile, Color?)>();
 		}
 
 		public void Draw(GameBase game, Vector location)
@@ -28,21 +29,24 @@ namespace DotFeather.Drawable
 			{
 				var (x, y) = kv.Key;
 				var loc = new Vector(x * TileSize.X, y * TileSize.Y);
-				kv.Value.Draw(game, this, Location + location + loc);
+				kv.Value.tile.Draw(game, this, Location + location + loc, kv.Value.color);
 			}
 		}
 
 		public ITile GetTileAt(Vector point) => GetTileAt((int)point.X, (int)point.Y);
-		public ITile GetTileAt(int x, int y) => Tiles.ContainsKey((x, y)) ? Tiles[(x, y)] : default;
+		public ITile GetTileAt(int x, int y) => Tiles.ContainsKey((x, y)) ? Tiles[(x, y)].tile : default;
 
-		public void SetTile(Vector point, ITile tile) => SetTile((int)point.X, (int)point.Y, tile);
+		public Color? GetTileColorAt(Vector point) => GetTileColorAt((int)point.X, (int)point.Y);
+		public Color? GetTileColorAt(int x, int y) => Tiles.ContainsKey((x, y)) ? Tiles[(x, y)].color : default;
 
-		public void SetTile(int x, int y, ITile tile)
+		public void SetTile(Vector point, ITile tile, Color? color = default) => SetTile((int)point.X, (int)point.Y, tile, color);
+
+		public void SetTile(int x, int y, ITile tile, Color? color = default)
 		{
 			if (tile == default)
 				Tiles.Remove((x, y));
 			else
-				Tiles[(x, y)] = tile;
+				Tiles[(x, y)] = (tile, color ?? DefaultColor);
 		}
 
 		public void Clear()

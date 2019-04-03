@@ -58,13 +58,7 @@ namespace DotFeather
 			set => window.Title = value;
 		}
 
-		/// <summary>
-		/// このゲームの現在のレイヤー一覧を取得します。
-		/// </summary>
-		public List<IDrawable> Children => Root.Children;
-
 		public Container Root { get; } = new Container();
-
 
 		/// <summary>
 		/// 画像ファイルを読み込みます。

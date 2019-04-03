@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using DotFeather.Drawable;
+using DotFeather.Drawable.Tiles;
 using DotFeather.InputSystems;
 using DotFeather.Models;
 
@@ -9,6 +13,8 @@ namespace DotFeather.Test.NetCore
 {
 	class Game : GameBase
 	{
+		readonly char[] fontMap = File.ReadAllText("./font.txt").ToCharArray();
+		Dictionary<char, Tile> fontTable;
 		Texture2D[] chars;
 		Texture2D[] field;
 
@@ -20,6 +26,10 @@ namespace DotFeather.Test.NetCore
 
 		Container sprite;
 		Sprite spriteChar;
+
+		Tilemap map;
+
+		Container scene;
 
 		int prevSecond, fps, f;
 
@@ -36,13 +46,54 @@ namespace DotFeather.Test.NetCore
 
 		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{
+			BackgroundColor = Color.White;
+		}
 
+		public void DrawString(int x, int y, string text, Color? color = null)
+		{
+			var _x = x;
+			var _y = y;
+			text = text.Replace("\r\n", "\n").Replace('\r', '\n');
+			foreach (var c in text)
+			{
+				if (c == '\n')
+				{
+					_y++;
+					_x = x;
+					continue;
+				}
+				map.SetTile(_x, _y, fontTable[fontTable.ContainsKey(c) ? c : '?'], color);
+				_x++;
+			}
 		}
 
 		protected override void OnLoad(object sender, EventArgs e)
 		{
 			chars = LoadDividedImage("Char.png", 6, 4, new Size(14, 20));
-			//field = LoadDividedImage("Field.png", 1, 5, new Size(16, 16));
+			var texs = LoadDividedImage("font.png", 16, 17, new Size(8, 8));
+
+			fontTable = fontMap
+				.Select((c, i) => (c, i))
+				.ToDictionary(kv => kv.c, kv => new Tile(texs[kv.i]));
+
+			map = new Tilemap(new Vector(8, 8));
+
+			Root.Add(map);
+			scene = new Container();
+			Root.Add(scene);
+
+			DrawString(1, 1, @"DotFeatherへ ようこそ!
+
+DotFeatherは 2Dゲームを かんたんにつくれる
+C#の ための ゲームエンジンです!
+
+Sprite Tilemap などの べんりきのうが
+さいしょから つかえるので
+めんどうな コードを かかずに
+あなたの さくひんを つくれます!
+
+それでは DotFeatherで
+あなただけの めいさくを つくりましょう!", Color.Black);
 
 			sprite = new Container
 			{
@@ -50,36 +101,16 @@ namespace DotFeather.Test.NetCore
 			};
 
 			var s = spriteChar = new Sprite(chars[0], 0, 0, 0, Vector.One);
-			sprite.Children.Add(new Sprite(LoadImage("Shadow.png"), 0, 14));
-			sprite.Children.Add(s);
+			sprite.Add(s);
+			sprite.Add(new Sprite(LoadImage("Shadow.png"), 0, 14));
 			sprite.Location = new Vector(Width / 2, Height / 2);
 
-			s.ZOrder = -1;
-
-			Task.Factory.StartNew(() =>
+			scene.Add(sprite);
+			for (int _ = 0; _ < 10000; _++)
 			{
-				for (int _ = 0; _ < 10; _++)
-				{
-					Task.Factory.StartNew(async () =>
-					{
-						var sp = new Sprite(chars[0], Random.Next(-Width, Width * 2), Random.Next(-Height, Height * 2));
-						Children.Add(sp);
-
-						while (!Input.Keyboard.F1.IsPressed)
-							await Task.Delay(10);
-
-						while (true)
-							for (int i = 0; i < 8; i++)
-							{
-								sp.Texture = chars[i * 3];
-								await Task.Delay(64);
-							}
-					});
-				}
-			});
-
-			BackgroundColor = Color.SpringGreen;
-			Children.Add(sprite);
+				var sp = new Sprite(chars[0], Random.Next(-Width, Width * 2), Random.Next(-Height, Height * 2));
+				scene.Add(sp);
+			}
 		}
 
 		protected override void OnUpdate(object sender, DFEventArgs e)
@@ -98,8 +129,9 @@ namespace DotFeather.Test.NetCore
 							y == -1 ? (x == -1 ? 5 : x == +1 ? 7 : 6) :
 									  (x == -1 ? 2 : x == +1 ? 4 : charIndex);
 				charIndex *= 3;
-				sprite.Location += new Vector(x, y) * 2;
-				Root.Location -= new Vector(x, y) * 2;
+				var shift = Input.Keyboard.LShift.IsPressed;
+				sprite.Location += new Vector(x, y) * (shift ? 4 : 2);
+				scene.Location -= new Vector(x, y) * (shift ? 4 : 2);
 				time += e.DeltaTime;
 				isWalking = true;
 			}

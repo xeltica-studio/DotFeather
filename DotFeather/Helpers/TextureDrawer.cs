@@ -13,6 +13,18 @@ namespace DotFeather.Helpers
 			var hw = game.Width / 2;
 			var hh = game.Height / 2;
 
+			// Culling
+			var left = location.X;
+			var top = location.Y;
+			var right = left + texture.Size.Width;
+			var bottom = top + texture.Size.Height;
+
+			if (left > game.Width || top > game.Height ||
+				right < 0 || bottom < 0)
+			{
+				return;
+			}
+
 			var verts = new[]
 			{
 				(location.X, location.Y)

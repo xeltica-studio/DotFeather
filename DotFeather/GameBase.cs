@@ -99,7 +99,6 @@ namespace DotFeather
 							throw new ArgumentException(nameof(verticalCount));
 						}
 						var locked = file.LockBits(new SDRect(px, py, sizeOfCroppedImage.Width, sizeOfCroppedImage.Height), ImageLockMode.ReadOnly, SDPixelFormat.Format32bppArgb);
-						Console.WriteLine($"{locked.Scan0.ToInt64()}");
 						datas.Add(RegisterTexture(locked));
 						file.UnlockBits(locked);
 					}
@@ -192,6 +191,7 @@ namespace DotFeather
 				window.VSync = VSyncMode.On;
 
 				GL.Enable(EnableCap.DepthTest);
+				
 				window.WindowBorder = WindowBorder.Resizable;
 				OnLoad(sender, e);
 			};
@@ -243,7 +243,6 @@ namespace DotFeather
 
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
-			Console.WriteLine(texture);
 			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, bmp.Width, bmp.Height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Bgra, PixelType.UnsignedByte, bmp.Scan0);
 			return new Texture2D(texture, new SDSize(bmp.Width, bmp.Height));
 		}

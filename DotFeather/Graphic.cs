@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using DotFeather.Drawable;
 using DotFeather.Models;
 using OpenTK.Graphics.OpenGL;
 
-namespace DotFeather.Drawable
+namespace DotFeather
 {
 	/// <summary>
 	/// 図形描画を行える、グラフィック用のレイヤーです。

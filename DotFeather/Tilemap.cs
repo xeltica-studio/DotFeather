@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using DotFeather.Drawable;
 using DotFeather.Drawable.Tiles;
-using DotFeather.Helpers;
 
-namespace DotFeather.Drawable
+namespace DotFeather
 {
 	public class Tilemap : IDrawable
 	{

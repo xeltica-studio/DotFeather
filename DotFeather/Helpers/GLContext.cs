@@ -1,6 +1,6 @@
 ﻿using System;
 using OpenTK.Graphics.OpenGL;
-namespace DotFeather
+namespace DotFeather.Helpers
 {
 	public sealed class GLContext : IDisposable
 	{

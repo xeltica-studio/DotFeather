@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
-using DotFeather.Drawable;
 using DotFeather.Drawable.Tiles;
-using DotFeather.InputSystems;
 using DotFeather.Models;
 
 namespace DotFeather.Test.NetCore
@@ -42,7 +39,6 @@ namespace DotFeather.Test.NetCore
 				g.Run();
 			}
 		}
-
 
 		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{

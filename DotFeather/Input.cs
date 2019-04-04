@@ -1,6 +1,6 @@
-﻿using OpenTK;
+﻿using DotFeather.InputSystems;
 
-namespace DotFeather.InputSystems
+namespace DotFeather
 {
 	public static class Input
 	{

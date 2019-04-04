@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotFeather
+namespace DotFeather.Models
 {
 	/// <summary>
 	/// DotFeather の基本的なイベント引数です。

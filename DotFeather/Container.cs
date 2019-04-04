@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DotFeather.Drawable;
 
-namespace DotFeather.Drawable
+namespace DotFeather
 {
 	public class Container : IDrawable, IList<IDrawable>
 	{

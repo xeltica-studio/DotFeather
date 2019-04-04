@@ -21,6 +21,8 @@ namespace DotFeather
 		public Vector Location { get; set; }
 		public float Angle { get; set; }
 		public Vector Scale { get; set; }
+		public int ZOrder { get; set; }
+		public string Name { get; set; }
 
 		/// <summary>
 		/// 実際に画面へ描画を行います。
@@ -31,10 +33,6 @@ namespace DotFeather
 			// Drawables を用いて毎フレーム描画を行う
 			Drawables.ForEach(d => d.Draw(game, Location + location));
 		}
-
-		public int ZOrder { get; set; }
-		public string Name { get; set; }
-
 
 		/// <summary>
 		/// 点を描画します。
@@ -126,14 +124,6 @@ namespace DotFeather
 		public void Clear()
 		{
 			Drawables.Clear();
-		}
-
-		public void Text(Rectangle range, string text, Color color, Font font = default)
-		{
-			//todo Implement this.
-			// Use https://github.com/opcon/QuickFont
-
-			throw new NotImplementedException("Wait!");
 		}
 	}
 }

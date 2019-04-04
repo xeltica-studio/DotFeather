@@ -6,14 +6,23 @@ using DotFeather.Helpers;
 
 namespace DotFeather.Drawable
 {
+	/// <summary>
+	/// <see cref="Graphic"/> クラスで内部的に使用されるオブジェクトです。
+	/// </summary>
 	internal class PrimitiveDrawable : IDrawable
 	{
 		readonly Color color;
 
+		/// <summary>
+		/// 頂点のバッファーを取得します。
+		/// </summary>
 		public Vector2[] Buffer { get; }
 
+		/// <summary>
+		/// この <see cref="PrimitiveDrawable"/> のプリミティブタイプを取得します。
+		/// </summary>
 		public PrimitiveType Primitive { get; }
-
+		
 		public int ZOrder { get; set; }
 		public string Name { get; set; }
 		public Vector Location { get; set; }

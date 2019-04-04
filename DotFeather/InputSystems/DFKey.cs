@@ -3,7 +3,7 @@
 namespace DotFeather.InputSystems
 {
 	/// <summary>
-	/// DotFeather APIにおいて、キーボードのキーを表します。ユーザーがインスタンスを初期化するものではありません。
+	/// キーボードのキーを表します。
 	/// </summary>
 	public struct DFKey
 	{

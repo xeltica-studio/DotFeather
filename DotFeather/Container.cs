@@ -5,16 +5,40 @@ using DotFeather.Drawable;
 
 namespace DotFeather
 {
+	/// <summary>
+	/// 他の <see cref="IDrawable"/> オブジェクトを格納し、相対位置に描画するオブジェクトです。
+	/// </summary>
 	public class Container : IDrawable, IList<IDrawable>
 	{
-		public int ZOrder { get; set; }
-		public string Name { get; set; }
-		public Vector Location { get; set; }
-		public float Angle { get; set; }
-		public Vector Scale { get; set; }
 
+		/// <summary>
+		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の描画優先順位を取得または設定します。数値が低いほど奥に描画されます。
+		/// </summary>
+		public int ZOrder { get; set; }
+		/// <summary>
+		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の名前を取得または設定します。
+		/// </summary>
+		public string Name { get; set; }
+		/// <summary>
+		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の座標を取得または設定します。
+		/// </summary>
+		public Vector Location { get; set; }
+		/// <summary>
+		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の角度を取得または設定します。
+		/// </summary>
+		public float Angle { get; set; }
+		/// <summary>
+		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> のスケーリングを取得または設定します。
+		/// </summary>
+		public Vector Scale { get; set; }
+		
 		private List<IDrawable> Children { get; } = new List<IDrawable>(10000);
 
+		/// <summary>
+		/// このコンテナーの子要素にアクセスします。
+		/// </summary>
+		/// <param name="index">インデックス。</param>
+		/// <returns>子要素</returns>
 		public IDrawable this[int index]
 		{
 			get => Children[index];
@@ -27,9 +51,16 @@ namespace DotFeather
 				child.Draw(game, Location + location);
 		}
 
+		/// <summary>
+		/// コンテナをソートします。
+		/// </summary>
 		public void Sort() =>
 			Children.Sort((d1, d2) => d1.ZOrder < d2.ZOrder ? -1 : d1.ZOrder > d2.ZOrder ? 1 : 0);
 
+		/// <summary>
+		/// このコンテナに子要素を追加します。
+		/// </summary>
+		/// <param name="child">子要素。</param>
 		public void Add(IDrawable child)
 		{
 			Sort();

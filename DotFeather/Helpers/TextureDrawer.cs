@@ -6,6 +6,9 @@ using OpenTK.Graphics.OpenGL;
 
 namespace DotFeather.Helpers
 {
+	/// <summary>
+	/// <see cref="Texture2D"/> オブジェクトをバッファ上に描画する機能を提供します。
+	/// </summary>
 	public static class TextureDrawer
 	{
 		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, System.Drawing.Color? color = null)

@@ -2,6 +2,9 @@
 
 namespace DotFeather
 {
+	/// <summary>
+	/// ユーザーからのインプットを受け付ける静的クラスです。
+	/// </summary>
 	public static class Input
 	{
 		/// <summary>

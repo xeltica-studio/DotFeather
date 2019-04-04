@@ -38,6 +38,9 @@ namespace DotFeather
 			set => window.Size = new Size(window.Size.Width, value);
 		}
 
+		/// <summary>
+		/// ウィンドウの背景色を取得または設定します。
+		/// </summary>
 		public SDColor BackgroundColor { get; set; }
 
 		/// <summary>
@@ -56,6 +59,9 @@ namespace DotFeather
 			set => window.Title = value;
 		}
 
+		/// <summary>
+		/// このウィンドウのトップレベル <see cref="Container"/> を取得または設定します。
+		/// </summary>
 		public Container Root { get; } = new Container();
 
 		/// <summary>
@@ -136,6 +142,9 @@ namespace DotFeather
 			window.Close();
 		}
 
+		/// <summary>
+		/// 現在のディスプレイの DPI を取得します。
+		/// </summary>
 		public float Dpi { get; private set; }
 
 		/// <summary>
@@ -151,7 +160,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 指定したパラメーターで、 GameBase インスタンスの新しいインスタンスを初期化します。
+		/// 指定したパラメーターで、 GameBase クラスの新しいインスタンスを初期化します。
 		/// </summary>
 		/// <param name="width">幅.</param>
 		/// <param name="height">高さ.</param>

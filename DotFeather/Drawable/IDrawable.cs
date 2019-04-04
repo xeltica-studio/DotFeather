@@ -12,16 +12,28 @@
 		void Draw(GameBase game, Vector location);
 
 		/// <summary>
-		/// この描画可能オブジェクトの描画優先順位を指定します。数値が低いほど奥に描画されます。
+		/// この <see cref="IDrawable"/> の描画優先順位を取得または設定します。数値が低いほど奥に描画されます。
 		/// </summary>
 		int ZOrder { get; set; }
 
+		/// <summary>
+		/// この <see cref="IDrawable"/> の名前を取得または設定します。
+		/// </summary>
 		string Name { get; set; }
 
+		/// <summary>
+		/// この <see cref="IDrawable"/> の座標を取得または設定します。
+		/// </summary>
 		Vector Location { get; set; }
 
+		/// <summary>
+		/// この <see cref="IDrawable"/> の角度を取得または設定します。
+		/// </summary>
 		float Angle { get; set; }
 
+		/// <summary>
+		/// この <see cref="IDrawable"/> のスケーリングを取得または設定します。
+		/// </summary>
 		Vector Scale { get; set; }
 	}
 

@@ -20,7 +20,7 @@ namespace DotFeather.Helpers
         {
             if (!disposedValue)
             {
-
+                DisposeHandle();
                 disposedValue = true;
             }
         }

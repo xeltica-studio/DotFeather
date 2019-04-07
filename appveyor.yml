@@ -21,6 +21,9 @@ build:
 
 configuration: Release
 
+after_build: 
+  - nuget pack -Prop Configuration=Release DotFeather -OutputDirectory DotFeather/bin/Release/
+
 deploy:
 - provider: NuGet
   api_key:

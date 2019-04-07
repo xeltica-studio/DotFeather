@@ -1,5 +1,6 @@
 version: 0.7.0.{build}
 image: Visual Studio 2017
+skip_non_tags: true
 
 dotnet_csproj:
   patch: true
@@ -15,7 +16,7 @@ before_build:
     nuget restore
 
 build:
-  project: C:\projects\dotfeather\dotfeather.sln
+  project: C:\projects\dotfeather\dotfeather\dotfeather.csproj
   publish_nuget: true
 
 configuration: Release

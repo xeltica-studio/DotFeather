@@ -65,8 +65,8 @@ namespace DotFeather.Test.NetCore
 
 		protected override void OnLoad(object sender, EventArgs e)
 		{
-			chars = LoadDividedImage("Char.png", 6, 4, new Size(14, 20));
-			var texs = LoadDividedImage("font.png", 16, 17, new Size(8, 8));
+			chars = Texture2D.LoadAndSplitFrom("Char.png", 6, 4, new Size(14, 20));
+			var texs = Texture2D.LoadAndSplitFrom("font.png", 16, 17, new Size(8, 8));
 
 			fontTable = fontMap
 				.Select((c, i) => (c, i))
@@ -98,7 +98,7 @@ Sprite Tilemap などの べんりきのうが
 
 			var s = spriteChar = new Sprite(chars[0], 0, 0, 0, Vector.One);
 			sprite.Add(s);
-			sprite.Add(new Sprite(LoadImage("Shadow.png"), 0, 14));
+			sprite.Add(new Sprite(Texture2D.LoadFrom("Shadow.png"), 0, 14));
 			sprite.Location = new Vector(Width / 2, Height / 2);
 
 			scene.Add(sprite);

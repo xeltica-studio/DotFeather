@@ -6,11 +6,9 @@ namespace DotFeather.Audio
 {
     public class AudioPlayer : IDisposable
     {
-        private readonly AudioContext ctx;
         public AudioPlayer()
         {
             ctx = new AudioContext();
-            
         }
 
         public static Task PlayInstantlyAsync(IAudioSource source)
@@ -28,5 +26,7 @@ namespace DotFeather.Audio
         {
             ctx.Dispose();
         }
+
+        private readonly AudioContext ctx;
     }
 }

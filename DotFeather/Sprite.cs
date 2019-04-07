@@ -12,13 +12,9 @@ namespace DotFeather
 	public class Sprite : IDrawable
 	{
 		public Texture2D Texture { get; set; }
-
 		public Vector Location { get; set; }
-
 		public float Angle { get; set; }
-
 		public Vector Scale { get; set; }
-
 		public int ZOrder { get; set; }
 		public string Name { get; set; }
 

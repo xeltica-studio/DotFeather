@@ -5,18 +5,15 @@ namespace DotFeather.Helpers
     {
         public THandle Handle { get; }
 
-        public OpenTKManagedHandleBase()
+        public abstract THandle GenerateHandle();
+        public abstract void DisposeHandle();
+
+        protected OpenTKManagedHandleBase()
         {
             Handle = GenerateHandle();
         }
 
-        public abstract THandle GenerateHandle();
-        public abstract void DisposeHandle();
-
-        #region IDisposable Support
-        private bool disposedValue;
-
-        void Dispose(bool disposing)
+        public void Dispose()
         {
             if (!disposedValue)
             {
@@ -25,17 +22,6 @@ namespace DotFeather.Helpers
             }
         }
 
-        ~OpenTKManagedHandleBase()
-        {
-            Dispose(false);
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-        #endregion
-
+        private bool disposedValue;
     }
 }

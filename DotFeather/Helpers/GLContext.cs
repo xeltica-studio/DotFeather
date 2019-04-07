@@ -15,10 +15,8 @@ namespace DotFeather.Helpers
 		{
 			GL.Begin(p);
 		}
-		#region IDisposable Support
-		private bool disposedValue;
 
-		void Dispose(bool _)
+		public void Dispose()
 		{
 			if (!disposedValue)
 			{
@@ -27,15 +25,6 @@ namespace DotFeather.Helpers
 			}
 		}
 
-		~GLContext()
-		{
-			Dispose(false);
-		}
-
-		public void Dispose()
-		{
-			Dispose(true);
-		}
-		#endregion
-	}
+        private bool disposedValue;
+    }
 }

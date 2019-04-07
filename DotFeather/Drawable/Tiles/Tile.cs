@@ -22,9 +22,6 @@ namespace DotFeather.Drawable.Tiles
 		/// </summary>
 		public double Interval { get; private set; }
 
-		int animationState;
-		double timer;
-
 		/// <summary>
 		/// テクスチャを指定して、<see cref="Tile"/> クラスの新しいインスタンスを初期化します。
 		/// </summary>
@@ -70,5 +67,8 @@ namespace DotFeather.Drawable.Tiles
 
 			TextureDrawer.Draw(game, Texture, location, Vector.One, 0, color);
 		}
-	}
+
+        private int animationState;
+        private double timer;
+    }
 }

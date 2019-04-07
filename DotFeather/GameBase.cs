@@ -64,12 +64,17 @@ namespace DotFeather
 		/// </summary>
 		public Container Root { get; } = new Container();
 
-		/// <summary>
-		/// 画像ファイルを読み込みます。
-		/// </summary>
-		/// <returns>読み込んだ画像のデータ。</returns>
-		/// <param name="path">ファイルパス。</param>
-		public Texture2D LoadImage(string path)
+        /// <summary>
+        /// 現在のディスプレイの DPI を取得します。
+        /// </summary>
+        public float Dpi { get; private set; }
+
+        /// <summary>
+        /// 画像ファイルを読み込みます。
+        /// </summary>
+        /// <returns>読み込んだ画像のデータ。</returns>
+        /// <param name="path">ファイルパス。</param>
+        public Texture2D LoadImage(string path)
 		{
 			using (var file = new SDBitmap(path))
 			{
@@ -77,15 +82,83 @@ namespace DotFeather
 			}
 		}
 
-		/// <summary>
-		/// 画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。
-		/// </summary>
-		/// <returns>切り取られた全ての画像データ。</returns>
-		/// <param name="path">画像のファイルパス。</param>
-		/// <param name="horizonalCount">横方向の画像の枚数。</param>
-		/// <param name="verticalCount">盾向の画像の枚数。</param>
-		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
-		public Texture2D[] LoadDividedImage(string path, int horizonalCount, int verticalCount, SDSize sizeOfCroppedImage)
+        /// <summary>
+        /// 指定したパラメーターで、 <see cref="GameBase"/> クラスの新しいインスタンスを初期化します。
+        /// </summary>
+        /// <param name="width">幅.</param>
+        /// <param name="height">高さ.</param>
+        /// <param name="title">タイトル.</param>
+        /// <param name="refreshRate">リフレッシュレート.</param>
+        protected GameBase(int width, int height, string title = null, int refreshRate = 60)
+        {
+            RefreshRate = refreshRate;
+
+            window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow)
+            {
+                VSync = VSyncMode.On,
+                TargetRenderFrequency = refreshRate,
+                TargetUpdateFrequency = refreshRate,
+            };
+
+            window.UpdateFrame += (object sender, FrameEventArgs e) =>
+            {
+                Time.Now += e.Time;
+                Time.DeltaTime = e.Time;
+                OnUpdate(sender, new DFEventArgs
+                {
+                    DeltaTime = e.Time,
+                });
+            };
+
+            window.RenderFrame += (object sender, FrameEventArgs e) =>
+            {
+                GL.ClearColor(BackgroundColor.ToGL());
+                GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+                Root.Draw(this, Vector.Zero);
+                window.SwapBuffers();
+                Dpi = (float)window.ClientSize.Width / window.Size.Width;
+            };
+
+            window.Load += (object sender, EventArgs e) =>
+            {
+                GL.ClearColor(Color.Black);
+                GL.LineWidth(1);
+                window.VSync = VSyncMode.On;
+
+                GL.Enable(EnableCap.DepthTest);
+
+                window.WindowBorder = WindowBorder.Resizable;
+                OnLoad(sender, e);
+            };
+
+            window.Resize += (object sender, EventArgs e) =>
+            {
+                GL.Viewport(window.ClientRectangle);
+                OnResize(sender, e);
+            };
+
+            window.Unload += (object sender, EventArgs e) =>
+            {
+                // テクスチャを全て解放する
+                textures?.ForEach(t => GL.DeleteTexture(t.Handle));
+                OnUnload(sender, e);
+            };
+
+            window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
+            {
+                Input.Mouse.Position = new System.Drawing.Point((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
+            };
+        }
+
+        /// <summary>
+        /// 画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。
+        /// </summary>
+        /// <returns>切り取られた全ての画像データ。</returns>
+        /// <param name="path">画像のファイルパス。</param>
+        /// <param name="horizonalCount">横方向の画像の枚数。</param>
+        /// <param name="verticalCount">盾向の画像の枚数。</param>
+        /// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
+        public Texture2D[] LoadDividedImage(string path, int horizonalCount, int verticalCount, SDSize sizeOfCroppedImage)
 		{
 			using (var file = new SDBitmap(path))
 			{
@@ -143,11 +216,6 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 現在のディスプレイの DPI を取得します。
-		/// </summary>
-		public float Dpi { get; private set; }
-
-		/// <summary>
 		/// Releases all resource used by the <see cref="T:DotFeather.GameBase"/> object.
 		/// </summary>
 		/// <remarks>Call <see cref="Dispose"/> when you are finished using the <see cref="T:DotFeather.GameBase"/>. The
@@ -157,74 +225,6 @@ namespace DotFeather
 		public void Dispose()
 		{
 			window.Dispose();
-		}
-
-		/// <summary>
-		/// 指定したパラメーターで、 GameBase クラスの新しいインスタンスを初期化します。
-		/// </summary>
-		/// <param name="width">幅.</param>
-		/// <param name="height">高さ.</param>
-		/// <param name="title">タイトル.</param>
-		/// <param name="refreshRate">リフレッシュレート.</param>
-		protected GameBase(int width, int height, string title = null, int refreshRate = 60)
-		{
-			RefreshRate = refreshRate;
-
-			window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow)
-			{
-				VSync = VSyncMode.On,
-				TargetRenderFrequency = refreshRate,
-				TargetUpdateFrequency = refreshRate,
-			};
-
-			window.UpdateFrame += (object sender, FrameEventArgs e) =>
-			{
-				Time.Now += e.Time;
-				Time.DeltaTime = e.Time;
-				OnUpdate(sender, new DFEventArgs
-				{
-					DeltaTime = e.Time,
-				});
-			};
-
-			window.RenderFrame += (object sender, FrameEventArgs e) =>
-			{
-				GL.ClearColor(BackgroundColor.ToGL());
-				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-				Root.Draw(this, Vector.Zero);
-				window.SwapBuffers();
-				Dpi = (float)window.ClientSize.Width / window.Size.Width;
-			};
-
-			window.Load += (object sender, EventArgs e) =>
-			{
-				GL.ClearColor(Color.Black);
-				GL.LineWidth(1);
-				window.VSync = VSyncMode.On;
-
-				GL.Enable(EnableCap.DepthTest);
-				
-				window.WindowBorder = WindowBorder.Resizable;
-				OnLoad(sender, e);
-			};
-
-			window.Resize += (object sender, EventArgs e) =>
-			{
-				GL.Viewport(window.ClientRectangle);
-				OnResize(sender, e);
-			};
-
-			window.Unload += (object sender, EventArgs e) =>
-			{
-				// テクスチャを全て解放する
-				textures?.ForEach(t => GL.DeleteTexture(t.Handle));
-				OnUnload(sender, e);
-			};
-
-			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
-			{
-				Input.Mouse.Position = new System.Drawing.Point((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
-			};
 		}
 
 		/// <summary>

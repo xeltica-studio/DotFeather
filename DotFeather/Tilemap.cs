@@ -30,7 +30,26 @@ namespace DotFeather
 			Tiles = new Dictionary<(int, int), (ITile, Color?)>();
 		}
 
-		public void Draw(GameBase game, Vector location)
+
+        /// <summary>
+        ///  指定した位置にあるタイルを取得または設定します。
+        /// </summary>
+        public ITile this[int x, int y]
+        {
+            get => GetTileAt(x, y);
+            set => SetTile(x, y, value);
+        }
+
+        /// <summary>
+        ///  指定した位置にあるタイルを取得または設定します。
+        /// </summary>
+        public ITile this[Vector point]
+        {
+            get => GetTileAt(point);
+            set => SetTile(point, value);
+        }
+
+        public void Draw(GameBase game, Vector location)
 		{
 			foreach (var kv in Tiles)
 			{
@@ -148,25 +167,7 @@ namespace DotFeather
 		public void Fill(Vector position, Vector size, ITile tile)
 			=> Line((int)position.X, (int)position.Y, (int)size.X, (int)size.Y, tile);
 
-		/// <summary>
-		///  指定した位置にあるタイルを取得または設定します。
-		/// </summary>
-		public ITile this[int x, int y]
-		{
-			get => GetTileAt(x, y);
-			set => SetTile(x, y, value);
-		}
-
-		/// <summary>
-		///  指定した位置にあるタイルを取得または設定します。
-		/// </summary>
-		public ITile this[Vector point]
-		{
-			get => GetTileAt(point);
-			set => SetTile(point, value);
-		}
-
-		private void Swap<T>(ref T var1, ref T var2)
+        private void Swap<T>(ref T var1, ref T var2)
 		{
 			var tmp = var2;
 			var2 = var1;

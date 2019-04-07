@@ -11,8 +11,6 @@ namespace DotFeather.Drawable
 	/// </summary>
 	internal class PrimitiveDrawable : IDrawable
 	{
-		readonly Color color;
-
 		/// <summary>
 		/// 頂点のバッファーを取得します。
 		/// </summary>
@@ -56,7 +54,9 @@ namespace DotFeather.Drawable
 					GL.Vertex2(vp);
 				}
 			}
-		}
-	}
+        }
+
+        private readonly Color color;
+    }
 
 }

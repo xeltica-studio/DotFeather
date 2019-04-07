@@ -50,12 +50,6 @@ namespace DotFeather.Audio
         protected short Pull(ref int currentSample) => store[currentSample++];
         protected short Pull16(ref int currentSample) => (short)(store[currentSample++] << 8 + store[currentSample++]);
 
-        protected int? loopStart;
-        protected readonly byte[] store;
-        protected readonly int channels;
-        protected readonly int bits;
-        protected readonly int sampleRate;
-
         protected static byte[] LoadWave(Stream stream, out int channels, out int bits, out int rate)
         {
             if (stream == null)
@@ -106,6 +100,12 @@ namespace DotFeather.Audio
                 return reader.ReadBytes((int)reader.BaseStream.Length);
             }
         }
+
+        protected int? loopStart;
+        protected readonly byte[] store;
+        protected readonly int channels;
+        protected readonly int bits;
+        protected readonly int sampleRate;
 
         protected delegate short PullDelegate(ref int currentSample);
     }

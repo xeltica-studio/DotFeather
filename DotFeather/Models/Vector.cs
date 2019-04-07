@@ -1,10 +1,25 @@
 ﻿using System;
 namespace DotFeather
 {
+    /// <summary>
+    /// 2次元のベクトルです。
+    /// </summary>
 	public struct Vector : IEquatable<Vector>
 	{
+        /// <summary>
+        /// このベクトルの X 成分を取得または設定します。
+        /// </summary>
 		public float X { get; set; }
+        /// <summary>
+        /// このベクトルの Y 成分を取得または設定します。
+        /// </summary>
 		public float Y { get; set; }
+
+        /// <summary>
+        /// <see cref="Vector"/> クラスの新しいインスタンスを初期化します。"
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
 		public Vector(float x, float y)
 		{
 			X = x;

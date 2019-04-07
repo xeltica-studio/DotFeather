@@ -11,21 +11,7 @@ namespace DotFeather.Audio
 		/// <summary>
 		/// サンプルを列挙します。
 		/// </summary>
-		/// <returns></returns>
-		IEnumerator<(short left, short right)> EnumerateSamples();
-		/// <summary>
-		/// 再生を開始します。
-		/// </summary>
-		/// <param name="loopSample">ループを開始するサンプル位置。<c>null</c>ならばループしない。</param>
-		void Play(int? loopSample = null);
-		/// <summary>
-		/// 再生を一時停止します。
-		/// </summary>
-		void Pause();
-		/// <summary>
-		/// 再生を停止します。
-		/// </summary>
-		void Stop();
+		IEnumerator<(short left, short right)> EnumerateSamples(int? loopStart);
 		/// <summary>
 		/// この <see cref="IAudioSource"/> のサンプル数を取得します。特定不可能な場合 <c>null</c> を返します。
 		/// </summary>

@@ -31,8 +31,6 @@ namespace DotFeather
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> のスケーリングを取得または設定します。
 		/// </summary>
 		public Vector Scale { get; set; }
-		
-		private List<IDrawable> Children { get; } = new List<IDrawable>(10000);
 
 		/// <summary>
 		/// このコンテナーの子要素にアクセスします。
@@ -43,12 +41,6 @@ namespace DotFeather
 		{
 			get => Children[index];
 			set => Children[index] = value;
-		}
-
-		public void Draw(GameBase game, Vector location)
-		{
-			foreach (var child in Children.ToList())
-				child.Draw(game, Location + location);
 		}
 
 		/// <summary>
@@ -67,12 +59,20 @@ namespace DotFeather
 			Children.Add(child);
 		}
 
-		public int IndexOf(IDrawable item) => Children.IndexOf(item);
-		public void Insert(int index, IDrawable item)
-		{
-			Sort();
-			Children.Insert(index, item);
-		}
+        public void Insert(int index, IDrawable item)
+        {
+            Sort();
+            Children.Insert(index, item);
+        }
+
+        public void Draw(GameBase game, Vector location)
+        {
+            foreach (var child in Children.ToList())
+                child.Draw(game, Location + location);
+        }
+
+        #region other IList<T> members
+        public int IndexOf(IDrawable item) => Children.IndexOf(item);
 		public void RemoveAt(int index) => Children.RemoveAt(index);
 		public void Clear() => Children.Clear();
 		public bool Contains(IDrawable item) => Children.Contains(item);
@@ -82,5 +82,8 @@ namespace DotFeather
 		IEnumerator IEnumerable.GetEnumerator() => Children.GetEnumerator();
 		public int Count => Children.Count;
 		public bool IsReadOnly => false;
-	}
+        #endregion
+
+        private List<IDrawable> Children { get; } = new List<IDrawable>(10000);
+    }
 }

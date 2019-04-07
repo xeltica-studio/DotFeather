@@ -8,8 +8,14 @@ namespace DotFeather.Models
 	/// </summary>
 	public struct Texture2D
 	{
+        /// <summary>
+        /// このテクスチャの OpenGL ハンドルを取得します。
+        /// </summary>
 		public int Handle { get; }
 
+        /// <summary>
+        /// このテクスチャのサイズを取得します。
+        /// </summary>
 		public Size Size { get; }
 
 		internal Texture2D(int handle, Size size)

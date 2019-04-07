@@ -1,5 +1,5 @@
 # <img src="docs/logo.svg"/> 
-[![GitHub issues](https://img.shields.io/github/issues/xeltica/dotfeather.svg?style=flat-square)][issues] [![GitHub pull requests](https://img.shields.io/github/issues-pr/xeltica/dotfeather.svg?style=flat-square)][pulls] [![GitHub Releases](https://img.shields.io/github/release/xeltica/DotFeather.svg?style=flat-square)][releases] [![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=flat-square)](LICENSE)
+[![Build status](https://img.shields.io/appveyor/ci/xeltica/dotfeather.svg?style=flat-square)](https://ci.appveyor.com/project/Xeltica/dotfeather)[![GitHub issues](https://img.shields.io/github/issues/xeltica/dotfeather.svg?style=flat-square)][issues] [![GitHub pull requests](https://img.shields.io/github/issues-pr/xeltica/dotfeather.svg?style=flat-square)][pulls] [![GitHub Releases](https://img.shields.io/github/release/xeltica/DotFeather.svg?style=flat-square)][releases] [![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=flat-square)](LICENSE)
 
 
 [issues]: //github.com/xeltica/dotfeather/issues

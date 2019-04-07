@@ -1,2 +1,29 @@
 version: 0.7.0.{build}
 image: Visual Studio 2017
+
+before_build:
+- ps: >-
+    nuget restore
+
+build:
+  project: C:\projects\dotfeather\dotfeather\dotfeather.csproj
+  publish_nuget: true
+
+configuration: Release
+
+deploy:
+- provider: NuGet
+  api_key:
+    # Use encrypt tool
+    # https://ci.appveyor.com/tools/encrypt
+    secure: nknIyuf45/JACWB2OAWD32oU6HlW4AkkiI974KwKPPkMh3dRHJXsVQVbN/iIUjg/
+  artifact: /.*\.nupkg/
+  on:
+    appveyor_repo_tag: true
+- provider: GitHub
+  artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
+  draft: false
+  prerelease: true
+  on:
+    branch: master                # release from master branch only
+    APPVEYOR_REPO_TAG: true       # deploy on tag push only

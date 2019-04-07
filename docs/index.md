@@ -1,10 +1,10 @@
 # DotFeather Docs
 
-[???](ja/index.md)
+[日本語](ja/index.md)
 
 Welcome to DotFeather Docs!
 
-- ???????
+- Tutorial
     - [Inherit GameBase](graphic/gamebase.md)
     - Graphic
         - [Graphic](graphic/Graphic.md)

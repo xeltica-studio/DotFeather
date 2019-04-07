@@ -30,11 +30,11 @@ deploy:
     # Use encrypt tool
     # https://ci.appveyor.com/tools/encrypt
     secure: nknIyuf45/JACWB2OAWD32oU6HlW4AkkiI974KwKPPkMh3dRHJXsVQVbN/iIUjg/
-  artifact: /C:\projects\dotfeather\DotFeather\bin\Release\DotFeather.1.0.0.nupkg/
+  artifact: /C:\\projects\\dotfeather\\DotFeather\\bin\\Release\\DotFeather.1.0.0.nupkg/
   on:
     appveyor_repo_tag: true
 - provider: GitHub
-  artifact: /C:\projects\dotfeather\DotFeather\bin\Release\DotFeather.1.0.0.nupkg/           # upload all NuGet packages to release assets
+  artifact: /C:\\projects\\dotfeather\\DotFeather\\bin\\Release\\DotFeather.1.0.0.nupkg/           # upload all NuGet packages to release assets
   draft: false
   prerelease: true
   auth_token: 

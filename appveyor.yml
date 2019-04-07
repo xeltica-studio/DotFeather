@@ -1,6 +1,5 @@
 version: 0.7.0.{build}
 image: Visual Studio 2017
-skip_non_tags: true
 
 dotnet_csproj:
   patch: true

@@ -34,8 +34,8 @@ deploy:
   artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
   draft: false
   prerelease: true
-  auth_token: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx
-    secure: 
+  auth_token: 
+    secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx
   on:
     branch: master                # release from master branch only
     APPVEYOR_REPO_TAG: false       # deploy on tag push only

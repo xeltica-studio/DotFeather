@@ -1,4 +1,5 @@
-# <img src="docs/logo.svg"/> [![GitHub issues](https://img.shields.io/github/issues/xeltica/dotfeather.svg?style=flat-square)][issues] [![GitHub pull requests](https://img.shields.io/github/issues-pr/xeltica/dotfeather.svg?style=flat-square)][pulls] [![GitHub Releases](https://img.shields.io/github/release/xeltica/DotFeather.svg?style=flat-square)][releases] [![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=flat-square)](LICENSE)
+# <img src="docs/logo.svg"/> 
+[![GitHub issues](https://img.shields.io/github/issues/xeltica/dotfeather.svg?style=flat-square)][issues] [![GitHub pull requests](https://img.shields.io/github/issues-pr/xeltica/dotfeather.svg?style=flat-square)][pulls] [![GitHub Releases](https://img.shields.io/github/release/xeltica/DotFeather.svg?style=flat-square)][releases] [![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=flat-square)](LICENSE)
 
 
 [issues]: //github.com/xeltica/dotfeather/issues
@@ -18,38 +19,43 @@ nuget restore
 dotnet build
 ```
 
-## Example
+## Features
 
-### Draw Shapes
+- Lightweight processing
+    - It can display 10000 sprites at 60fps [<sup>*1</sup>](#f1)
+- 2D-specified Graphics System
+    - Sprite - Display textures on the screen
+    - Tilemap - Map textures on the grid
+    - Graphic - Draw lines, rectangles etc
+- Keyboard Input
+- Mouse Input
+- Playing music
+- Playing SFX
+- High Extensibility
+    - Add original rendering method
+    - Add original audio processor
 
-```cs
-// in class Game : GameBase
-var g = new Graphic();
-this.Children.Add(g);
+----
 
-g.Line(0, 0, 400, 400, Color.Red);
-g.Line(0, 400, 0, 400, Color.Blue);
-g.Circle(0, 0, 400, 400, Color.Green);
-```
+<p id="f1">1: It depends on your computer's spec.</p>
 
-### Draw a sprite
 
-```cs
-// in class Game : GameBase
-Texture2D[] textures = LoadDividedImage("./player.png", 4, 1, new System.Drawing.Size(16, 16);
-var sprite = new Sprite(textures[0], 0, 0, 0, new Vector(16, 16));
-this.Children.Add(sprite);
-```
+## Documents
 
-[Full Sample code](DotFeather.Test.NetCore)
+[Documents](docs/index.md)
 
 ## Contributing
 
 coming soon
 
+
 ## Donate
 
 You want to donate for me? Thank you very much! Please see [this page](//xeltica.work/en/donation.html) how to pay me.
+
+...or let's become my patron!
+
+[![become_a_patron](https://c5.patreon.com/external/logo/become_a_patron_button@2x.png)](https://patreon.com/xeltica)
 
 ## LICENSE
 

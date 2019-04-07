@@ -37,11 +37,11 @@ dotnet build
 
 ----
 
-<p id="f1">1: 開発者の環境でのベンチマーク値に過ぎません。</p>
+<p id="f1">1: ユーザーのコンピュータースペックに依存します。</p>
 
 ## ドキュメント
 
-[ドキュメント](docs/index.md)
+[ドキュメント](docs/ja/index.md)
 
 ## コントリビュートの仕方
 
@@ -53,7 +53,7 @@ dotnet build
 
 もしくは Patreon で私のパトロンになってください！
 
-[![become_a_patron](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://patreon.com/xeltica)
+[![become_a_patron](https://c5.patreon.com/external/logo/become_a_patron_button@2x.png)](https://patreon.com/xeltica)
 
 ## ライセンス
 

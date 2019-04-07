@@ -15,7 +15,7 @@ before_build:
     nuget restore
 
 build:
-  project: C:\projects\dotfeather\dotfeather\dotfeather.sln
+  project: C:\projects\dotfeather\dotfeather.sln
   publish_nuget: true
 
 configuration: Release

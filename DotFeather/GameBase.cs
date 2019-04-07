@@ -19,6 +19,34 @@ namespace DotFeather
 	public abstract class GameBase : IDisposable
 	{
 		/// <summary>
+		/// ウィンドウの X 座標を取得または設定します。
+		/// </summary>
+		public int X
+        {
+            get => window.X;
+            set => window.X = value;
+        }
+
+        /// <summary>
+        /// ウィンドウの Y 座標を取得または設定します。
+        /// </summary>
+        public int Y
+        {
+            get => window.Y;
+            set => window.Y = value;
+        }
+
+
+        /// <summary>
+        /// ウィンドウが表示されているかどうかを示す値を取得または設定します。
+        /// </summary>
+        public bool Visible
+        {
+            get => window.Visible;
+            set => window.Visible = value;
+        }
+
+		/// <summary>
 		/// このウィンドウの幅を取得または設定します。
 		/// </summary>
 		/// <value>The width.</value>
@@ -92,7 +120,7 @@ namespace DotFeather
         protected GameBase(int width, int height, string title = null, int refreshRate = 60)
         {
             RefreshRate = refreshRate;
-
+			
             window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow)
             {
                 VSync = VSyncMode.On,

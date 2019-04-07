@@ -1,12 +1,21 @@
 version: 0.7.0.{build}
 image: Visual Studio 2017
 
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+
 before_build:
 - ps: >-
     nuget restore
 
 build:
-  project: C:\projects\dotfeather\dotfeather\dotfeather.csproj
+  project: C:\projects\dotfeather\dotfeather\dotfeather.sln
   publish_nuget: true
 
 configuration: Release

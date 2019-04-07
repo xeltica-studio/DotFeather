@@ -19,11 +19,11 @@ deploy:
     secure: nknIyuf45/JACWB2OAWD32oU6HlW4AkkiI974KwKPPkMh3dRHJXsVQVbN/iIUjg/
   artifact: /.*\.nupkg/
   on:
-    appveyor_repo_tag: true
+    appveyor_repo_tag: false
 - provider: GitHub
   artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
   draft: false
   prerelease: true
   on:
     branch: master                # release from master branch only
-    APPVEYOR_REPO_TAG: true       # deploy on tag push only
+    APPVEYOR_REPO_TAG: false       # deploy on tag push only

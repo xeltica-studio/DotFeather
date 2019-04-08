@@ -11,9 +11,14 @@
     <description>A lightweight, extensible and easy game engine.</description>
     <copyright>(C)2018-2019 Xeltica</copyright>
     <tags>GameEngine</tags>
+        <license type="expression">MIT</license>
     <releaseNotes>
       0.7.0-beta: First Beta Release
     </releaseNotes>
-    <dependencies />
+    <dependencies>
+      <dependency id="OpenTK.NetStandard" version="1.0.4" />
+      <dependency id="Microsoft.Windows.Compatibility" version="2.0.1" />
+      <dependency id="NVorbis" version="0.8.6" />
+    </dependencies>
   </metadata>
 </package>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>DotFeather</id>
-    <version>0.7.0-beta</version>
+    <version>0.7.1-beta</version>
     <title>DotFeather</title>
     <authors>Xeltica</authors>
     <owners>Xeltica</owners>

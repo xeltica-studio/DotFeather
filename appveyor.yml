@@ -25,7 +25,7 @@ after_build:
   - nuget pack -Prop Configuration=Release DotFeather -OutputDirectory DotFeather/bin/Release/
 
 artifacts:
-  - path: dotfeather/bin/Release
+  - path: '**\*.nupkg'
     name: DotFeather
 
 deploy:

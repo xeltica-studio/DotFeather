@@ -9,7 +9,7 @@ namespace DotFeather.Models
 	/// <summary>
 	/// テクスチャのハンドルを持ちます。
 	/// </summary>
-	public struct Texture2D
+	public struct Texture2D : IDisposable
 	{
         /// <summary>
         /// このテクスチャの OpenGL ハンドルを取得します。
@@ -21,7 +21,7 @@ namespace DotFeather.Models
         /// </summary>
 		public Size Size { get; }
 
-		internal Texture2D(int handle, Size size)
+		public Texture2D(int handle, Size size)
 		{
 			Handle = handle;
 			Size = size;
@@ -91,5 +91,10 @@ namespace DotFeather.Models
             GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, bmp.Width, bmp.Height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Bgra, PixelType.UnsignedByte, bmp.Scan0);
             return new Texture2D(texture, new Size(bmp.Width, bmp.Height));
         }
-	}
+
+        public void Dispose()
+        {
+            GL.DeleteTexture(Handle);
+        }
+    }
 }

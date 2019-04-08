@@ -4,13 +4,17 @@
 
 DotFeather Docs へようこそ！
 
+DotFeather は、Nuget パッケージマネージャーを使用することで簡単に入手できます。
+
+[Nuget パッケージ](https://www.nuget.org/packages/DotFeather/) をチェックして下さい。
+
 - チュートリアル
-    - [GameBase の継承](graphic/gamebase.md)
-    - グラフィック
-        - [グラフィック](graphic/Graphic.md)
-        - [スプライト](graphic/sprite.md)
-        - [タイルマップ](graphic/tilemap.md)
-        - [コンテナー](graphic/container.md)
+    - [GameBase の継承](gamebase.md)
+    - [描画](drawing.md)
+        - [グラフィック](drawing/Graphic.md)
+        - [スプライト](drawing/sprite.md)
+        - [タイルマップ](drawing/tilemap.md)
+        - [コンテナー](drawing/container.md)
     - インプット
         - [マウス入力](input/mouse.md)
         - [キーボード入力](input/keyboard.md)

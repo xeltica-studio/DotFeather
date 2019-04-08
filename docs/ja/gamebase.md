@@ -1,6 +1,6 @@
 # GameBase の継承
 
-DotFeather では、ゲームのメインループを GameBase 抽象クラスの派生クラスを定義し、書きます。
+DotFeather では、ゲームのメインループを GameBase 抽象クラスの派生クラスを定義し、その中に書きます。
 
 ```cs
 public class Game : GameBase
@@ -9,6 +9,8 @@ public class Game : GameBase
         : base(width, height, title, refreshRate) { }
 }
 ```
+
+**以降、こうして作った派生クラスを「ゲーム」と呼びます。**
 
 ## エントリーポイント
 
@@ -67,4 +69,4 @@ static void Main()
 
 ゲームを終了します。終了コードを指定することもできます。
 
-次: [グラフィック](graphic/graphic.md)
+次: [グラフィック](drawing.md)

@@ -1,29 +1,30 @@
 # Tilemap
 
-タイルマップは、タイルを格子状に並べて描画するためのオブジェクトです。ゲームのマップなどに利用できます。
+Tilemap is a object to draw tiles matrix. It can be used for RPG field etc.
 
-## タイル
+## Tile
 
-タイルは、タイルマップで使用するためのオブジェクトです。タイルマップに使用できるオブジェクトは必ず `ITile` インターフェイスを実装します。現在は `Tile` クラスという、テクスチャから作成するタイルが組み込まれていますが、独自に `ITile` インターフェイスを実装したタイルを自作することもできます。
+Tile is a object for tilemap. Tile must implement `ITile` interface. Now `Tile` class, a tile which can be created from textures, is embedded. You can originally create a tile by creating `ITile` based class.
 
-Tile クラスを読み込んでタイルマップに貼り付ける方法を次に示します。
+
+I'll show how to load a tile and put it on a tilemap.
 
 ```cs
-// マップを作る
+// Create a map
 var map = new Tilemap(new Vector(16, 16));
-// テクスチャを読み込む
+// Load a texture
 var texture = Texture2D.LoadFrom("./grass.png");
-// タイルを生成する
+// Generate a tile
 var tile = new Tile(texture);
 
-// 2, 4 の位置にタイルを配置する
+// Place a tile at (2, 4) 
 map[2, 4] = tile;
 
-// (1, 4) から (8, 8) へ直線を描画する
+// Line from (1, 4) to (8, 8)
 map.Line(1, 4, 8, 8, tile);
 
-// (2, 16) にサイズ (16, 16) の矩形を描画する
+// Make a (16, 16) sized rectangle at (2, 16)
 map.Rect(2, 16, 16, 16, tile);
 ```
 
-次: [コンテナー](container.md)
+次: [Container](container.md)

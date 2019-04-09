@@ -14,7 +14,7 @@ Root.Add(graphic);
 
 次のように、描画したい図形に対応するメソッドを呼び出します。
 
-```
+```cs
 // 点
 graphic.Pixel(32, 32, Color.Black);
 // 線

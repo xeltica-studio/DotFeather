@@ -5,12 +5,12 @@
 Welcome to DotFeather Docs!
 
 - Tutorial
-    - [Inherit GameBase](graphic/gamebase.md)
-    - Graphic
-        - [Graphic](graphic/Graphic.md)
-        - [Sprite](graphic/sprite.md)
-        - [Tilemap](graphic/tilemap.md)
-        - [Container](graphic/container.md)
+    - [Inherit GameBase](gamebase.md)
+    - [Drawing](drawing.md)
+        - [Graphic](drawing/Graphic.md)
+        - [Sprite](drawing/sprite.md)
+        - [Tilemap](drawing/tilemap.md)
+        - [Container](drawing/container.md)
     - Input
         - [from Mouse](input/mouse.md)
         - [from Keyboard](input/keyboard.md)

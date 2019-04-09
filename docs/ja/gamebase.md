@@ -69,4 +69,4 @@ static void Main()
 
 ゲームを終了します。終了コードを指定することもできます。
 
-次: [グラフィック](drawing.md)
+次: [描画](drawing.md)

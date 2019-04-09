@@ -1,10 +1,15 @@
 # <img src="docs/logo.svg"/> 
+[![Build status](https://img.shields.io/appveyor/ci/xeltica/dotfeather.svg?style=for-the-badge)][ci]
+[![GitHub issues](https://img.shields.io/github/issues/xeltica/dotfeather.svg?style=for-the-badge)][issues]
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/xeltica/dotfeather.svg?style=for-the-badge)][pulls]
+[![GitHub Releases](https://img.shields.io/github/release-pre/xeltica/DotFeather.svg?style=for-the-badge)][releases]
+[![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=for-the-badge)](LICENSE)
+[![Nuget](https://img.shields.io/nuget/vpre/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
 
-[![GitHub issues](https://img.shields.io/github/issues/xeltica/dotfeather.svg?style=flat-square)][issues] [![GitHub pull requests](https://img.shields.io/github/issues-pr/xeltica/dotfeather.svg?style=flat-square)][pulls] [![GitHub Releases](https://img.shields.io/github/release/xeltica/DotFeather.svg?style=flat-square)][releases] [![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=flat-square)](LICENSE)
-
-[issues]: /xeltica/dotfeather/issues
-[pulls]: /xeltica/dotfeather/pulls
-[releases]: /xeltica/dotfeather/releases
+[ci]: https://ci.appveyor.com/project/Xeltica/dotfeather
+[issues]: //github.com/xeltica/dotfeather/issues
+[pulls]: //github.com/xeltica/dotfeather/pulls
+[releases]: //github.com/xeltica/dotfeather/releases
 
 DotFeather (ドットフェザー)は、 C# と .NET Standard 2.0 のための、軽量で汎用的な2Dゲームエンジンです。
 

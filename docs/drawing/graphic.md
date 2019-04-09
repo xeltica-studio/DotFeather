@@ -22,4 +22,4 @@ graphic.Line(0, 0, 64, 64, Color.Red);
 graphic.Rect(0, 0, 64, 64, Color.Green);
 ```
 
-次: [Sprite](sprite.md)
+Next: [Sprite](sprite.md)

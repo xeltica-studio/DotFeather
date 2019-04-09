@@ -74,4 +74,4 @@ Get a instance of the `Random` class of .NET Standard BCL.
 
 End the game. You can specify an exit status.
 
-次: [Drawing](drawing.md)
+Next: [Drawing](drawing.md)

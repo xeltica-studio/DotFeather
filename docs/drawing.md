@@ -15,4 +15,4 @@ All Objects implements `IDrawable` interface, and they will be rendered every fr
 To draw objects on the screen, run `Root.Add();` method on the game class.
 
 
-次: [Graphic](drawing/graphic.md)
+Next: [Graphic](drawing/graphic.md)

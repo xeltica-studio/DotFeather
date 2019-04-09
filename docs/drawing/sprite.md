@@ -32,4 +32,4 @@ Sprite zombie = new Sprite(textures[0], 64, 16);
 Root.Add(sprite);
 ```
 
-次: [Tilemap](tilemap.md)
+Next: [Tilemap](tilemap.md)

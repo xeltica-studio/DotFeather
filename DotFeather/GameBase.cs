@@ -154,8 +154,6 @@ namespace DotFeather
 
             window.Unload += (object sender, EventArgs e) =>
             {
-                // テクスチャを全て解放する
-                textures?.ForEach(t => GL.DeleteTexture(t.Handle));
                 OnUnload(sender, e);
             };
 
@@ -226,6 +224,5 @@ namespace DotFeather
 		private int? statusCode;
 		private readonly GameWindow window;
 		protected Random Random { get; private set; } = new Random();
-		protected readonly List<Texture2D> textures = new List<Texture2D>();
 	}
 }

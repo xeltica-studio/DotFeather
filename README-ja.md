@@ -24,6 +24,24 @@ nuget restore
 dotnet build
 ```
 
+## サポートされるプラットフォーム
+
+- Windows
+- macOS
+- Linux
+
+## サポートされるグラフィックドライバー
+
+- OpenGL 1.0 (OpenTK)
+
+### 計画中
+
+- OpenGL ES 2.0 (OpenTK)
+- DirectX 9.0 (DXライブラリ)
+  - Windows でのみ動作する
+- Metal2 (Xamarin.iOS および Xamarin.Mac)
+  - iOS および macOS でのみ動作する
+
 ## 機能
 
 - 軽快な処理

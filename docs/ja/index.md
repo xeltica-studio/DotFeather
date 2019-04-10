@@ -1,6 +1,6 @@
 # DotFeather Docs
 
-[English](index.md)
+[English](../index.md)
 
 DotFeather Docs へようこそ！
 

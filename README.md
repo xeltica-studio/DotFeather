@@ -11,9 +11,27 @@
 [pulls]: //github.com/xeltica/dotfeather/pulls
 [releases]: //github.com/xeltica/dotfeather/releases
 
-DotFeather is a lightweight generic 2D gameengine for C#/.NET Standard 2.0.
+DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET Standard 2.0.
 
 [日本語](README-ja.md) ・ English
+
+## Supported Platform
+
+- Windows
+- macOS
+- Linux
+
+## Supported Graphics Driver
+
+- OpenGL 1.0 (Using OpenTK)
+
+### In Planning
+
+- OpenGL ES 2.0 (Using OpenTK)
+- DirectX 9.0 (Using DXLib)
+  - It'll only works on Windows
+- Metal2 (Using Xamarin.iOS and Xamarin.Mac)
+  - It'll only works on iOS & macOS
 
 ## To Build
 

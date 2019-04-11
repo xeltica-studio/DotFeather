@@ -110,6 +110,16 @@ namespace DotFeather
             return this;
 		}
 
+        public Graphic Polygon(int x1, int y1, int x2, int y2, Color color)
+        {
+            Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Quads,
+                new OpenTK.PointF(x1, y1),
+                new OpenTK.PointF(x1, y2),
+                new OpenTK.PointF(x2, y2),
+                new OpenTK.PointF(x2, y1)));
+            return this;
+        }
+
 		/// <summary>
 		/// テクスチャを描画します。
 		/// </summary>
@@ -132,5 +142,30 @@ namespace DotFeather
 		}
 
 		public void Destroy() => Drawables.ForEach(d => d.Destroy());
+
+		public class PolygonContext
+		{
+			List<OpenTK.PointF> list;
+			Graphic ctx;
+			OpenTK.Color? color;
+			internal PolygonContext(Graphic ctx, Color? color)
+			{
+				list = new List<OpenTK.PointF>();
+				this.ctx = ctx;
+				this.color = color?.ToGL();
+			}
+
+			public PolygonContext Add(Point vertex)
+			{
+				list.Add(((PointF)vertex).ToGL());
+				return this;
+			}
+
+			public Graphic Commit()
+			{
+				ctx.Drawables.Add(new PrimitiveDrawable(color ?? OpenTK.Color.Black, PrimitiveType.Polygon, list.ToArray()));
+				return ctx;
+			}
+		}
 	}
 }

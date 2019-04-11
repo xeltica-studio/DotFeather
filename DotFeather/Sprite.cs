@@ -50,7 +50,7 @@ namespace DotFeather
 
         public void Destroy() 
 		{
-			internalTexture?.Dispose();
+			internalTexture.Dispose();
 		}
 	}
 }

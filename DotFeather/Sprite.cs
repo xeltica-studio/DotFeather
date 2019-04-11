@@ -18,6 +18,8 @@ namespace DotFeather
 		public int ZOrder { get; set; }
 		public string Name { get; set; }
 
+		private Texture2D internalTexture;
+
 		/// <summary>
 		/// <see cref="Sprite"/> クラスの新しいインスタンスを初期化します。
 		/// </summary>
@@ -34,15 +36,21 @@ namespace DotFeather
 			Scale = scale != default ? scale : new Vector(1, 1);
 		}
 
+		protected Sprite(string path)
+		{
+			Texture = internalTexture = Texture2D.LoadFrom(path);
+		}
+
 		public void Draw(GameBase game, Vector location)
 		{
 			TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle);
 		}
 
+		public static Sprite LoadFrom(string path) => new Sprite(path);
 
         public void Destroy() 
 		{
-			// hack FromImage などを作ったらここで破棄する
+			internalTexture?.Dispose();
 		}
 	}
 }

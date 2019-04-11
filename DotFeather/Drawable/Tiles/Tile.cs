@@ -22,14 +22,20 @@ namespace DotFeather.Drawable.Tiles
 		/// </summary>
 		public double Interval { get; private set; }
 
+		private bool textureIsInternal;
+
 		/// <summary>
 		/// テクスチャを指定して、<see cref="Tile"/> クラスの新しいインスタンスを初期化します。
 		/// </summary>
 		/// <param name="texture">タイルとして描画されるテクスチャ。</param>
 		public Tile(Texture2D texture)
-		{
-			Texture = texture;
-		}
+			: this(texture, false) { }
+
+        protected Tile(Texture2D texture, bool b1)
+        {
+            Texture = texture;
+			textureIsInternal = b1;
+        }
 
 		/// <summary>
 		/// テクスチャの配列とアニメーション時間を指定して、<see cref="Tile"/> クラスの新しいインスタンスを初期化します。
@@ -68,9 +74,12 @@ namespace DotFeather.Drawable.Tiles
 			TextureDrawer.Draw(game, Texture, location, Vector.One, 0, color);
 		}
 
+		public static Tile LoadFrom(string path) => new Tile(Texture2D.LoadFrom(path), true);
+
 		public void Destroy()
 		{
-			// hack FromImage とか作ったらここで破棄する
+			if (textureIsInternal)
+				Texture.Dispose();
 		}
 
         private int animationState;

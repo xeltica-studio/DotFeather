@@ -35,6 +35,11 @@
 		/// この <see cref="IDrawable"/> のスケーリングを取得または設定します。
 		/// </summary>
 		Vector Scale { get; set; }
+
+        /// <summary>
+        /// この <see cref="IDrawable"/> を完全に破棄します。
+        /// </summary>
+        void Destroy();
 	}
 
 }

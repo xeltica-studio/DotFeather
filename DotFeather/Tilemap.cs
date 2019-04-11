@@ -167,6 +167,15 @@ namespace DotFeather
 		public void Fill(Vector position, Vector size, ITile tile)
 			=> Line((int)position.X, (int)position.Y, (int)size.X, (int)size.Y, tile);
 
+		public void Destroy()
+		{
+			foreach (var kv in Tiles)
+			{
+				kv.Value.tile.Destroy();
+			}
+			Tiles.Clear();
+		}
+
         private void Swap<T>(ref T var1, ref T var2)
 		{
 			var tmp = var2;

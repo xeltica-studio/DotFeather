@@ -68,6 +68,11 @@ namespace DotFeather.Drawable.Tiles
 			TextureDrawer.Draw(game, Texture, location, Vector.One, 0, color);
 		}
 
+		public void Destroy()
+		{
+			// hack FromImage とか作ったらここで破棄する
+		}
+
         private int animationState;
         private double timer;
     }

@@ -130,5 +130,7 @@ namespace DotFeather
 			Drawables.Clear();
 			return this;
 		}
+
+		public void Destroy() => Drawables.ForEach(d => d.Destroy());
 	}
 }

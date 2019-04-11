@@ -57,6 +57,8 @@ namespace DotFeather.Drawable
         }
 
         private readonly Color color;
+
+		public void Destroy() { }
     }
 
 }

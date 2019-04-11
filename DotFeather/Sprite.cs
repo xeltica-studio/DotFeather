@@ -38,5 +38,11 @@ namespace DotFeather
 		{
 			TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle);
 		}
+
+
+        public void Destroy() 
+		{
+			// hack FromImage などを作ったらここで破棄する
+		}
 	}
 }

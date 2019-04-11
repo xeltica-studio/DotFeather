@@ -8,5 +8,10 @@ namespace DotFeather.Drawable.Tiles
 		/// この <see cref="ITile"/> をレンダリングします。
 		/// </summary>
 		void Draw(GameBase game, Tilemap map, Vector location, Color? color);
+
+        /// <summary>
+        /// この <see cref="ITile"/> を破棄します。
+        /// </summary>
+        void Destroy();
 	}
 }

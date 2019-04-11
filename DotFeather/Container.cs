@@ -71,6 +71,8 @@ namespace DotFeather
                 child.Draw(game, Location + location);
         }
 
+		public void Destroy() => Children.ForEach(e => e.Destroy());
+
         #region other IList<T> members
         public int IndexOf(IDrawable item) => Children.IndexOf(item);
 		public void RemoveAt(int index) => Children.RemoveAt(index);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using DotFeather.Drawable;
 using DotFeather.Drawable.Tiles;
+using static DotFeather.Helpers.MiscUtility;
 
 namespace DotFeather
 {
@@ -16,7 +17,7 @@ namespace DotFeather
 		public Vector Location { get; set; }
 		public float Angle { get; set; }
 		public Vector Scale { get; set; }
-		public Color? DefaultColor { get; set; }		
+		public Color? DefaultColor { get; set; }
 		public Vector TileSize { get; set; }
 		private Dictionary<(int x, int y), (ITile tile, Color? color)> Tiles { get; set; }
 
@@ -174,13 +175,6 @@ namespace DotFeather
 				kv.Value.tile.Destroy();
 			}
 			Tiles.Clear();
-		}
-
-        private void Swap<T>(ref T var1, ref T var2)
-		{
-			var tmp = var2;
-			var2 = var1;
-			var1 = tmp;
 		}
 	}
 }

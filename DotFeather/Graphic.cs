@@ -4,6 +4,8 @@ using System.Drawing;
 using DotFeather.Drawable;
 using DotFeather.Models;
 using OpenTK.Graphics.OpenGL;
+using DotFeather.Helpers;
+using static DotFeather.Helpers.MiscUtility;
 
 namespace DotFeather
 {
@@ -121,6 +123,34 @@ namespace DotFeather
                 new OpenTK.PointF(x3, y3)));
 			return this;
         }
+
+		public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color)
+		{
+			var list = new List<OpenTK.PointF>();
+
+			if (x1 > x2) Swap(ref x1, ref x2);
+            if (y1 > y2) Swap(ref y1, ref y2);
+
+			var (width, height) = (x2 - x1, y2 - y1);
+
+			// 大きさに応じて頂点数いじる
+			var verts = Math.Min(360, (width + height) / 10);
+
+			for (int i = 0; i < 360; i += 360 / verts)
+			{
+				var (rw, rh) = (width / 2, height / 2);
+				var (ox, oy) = (x1 + rw, y1 + rh);
+
+				list.Add(new OpenTK.PointF(
+					(float)(Math.Cos(DFMath.ToRadian(i)) * rw + ox),
+                    (float)(Math.Sin(DFMath.ToRadian(i)) * rh + oy)
+				));
+
+			}
+
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Polygon, list.ToArray()));
+			return this;
+		}
 
         /// <summary>
         /// 三角形を描画します。

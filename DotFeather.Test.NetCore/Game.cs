@@ -103,9 +103,9 @@ Sprite Tilemap などの べんりきのうが
 
 			scene.Add(sprite);
 
-			var graphic = new Graphic();
-			graphic.Line(0, 0, 64, 64, Color.Red);
-			graphic.Triangle(32, 32,32, 128, 48, 96,  Color.Brown);
+			var graphic = new Graphic()
+				.Triangle(0, 128, 128, 128, 128, 0, Color.Brown)
+				.Ellipse(128, 0, 400, 100, Color.Blue);
 			scene.Add(graphic);
 
 			for (int _ = 0; _ < 100; _++)

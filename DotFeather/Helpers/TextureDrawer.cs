@@ -59,6 +59,8 @@ namespace DotFeather.Helpers
 				Vertex(0, 0, verts[0], color);
 				Vertex(1, 0, verts[1], color);
 			}
+			GL.Disable(EnableCap.Texture2D);
+			GL.Disable(EnableCap.AlphaTest);
 		}
 
 		static void Vertex(double tcx, double tcy, (float x, float y) vx, System.Drawing.Color? color)

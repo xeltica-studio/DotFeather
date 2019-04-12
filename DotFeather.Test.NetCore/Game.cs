@@ -102,7 +102,13 @@ Sprite Tilemap などの べんりきのうが
 			sprite.Location = new Vector(Width / 2, Height / 2);
 
 			scene.Add(sprite);
-			for (int _ = 0; _ < 10000; _++)
+
+			var graphic = new Graphic();
+			graphic.Line(0, 0, 64, 64, Color.Red);
+			graphic.Triangle(32, 32,32, 128, 48, 96,  Color.Brown);
+			scene.Add(graphic);
+
+			for (int _ = 0; _ < 100; _++)
 			{
 				var sp = new Sprite(chars[0], Random.Next(-Width, Width * 2), Random.Next(-Height, Height * 2));
 				scene.Add(sp);

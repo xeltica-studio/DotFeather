@@ -103,22 +103,32 @@ namespace DotFeather
 		public Graphic Rect(int x1, int y1, int x2, int y2, Color color)
 		{
 			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Quads,
-				new OpenTK.PointF(x1, y1), 
-				new OpenTK.PointF(x1, y2), 
+				new OpenTK.PointF(x1, y1),
+				new OpenTK.PointF(x1, y2),
 				new OpenTK.PointF(x2, y2),
 				new OpenTK.PointF(x2, y1)));
             return this;
 		}
 
-        public Graphic Polygon(int x1, int y1, int x2, int y2, Color color)
+		/// <summary>
+		/// 三角形を描画します。
+		/// </summary>
+        public Graphic Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color)
         {
-            Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Quads,
-                new OpenTK.PointF(x1, y1),
-                new OpenTK.PointF(x1, y2),
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Triangles,
+				new OpenTK.PointF(x1, y1),
                 new OpenTK.PointF(x2, y2),
-                new OpenTK.PointF(x2, y1)));
-            return this;
+                new OpenTK.PointF(x3, y3)));
+			return this;
         }
+
+        /// <summary>
+        /// 三角形を描画します。
+        /// </summary>
+        public Graphic Triangle(Point p1, Point p2, Point p3, Color color)
+		{
+			return Triangle(p1.X, p1.Y, p2.X, p2.Y, p3.X, p3.Y, color);
+		}
 
 		/// <summary>
 		/// テクスチャを描画します。
@@ -142,30 +152,5 @@ namespace DotFeather
 		}
 
 		public void Destroy() => Drawables.ForEach(d => d.Destroy());
-
-		public class PolygonContext
-		{
-			List<OpenTK.PointF> list;
-			Graphic ctx;
-			OpenTK.Color? color;
-			internal PolygonContext(Graphic ctx, Color? color)
-			{
-				list = new List<OpenTK.PointF>();
-				this.ctx = ctx;
-				this.color = color?.ToGL();
-			}
-
-			public PolygonContext Add(Point vertex)
-			{
-				list.Add(((PointF)vertex).ToGL());
-				return this;
-			}
-
-			public Graphic Commit()
-			{
-				ctx.Drawables.Add(new PrimitiveDrawable(color ?? OpenTK.Color.Black, PrimitiveType.Polygon, list.ToArray()));
-				return ctx;
-			}
-		}
 	}
 }

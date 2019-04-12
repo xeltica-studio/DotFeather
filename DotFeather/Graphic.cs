@@ -43,7 +43,7 @@ namespace DotFeather
 		/// <param name="color">色.</param>
 		public Graphic Pixel(Point pos, Color color)
 		{
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Points, ((PointF)pos).ToGL()));
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Points, 0, null, ((PointF)pos).ToGL()));
 			return this;
 		}
 
@@ -66,7 +66,7 @@ namespace DotFeather
 		/// <param name="color">色.</param>
 		public Graphic Line(Point begin, Point end, Color color)
 		{
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Lines, ((PointF)begin).ToGL(), ((PointF)end).ToGL()));
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Lines, 0, null, ((PointF)begin).ToGL(), ((PointF)end).ToGL()));
             return this;
 		}
 
@@ -89,9 +89,9 @@ namespace DotFeather
 		/// <param name="begin">始点の座標.</param>
 		/// <param name="end">終点の座標.</param>
 		/// <param name="color">色.</param>
-		public Graphic Rect(Point begin, Point end, Color color)
+		public Graphic Rect(Point begin, Point end, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
-			return Rect(begin.X, begin.Y, end.X, end.Y, color);
+			return Rect(begin.X, begin.Y, end.X, end.Y, color, lineWidth, lineColor);
 		}
 
 		/// <summary>
@@ -102,9 +102,9 @@ namespace DotFeather
 		/// <param name="x2">終点のX座標。</param>
 		/// <param name="y2">終点のX座標。</param>
 		/// <param name="color">色.</param>
-		public Graphic Rect(int x1, int y1, int x2, int y2, Color color)
+		public Graphic Rect(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Quads,
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Quads, lineWidth, lineColor?.ToGL(),
 				new OpenTK.PointF(x1, y1),
 				new OpenTK.PointF(x1, y2),
 				new OpenTK.PointF(x2, y2),
@@ -115,16 +115,24 @@ namespace DotFeather
 		/// <summary>
 		/// 三角形を描画します。
 		/// </summary>
-        public Graphic Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color)
+        public Graphic Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color, int lineWidth = 0, Color? lineColor = default)
         {
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Triangles,
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Triangles,lineWidth, lineColor?.ToGL(),
 				new OpenTK.PointF(x1, y1),
                 new OpenTK.PointF(x2, y2),
                 new OpenTK.PointF(x3, y3)));
 			return this;
         }
 
-		public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color)
+        /// <summary>
+        /// 三角形を描画します。
+        /// </summary>
+        public Graphic Triangle(Point p1, Point p2, Point p3, Color color, int lineWidth = 0, Color? lineColor = default)
+        {
+            return Triangle(p1.X, p1.Y, p2.X, p2.Y, p3.X, p3.Y, color, lineWidth, lineColor);
+        }
+
+		public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
 			var list = new List<OpenTK.PointF>();
 
@@ -148,16 +156,13 @@ namespace DotFeather
 
 			}
 
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Polygon, list.ToArray()));
+			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Polygon, lineWidth, lineColor?.ToGL(), list.ToArray()));
 			return this;
 		}
 
-        /// <summary>
-        /// 三角形を描画します。
-        /// </summary>
-        public Graphic Triangle(Point p1, Point p2, Point p3, Color color)
+		public Graphic Ellipse(Point p1, Point p2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
-			return Triangle(p1.X, p1.Y, p2.X, p2.Y, p3.X, p3.Y, color);
+			return Ellipse(p1.X, p1.Y, p2.X, p2.Y, color, lineWidth, lineColor);
 		}
 
 		/// <summary>

@@ -1,4 +1,4 @@
-version: 0.7.0.{build}
+version: 0.8.0.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -21,7 +21,7 @@ build:
 
 configuration: Release
 
-after_build: 
+after_build:
   - nuget pack -Prop Configuration=Release DotFeather -OutputDirectory DotFeather/bin/Release/
 
 artifacts:
@@ -41,7 +41,7 @@ deploy:
   artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
   draft: false
   prerelease: true
-  auth_token: 
+  auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx
   on:
     APPVEYOR_REPO_TAG: true       # deploy on tag push only

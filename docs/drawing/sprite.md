@@ -32,4 +32,10 @@ Sprite zombie = new Sprite(textures[0], 64, 16);
 Root.Add(sprite);
 ```
 
+In addition, you can directly generate sprites by specifying path:
+
+```cs
+Sprite sprite = Sprite.LoadFrom("./assets/skeleton.png");
+```
+
 Next: [Tilemap](tilemap.md)

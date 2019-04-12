@@ -17,7 +17,7 @@ var texture = Texture2D.LoadFrom("./grass.png");
 // Generate a tile
 var tile = new Tile(texture);
 
-// Place a tile at (2, 4) 
+// Place a tile at (2, 4)
 map[2, 4] = tile;
 
 // Line from (1, 4) to (8, 8)
@@ -25,6 +25,12 @@ map.Line(1, 4, 8, 8, tile);
 
 // Make a (16, 16) sized rectangle at (2, 16)
 map.Rect(2, 16, 16, 16, tile);
+```
+
+In addition, you can directly generate tiles by specifying path:
+
+```cs
+Tile tile = Tile.LoadFrom("./assets/skeleton.png");
 ```
 
 Next: [Container](container.md)

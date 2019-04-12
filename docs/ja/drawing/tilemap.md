@@ -26,4 +26,10 @@ map.Line(1, 4, 8, 8, tile);
 map.Rect(2, 16, 16, 16, tile);
 ```
 
+また、ファイル名を指定して直接タイルを生成することも出来ます。
+
+```cs
+Tile sprite = Tile.LoadFrom("./assets/castle.png");
+```
+
 次: [コンテナー](container.md)

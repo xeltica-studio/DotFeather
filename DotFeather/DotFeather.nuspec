@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>DotFeather</id>
-    <version>0.7.1-beta</version>
+    <version>0.8.0-beta</version>
     <title>DotFeather</title>
     <authors>Xeltica</authors>
     <owners>Xeltica</owners>
@@ -13,6 +13,14 @@
     <tags>GameEngine</tags>
         <license type="expression">MIT</license>
     <releaseNotes>
+      0.8.0-beta:
+		+ Add Graphic.Circle()
+		+ Add Graphic.Triangle()
+		+ Add A feature to draw outline to Graphic methods
+		+ Add Destroy() method to IDrawable
+		+ Add Sprite.LoadFrom()
+		+ Add Tile.LoadFrom()
+		+ Fix a bug that Graphic object won't be drawn
       0.7.0-beta: First Beta Release
     </releaseNotes>
     <dependencies>

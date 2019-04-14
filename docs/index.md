@@ -4,6 +4,10 @@
 
 Welcome to DotFeather Docs!
 
+You can easily get DotFeather from NuGet Package Manager.
+
+Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
+
 - Tutorial
     - [Inherit GameBase](gamebase.md)
     - [Drawing](drawing.md)

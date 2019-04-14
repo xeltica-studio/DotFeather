@@ -4,9 +4,9 @@
 
 DotFeather Docs へようこそ！
 
-DotFeather は、Nuget パッケージマネージャーを使用することで簡単に入手できます。
+DotFeather は、NuGet パッケージマネージャーを使用することで簡単に入手できます。
 
-[Nuget パッケージ](https://www.nuget.org/packages/DotFeather/) をチェックして下さい。
+[NuGet パッケージ](https://www.nuget.org/packages/DotFeather/) をチェックして下さい。
 
 - チュートリアル
     - [GameBase の継承](gamebase.md)

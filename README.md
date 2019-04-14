@@ -1,15 +1,8 @@
-# <img src="docs/logo.svg"/> 
+# <img src="docs/logo.svg"/>
 [![Build status](https://img.shields.io/appveyor/ci/xeltica/dotfeather.svg?style=for-the-badge)][ci]
-[![GitHub issues](https://img.shields.io/github/issues/xeltica/dotfeather.svg?style=for-the-badge)][issues]
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/xeltica/dotfeather.svg?style=for-the-badge)][pulls]
 [![GitHub Releases](https://img.shields.io/github/release-pre/xeltica/DotFeather.svg?style=for-the-badge)][releases]
-[![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=for-the-badge)](LICENSE)
 [![Nuget](https://img.shields.io/nuget/vpre/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
 
-[ci]: https://ci.appveyor.com/project/Xeltica/dotfeather
-[issues]: //github.com/xeltica/dotfeather/issues
-[pulls]: //github.com/xeltica/dotfeather/pulls
-[releases]: //github.com/xeltica/dotfeather/releases
 
 DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET Standard 2.0.
 
@@ -65,12 +58,14 @@ dotnet build
 
 ## Documents
 
-[Documents](docs/index.md)
+[Documents](https://xeltica.github.io/DotFeather/docs)
 
 ## Contributing
 
-coming soon
+Please see [Contribution Guide](CONTRIBUTING.md).
 
+[![GitHub issues](https://img.shields.io/github/issues/xeltica/dotfeather.svg?style=for-the-badge)][issues]
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/xeltica/dotfeather.svg?style=for-the-badge)][pulls]
 
 ## Donate
 
@@ -82,4 +77,10 @@ You want to donate for me? Thank you very much! Please see [this page](//xeltica
 
 ## LICENSE
 
-[MIT](LICENSE)
+[![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=for-the-badge)](LICENSE)
+
+
+[ci]: https://ci.appveyor.com/project/Xeltica/dotfeather
+[issues]: //github.com/xeltica/dotfeather/issues
+[pulls]: //github.com/xeltica/dotfeather/pulls
+[releases]: //github.com/xeltica/dotfeather/releases

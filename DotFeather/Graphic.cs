@@ -132,7 +132,10 @@ namespace DotFeather
             return Triangle(p1.X, p1.Y, p2.X, p2.Y, p3.X, p3.Y, color, lineWidth, lineColor);
         }
 
-		public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
+        /// <summary>
+        /// 楕円を描画します。
+        /// </summary>
+        public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
 			var list = new List<OpenTK.PointF>();
 
@@ -160,6 +163,9 @@ namespace DotFeather
 			return this;
 		}
 
+		/// <summary>
+		/// 楕円を描画します。
+		/// </summary>
 		public Graphic Ellipse(Point p1, Point p2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
 			return Ellipse(p1.X, p1.Y, p2.X, p2.Y, color, lineWidth, lineColor);

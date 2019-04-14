@@ -8,38 +8,8 @@ using DotFeather.Models;
 
 namespace DotFeather.Test.NetCore
 {
-	class Game : GameBase
+    class Game : GameBase
 	{
-		readonly char[] fontMap = File.ReadAllText("./font.txt").ToCharArray();
-		Dictionary<char, Tile> fontTable;
-		Texture2D[] chars;
-		Texture2D[] field;
-
-		int charIndex;
-		int animIndex;
-
-		bool prevIsWalking;
-		bool isWalking;
-
-		Container sprite;
-		Sprite spriteChar;
-
-		Tilemap map;
-
-		Container scene;
-
-		int prevSecond, fps, f;
-
-		double time;
-
-		static void Main(string[] args)
-		{
-			using (var g = new Game(320, 240))
-			{
-				g.Run();
-			}
-		}
-
 		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{
 			BackgroundColor = Color.White;
@@ -169,5 +139,20 @@ Sprite Tilemap などの べんりきのうが
 
 			prevIsWalking = isWalking;
 		}
+
+        private readonly char[] fontMap = File.ReadAllText("./font.txt").ToCharArray();
+        private Dictionary<char, Tile> fontTable;
+        private Texture2D[] chars;
+        private Texture2D[] field;
+        private int charIndex;
+        private int animIndex;
+        private bool prevIsWalking;
+        private bool isWalking;
+        private Container sprite;
+        private Sprite spriteChar;
+        private Tilemap map;
+        private Container scene;
+        private int prevSecond, fps, f;
+        private double time;
 	}
 }

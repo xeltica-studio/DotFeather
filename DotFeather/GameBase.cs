@@ -36,7 +36,6 @@ namespace DotFeather
             set => window.Y = value;
         }
 
-
         /// <summary>
         /// ウィンドウが表示されているかどうかを示す値を取得または設定します。
         /// </summary>
@@ -107,7 +106,7 @@ namespace DotFeather
         protected GameBase(int width, int height, string title = null, int refreshRate = 60)
         {
             RefreshRate = refreshRate;
-			
+
             window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow)
             {
                 VSync = VSyncMode.On,
@@ -221,6 +220,7 @@ namespace DotFeather
 		/// ウィンドウがリサイズされたときに呼び出されます。
 		/// </summary>
 		protected virtual void OnResize(object sender, EventArgs e) { }
+
 		private int? statusCode;
 		private readonly GameWindow window;
 		protected Random Random { get; private set; } = new Random();

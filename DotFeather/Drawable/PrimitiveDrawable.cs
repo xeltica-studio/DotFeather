@@ -91,6 +91,8 @@ namespace DotFeather.Drawable
 			}
         }
 
+        public void Destroy() { }
+
 		private void Vertex(Color col, Vector2 vec)
 		{
 			GL.Color4(col);
@@ -101,8 +103,6 @@ namespace DotFeather.Drawable
         private readonly Color color;
 		private readonly int lineWidth;
         private readonly Color? lineColor;
-
-        public void Destroy() { }
     }
 
 }

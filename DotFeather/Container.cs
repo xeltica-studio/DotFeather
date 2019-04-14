@@ -10,7 +10,6 @@ namespace DotFeather
 	/// </summary>
 	public class Container : IDrawable, IList<IDrawable>
 	{
-
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の描画優先順位を取得または設定します。数値が低いほど奥に描画されます。
 		/// </summary>

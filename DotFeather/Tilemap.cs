@@ -19,7 +19,6 @@ namespace DotFeather
 		public Vector Scale { get; set; }
 		public Color? DefaultColor { get; set; }
 		public Vector TileSize { get; set; }
-		private Dictionary<(int x, int y), (ITile tile, Color? color)> Tiles { get; set; }
 
 		/// <summary>
 		/// <see cref="Tilemap"/> クラスの新しいインスタンスを初期化します。
@@ -28,7 +27,7 @@ namespace DotFeather
 		public Tilemap(Vector tileSize)
 		{
 			TileSize = tileSize;
-			Tiles = new Dictionary<(int, int), (ITile, Color?)>();
+			tiles = new Dictionary<(int, int), (ITile, Color?)>();
 		}
 
 
@@ -52,7 +51,7 @@ namespace DotFeather
 
         public void Draw(GameBase game, Vector location)
 		{
-			foreach (var kv in Tiles)
+			foreach (var kv in tiles)
 			{
 				var (x, y) = kv.Key;
 				var loc = new Vector(x * TileSize.X, y * TileSize.Y);
@@ -67,7 +66,7 @@ namespace DotFeather
 		/// <summary>
 		/// 指定した位置にあるタイルを取得します。
 		/// </summary>
-		public ITile GetTileAt(int x, int y) => Tiles.ContainsKey((x, y)) ? Tiles[(x, y)].tile : default;
+		public ITile GetTileAt(int x, int y) => tiles.ContainsKey((x, y)) ? tiles[(x, y)].tile : default;
 
 		/// <summary>
 		/// 指定した位置にあるタイルの色を取得します。
@@ -76,7 +75,7 @@ namespace DotFeather
 		/// <summary>
 		/// 指定した位置にあるタイルの色を取得します。
 		/// </summary>
-		public Color? GetTileColorAt(int x, int y) => Tiles.ContainsKey((x, y)) ? Tiles[(x, y)].color : default;
+		public Color? GetTileColorAt(int x, int y) => tiles.ContainsKey((x, y)) ? tiles[(x, y)].color : default;
 
 		/// <summary>
 		/// 指定した位置にタイルを設置します。
@@ -89,9 +88,9 @@ namespace DotFeather
 		public void SetTile(int x, int y, ITile tile, Color? color = default)
 		{
 			if (tile == default)
-				Tiles.Remove((x, y));
+				tiles.Remove((x, y));
 			else
-				Tiles[(x, y)] = (tile, color ?? DefaultColor);
+				tiles[(x, y)] = (tile, color ?? DefaultColor);
 		}
 
 		/// <summary>
@@ -99,7 +98,7 @@ namespace DotFeather
 		/// </summary>
 		public void Clear()
 		{
-			Tiles.Clear();
+			tiles.Clear();
 		}
 
 		/// <summary>
@@ -170,11 +169,13 @@ namespace DotFeather
 
 		public void Destroy()
 		{
-			foreach (var kv in Tiles)
+			foreach (var kv in tiles)
 			{
 				kv.Value.tile.Destroy();
 			}
-			Tiles.Clear();
+			tiles.Clear();
 		}
+
+        private Dictionary<(int x, int y), (ITile tile, Color? color)> tiles;
 	}
 }

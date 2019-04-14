@@ -40,7 +40,6 @@ namespace DotFeather.Helpers
 					.ToViewportPoint(hw, hh)
 			};
 
-
 			GL.Enable(EnableCap.Texture2D);
 			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
 			GL.Enable(EnableCap.AlphaTest);
@@ -63,7 +62,7 @@ namespace DotFeather.Helpers
 			GL.Disable(EnableCap.AlphaTest);
 		}
 
-		static void Vertex(double tcx, double tcy, (float x, float y) vx, System.Drawing.Color? color)
+		private static void Vertex(double tcx, double tcy, (float x, float y) vx, System.Drawing.Color? color)
 		{
 			var col = color is System.Drawing.Color c ? c.ToGL() : Color.White;
 

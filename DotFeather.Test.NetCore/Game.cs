@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using DotFeather.Audio;
 using DotFeather.Drawable.Tiles;
 using DotFeather.Models;
 
@@ -96,6 +97,25 @@ Sprite Tilemap などの べんりきのうが
 			var x = Input.Keyboard.Left.IsPressed ? -1 : Input.Keyboard.Right.IsPressed ? 1 : 0;
 			var y = Input.Keyboard.Up.IsPressed ? -1 : Input.Keyboard.Down.IsPressed ? 1 : 0;
 
+			var pressed1 = Input.Keyboard.Number1.IsPressed;
+            var pressed2 = Input.Keyboard.Number2.IsPressed;
+            var pressed3 = Input.Keyboard.Number3.IsPressed;
+            var pressed4 = Input.Keyboard.Number4.IsPressed;
+
+			if (pressed1 && !prev1)
+				player.Play(bgmField, 12250);
+            if (pressed2 && !prev2)
+                player.Play(bgmBattle, 377853);
+            if (pressed3 && !prev3)
+                player.Pause();
+            if (pressed4 && !prev4)
+                player.Stop(5);
+
+			prev1 = pressed1;
+			prev2 = pressed2;
+			prev3 = pressed3;
+            prev4 = pressed4;
+
 			if (x != 0 || y != 0)
 			{
 				charIndex = y == +1 ? (x == -1 ? 1 : x == +1 ? 3 : 0) :
@@ -154,5 +174,10 @@ Sprite Tilemap などの べんりきのうが
         private Container scene;
         private int prevSecond, fps, f;
         private double time;
+		private AudioPlayer player = new AudioPlayer();
+		private bool prev1, prev2, prev3, prev4;
+        private WaveAudioSource bgmField = new WaveAudioSource("field.wav");
+        private WaveAudioSource bgmBattle = new WaveAudioSource("Battle.wav");
+        private WaveAudioSource drum3 = new WaveAudioSource("drum03.wav");
 	}
 }

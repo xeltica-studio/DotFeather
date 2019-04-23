@@ -6,7 +6,7 @@ namespace DotFeather.Audio
 {
     public class WaveAudioSource : IAudioSource
     {
-        public int? Samples => store.Length / channels;
+        public int? Samples => store.Length;
         public int Channels => channels;
         public int Bits => bits;
         public int SampleRate => sampleRate;
@@ -16,12 +16,12 @@ namespace DotFeather.Audio
 			store = LoadWave(File.OpenRead(path), out channels, out bits, out sampleRate);
 		}
 
-		public IEnumerator<(short left, short right)> EnumerateSamples(int? loopStart)
+		public IEnumerable<(short left, short right)> EnumerateSamples(int? loopStart)
 		{
             int currentSample = 0;
 			while (true)
 			{
-                var Sample = sampleRate == 16 ? (PullDelegate)Pull16 : Pull;
+                var Sample = bits == 16 ? (PullDelegate)Pull16 : Pull;
                 switch (channels)
                 {
                     case 1:
@@ -29,7 +29,8 @@ namespace DotFeather.Audio
                         yield return (sample, sample);
                         break;
                     case 2:
-                        yield return (Sample(ref currentSample), Sample(ref currentSample));
+						var right = Sample(ref currentSample);
+                        yield return (Sample(ref currentSample), right);
                         break;
                 }
                 if (currentSample >= store.Length)
@@ -37,7 +38,7 @@ namespace DotFeather.Audio
                     // ループ処理
                     if (loopStart is int loop)
                     {
-                        currentSample = loop * channels;
+                        currentSample = loop * channels * bits / 8;
                     }
                     else
                     {
@@ -47,8 +48,8 @@ namespace DotFeather.Audio
             }
         }
 
-        protected short Pull(ref int currentSample) => store[currentSample++];
-        protected short Pull16(ref int currentSample) => (short)(store[currentSample++] << 8 + store[currentSample++]);
+        protected short Pull(ref int currentSample) => (short)(store[currentSample++] * 128);
+        protected short Pull16(ref int currentSample) => (short)(store[currentSample++] | (store[currentSample++] << 8));
 
         protected static byte[] LoadWave(Stream stream, out int channels, out int bits, out int rate)
         {
@@ -69,11 +70,17 @@ namespace DotFeather.Audio
                     throw new NotSupportedException("Specified stream is not a wave file.");
 
                 // WAVE header
-                string fmt = new string(reader.ReadChars(4));
-                if (fmt != "fmt ")
-                    throw new NotSupportedException("Specified wave file is not supported.");
+                string fmt = "";
+				var size = 0;
+				while (true)
+				{
+					fmt = new string(reader.ReadChars(4));
+                    size = reader.ReadInt32();
+					if (fmt == "fmt ")
+						break;
+					reader.ReadBytes(size);
+                }
 
-                reader.ReadInt32();
                 reader.ReadInt16();
                 int fileChannels = reader.ReadInt16();
                 int sampleRate = reader.ReadInt32();
@@ -87,17 +94,21 @@ namespace DotFeather.Audio
                 if (fileChannels < 1 || 2 < fileChannels)
                     throw new NotSupportedException("DotFeather only supports 1ch or 2ch audio.");
 
-                string data = new string(reader.ReadChars(4));
-                if (data != "data")
-                    throw new NotSupportedException("Specified wave file is not supported.");
-
-                _ = reader.ReadInt32();
+                string data = null;
+                while (true)
+                {
+                    data = new string(reader.ReadChars(4));
+                    size = reader.ReadInt32();
+                    if (data == "data")
+                        break;
+                    reader.ReadBytes(size);
+                }
 
                 channels = fileChannels;
                 bits = bitsPerSample;
                 rate = sampleRate;
 
-                return reader.ReadBytes((int)reader.BaseStream.Length);
+                return reader.ReadBytes(size);
             }
         }
 

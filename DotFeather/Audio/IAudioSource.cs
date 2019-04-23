@@ -11,7 +11,7 @@ namespace DotFeather.Audio
 		/// <summary>
 		/// サンプルを列挙します。
 		/// </summary>
-		IEnumerator<(short left, short right)> EnumerateSamples(int? loopStart);
+		IEnumerable<(short left, short right)> EnumerateSamples(int? loopStart);
 		/// <summary>
 		/// この <see cref="IAudioSource"/> のサンプル数を取得します。特定不可能な場合 <c>null</c> を返します。
 		/// </summary>

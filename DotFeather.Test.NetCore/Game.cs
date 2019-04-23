@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using DotFeather.Audio;
@@ -13,7 +14,7 @@ namespace DotFeather.Test.NetCore
 	{
 		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{
-			BackgroundColor = Color.White;
+			BackgroundColor = Color.Black;
 		}
 
 		public void DrawString(int x, int y, string text, Color? color = null)
@@ -49,18 +50,9 @@ namespace DotFeather.Test.NetCore
 			scene = new Container();
 			Root.Add(scene);
 
-			DrawString(1, 1, @"DotFeatherへ ようこそ!
-
-DotFeatherは 2Dゲームを かんたんにつくれる
-C#の ための ゲームエンジンです!
-
-Sprite Tilemap などの べんりきのうが
-さいしょから つかえるので
-めんどうな コードを かかずに
-あなたの さくひんを つくれます!
-
-それでは DotFeatherで
-あなただけの めいさくを つくりましょう!", Color.Black);
+			FontFamily.Families.ToList().ForEach(Console.WriteLine);
+			var font = new Font("ヒラギノ角ゴ Pro", 10.5f);
+			Root.Add(fpsText = new TextDrawable("", font, Color.White));
 
 			sprite = new Container
 			{
@@ -155,7 +147,7 @@ Sprite Tilemap などの べんりきのうが
 
 			spriteChar.Texture = chars[charIndex + (animIndex == 3 ? 1 : animIndex)];
 
-			Title = $"DotFeather Window {fps}fps";
+			fpsText.Text = $"{fps}FPS";
 
 			prevIsWalking = isWalking;
 		}
@@ -179,5 +171,6 @@ Sprite Tilemap などの べんりきのうが
         private IAudioSource bgmField = new WaveAudioSource("field.wav");
         private IAudioSource bgmBattle = new VorbisAudioSource("Battle.ogg");
         private IAudioSource drum3 = new WaveAudioSource("drum03.wav");
-	}
+        private TextDrawable fpsText;
+    }
 }

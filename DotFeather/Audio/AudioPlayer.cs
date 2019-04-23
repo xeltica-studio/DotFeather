@@ -30,6 +30,8 @@ namespace DotFeather.Audio
 			}
 		}
 
+		public float Pitch { get; set; } = 1;
+
         public bool IsPlaying { get; private set; }
 
         public void Play(IAudioSource source, int? loop = default)
@@ -104,6 +106,7 @@ namespace DotFeather.Audio
 				{
 					int processedCount, queuedCount;
 
+                    AL.Source(alSrc, ALSourcef.Pitch, Pitch);
 					do
 					{
 						AL.GetSource(alSrc, ALGetSourcei.BuffersProcessed, out processedCount);

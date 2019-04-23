@@ -36,8 +36,22 @@ namespace DotFeather.Models
         {
             using (var file = new Bitmap(path))
             {
-                return RegisterTexture(file.LockBits(new Rectangle(0, 0, file.Width, file.Height), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb));
+                return LoadFrom(file.LockBits(new Rectangle(0, 0, file.Width, file.Height), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb));
             }
+        }
+
+        /// <summary>
+        /// テクスチャを登録し、ハンドルを返します。
+        /// </summary>
+        public static Texture2D LoadFrom(BitmapData bmp)
+        {
+            var texture = GL.GenTexture();
+            GL.BindTexture(TextureTarget.Texture2D, texture);
+
+            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
+            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
+            GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, bmp.Width, bmp.Height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Bgra, PixelType.UnsignedByte, bmp.Scan0);
+            return new Texture2D(texture, new Size(bmp.Width, bmp.Height));
         }
 
         /// <summary>
@@ -68,28 +82,12 @@ namespace DotFeather.Models
                             throw new ArgumentException(nameof(verticalCount));
                         }
                         var locked = file.LockBits(new Rectangle(px, py, sizeOfCroppedImage.Width, sizeOfCroppedImage.Height), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-                        datas.Add(RegisterTexture(locked));
+                        datas.Add(LoadFrom(locked));
                         file.UnlockBits(locked);
                     }
                 }
                 return datas.ToArray();
             }
-        }
-
-
-
-        /// <summary>
-        /// テクスチャを登録し、ハンドルを返します。
-        /// </summary>
-        private static Texture2D RegisterTexture(BitmapData bmp)
-        {
-            var texture = GL.GenTexture();
-            GL.BindTexture(TextureTarget.Texture2D, texture);
-
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
-            GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
-            GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, bmp.Width, bmp.Height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Bgra, PixelType.UnsignedByte, bmp.Scan0);
-            return new Texture2D(texture, new Size(bmp.Width, bmp.Height));
         }
 
         public void Dispose()

@@ -1,17 +1,18 @@
-# キーボード入力
+# Keyboard Input
 
-キーボードからの入力を取得するには、 `Input` 静的クラスの `Keyboard` プロパティを使用します。
 
-Keyboard プロパティの子要素には、あらゆるキーの名前がプロパティとしてあります。
+To get keyboard input, use `Input.Keyboard` property.
 
-実際の使用例を述べます。
+It has all well-known keys as children.
+
+I'll show actual examples.
 
 ```cs
-// A を押したか判定する
+// Check whether the user pressed A key
 if (Input.Keyboard.A.IsPressed)
 {
-    Console.WriteLine("Aが押されている");
+    Console.WriteLine("A is pressed");
 }
 ```
 
-次: [独自レンダリング](../plugin/render.md)
+Next: [Audio](../audio.md)

@@ -1,22 +1,22 @@
-# マウス入力
+# Mouse Input
 
-マウスからの入力を取得するには、 `Input` 静的クラスの `Mouse` プロパティを使用します。
+To get mouse input, use `Input.Mouse` property.
 
-マウス入力に関わる全ての例を述べます。
+I'll show all examples related to mouse input.
 
 ```cs
-// マウスの座標
+// Mouse Position
 var pos = Input.Mouse.Position;
-// スクロールの移動量
+// Scroll Displacement
 var (scrX, scrY) = Input.Mouse.Scroll;
 
-// ボタン判定
+// Check Button
 if (Input.Mouse.IsLeftButtonClicked)
-    Console.WriteLine("左クリック");
+    Console.WriteLine("Left Clicked");
 if (Input.Mouse.IsMiddleButtonClicked)
-    Console.WriteLine("中クリック");
+    Console.WriteLine("Middle Clicked");
 if (Input.Mouse.IsRightButtonClicked)
-    Console.WriteLine("右クリック");
+    Console.WriteLine("Right Clicked");
 ```
 
-次: [キーボード入力](keyboard.md)
+Next: [Keyboard Input](keyboard.md)

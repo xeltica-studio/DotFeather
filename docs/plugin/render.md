@@ -1,12 +1,12 @@
-# 独自レンダリング
+# Original Rendering
 
-**Note: この項目は DotFeather およびプログラミング上級者を対象としています。**
+**Note: This article is for Advanced Programmers.**
 
-## IDrawable の実装
+## Implement IDrawable
 
-`IDrawable` インターフェイスを実装するクラスを作成するだけで、DotFeather上で扱えるオブジェクトを実装できます。
+You can implement the objects that can be handled on DotFeather simply by creating a class that implements the `IDrawable` interface.
 
-最新版における `IDrawable` インターフェイスの定義を示します。
+Here is the definition of the `IDrawable` interface in the latest version.
 
 ```cs
 public interface IDrawable
@@ -20,15 +20,15 @@ public interface IDrawable
 }
 ```
 
-ZOrder 以降は自動実装プロパティとして実装することをおすすめします。
+We recommend that you implement properties under ZOrder as auto-implemented properties.
 
-Draw メソッドの中に実際の描画処理を記述します。引数のlocationとプロパティのLocationを加算した値の位置に描画を行って下さい。
+Write the actual drawing process in the Draw method. Please draw in the location of the value which added location of argument and Location of property.
 
-## ITile の実装
+## Implements ITile
 
-`ITile` インターフェイスを実装するクラスを作成するだけで、タイルを自作できます。
+You can create your own tiles simply by creating a class that implements the `ITile` interface.
 
-最新版における `ITile` インターフェイスの定義を示します。
+Here is the definition of the `ITile` interface in the latest version.
 
 ```cs
 public interface ITile
@@ -37,6 +37,6 @@ public interface ITile
 }
 ```
 
-Draw メソッドの中に実際の描画処理を記述します。タイルは1つのインスタンスを複数の位置に設置することが想定されている為、描画位置や色情報を適宜引数として受け取ります。 location 仮引数に入る座標情報はタイルマップの座標ではなく、スクリーンのピクセル座標です。何も算出処理を行う必要なく、そのままの位置に描画を行って下さい。
+Write the actual drawing process in the Draw method. Because tile instances are reused, it receives drawing position and color information as arguments for drawing. Coordinate information of `location` argument is not tile map coordinates, but screen pixel coordinates. Please draw at the same position.
 
-次: 工事中
+Next: [Original Audio Source](audiosource.md)

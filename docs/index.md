@@ -18,14 +18,15 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
     - Input
         - [from Mouse](input/mouse.md)
         - [from Keyboard](input/keyboard.md)
-    - Audio
-        - (TBD)
+    - [Audio](audio.md)
+        - [Load files](audio/load.md)
+        - [Play files](audio/play.md)
     - Extensions
         - [Original Rendering](plugin/render.md)
-        - Original Audio Source(TBD)
-    - Official Plugins (TBD)
+        - [Original Audio Source](plugin/audiosource.md)
+    <!-- - Official Plugins (TBD)
         - DotFeather.UI
         - DotFeather.Router
         - DotFeather.Management
         - DotFeather.Management.Router
-        - DotFeather.UI.Mvvm
+        - DotFeather.UI.Mvvm -->

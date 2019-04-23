@@ -107,7 +107,7 @@ Sprite Tilemap などの べんりきのうが
             if (pressed2 && !prev2)
                 player.Play(bgmBattle, 377853);
             if (pressed3 && !prev3)
-                player.Pause();
+                player.Stop();
             if (pressed4 && !prev4)
                 player.Stop(5);
 
@@ -176,8 +176,8 @@ Sprite Tilemap などの べんりきのうが
         private double time;
 		private AudioPlayer player = new AudioPlayer();
 		private bool prev1, prev2, prev3, prev4;
-        private WaveAudioSource bgmField = new WaveAudioSource("field.wav");
-        private WaveAudioSource bgmBattle = new WaveAudioSource("Battle.wav");
-        private WaveAudioSource drum3 = new WaveAudioSource("drum03.wav");
+        private IAudioSource bgmField = new WaveAudioSource("field.wav");
+        private IAudioSource bgmBattle = new VorbisAudioSource("Battle.ogg");
+        private IAudioSource drum3 = new WaveAudioSource("drum03.wav");
 	}
 }

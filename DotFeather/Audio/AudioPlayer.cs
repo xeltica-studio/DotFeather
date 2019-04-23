@@ -46,13 +46,6 @@ namespace DotFeather.Audio
 		public void Play()
 		{
 			IsPlaying = true;
-			isPausing = false;
-		}
-
-		public void Pause()
-		{
-			IsPlaying = false;
-			isPausing = true;
 		}
 
 		public void Stop(float time = 0)
@@ -81,7 +74,6 @@ namespace DotFeather.Audio
 					while (IsPlaying)
 						await Task.Delay(10);
                     Gain = 1;
-
 				});
 			}
 		}
@@ -199,6 +191,5 @@ namespace DotFeather.Audio
         private float gain;
 		private AudioContext context;
 		private CancellationTokenSource cts;
-        private bool isPausing;
     }
 }

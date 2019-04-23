@@ -50,7 +50,6 @@ namespace DotFeather.Test.NetCore
 			scene = new Container();
 			Root.Add(scene);
 
-			FontFamily.Families.ToList().ForEach(Console.WriteLine);
 			var font = new Font("ヒラギノ角ゴ Pro", 10.5f);
 			Root.Add(fpsText = new TextDrawable("", font, Color.White));
 
@@ -101,7 +100,7 @@ namespace DotFeather.Test.NetCore
             if (pressed3 && !prev3)
                 player.Stop();
             if (pressed4 && !prev4)
-                player.Stop(5);
+                player.Pitch = player.Pitch == 1 ? 1.4f : 1;
 
 			prev1 = pressed1;
 			prev2 = pressed2;

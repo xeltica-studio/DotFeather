@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>DotFeather</id>
-    <version>0.8.0-beta</version>
+    <version>0.9.0-beta</version>
     <title>DotFeather</title>
     <authors>Xeltica</authors>
     <owners>Xeltica</owners>
@@ -13,6 +13,9 @@
     <tags>GameEngine</tags>
         <license type="expression">MIT</license>
     <releaseNotes>
+	  0.9.0-beta:
+	    + Add AudioPlayer
+		+ It now supports wav and ogg playback
       0.8.0-beta:
 		+ Add Graphic.Circle()
 		+ Add Graphic.Triangle()

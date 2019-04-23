@@ -24,9 +24,11 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
     - Extensions
         - [Original Rendering](plugin/render.md)
         - [Original Audio Source](plugin/audiosource.md)
-    <!-- - Official Plugins (TBD)
+<!--
+	 - Official Plugins (TBD)
         - DotFeather.UI
         - DotFeather.Router
         - DotFeather.Management
         - DotFeather.Management.Router
-        - DotFeather.UI.Mvvm -->
+        - DotFeather.UI.Mvvm
+-->

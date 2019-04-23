@@ -41,4 +41,8 @@ Thumbs.db
 *.dotCover
 DotFeather.Test.NetCore/Char.png
 DotFeather.Test.NetCore/Field.png
-Battle.ogg
+
+
+*.ogg
+*.wav
+*.png

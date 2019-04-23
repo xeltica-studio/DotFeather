@@ -97,7 +97,6 @@ namespace DotFeather.Drawable
 		{
 			GL.Color4(col);
 			GL.Vertex2(vec);
-			Console.WriteLine(vec);
 		}
 
         private readonly Color color;

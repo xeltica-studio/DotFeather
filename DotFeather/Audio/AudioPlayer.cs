@@ -44,11 +44,6 @@ namespace DotFeather
             PlayAsync(source, loop, cts.Token);
 		}
 
-		public void Play()
-		{
-			IsPlaying = true;
-		}
-
 		public void Stop(float time = 0)
 		{
 			if (cts == default)

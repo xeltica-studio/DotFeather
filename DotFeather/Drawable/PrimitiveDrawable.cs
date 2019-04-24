@@ -2,9 +2,8 @@
 using OpenTK;
 using System.Linq;
 using OpenTK.Graphics.OpenGL;
-using DotFeather.Helpers;
 
-namespace DotFeather.Drawable
+namespace DotFeather
 {
     /// <summary>
     /// <see cref="Graphic"/> クラスで内部的に使用されるオブジェクトです。

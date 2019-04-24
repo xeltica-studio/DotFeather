@@ -1,6 +1,6 @@
 ﻿using OpenTK.Input;
 
-namespace DotFeather.InputSystems
+namespace DotFeather
 {
 	/// <summary>
 	/// キーボードのキーを表します。

@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using OpenTK.Graphics.OpenGL;
 
-namespace DotFeather.Models
+namespace DotFeather
 {
 	/// <summary>
 	/// テクスチャのハンドルを持ちます。

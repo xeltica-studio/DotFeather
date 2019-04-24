@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Drawing;
-using DotFeather.Helpers;
-using DotFeather.Models;
 
-namespace DotFeather.Drawable.Tiles
+namespace DotFeather
 {
 	public class Tile : ITile
 	{

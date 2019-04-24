@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using DotFeather.Drawable;
-using DotFeather.Drawable.Tiles;
-using static DotFeather.Helpers.MiscUtility;
+using static DotFeather.MiscUtility;
 
 namespace DotFeather
 {

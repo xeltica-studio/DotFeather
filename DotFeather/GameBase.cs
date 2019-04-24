@@ -9,7 +9,6 @@ using SDPixelFormat = System.Drawing.Imaging.PixelFormat;
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
-using DotFeather.Models;
 
 namespace DotFeather
 {

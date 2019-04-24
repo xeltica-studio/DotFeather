@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using OpenTK.Audio.OpenAL;
 
-namespace DotFeather.Audio
+namespace DotFeather
 {
 	/// <summary>
 	/// DotFeather API で取り扱える音源の仕様を定義します。

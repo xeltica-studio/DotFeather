@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using NVorbis;
 
-namespace DotFeather.Audio
+namespace DotFeather
 {
     public class VorbisAudioSource : IAudioSource, IDisposable
     {

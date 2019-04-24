@@ -1,5 +1,5 @@
 ﻿using OpenTK.Audio.OpenAL;
-namespace DotFeather.Helpers
+namespace DotFeather
 {
     public class ALBuffer : OpenTKManagedHandleBase<int>
     {

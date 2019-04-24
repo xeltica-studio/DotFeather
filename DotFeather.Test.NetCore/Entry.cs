@@ -1,4 +1,4 @@
-namespace DotFeather.Test.NetCore
+namespace DotFeather
 {
     static class Entry
 	{

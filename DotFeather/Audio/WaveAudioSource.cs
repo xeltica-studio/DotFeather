@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace DotFeather.Audio
+namespace DotFeather
 {
     public class WaveAudioSource : IAudioSource
     {

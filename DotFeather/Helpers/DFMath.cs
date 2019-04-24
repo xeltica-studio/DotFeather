@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotFeather.Helpers
+namespace DotFeather
 {
 	public static class DFMath
 	{
@@ -66,7 +66,7 @@ namespace DotFeather.Helpers
 		/// <param name="start">Start.</param>
 		/// <param name="end">End.</param>
 		public static Vector EaseIn(float time, Vector start, Vector end) => new Vector(EaseIn(time, start.X, end.X), EaseIn(time, start.Y, end.Y));
-		
+
 		/// <summary>
 		/// 角度を弧度に変換します。
 		/// </summary>

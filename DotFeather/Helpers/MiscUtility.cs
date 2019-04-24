@@ -1,4 +1,4 @@
-namespace DotFeather.Helpers
+namespace DotFeather
 {
     public static class MiscUtility
     {

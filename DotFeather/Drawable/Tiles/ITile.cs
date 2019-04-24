@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace DotFeather.Drawable.Tiles
+namespace DotFeather
 {
 	public interface ITile
 	{

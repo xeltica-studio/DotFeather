@@ -4,11 +4,8 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
-using DotFeather.Audio;
-using DotFeather.Drawable.Tiles;
-using DotFeather.Models;
 
-namespace DotFeather.Test.NetCore
+namespace DotFeather
 {
     class Game : GameBase
 	{

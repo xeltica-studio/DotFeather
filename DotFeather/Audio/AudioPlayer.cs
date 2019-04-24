@@ -4,12 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using DotFeather.Helpers;
 using OpenTK;
 using OpenTK.Audio;
 using OpenTK.Audio.OpenAL;
 
-namespace DotFeather.Audio
+namespace DotFeather
 {
     public class AudioPlayer : IDisposable
     {

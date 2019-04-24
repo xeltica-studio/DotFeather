@@ -1,5 +1,5 @@
 ﻿using System;
-namespace DotFeather.Helpers
+namespace DotFeather
 {
     public abstract class OpenTKManagedHandleBase<T> : IDisposable
     {

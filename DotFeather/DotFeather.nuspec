@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>DotFeather</id>
-    <version>0.8.0-beta</version>
-    <title>DotFeather</title>
-    <authors>Xeltica</authors>
-    <owners>Xeltica</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>https://github.com/xeltica/dotfeather</projectUrl>
-    <description>A lightweight, extensible and easy game engine.</description>
-    <copyright>(C)2018-2019 Xeltica</copyright>
-    <tags>GameEngine</tags>
-        <license type="expression">MIT</license>
-    <releaseNotes>
-      0.8.0-beta:
+	<id>DotFeather</id>
+	<version>0.8.0-beta</version>
+	<title>DotFeather</title>
+	<authors>Xeltica</authors>
+	<owners>Xeltica</owners>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<projectUrl>https://github.com/xeltica/dotfeather</projectUrl>
+	<description>A lightweight, extensible and easy game engine.</description>
+	<copyright>(C)2018-2019 Xeltica</copyright>
+	<tags>GameEngine</tags>
+		<license type="expression">MIT</license>
+	<releaseNotes>
+	  0.8.0-beta:
 		+ Add Graphic.Circle()
 		+ Add Graphic.Triangle()
 		+ Add A feature to draw outline to Graphic methods
@@ -21,12 +21,12 @@
 		+ Add Sprite.LoadFrom()
 		+ Add Tile.LoadFrom()
 		+ Fix a bug that Graphic object won't be drawn
-      0.7.0-beta: First Beta Release
-    </releaseNotes>
-    <dependencies>
-      <dependency id="OpenTK.NetStandard" version="1.0.4" />
-      <dependency id="Microsoft.Windows.Compatibility" version="2.0.1" />
-      <dependency id="NVorbis" version="0.8.6" />
-    </dependencies>
+	  0.7.0-beta: First Beta Release
+	</releaseNotes>
+	<dependencies>
+	  <dependency id="OpenTK.NetStandard" version="1.0.4" />
+	  <dependency id="Microsoft.Windows.Compatibility" version="2.0.1" />
+	  <dependency id="NVorbis" version="0.8.6" />
+	</dependencies>
   </metadata>
 </package>

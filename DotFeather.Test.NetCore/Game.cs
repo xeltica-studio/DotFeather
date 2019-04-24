@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace DotFeather
 {
-    class Game : GameBase
+	class Game : GameBase
 	{
 		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{
@@ -64,7 +64,7 @@ namespace DotFeather
 
 			var graphic = new Graphic()
 				.Triangle(0, 128, 128, 128, 128, 0, Color.Brown, 4, Color.Red)
-                .Rect(0, 96, 128, 224, Color.Transparent, 1, Color.Lime)
+				.Rect(0, 96, 128, 224, Color.Transparent, 1, Color.Lime)
 				.Ellipse(128, 0, 400, 100, Color.Black, 8, Color.Red);
 			scene.Add(graphic);
 
@@ -86,23 +86,23 @@ namespace DotFeather
 			var y = Input.Keyboard.Up.IsPressed ? -1 : Input.Keyboard.Down.IsPressed ? 1 : 0;
 
 			var pressed1 = Input.Keyboard.Number1.IsPressed;
-            var pressed2 = Input.Keyboard.Number2.IsPressed;
-            var pressed3 = Input.Keyboard.Number3.IsPressed;
-            var pressed4 = Input.Keyboard.Number4.IsPressed;
+			var pressed2 = Input.Keyboard.Number2.IsPressed;
+			var pressed3 = Input.Keyboard.Number3.IsPressed;
+			var pressed4 = Input.Keyboard.Number4.IsPressed;
 
 			if (pressed1 && !prev1)
 				player.Play(bgmField, 12250);
-            if (pressed2 && !prev2)
-                player.Play(bgmBattle, 377853);
-            if (pressed3 && !prev3)
-                player.Stop();
-            if (pressed4 && !prev4)
-                player.Pitch = player.Pitch == 1 ? 1.4f : 1;
+			if (pressed2 && !prev2)
+				player.Play(bgmBattle, 377853);
+			if (pressed3 && !prev3)
+				player.Stop();
+			if (pressed4 && !prev4)
+				player.Pitch = player.Pitch == 1 ? 1.4f : 1;
 
 			prev1 = pressed1;
 			prev2 = pressed2;
 			prev3 = pressed3;
-            prev4 = pressed4;
+			prev4 = pressed4;
 
 			if (x != 0 || y != 0)
 			{
@@ -148,25 +148,25 @@ namespace DotFeather
 			prevIsWalking = isWalking;
 		}
 
-        private readonly char[] fontMap = File.ReadAllText("./font.txt").ToCharArray();
-        private Dictionary<char, Tile> fontTable;
-        private Texture2D[] chars;
-        private Texture2D[] field;
-        private int charIndex;
-        private int animIndex;
-        private bool prevIsWalking;
-        private bool isWalking;
-        private Container sprite;
-        private Sprite spriteChar;
-        private Tilemap map;
-        private Container scene;
-        private int prevSecond, fps, f;
-        private double time;
+		private readonly char[] fontMap = File.ReadAllText("./font.txt").ToCharArray();
+		private Dictionary<char, Tile> fontTable;
+		private Texture2D[] chars;
+		private Texture2D[] field;
+		private int charIndex;
+		private int animIndex;
+		private bool prevIsWalking;
+		private bool isWalking;
+		private Container sprite;
+		private Sprite spriteChar;
+		private Tilemap map;
+		private Container scene;
+		private int prevSecond, fps, f;
+		private double time;
 		private AudioPlayer player = new AudioPlayer();
 		private bool prev1, prev2, prev3, prev4;
-        private IAudioSource bgmField = new WaveAudioSource("field.wav");
-        private IAudioSource bgmBattle = new VorbisAudioSource("Battle.ogg");
-        private IAudioSource drum3 = new WaveAudioSource("drum03.wav");
-        private TextDrawable fpsText;
-    }
+		private IAudioSource bgmField = new WaveAudioSource("field.wav");
+		private IAudioSource bgmBattle = new VorbisAudioSource("Battle.ogg");
+		private IAudioSource drum3 = new WaveAudioSource("drum03.wav");
+		private TextDrawable fpsText;
+	}
 }

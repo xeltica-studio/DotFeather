@@ -10,6 +10,9 @@ namespace DotFeather
 	/// </summary>
 	public static class TextureDrawer
 	{
+		/// <summary>
+		/// テクスチャを描画します。
+		/// </summary>
 		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, System.Drawing.Color? color = null)
 		{
 			var hw = game.Width / 2;

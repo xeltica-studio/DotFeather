@@ -1,9 +1,19 @@
 ﻿using OpenTK.Audio.OpenAL;
 namespace DotFeather
 {
-    public class ALBuffer : OpenTKManagedHandleBase<int>
-    {
-        public override int GenerateHandle() => AL.GenBuffer();
-        public override void DisposeHandle() => AL.DeleteBuffer(Handle);
-    }
+	/// <summary>
+	/// OpenAl のバッファハンドルを <see cref="System.IDisposable"/> でラッピングします。
+	/// </summary>
+	public class ALBuffer : OpenTKManagedHandleBase<int>
+	{
+		/// <summary>
+		/// ハンドルを生成します。
+		/// </summary>
+
+		public override int GenerateHandle() => AL.GenBuffer();
+		/// <summary>
+		/// ハンドルを破棄します。
+		/// </summary>
+		public override void DisposeHandle() => AL.DeleteBuffer(Handle);
+	}
 }

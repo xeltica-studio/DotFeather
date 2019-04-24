@@ -16,6 +16,9 @@ namespace DotFeather
 			GL.Begin(p);
 		}
 
+		/// <summary>
+		/// コンテキストを解放します。
+		/// </summary>
 		public void Dispose()
 		{
 			if (!disposedValue)
@@ -25,6 +28,6 @@ namespace DotFeather
 			}
 		}
 
-        private bool disposedValue;
-    }
+		private bool disposedValue;
+	}
 }

@@ -17,16 +17,20 @@ namespace DotFeather
 		/// <value>描画可能オブジェクトのリスト。</value>
 		public List<IDrawable> Drawables { get; } = new List<IDrawable>();
 
+		/// <summary></summary>
 		public Vector Location { get; set; }
+		/// <summary></summary>
 		public float Angle { get; set; }
+		/// <summary></summary>
 		public Vector Scale { get; set; }
+		/// <summary></summary>
 		public int ZOrder { get; set; }
+		/// <summary></summary>
 		public string Name { get; set; }
 
 		/// <summary>
 		/// 実際に画面へ描画を行います。
 		/// </summary>
-		/// <param name="game">Game.</param>
 		public void Draw(GameBase game, Vector location)
 		{
 			// Drawables を用いて毎フレーム描画を行う
@@ -64,7 +68,7 @@ namespace DotFeather
 		public Graphic Line(Point begin, Point end, Color color)
 		{
 			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Lines, 0, null, ((PointF)begin).ToGL(), ((PointF)end).ToGL()));
-            return this;
+			return this;
 		}
 
 		/// <summary>
@@ -86,6 +90,8 @@ namespace DotFeather
 		/// <param name="begin">始点の座標.</param>
 		/// <param name="end">終点の座標.</param>
 		/// <param name="color">色.</param>
+		/// <param name="lineWidth">線の幅。</param>
+		/// <param name="lineColor">線の色。</param>
 		public Graphic Rect(Point begin, Point end, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
 			return Rect(begin.X, begin.Y, end.X, end.Y, color, lineWidth, lineColor);
@@ -99,6 +105,8 @@ namespace DotFeather
 		/// <param name="x2">終点のX座標。</param>
 		/// <param name="y2">終点のX座標。</param>
 		/// <param name="color">色.</param>
+		/// <param name="lineWidth">線の幅。</param>
+		/// <param name="lineColor">線の色。</param>
 		public Graphic Rect(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
 			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Quads, lineWidth, lineColor?.ToGL(),
@@ -106,38 +114,38 @@ namespace DotFeather
 				new OpenTK.PointF(x1, y2),
 				new OpenTK.PointF(x2, y2),
 				new OpenTK.PointF(x2, y1)));
-            return this;
+			return this;
 		}
 
 		/// <summary>
 		/// 三角形を描画します。
 		/// </summary>
-        public Graphic Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color, int lineWidth = 0, Color? lineColor = default)
-        {
+		public Graphic Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color, int lineWidth = 0, Color? lineColor = default)
+		{
 			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Triangles,lineWidth, lineColor?.ToGL(),
 				new OpenTK.PointF(x1, y1),
-                new OpenTK.PointF(x2, y2),
-                new OpenTK.PointF(x3, y3)));
+				new OpenTK.PointF(x2, y2),
+				new OpenTK.PointF(x3, y3)));
 			return this;
-        }
+		}
 
-        /// <summary>
-        /// 三角形を描画します。
-        /// </summary>
-        public Graphic Triangle(Point p1, Point p2, Point p3, Color color, int lineWidth = 0, Color? lineColor = default)
-        {
-            return Triangle(p1.X, p1.Y, p2.X, p2.Y, p3.X, p3.Y, color, lineWidth, lineColor);
-        }
+		/// <summary>
+		/// 三角形を描画します。
+		/// </summary>
+		public Graphic Triangle(Point p1, Point p2, Point p3, Color color, int lineWidth = 0, Color? lineColor = default)
+		{
+			return Triangle(p1.X, p1.Y, p2.X, p2.Y, p3.X, p3.Y, color, lineWidth, lineColor);
+		}
 
-        /// <summary>
-        /// 楕円を描画します。
-        /// </summary>
-        public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
+		/// <summary>
+		/// 楕円を描画します。
+		/// </summary>
+		public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
 			var list = new List<OpenTK.PointF>();
 
 			if (x1 > x2) Swap(ref x1, ref x2);
-            if (y1 > y2) Swap(ref y1, ref y2);
+			if (y1 > y2) Swap(ref y1, ref y2);
 
 			var (width, height) = (x2 - x1, y2 - y1);
 
@@ -151,7 +159,7 @@ namespace DotFeather
 
 				list.Add(new OpenTK.PointF(
 					(float)(Math.Cos(DFMath.ToRadian(i)) * rw + ox),
-                    (float)(Math.Sin(DFMath.ToRadian(i)) * rh + oy)
+					(float)(Math.Sin(DFMath.ToRadian(i)) * rh + oy)
 				));
 
 			}
@@ -177,7 +185,7 @@ namespace DotFeather
 		public Graphic Texture(int x, int y, Texture2D texture)
 		{
 			Drawables.Add(new Sprite(texture, x, y));
-            return this;
+			return this;
 		}
 
 		/// <summary>
@@ -189,6 +197,9 @@ namespace DotFeather
 			return this;
 		}
 
+		/// <summary>
+		/// この <see cref="Graphic"/> を削除します。
+		/// </summary>
 		public void Destroy() => Drawables.ForEach(d => d.Destroy());
 	}
 }

@@ -13,18 +13,22 @@ namespace DotFeather
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の描画優先順位を取得または設定します。数値が低いほど奥に描画されます。
 		/// </summary>
 		public int ZOrder { get; set; }
+
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の名前を取得または設定します。
 		/// </summary>
 		public string Name { get; set; }
+
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の座標を取得または設定します。
 		/// </summary>
 		public Vector Location { get; set; }
+
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の角度を取得または設定します。
 		/// </summary>
 		public float Angle { get; set; }
+
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> のスケーリングを取得または設定します。
 		/// </summary>
@@ -57,33 +61,48 @@ namespace DotFeather
 			Children.Add(child);
 		}
 
-        public void Insert(int index, IDrawable item)
-        {
-            Sort();
-            Children.Insert(index, item);
-        }
+		/// <summary>
+		/// このコンテナに子要素を挿入します。
+		/// </summary>
+		/// <param name="index">挿入先の位置。</param>
+		/// <param name="item">子要素。</param>
+		public void Insert(int index, IDrawable item)
+		{
+			Sort();
+			Children.Insert(index, item);
+		}
 
-        public void Draw(GameBase game, Vector location)
-        {
-            foreach (var child in Children.ToList())
-                child.Draw(game, Location + location);
-        }
+		/// <summary>
+		/// 描画を開始します。
+		/// </summary>
+		public void Draw(GameBase game, Vector location)
+		{
+			foreach (var child in Children.ToList())
+				child.Draw(game, Location + location);
+		}
 
+		/// <summary>
+		/// この <see cref="Container"/> を破棄します。
+		/// </summary>
 		public void Destroy() => Children.ForEach(e => e.Destroy());
 
-        #region other IList<T> members
-        public int IndexOf(IDrawable item) => Children.IndexOf(item);
-		public void RemoveAt(int index) => Children.RemoveAt(index);
-		public void Clear() => Children.Clear();
-		public bool Contains(IDrawable item) => Children.Contains(item);
-		public void CopyTo(IDrawable[] array, int arrayIndex) => Children.CopyTo(array, arrayIndex);
-		public bool Remove(IDrawable item) => Children.Remove(item);
-		public IEnumerator<IDrawable> GetEnumerator() => Children.GetEnumerator();
-		IEnumerator IEnumerable.GetEnumerator() => Children.GetEnumerator();
-		public int Count => Children.Count;
-		public bool IsReadOnly => false;
-        #endregion
+        /// <summary>
+        /// 列挙子を取得します。
+        /// </summary>
+        public IEnumerator<IDrawable> GetEnumerator() => Children.GetEnumerator();
 
-        private List<IDrawable> Children { get; } = new List<IDrawable>(10000);
+		#region other IList<T> members
+		int IList<IDrawable>.IndexOf(IDrawable item) => Children.IndexOf(item);
+		void IList<IDrawable>.RemoveAt(int index) => Children.RemoveAt(index);
+		void ICollection<IDrawable>.Clear() => Children.Clear();
+		bool ICollection<IDrawable>.Contains(IDrawable item) => Children.Contains(item);
+		void ICollection<IDrawable>.CopyTo(IDrawable[] array, int arrayIndex) => Children.CopyTo(array, arrayIndex);
+		bool ICollection<IDrawable>.Remove(IDrawable item) => Children.Remove(item);
+		IEnumerator IEnumerable.GetEnumerator() => Children.GetEnumerator();
+		int ICollection<IDrawable>.Count => Children.Count;
+		bool ICollection<IDrawable>.IsReadOnly => false;
+		#endregion
+
+		private List<IDrawable> Children { get; } = new List<IDrawable>(10000);
     }
 }

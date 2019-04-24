@@ -38,18 +38,18 @@ dotnet build
 ## Features
 
 - Lightweight processing
-    - It can display 10000 sprites at 60fps [<sup>*1</sup>](#f1)
+	- It can display 10000 sprites at 60fps [<sup>*1</sup>](#f1)
 - 2D-specified Graphics System
-    - Sprite - Display textures on the screen
-    - Tilemap - Map textures on the grid
-    - Graphic - Draw lines, rectangles etc
+	- Sprite - Display textures on the screen
+	- Tilemap - Map textures on the grid
+	- Graphic - Draw lines, rectangles etc
 - Keyboard Input
 - Mouse Input
 - Playing music
 - Playing SFX
 - High Extensibility
-    - Add original rendering method
-    - Add original audio processor
+	- Add original rendering method
+	- Add original audio processor
 
 ----
 

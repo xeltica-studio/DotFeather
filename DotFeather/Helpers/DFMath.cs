@@ -2,6 +2,9 @@
 
 namespace DotFeather
 {
+	/// <summary>
+	/// 便利な数学系メソッドを提供します。
+	/// </summary>
 	public static class DFMath
 	{
 		/// <summary>

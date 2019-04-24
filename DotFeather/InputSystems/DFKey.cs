@@ -18,7 +18,7 @@ namespace DotFeather
 		/// <value><c>true</c> であれば押されています。<c>false</c> であれば押されていません。</value>
 		public bool IsPressed => Keyboard.GetState()[source];
 
-        private readonly Key source;
-    }
+		private readonly Key source;
+	}
 
 }

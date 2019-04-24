@@ -4,23 +4,48 @@ using NVorbis;
 
 namespace DotFeather
 {
-    public class VorbisAudioSource : IAudioSource, IDisposable
-    {
-        public int? Samples => (int)reader.TotalSamples;
+	/// <summary>
+	/// Ogg Vorbis 形式のデータを表現するオーディオソースです。
+	/// </summary>
+	public class VorbisAudioSource : IAudioSource, IDisposable
+	{
+		/// <summary>
+		/// 合計サンプル数を取得または設定します。
+		/// </summary>
+		/// <returns></returns>
+		public int? Samples => (int)reader.TotalSamples;
 
-        public int Channels => reader.Channels;
+		/// <summary>
+		/// チャンネル数を取得または設定します。
+		/// </summary>
+		public int Channels => reader.Channels;
 
-        public int Bits => 16;
+		/// <summary>
+		///  量子化ビット数を取得または設定します。
+		/// </summary>
+		public int Bits => 16;
 
-        public int SampleRate => reader.SampleRate;
+		/// <summary>
+		/// サンプリング周波数を取得または設定します。
+		/// </summary>
+		public int SampleRate => reader.SampleRate;
 
-        public VorbisAudioSource(string path)
-        {
+		/// <summary>
+		/// ファイル名を指定して、 <see cref="VorbisAudioSource"/> クラスの新しいインスタンスを初期化します。
+		/// </summary>
+		/// <param name="path">ファイルパス。</param>
+		public VorbisAudioSource(string path)
+		{
 			reader = new NVorbis.VorbisReader(path);
-        }
+		}
 
-        public IEnumerable<(short left, short right)> EnumerateSamples(int? loopStart)
-        {
+		/// <summary>
+		/// サンプルを列挙します。
+		/// </summary>
+		/// <param name="loopStart">ループ開始位置。ループしない場合は <c>null</c> 。</param>
+		/// <returns>サンプルのイテレーター。</returns>
+		public IEnumerable<(short left, short right)> EnumerateSamples(int? loopStart)
+		{
 			var buf = new float[2];
 			reader.DecodedPosition = 0;
 			short ToShort(float data) => (short)(data * short.MaxValue);
@@ -35,13 +60,16 @@ namespace DotFeather
 					reader.DecodedPosition = a;
 				}
 			} while (loopStart is int);
-        }
+		}
 
-        public void Dispose()
-        {
+		/// <summary>
+		/// このオブジェクトを破棄します、
+		/// </summary>
+		public void Dispose()
+		{
 			reader.Dispose();
-        }
+		}
 
-        private readonly VorbisReader reader;
-    }
+		private readonly VorbisReader reader;
+	}
 }

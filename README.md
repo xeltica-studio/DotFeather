@@ -1,7 +1,7 @@
 # <img src="docs/logo.svg"/>
 [![Build status](https://img.shields.io/appveyor/ci/xeltica/dotfeather.svg?style=for-the-badge)][ci]
-[![GitHub Releases](https://img.shields.io/github/release-pre/xeltica/DotFeather.svg?style=for-the-badge)][releases]
-[![Nuget](https://img.shields.io/nuget/vpre/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
+[![GitHub Releases](https://img.shields.io/github/release/xeltica/DotFeather.svg?style=for-the-badge)][releases]
+[![Nuget](https://img.shields.io/nuget/v/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
 
 
 DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET Standard 2.0.
@@ -12,7 +12,6 @@ DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET St
 
 - Windows
 - macOS
-- Linux
 
 ## Supported Graphics Driver
 
@@ -20,6 +19,8 @@ DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET St
 
 ### In Planning
 
+- Linux/X11 Support (I have to fix bug to run DotFeahter on Linux.)
+  - for iOS / Android
 - OpenGL ES 2.0 (Using OpenTK)
 - DirectX 9.0 (Using DXLib)
   - It'll only works on Windows

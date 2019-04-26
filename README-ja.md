@@ -20,7 +20,6 @@ dotnet build
 
 - Windows
 - macOS
-- Linux
 
 ## サポートされるグラフィックドライバー
 
@@ -28,7 +27,9 @@ dotnet build
 
 ### 計画中
 
+- Linux/X11 サポート (バグを直さないと動かない)
 - OpenGL ES 2.0 (OpenTK)
+  - iOS / Android 向け
 - DirectX 9.0 (DXライブラリ)
   - Windows でのみ動作する
 - Metal2 (Xamarin.iOS および Xamarin.Mac)

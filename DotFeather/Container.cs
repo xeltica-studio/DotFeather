@@ -91,16 +91,51 @@ namespace DotFeather
         /// </summary>
         public IEnumerator<IDrawable> GetEnumerator() => Children.GetEnumerator();
 
-		#region other IList<T> members
-		int IList<IDrawable>.IndexOf(IDrawable item) => Children.IndexOf(item);
-		void IList<IDrawable>.RemoveAt(int index) => Children.RemoveAt(index);
-		void ICollection<IDrawable>.Clear() => Children.Clear();
-		bool ICollection<IDrawable>.Contains(IDrawable item) => Children.Contains(item);
-		void ICollection<IDrawable>.CopyTo(IDrawable[] array, int arrayIndex) => Children.CopyTo(array, arrayIndex);
-		bool ICollection<IDrawable>.Remove(IDrawable item) => Children.Remove(item);
+		#region other inherited members
+		/// <summary>
+		/// 指定した要素の位置を取得します。
+		/// </summary>
+		public int IndexOf(IDrawable item) => Children.IndexOf(item);
+
+		/// <summary>
+		/// 指定した位置にあるオブジェクトを削除します。
+		/// </summary>
+		public void RemoveAt(int index) => Children.RemoveAt(index);
+
+		/// <summary>
+		/// オブジェクトを削除します。
+		/// </summary>
+		public void Clear() => Children.Clear();
+
+		/// <summary>
+		/// 指定したオブジェクトが存在するかどうかを判断します。
+		/// </summary>
+		public bool Contains(IDrawable item) => Children.Contains(item);
+
+		/// <summary>
+		/// 指定した配列およびその位置に、要素をコピーします。
+		/// </summary>
+		public void CopyTo(IDrawable[] array, int arrayIndex) => Children.CopyTo(array, arrayIndex);
+
+		/// <summary>
+		/// 指定したオブジェクトを削除します。
+		/// </summary>
+		public bool Remove(IDrawable item) => Children.Remove(item);
+
+		/// <summary>
+		/// 列挙子を取得します。
+		/// </summary>
 		IEnumerator IEnumerable.GetEnumerator() => Children.GetEnumerator();
-		int ICollection<IDrawable>.Count => Children.Count;
-		bool ICollection<IDrawable>.IsReadOnly => false;
+
+		/// <summary>
+		/// 要素数を取得します。
+		/// </summary>
+		public int Count => Children.Count;
+
+		/// <summary>
+		/// 読み取り専用かどうかを示す値を取得します。
+		/// </summary>
+		public bool IsReadOnly => false;
 		#endregion
 
 		private List<IDrawable> Children { get; } = new List<IDrawable>(10000);

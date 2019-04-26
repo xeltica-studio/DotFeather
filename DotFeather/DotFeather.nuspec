@@ -24,12 +24,12 @@
 		+ Add Sprite.LoadFrom()
 		+ Add Tile.LoadFrom()
 		+ Fix a bug that Graphic object won't be drawn
-      0.7.0-beta: First Beta Release
-    </releaseNotes>
-    <dependencies>
-      <dependency id="OpenTK.NetStandard" version="1.0.4" />
-      <dependency id="Microsoft.Windows.Compatibility" version="2.0.1" />
-      <dependency id="NVorbis" version="0.8.6" />
-    </dependencies>
+	  0.7.0-beta: First Beta Release
+	</releaseNotes>
+	<dependencies>
+	  <dependency id="OpenTK.NetStandard" version="1.0.4" />
+	  <dependency id="Microsoft.Windows.Compatibility" version="2.0.1" />
+	  <dependency id="NVorbis" version="0.8.6" />
+	</dependencies>
   </metadata>
 </package>

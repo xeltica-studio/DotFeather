@@ -1,0 +1,805 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotFeather.DFMath
+  commentId: T:DotFeather.DFMath
+  id: DFMath
+  parent: DotFeather
+  children:
+  - DotFeather.DFMath.EaseIn(System.Single,DotFeather.Vector,DotFeather.Vector)
+  - DotFeather.DFMath.EaseIn(System.Single,System.Single,System.Single)
+  - DotFeather.DFMath.EaseInOut(System.Single,System.Single,System.Single)
+  - DotFeather.DFMath.EaseOut(System.Single,DotFeather.Vector,DotFeather.Vector)
+  - DotFeather.DFMath.EaseOut(System.Single,System.Single,System.Single)
+  - DotFeather.DFMath.Lerp(System.Single,DotFeather.Vector,DotFeather.Vector)
+  - DotFeather.DFMath.Lerp(System.Single,System.Single,System.Single)
+  - DotFeather.DFMath.ToDegree(System.Single)
+  - DotFeather.DFMath.ToRadian(System.Single)
+  langs:
+  - csharp
+  - vb
+  name: DFMath
+  nameWithType: DFMath
+  fullName: DotFeather.DFMath
+  type: Class
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: DFMath
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 7
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n便利な数学系メソッドを提供します。\n"
+  example: []
+  syntax:
+    content: public static class DFMath
+    content.vb: Public Module DFMath
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: DotFeather.DFMath.Lerp(System.Single,System.Single,System.Single)
+  commentId: M:DotFeather.DFMath.Lerp(System.Single,System.Single,System.Single)
+  id: Lerp(System.Single,System.Single,System.Single)
+  parent: DotFeather.DFMath
+  langs:
+  - csharp
+  - vb
+  name: Lerp(Single, Single, Single)
+  nameWithType: DFMath.Lerp(Single, Single, Single)
+  fullName: DotFeather.DFMath.Lerp(System.Single, System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Lerp
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 15
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n線形補間移動を計算します。\n"
+  example: []
+  syntax:
+    content: public static float Lerp(float time, float start, float end)
+    parameters:
+    - id: time
+      type: System.Single
+      description: Time.
+    - id: start
+      type: System.Single
+      description: Start.
+    - id: end
+      type: System.Single
+      description: End.
+    return:
+      type: System.Single
+    content.vb: Public Shared Function Lerp(time As Single, start As Single, end As Single) As Single
+  overload: DotFeather.DFMath.Lerp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFMath.EaseInOut(System.Single,System.Single,System.Single)
+  commentId: M:DotFeather.DFMath.EaseInOut(System.Single,System.Single,System.Single)
+  id: EaseInOut(System.Single,System.Single,System.Single)
+  parent: DotFeather.DFMath
+  langs:
+  - csharp
+  - vb
+  name: EaseInOut(Single, Single, Single)
+  nameWithType: DFMath.EaseInOut(Single, Single, Single)
+  fullName: DotFeather.DFMath.EaseInOut(System.Single, System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: EaseInOut
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 23
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n加減速移動を計算します。\n"
+  example: []
+  syntax:
+    content: public static float EaseInOut(float time, float start, float end)
+    parameters:
+    - id: time
+      type: System.Single
+      description: Time.
+    - id: start
+      type: System.Single
+      description: Start.
+    - id: end
+      type: System.Single
+      description: End.
+    return:
+      type: System.Single
+    content.vb: Public Shared Function EaseInOut(time As Single, start As Single, end As Single) As Single
+  overload: DotFeather.DFMath.EaseInOut*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFMath.EaseIn(System.Single,System.Single,System.Single)
+  commentId: M:DotFeather.DFMath.EaseIn(System.Single,System.Single,System.Single)
+  id: EaseIn(System.Single,System.Single,System.Single)
+  parent: DotFeather.DFMath
+  langs:
+  - csharp
+  - vb
+  name: EaseIn(Single, Single, Single)
+  nameWithType: DFMath.EaseIn(Single, Single, Single)
+  fullName: DotFeather.DFMath.EaseIn(System.Single, System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: EaseIn
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 35
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n加速移動を計算します。\n"
+  example: []
+  syntax:
+    content: public static float EaseIn(float time, float start, float end)
+    parameters:
+    - id: time
+      type: System.Single
+      description: Time.
+    - id: start
+      type: System.Single
+      description: Start.
+    - id: end
+      type: System.Single
+      description: End.
+    return:
+      type: System.Single
+      description: The in.
+    content.vb: Public Shared Function EaseIn(time As Single, start As Single, end As Single) As Single
+  overload: DotFeather.DFMath.EaseIn*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFMath.EaseOut(System.Single,System.Single,System.Single)
+  commentId: M:DotFeather.DFMath.EaseOut(System.Single,System.Single,System.Single)
+  id: EaseOut(System.Single,System.Single,System.Single)
+  parent: DotFeather.DFMath
+  langs:
+  - csharp
+  - vb
+  name: EaseOut(Single, Single, Single)
+  nameWithType: DFMath.EaseOut(Single, Single, Single)
+  fullName: DotFeather.DFMath.EaseOut(System.Single, System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: EaseOut
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 44
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n減速移動を計算します。\n"
+  example: []
+  syntax:
+    content: public static float EaseOut(float time, float start, float end)
+    parameters:
+    - id: time
+      type: System.Single
+      description: Time.
+    - id: start
+      type: System.Single
+      description: Start.
+    - id: end
+      type: System.Single
+      description: End.
+    return:
+      type: System.Single
+      description: The out.
+    content.vb: Public Shared Function EaseOut(time As Single, start As Single, end As Single) As Single
+  overload: DotFeather.DFMath.EaseOut*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFMath.Lerp(System.Single,DotFeather.Vector,DotFeather.Vector)
+  commentId: M:DotFeather.DFMath.Lerp(System.Single,DotFeather.Vector,DotFeather.Vector)
+  id: Lerp(System.Single,DotFeather.Vector,DotFeather.Vector)
+  parent: DotFeather.DFMath
+  langs:
+  - csharp
+  - vb
+  name: Lerp(Single, Vector, Vector)
+  nameWithType: DFMath.Lerp(Single, Vector, Vector)
+  fullName: DotFeather.DFMath.Lerp(System.Single, DotFeather.Vector, DotFeather.Vector)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Lerp
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 52
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n線形補間移動を計算します。\n"
+  example: []
+  syntax:
+    content: public static Vector Lerp(float time, Vector start, Vector end)
+    parameters:
+    - id: time
+      type: System.Single
+      description: Time.
+    - id: start
+      type: DotFeather.Vector
+      description: Start.
+    - id: end
+      type: DotFeather.Vector
+      description: End.
+    return:
+      type: DotFeather.Vector
+    content.vb: Public Shared Function Lerp(time As Single, start As Vector, end As Vector) As Vector
+  overload: DotFeather.DFMath.Lerp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFMath.EaseOut(System.Single,DotFeather.Vector,DotFeather.Vector)
+  commentId: M:DotFeather.DFMath.EaseOut(System.Single,DotFeather.Vector,DotFeather.Vector)
+  id: EaseOut(System.Single,DotFeather.Vector,DotFeather.Vector)
+  parent: DotFeather.DFMath
+  langs:
+  - csharp
+  - vb
+  name: EaseOut(Single, Vector, Vector)
+  nameWithType: DFMath.EaseOut(Single, Vector, Vector)
+  fullName: DotFeather.DFMath.EaseOut(System.Single, DotFeather.Vector, DotFeather.Vector)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: EaseOut
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 61
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n減速移動を計算します。\n"
+  example: []
+  syntax:
+    content: public static Vector EaseOut(float time, Vector start, Vector end)
+    parameters:
+    - id: time
+      type: System.Single
+      description: Time.
+    - id: start
+      type: DotFeather.Vector
+      description: Start.
+    - id: end
+      type: DotFeather.Vector
+      description: End.
+    return:
+      type: DotFeather.Vector
+      description: The out.
+    content.vb: Public Shared Function EaseOut(time As Single, start As Vector, end As Vector) As Vector
+  overload: DotFeather.DFMath.EaseOut*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFMath.EaseIn(System.Single,DotFeather.Vector,DotFeather.Vector)
+  commentId: M:DotFeather.DFMath.EaseIn(System.Single,DotFeather.Vector,DotFeather.Vector)
+  id: EaseIn(System.Single,DotFeather.Vector,DotFeather.Vector)
+  parent: DotFeather.DFMath
+  langs:
+  - csharp
+  - vb
+  name: EaseIn(Single, Vector, Vector)
+  nameWithType: DFMath.EaseIn(Single, Vector, Vector)
+  fullName: DotFeather.DFMath.EaseIn(System.Single, DotFeather.Vector, DotFeather.Vector)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: EaseIn
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 70
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n加速移動を計算します。\n"
+  example: []
+  syntax:
+    content: public static Vector EaseIn(float time, Vector start, Vector end)
+    parameters:
+    - id: time
+      type: System.Single
+      description: Time.
+    - id: start
+      type: DotFeather.Vector
+      description: Start.
+    - id: end
+      type: DotFeather.Vector
+      description: End.
+    return:
+      type: DotFeather.Vector
+      description: The out.
+    content.vb: Public Shared Function EaseIn(time As Single, start As Vector, end As Vector) As Vector
+  overload: DotFeather.DFMath.EaseIn*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFMath.ToRadian(System.Single)
+  commentId: M:DotFeather.DFMath.ToRadian(System.Single)
+  id: ToRadian(System.Single)
+  parent: DotFeather.DFMath
+  langs:
+  - csharp
+  - vb
+  name: ToRadian(Single)
+  nameWithType: DFMath.ToRadian(Single)
+  fullName: DotFeather.DFMath.ToRadian(System.Single)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToRadian
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 77
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n角度を弧度に変換します。\n"
+  example: []
+  syntax:
+    content: public static float ToRadian(float degree)
+    parameters:
+    - id: degree
+      type: System.Single
+      description: Degree.
+    return:
+      type: System.Single
+      description: The radian.
+    content.vb: Public Shared Function ToRadian(degree As Single) As Single
+  overload: DotFeather.DFMath.ToRadian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFMath.ToDegree(System.Single)
+  commentId: M:DotFeather.DFMath.ToDegree(System.Single)
+  id: ToDegree(System.Single)
+  parent: DotFeather.DFMath
+  langs:
+  - csharp
+  - vb
+  name: ToDegree(Single)
+  nameWithType: DFMath.ToDegree(Single)
+  fullName: DotFeather.DFMath.ToDegree(System.Single)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Helpers/DFMath.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToDegree
+    path: ../DotFeather/Helpers/DFMath.cs
+    startLine: 84
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n弧度を角度に変換します。\n"
+  example: []
+  syntax:
+    content: public static float ToDegree(float radian)
+    parameters:
+    - id: radian
+      type: System.Single
+      description: Radian.
+    return:
+      type: System.Single
+      description: The degree.
+    content.vb: Public Shared Function ToDegree(radian As Single) As Single
+  overload: DotFeather.DFMath.ToDegree*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: DotFeather
+  commentId: N:DotFeather
+  name: DotFeather
+  nameWithType: DotFeather
+  fullName: DotFeather
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotFeather.DFMath.Lerp*
+  commentId: Overload:DotFeather.DFMath.Lerp
+  name: Lerp
+  nameWithType: DFMath.Lerp
+  fullName: DotFeather.DFMath.Lerp
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: DotFeather.DFMath.EaseInOut*
+  commentId: Overload:DotFeather.DFMath.EaseInOut
+  name: EaseInOut
+  nameWithType: DFMath.EaseInOut
+  fullName: DotFeather.DFMath.EaseInOut
+- uid: DotFeather.DFMath.EaseIn*
+  commentId: Overload:DotFeather.DFMath.EaseIn
+  name: EaseIn
+  nameWithType: DFMath.EaseIn
+  fullName: DotFeather.DFMath.EaseIn
+- uid: DotFeather.DFMath.EaseOut*
+  commentId: Overload:DotFeather.DFMath.EaseOut
+  name: EaseOut
+  nameWithType: DFMath.EaseOut
+  fullName: DotFeather.DFMath.EaseOut
+- uid: DotFeather.Vector
+  commentId: T:DotFeather.Vector
+  parent: DotFeather
+  name: Vector
+  nameWithType: Vector
+  fullName: DotFeather.Vector
+- uid: DotFeather.DFMath.ToRadian*
+  commentId: Overload:DotFeather.DFMath.ToRadian
+  name: ToRadian
+  nameWithType: DFMath.ToRadian
+  fullName: DotFeather.DFMath.ToRadian
+- uid: DotFeather.DFMath.ToDegree*
+  commentId: Overload:DotFeather.DFMath.ToDegree
+  name: ToDegree
+  nameWithType: DFMath.ToDegree
+  fullName: DotFeather.DFMath.ToDegree

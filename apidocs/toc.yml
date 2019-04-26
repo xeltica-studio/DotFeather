@@ -1,0 +1,5 @@
+- name: API ドキュメント
+  href: api/
+  homepage: api/index.md
+- name: マニュアル
+  href: https://xeltica.github.io/DotFeather/docs/ja/

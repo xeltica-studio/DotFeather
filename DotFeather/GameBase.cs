@@ -9,7 +9,6 @@ using SDPixelFormat = System.Drawing.Imaging.PixelFormat;
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
-using DotFeather.Models;
 
 namespace DotFeather
 {
@@ -22,28 +21,28 @@ namespace DotFeather
 		/// ウィンドウの X 座標を取得または設定します。
 		/// </summary>
 		public int X
-        {
-            get => window.X;
-            set => window.X = value;
-        }
+		{
+			get => window.X;
+			set => window.X = value;
+		}
 
-        /// <summary>
-        /// ウィンドウの Y 座標を取得または設定します。
-        /// </summary>
-        public int Y
-        {
-            get => window.Y;
-            set => window.Y = value;
-        }
+		/// <summary>
+		/// ウィンドウの Y 座標を取得または設定します。
+		/// </summary>
+		public int Y
+		{
+			get => window.Y;
+			set => window.Y = value;
+		}
 
-        /// <summary>
-        /// ウィンドウが表示されているかどうかを示す値を取得または設定します。
-        /// </summary>
-        public bool Visible
-        {
-            get => window.Visible;
-            set => window.Visible = value;
-        }
+		/// <summary>
+		/// ウィンドウが表示されているかどうかを示す値を取得または設定します。
+		/// </summary>
+		public bool Visible
+		{
+			get => window.Visible;
+			set => window.Visible = value;
+		}
 
 		/// <summary>
 		/// このウィンドウの幅を取得または設定します。
@@ -91,76 +90,76 @@ namespace DotFeather
 		/// </summary>
 		public Container Root { get; } = new Container();
 
-        /// <summary>
-        /// 現在のディスプレイの DPI を取得します。
-        /// </summary>
-        public float Dpi { get; private set; }
+		/// <summary>
+		/// 現在のディスプレイの DPI を取得します。
+		/// </summary>
+		public float Dpi { get; private set; }
 
-        /// <summary>
-        /// 指定したパラメーターで、 <see cref="GameBase"/> クラスの新しいインスタンスを初期化します。
-        /// </summary>
-        /// <param name="width">幅.</param>
-        /// <param name="height">高さ.</param>
-        /// <param name="title">タイトル.</param>
-        /// <param name="refreshRate">リフレッシュレート.</param>
-        protected GameBase(int width, int height, string title = null, int refreshRate = 60)
-        {
-            RefreshRate = refreshRate;
+		/// <summary>
+		/// 指定したパラメーターで、 <see cref="GameBase"/> クラスの新しいインスタンスを初期化します。
+		/// </summary>
+		/// <param name="width">幅.</param>
+		/// <param name="height">高さ.</param>
+		/// <param name="title">タイトル.</param>
+		/// <param name="refreshRate">リフレッシュレート.</param>
+		protected GameBase(int width, int height, string title = null, int refreshRate = 60)
+		{
+			RefreshRate = refreshRate;
 
-            window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow)
-            {
-                VSync = VSyncMode.On,
-                TargetRenderFrequency = refreshRate,
-                TargetUpdateFrequency = refreshRate,
-            };
+			window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow)
+			{
+				VSync = VSyncMode.On,
+				TargetRenderFrequency = refreshRate,
+				TargetUpdateFrequency = refreshRate,
+			};
 
-            window.UpdateFrame += (object sender, FrameEventArgs e) =>
-            {
-                Time.Now += e.Time;
-                Time.DeltaTime = e.Time;
-                OnUpdate(sender, new DFEventArgs
-                {
-                    DeltaTime = e.Time,
-                });
-            };
+			window.UpdateFrame += (object sender, FrameEventArgs e) =>
+			{
+				Time.Now += e.Time;
+				Time.DeltaTime = e.Time;
+				OnUpdate(sender, new DFEventArgs
+				{
+					DeltaTime = e.Time,
+				});
+			};
 
-            window.RenderFrame += (object sender, FrameEventArgs e) =>
-            {
-                GL.ClearColor(BackgroundColor.ToGL());
-                GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-                Root.Draw(this, Vector.Zero);
-                window.SwapBuffers();
-                Dpi = (float)window.ClientSize.Width / window.Size.Width;
-            };
+			window.RenderFrame += (object sender, FrameEventArgs e) =>
+			{
+				GL.ClearColor(BackgroundColor.ToGL());
+				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+				Root.Draw(this, Vector.Zero);
+				window.SwapBuffers();
+				Dpi = (float)window.ClientSize.Width / window.Size.Width;
+			};
 
-            window.Load += (object sender, EventArgs e) =>
-            {
-                GL.ClearColor(Color.Black);
-                GL.LineWidth(1);
-                window.VSync = VSyncMode.On;
+			window.Load += (object sender, EventArgs e) =>
+			{
+				GL.ClearColor(Color.Black);
+				GL.LineWidth(1);
+				window.VSync = VSyncMode.On;
 
-                GL.Enable(EnableCap.DepthTest);
+				GL.Enable(EnableCap.DepthTest);
 
-                window.WindowBorder = WindowBorder.Resizable;
-                OnLoad(sender, e);
-            };
+				window.WindowBorder = WindowBorder.Resizable;
+				OnLoad(sender, e);
+			};
 
-            window.Resize += (object sender, EventArgs e) =>
-            {
-                GL.Viewport(window.ClientRectangle);
-                OnResize(sender, e);
-            };
+			window.Resize += (object sender, EventArgs e) =>
+			{
+				GL.Viewport(window.ClientRectangle);
+				OnResize(sender, e);
+			};
 
-            window.Unload += (object sender, EventArgs e) =>
-            {
-                OnUnload(sender, e);
-            };
+			window.Unload += (object sender, EventArgs e) =>
+			{
+				OnUnload(sender, e);
+			};
 
-            window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
-            {
-                Input.Mouse.Position = new System.Drawing.Point((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
-            };
-        }
+			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
+			{
+				Input.Mouse.Position = new System.Drawing.Point((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
+			};
+		}
 
 		/// <summary>
 		/// 乱数を指定したシード値で初期化します。
@@ -221,8 +220,12 @@ namespace DotFeather
 		/// </summary>
 		protected virtual void OnResize(object sender, EventArgs e) { }
 
+		/// <summary>
+		/// 乱数生成器を取得します。
+		/// </summary>
+		protected Random Random { get; private set; } = new Random();
+
 		private int? statusCode;
 		private readonly GameWindow window;
-		protected Random Random { get; private set; } = new Random();
 	}
 }

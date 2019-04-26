@@ -12,11 +12,11 @@ var (scrX, scrY) = Input.Mouse.Scroll;
 
 // ボタン判定
 if (Input.Mouse.IsLeftButtonClicked)
-    Console.WriteLine("左クリック");
+	Console.WriteLine("左クリック");
 if (Input.Mouse.IsMiddleButtonClicked)
-    Console.WriteLine("中クリック");
+	Console.WriteLine("中クリック");
 if (Input.Mouse.IsRightButtonClicked)
-    Console.WriteLine("右クリック");
+	Console.WriteLine("右クリック");
 ```
 
 次: [キーボード入力](keyboard.md)

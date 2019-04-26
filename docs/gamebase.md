@@ -5,8 +5,8 @@ In DotFeather, you define a inherited class from GameBase and write main loop in
 ```cs
 public class Game : GameBase
 {
-    public Game(int width, int height, string title = null, int refreshRate = 60) 
-        : base(width, height, title, refreshRate) { }
+	public Game(int width, int height, string title = null, int refreshRate = 60) 
+		: base(width, height, title, refreshRate) { }
 }
 ```
 
@@ -19,10 +19,10 @@ Same as other C# program, your code will be begin from the `Main()` method. Writ
 ```cs
 static void Main()
 {
-    using (var g = new Game(320, 240))
-    {
-        g.Run();
-    }
+	using (var g = new Game(320, 240))
+	{
+		g.Run();
+	}
 }
 ```
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using OpenTK.Graphics.OpenGL;
-namespace DotFeather.Helpers
+namespace DotFeather
 {
 	/// <summary>
 	/// <see cref="GL.Begin(PrimitiveType)"/> および <see cref="GL.End()"/> を <c>using</c> 句で扱えるようにしたクラスです。このクラスは継承できません。
@@ -16,6 +16,9 @@ namespace DotFeather.Helpers
 			GL.Begin(p);
 		}
 
+		/// <summary>
+		/// コンテキストを解放します。
+		/// </summary>
 		public void Dispose()
 		{
 			if (!disposedValue)
@@ -25,6 +28,6 @@ namespace DotFeather.Helpers
 			}
 		}
 
-        private bool disposedValue;
-    }
+		private bool disposedValue;
+	}
 }

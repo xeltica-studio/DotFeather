@@ -1,4 +1,4 @@
-﻿namespace DotFeather.Drawable
+﻿namespace DotFeather
 {
 	/// <summary>
 	/// 描画処理を行うクラスはすべてこのインターフェイスを実装します。
@@ -9,6 +9,7 @@
 		/// 画面への描画を開始します。
 		/// </summary>
 		/// <param name="game">Game.</param>
+		/// <param name="location"></param>
 		void Draw(GameBase game, Vector location);
 
 		/// <summary>
@@ -36,10 +37,10 @@
 		/// </summary>
 		Vector Scale { get; set; }
 
-        /// <summary>
-        /// この <see cref="IDrawable"/> を完全に破棄します。
-        /// </summary>
-        void Destroy();
+		/// <summary>
+		/// この <see cref="IDrawable"/> を完全に破棄します。
+		/// </summary>
+		void Destroy();
 	}
 
 }

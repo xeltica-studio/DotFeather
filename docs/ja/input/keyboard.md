@@ -10,7 +10,7 @@ Keyboard プロパティの子要素には、あらゆるキーの名前がプ�
 // A を押したか判定する
 if (Input.Keyboard.A.IsPressed)
 {
-    Console.WriteLine("Aが押されている");
+	Console.WriteLine("Aが押されている");
 }
 ```
 

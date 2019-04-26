@@ -11,12 +11,12 @@ Here is the definition of the `IDrawable` interface in the latest version.
 ```cs
 public interface IDrawable
 {
-    void Draw(GameBase game, Vector location);
-    int ZOrder { get; set; }
-    string Name { get; set; }
-    Vector Location { get; set; }
-    float Angle { get; set; }
-    Vector Scale { get; set; }
+	void Draw(GameBase game, Vector location);
+	int ZOrder { get; set; }
+	string Name { get; set; }
+	Vector Location { get; set; }
+	float Angle { get; set; }
+	Vector Scale { get; set; }
 }
 ```
 
@@ -33,7 +33,7 @@ Here is the definition of the `ITile` interface in the latest version.
 ```cs
 public interface ITile
 {
-    void Draw(GameBase game, Tilemap map, Vector location, Color? color);
+	void Draw(GameBase game, Tilemap map, Vector location, Color? color);
 }
 ```
 

@@ -1,7 +1,10 @@
 ﻿using System.Drawing;
 
-namespace DotFeather.Drawable.Tiles
+namespace DotFeather
 {
+	/// <summary>
+	/// <see cref="Tilemap"/> が扱えるタイルを定義します。
+	/// </summary>
 	public interface ITile
 	{
 		/// <summary>
@@ -9,9 +12,9 @@ namespace DotFeather.Drawable.Tiles
 		/// </summary>
 		void Draw(GameBase game, Tilemap map, Vector location, Color? color);
 
-        /// <summary>
-        /// この <see cref="ITile"/> を破棄します。
-        /// </summary>
-        void Destroy();
+		/// <summary>
+		/// この <see cref="ITile"/> を破棄します。
+		/// </summary>
+		void Destroy();
 	}
 }

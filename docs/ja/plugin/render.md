@@ -11,12 +11,12 @@
 ```cs
 public interface IDrawable
 {
-    void Draw(GameBase game, Vector location);
-    int ZOrder { get; set; }
-    string Name { get; set; }
-    Vector Location { get; set; }
-    float Angle { get; set; }
-    Vector Scale { get; set; }
+	void Draw(GameBase game, Vector location);
+	int ZOrder { get; set; }
+	string Name { get; set; }
+	Vector Location { get; set; }
+	float Angle { get; set; }
+	Vector Scale { get; set; }
 }
 ```
 
@@ -33,7 +33,7 @@ Draw メソッドの中に実際の描画処理を記述します。引数のloc
 ```cs
 public interface ITile
 {
-    void Draw(GameBase game, Tilemap map, Vector location, Color? color);
+	void Draw(GameBase game, Tilemap map, Vector location, Color? color);
 }
 ```
 

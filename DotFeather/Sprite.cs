@@ -1,8 +1,5 @@
 ﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 
-using DotFeather.Drawable;
-using DotFeather.Helpers;
-using DotFeather.Models;
 
 namespace DotFeather
 {
@@ -11,11 +8,40 @@ namespace DotFeather
 	/// </summary>
 	public class Sprite : IDrawable
 	{
+		/// <summary>
+		/// この <see cref="Sprite"/> が持つテクスチャを取得または設定します。
+		/// </summary>
+		/// <value></value>
+		public Sprite(Texture2D texture, Vector location, float angle, Vector scale, int zOrder, string name)
+		{
+			this.Texture = texture;
+				this.Location = location;
+				this.Angle = angle;
+				this.Scale = scale;
+				this.ZOrder = zOrder;
+				this.Name = name;
+
+		}
+
+		/// <summary>
+		/// このスプライトが持つテクスチャを取得または設定します。
+		/// </summary>
+		/// <value></value>
 		public Texture2D Texture { get; set; }
+
+		/// <summary></summary>
 		public Vector Location { get; set; }
+
+		/// <summary></summary>
 		public float Angle { get; set; }
+
+		/// <summary></summary>
 		public Vector Scale { get; set; }
+
+		/// <summary></summary>
 		public int ZOrder { get; set; }
+
+		/// <summary></summary>
 		public string Name { get; set; }
 
 		private Texture2D internalTexture;
@@ -36,21 +62,32 @@ namespace DotFeather
 			Scale = scale != default ? scale : new Vector(1, 1);
 		}
 
-		protected Sprite(string path)
-		{
-			Texture = internalTexture = Texture2D.LoadFrom(path);
-		}
-
+		/// <summary>
+		/// スプライトを描画します。
+		/// </summary>
 		public void Draw(GameBase game, Vector location)
 		{
 			TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle);
 		}
 
+		/// <summary>
+		/// 指定した画像ファイルから <see cref="Sprite"/> を生成します。
+		/// </summary>
+		/// <param name="path">ファイルパス。</param>
+		/// <returns>生成された <see cref="Sprite"/>。</returns>
 		public static Sprite LoadFrom(string path) => new Sprite(path);
 
-        public void Destroy() 
+		/// <summary>
+		/// この <see cref="Sprite"/> を破棄します。
+		/// </summary>
+		public void Destroy()
 		{
 			internalTexture.Dispose();
+		}
+
+		private Sprite(string path)
+		{
+			Texture = internalTexture = Texture2D.LoadFrom(path);
 		}
 	}
 }

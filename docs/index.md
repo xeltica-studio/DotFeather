@@ -26,6 +26,7 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
     - Extensions
         - [Original Rendering](plugin/render.md)
         - [Original Audio Source](plugin/audiosource.md)
+
 <!--
 	 - Official Plugins (TBD)
         - DotFeather.UI

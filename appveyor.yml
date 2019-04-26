@@ -3,45 +3,45 @@ image: Visual Studio 2017
 skip_non_tags: true
 
 dotnet_csproj:
-  patch: true
-  file: '**\*.csproj'
-  version: '{version}'
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
+	patch: true
+	file: '**\*.csproj'
+	version: '{version}'
+	package_version: '{version}'
+	assembly_version: '{version}'
+	file_version: '{version}'
+	informational_version: '{version}'
 
 before_build:
 - ps: >-
-	nuget restore
+		nuget restore
 
 build:
-  project: C:\projects\dotfeather\dotfeather\dotfeather.csproj
-  publish_nuget: true
+	project: C:\projects\dotfeather\dotfeather\dotfeather.csproj
+	publish_nuget: true
 
 configuration: Release
 
 after_build:
-  - nuget pack -Prop Configuration=Release DotFeather -OutputDirectory DotFeather/bin/Release/
+	- nuget pack -Prop Configuration=Release DotFeather -OutputDirectory DotFeather/bin/Release/
 
 artifacts:
-  - path: '**\*.nupkg'
-	name: DotFeather
+	- path: '**\*.nupkg'
+		name: DotFeather
 
 deploy:
 - provider: NuGet
-  api_key:
-	# Use encrypt tool
-	# https://ci.appveyor.com/tools/encrypt
-	secure: nknIyuf45/JACWB2OAWD32oU6HlW4AkkiI974KwKPPkMh3dRHJXsVQVbN/iIUjg/
-  artifact: /.*\.nupkg/
-  on:
-	appveyor_repo_tag: true
+	api_key:
+		# Use encrypt tool
+		# https://ci.appveyor.com/tools/encrypt
+		secure: nknIyuf45/JACWB2OAWD32oU6HlW4AkkiI974KwKPPkMh3dRHJXsVQVbN/iIUjg/
+	artifact: /.*\.nupkg/
+	on:
+		appveyor_repo_tag: true
 - provider: GitHub
-  artifact: /.*\.nupkg/		   # upload all NuGet packages to release assets
-  draft: false
-  prerelease: false
-  auth_token:
-	secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx
-  on:
-	APPVEYOR_REPO_TAG: true	   # deploy on tag push only
+	artifact: /.*\.nupkg/					 # upload all NuGet packages to release assets
+	draft: false
+	prerelease: false
+	auth_token:
+		secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx
+	on:
+		APPVEYOR_REPO_TAG: true			 # deploy on tag push only

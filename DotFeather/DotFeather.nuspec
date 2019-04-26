@@ -13,6 +13,8 @@
     <tags>GameEngine</tags>
         <license type="expression">MIT</license>
     <releaseNotes>
+		1.0.2:
+		+ Fix some properties of Container aren't public
 		1.0.1:
 		+ Add FontDrawable
 		+ Fix bugs

@@ -1,0 +1,1081 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension
+  commentId: T:DotFeather.SystemDrawingTypesToGLConverterExtension
+  id: SystemDrawingTypesToGLConverterExtension
+  parent: DotFeather
+  children:
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Color)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Point)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.PointF)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Rectangle)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.RectangleF)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Size)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.SizeF)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Color)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Point)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.PointF)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Rectangle)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.RectangleF)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Size)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.SizeF)
+  langs:
+  - csharp
+  - vb
+  name: SystemDrawingTypesToGLConverterExtension
+  nameWithType: SystemDrawingTypesToGLConverterExtension
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension
+  type: Class
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: SystemDrawingTypesToGLConverterExtension
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 9
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref> および <xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 間における類似した構造体の相互変換をする、拡張メソッドを追加します。\n"
+  example: []
+  syntax:
+    content: public static class SystemDrawingTypesToGLConverterExtension
+    content.vb: Public Module SystemDrawingTypesToGLConverterExtension
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Color)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Color)
+  id: ToGL(System.Drawing.Color)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToGL(Color)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(Color)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Color)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToGL
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 14
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGL版に変換します。\n"
+  example: []
+  syntax:
+    content: public static Color ToGL(this Color c)
+    parameters:
+    - id: c
+      type: System.Drawing.Color
+    return:
+      type: OpenTK.Color
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToGL(c As Color) As Color
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Color)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Color)
+  id: ToDrawing(OpenTK.Color)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToDrawing(Color)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(Color)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Color)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToDrawing
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 19
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nSystem.Drawing 版に変換します。\n"
+  example: []
+  syntax:
+    content: public static Color ToDrawing(this Color c)
+    parameters:
+    - id: c
+      type: OpenTK.Color
+    return:
+      type: System.Drawing.Color
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDrawing(c As Color) As Color
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Point)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Point)
+  id: ToGL(System.Drawing.Point)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToGL(Point)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(Point)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Point)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToGL
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 24
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGL版に変換します。\n"
+  example: []
+  syntax:
+    content: public static Point ToGL(this Point p)
+    parameters:
+    - id: p
+      type: System.Drawing.Point
+    return:
+      type: OpenTK.Point
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToGL(p As Point) As Point
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Point)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Point)
+  id: ToDrawing(OpenTK.Point)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToDrawing(Point)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(Point)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Point)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToDrawing
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 29
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nSystem.Drawing 版に変換します。\n"
+  example: []
+  syntax:
+    content: public static Point ToDrawing(this Point p)
+    parameters:
+    - id: p
+      type: OpenTK.Point
+    return:
+      type: System.Drawing.Point
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDrawing(p As Point) As Point
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.PointF)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.PointF)
+  id: ToGL(System.Drawing.PointF)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToGL(PointF)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(PointF)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.PointF)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToGL
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 34
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGL版に変換します。\n"
+  example: []
+  syntax:
+    content: public static PointF ToGL(this PointF p)
+    parameters:
+    - id: p
+      type: System.Drawing.PointF
+    return:
+      type: OpenTK.PointF
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToGL(p As PointF) As PointF
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.PointF)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.PointF)
+  id: ToDrawing(OpenTK.PointF)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToDrawing(PointF)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(PointF)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.PointF)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToDrawing
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 39
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nSystem.Drawing 版に変換します。\n"
+  example: []
+  syntax:
+    content: public static PointF ToDrawing(this PointF p)
+    parameters:
+    - id: p
+      type: OpenTK.PointF
+    return:
+      type: System.Drawing.PointF
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDrawing(p As PointF) As PointF
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Size)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Size)
+  id: ToGL(System.Drawing.Size)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToGL(Size)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(Size)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Size)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToGL
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 44
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGL版に変換します。\n"
+  example: []
+  syntax:
+    content: public static Size ToGL(this Size s)
+    parameters:
+    - id: s
+      type: System.Drawing.Size
+    return:
+      type: OpenTK.Size
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToGL(s As Size) As Size
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Size)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Size)
+  id: ToDrawing(OpenTK.Size)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToDrawing(Size)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(Size)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Size)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToDrawing
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 49
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nSystem.Drawing 版に変換します。\n"
+  example: []
+  syntax:
+    content: public static Size ToDrawing(this Size s)
+    parameters:
+    - id: s
+      type: OpenTK.Size
+    return:
+      type: System.Drawing.Size
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDrawing(s As Size) As Size
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.SizeF)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.SizeF)
+  id: ToGL(System.Drawing.SizeF)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToGL(SizeF)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(SizeF)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.SizeF)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToGL
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 54
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGL版に変換します。\n"
+  example: []
+  syntax:
+    content: public static SizeF ToGL(this SizeF s)
+    parameters:
+    - id: s
+      type: System.Drawing.SizeF
+    return:
+      type: OpenTK.SizeF
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToGL(s As SizeF) As SizeF
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.SizeF)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.SizeF)
+  id: ToDrawing(OpenTK.SizeF)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToDrawing(SizeF)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(SizeF)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.SizeF)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToDrawing
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 59
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nSystem.Drawing 版に変換します。\n"
+  example: []
+  syntax:
+    content: public static SizeF ToDrawing(this SizeF s)
+    parameters:
+    - id: s
+      type: OpenTK.SizeF
+    return:
+      type: System.Drawing.SizeF
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDrawing(s As SizeF) As SizeF
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Rectangle)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Rectangle)
+  id: ToGL(System.Drawing.Rectangle)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToGL(Rectangle)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(Rectangle)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Rectangle)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToGL
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 64
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGL版に変換します。\n"
+  example: []
+  syntax:
+    content: public static Rectangle ToGL(this Rectangle s)
+    parameters:
+    - id: s
+      type: System.Drawing.Rectangle
+    return:
+      type: OpenTK.Rectangle
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToGL(s As Rectangle) As Rectangle
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Rectangle)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Rectangle)
+  id: ToDrawing(OpenTK.Rectangle)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToDrawing(Rectangle)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(Rectangle)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Rectangle)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToDrawing
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 69
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nSystem.Drawing 版に変換します。\n"
+  example: []
+  syntax:
+    content: public static Rectangle ToDrawing(this Rectangle s)
+    parameters:
+    - id: s
+      type: OpenTK.Rectangle
+    return:
+      type: System.Drawing.Rectangle
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDrawing(s As Rectangle) As Rectangle
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.RectangleF)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.RectangleF)
+  id: ToGL(System.Drawing.RectangleF)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToGL(RectangleF)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(RectangleF)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.RectangleF)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToGL
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 74
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGL版に変換します。\n"
+  example: []
+  syntax:
+    content: public static RectangleF ToGL(this RectangleF s)
+    parameters:
+    - id: s
+      type: System.Drawing.RectangleF
+    return:
+      type: OpenTK.RectangleF
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToGL(s As RectangleF) As RectangleF
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.RectangleF)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.RectangleF)
+  id: ToDrawing(OpenTK.RectangleF)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToDrawing(RectangleF)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(RectangleF)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.RectangleF)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ToDrawing
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 79
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nSystem.Drawing 版に変換します。\n"
+  example: []
+  syntax:
+    content: public static RectangleF ToDrawing(this RectangleF s)
+    parameters:
+    - id: s
+      type: OpenTK.RectangleF
+    return:
+      type: System.Drawing.RectangleF
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDrawing(s As RectangleF) As RectangleF
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+- uid: OpenTK
+  commentId: N:OpenTK
+  isExternal: true
+  name: OpenTK
+  nameWithType: OpenTK
+  fullName: OpenTK
+- uid: DotFeather
+  commentId: N:DotFeather
+  name: DotFeather
+  nameWithType: DotFeather
+  fullName: DotFeather
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL*
+  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL
+  name: ToGL
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL
+- uid: System.Drawing.Color
+  commentId: T:System.Drawing.Color
+  parent: System.Drawing
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: System.Drawing.Color
+- uid: OpenTK.Color
+  commentId: T:OpenTK.Color
+  parent: OpenTK
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: OpenTK.Color
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing*
+  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing
+  name: ToDrawing
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing
+- uid: System.Drawing.Point
+  commentId: T:System.Drawing.Point
+  parent: System.Drawing
+  isExternal: true
+  name: Point
+  nameWithType: Point
+  fullName: System.Drawing.Point
+- uid: OpenTK.Point
+  commentId: T:OpenTK.Point
+  parent: OpenTK
+  isExternal: true
+  name: Point
+  nameWithType: Point
+  fullName: OpenTK.Point
+- uid: System.Drawing.PointF
+  commentId: T:System.Drawing.PointF
+  parent: System.Drawing
+  isExternal: true
+  name: PointF
+  nameWithType: PointF
+  fullName: System.Drawing.PointF
+- uid: OpenTK.PointF
+  commentId: T:OpenTK.PointF
+  parent: OpenTK
+  isExternal: true
+  name: PointF
+  nameWithType: PointF
+  fullName: OpenTK.PointF
+- uid: System.Drawing.Size
+  commentId: T:System.Drawing.Size
+  parent: System.Drawing
+  isExternal: true
+  name: Size
+  nameWithType: Size
+  fullName: System.Drawing.Size
+- uid: OpenTK.Size
+  commentId: T:OpenTK.Size
+  parent: OpenTK
+  isExternal: true
+  name: Size
+  nameWithType: Size
+  fullName: OpenTK.Size
+- uid: System.Drawing.SizeF
+  commentId: T:System.Drawing.SizeF
+  parent: System.Drawing
+  isExternal: true
+  name: SizeF
+  nameWithType: SizeF
+  fullName: System.Drawing.SizeF
+- uid: OpenTK.SizeF
+  commentId: T:OpenTK.SizeF
+  parent: OpenTK
+  isExternal: true
+  name: SizeF
+  nameWithType: SizeF
+  fullName: OpenTK.SizeF
+- uid: System.Drawing.Rectangle
+  commentId: T:System.Drawing.Rectangle
+  parent: System.Drawing
+  isExternal: true
+  name: Rectangle
+  nameWithType: Rectangle
+  fullName: System.Drawing.Rectangle
+- uid: OpenTK.Rectangle
+  commentId: T:OpenTK.Rectangle
+  parent: OpenTK
+  isExternal: true
+  name: Rectangle
+  nameWithType: Rectangle
+  fullName: OpenTK.Rectangle
+- uid: System.Drawing.RectangleF
+  commentId: T:System.Drawing.RectangleF
+  parent: System.Drawing
+  isExternal: true
+  name: RectangleF
+  nameWithType: RectangleF
+  fullName: System.Drawing.RectangleF
+- uid: OpenTK.RectangleF
+  commentId: T:OpenTK.RectangleF
+  parent: OpenTK
+  isExternal: true
+  name: RectangleF
+  nameWithType: RectangleF
+  fullName: OpenTK.RectangleF

@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotFeather.ITile
+  commentId: T:DotFeather.ITile
+  id: ITile
+  parent: DotFeather
+  children:
+  - DotFeather.ITile.Destroy
+  - DotFeather.ITile.Draw(DotFeather.GameBase,DotFeather.Tilemap,DotFeather.Vector,System.Nullable{System.Drawing.Color})
+  langs:
+  - csharp
+  - vb
+  name: ITile
+  nameWithType: ITile
+  fullName: DotFeather.ITile
+  type: Interface
+  source:
+    remote:
+      path: DotFeather/Drawable/Tiles/ITile.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ITile
+    path: ../DotFeather/Drawable/Tiles/ITile.cs
+    startLine: 7
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<xref href=\"DotFeather.Tilemap\" data-throw-if-not-resolved=\"false\"></xref> が扱えるタイルを定義します。\n"
+  example: []
+  syntax:
+    content: public interface ITile
+    content.vb: Public Interface ITile
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DotFeather.ITile.Draw(DotFeather.GameBase,DotFeather.Tilemap,DotFeather.Vector,System.Nullable{System.Drawing.Color})
+  commentId: M:DotFeather.ITile.Draw(DotFeather.GameBase,DotFeather.Tilemap,DotFeather.Vector,System.Nullable{System.Drawing.Color})
+  id: Draw(DotFeather.GameBase,DotFeather.Tilemap,DotFeather.Vector,System.Nullable{System.Drawing.Color})
+  parent: DotFeather.ITile
+  langs:
+  - csharp
+  - vb
+  name: Draw(GameBase, Tilemap, Vector, Nullable<Color>)
+  nameWithType: ITile.Draw(GameBase, Tilemap, Vector, Nullable<Color>)
+  fullName: DotFeather.ITile.Draw(DotFeather.GameBase, DotFeather.Tilemap, DotFeather.Vector, System.Nullable<System.Drawing.Color>)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Drawable/Tiles/ITile.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Draw
+    path: ../DotFeather/Drawable/Tiles/ITile.cs
+    startLine: 12
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nこの <xref href=\"DotFeather.ITile\" data-throw-if-not-resolved=\"false\"></xref> をレンダリングします。\n"
+  example: []
+  syntax:
+    content: void Draw(GameBase game, Tilemap map, Vector location, Color? color)
+    parameters:
+    - id: game
+      type: DotFeather.GameBase
+    - id: map
+      type: DotFeather.Tilemap
+    - id: location
+      type: DotFeather.Vector
+    - id: color
+      type: System.Nullable{System.Drawing.Color}
+    content.vb: Sub Draw(game As GameBase, map As Tilemap, location As Vector, color As Color?)
+  overload: DotFeather.ITile.Draw*
+  nameWithType.vb: ITile.Draw(GameBase, Tilemap, Vector, Nullable(Of Color))
+  fullName.vb: DotFeather.ITile.Draw(DotFeather.GameBase, DotFeather.Tilemap, DotFeather.Vector, System.Nullable(Of System.Drawing.Color))
+  name.vb: Draw(GameBase, Tilemap, Vector, Nullable(Of Color))
+- uid: DotFeather.ITile.Destroy
+  commentId: M:DotFeather.ITile.Destroy
+  id: Destroy
+  parent: DotFeather.ITile
+  langs:
+  - csharp
+  - vb
+  name: Destroy()
+  nameWithType: ITile.Destroy()
+  fullName: DotFeather.ITile.Destroy()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Drawable/Tiles/ITile.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Destroy
+    path: ../DotFeather/Drawable/Tiles/ITile.cs
+    startLine: 17
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nこの <xref href=\"DotFeather.ITile\" data-throw-if-not-resolved=\"false\"></xref> を破棄します。\n"
+  example: []
+  syntax:
+    content: void Destroy()
+    content.vb: Sub Destroy
+  overload: DotFeather.ITile.Destroy*
+references:
+- uid: DotFeather.Tilemap
+  commentId: T:DotFeather.Tilemap
+  parent: DotFeather
+  name: Tilemap
+  nameWithType: Tilemap
+  fullName: DotFeather.Tilemap
+- uid: DotFeather
+  commentId: N:DotFeather
+  name: DotFeather
+  nameWithType: DotFeather
+  fullName: DotFeather
+- uid: DotFeather.ITile
+  commentId: T:DotFeather.ITile
+  parent: DotFeather
+  name: ITile
+  nameWithType: ITile
+  fullName: DotFeather.ITile
+- uid: DotFeather.ITile.Draw*
+  commentId: Overload:DotFeather.ITile.Draw
+  name: Draw
+  nameWithType: ITile.Draw
+  fullName: DotFeather.ITile.Draw
+- uid: DotFeather.GameBase
+  commentId: T:DotFeather.GameBase
+  parent: DotFeather
+  name: GameBase
+  nameWithType: GameBase
+  fullName: DotFeather.GameBase
+- uid: DotFeather.Vector
+  commentId: T:DotFeather.Vector
+  parent: DotFeather
+  name: Vector
+  nameWithType: Vector
+  fullName: DotFeather.Vector
+- uid: System.Nullable{System.Drawing.Color}
+  commentId: T:System.Nullable{System.Drawing.Color}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Color>
+  nameWithType: Nullable<Color>
+  fullName: System.Nullable<System.Drawing.Color>
+  nameWithType.vb: Nullable(Of Color)
+  fullName.vb: System.Nullable(Of System.Drawing.Color)
+  name.vb: Nullable(Of Color)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Drawing.Color
+    name: Color
+    nameWithType: Color
+    fullName: System.Drawing.Color
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Drawing.Color
+    name: Color
+    nameWithType: Color
+    fullName: System.Drawing.Color
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotFeather.ITile.Destroy*
+  commentId: Overload:DotFeather.ITile.Destroy
+  name: Destroy
+  nameWithType: ITile.Destroy
+  fullName: DotFeather.ITile.Destroy

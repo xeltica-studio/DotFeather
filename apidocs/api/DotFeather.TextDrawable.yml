@@ -1,0 +1,1099 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotFeather.TextDrawable
+  commentId: T:DotFeather.TextDrawable
+  id: TextDrawable
+  parent: DotFeather
+  children:
+  - DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)
+  - DotFeather.TextDrawable.Angle
+  - DotFeather.TextDrawable.Color
+  - DotFeather.TextDrawable.Destroy
+  - DotFeather.TextDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+  - DotFeather.TextDrawable.Font
+  - DotFeather.TextDrawable.Location
+  - DotFeather.TextDrawable.Name
+  - DotFeather.TextDrawable.RenderedTexture
+  - DotFeather.TextDrawable.Scale
+  - DotFeather.TextDrawable.Text
+  - DotFeather.TextDrawable.UpdateTexture
+  - DotFeather.TextDrawable.ZOrder
+  langs:
+  - csharp
+  - vb
+  name: TextDrawable
+  nameWithType: TextDrawable
+  fullName: DotFeather.TextDrawable
+  type: Class
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: TextDrawable
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 11
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nテキストを描画する <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> オブジェクトです。\n"
+  example: []
+  syntax:
+    content: 'public class TextDrawable : IDrawable'
+    content.vb: >-
+      Public Class TextDrawable
+
+          Implements IDrawable
+  inheritance:
+  - System.Object
+  implements:
+  - DotFeather.IDrawable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DotFeather.TextDrawable.ZOrder
+  commentId: P:DotFeather.TextDrawable.ZOrder
+  id: ZOrder
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: ZOrder
+  nameWithType: TextDrawable.ZOrder
+  fullName: DotFeather.TextDrawable.ZOrder
+  type: Property
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: ZOrder
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 14
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: ''
+  example: []
+  syntax:
+    content: public int ZOrder { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ZOrder As Integer
+  overload: DotFeather.TextDrawable.ZOrder*
+  implements:
+  - DotFeather.IDrawable.ZOrder
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.Name
+  commentId: P:DotFeather.TextDrawable.Name
+  id: Name
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TextDrawable.Name
+  fullName: DotFeather.TextDrawable.Name
+  type: Property
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Name
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 16
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: ''
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: DotFeather.TextDrawable.Name*
+  implements:
+  - DotFeather.IDrawable.Name
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.Location
+  commentId: P:DotFeather.TextDrawable.Location
+  id: Location
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: TextDrawable.Location
+  fullName: DotFeather.TextDrawable.Location
+  type: Property
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Location
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 18
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: ''
+  example: []
+  syntax:
+    content: public Vector Location { get; set; }
+    parameters: []
+    return:
+      type: DotFeather.Vector
+    content.vb: Public Property Location As Vector
+  overload: DotFeather.TextDrawable.Location*
+  implements:
+  - DotFeather.IDrawable.Location
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.Angle
+  commentId: P:DotFeather.TextDrawable.Angle
+  id: Angle
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Angle
+  nameWithType: TextDrawable.Angle
+  fullName: DotFeather.TextDrawable.Angle
+  type: Property
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Angle
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 20
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: ''
+  example: []
+  syntax:
+    content: public float Angle { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Angle As Single
+  overload: DotFeather.TextDrawable.Angle*
+  implements:
+  - DotFeather.IDrawable.Angle
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.Scale
+  commentId: P:DotFeather.TextDrawable.Scale
+  id: Scale
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: TextDrawable.Scale
+  fullName: DotFeather.TextDrawable.Scale
+  type: Property
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Scale
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 22
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: ''
+  example: []
+  syntax:
+    content: public Vector Scale { get; set; }
+    parameters: []
+    return:
+      type: DotFeather.Vector
+    content.vb: Public Property Scale As Vector
+  overload: DotFeather.TextDrawable.Scale*
+  implements:
+  - DotFeather.IDrawable.Scale
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.RenderedTexture
+  commentId: P:DotFeather.TextDrawable.RenderedTexture
+  id: RenderedTexture
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: RenderedTexture
+  nameWithType: TextDrawable.RenderedTexture
+  fullName: DotFeather.TextDrawable.RenderedTexture
+  type: Property
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: RenderedTexture
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 28
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n描画されるテキストをテクスチャとして取得します。\n"
+  example: []
+  syntax:
+    content: public Texture2D RenderedTexture { get; }
+    parameters: []
+    return:
+      type: DotFeather.Texture2D
+      description: ''
+    content.vb: Public ReadOnly Property RenderedTexture As Texture2D
+  overload: DotFeather.TextDrawable.RenderedTexture*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotFeather.TextDrawable.Text
+  commentId: P:DotFeather.TextDrawable.Text
+  id: Text
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: TextDrawable.Text
+  fullName: DotFeather.TextDrawable.Text
+  type: Property
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Text
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 34
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n描画されるテキストを取得または設定します。\n"
+  example: []
+  syntax:
+    content: public string Text { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property Text As String
+  overload: DotFeather.TextDrawable.Text*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.Font
+  commentId: P:DotFeather.TextDrawable.Font
+  id: Font
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Font
+  nameWithType: TextDrawable.Font
+  fullName: DotFeather.TextDrawable.Font
+  type: Property
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Font
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 48
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n描画に使用するフォントを取得または設定します。\n"
+  example: []
+  syntax:
+    content: public Font Font { get; set; }
+    parameters: []
+    return:
+      type: System.Drawing.Font
+      description: ''
+    content.vb: Public Property Font As Font
+  overload: DotFeather.TextDrawable.Font*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.Color
+  commentId: P:DotFeather.TextDrawable.Color
+  id: Color
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: TextDrawable.Color
+  fullName: DotFeather.TextDrawable.Color
+  type: Property
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Color
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 62
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n描画色を取得または設定します。\n"
+  example: []
+  syntax:
+    content: public Color Color { get; set; }
+    parameters: []
+    return:
+      type: System.Drawing.Color
+      description: ''
+    content.vb: Public Property Color As Color
+  overload: DotFeather.TextDrawable.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)
+  commentId: M:DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)
+  id: '#ctor(System.String,System.Drawing.Font,System.Drawing.Color)'
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: TextDrawable(String, Font, Color)
+  nameWithType: TextDrawable.TextDrawable(String, Font, Color)
+  fullName: DotFeather.TextDrawable.TextDrawable(System.String, System.Drawing.Font, System.Drawing.Color)
+  type: Constructor
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: .ctor
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 78
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<xref href=\"DotFeather.TextDrawable\" data-throw-if-not-resolved=\"false\"></xref> の新しいインスタンスを初期化します。\n"
+  example: []
+  syntax:
+    content: public TextDrawable(string text, Font font = null, Color color = default(Color))
+    parameters:
+    - id: text
+      type: System.String
+      description: ''
+    - id: font
+      type: System.Drawing.Font
+      description: ''
+    - id: color
+      type: System.Drawing.Color
+      description: ''
+    content.vb: Public Sub New(text As String, font As Font = Nothing, color As Color = Nothing)
+  overload: DotFeather.TextDrawable.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.UpdateTexture
+  commentId: M:DotFeather.TextDrawable.UpdateTexture
+  id: UpdateTexture
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: UpdateTexture()
+  nameWithType: TextDrawable.UpdateTexture()
+  fullName: DotFeather.TextDrawable.UpdateTexture()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: UpdateTexture
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 89
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nテクスチャを更新します。\n"
+  example: []
+  syntax:
+    content: public void UpdateTexture()
+    content.vb: Public Sub UpdateTexture
+  overload: DotFeather.TextDrawable.UpdateTexture*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.Destroy
+  commentId: M:DotFeather.TextDrawable.Destroy
+  id: Destroy
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Destroy()
+  nameWithType: TextDrawable.Destroy()
+  fullName: DotFeather.TextDrawable.Destroy()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Destroy
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 113
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nこの <xref href=\"DotFeather.TextDrawable\" data-throw-if-not-resolved=\"false\"></xref> を破棄します。\n"
+  example: []
+  syntax:
+    content: public void Destroy()
+    content.vb: Public Sub Destroy
+  overload: DotFeather.TextDrawable.Destroy*
+  implements:
+  - DotFeather.IDrawable.Destroy
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+  commentId: M:DotFeather.TextDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+  id: Draw(DotFeather.GameBase,DotFeather.Vector)
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Draw(GameBase, Vector)
+  nameWithType: TextDrawable.Draw(GameBase, Vector)
+  fullName: DotFeather.TextDrawable.Draw(DotFeather.GameBase, DotFeather.Vector)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: develop
+      repo: https://github.com/xeltica/dotfeather
+    id: Draw
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 121
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n描画します。\n"
+  example: []
+  syntax:
+    content: public void Draw(GameBase game, Vector location)
+    parameters:
+    - id: game
+      type: DotFeather.GameBase
+    - id: location
+      type: DotFeather.Vector
+    content.vb: Public Sub Draw(game As GameBase, location As Vector)
+  overload: DotFeather.TextDrawable.Draw*
+  implements:
+  - DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: DotFeather.IDrawable
+  commentId: T:DotFeather.IDrawable
+  parent: DotFeather
+  name: IDrawable
+  nameWithType: IDrawable
+  fullName: DotFeather.IDrawable
+- uid: DotFeather
+  commentId: N:DotFeather
+  name: DotFeather
+  nameWithType: DotFeather
+  fullName: DotFeather
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotFeather.TextDrawable.ZOrder*
+  commentId: Overload:DotFeather.TextDrawable.ZOrder
+  name: ZOrder
+  nameWithType: TextDrawable.ZOrder
+  fullName: DotFeather.TextDrawable.ZOrder
+- uid: DotFeather.IDrawable.ZOrder
+  commentId: P:DotFeather.IDrawable.ZOrder
+  parent: DotFeather.IDrawable
+  name: ZOrder
+  nameWithType: IDrawable.ZOrder
+  fullName: DotFeather.IDrawable.ZOrder
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: DotFeather.TextDrawable.Name*
+  commentId: Overload:DotFeather.TextDrawable.Name
+  name: Name
+  nameWithType: TextDrawable.Name
+  fullName: DotFeather.TextDrawable.Name
+- uid: DotFeather.IDrawable.Name
+  commentId: P:DotFeather.IDrawable.Name
+  parent: DotFeather.IDrawable
+  name: Name
+  nameWithType: IDrawable.Name
+  fullName: DotFeather.IDrawable.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DotFeather.TextDrawable.Location*
+  commentId: Overload:DotFeather.TextDrawable.Location
+  name: Location
+  nameWithType: TextDrawable.Location
+  fullName: DotFeather.TextDrawable.Location
+- uid: DotFeather.IDrawable.Location
+  commentId: P:DotFeather.IDrawable.Location
+  parent: DotFeather.IDrawable
+  name: Location
+  nameWithType: IDrawable.Location
+  fullName: DotFeather.IDrawable.Location
+- uid: DotFeather.Vector
+  commentId: T:DotFeather.Vector
+  parent: DotFeather
+  name: Vector
+  nameWithType: Vector
+  fullName: DotFeather.Vector
+- uid: DotFeather.TextDrawable.Angle*
+  commentId: Overload:DotFeather.TextDrawable.Angle
+  name: Angle
+  nameWithType: TextDrawable.Angle
+  fullName: DotFeather.TextDrawable.Angle
+- uid: DotFeather.IDrawable.Angle
+  commentId: P:DotFeather.IDrawable.Angle
+  parent: DotFeather.IDrawable
+  name: Angle
+  nameWithType: IDrawable.Angle
+  fullName: DotFeather.IDrawable.Angle
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: DotFeather.TextDrawable.Scale*
+  commentId: Overload:DotFeather.TextDrawable.Scale
+  name: Scale
+  nameWithType: TextDrawable.Scale
+  fullName: DotFeather.TextDrawable.Scale
+- uid: DotFeather.IDrawable.Scale
+  commentId: P:DotFeather.IDrawable.Scale
+  parent: DotFeather.IDrawable
+  name: Scale
+  nameWithType: IDrawable.Scale
+  fullName: DotFeather.IDrawable.Scale
+- uid: DotFeather.TextDrawable.RenderedTexture*
+  commentId: Overload:DotFeather.TextDrawable.RenderedTexture
+  name: RenderedTexture
+  nameWithType: TextDrawable.RenderedTexture
+  fullName: DotFeather.TextDrawable.RenderedTexture
+- uid: DotFeather.Texture2D
+  commentId: T:DotFeather.Texture2D
+  parent: DotFeather
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: DotFeather.Texture2D
+- uid: DotFeather.TextDrawable.Text*
+  commentId: Overload:DotFeather.TextDrawable.Text
+  name: Text
+  nameWithType: TextDrawable.Text
+  fullName: DotFeather.TextDrawable.Text
+- uid: DotFeather.TextDrawable.Font*
+  commentId: Overload:DotFeather.TextDrawable.Font
+  name: Font
+  nameWithType: TextDrawable.Font
+  fullName: DotFeather.TextDrawable.Font
+- uid: System.Drawing.Font
+  commentId: T:System.Drawing.Font
+  parent: System.Drawing
+  isExternal: true
+  name: Font
+  nameWithType: Font
+  fullName: System.Drawing.Font
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+- uid: DotFeather.TextDrawable.Color*
+  commentId: Overload:DotFeather.TextDrawable.Color
+  name: Color
+  nameWithType: TextDrawable.Color
+  fullName: DotFeather.TextDrawable.Color
+- uid: System.Drawing.Color
+  commentId: T:System.Drawing.Color
+  parent: System.Drawing
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: System.Drawing.Color
+- uid: DotFeather.TextDrawable
+  commentId: T:DotFeather.TextDrawable
+  name: TextDrawable
+  nameWithType: TextDrawable
+  fullName: DotFeather.TextDrawable
+- uid: DotFeather.TextDrawable.#ctor*
+  commentId: Overload:DotFeather.TextDrawable.#ctor
+  name: TextDrawable
+  nameWithType: TextDrawable.TextDrawable
+  fullName: DotFeather.TextDrawable.TextDrawable
+- uid: DotFeather.TextDrawable.UpdateTexture*
+  commentId: Overload:DotFeather.TextDrawable.UpdateTexture
+  name: UpdateTexture
+  nameWithType: TextDrawable.UpdateTexture
+  fullName: DotFeather.TextDrawable.UpdateTexture
+- uid: DotFeather.TextDrawable.Destroy*
+  commentId: Overload:DotFeather.TextDrawable.Destroy
+  name: Destroy
+  nameWithType: TextDrawable.Destroy
+  fullName: DotFeather.TextDrawable.Destroy
+- uid: DotFeather.IDrawable.Destroy
+  commentId: M:DotFeather.IDrawable.Destroy
+  parent: DotFeather.IDrawable
+  name: Destroy()
+  nameWithType: IDrawable.Destroy()
+  fullName: DotFeather.IDrawable.Destroy()
+  spec.csharp:
+  - uid: DotFeather.IDrawable.Destroy
+    name: Destroy
+    nameWithType: IDrawable.Destroy
+    fullName: DotFeather.IDrawable.Destroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotFeather.IDrawable.Destroy
+    name: Destroy
+    nameWithType: IDrawable.Destroy
+    fullName: DotFeather.IDrawable.Destroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotFeather.TextDrawable.Draw*
+  commentId: Overload:DotFeather.TextDrawable.Draw
+  name: Draw
+  nameWithType: TextDrawable.Draw
+  fullName: DotFeather.TextDrawable.Draw
+- uid: DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+  commentId: M:DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+  parent: DotFeather.IDrawable
+  name: Draw(GameBase, Vector)
+  nameWithType: IDrawable.Draw(GameBase, Vector)
+  fullName: DotFeather.IDrawable.Draw(DotFeather.GameBase, DotFeather.Vector)
+  spec.csharp:
+  - uid: DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+    name: Draw
+    nameWithType: IDrawable.Draw
+    fullName: DotFeather.IDrawable.Draw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DotFeather.GameBase
+    name: GameBase
+    nameWithType: GameBase
+    fullName: DotFeather.GameBase
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DotFeather.Vector
+    name: Vector
+    nameWithType: Vector
+    fullName: DotFeather.Vector
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+    name: Draw
+    nameWithType: IDrawable.Draw
+    fullName: DotFeather.IDrawable.Draw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DotFeather.GameBase
+    name: GameBase
+    nameWithType: GameBase
+    fullName: DotFeather.GameBase
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DotFeather.Vector
+    name: Vector
+    nameWithType: Vector
+    fullName: DotFeather.Vector
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotFeather.GameBase
+  commentId: T:DotFeather.GameBase
+  parent: DotFeather
+  name: GameBase
+  nameWithType: GameBase
+  fullName: DotFeather.GameBase

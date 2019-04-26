@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/ALBuffer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ALBuffer
     path: ../DotFeather/Helpers/ALBuffer.cs
@@ -31,9 +31,7 @@ items:
     content: 'public class ALBuffer : OpenTKManagedHandleBase<int>, IDisposable'
     content.vb: >-
       Public Class ALBuffer
-
           Inherits OpenTKManagedHandleBase(Of Integer)
-
           Implements IDisposable
   inheritance:
   - System.Object
@@ -70,7 +68,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/ALBuffer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GenerateHandle
     path: ../DotFeather/Helpers/ALBuffer.cs
@@ -107,7 +105,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/ALBuffer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DisposeHandle
     path: ../DotFeather/Helpers/ALBuffer.cs

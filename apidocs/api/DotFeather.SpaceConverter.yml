@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/SpaceConverter.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: SpaceConverter
     path: ../DotFeather/Helpers/SpaceConverter.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/SpaceConverter.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ToViewportPoint
     path: ../DotFeather/Helpers/SpaceConverter.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/SpaceConverter.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ToViewportPoint
     path: ../DotFeather/Helpers/SpaceConverter.cs

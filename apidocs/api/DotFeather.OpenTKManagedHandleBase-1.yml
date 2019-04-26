@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/OpenTKManagedHandleBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: OpenTKManagedHandleBase
     path: ../DotFeather/Helpers/OpenTKManagedHandleBase.cs
@@ -38,7 +38,6 @@ items:
     - id: T
     content.vb: >-
       Public MustInherit Class OpenTKManagedHandleBase(Of T)
-
           Implements IDisposable
   inheritance:
   - System.Object
@@ -80,7 +79,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/OpenTKManagedHandleBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Handle
     path: ../DotFeather/Helpers/OpenTKManagedHandleBase.cs
@@ -120,7 +119,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/OpenTKManagedHandleBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GenerateHandle
     path: ../DotFeather/Helpers/OpenTKManagedHandleBase.cs
@@ -158,7 +157,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/OpenTKManagedHandleBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DisposeHandle
     path: ../DotFeather/Helpers/OpenTKManagedHandleBase.cs
@@ -194,7 +193,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/OpenTKManagedHandleBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Helpers/OpenTKManagedHandleBase.cs
@@ -228,7 +227,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/OpenTKManagedHandleBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/Helpers/OpenTKManagedHandleBase.cs
@@ -264,7 +263,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/OpenTKManagedHandleBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Implicit
     path: ../DotFeather/Helpers/OpenTKManagedHandleBase.cs
@@ -306,7 +305,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/OpenTKManagedHandleBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Implicit
     path: ../DotFeather/Helpers/OpenTKManagedHandleBase.cs

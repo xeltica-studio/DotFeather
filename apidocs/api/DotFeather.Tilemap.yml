@@ -38,7 +38,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Tilemap
     path: ../DotFeather/Tilemap.cs
@@ -52,7 +52,6 @@ items:
     content: 'public class Tilemap : IDrawable'
     content.vb: >-
       Public Class Tilemap
-
           Implements IDrawable
   inheritance:
   - System.Object
@@ -86,7 +85,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Tilemap.cs
@@ -125,7 +124,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Tilemap.cs
@@ -164,7 +163,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Tilemap.cs
@@ -203,7 +202,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Tilemap.cs
@@ -242,7 +241,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Tilemap.cs
@@ -281,7 +280,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DefaultColor
     path: ../DotFeather/Tilemap.cs
@@ -318,7 +317,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: TileSize
     path: ../DotFeather/Tilemap.cs
@@ -356,7 +355,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Tilemap.cs
@@ -392,7 +391,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Tilemap.cs
@@ -436,7 +435,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Tilemap.cs
@@ -478,7 +477,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Tilemap.cs
@@ -517,7 +516,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
     path: ../DotFeather/Tilemap.cs
@@ -554,7 +553,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
     path: ../DotFeather/Tilemap.cs
@@ -593,7 +592,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
     path: ../DotFeather/Tilemap.cs
@@ -630,7 +629,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
     path: ../DotFeather/Tilemap.cs
@@ -669,7 +668,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
     path: ../DotFeather/Tilemap.cs
@@ -711,7 +710,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
     path: ../DotFeather/Tilemap.cs
@@ -755,7 +754,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Tilemap.cs
@@ -787,7 +786,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Tilemap.cs
@@ -830,7 +829,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Fill
     path: ../DotFeather/Tilemap.cs
@@ -873,7 +872,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Tilemap.cs
@@ -912,7 +911,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Fill
     path: ../DotFeather/Tilemap.cs
@@ -951,7 +950,7 @@ items:
   source:
     remote:
       path: DotFeather/Tilemap.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Tilemap.cs

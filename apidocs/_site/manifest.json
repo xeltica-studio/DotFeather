@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.ALBuffer.html",
-          "hash": "ATfoeIkSxasgR1q3TIYaVg=="
+          "hash": "INOFHF4kXWuUXYNgJFKtuA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.ALSource.html",
-          "hash": "CjB7UYg32dXLsuge+IupGA=="
+          "hash": "zBcJMZwlM3PQ7L7fx3dz0w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.AudioPlayer.html",
-          "hash": "kwRp3uEncgAo8+BgkNq8Cw=="
+          "hash": "8AgvkrMNqP9AJnpohgWv8Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Container.html",
-          "hash": "7kOaBZjDGZfhJXPQSa5l5g=="
+          "hash": "bbOn0Nayb/vFQZG3Vv1caQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.DFEventArgs.html",
-          "hash": "8ShLGIYWAsupfcDyqLLThQ=="
+          "hash": "NOUF5qDo37m90z5JiwgCTQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.DFKey.html",
-          "hash": "gOzWRpVJqW0yPLVMTgERjQ=="
+          "hash": "iB0ZO5zEuyscDgBJoIlTQQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.DFKeyboard.html",
-          "hash": "zpQndDXmvzEDTlcN/21f7w=="
+          "hash": "rB6eqrERd899x10P0KKo0g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.DFMath.html",
-          "hash": "1VpJ5L732ZP7L9O2n9PEyw=="
+          "hash": "A1y6JhDFGsXCOEjnr0Ynyg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.DFMouse.html",
-          "hash": "V6k3gQHZwZ1ysQpb/msZsw=="
+          "hash": "EcR6iOLYbpkvhRlyYw7XWA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.GLContext.html",
-          "hash": "ifQ6uoFJ2q0vYL0Ai6pt7g=="
+          "hash": "BsVyuI2gCaku75bmNxWnPw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.GameBase.html",
-          "hash": "HPelUH15mkXohI9yXDAarA=="
+          "hash": "7strqtdR5L1wk+7TSGKIyQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Graphic.html",
-          "hash": "bVDQTb3WG5fUKA68TDL0OA=="
+          "hash": "uuUbadVnM1Gm8Y8LRRVRSw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.IAudioSource.html",
-          "hash": "0hGlNvpFgo53+qzvMb52+w=="
+          "hash": "Nks0sD5usQKdjsp+hzUbGQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.IDrawable.html",
-          "hash": "MIfuURxAPTcJjL0aQNFdYw=="
+          "hash": "g3xuv7tjzywDghRc0WPd9A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.ITile.html",
-          "hash": "37eRzl8T6CnfivAa95viZQ=="
+          "hash": "o2T1gBznrUJZcZZyONo4IA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Input.html",
-          "hash": "Wy3gE3AukqeFyz62xBkg/A=="
+          "hash": "vRGE3KV5UhbYAGARYC2i5Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.MiscUtility.html",
-          "hash": "iQGSMzKzb+UzKy3kgtZRGA=="
+          "hash": "zTOV4XeKsFTz8tOu+5r4DQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.OpenTKManagedHandleBase-1.html",
-          "hash": "eYjxQjm1kRy5VNynJP9jWQ=="
+          "hash": "AiOpzxdZcfOrLfLIVIkgSg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.SpaceConverter.html",
-          "hash": "LYKdXfZxbz+pAs4fyeqUXQ=="
+          "hash": "8s/DtGxbgBVpmM1BWTjW+A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Sprite.html",
-          "hash": "kJSEvjPgTsRZ67aI7WBNVA=="
+          "hash": "I6FkURkwipvgJJ+eIMwUQA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.SystemDrawingTypesToGLConverterExtension.html",
-          "hash": "tx3swAjqipxWnXV0jIRk5Q=="
+          "hash": "8RsguCxrY4OOieiMXCF/UA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.TextDrawable.html",
-          "hash": "5wu5dy6dTrpToYbfY3fddQ=="
+          "hash": "ny5ON535iSehzr4F+clXrw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Texture2D.html",
-          "hash": "7Yh/OW2P6Jdg+ONEk8inBg=="
+          "hash": "zDR2axzz/Go8zGgpzfiHZQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +285,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.TextureDrawer.html",
-          "hash": "7uOG8B0TNKH6CVdrxnc6TA=="
+          "hash": "qS/gcg+YHYijInd0EekjXg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Tile.html",
-          "hash": "Dx9xh3doO+zSqfIkW560VQ=="
+          "hash": "wImCPQuROzL7KVXh7yP98Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -309,10 +309,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Tilemap.html",
-          "hash": "qm2uMFbGbEY4KmTMXhZnzg=="
+          "hash": "NjH0foReVcCvTz0goCVc5g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -321,10 +321,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Time.html",
-          "hash": "woIMF1qiLkDYSyBq2xvKlQ=="
+          "hash": "CnhO86zQKOyIQOtgNlbJUg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -333,10 +333,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Vector.html",
-          "hash": "AaK7Kfblg80yp7gIiWtYGA=="
+          "hash": "OnWMJQaGOxVZ2eJrA3qvhw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -345,10 +345,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.VorbisAudioSource.html",
-          "hash": "EU1TXZlt4JsaDY8C/ITcRQ=="
+          "hash": "1WBoo116NdRKZsxnaQZ4GQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -357,10 +357,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.WaveAudioSource.html",
-          "hash": "ICRgVa7Dnn6bDLqOu/y5bg=="
+          "hash": "DVTQk7FpJG+8vY3Kjzo5bQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -372,7 +372,7 @@
           "hash": "zQfuPk+MzluHVZyMEZKrtg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -400,15 +400,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "dnMpgUslFPSfRrUVhRoj2w=="
+          "hash": "hiy1dx4DOJpqeglCkIszcg=="
         }
       },
       "is_incremental": true,
@@ -420,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "IzpAEUDYM1KvsV3Vc3a3gQ=="
+          "hash": "vtZtmIElW2xgl0b/W0Fd4g=="
         }
       },
       "is_incremental": false,
@@ -436,11 +433,12 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 31,
-          "skipped_file_count": 31
+          "total_file_count": 0,
+          "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
@@ -448,12 +446,11 @@
           "total_file_count": 2,
           "skipped_file_count": 2
         },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "total_file_count": 31,
+          "skipped_file_count": 1
         }
       }
     },

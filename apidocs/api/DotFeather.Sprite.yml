@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Sprite
     path: ../DotFeather/Sprite.cs
@@ -40,7 +40,6 @@ items:
     content: 'public class Sprite : IDrawable'
     content.vb: >-
       Public Class Sprite
-
           Implements IDrawable
   inheritance:
   - System.Object
@@ -74,7 +73,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Sprite.cs
@@ -119,7 +118,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Texture
     path: ../DotFeather/Sprite.cs
@@ -157,7 +156,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Sprite.cs
@@ -196,7 +195,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Sprite.cs
@@ -235,7 +234,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Sprite.cs
@@ -274,7 +273,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Sprite.cs
@@ -313,7 +312,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Sprite.cs
@@ -352,7 +351,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Sprite.cs
@@ -400,7 +399,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Sprite.cs
@@ -439,7 +438,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Sprite.cs
@@ -480,7 +479,7 @@ items:
   source:
     remote:
       path: DotFeather/Sprite.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Sprite.cs

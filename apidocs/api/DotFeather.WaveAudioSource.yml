@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/WaveAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: WaveAudioSource
     path: ../DotFeather/Audio/WaveAudioSource.cs
@@ -35,7 +35,6 @@ items:
     content: 'public class WaveAudioSource : IAudioSource'
     content.vb: >-
       Public Class WaveAudioSource
-
           Implements IAudioSource
   inheritance:
   - System.Object
@@ -69,7 +68,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/WaveAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Samples
     path: ../DotFeather/Audio/WaveAudioSource.cs
@@ -108,7 +107,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/WaveAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Channels
     path: ../DotFeather/Audio/WaveAudioSource.cs
@@ -147,7 +146,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/WaveAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Bits
     path: ../DotFeather/Audio/WaveAudioSource.cs
@@ -186,7 +185,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/WaveAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: SampleRate
     path: ../DotFeather/Audio/WaveAudioSource.cs
@@ -225,7 +224,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/WaveAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Audio/WaveAudioSource.cs
@@ -261,7 +260,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/WaveAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: EnumerateSamples
     path: ../DotFeather/Audio/WaveAudioSource.cs

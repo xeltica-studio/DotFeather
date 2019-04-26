@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/ALSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ALSource
     path: ../DotFeather/Helpers/ALSource.cs
@@ -31,9 +31,7 @@ items:
     content: 'public class ALSource : OpenTKManagedHandleBase<int>, IDisposable'
     content.vb: >-
       Public Class ALSource
-
           Inherits OpenTKManagedHandleBase(Of Integer)
-
           Implements IDisposable
   inheritance:
   - System.Object
@@ -70,7 +68,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/ALSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GenerateHandle
     path: ../DotFeather/Helpers/ALSource.cs
@@ -107,7 +105,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/ALSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DisposeHandle
     path: ../DotFeather/Helpers/ALSource.cs

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/TextureDrawer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: TextureDrawer
     path: ../DotFeather/Helpers/TextureDrawer.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/TextureDrawer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Helpers/TextureDrawer.cs

@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/VorbisAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: VorbisAudioSource
     path: ../DotFeather/Audio/VorbisAudioSource.cs
@@ -36,7 +36,6 @@ items:
     content: 'public class VorbisAudioSource : IAudioSource, IDisposable'
     content.vb: >-
       Public Class VorbisAudioSource
-
           Implements IAudioSource, IDisposable
   inheritance:
   - System.Object
@@ -71,7 +70,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/VorbisAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Samples
     path: ../DotFeather/Audio/VorbisAudioSource.cs
@@ -111,7 +110,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/VorbisAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Channels
     path: ../DotFeather/Audio/VorbisAudioSource.cs
@@ -150,7 +149,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/VorbisAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Bits
     path: ../DotFeather/Audio/VorbisAudioSource.cs
@@ -189,7 +188,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/VorbisAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: SampleRate
     path: ../DotFeather/Audio/VorbisAudioSource.cs
@@ -228,7 +227,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/VorbisAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Audio/VorbisAudioSource.cs
@@ -264,7 +263,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/VorbisAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: EnumerateSamples
     path: ../DotFeather/Audio/VorbisAudioSource.cs
@@ -308,7 +307,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/VorbisAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/Audio/VorbisAudioSource.cs

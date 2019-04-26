@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/IDrawable.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: IDrawable
     path: ../DotFeather/Drawable/IDrawable.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/IDrawable.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Drawable/IDrawable.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/IDrawable.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Drawable/IDrawable.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/IDrawable.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Drawable/IDrawable.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/IDrawable.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Drawable/IDrawable.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/IDrawable.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Drawable/IDrawable.cs
@@ -226,7 +226,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/IDrawable.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Drawable/IDrawable.cs
@@ -260,7 +260,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/IDrawable.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Drawable/IDrawable.cs

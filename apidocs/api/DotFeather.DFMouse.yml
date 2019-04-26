@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFMouse.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DFMouse
     path: ../DotFeather/InputSystems/DFMouse.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFMouse.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Position
     path: ../DotFeather/InputSystems/DFMouse.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFMouse.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: IsLeftClicked
     path: ../DotFeather/InputSystems/DFMouse.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFMouse.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: IsRightClicked
     path: ../DotFeather/InputSystems/DFMouse.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFMouse.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: IsMiddleClicked
     path: ../DotFeather/InputSystems/DFMouse.cs
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFMouse.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Scroll
     path: ../DotFeather/InputSystems/DFMouse.cs

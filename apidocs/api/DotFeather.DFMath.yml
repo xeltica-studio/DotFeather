@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DFMath
     path: ../DotFeather/Helpers/DFMath.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Lerp
     path: ../DotFeather/Helpers/DFMath.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: EaseInOut
     path: ../DotFeather/Helpers/DFMath.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: EaseIn
     path: ../DotFeather/Helpers/DFMath.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: EaseOut
     path: ../DotFeather/Helpers/DFMath.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Lerp
     path: ../DotFeather/Helpers/DFMath.cs
@@ -300,7 +300,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: EaseOut
     path: ../DotFeather/Helpers/DFMath.cs
@@ -347,7 +347,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: EaseIn
     path: ../DotFeather/Helpers/DFMath.cs
@@ -394,7 +394,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ToRadian
     path: ../DotFeather/Helpers/DFMath.cs
@@ -435,7 +435,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/DFMath.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ToDegree
     path: ../DotFeather/Helpers/DFMath.cs

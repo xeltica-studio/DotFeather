@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Tile
     path: ../DotFeather/Drawable/Tiles/Tile.cs
@@ -38,7 +38,6 @@ items:
     content: 'public class Tile : ITile'
     content.vb: >-
       Public Class Tile
-
           Implements ITile
   inheritance:
   - System.Object
@@ -72,7 +71,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Texture
     path: ../DotFeather/Drawable/Tiles/Tile.cs
@@ -109,7 +108,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Animations
     path: ../DotFeather/Drawable/Tiles/Tile.cs
@@ -146,7 +145,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Interval
     path: ../DotFeather/Drawable/Tiles/Tile.cs
@@ -183,7 +182,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Drawable/Tiles/Tile.cs
@@ -219,7 +218,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Drawable/Tiles/Tile.cs
@@ -256,7 +255,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Drawable/Tiles/Tile.cs
@@ -305,7 +304,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Drawable/Tiles/Tile.cs
@@ -351,7 +350,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Drawable/Tiles/Tile.cs
@@ -392,7 +391,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/Tile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Drawable/Tiles/Tile.cs

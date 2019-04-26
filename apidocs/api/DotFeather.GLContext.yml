@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/GLContext.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GLContext
     path: ../DotFeather/Helpers/GLContext.cs
@@ -31,7 +31,6 @@ items:
     content: 'public sealed class GLContext : IDisposable'
     content.vb: >-
       Public NotInheritable Class GLContext
-
           Implements IDisposable
   inheritance:
   - System.Object
@@ -67,7 +66,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/GLContext.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Helpers/GLContext.cs
@@ -103,7 +102,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/GLContext.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/Helpers/GLContext.cs

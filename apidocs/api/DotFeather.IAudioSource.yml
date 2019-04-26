@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/IAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: IAudioSource
     path: ../DotFeather/Audio/IAudioSource.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/IAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: EnumerateSamples
     path: ../DotFeather/Audio/IAudioSource.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/IAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Samples
     path: ../DotFeather/Audio/IAudioSource.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/IAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Channels
     path: ../DotFeather/Audio/IAudioSource.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/IAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Bits
     path: ../DotFeather/Audio/IAudioSource.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/IAudioSource.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: SampleRate
     path: ../DotFeather/Audio/IAudioSource.cs

@@ -31,7 +31,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Vector
     path: ../DotFeather/Models/Vector.cs
@@ -45,7 +45,6 @@ items:
     content: 'public struct Vector : IEquatable<Vector>'
     content.vb: >-
       Public Structure Vector
-
           Implements IEquatable(Of Vector)
   implements:
   - System.IEquatable{DotFeather.Vector}
@@ -73,7 +72,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: X
     path: ../DotFeather/Models/Vector.cs
@@ -110,7 +109,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Y
     path: ../DotFeather/Models/Vector.cs
@@ -147,7 +146,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Models/Vector.cs
@@ -186,7 +185,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Addition
     path: ../DotFeather/Models/Vector.cs
@@ -227,7 +226,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Subtraction
     path: ../DotFeather/Models/Vector.cs
@@ -268,7 +267,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Multiply
     path: ../DotFeather/Models/Vector.cs
@@ -309,7 +308,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Division
     path: ../DotFeather/Models/Vector.cs
@@ -350,7 +349,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_UnaryNegation
     path: ../DotFeather/Models/Vector.cs
@@ -389,7 +388,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Equality
     path: ../DotFeather/Models/Vector.cs
@@ -430,7 +429,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Inequality
     path: ../DotFeather/Models/Vector.cs
@@ -471,7 +470,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Equals
     path: ../DotFeather/Models/Vector.cs
@@ -511,7 +510,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Equals
     path: ../DotFeather/Models/Vector.cs
@@ -550,7 +549,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetHashCode
     path: ../DotFeather/Models/Vector.cs
@@ -587,7 +586,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ToString
     path: ../DotFeather/Models/Vector.cs
@@ -624,7 +623,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Zero
     path: ../DotFeather/Models/Vector.cs
@@ -661,7 +660,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Vector.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: One
     path: ../DotFeather/Models/Vector.cs

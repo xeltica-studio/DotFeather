@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DFKeyboard
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Unknown
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ShiftLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LShift
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -318,7 +318,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ShiftRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: RShift
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -392,7 +392,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ControlLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -429,7 +429,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LControl
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -466,7 +466,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ControlRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -503,7 +503,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: RControl
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -540,7 +540,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: AltLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -577,7 +577,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LAlt
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -614,7 +614,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: AltRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -651,7 +651,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: RAlt
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -688,7 +688,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: WinLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -725,7 +725,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LWin
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -762,7 +762,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: WinRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -799,7 +799,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: RWin
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -836,7 +836,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Menu
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -873,7 +873,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -910,7 +910,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -947,7 +947,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -984,7 +984,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1021,7 +1021,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1058,7 +1058,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1095,7 +1095,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1132,7 +1132,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1169,7 +1169,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1206,7 +1206,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F10
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1243,7 +1243,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F11
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1280,7 +1280,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F12
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1317,7 +1317,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F13
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1354,7 +1354,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F14
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1391,7 +1391,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F15
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1428,7 +1428,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F16
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1465,7 +1465,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F17
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1502,7 +1502,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F18
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1539,7 +1539,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F19
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1576,7 +1576,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F20
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1613,7 +1613,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F21
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1650,7 +1650,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F22
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1687,7 +1687,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F23
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1724,7 +1724,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F24
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1761,7 +1761,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F25
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1798,7 +1798,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F26
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1835,7 +1835,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F27
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1872,7 +1872,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F28
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1909,7 +1909,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F29
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1946,7 +1946,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F30
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -1983,7 +1983,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F31
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2020,7 +2020,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F32
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2057,7 +2057,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F33
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2094,7 +2094,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F34
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2131,7 +2131,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F35
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2168,7 +2168,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Up
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2205,7 +2205,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Down
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2242,7 +2242,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Left
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2279,7 +2279,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Right
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2316,7 +2316,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Enter
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2353,7 +2353,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Escape
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2390,7 +2390,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Space
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2427,7 +2427,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Tab
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2464,7 +2464,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: BackSpace
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2501,7 +2501,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Back
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2538,7 +2538,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Insert
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2575,7 +2575,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Delete
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2612,7 +2612,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: PageUp
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2649,7 +2649,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: PageDown
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2686,7 +2686,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Home
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2723,7 +2723,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: End
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2760,7 +2760,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: CapsLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2797,7 +2797,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ScrollLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2834,7 +2834,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: PrintScreen
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2871,7 +2871,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Pause
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2908,7 +2908,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: NumLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2945,7 +2945,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -2982,7 +2982,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Sleep
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3019,7 +3019,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad0
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3056,7 +3056,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3093,7 +3093,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3130,7 +3130,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3167,7 +3167,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3204,7 +3204,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3241,7 +3241,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3278,7 +3278,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3315,7 +3315,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3352,7 +3352,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keypad9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3389,7 +3389,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: KeypadDivide
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3426,7 +3426,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: KeypadMultiply
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3463,7 +3463,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: KeypadSubtract
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3500,7 +3500,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: KeypadMinus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3537,7 +3537,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: KeypadAdd
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3574,7 +3574,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: KeypadPlus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3611,7 +3611,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: KeypadDecimal
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3648,7 +3648,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: KeypadPeriod
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3685,7 +3685,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: KeypadEnter
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3722,7 +3722,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: A
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3759,7 +3759,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: B
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3796,7 +3796,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: C
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3833,7 +3833,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: D
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3870,7 +3870,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: E
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3907,7 +3907,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: F
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3944,7 +3944,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: G
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -3981,7 +3981,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: H
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4018,7 +4018,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: I
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4055,7 +4055,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: J
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4092,7 +4092,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: K
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4129,7 +4129,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: L
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4166,7 +4166,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: M
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4203,7 +4203,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: N
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4240,7 +4240,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: O
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4277,7 +4277,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: P
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4314,7 +4314,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Q
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4351,7 +4351,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: R
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4388,7 +4388,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: S
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4425,7 +4425,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: T
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4462,7 +4462,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: U
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4499,7 +4499,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: V
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4536,7 +4536,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: W
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4573,7 +4573,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: X
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4610,7 +4610,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Y
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4647,7 +4647,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Z
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4684,7 +4684,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number0
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4721,7 +4721,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4758,7 +4758,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4795,7 +4795,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4832,7 +4832,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4869,7 +4869,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4906,7 +4906,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4943,7 +4943,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -4980,7 +4980,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5017,7 +5017,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Number9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5054,7 +5054,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Tilde
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5091,7 +5091,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Grave
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5128,7 +5128,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Minus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5165,7 +5165,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Plus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5202,7 +5202,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: BracketLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5239,7 +5239,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LBracket
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5276,7 +5276,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: BracketRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5313,7 +5313,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: RBracket
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5350,7 +5350,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Semicolon
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5387,7 +5387,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Quote
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5424,7 +5424,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Comma
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5461,7 +5461,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Period
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5498,7 +5498,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Slash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5535,7 +5535,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: BackSlash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5572,7 +5572,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: NonUSBackSlash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
@@ -5609,7 +5609,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LastKey
     path: ../DotFeather/InputSystems/DFKeyboard.cs

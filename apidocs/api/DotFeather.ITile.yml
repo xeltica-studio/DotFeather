@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/ITile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ITile
     path: ../DotFeather/Drawable/Tiles/ITile.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/ITile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Drawable/Tiles/ITile.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: DotFeather/Drawable/Tiles/ITile.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Drawable/Tiles/ITile.cs

@@ -36,7 +36,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Container
     path: ../DotFeather/Container.cs
@@ -50,7 +50,6 @@ items:
     content: 'public class Container : IDrawable, IList<IDrawable>, ICollection<IDrawable>, IEnumerable<IDrawable>, IEnumerable'
     content.vb: >-
       Public Class Container
-
           Implements IDrawable, IList(Of IDrawable), ICollection(Of IDrawable), IEnumerable(Of IDrawable), IEnumerable
   inheritance:
   - System.Object
@@ -88,7 +87,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Container.cs
@@ -127,7 +126,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Container.cs
@@ -166,7 +165,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Container.cs
@@ -205,7 +204,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Container.cs
@@ -244,7 +243,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Container.cs
@@ -283,7 +282,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Container.cs
@@ -329,7 +328,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Sort
     path: ../DotFeather/Container.cs
@@ -361,7 +360,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Add
     path: ../DotFeather/Container.cs
@@ -399,7 +398,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Insert
     path: ../DotFeather/Container.cs
@@ -440,7 +439,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Container.cs
@@ -479,7 +478,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Container.cs
@@ -513,7 +512,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Container.cs
@@ -550,7 +549,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf
     path: ../DotFeather/Container.cs
@@ -586,7 +585,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt
     path: ../DotFeather/Container.cs
@@ -620,7 +619,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear
     path: ../DotFeather/Container.cs
@@ -651,7 +650,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains
     path: ../DotFeather/Container.cs
@@ -687,7 +686,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo
     path: ../DotFeather/Container.cs
@@ -724,7 +723,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove
     path: ../DotFeather/Container.cs
@@ -760,7 +759,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.IEnumerable.GetEnumerator
     path: ../DotFeather/Container.cs
@@ -793,7 +792,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
     path: ../DotFeather/Container.cs
@@ -831,7 +830,7 @@ items:
   source:
     remote:
       path: DotFeather/Container.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
     path: ../DotFeather/Container.cs

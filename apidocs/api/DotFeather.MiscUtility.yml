@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/MiscUtility.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: MiscUtility
     path: ../DotFeather/Helpers/MiscUtility.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: DotFeather/Helpers/MiscUtility.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Swap
     path: ../DotFeather/Helpers/MiscUtility.cs

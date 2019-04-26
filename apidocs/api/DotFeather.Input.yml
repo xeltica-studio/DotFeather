@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: DotFeather/Input.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Input
     path: ../DotFeather/Input.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: DotFeather/Input.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keyboard
     path: ../DotFeather/Input.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: DotFeather/Input.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Mouse
     path: ../DotFeather/Input.cs

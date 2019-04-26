@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Texture2D.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Texture2D
     path: ../DotFeather/Models/Texture2D.cs
@@ -36,7 +36,6 @@ items:
     content: 'public struct Texture2D : IDisposable'
     content.vb: >-
       Public Structure Texture2D
-
           Implements IDisposable
   implements:
   - System.IDisposable
@@ -67,7 +66,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Texture2D.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Handle
     path: ../DotFeather/Models/Texture2D.cs
@@ -104,7 +103,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Texture2D.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Size
     path: ../DotFeather/Models/Texture2D.cs
@@ -141,7 +140,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Texture2D.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Models/Texture2D.cs
@@ -180,7 +179,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Texture2D.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Models/Texture2D.cs
@@ -221,7 +220,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Texture2D.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Models/Texture2D.cs
@@ -260,7 +259,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Texture2D.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LoadAndSplitFrom
     path: ../DotFeather/Models/Texture2D.cs
@@ -310,7 +309,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/Texture2D.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/Models/Texture2D.cs

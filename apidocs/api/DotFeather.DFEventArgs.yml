@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/DFEventArgs.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DFEventArgs
     path: ../DotFeather/Models/DFEventArgs.cs
@@ -30,7 +30,6 @@ items:
     content: 'public class DFEventArgs : EventArgs'
     content.vb: >-
       Public Class DFEventArgs
-
           Inherits EventArgs
   inheritance:
   - System.Object
@@ -64,7 +63,7 @@ items:
   source:
     remote:
       path: DotFeather/Models/DFEventArgs.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DeltaTime
     path: ../DotFeather/Models/DFEventArgs.cs

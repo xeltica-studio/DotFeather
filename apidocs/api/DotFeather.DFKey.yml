@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKey.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DFKey
     path: ../DotFeather/InputSystems/DFKey.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: DotFeather/InputSystems/DFKey.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: IsPressed
     path: ../DotFeather/InputSystems/DFKey.cs

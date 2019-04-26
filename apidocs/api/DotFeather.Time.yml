@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: DotFeather/Time.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Time
     path: ../DotFeather/Time.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: DotFeather/Time.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Now
     path: ../DotFeather/Time.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: DotFeather/Time.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DeltaTime
     path: ../DotFeather/Time.cs

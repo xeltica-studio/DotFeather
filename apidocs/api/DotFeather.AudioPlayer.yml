@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/AudioPlayer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: AudioPlayer
     path: ../DotFeather/Audio/AudioPlayer.cs
@@ -37,7 +37,6 @@ items:
     content: 'public class AudioPlayer : IDisposable'
     content.vb: >-
       Public Class AudioPlayer
-
           Implements IDisposable
   inheritance:
   - System.Object
@@ -71,7 +70,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/AudioPlayer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Audio/AudioPlayer.cs
@@ -103,7 +102,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/AudioPlayer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Gain
     path: ../DotFeather/Audio/AudioPlayer.cs
@@ -141,7 +140,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/AudioPlayer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Pitch
     path: ../DotFeather/Audio/AudioPlayer.cs
@@ -179,7 +178,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/AudioPlayer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: IsPlaying
     path: ../DotFeather/Audio/AudioPlayer.cs
@@ -217,7 +216,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/AudioPlayer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Play
     path: ../DotFeather/Audio/AudioPlayer.cs
@@ -259,7 +258,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/AudioPlayer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Stop
     path: ../DotFeather/Audio/AudioPlayer.cs
@@ -295,7 +294,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/AudioPlayer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: PlayOneShotAsync
     path: ../DotFeather/Audio/AudioPlayer.cs
@@ -334,7 +333,7 @@ items:
   source:
     remote:
       path: DotFeather/Audio/AudioPlayer.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/Audio/AudioPlayer.cs

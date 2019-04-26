@@ -35,7 +35,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GameBase
     path: ../DotFeather/GameBase.cs
@@ -49,7 +49,6 @@ items:
     content: 'public abstract class GameBase : IDisposable'
     content.vb: >-
       Public MustInherit Class GameBase
-
           Implements IDisposable
   inheritance:
   - System.Object
@@ -85,7 +84,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: X
     path: ../DotFeather/GameBase.cs
@@ -122,7 +121,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Y
     path: ../DotFeather/GameBase.cs
@@ -159,7 +158,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Visible
     path: ../DotFeather/GameBase.cs
@@ -196,7 +195,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Width
     path: ../DotFeather/GameBase.cs
@@ -234,7 +233,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Height
     path: ../DotFeather/GameBase.cs
@@ -272,7 +271,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: BackgroundColor
     path: ../DotFeather/GameBase.cs
@@ -309,7 +308,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: RefreshRate
     path: ../DotFeather/GameBase.cs
@@ -347,7 +346,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Title
     path: ../DotFeather/GameBase.cs
@@ -385,7 +384,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Root
     path: ../DotFeather/GameBase.cs
@@ -422,7 +421,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Dpi
     path: ../DotFeather/GameBase.cs
@@ -459,7 +458,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/GameBase.cs
@@ -504,7 +503,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Randomize
     path: ../DotFeather/GameBase.cs
@@ -543,7 +542,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Run
     path: ../DotFeather/GameBase.cs
@@ -578,7 +577,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Exit
     path: ../DotFeather/GameBase.cs
@@ -614,7 +613,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/GameBase.cs
@@ -656,7 +655,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/GameBase.cs
@@ -695,7 +694,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: OnLoad
     path: ../DotFeather/GameBase.cs
@@ -734,7 +733,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: OnUnload
     path: ../DotFeather/GameBase.cs
@@ -773,7 +772,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: OnResize
     path: ../DotFeather/GameBase.cs
@@ -812,7 +811,7 @@ items:
   source:
     remote:
       path: DotFeather/GameBase.cs
-      branch: develop
+      branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Random
     path: ../DotFeather/GameBase.cs

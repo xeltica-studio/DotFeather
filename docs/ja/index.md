@@ -8,6 +8,8 @@ DotFeather は、NuGet パッケージマネージャーを使用することで
 
 [NuGet パッケージ](https://www.nuget.org/packages/DotFeather/) をチェックして下さい。
 
+- API ドキュメント
+	- [API ドキュメントはこちら](https://dotfeather.netlify.com/api/)
 - チュートリアル
     - [GameBase の継承](gamebase.md)
     - [描画](drawing.md)

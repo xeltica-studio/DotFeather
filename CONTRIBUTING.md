@@ -2,6 +2,8 @@
 
 [日本語](CONTRIBUTING-ja.md)
 
+Thanks for contributing! Before that, please read this guide.
+
 ## To Conrtibutors
 
 Please agree that the source code you provided for this project will be licensed as described in the LICENSE file as same as other code.

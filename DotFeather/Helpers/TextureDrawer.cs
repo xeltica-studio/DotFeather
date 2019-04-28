@@ -13,16 +13,19 @@ namespace DotFeather
 		/// <summary>
 		/// テクスチャを描画します。
 		/// </summary>
-		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, System.Drawing.Color? color = null)
+		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, System.Drawing.Color? color = null, float? width = null, float? height = null)
 		{
 			var hw = game.Width / 2;
 			var hh = game.Height / 2;
 
+			var w = width ?? texture.Size.Width;
+            var h = height ?? texture.Size.Height;
+
 			// Culling
 			var left = location.X;
 			var top = location.Y;
-			var right = left + texture.Size.Width;
-			var bottom = top + texture.Size.Height;
+			var right = left + w;
+			var bottom = top + h;
 
 			if (left > game.Width || top > game.Height ||
 				right < 0 || bottom < 0)
@@ -34,11 +37,11 @@ namespace DotFeather
 			{
 				(location.X, location.Y)
 					.ToViewportPoint(hw, hh),
-				((location.X + texture.Size.Width) * scale.X, location.Y)
+				((location.X + w) * scale.X, location.Y)
 					.ToViewportPoint(hw, hh),
-				(location.X, (location.Y + texture.Size.Height) * scale.Y)
+				(location.X, (location.Y + h) * scale.Y)
 					.ToViewportPoint(hw, hh),
-				((location.X + texture.Size.Width) * scale.X, (location.Y + texture.Size.Height) * scale.Y)
+				((location.X + w) * scale.X, (location.Y + h) * scale.Y)
 					.ToViewportPoint(hw, hh)
 			};
 

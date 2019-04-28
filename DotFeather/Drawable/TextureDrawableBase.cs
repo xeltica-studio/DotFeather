@@ -5,16 +5,41 @@
 	/// </summary>
     public abstract class TextureDrawableBase : IDrawable
     {
-		/// <summary></summary>
+		/// <summary>
+		/// 描画の優先順位を取得または設定します。数が小さいほど奥に描画されます。
+		/// </summary>
         public virtual int ZOrder { get; set; }
-        /// <summary></summary>
+
+        /// <summary>
+		/// このオブジェクトの名前を取得または設定します。
+		/// </summary>
         public virtual string Name { get; set; }
-        /// <summary></summary>
+
+        /// <summary>
+		/// このオブジェクトの座標を取得または設定します。
+		/// </summary>
         public virtual Vector Location { get; set; }
-        /// <summary></summary>
+
+        /// <summary>
+		/// このオブジェクトの角度を取得または設定します。
+		/// </summary>
         public virtual float Angle { get; set; }
-        /// <summary></summary>
+
+        /// <summary>
+		/// このオブジェクトのスケーリングを取得または設定します。
+		/// </summary>
         public virtual Vector Scale { get; set; }
+
+		/// <summary>
+		/// このオブジェクトの幅を取得または設定します。
+		/// </summary>
+		public virtual float Width { get; set; }
+
+		/// <summary>
+		/// このオブジェクトの高さを取得または設定します。
+		/// </summary>
+		/// <value></value>
+		public virtual float Height { get; set; }
 
 		/// <summary>
 		/// テクスチャを取得します。
@@ -33,7 +58,7 @@
 		/// </summary>
         public virtual void Draw(GameBase game, Vector location)
         {
-            TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle);
+            TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle, Width, Height);
         }
     }
 }

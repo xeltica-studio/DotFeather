@@ -1,4 +1,4 @@
-﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
+#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 
 
 namespace DotFeather
@@ -55,19 +55,20 @@ namespace DotFeather
 		/// <param name="angle">初期角度。</param>
 		/// <param name="scale">初期スケール</param>
 		public Sprite(Texture2D texture, int x, int y, float angle = default, Vector scale = default)
+			: this(texture)
 		{
-			Texture = texture;
 			Location = new Vector(x, y);
 			Angle = angle;
 			Scale = scale != default ? scale : new Vector(1, 1);
 		}
 
 		/// <summary>
-		/// スプライトを描画します。
+        /// <see cref="Sprite"/> クラスの新しいインスタンスを初期化します。
 		/// </summary>
-		public void Draw(GameBase game, Vector location)
+        /// <param name="texture">この <see cref="Sprite"/> が使用するテクスチャ。</param>
+        public Sprite(Texture2D texture)
 		{
-			TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle);
+            Texture = texture;
 		}
 
 		/// <summary>

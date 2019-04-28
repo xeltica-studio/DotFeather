@@ -9,25 +9,8 @@ namespace DotFeather
 	/// <summary>
 	/// テキストを描画する <see cref="IDrawable"/> オブジェクトです。
 	/// </summary>
-	public class TextDrawable : IDrawable
+	public class TextDrawable : TextureDrawableBase
 	{
-		/// <summary></summary>
-		public int ZOrder { get; set; }
-		/// <summary></summary>
-		public string Name { get; set; }
-		/// <summary></summary>
-		public Vector Location { get; set; }
-		/// <summary></summary>
-		public float Angle { get; set; } = 0;
-		/// <summary></summary>
-		public Vector Scale { get; set; } = new Vector(1, 1);
-
-		/// <summary>
-		/// 描画されるテキストをテクスチャとして取得します。
-		/// </summary>
-		/// <value></value>
-		public Texture2D RenderedTexture { get; private set; }
-
 		/// <summary>
 		/// 描画されるテキストを取得または設定します。
 		/// </summary>
@@ -103,8 +86,10 @@ namespace DotFeather
 			g.TextRenderingHint = TextRenderingHint.SingleBitPerPixelGridFit;
 			g.DrawString(Text, Font, new SolidBrush(Color), 0, 0, StringFormat.GenericTypographic);
 
-			RenderedTexture.Dispose();
-			RenderedTexture = Texture2D.LoadFrom(bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb));
+			Texture.Dispose();
+			Texture = Texture2D.LoadFrom(bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb));
+			Width = bmp.Width;
+			Height = bmp.Height;
 			bmp.Dispose();
 		}
 
@@ -113,7 +98,7 @@ namespace DotFeather
 		/// </summary>
 		public void Destroy()
 		{
-			RenderedTexture.Dispose();
+			Texture.Dispose();
 		}
 
 		/// <summary>
@@ -121,7 +106,7 @@ namespace DotFeather
 		/// </summary>
 		public void Draw(GameBase game, Vector location)
 		{
-			TextureDrawer.Draw(game, RenderedTexture, location + Location, Scale, Angle);
+			TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle, null, Width, Height);
 		}
 
 		private string text;

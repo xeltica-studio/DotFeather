@@ -32,7 +32,7 @@ namespace DotFeather
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> のスケーリングを取得または設定します。
 		/// </summary>
-		public Vector Scale { get; set; }
+		public Vector Scale { get; set; } = new Vector(1, 1);
 
 		/// <summary>
 		/// このコンテナーの子要素にアクセスします。

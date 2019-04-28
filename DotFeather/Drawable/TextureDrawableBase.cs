@@ -30,7 +30,7 @@ namespace DotFeather
         /// <summary>
 		/// このオブジェクトのスケーリングを取得または設定します。
 		/// </summary>
-        public virtual Vector Scale { get; set; }
+        public virtual Vector Scale { get; set; } = new Vector(1, 1);
 
 		/// <summary>
 		/// このオブジェクトの幅を取得または設定します。

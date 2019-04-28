@@ -21,14 +21,15 @@ namespace DotFeather
 			var w = width ?? texture.Size.Width;
             var h = height ?? texture.Size.Height;
 
-			// Culling
+			w *= scale.X;
+			h *= scale.Y;
+
 			var left = location.X;
 			var top = location.Y;
 			var right = left + w;
 			var bottom = top + h;
 
-			if (left > game.Width || top > game.Height ||
-				right < 0 || bottom < 0)
+			if (left > game.Width || top > game.Height || right < 0 || bottom < 0)
 			{
 				return;
 			}
@@ -37,11 +38,11 @@ namespace DotFeather
 			{
 				(location.X, location.Y)
 					.ToViewportPoint(hw, hh),
-				((location.X + w) * scale.X, location.Y)
+				(location.X + w, location.Y)
 					.ToViewportPoint(hw, hh),
-				(location.X, (location.Y + h) * scale.Y)
+				(location.X, location.Y + h)
 					.ToViewportPoint(hw, hh),
-				((location.X + w) * scale.X, (location.Y + h) * scale.Y)
+				(location.X + w, location.Y + h)
 					.ToViewportPoint(hw, hh)
 			};
 

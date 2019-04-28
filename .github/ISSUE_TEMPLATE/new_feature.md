@@ -1,8 +1,8 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: New Feature Request
+about: Create a feature request to tell us your awesome idea!
 title: ''
-labels: 'Bug'
+labels: 'Feature Request'
 assignees: ''
 
 ---

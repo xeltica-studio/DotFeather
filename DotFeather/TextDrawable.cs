@@ -43,7 +43,7 @@ namespace DotFeather
 		/// 描画色を取得または設定します。
 		/// </summary>
 		/// <value></value>
-		public Color Color
+		public override Color? Color
 		{
 			get => color;
 			set
@@ -84,7 +84,7 @@ namespace DotFeather
 			g.SmoothingMode = SmoothingMode.None;
 			g.PixelOffsetMode = PixelOffsetMode.HighSpeed;
 			g.TextRenderingHint = TextRenderingHint.SingleBitPerPixelGridFit;
-			g.DrawString(Text, Font, new SolidBrush(Color), 0, 0, StringFormat.GenericTypographic);
+			g.DrawString(Text, Font, new SolidBrush(Color ?? System.Drawing.Color.Black), 0, 0, StringFormat.GenericTypographic);
 
 			Texture.Dispose();
 			Texture = Texture2D.LoadFrom(bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb));
@@ -93,24 +93,8 @@ namespace DotFeather
 			bmp.Dispose();
 		}
 
-		/// <summary>
-		/// この <see cref="TextDrawable"/> を破棄します。
-		/// </summary>
-		public void Destroy()
-		{
-			Texture.Dispose();
-		}
-
-		/// <summary>
-		/// 描画します。
-		/// </summary>
-		public void Draw(GameBase game, Vector location)
-		{
-			TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle, null, Width, Height);
-		}
-
 		private string text;
 		private Font font;
-		private Color color;
+		private Color? color;
 	}
 }

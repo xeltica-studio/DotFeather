@@ -1,4 +1,6 @@
-﻿namespace DotFeather
+﻿using System.Drawing;
+
+namespace DotFeather
 {
 	/// <summary>
 	/// <see cref="Texture2D"/> を描画するオブジェクトの抽象クラスです。
@@ -41,6 +43,12 @@
 		/// <value></value>
 		public virtual float Height { get; set; }
 
+        /// <summary>
+        /// このオブジェクトの高さを取得または設定します。
+        /// </summary>
+        /// <value></value>
+        public virtual Color? Color { get; set; }
+
 		/// <summary>
 		/// テクスチャを取得します。
 		/// </summary>
@@ -58,7 +66,7 @@
 		/// </summary>
         public virtual void Draw(GameBase game, Vector location)
         {
-            TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle, Width, Height);
+            TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle, Color, Width, Height);
         }
     }
 }

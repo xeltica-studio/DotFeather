@@ -49,6 +49,8 @@
     name: TextDrawable
   - uid: DotFeather.Texture2D
     name: Texture2D
+  - uid: DotFeather.TextureDrawableBase
+    name: TextureDrawableBase
   - uid: DotFeather.TextureDrawer
     name: TextureDrawer
   - uid: DotFeather.Tile

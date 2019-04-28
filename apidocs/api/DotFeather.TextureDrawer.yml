@@ -5,7 +5,7 @@ items:
   id: TextureDrawer
   parent: DotFeather
   children:
-  - DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color})
+  - DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color},System.Nullable{System.Single},System.Nullable{System.Single})
   langs:
   - csharp
   - vb
@@ -46,16 +46,16 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color})
-  commentId: M:DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color})
-  id: Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color})
+- uid: DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color},System.Nullable{System.Single},System.Nullable{System.Single})
+  commentId: M:DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color},System.Nullable{System.Single},System.Nullable{System.Single})
+  id: Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color},System.Nullable{System.Single},System.Nullable{System.Single})
   parent: DotFeather.TextureDrawer
   langs:
   - csharp
   - vb
-  name: Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable<Color>)
-  nameWithType: TextureDrawer.Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable<Color>)
-  fullName: DotFeather.TextureDrawer.Draw(DotFeather.GameBase, DotFeather.Texture2D, DotFeather.Vector, DotFeather.Vector, System.Single, System.Nullable<System.Drawing.Color>)
+  name: Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable<Color>, Nullable<Single>, Nullable<Single>)
+  nameWithType: TextureDrawer.Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable<Color>, Nullable<Single>, Nullable<Single>)
+  fullName: DotFeather.TextureDrawer.Draw(DotFeather.GameBase, DotFeather.Texture2D, DotFeather.Vector, DotFeather.Vector, System.Single, System.Nullable<System.Drawing.Color>, System.Nullable<System.Single>, System.Nullable<System.Single>)
   type: Method
   source:
     remote:
@@ -71,7 +71,7 @@ items:
   summary: "\nテクスチャを描画します。\n"
   example: []
   syntax:
-    content: public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, Color? color = default(Color? ))
+    content: public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, Color? color = default(Color? ), float? width = default(float? ), float? height = default(float? ))
     parameters:
     - id: game
       type: DotFeather.GameBase
@@ -85,17 +85,21 @@ items:
       type: System.Single
     - id: color
       type: System.Nullable{System.Drawing.Color}
-    content.vb: Public Shared Sub Draw(game As GameBase, texture As Texture2D, location As Vector, scale As Vector, angle As Single, color As Color? = Nothing)
+    - id: width
+      type: System.Nullable{System.Single}
+    - id: height
+      type: System.Nullable{System.Single}
+    content.vb: Public Shared Sub Draw(game As GameBase, texture As Texture2D, location As Vector, scale As Vector, angle As Single, color As Color? = Nothing, width As Single? = Nothing, height As Single? = Nothing)
   overload: DotFeather.TextureDrawer.Draw*
-  nameWithType.vb: TextureDrawer.Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable(Of Color))
+  nameWithType.vb: TextureDrawer.Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable(Of Color), Nullable(Of Single), Nullable(Of Single))
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: DotFeather.TextureDrawer.Draw(DotFeather.GameBase, DotFeather.Texture2D, DotFeather.Vector, DotFeather.Vector, System.Single, System.Nullable(Of System.Drawing.Color))
-  name.vb: Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable(Of Color))
+  fullName.vb: DotFeather.TextureDrawer.Draw(DotFeather.GameBase, DotFeather.Texture2D, DotFeather.Vector, DotFeather.Vector, System.Single, System.Nullable(Of System.Drawing.Color), System.Nullable(Of System.Single), System.Nullable(Of System.Single))
+  name.vb: Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable(Of Color), Nullable(Of Single), Nullable(Of Single))
 references:
 - uid: DotFeather.Texture2D
   commentId: T:DotFeather.Texture2D
@@ -464,6 +468,50 @@ references:
     name: Color
     nameWithType: Color
     fullName: System.Drawing.Color
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Single>
+  nameWithType: Nullable<Single>
+  fullName: System.Nullable<System.Single>
+  nameWithType.vb: Nullable(Of Single)
+  fullName.vb: System.Nullable(Of System.Single)
+  name.vb: Nullable(Of Single)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
     isExternal: true
   - name: )
     nameWithType: )

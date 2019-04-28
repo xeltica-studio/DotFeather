@@ -7,23 +7,23 @@ items:
   children:
   - DotFeather.Container.Add(DotFeather.IDrawable)
   - DotFeather.Container.Angle
+  - DotFeather.Container.Clear
+  - DotFeather.Container.Contains(DotFeather.IDrawable)
+  - DotFeather.Container.CopyTo(DotFeather.IDrawable[],System.Int32)
+  - DotFeather.Container.Count
   - DotFeather.Container.Destroy
   - DotFeather.Container.Draw(DotFeather.GameBase,DotFeather.Vector)
   - DotFeather.Container.GetEnumerator
+  - DotFeather.Container.IndexOf(DotFeather.IDrawable)
   - DotFeather.Container.Insert(System.Int32,DotFeather.IDrawable)
+  - DotFeather.Container.IsReadOnly
   - DotFeather.Container.Item(System.Int32)
   - DotFeather.Container.Location
   - DotFeather.Container.Name
+  - DotFeather.Container.Remove(DotFeather.IDrawable)
+  - DotFeather.Container.RemoveAt(System.Int32)
   - DotFeather.Container.Scale
   - DotFeather.Container.Sort
-  - DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear
-  - DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains(DotFeather.IDrawable)
-  - DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo(DotFeather.IDrawable[],System.Int32)
-  - DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count
-  - DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly
-  - DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove(DotFeather.IDrawable)
-  - DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf(DotFeather.IDrawable)
-  - DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt(System.Int32)
   - DotFeather.Container.System#Collections#IEnumerable#GetEnumerator
   - DotFeather.Container.ZOrder
   langs:
@@ -482,7 +482,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Container.cs
-    startLine: 86
+    startLine: 90
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -516,7 +516,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Container.cs
-    startLine: 91
+    startLine: 95
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -534,216 +534,236 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf(DotFeather.IDrawable)
-  commentId: M:DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf(DotFeather.IDrawable)
-  id: System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf(DotFeather.IDrawable)
-  isEii: true
+- uid: DotFeather.Container.IndexOf(DotFeather.IDrawable)
+  commentId: M:DotFeather.Container.IndexOf(DotFeather.IDrawable)
+  id: IndexOf(DotFeather.IDrawable)
   parent: DotFeather.Container
   langs:
   - csharp
   - vb
-  name: IList<IDrawable>.IndexOf(IDrawable)
-  nameWithType: Container.IList<IDrawable>.IndexOf(IDrawable)
-  fullName: DotFeather.Container.System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf(DotFeather.IDrawable)
+  name: IndexOf(IDrawable)
+  nameWithType: Container.IndexOf(IDrawable)
+  fullName: DotFeather.Container.IndexOf(DotFeather.IDrawable)
   type: Method
   source:
     remote:
       path: DotFeather/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf
+    id: IndexOf
     path: ../DotFeather/Container.cs
-    startLine: 94
+    startLine: 101
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\n指定した要素の位置を取得します。\n"
+  example: []
   syntax:
-    content: int IList<IDrawable>.IndexOf(IDrawable item)
+    content: public int IndexOf(IDrawable item)
     parameters:
     - id: item
       type: DotFeather.IDrawable
     return:
       type: System.Int32
-    content.vb: Function System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf(item As IDrawable) As Integer Implements IList(Of IDrawable).IndexOf
-  overload: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf*
+    content.vb: Public Function IndexOf(item As IDrawable) As Integer
+  overload: DotFeather.Container.IndexOf*
   implements:
   - System.Collections.Generic.IList{DotFeather.IDrawable}.IndexOf(DotFeather.IDrawable)
-  nameWithType.vb: Container.System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf(IDrawable)
-  name.vb: System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf(IDrawable)
-- uid: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt(System.Int32)
-  commentId: M:DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt(System.Int32)
-  id: System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt(System.Int32)
-  isEii: true
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Container.RemoveAt(System.Int32)
+  commentId: M:DotFeather.Container.RemoveAt(System.Int32)
+  id: RemoveAt(System.Int32)
   parent: DotFeather.Container
   langs:
   - csharp
   - vb
-  name: IList<IDrawable>.RemoveAt(Int32)
-  nameWithType: Container.IList<IDrawable>.RemoveAt(Int32)
-  fullName: DotFeather.Container.System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt(System.Int32)
+  name: RemoveAt(Int32)
+  nameWithType: Container.RemoveAt(Int32)
+  fullName: DotFeather.Container.RemoveAt(System.Int32)
   type: Method
   source:
     remote:
       path: DotFeather/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt
+    id: RemoveAt
     path: ../DotFeather/Container.cs
-    startLine: 95
+    startLine: 106
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\n指定した位置にあるオブジェクトを削除します。\n"
+  example: []
   syntax:
-    content: void IList<IDrawable>.RemoveAt(int index)
+    content: public void RemoveAt(int index)
     parameters:
     - id: index
       type: System.Int32
-    content.vb: Sub System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt(index As Integer) Implements IList(Of IDrawable).RemoveAt
-  overload: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt*
+    content.vb: Public Sub RemoveAt(index As Integer)
+  overload: DotFeather.Container.RemoveAt*
   implements:
   - System.Collections.Generic.IList{DotFeather.IDrawable}.RemoveAt(System.Int32)
-  nameWithType.vb: Container.System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt(Int32)
-  name.vb: System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt(Int32)
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear
-  commentId: M:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear
-  id: System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear
-  isEii: true
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Container.Clear
+  commentId: M:DotFeather.Container.Clear
+  id: Clear
   parent: DotFeather.Container
   langs:
   - csharp
   - vb
-  name: ICollection<IDrawable>.Clear()
-  nameWithType: Container.ICollection<IDrawable>.Clear()
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear()
+  name: Clear()
+  nameWithType: Container.Clear()
+  fullName: DotFeather.Container.Clear()
   type: Method
   source:
     remote:
       path: DotFeather/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear
+    id: Clear
     path: ../DotFeather/Container.cs
-    startLine: 96
+    startLine: 111
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\nオブジェクトを削除します。\n"
+  example: []
   syntax:
-    content: void ICollection<IDrawable>.Clear()
-    content.vb: Sub System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear Implements ICollection(Of IDrawable).Clear
-  overload: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear*
+    content: public void Clear()
+    content.vb: Public Sub Clear
+  overload: DotFeather.Container.Clear*
   implements:
   - System.Collections.Generic.ICollection{DotFeather.IDrawable}.Clear
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear()
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear()
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains(DotFeather.IDrawable)
-  commentId: M:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains(DotFeather.IDrawable)
-  id: System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains(DotFeather.IDrawable)
-  isEii: true
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Container.Contains(DotFeather.IDrawable)
+  commentId: M:DotFeather.Container.Contains(DotFeather.IDrawable)
+  id: Contains(DotFeather.IDrawable)
   parent: DotFeather.Container
   langs:
   - csharp
   - vb
-  name: ICollection<IDrawable>.Contains(IDrawable)
-  nameWithType: Container.ICollection<IDrawable>.Contains(IDrawable)
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains(DotFeather.IDrawable)
+  name: Contains(IDrawable)
+  nameWithType: Container.Contains(IDrawable)
+  fullName: DotFeather.Container.Contains(DotFeather.IDrawable)
   type: Method
   source:
     remote:
       path: DotFeather/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains
+    id: Contains
     path: ../DotFeather/Container.cs
-    startLine: 97
+    startLine: 116
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\n指定したオブジェクトが存在するかどうかを判断します。\n"
+  example: []
   syntax:
-    content: bool ICollection<IDrawable>.Contains(IDrawable item)
+    content: public bool Contains(IDrawable item)
     parameters:
     - id: item
       type: DotFeather.IDrawable
     return:
       type: System.Boolean
-    content.vb: Function System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains(item As IDrawable) As Boolean Implements ICollection(Of IDrawable).Contains
-  overload: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains*
+    content.vb: Public Function Contains(item As IDrawable) As Boolean
+  overload: DotFeather.Container.Contains*
   implements:
   - System.Collections.Generic.ICollection{DotFeather.IDrawable}.Contains(DotFeather.IDrawable)
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains(IDrawable)
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains(IDrawable)
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo(DotFeather.IDrawable[],System.Int32)
-  commentId: M:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo(DotFeather.IDrawable[],System.Int32)
-  id: System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo(DotFeather.IDrawable[],System.Int32)
-  isEii: true
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Container.CopyTo(DotFeather.IDrawable[],System.Int32)
+  commentId: M:DotFeather.Container.CopyTo(DotFeather.IDrawable[],System.Int32)
+  id: CopyTo(DotFeather.IDrawable[],System.Int32)
   parent: DotFeather.Container
   langs:
   - csharp
   - vb
-  name: ICollection<IDrawable>.CopyTo(IDrawable[], Int32)
-  nameWithType: Container.ICollection<IDrawable>.CopyTo(IDrawable[], Int32)
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo(DotFeather.IDrawable[], System.Int32)
+  name: CopyTo(IDrawable[], Int32)
+  nameWithType: Container.CopyTo(IDrawable[], Int32)
+  fullName: DotFeather.Container.CopyTo(DotFeather.IDrawable[], System.Int32)
   type: Method
   source:
     remote:
       path: DotFeather/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo
+    id: CopyTo
     path: ../DotFeather/Container.cs
-    startLine: 98
+    startLine: 121
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\n指定した配列およびその位置に、要素をコピーします。\n"
+  example: []
   syntax:
-    content: void ICollection<IDrawable>.CopyTo(IDrawable[] array, int arrayIndex)
+    content: public void CopyTo(IDrawable[] array, int arrayIndex)
     parameters:
     - id: array
       type: DotFeather.IDrawable[]
     - id: arrayIndex
       type: System.Int32
-    content.vb: Sub System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo(array As IDrawable(), arrayIndex As Integer) Implements ICollection(Of IDrawable).CopyTo
-  overload: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo*
+    content.vb: Public Sub CopyTo(array As IDrawable(), arrayIndex As Integer)
+  overload: DotFeather.Container.CopyTo*
   implements:
   - System.Collections.Generic.ICollection{DotFeather.IDrawable}.CopyTo(DotFeather.IDrawable[],System.Int32)
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo(IDrawable(), Int32)
-  fullName.vb: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo(DotFeather.IDrawable(), System.Int32)
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo(IDrawable(), Int32)
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove(DotFeather.IDrawable)
-  commentId: M:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove(DotFeather.IDrawable)
-  id: System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove(DotFeather.IDrawable)
-  isEii: true
+  nameWithType.vb: Container.CopyTo(IDrawable(), Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotFeather.Container.CopyTo(DotFeather.IDrawable(), System.Int32)
+  name.vb: CopyTo(IDrawable(), Int32)
+- uid: DotFeather.Container.Remove(DotFeather.IDrawable)
+  commentId: M:DotFeather.Container.Remove(DotFeather.IDrawable)
+  id: Remove(DotFeather.IDrawable)
   parent: DotFeather.Container
   langs:
   - csharp
   - vb
-  name: ICollection<IDrawable>.Remove(IDrawable)
-  nameWithType: Container.ICollection<IDrawable>.Remove(IDrawable)
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove(DotFeather.IDrawable)
+  name: Remove(IDrawable)
+  nameWithType: Container.Remove(IDrawable)
+  fullName: DotFeather.Container.Remove(DotFeather.IDrawable)
   type: Method
   source:
     remote:
       path: DotFeather/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove
+    id: Remove
     path: ../DotFeather/Container.cs
-    startLine: 99
+    startLine: 126
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\n指定したオブジェクトを削除します。\n"
+  example: []
   syntax:
-    content: bool ICollection<IDrawable>.Remove(IDrawable item)
+    content: public bool Remove(IDrawable item)
     parameters:
     - id: item
       type: DotFeather.IDrawable
     return:
       type: System.Boolean
-    content.vb: Function System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove(item As IDrawable) As Boolean Implements ICollection(Of IDrawable).Remove
-  overload: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove*
+    content.vb: Public Function Remove(item As IDrawable) As Boolean
+  overload: DotFeather.Container.Remove*
   implements:
   - System.Collections.Generic.ICollection{DotFeather.IDrawable}.Remove(DotFeather.IDrawable)
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove(IDrawable)
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove(IDrawable)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: DotFeather.Container.System#Collections#IEnumerable#GetEnumerator
   commentId: M:DotFeather.Container.System#Collections#IEnumerable#GetEnumerator
   id: System#Collections#IEnumerable#GetEnumerator
@@ -763,10 +783,12 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.IEnumerable.GetEnumerator
     path: ../DotFeather/Container.cs
-    startLine: 100
+    startLine: 131
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\n列挙子を取得します。\n"
+  example: []
   syntax:
     content: IEnumerator IEnumerable.GetEnumerator()
     return:
@@ -777,82 +799,84 @@ items:
   - System.Collections.IEnumerable.GetEnumerator
   nameWithType.vb: Container.System.Collections.IEnumerable.GetEnumerator()
   name.vb: System.Collections.IEnumerable.GetEnumerator()
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count
-  commentId: P:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count
-  id: System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count
-  isEii: true
+- uid: DotFeather.Container.Count
+  commentId: P:DotFeather.Container.Count
+  id: Count
   parent: DotFeather.Container
   langs:
   - csharp
   - vb
-  name: ICollection<IDrawable>.Count
-  nameWithType: Container.ICollection<IDrawable>.Count
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
+  name: Count
+  nameWithType: Container.Count
+  fullName: DotFeather.Container.Count
   type: Property
   source:
     remote:
       path: DotFeather/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
+    id: Count
     path: ../DotFeather/Container.cs
-    startLine: 101
+    startLine: 136
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\n要素数を取得します。\n"
+  example: []
   syntax:
-    content: int ICollection<IDrawable>.Count { get; }
+    content: public int Count { get; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: ReadOnly WriteOnly Property System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count As Integer Implements ICollection(Of IDrawable).Count
-  overload: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count*
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: DotFeather.Container.Count*
   implements:
   - System.Collections.Generic.ICollection{DotFeather.IDrawable}.Count
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
   modifiers.csharp:
+  - public
   - get
   modifiers.vb:
+  - Public
   - ReadOnly
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly
-  commentId: P:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly
-  id: System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly
-  isEii: true
+- uid: DotFeather.Container.IsReadOnly
+  commentId: P:DotFeather.Container.IsReadOnly
+  id: IsReadOnly
   parent: DotFeather.Container
   langs:
   - csharp
   - vb
-  name: ICollection<IDrawable>.IsReadOnly
-  nameWithType: Container.ICollection<IDrawable>.IsReadOnly
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
+  name: IsReadOnly
+  nameWithType: Container.IsReadOnly
+  fullName: DotFeather.Container.IsReadOnly
   type: Property
   source:
     remote:
       path: DotFeather/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
+    id: IsReadOnly
     path: ../DotFeather/Container.cs
-    startLine: 102
+    startLine: 141
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\n読み取り専用かどうかを示す値を取得します。\n"
+  example: []
   syntax:
-    content: bool ICollection<IDrawable>.IsReadOnly { get; }
+    content: public bool IsReadOnly { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: ReadOnly WriteOnly Property System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly As Boolean Implements ICollection(Of IDrawable).IsReadOnly
-  overload: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly*
+    content.vb: Public ReadOnly Property IsReadOnly As Boolean
+  overload: DotFeather.Container.IsReadOnly*
   implements:
   - System.Collections.Generic.ICollection{DotFeather.IDrawable}.IsReadOnly
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
   modifiers.csharp:
+  - public
   - get
   modifiers.vb:
+  - Public
   - ReadOnly
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
 references:
 - uid: DotFeather.IDrawable
   commentId: T:DotFeather.IDrawable
@@ -2052,13 +2076,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf*
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf
-  name: IList<IDrawable>.IndexOf
-  nameWithType: Container.IList<IDrawable>.IndexOf
-  fullName: DotFeather.Container.System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf
-  nameWithType.vb: Container.System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf
-  name.vb: System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf
+- uid: DotFeather.Container.IndexOf*
+  commentId: Overload:DotFeather.Container.IndexOf
+  name: IndexOf
+  nameWithType: Container.IndexOf
+  fullName: DotFeather.Container.IndexOf
 - uid: System.Collections.Generic.IList{DotFeather.IDrawable}.IndexOf(DotFeather.IDrawable)
   commentId: M:System.Collections.Generic.IList{DotFeather.IDrawable}.IndexOf(DotFeather.IDrawable)
   parent: System.Collections.Generic.IList{DotFeather.IDrawable}
@@ -2138,13 +2160,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt*
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt
-  name: IList<IDrawable>.RemoveAt
-  nameWithType: Container.IList<IDrawable>.RemoveAt
-  fullName: DotFeather.Container.System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt
-  nameWithType.vb: Container.System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt
-  name.vb: System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt
+- uid: DotFeather.Container.RemoveAt*
+  commentId: Overload:DotFeather.Container.RemoveAt
+  name: RemoveAt
+  nameWithType: Container.RemoveAt
+  fullName: DotFeather.Container.RemoveAt
 - uid: System.Collections.Generic.IList{DotFeather.IDrawable}.RemoveAt(System.Int32)
   commentId: M:System.Collections.Generic.IList{DotFeather.IDrawable}.RemoveAt(System.Int32)
   parent: System.Collections.Generic.IList{DotFeather.IDrawable}
@@ -2230,13 +2250,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear*
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear
-  name: ICollection<IDrawable>.Clear
-  nameWithType: Container.ICollection<IDrawable>.Clear
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear
+- uid: DotFeather.Container.Clear*
+  commentId: Overload:DotFeather.Container.Clear
+  name: Clear
+  nameWithType: Container.Clear
+  fullName: DotFeather.Container.Clear
 - uid: System.Collections.Generic.ICollection{DotFeather.IDrawable}.Clear
   commentId: M:System.Collections.Generic.ICollection{DotFeather.IDrawable}.Clear
   parent: System.Collections.Generic.ICollection{DotFeather.IDrawable}
@@ -2302,13 +2320,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains*
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains
-  name: ICollection<IDrawable>.Contains
-  nameWithType: Container.ICollection<IDrawable>.Contains
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains
+- uid: DotFeather.Container.Contains*
+  commentId: Overload:DotFeather.Container.Contains
+  name: Contains
+  nameWithType: Container.Contains
+  fullName: DotFeather.Container.Contains
 - uid: System.Collections.Generic.ICollection{DotFeather.IDrawable}.Contains(DotFeather.IDrawable)
   commentId: M:System.Collections.Generic.ICollection{DotFeather.IDrawable}.Contains(DotFeather.IDrawable)
   parent: System.Collections.Generic.ICollection{DotFeather.IDrawable}
@@ -2395,13 +2411,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo*
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo
-  name: ICollection<IDrawable>.CopyTo
-  nameWithType: Container.ICollection<IDrawable>.CopyTo
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo
+- uid: DotFeather.Container.CopyTo*
+  commentId: Overload:DotFeather.Container.CopyTo
+  name: CopyTo
+  nameWithType: Container.CopyTo
+  fullName: DotFeather.Container.CopyTo
 - uid: System.Collections.Generic.ICollection{DotFeather.IDrawable}.CopyTo(DotFeather.IDrawable[],System.Int32)
   commentId: M:System.Collections.Generic.ICollection{DotFeather.IDrawable}.CopyTo(DotFeather.IDrawable[],System.Int32)
   parent: System.Collections.Generic.ICollection{DotFeather.IDrawable}
@@ -2551,13 +2565,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove*
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove
-  name: ICollection<IDrawable>.Remove
-  nameWithType: Container.ICollection<IDrawable>.Remove
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove
+- uid: DotFeather.Container.Remove*
+  commentId: Overload:DotFeather.Container.Remove
+  name: Remove
+  nameWithType: Container.Remove
+  fullName: DotFeather.Container.Remove
 - uid: System.Collections.Generic.ICollection{DotFeather.IDrawable}.Remove(DotFeather.IDrawable)
   commentId: M:System.Collections.Generic.ICollection{DotFeather.IDrawable}.Remove(DotFeather.IDrawable)
   parent: System.Collections.Generic.ICollection{DotFeather.IDrawable}
@@ -2682,13 +2694,11 @@ references:
   name: IEnumerator
   nameWithType: IEnumerator
   fullName: System.Collections.IEnumerator
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count*
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count
-  name: ICollection<IDrawable>.Count
-  nameWithType: Container.ICollection<IDrawable>.Count
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
+- uid: DotFeather.Container.Count*
+  commentId: Overload:DotFeather.Container.Count
+  name: Count
+  nameWithType: Container.Count
+  fullName: DotFeather.Container.Count
 - uid: System.Collections.Generic.ICollection{DotFeather.IDrawable}.Count
   commentId: P:System.Collections.Generic.ICollection{DotFeather.IDrawable}.Count
   parent: System.Collections.Generic.ICollection{DotFeather.IDrawable}
@@ -2706,13 +2716,11 @@ references:
   fullName: System.Collections.Generic.ICollection<T>.Count
   nameWithType.vb: ICollection(Of T).Count
   fullName.vb: System.Collections.Generic.ICollection(Of T).Count
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly*
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly
-  name: ICollection<IDrawable>.IsReadOnly
-  nameWithType: Container.ICollection<IDrawable>.IsReadOnly
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
+- uid: DotFeather.Container.IsReadOnly*
+  commentId: Overload:DotFeather.Container.IsReadOnly
+  name: IsReadOnly
+  nameWithType: Container.IsReadOnly
+  fullName: DotFeather.Container.IsReadOnly
 - uid: System.Collections.Generic.ICollection{DotFeather.IDrawable}.IsReadOnly
   commentId: P:System.Collections.Generic.ICollection{DotFeather.IDrawable}.IsReadOnly
   parent: System.Collections.Generic.ICollection{DotFeather.IDrawable}

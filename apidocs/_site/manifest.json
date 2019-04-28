@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Container.html",
-          "hash": "bbOn0Nayb/vFQZG3Vv1caQ=="
+          "hash": "BvmYQyZ6YNpVuaC2rVMbIQ=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Graphic.html",
-          "hash": "uuUbadVnM1Gm8Y8LRRVRSw=="
+          "hash": "BcZX7cb7iElGwv0nwlsMGw=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Sprite.html",
-          "hash": "I6FkURkwipvgJJ+eIMwUQA=="
+          "hash": "wnSIph45DevTYZZVmZkHyg=="
         }
       },
       "is_incremental": false,
@@ -281,11 +281,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DotFeather.TextureDrawableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotFeather.TextureDrawableBase.html",
+          "hash": "fNd/QkMMRtay/uvNjUE1uQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DotFeather.TextureDrawer.yml",
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.TextureDrawer.html",
-          "hash": "qS/gcg+YHYijInd0EekjXg=="
+          "hash": "MYt3WWHf9lQKmiiOZd4XpQ=="
         }
       },
       "is_incremental": false,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.html",
-          "hash": "zQfuPk+MzluHVZyMEZKrtg=="
+          "hash": "aU6ahiQjpzfEy3q7p1No8g=="
         }
       },
       "is_incremental": false,
@@ -393,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "GfljuNejlnsvITGoCJz3kw=="
+          "hash": "ZMD+nim0yREHJi9MC/dPKA=="
         }
       },
       "is_incremental": false,
@@ -433,13 +445,6 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
@@ -449,8 +454,15 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 31,
+          "total_file_count": 32,
           "skipped_file_count": 1
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         }
       }
     },

@@ -216,6 +216,61 @@ references:
   isSpec: "True"
   fullName: DotFeather.Container.Angle
   nameWithType: Container.Angle
+- uid: DotFeather.Container.Clear
+  name: Clear()
+  href: api/DotFeather.Container.html#DotFeather_Container_Clear
+  commentId: M:DotFeather.Container.Clear
+  fullName: DotFeather.Container.Clear()
+  nameWithType: Container.Clear()
+- uid: DotFeather.Container.Clear*
+  name: Clear
+  href: api/DotFeather.Container.html#DotFeather_Container_Clear_
+  commentId: Overload:DotFeather.Container.Clear
+  isSpec: "True"
+  fullName: DotFeather.Container.Clear
+  nameWithType: Container.Clear
+- uid: DotFeather.Container.Contains(DotFeather.IDrawable)
+  name: Contains(IDrawable)
+  href: api/DotFeather.Container.html#DotFeather_Container_Contains_DotFeather_IDrawable_
+  commentId: M:DotFeather.Container.Contains(DotFeather.IDrawable)
+  fullName: DotFeather.Container.Contains(DotFeather.IDrawable)
+  nameWithType: Container.Contains(IDrawable)
+- uid: DotFeather.Container.Contains*
+  name: Contains
+  href: api/DotFeather.Container.html#DotFeather_Container_Contains_
+  commentId: Overload:DotFeather.Container.Contains
+  isSpec: "True"
+  fullName: DotFeather.Container.Contains
+  nameWithType: Container.Contains
+- uid: DotFeather.Container.CopyTo(DotFeather.IDrawable[],System.Int32)
+  name: CopyTo(IDrawable[], Int32)
+  href: api/DotFeather.Container.html#DotFeather_Container_CopyTo_DotFeather_IDrawable___System_Int32_
+  commentId: M:DotFeather.Container.CopyTo(DotFeather.IDrawable[],System.Int32)
+  name.vb: CopyTo(IDrawable(), Int32)
+  fullName: DotFeather.Container.CopyTo(DotFeather.IDrawable[], System.Int32)
+  fullName.vb: DotFeather.Container.CopyTo(DotFeather.IDrawable(), System.Int32)
+  nameWithType: Container.CopyTo(IDrawable[], Int32)
+  nameWithType.vb: Container.CopyTo(IDrawable(), Int32)
+- uid: DotFeather.Container.CopyTo*
+  name: CopyTo
+  href: api/DotFeather.Container.html#DotFeather_Container_CopyTo_
+  commentId: Overload:DotFeather.Container.CopyTo
+  isSpec: "True"
+  fullName: DotFeather.Container.CopyTo
+  nameWithType: Container.CopyTo
+- uid: DotFeather.Container.Count
+  name: Count
+  href: api/DotFeather.Container.html#DotFeather_Container_Count
+  commentId: P:DotFeather.Container.Count
+  fullName: DotFeather.Container.Count
+  nameWithType: Container.Count
+- uid: DotFeather.Container.Count*
+  name: Count
+  href: api/DotFeather.Container.html#DotFeather_Container_Count_
+  commentId: Overload:DotFeather.Container.Count
+  isSpec: "True"
+  fullName: DotFeather.Container.Count
+  nameWithType: Container.Count
 - uid: DotFeather.Container.Destroy
   name: Destroy()
   href: api/DotFeather.Container.html#DotFeather_Container_Destroy
@@ -255,6 +310,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.Container.GetEnumerator
   nameWithType: Container.GetEnumerator
+- uid: DotFeather.Container.IndexOf(DotFeather.IDrawable)
+  name: IndexOf(IDrawable)
+  href: api/DotFeather.Container.html#DotFeather_Container_IndexOf_DotFeather_IDrawable_
+  commentId: M:DotFeather.Container.IndexOf(DotFeather.IDrawable)
+  fullName: DotFeather.Container.IndexOf(DotFeather.IDrawable)
+  nameWithType: Container.IndexOf(IDrawable)
+- uid: DotFeather.Container.IndexOf*
+  name: IndexOf
+  href: api/DotFeather.Container.html#DotFeather_Container_IndexOf_
+  commentId: Overload:DotFeather.Container.IndexOf
+  isSpec: "True"
+  fullName: DotFeather.Container.IndexOf
+  nameWithType: Container.IndexOf
 - uid: DotFeather.Container.Insert(System.Int32,DotFeather.IDrawable)
   name: Insert(Int32, IDrawable)
   href: api/DotFeather.Container.html#DotFeather_Container_Insert_System_Int32_DotFeather_IDrawable_
@@ -268,6 +336,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.Container.Insert
   nameWithType: Container.Insert
+- uid: DotFeather.Container.IsReadOnly
+  name: IsReadOnly
+  href: api/DotFeather.Container.html#DotFeather_Container_IsReadOnly
+  commentId: P:DotFeather.Container.IsReadOnly
+  fullName: DotFeather.Container.IsReadOnly
+  nameWithType: Container.IsReadOnly
+- uid: DotFeather.Container.IsReadOnly*
+  name: IsReadOnly
+  href: api/DotFeather.Container.html#DotFeather_Container_IsReadOnly_
+  commentId: Overload:DotFeather.Container.IsReadOnly
+  isSpec: "True"
+  fullName: DotFeather.Container.IsReadOnly
+  nameWithType: Container.IsReadOnly
 - uid: DotFeather.Container.Item(System.Int32)
   name: Item[Int32]
   href: api/DotFeather.Container.html#DotFeather_Container_Item_System_Int32_
@@ -310,6 +391,32 @@ references:
   isSpec: "True"
   fullName: DotFeather.Container.Name
   nameWithType: Container.Name
+- uid: DotFeather.Container.Remove(DotFeather.IDrawable)
+  name: Remove(IDrawable)
+  href: api/DotFeather.Container.html#DotFeather_Container_Remove_DotFeather_IDrawable_
+  commentId: M:DotFeather.Container.Remove(DotFeather.IDrawable)
+  fullName: DotFeather.Container.Remove(DotFeather.IDrawable)
+  nameWithType: Container.Remove(IDrawable)
+- uid: DotFeather.Container.Remove*
+  name: Remove
+  href: api/DotFeather.Container.html#DotFeather_Container_Remove_
+  commentId: Overload:DotFeather.Container.Remove
+  isSpec: "True"
+  fullName: DotFeather.Container.Remove
+  nameWithType: Container.Remove
+- uid: DotFeather.Container.RemoveAt(System.Int32)
+  name: RemoveAt(Int32)
+  href: api/DotFeather.Container.html#DotFeather_Container_RemoveAt_System_Int32_
+  commentId: M:DotFeather.Container.RemoveAt(System.Int32)
+  fullName: DotFeather.Container.RemoveAt(System.Int32)
+  nameWithType: Container.RemoveAt(Int32)
+- uid: DotFeather.Container.RemoveAt*
+  name: RemoveAt
+  href: api/DotFeather.Container.html#DotFeather_Container_RemoveAt_
+  commentId: Overload:DotFeather.Container.RemoveAt
+  isSpec: "True"
+  fullName: DotFeather.Container.RemoveAt
+  nameWithType: Container.RemoveAt
 - uid: DotFeather.Container.Scale
   name: Scale
   href: api/DotFeather.Container.html#DotFeather_Container_Scale
@@ -336,143 +443,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.Container.Sort
   nameWithType: Container.Sort
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear
-  name: ICollection<IDrawable>.Clear()
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__Clear
-  commentId: M:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear()
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear()
-  nameWithType: Container.ICollection<IDrawable>.Clear()
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear()
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear*
-  name: ICollection<IDrawable>.Clear
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__Clear_
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Clear
-  isSpec: "True"
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear
-  nameWithType: Container.ICollection<IDrawable>.Clear
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Clear
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains(DotFeather.IDrawable)
-  name: ICollection<IDrawable>.Contains(IDrawable)
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__Contains_DotFeather_IDrawable_
-  commentId: M:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains(DotFeather.IDrawable)
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains(IDrawable)
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains(DotFeather.IDrawable)
-  nameWithType: Container.ICollection<IDrawable>.Contains(IDrawable)
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains(IDrawable)
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains*
-  name: ICollection<IDrawable>.Contains
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__Contains_
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Contains
-  isSpec: "True"
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains
-  nameWithType: Container.ICollection<IDrawable>.Contains
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Contains
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo(DotFeather.IDrawable[],System.Int32)
-  name: ICollection<IDrawable>.CopyTo(IDrawable[], Int32)
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__CopyTo_DotFeather_IDrawable___System_Int32_
-  commentId: M:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo(DotFeather.IDrawable[],System.Int32)
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo(IDrawable(), Int32)
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo(DotFeather.IDrawable[], System.Int32)
-  fullName.vb: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo(DotFeather.IDrawable(), System.Int32)
-  nameWithType: Container.ICollection<IDrawable>.CopyTo(IDrawable[], Int32)
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo(IDrawable(), Int32)
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo*
-  name: ICollection<IDrawable>.CopyTo
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__CopyTo_
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#CopyTo
-  isSpec: "True"
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo
-  nameWithType: Container.ICollection<IDrawable>.CopyTo
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.CopyTo
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count
-  name: ICollection<IDrawable>.Count
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__Count
-  commentId: P:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
-  nameWithType: Container.ICollection<IDrawable>.Count
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count*
-  name: ICollection<IDrawable>.Count
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__Count_
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Count
-  isSpec: "True"
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
-  nameWithType: Container.ICollection<IDrawable>.Count
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Count
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly
-  name: ICollection<IDrawable>.IsReadOnly
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__IsReadOnly
-  commentId: P:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
-  nameWithType: Container.ICollection<IDrawable>.IsReadOnly
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly*
-  name: ICollection<IDrawable>.IsReadOnly
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__IsReadOnly_
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#IsReadOnly
-  isSpec: "True"
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
-  nameWithType: Container.ICollection<IDrawable>.IsReadOnly
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.IsReadOnly
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove(DotFeather.IDrawable)
-  name: ICollection<IDrawable>.Remove(IDrawable)
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__Remove_DotFeather_IDrawable_
-  commentId: M:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove(DotFeather.IDrawable)
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove(IDrawable)
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove(DotFeather.IDrawable)
-  nameWithType: Container.ICollection<IDrawable>.Remove(IDrawable)
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove(IDrawable)
-- uid: DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove*
-  name: ICollection<IDrawable>.Remove
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_ICollection_DotFeather_IDrawable__Remove_
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#ICollection{DotFeather#IDrawable}#Remove
-  isSpec: "True"
-  name.vb: System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove
-  fullName: DotFeather.Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove
-  nameWithType: Container.ICollection<IDrawable>.Remove
-  nameWithType.vb: Container.System.Collections.Generic.ICollection<DotFeather.IDrawable>.Remove
-- uid: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf(DotFeather.IDrawable)
-  name: IList<IDrawable>.IndexOf(IDrawable)
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_IList_DotFeather_IDrawable__IndexOf_DotFeather_IDrawable_
-  commentId: M:DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf(DotFeather.IDrawable)
-  name.vb: System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf(IDrawable)
-  fullName: DotFeather.Container.System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf(DotFeather.IDrawable)
-  nameWithType: Container.IList<IDrawable>.IndexOf(IDrawable)
-  nameWithType.vb: Container.System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf(IDrawable)
-- uid: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf*
-  name: IList<IDrawable>.IndexOf
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_IList_DotFeather_IDrawable__IndexOf_
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#IndexOf
-  isSpec: "True"
-  name.vb: System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf
-  fullName: DotFeather.Container.System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf
-  nameWithType: Container.IList<IDrawable>.IndexOf
-  nameWithType.vb: Container.System.Collections.Generic.IList<DotFeather.IDrawable>.IndexOf
-- uid: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt(System.Int32)
-  name: IList<IDrawable>.RemoveAt(Int32)
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_IList_DotFeather_IDrawable__RemoveAt_System_Int32_
-  commentId: M:DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt(System.Int32)
-  name.vb: System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt(Int32)
-  fullName: DotFeather.Container.System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt(System.Int32)
-  nameWithType: Container.IList<IDrawable>.RemoveAt(Int32)
-  nameWithType.vb: Container.System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt(Int32)
-- uid: DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt*
-  name: IList<IDrawable>.RemoveAt
-  href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_Generic_IList_DotFeather_IDrawable__RemoveAt_
-  commentId: Overload:DotFeather.Container.System#Collections#Generic#IList{DotFeather#IDrawable}#RemoveAt
-  isSpec: "True"
-  name.vb: System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt
-  fullName: DotFeather.Container.System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt
-  nameWithType: Container.IList<IDrawable>.RemoveAt
-  nameWithType.vb: Container.System.Collections.Generic.IList<DotFeather.IDrawable>.RemoveAt
 - uid: DotFeather.Container.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
   href: api/DotFeather.Container.html#DotFeather_Container_System_Collections_IEnumerable_GetEnumerator
@@ -3595,6 +3565,12 @@ references:
   commentId: T:DotFeather.Sprite
   fullName: DotFeather.Sprite
   nameWithType: Sprite
+- uid: DotFeather.Sprite.#ctor(DotFeather.Texture2D)
+  name: Sprite(Texture2D)
+  href: api/DotFeather.Sprite.html#DotFeather_Sprite__ctor_DotFeather_Texture2D_
+  commentId: M:DotFeather.Sprite.#ctor(DotFeather.Texture2D)
+  fullName: DotFeather.Sprite.Sprite(DotFeather.Texture2D)
+  nameWithType: Sprite.Sprite(Texture2D)
 - uid: DotFeather.Sprite.#ctor(DotFeather.Texture2D,DotFeather.Vector,System.Single,DotFeather.Vector,System.Int32,System.String)
   name: Sprite(Texture2D, Vector, Single, Vector, Int32, String)
   href: api/DotFeather.Sprite.html#DotFeather_Sprite__ctor_DotFeather_Texture2D_DotFeather_Vector_System_Single_DotFeather_Vector_System_Int32_System_String_
@@ -3614,19 +3590,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.Sprite.Sprite
   nameWithType: Sprite.Sprite
-- uid: DotFeather.Sprite.Angle
-  name: Angle
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Angle
-  commentId: P:DotFeather.Sprite.Angle
-  fullName: DotFeather.Sprite.Angle
-  nameWithType: Sprite.Angle
-- uid: DotFeather.Sprite.Angle*
-  name: Angle
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Angle_
-  commentId: Overload:DotFeather.Sprite.Angle
-  isSpec: "True"
-  fullName: DotFeather.Sprite.Angle
-  nameWithType: Sprite.Angle
 - uid: DotFeather.Sprite.Destroy
   name: Destroy()
   href: api/DotFeather.Sprite.html#DotFeather_Sprite_Destroy
@@ -3640,19 +3603,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.Sprite.Destroy
   nameWithType: Sprite.Destroy
-- uid: DotFeather.Sprite.Draw(DotFeather.GameBase,DotFeather.Vector)
-  name: Draw(GameBase, Vector)
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Draw_DotFeather_GameBase_DotFeather_Vector_
-  commentId: M:DotFeather.Sprite.Draw(DotFeather.GameBase,DotFeather.Vector)
-  fullName: DotFeather.Sprite.Draw(DotFeather.GameBase, DotFeather.Vector)
-  nameWithType: Sprite.Draw(GameBase, Vector)
-- uid: DotFeather.Sprite.Draw*
-  name: Draw
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Draw_
-  commentId: Overload:DotFeather.Sprite.Draw
-  isSpec: "True"
-  fullName: DotFeather.Sprite.Draw
-  nameWithType: Sprite.Draw
 - uid: DotFeather.Sprite.LoadFrom(System.String)
   name: LoadFrom(String)
   href: api/DotFeather.Sprite.html#DotFeather_Sprite_LoadFrom_System_String_
@@ -3666,45 +3616,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.Sprite.LoadFrom
   nameWithType: Sprite.LoadFrom
-- uid: DotFeather.Sprite.Location
-  name: Location
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Location
-  commentId: P:DotFeather.Sprite.Location
-  fullName: DotFeather.Sprite.Location
-  nameWithType: Sprite.Location
-- uid: DotFeather.Sprite.Location*
-  name: Location
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Location_
-  commentId: Overload:DotFeather.Sprite.Location
-  isSpec: "True"
-  fullName: DotFeather.Sprite.Location
-  nameWithType: Sprite.Location
-- uid: DotFeather.Sprite.Name
-  name: Name
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Name
-  commentId: P:DotFeather.Sprite.Name
-  fullName: DotFeather.Sprite.Name
-  nameWithType: Sprite.Name
-- uid: DotFeather.Sprite.Name*
-  name: Name
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Name_
-  commentId: Overload:DotFeather.Sprite.Name
-  isSpec: "True"
-  fullName: DotFeather.Sprite.Name
-  nameWithType: Sprite.Name
-- uid: DotFeather.Sprite.Scale
-  name: Scale
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Scale
-  commentId: P:DotFeather.Sprite.Scale
-  fullName: DotFeather.Sprite.Scale
-  nameWithType: Sprite.Scale
-- uid: DotFeather.Sprite.Scale*
-  name: Scale
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_Scale_
-  commentId: Overload:DotFeather.Sprite.Scale
-  isSpec: "True"
-  fullName: DotFeather.Sprite.Scale
-  nameWithType: Sprite.Scale
 - uid: DotFeather.Sprite.Texture
   name: Texture
   href: api/DotFeather.Sprite.html#DotFeather_Sprite_Texture
@@ -3718,19 +3629,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.Sprite.Texture
   nameWithType: Sprite.Texture
-- uid: DotFeather.Sprite.ZOrder
-  name: ZOrder
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_ZOrder
-  commentId: P:DotFeather.Sprite.ZOrder
-  fullName: DotFeather.Sprite.ZOrder
-  nameWithType: Sprite.ZOrder
-- uid: DotFeather.Sprite.ZOrder*
-  name: ZOrder
-  href: api/DotFeather.Sprite.html#DotFeather_Sprite_ZOrder_
-  commentId: Overload:DotFeather.Sprite.ZOrder
-  isSpec: "True"
-  fullName: DotFeather.Sprite.ZOrder
-  nameWithType: Sprite.ZOrder
 - uid: DotFeather.SystemDrawingTypesToGLConverterExtension
   name: SystemDrawingTypesToGLConverterExtension
   href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html
@@ -4100,21 +3998,170 @@ references:
   isSpec: "True"
   fullName: DotFeather.Texture2D.Size
   nameWithType: Texture2D.Size
+- uid: DotFeather.TextureDrawableBase
+  name: TextureDrawableBase
+  href: api/DotFeather.TextureDrawableBase.html
+  commentId: T:DotFeather.TextureDrawableBase
+  fullName: DotFeather.TextureDrawableBase
+  nameWithType: TextureDrawableBase
+- uid: DotFeather.TextureDrawableBase.Angle
+  name: Angle
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Angle
+  commentId: P:DotFeather.TextureDrawableBase.Angle
+  fullName: DotFeather.TextureDrawableBase.Angle
+  nameWithType: TextureDrawableBase.Angle
+- uid: DotFeather.TextureDrawableBase.Angle*
+  name: Angle
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Angle_
+  commentId: Overload:DotFeather.TextureDrawableBase.Angle
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Angle
+  nameWithType: TextureDrawableBase.Angle
+- uid: DotFeather.TextureDrawableBase.Color
+  name: Color
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Color
+  commentId: P:DotFeather.TextureDrawableBase.Color
+  fullName: DotFeather.TextureDrawableBase.Color
+  nameWithType: TextureDrawableBase.Color
+- uid: DotFeather.TextureDrawableBase.Color*
+  name: Color
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Color_
+  commentId: Overload:DotFeather.TextureDrawableBase.Color
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Color
+  nameWithType: TextureDrawableBase.Color
+- uid: DotFeather.TextureDrawableBase.Destroy
+  name: Destroy()
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Destroy
+  commentId: M:DotFeather.TextureDrawableBase.Destroy
+  fullName: DotFeather.TextureDrawableBase.Destroy()
+  nameWithType: TextureDrawableBase.Destroy()
+- uid: DotFeather.TextureDrawableBase.Destroy*
+  name: Destroy
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Destroy_
+  commentId: Overload:DotFeather.TextureDrawableBase.Destroy
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Destroy
+  nameWithType: TextureDrawableBase.Destroy
+- uid: DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase,DotFeather.Vector)
+  name: Draw(GameBase, Vector)
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Draw_DotFeather_GameBase_DotFeather_Vector_
+  commentId: M:DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase,DotFeather.Vector)
+  fullName: DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase, DotFeather.Vector)
+  nameWithType: TextureDrawableBase.Draw(GameBase, Vector)
+- uid: DotFeather.TextureDrawableBase.Draw*
+  name: Draw
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Draw_
+  commentId: Overload:DotFeather.TextureDrawableBase.Draw
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Draw
+  nameWithType: TextureDrawableBase.Draw
+- uid: DotFeather.TextureDrawableBase.Height
+  name: Height
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Height
+  commentId: P:DotFeather.TextureDrawableBase.Height
+  fullName: DotFeather.TextureDrawableBase.Height
+  nameWithType: TextureDrawableBase.Height
+- uid: DotFeather.TextureDrawableBase.Height*
+  name: Height
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Height_
+  commentId: Overload:DotFeather.TextureDrawableBase.Height
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Height
+  nameWithType: TextureDrawableBase.Height
+- uid: DotFeather.TextureDrawableBase.Location
+  name: Location
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Location
+  commentId: P:DotFeather.TextureDrawableBase.Location
+  fullName: DotFeather.TextureDrawableBase.Location
+  nameWithType: TextureDrawableBase.Location
+- uid: DotFeather.TextureDrawableBase.Location*
+  name: Location
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Location_
+  commentId: Overload:DotFeather.TextureDrawableBase.Location
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Location
+  nameWithType: TextureDrawableBase.Location
+- uid: DotFeather.TextureDrawableBase.Name
+  name: Name
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Name
+  commentId: P:DotFeather.TextureDrawableBase.Name
+  fullName: DotFeather.TextureDrawableBase.Name
+  nameWithType: TextureDrawableBase.Name
+- uid: DotFeather.TextureDrawableBase.Name*
+  name: Name
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Name_
+  commentId: Overload:DotFeather.TextureDrawableBase.Name
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Name
+  nameWithType: TextureDrawableBase.Name
+- uid: DotFeather.TextureDrawableBase.Scale
+  name: Scale
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Scale
+  commentId: P:DotFeather.TextureDrawableBase.Scale
+  fullName: DotFeather.TextureDrawableBase.Scale
+  nameWithType: TextureDrawableBase.Scale
+- uid: DotFeather.TextureDrawableBase.Scale*
+  name: Scale
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Scale_
+  commentId: Overload:DotFeather.TextureDrawableBase.Scale
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Scale
+  nameWithType: TextureDrawableBase.Scale
+- uid: DotFeather.TextureDrawableBase.Texture
+  name: Texture
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Texture
+  commentId: P:DotFeather.TextureDrawableBase.Texture
+  fullName: DotFeather.TextureDrawableBase.Texture
+  nameWithType: TextureDrawableBase.Texture
+- uid: DotFeather.TextureDrawableBase.Texture*
+  name: Texture
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Texture_
+  commentId: Overload:DotFeather.TextureDrawableBase.Texture
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Texture
+  nameWithType: TextureDrawableBase.Texture
+- uid: DotFeather.TextureDrawableBase.Width
+  name: Width
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Width
+  commentId: P:DotFeather.TextureDrawableBase.Width
+  fullName: DotFeather.TextureDrawableBase.Width
+  nameWithType: TextureDrawableBase.Width
+- uid: DotFeather.TextureDrawableBase.Width*
+  name: Width
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_Width_
+  commentId: Overload:DotFeather.TextureDrawableBase.Width
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.Width
+  nameWithType: TextureDrawableBase.Width
+- uid: DotFeather.TextureDrawableBase.ZOrder
+  name: ZOrder
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_ZOrder
+  commentId: P:DotFeather.TextureDrawableBase.ZOrder
+  fullName: DotFeather.TextureDrawableBase.ZOrder
+  nameWithType: TextureDrawableBase.ZOrder
+- uid: DotFeather.TextureDrawableBase.ZOrder*
+  name: ZOrder
+  href: api/DotFeather.TextureDrawableBase.html#DotFeather_TextureDrawableBase_ZOrder_
+  commentId: Overload:DotFeather.TextureDrawableBase.ZOrder
+  isSpec: "True"
+  fullName: DotFeather.TextureDrawableBase.ZOrder
+  nameWithType: TextureDrawableBase.ZOrder
 - uid: DotFeather.TextureDrawer
   name: TextureDrawer
   href: api/DotFeather.TextureDrawer.html
   commentId: T:DotFeather.TextureDrawer
   fullName: DotFeather.TextureDrawer
   nameWithType: TextureDrawer
-- uid: DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color})
-  name: Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable<Color>)
-  href: api/DotFeather.TextureDrawer.html#DotFeather_TextureDrawer_Draw_DotFeather_GameBase_DotFeather_Texture2D_DotFeather_Vector_DotFeather_Vector_System_Single_System_Nullable_System_Drawing_Color__
-  commentId: M:DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color})
-  name.vb: Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable(Of Color))
-  fullName: DotFeather.TextureDrawer.Draw(DotFeather.GameBase, DotFeather.Texture2D, DotFeather.Vector, DotFeather.Vector, System.Single, System.Nullable<System.Drawing.Color>)
-  fullName.vb: DotFeather.TextureDrawer.Draw(DotFeather.GameBase, DotFeather.Texture2D, DotFeather.Vector, DotFeather.Vector, System.Single, System.Nullable(Of System.Drawing.Color))
-  nameWithType: TextureDrawer.Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable<Color>)
-  nameWithType.vb: TextureDrawer.Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable(Of Color))
+- uid: DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color},System.Nullable{System.Single},System.Nullable{System.Single})
+  name: Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable<Color>, Nullable<Single>, Nullable<Single>)
+  href: api/DotFeather.TextureDrawer.html#DotFeather_TextureDrawer_Draw_DotFeather_GameBase_DotFeather_Texture2D_DotFeather_Vector_DotFeather_Vector_System_Single_System_Nullable_System_Drawing_Color__System_Nullable_System_Single__System_Nullable_System_Single__
+  commentId: M:DotFeather.TextureDrawer.Draw(DotFeather.GameBase,DotFeather.Texture2D,DotFeather.Vector,DotFeather.Vector,System.Single,System.Nullable{System.Drawing.Color},System.Nullable{System.Single},System.Nullable{System.Single})
+  name.vb: Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable(Of Color), Nullable(Of Single), Nullable(Of Single))
+  fullName: DotFeather.TextureDrawer.Draw(DotFeather.GameBase, DotFeather.Texture2D, DotFeather.Vector, DotFeather.Vector, System.Single, System.Nullable<System.Drawing.Color>, System.Nullable<System.Single>, System.Nullable<System.Single>)
+  fullName.vb: DotFeather.TextureDrawer.Draw(DotFeather.GameBase, DotFeather.Texture2D, DotFeather.Vector, DotFeather.Vector, System.Single, System.Nullable(Of System.Drawing.Color), System.Nullable(Of System.Single), System.Nullable(Of System.Single))
+  nameWithType: TextureDrawer.Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable<Color>, Nullable<Single>, Nullable<Single>)
+  nameWithType.vb: TextureDrawer.Draw(GameBase, Texture2D, Vector, Vector, Single, Nullable(Of Color), Nullable(Of Single), Nullable(Of Single))
 - uid: DotFeather.TextureDrawer.Draw*
   name: Draw
   href: api/DotFeather.TextureDrawer.html#DotFeather_TextureDrawer_Draw_

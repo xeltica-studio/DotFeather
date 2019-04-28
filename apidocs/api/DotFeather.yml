@@ -27,6 +27,7 @@ items:
   - DotFeather.SystemDrawingTypesToGLConverterExtension
   - DotFeather.TextDrawable
   - DotFeather.Texture2D
+  - DotFeather.TextureDrawableBase
   - DotFeather.TextureDrawer
   - DotFeather.Tile
   - DotFeather.Tilemap
@@ -77,6 +78,12 @@ references:
   name: IDrawable
   nameWithType: IDrawable
   fullName: DotFeather.IDrawable
+- uid: DotFeather.TextureDrawableBase
+  commentId: T:DotFeather.TextureDrawableBase
+  parent: DotFeather
+  name: TextureDrawableBase
+  nameWithType: TextureDrawableBase
+  fullName: DotFeather.TextureDrawableBase
 - uid: DotFeather.ITile
   commentId: T:DotFeather.ITile
   parent: DotFeather

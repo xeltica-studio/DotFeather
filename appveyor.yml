@@ -1,4 +1,4 @@
-version: 1.0.2.{build}
+version: 1.0.3.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -42,9 +42,9 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    + Fix some properties of Container aren't public
+    + Fix drawing order is inverse
     ----
-    + Container のいくつかのプロパティが public でない不具合を修正
+    + 描画順が逆になっていたのを修正
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

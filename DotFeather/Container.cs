@@ -76,9 +76,13 @@ namespace DotFeather
 		/// 描画を開始します。
 		/// </summary>
 		public void Draw(GameBase game, Vector location)
-		{
-			foreach (var child in Children.ToList())
-				child.Draw(game, Location + location);
+        {
+            for (var i = this.Count - 1; i >= 0; i--)
+			{
+				if (this.Count - 1 < i)
+					continue;
+                this[i].Draw(game, Location + location);
+			}
 		}
 
 		/// <summary>

@@ -11,7 +11,7 @@ namespace DotFeather
 	{
 		public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{
-			BackgroundColor = Color.Black;
+			BackgroundColor = Color.Green;
 		}
 
 		public void DrawString(int x, int y, string text, Color? color = null)
@@ -55,24 +55,24 @@ namespace DotFeather
 				Location = new Vector(32, 32)
 			};
 
+            var graphic = new Graphic()
+                .Triangle(0, 128, 128, 128, 128, 0, Color.Brown, 4, Color.Red)
+                .Rect(0, 96, 128, 224, Color.Transparent, 1, Color.Lime)
+                .Ellipse(128, 0, 400, 100, Color.Black, 8, Color.Red);
+            scene.Add(graphic);
+
+            for (int _ = 0; _ < 100; _++)
+            {
+                var sp = new Sprite(chars[0], Random.Next(-Width, Width * 2), Random.Next(-Height, Height * 2));
+                scene.Add(sp);
+            }
+
 			var s = spriteChar = new Sprite(chars[0], 0, 0, 0, Vector.One);
-			sprite.Add(s);
 			sprite.Add(new Sprite(Texture2D.LoadFrom("Shadow.png"), 0, 14));
+            sprite.Add(s);
 			sprite.Location = new Vector(Width / 2, Height / 2);
 
 			scene.Add(sprite);
-
-			var graphic = new Graphic()
-				.Triangle(0, 128, 128, 128, 128, 0, Color.Brown, 4, Color.Red)
-				.Rect(0, 96, 128, 224, Color.Transparent, 1, Color.Lime)
-				.Ellipse(128, 0, 400, 100, Color.Black, 8, Color.Red);
-			scene.Add(graphic);
-
-			for (int _ = 0; _ < 100; _++)
-			{
-				var sp = new Sprite(chars[0], Random.Next(-Width, Width * 2), Random.Next(-Height, Height * 2));
-				scene.Add(sp);
-			}
 		}
 
 		protected override void OnUpdate(object sender, DFEventArgs e)

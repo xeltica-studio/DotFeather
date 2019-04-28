@@ -51,19 +51,13 @@ namespace DotFeather
 			GL.Enable(EnableCap.AlphaTest);
 			GL.AlphaFunc(AlphaFunction.Notequal, 0);
 
-			if (angle != 0)
+            using (new GLContext(PrimitiveType.Quads))
 			{
-				GL.Rotate(angle, Vector3d.UnitZ);
-			}
-
-			using (new GLContext(PrimitiveType.Quads))
-			{
-				GL.Rotate(180, new Vector3d(0, 0, 1));
 				Vertex(1, 1, verts[3], color);
 				Vertex(0, 1, verts[2], color);
 				Vertex(0, 0, verts[0], color);
 				Vertex(1, 0, verts[1], color);
-			}
+            }
 			GL.Disable(EnableCap.Texture2D);
 			GL.Disable(EnableCap.AlphaTest);
 		}

@@ -1,4 +1,4 @@
-version: 1.0.3.{build}
+version: 1.1.0.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -42,9 +42,16 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    + Fix drawing order is inverse
+    1.1.0 Better Graphics Update!
+    =========
+
+    + Add TextureDrawableBase as a base of all drawable classes which draw textures
+    + Fix Sprite.Scale works so wrongly
+    
     ----
-    + 描画順が逆になっていたのを修正
+   
+    + テクスチャを描画する全てのDrawableクラスの基底クラスとして、 TextureDrawableBase を追加
+    + Sprite.Scale の悪い挙動を修正
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

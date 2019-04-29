@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>DotFeather</id>
-    <version>1.0.3</version>
+    <version>1.1.0</version>
     <title>DotFeather</title>
     <authors>Xeltica</authors>
     <owners>Xeltica</owners>
@@ -13,6 +13,10 @@
     <tags>GameEngine</tags>
         <license type="expression">MIT</license>
     <releaseNotes>
+		1.1.0:
+		+ Add TextureDrawableBase as a base of all drawable classes which draw textures
+		+ Fix Sprite.Scale works so wrongly
+
 		1.0.3:
 		+ Fix drawing order is inverse
 

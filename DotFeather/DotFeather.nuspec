@@ -14,8 +14,10 @@
         <license type="expression">MIT</license>
     <releaseNotes>
 		1.1.0:
-		+ Add TextureDrawableBase as a base of all drawable classes which draw textures
-		+ Fix Sprite.Scale works so wrongly
+		+ Add TextureDrawableBase as a base of all drawable classes which draw textures	
+	    + Fix Sprite.Scale works so wrongly
+    	+ Add Time.Fps
+    	+ Optimize Behavior of TextDrawable 
 
 		1.0.3:
 		+ Fix drawing order is inverse

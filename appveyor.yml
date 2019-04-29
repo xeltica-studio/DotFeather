@@ -47,11 +47,15 @@ deploy:
 
     + Add TextureDrawableBase as a base of all drawable classes which draw textures
     + Fix Sprite.Scale works so wrongly
+    + Add Time.Fps
+    + Optimize Behavior of TextDrawable 
     
     ----
    
     + テクスチャを描画する全てのDrawableクラスの基底クラスとして、 TextureDrawableBase を追加
     + Sprite.Scale の悪い挙動を修正
+    + Time.Fps を追加
+    + TextDrawable の挙動を最適化
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

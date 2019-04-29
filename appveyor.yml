@@ -1,4 +1,4 @@
-version: 1.1.0.{build}
+version: 1.1.1.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -42,20 +42,11 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    1.1.0 Better Graphics Update!
-    =========
-
-    + Add TextureDrawableBase as a base of all drawable classes which draw textures
-    + Fix Sprite.Scale works so wrongly
-    + Add Time.Fps
-    + Optimize Behavior of TextDrawable 
+    + Fix broken API Compatibility of TextDrawable.RenderedTexture
     
     ----
    
-    + テクスチャを描画する全てのDrawableクラスの基底クラスとして、 TextureDrawableBase を追加
-    + Sprite.Scale の悪い挙動を修正
-    + Time.Fps を追加
-    + TextDrawable の挙動を最適化
+    + TextDrawable.RenderedTexture の API 互換性が壊れていたのを修正
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

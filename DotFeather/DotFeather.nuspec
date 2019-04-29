@@ -13,6 +13,9 @@
     <tags>GameEngine</tags>
         <license type="expression">MIT</license>
     <releaseNotes>
+		1.1.1:
+		+ Fix broken API Compatibility of TextDrawable.RenderedTexture
+
 		1.1.0:
 		+ Add TextureDrawableBase as a base of all drawable classes which draw textures	
 	    + Fix Sprite.Scale works so wrongly
@@ -29,22 +32,6 @@
 		+ Add FontDrawable
 		+ Fix bugs
 		+ Change namespace
-
-		0.9.0-beta:
-		+ Add AudioPlayer
-		+ It now supports wav and ogg playback
-
-		0.8.0-beta:
-		+ Add Graphic.Circle()
-		+ Add Graphic.Triangle()
-		+ Add A feature to draw outline to Graphic methods
-		+ Add Destroy() method to IDrawable
-		+ Add Sprite.LoadFrom()
-		+ Add Tile.LoadFrom()
-		+ Fix a bug that Graphic object won't be drawn
-
-		0.7.0-beta: 
-		+ First Beta Release
 	</releaseNotes>
 	<dependencies>
 	  <dependency id="OpenTK.NetStandard" version="1.0.4" />

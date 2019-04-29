@@ -60,6 +60,15 @@ namespace DotFeather
 		}
 
 		/// <summary>
+		/// Same as <see cref="TextureDrawableBase.Texture"/>
+		/// </summary>
+		public Texture2D RenderedTexture
+		{
+			get => Texture;
+			private set => Texture = value;
+		}
+
+		/// <summary>
 		/// <see cref="TextDrawable"/> の新しいインスタンスを初期化します。
 		/// </summary>
 		/// <param name="text"></param>

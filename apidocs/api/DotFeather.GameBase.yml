@@ -507,7 +507,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Randomize
     path: ../DotFeather/GameBase.cs
-    startLine: 167
+    startLine: 174
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -546,7 +546,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Run
     path: ../DotFeather/GameBase.cs
-    startLine: 176
+    startLine: 183
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -581,7 +581,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Exit
     path: ../DotFeather/GameBase.cs
-    startLine: 186
+    startLine: 193
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -617,7 +617,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/GameBase.cs
-    startLine: 199
+    startLine: 206
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -659,7 +659,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/GameBase.cs
-    startLine: 207
+    startLine: 214
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -698,7 +698,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnLoad
     path: ../DotFeather/GameBase.cs
-    startLine: 212
+    startLine: 219
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -737,7 +737,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUnload
     path: ../DotFeather/GameBase.cs
-    startLine: 216
+    startLine: 223
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -776,7 +776,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnResize
     path: ../DotFeather/GameBase.cs
-    startLine: 220
+    startLine: 227
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -815,7 +815,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Random
     path: ../DotFeather/GameBase.cs
-    startLine: 225
+    startLine: 232
   assemblies:
   - DotFeather
   namespace: DotFeather

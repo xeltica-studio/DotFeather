@@ -3752,19 +3752,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.TextDrawable.TextDrawable
   nameWithType: TextDrawable.TextDrawable
-- uid: DotFeather.TextDrawable.Angle
-  name: Angle
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Angle
-  commentId: P:DotFeather.TextDrawable.Angle
-  fullName: DotFeather.TextDrawable.Angle
-  nameWithType: TextDrawable.Angle
-- uid: DotFeather.TextDrawable.Angle*
-  name: Angle
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Angle_
-  commentId: Overload:DotFeather.TextDrawable.Angle
-  isSpec: "True"
-  fullName: DotFeather.TextDrawable.Angle
-  nameWithType: TextDrawable.Angle
 - uid: DotFeather.TextDrawable.Color
   name: Color
   href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Color
@@ -3778,32 +3765,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.TextDrawable.Color
   nameWithType: TextDrawable.Color
-- uid: DotFeather.TextDrawable.Destroy
-  name: Destroy()
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Destroy
-  commentId: M:DotFeather.TextDrawable.Destroy
-  fullName: DotFeather.TextDrawable.Destroy()
-  nameWithType: TextDrawable.Destroy()
-- uid: DotFeather.TextDrawable.Destroy*
-  name: Destroy
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Destroy_
-  commentId: Overload:DotFeather.TextDrawable.Destroy
-  isSpec: "True"
-  fullName: DotFeather.TextDrawable.Destroy
-  nameWithType: TextDrawable.Destroy
-- uid: DotFeather.TextDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
-  name: Draw(GameBase, Vector)
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Draw_DotFeather_GameBase_DotFeather_Vector_
-  commentId: M:DotFeather.TextDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
-  fullName: DotFeather.TextDrawable.Draw(DotFeather.GameBase, DotFeather.Vector)
-  nameWithType: TextDrawable.Draw(GameBase, Vector)
-- uid: DotFeather.TextDrawable.Draw*
-  name: Draw
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Draw_
-  commentId: Overload:DotFeather.TextDrawable.Draw
-  isSpec: "True"
-  fullName: DotFeather.TextDrawable.Draw
-  nameWithType: TextDrawable.Draw
 - uid: DotFeather.TextDrawable.Font
   name: Font
   href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Font
@@ -3817,58 +3778,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.TextDrawable.Font
   nameWithType: TextDrawable.Font
-- uid: DotFeather.TextDrawable.Location
-  name: Location
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Location
-  commentId: P:DotFeather.TextDrawable.Location
-  fullName: DotFeather.TextDrawable.Location
-  nameWithType: TextDrawable.Location
-- uid: DotFeather.TextDrawable.Location*
-  name: Location
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Location_
-  commentId: Overload:DotFeather.TextDrawable.Location
-  isSpec: "True"
-  fullName: DotFeather.TextDrawable.Location
-  nameWithType: TextDrawable.Location
-- uid: DotFeather.TextDrawable.Name
-  name: Name
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Name
-  commentId: P:DotFeather.TextDrawable.Name
-  fullName: DotFeather.TextDrawable.Name
-  nameWithType: TextDrawable.Name
-- uid: DotFeather.TextDrawable.Name*
-  name: Name
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Name_
-  commentId: Overload:DotFeather.TextDrawable.Name
-  isSpec: "True"
-  fullName: DotFeather.TextDrawable.Name
-  nameWithType: TextDrawable.Name
-- uid: DotFeather.TextDrawable.RenderedTexture
-  name: RenderedTexture
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_RenderedTexture
-  commentId: P:DotFeather.TextDrawable.RenderedTexture
-  fullName: DotFeather.TextDrawable.RenderedTexture
-  nameWithType: TextDrawable.RenderedTexture
-- uid: DotFeather.TextDrawable.RenderedTexture*
-  name: RenderedTexture
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_RenderedTexture_
-  commentId: Overload:DotFeather.TextDrawable.RenderedTexture
-  isSpec: "True"
-  fullName: DotFeather.TextDrawable.RenderedTexture
-  nameWithType: TextDrawable.RenderedTexture
-- uid: DotFeather.TextDrawable.Scale
-  name: Scale
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Scale
-  commentId: P:DotFeather.TextDrawable.Scale
-  fullName: DotFeather.TextDrawable.Scale
-  nameWithType: TextDrawable.Scale
-- uid: DotFeather.TextDrawable.Scale*
-  name: Scale
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Scale_
-  commentId: Overload:DotFeather.TextDrawable.Scale
-  isSpec: "True"
-  fullName: DotFeather.TextDrawable.Scale
-  nameWithType: TextDrawable.Scale
 - uid: DotFeather.TextDrawable.Text
   name: Text
   href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Text
@@ -3895,19 +3804,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.TextDrawable.UpdateTexture
   nameWithType: TextDrawable.UpdateTexture
-- uid: DotFeather.TextDrawable.ZOrder
-  name: ZOrder
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_ZOrder
-  commentId: P:DotFeather.TextDrawable.ZOrder
-  fullName: DotFeather.TextDrawable.ZOrder
-  nameWithType: TextDrawable.ZOrder
-- uid: DotFeather.TextDrawable.ZOrder*
-  name: ZOrder
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_ZOrder_
-  commentId: Overload:DotFeather.TextDrawable.ZOrder
-  isSpec: "True"
-  fullName: DotFeather.TextDrawable.ZOrder
-  nameWithType: TextDrawable.ZOrder
 - uid: DotFeather.Texture2D
   name: Texture2D
   href: api/DotFeather.Texture2D.html
@@ -4578,6 +4474,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.Time.DeltaTime
   nameWithType: Time.DeltaTime
+- uid: DotFeather.Time.Fps
+  name: Fps
+  href: api/DotFeather.Time.html#DotFeather_Time_Fps
+  commentId: P:DotFeather.Time.Fps
+  fullName: DotFeather.Time.Fps
+  nameWithType: Time.Fps
+- uid: DotFeather.Time.Fps*
+  name: Fps
+  href: api/DotFeather.Time.html#DotFeather_Time_Fps_
+  commentId: Overload:DotFeather.Time.Fps
+  isSpec: "True"
+  fullName: DotFeather.Time.Fps
+  nameWithType: Time.Fps
 - uid: DotFeather.Time.Now
   name: Now
   href: api/DotFeather.Time.html#DotFeather_Time_Now

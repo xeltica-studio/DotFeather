@@ -45,6 +45,7 @@ items:
   - System.Object
   derivedClasses:
   - DotFeather.Sprite
+  - DotFeather.TextDrawable
   implements:
   - DotFeather.IDrawable
   inheritedMembers:

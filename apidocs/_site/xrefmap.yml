@@ -3778,6 +3778,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.TextDrawable.Font
   nameWithType: TextDrawable.Font
+- uid: DotFeather.TextDrawable.RenderedTexture
+  name: RenderedTexture
+  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_RenderedTexture
+  commentId: P:DotFeather.TextDrawable.RenderedTexture
+  fullName: DotFeather.TextDrawable.RenderedTexture
+  nameWithType: TextDrawable.RenderedTexture
+- uid: DotFeather.TextDrawable.RenderedTexture*
+  name: RenderedTexture
+  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_RenderedTexture_
+  commentId: Overload:DotFeather.TextDrawable.RenderedTexture
+  isSpec: "True"
+  fullName: DotFeather.TextDrawable.RenderedTexture
+  nameWithType: TextDrawable.RenderedTexture
 - uid: DotFeather.TextDrawable.Text
   name: Text
   href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Text

@@ -309,6 +309,7 @@
   "DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)": "DotFeather.TextDrawable.yml",
   "DotFeather.TextDrawable.Color": "DotFeather.TextDrawable.yml",
   "DotFeather.TextDrawable.Font": "DotFeather.TextDrawable.yml",
+  "DotFeather.TextDrawable.RenderedTexture": "DotFeather.TextDrawable.yml",
   "DotFeather.TextDrawable.Text": "DotFeather.TextDrawable.yml",
   "DotFeather.TextDrawable.UpdateTexture": "DotFeather.TextDrawable.yml",
   "DotFeather.Texture2D": "DotFeather.Texture2D.yml",

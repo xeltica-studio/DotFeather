@@ -1,4 +1,4 @@
-version: 1.1.1.{build}
+version: 1.1.2.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -42,11 +42,11 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    + Fix broken API Compatibility of TextDrawable.RenderedTexture
+    + Fix some Drawables' Destroy() process
     
     ----
    
-    + TextDrawable.RenderedTexture の API 互換性が壊れていたのを修正
+    + 幾つか Drawable の Destroy() プロセスを修正
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

@@ -88,7 +88,7 @@ namespace DotFeather
 		/// <summary>
 		/// この <see cref="Container"/> を破棄します。
 		/// </summary>
-		public void Destroy() => Children.ForEach(e => e.Destroy());
+		public void Destroy() => Clear();
 
         /// <summary>
         /// 列挙子を取得します。
@@ -109,7 +109,11 @@ namespace DotFeather
 		/// <summary>
 		/// オブジェクトを削除します。
 		/// </summary>
-		public void Clear() => Children.Clear();
+		public void Clear() 
+		{
+			Children.ForEach(child => child.Destroy());
+			Children.Clear();
+		}
 
 		/// <summary>
 		/// 指定したオブジェクトが存在するかどうかを判断します。

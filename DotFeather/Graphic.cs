@@ -194,6 +194,7 @@ namespace DotFeather
 		/// </summary>
 		public Graphic Clear()
 		{
+            Drawables.ForEach(d => d.Destroy());
 			Drawables.Clear();
 			return this;
 		}
@@ -201,6 +202,6 @@ namespace DotFeather
 		/// <summary>
 		/// この <see cref="Graphic"/> を削除します。
 		/// </summary>
-		public void Destroy() => Drawables.ForEach(d => d.Destroy());
+		public void Destroy() => Clear();
 	}
 }

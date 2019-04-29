@@ -108,6 +108,14 @@ namespace DotFeather
 			bmp.Dispose();
 		}
 
+		/// <summary>
+		/// このオブジェクトを破棄します。
+		/// </summary>
+		public override void Destroy()
+		{
+			Texture.Dispose();
+		}
+
 		private string text;
 		private Font font;
 		private Color? color;

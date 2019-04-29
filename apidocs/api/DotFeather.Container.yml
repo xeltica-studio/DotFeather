@@ -662,7 +662,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Contains
     path: ../DotFeather/Container.cs
-    startLine: 116
+    startLine: 120
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -701,7 +701,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CopyTo
     path: ../DotFeather/Container.cs
-    startLine: 121
+    startLine: 125
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -743,7 +743,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Remove
     path: ../DotFeather/Container.cs
-    startLine: 126
+    startLine: 130
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -783,7 +783,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.IEnumerable.GetEnumerator
     path: ../DotFeather/Container.cs
-    startLine: 131
+    startLine: 135
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -817,7 +817,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Count
     path: ../DotFeather/Container.cs
-    startLine: 136
+    startLine: 140
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -856,7 +856,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsReadOnly
     path: ../DotFeather/Container.cs
-    startLine: 141
+    startLine: 145
   assemblies:
   - DotFeather
   namespace: DotFeather

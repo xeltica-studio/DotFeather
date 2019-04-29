@@ -933,7 +933,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphic.cs
-    startLine: 203
+    startLine: 204
   assemblies:
   - DotFeather
   namespace: DotFeather

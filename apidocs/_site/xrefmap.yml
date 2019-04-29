@@ -3765,6 +3765,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.TextDrawable.Color
   nameWithType: TextDrawable.Color
+- uid: DotFeather.TextDrawable.Destroy
+  name: Destroy()
+  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Destroy
+  commentId: M:DotFeather.TextDrawable.Destroy
+  fullName: DotFeather.TextDrawable.Destroy()
+  nameWithType: TextDrawable.Destroy()
+- uid: DotFeather.TextDrawable.Destroy*
+  name: Destroy
+  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Destroy_
+  commentId: Overload:DotFeather.TextDrawable.Destroy
+  isSpec: "True"
+  fullName: DotFeather.TextDrawable.Destroy
+  nameWithType: TextDrawable.Destroy
 - uid: DotFeather.TextDrawable.Font
   name: Font
   href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable_Font

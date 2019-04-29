@@ -7,6 +7,7 @@ items:
   children:
   - DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)
   - DotFeather.TextDrawable.Color
+  - DotFeather.TextDrawable.Destroy
   - DotFeather.TextDrawable.Font
   - DotFeather.TextDrawable.RenderedTexture
   - DotFeather.TextDrawable.Text
@@ -51,7 +52,6 @@ items:
   - DotFeather.TextureDrawableBase.Width
   - DotFeather.TextureDrawableBase.Height
   - DotFeather.TextureDrawableBase.Texture
-  - DotFeather.TextureDrawableBase.Destroy
   - DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase,DotFeather.Vector)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -294,6 +294,41 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: DotFeather.TextDrawable.Destroy
+  commentId: M:DotFeather.TextDrawable.Destroy
+  id: Destroy
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: Destroy()
+  nameWithType: TextDrawable.Destroy()
+  fullName: DotFeather.TextDrawable.Destroy()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/TextDrawable.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Destroy
+    path: ../DotFeather/TextDrawable.cs
+    startLine: 113
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nこのオブジェクトを破棄します。\n"
+  example: []
+  syntax:
+    content: public override void Destroy()
+    content.vb: Public Overrides Sub Destroy
+  overridden: DotFeather.TextureDrawableBase.Destroy
+  overload: DotFeather.TextDrawable.Destroy*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: DotFeather.IDrawable
   commentId: T:DotFeather.IDrawable
@@ -367,34 +402,6 @@ references:
   name: Texture
   nameWithType: TextureDrawableBase.Texture
   fullName: DotFeather.TextureDrawableBase.Texture
-- uid: DotFeather.TextureDrawableBase.Destroy
-  commentId: M:DotFeather.TextureDrawableBase.Destroy
-  parent: DotFeather.TextureDrawableBase
-  name: Destroy()
-  nameWithType: TextureDrawableBase.Destroy()
-  fullName: DotFeather.TextureDrawableBase.Destroy()
-  spec.csharp:
-  - uid: DotFeather.TextureDrawableBase.Destroy
-    name: Destroy
-    nameWithType: TextureDrawableBase.Destroy
-    fullName: DotFeather.TextureDrawableBase.Destroy
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: DotFeather.TextureDrawableBase.Destroy
-    name: Destroy
-    nameWithType: TextureDrawableBase.Destroy
-    fullName: DotFeather.TextureDrawableBase.Destroy
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase,DotFeather.Vector)
   commentId: M:DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase,DotFeather.Vector)
   parent: DotFeather.TextureDrawableBase
@@ -887,3 +894,36 @@ references:
   name: UpdateTexture
   nameWithType: TextDrawable.UpdateTexture
   fullName: DotFeather.TextDrawable.UpdateTexture
+- uid: DotFeather.TextureDrawableBase.Destroy
+  commentId: M:DotFeather.TextureDrawableBase.Destroy
+  parent: DotFeather.TextureDrawableBase
+  name: Destroy()
+  nameWithType: TextureDrawableBase.Destroy()
+  fullName: DotFeather.TextureDrawableBase.Destroy()
+  spec.csharp:
+  - uid: DotFeather.TextureDrawableBase.Destroy
+    name: Destroy
+    nameWithType: TextureDrawableBase.Destroy
+    fullName: DotFeather.TextureDrawableBase.Destroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotFeather.TextureDrawableBase.Destroy
+    name: Destroy
+    nameWithType: TextureDrawableBase.Destroy
+    fullName: DotFeather.TextureDrawableBase.Destroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotFeather.TextDrawable.Destroy*
+  commentId: Overload:DotFeather.TextDrawable.Destroy
+  name: Destroy
+  nameWithType: TextDrawable.Destroy
+  fullName: DotFeather.TextDrawable.Destroy

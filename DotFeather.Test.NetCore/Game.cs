@@ -28,7 +28,7 @@ namespace DotFeather
 				Exit(0);
 			var delta = Time.Now % 10 < 5 ? 1 : 2;
 			neko.Scale = Vector.One * delta;
-			text.Text = $"{e.DeltaTime}\n{neko.Scale} {delta} {neko.Texture.Size} {neko.Width} {neko.Height}";
+			text.Text = $"{Time.Fps}\n{neko.Scale} {delta} {neko.Texture.Size} {neko.Width} {neko.Height}";
 			neko.Location = new Vector(Input.Mouse.Position.X, Input.Mouse.Position.Y);
         }
 

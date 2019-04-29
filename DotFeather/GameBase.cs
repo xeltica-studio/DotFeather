@@ -117,6 +117,13 @@ namespace DotFeather
 			{
 				Time.Now += e.Time;
 				Time.DeltaTime = e.Time;
+				frameCount++;
+				if (prevSecond != DateTime.Now.Second)
+				{
+					Time.Fps = frameCount;
+					frameCount = 0;
+					prevSecond = DateTime.Now.Second;
+				}
 				OnUpdate(sender, new DFEventArgs
 				{
 					DeltaTime = e.Time,
@@ -226,6 +233,8 @@ namespace DotFeather
 		protected Random Random { get; private set; } = new Random();
 
 		private int? statusCode;
+		private int frameCount;
+		private int prevSecond;
 		private readonly GameWindow window;
 	}
 }

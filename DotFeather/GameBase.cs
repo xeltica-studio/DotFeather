@@ -113,7 +113,7 @@ namespace DotFeather
 				TargetUpdateFrequency = refreshRate,
 			};
 
-			window.UpdateFrame += (object sender, FrameEventArgs e) =>
+			window.UpdateFrame += (s, e) =>
 			{
 				Time.Now += e.Time;
 				Time.DeltaTime = e.Time;
@@ -124,13 +124,13 @@ namespace DotFeather
 					frameCount = 0;
 					prevSecond = DateTime.Now.Second;
 				}
-				OnUpdate(sender, new DFEventArgs
+				OnUpdate(s, new DFEventArgs
 				{
 					DeltaTime = e.Time,
 				});
 			};
 
-			window.RenderFrame += (object sender, FrameEventArgs e) =>
+			window.RenderFrame += (_, __) =>
 			{
 				GL.ClearColor(BackgroundColor.ToGL());
 				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
@@ -139,7 +139,7 @@ namespace DotFeather
 				Dpi = (float)window.ClientSize.Width / window.Size.Width;
 			};
 
-			window.Load += (object sender, EventArgs e) =>
+			window.Load += (s, e) =>
 			{
 				GL.ClearColor(Color.Black);
 				GL.LineWidth(1);
@@ -148,19 +148,19 @@ namespace DotFeather
 				GL.Enable(EnableCap.DepthTest);
 
 				window.WindowBorder = WindowBorder.Resizable;
-				OnLoad(sender, e);
+				OnLoad(s, e);
 			};
 
-			window.Resize += (object sender, EventArgs e) =>
+			window.Resize += (s, e) =>
 			{
 				GL.Viewport(window.ClientRectangle);
-				OnResize(sender, e);
+				OnResize(s, e);
 			};
 
-			window.Unload += (object sender, EventArgs e) =>
-			{
-				OnUnload(sender, e);
-			};
+			window.Unload += OnUnload;
+
+			window.KeyDown += (s, e) => OnKeyDown(s, new DFKeyEventArgs(e));
+            window.KeyUp += (s, e) => OnKeyUp(s, new DFKeyEventArgs(e));
 
 			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
 			{
@@ -218,10 +218,12 @@ namespace DotFeather
 		/// ウィンドウが開かれたときに一度だけ呼び出されます。
 		/// </summary>
 		protected virtual void OnLoad(object sender, EventArgs e) { }
+
 		/// <summary>
 		/// ウィンドウが閉じられるときに一度だけ呼び出されます。
 		/// </summary>
 		protected virtual void OnUnload(object sender, EventArgs e) { }
+
 		/// <summary>
 		/// ウィンドウがリサイズされたときに呼び出されます。
 		/// </summary>

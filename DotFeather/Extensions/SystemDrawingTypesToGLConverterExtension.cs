@@ -11,7 +11,7 @@ namespace DotFeather
 	public static class SystemDrawingTypesToGLConverterExtension
 	{
 		/// <summary>
-		/// GL版に変換します。
+		/// GL 版に変換します。
 		/// </summary>
 		public static TK.Color ToGL(this Color c) => new TK.Color(c.R, c.G, c.B, c.A);
 
@@ -79,5 +79,15 @@ namespace DotFeather
 		/// <see cref="System.Drawing"/> 版に変換します。
 		/// </summary>
 		public static RectangleF ToDrawing(this TK.RectangleF s) => new RectangleF(s.Location.ToDrawing(), s.Size.ToDrawing());
+
+        /// <summary>
+        /// <see cref="DotFeather"/> 版に変換します。
+        /// </summary>
+        public static DFKeyCode ToDF(this Key key) => (DFKeyCode)(int)key;
+
+        /// <summary>
+        /// <see cref="OpenTK.Input"/> 版に変換します。
+        /// </summary>
+        public static Key ToTK(this DFKeyCode key) => (Key)(int)key;
 	}
 }

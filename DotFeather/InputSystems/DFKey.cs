@@ -7,9 +7,9 @@ namespace DotFeather
 	/// </summary>
 	public struct DFKey
 	{
-		internal DFKey(Key key)
+		internal DFKey(DFKeyCode key)
 		{
-			source = key;
+			source = key.ToTK();
 		}
 
         /// <summary>

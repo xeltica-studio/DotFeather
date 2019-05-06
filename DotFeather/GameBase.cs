@@ -229,6 +229,16 @@ namespace DotFeather
 		/// </summary>
 		protected virtual void OnResize(object sender, EventArgs e) { }
 
+        /// <summary>
+        /// キーが押されたときに呼び出されます。
+        /// </summary>
+        protected virtual void OnKeyDown(object sender, DFKeyEventArgs e) { }
+
+        /// <summary>
+        /// キーが離されたときに呼び出されます。
+        /// </summary>
+        protected virtual void OnKeyUp(object sender, DFKeyEventArgs e) { }
+
 		/// <summary>
 		/// 乱数生成器を取得します。
 		/// </summary>

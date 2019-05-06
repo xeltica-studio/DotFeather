@@ -62,7 +62,7 @@ namespace DotFeather
 		/// <summary>
 		///
 		/// </summary>
-		public void Draw(GameBase game, Tilemap _, Vector location, Color? color)
+		public void Draw(GameBase game, Tilemap map, Vector location, Color? color)
 		{
 			if (Animations != default)
 			{
@@ -78,7 +78,7 @@ namespace DotFeather
 				timer += Time.DeltaTime;
 			}
 
-			TextureDrawer.Draw(game, Texture, location, Vector.One, 0, color);
+			TextureDrawer.Draw(game, Texture, location, map.Scale, map.Angle, color);
 		}
 
 		/// <summary>

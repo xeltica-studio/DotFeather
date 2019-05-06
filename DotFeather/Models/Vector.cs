@@ -32,8 +32,12 @@ namespace DotFeather
 		public static Vector operator -(Vector v1, Vector v2) => new Vector(v1.X - v2.X, v1.Y - v2.Y);
 		/// <summary></summary>
 		public static Vector operator *(Vector v1, float v2) => new Vector(v1.X * v2, v1.Y * v2);
+        /// <summary></summary>
+        public static Vector operator *(Vector v1, Vector v2) => new Vector(v1.X * v2.X, v1.Y * v2.Y);
 		/// <summary></summary>
 		public static Vector operator /(Vector v1, float v2) => new Vector(v1.X / v2, v1.Y / v2);
+        /// <summary></summary>
+        public static Vector operator /(Vector v1, Vector v2) => new Vector(v1.X / v2.X, v1.Y / v2.Y);
 		/// <summary></summary>
 		public static Vector operator -(Vector v1) => new Vector(-v1.X, -v1.Y);
 

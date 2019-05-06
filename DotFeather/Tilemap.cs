@@ -70,7 +70,7 @@ namespace DotFeather
             foreach (var kv in tiles)
             {
                 var (x, y) = kv.Key;
-                var loc = new Vector(x * TileSize.X, y * TileSize.Y);
+                var loc = new Vector(x, y) * TileSize * Scale;
                 kv.Value.tile.Draw(game, this, Location + location + loc, kv.Value.color);
             }
         }

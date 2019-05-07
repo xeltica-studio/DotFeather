@@ -16,12 +16,14 @@ namespace DotFeather
 
 		protected override void OnLoad(object sender, EventArgs e)
 		{
-			var neko = Tile.LoadFrom("neko.png");
-			map = new Tilemap(Vector.One * 32);
-			map.Fill(0, 0, 16, 16, neko);
-			map.Location = new Vector(8, 8);
 			Root.Add(text = new TextDrawable("", new Font(FontFamily.GenericSansSerif, 32), Color.White));
-			Root.Add(map);
+			for (int i = 0; i < 100; i++)
+			{
+				var s = Sprite.LoadFrom("neko.png");
+				s.Location = new Vector(Random.Next(512), Random.Next(512));
+				s.Scale = new Vector((float)Random.NextDouble() * 2 + 0.25f, (float)Random.NextDouble() * 2 + 0.25f);
+				Root.Add(s);
+			}
 		}
 
 		protected override void OnUpdate(object sender, DFEventArgs e)
@@ -29,10 +31,9 @@ namespace DotFeather
 			if (Input.Keyboard.Escape.IsKeyUp)
 				Exit(0);
 			text.Text = Input.Keyboard.Space.IsKeyDown ? "おした" : "おしてない";
-			map.Scale = Vector.One * Math.Abs((float)Math.Sin(DFMath.ToRadian((float)Time.Now * 90)) * 2);
+			Root.Scale = Vector.One * Math.Abs((float)Math.Sin(DFMath.ToRadian((float)Time.Now * 90)) * 2);
         }
 
-        private Tilemap map;
         private TextDrawable text;
     }
 }

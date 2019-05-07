@@ -81,7 +81,17 @@ namespace DotFeather
 			{
 				if (this.Count - 1 < i)
 					continue;
+				// 位置を調整
+                var baseLoc = this[i].Location;
+				var baseScale = this[i].Scale;
+				this[i].Scale *= Scale;
+				this[i].Location *= Scale;
+
                 this[i].Draw(game, Location + location);
+
+				// 戻す
+				this[i].Scale = baseScale;
+				this[i].Location = baseLoc;
 			}
 		}
 

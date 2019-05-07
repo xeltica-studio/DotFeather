@@ -53,10 +53,10 @@ namespace DotFeather
 					foreach (var dp in Buffer)
 					{
 						var vec = dp + new Vector2(Location.X + location.X, Location.Y + location.Y);
+                        vec *= new Vector2(Scale.X, Scale.Y);
 						// Convert device point to viewport point
 						var vp = vec.ToViewportPoint(hw, hh);
-						GL.Color4(color);
-						GL.Vertex2(vp);
+						Vertex(color, vp);
 					}
 				}
 			}
@@ -71,6 +71,7 @@ namespace DotFeather
 					foreach (var dp in Buffer)
 					{
 						var vec = dp + new Vector2(Location.X + location.X, Location.Y + location.Y);
+						vec *= new Vector2(Scale.X, Scale.Y);
 						// Convert device point to viewport point
 						var vp = vec.ToViewportPoint(hw, hh);
 						if (first == null)

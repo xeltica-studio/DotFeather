@@ -17,13 +17,12 @@ namespace DotFeather
 		protected override void OnLoad(object sender, EventArgs e)
 		{
 			Root.Add(text = new TextDrawable("", new Font(FontFamily.GenericSansSerif, 32), Color.White));
-			for (int i = 0; i < 100; i++)
+			g = new Graphic();
+			for (int i = 0; i < 4; i++)
 			{
-				var s = Sprite.LoadFrom("neko.png");
-				s.Location = new Vector(Random.Next(512), Random.Next(512));
-				s.Scale = new Vector((float)Random.NextDouble() * 2 + 0.25f, (float)Random.NextDouble() * 2 + 0.25f);
-				Root.Add(s);
+				RandomDraw();
 			}
+			Root.Add(g);
 		}
 
 		protected override void OnUpdate(object sender, DFEventArgs e)
@@ -31,9 +30,34 @@ namespace DotFeather
 			if (Input.Keyboard.Escape.IsKeyUp)
 				Exit(0);
 			text.Text = Input.Keyboard.Space.IsKeyDown ? "おした" : "おしてない";
-			Root.Scale = Vector.One * Math.Abs((float)Math.Sin(DFMath.ToRadian((float)Time.Now * 90)) * 2);
+			g.Scale = Vector.One * Math.Abs((float)Math.Sin(DFMath.ToRadian((float)Time.Now * 90)) * 2);
+			if (Input.Keyboard.Space.IsKeyDown)
+				RandomDraw();
         }
 
+		private void RandomDraw()
+		{
+			switch (Random.Next(5))
+			{
+				case 0:
+					g.Pixel(Random.Next(0, 400), Random.Next(0, 400), Random.NextColor());
+					break;
+                case 1:
+                    g.Line(Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.NextColor());
+                    break;
+                case 2:
+					g.Rect(Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.NextColor(), Random.Next(5), Random.NextColor());
+                    break;
+                case 3:
+                    g.Ellipse(Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.NextColor(), Random.Next(5), Random.NextColor());
+                    break;
+                case 4:
+                    g.Triangle(Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.NextColor(), Random.Next(5), Random.NextColor());
+                    break;
+			}
+		}
+
         private TextDrawable text;
+		private Graphic g;
     }
 }

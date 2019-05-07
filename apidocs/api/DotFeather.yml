@@ -11,6 +11,8 @@ items:
   - DotFeather.DFEventArgs
   - DotFeather.DFKey
   - DotFeather.DFKeyboard
+  - DotFeather.DFKeyCode
+  - DotFeather.DFKeyEventArgs
   - DotFeather.DFMath
   - DotFeather.DFMouse
   - DotFeather.GameBase
@@ -22,6 +24,7 @@ items:
   - DotFeather.ITile
   - DotFeather.MiscUtility
   - DotFeather.OpenTKManagedHandleBase`1
+  - DotFeather.RandomExtension
   - DotFeather.SpaceConverter
   - DotFeather.Sprite
   - DotFeather.SystemDrawingTypesToGLConverterExtension
@@ -96,8 +99,14 @@ references:
   name: Tile
   nameWithType: Tile
   fullName: DotFeather.Tile
+- uid: DotFeather.RandomExtension
+  commentId: T:DotFeather.RandomExtension
+  name: RandomExtension
+  nameWithType: RandomExtension
+  fullName: DotFeather.RandomExtension
 - uid: DotFeather.SystemDrawingTypesToGLConverterExtension
   commentId: T:DotFeather.SystemDrawingTypesToGLConverterExtension
+  parent: DotFeather
   name: SystemDrawingTypesToGLConverterExtension
   nameWithType: SystemDrawingTypesToGLConverterExtension
   fullName: DotFeather.SystemDrawingTypesToGLConverterExtension
@@ -202,6 +211,12 @@ references:
   name: DFKeyboard
   nameWithType: DFKeyboard
   fullName: DotFeather.DFKeyboard
+- uid: DotFeather.DFKeyCode
+  commentId: T:DotFeather.DFKeyCode
+  parent: DotFeather
+  name: DFKeyCode
+  nameWithType: DFKeyCode
+  fullName: DotFeather.DFKeyCode
 - uid: DotFeather.DFMouse
   commentId: T:DotFeather.DFMouse
   parent: DotFeather
@@ -214,6 +229,12 @@ references:
   name: DFEventArgs
   nameWithType: DFEventArgs
   fullName: DotFeather.DFEventArgs
+- uid: DotFeather.DFKeyEventArgs
+  commentId: T:DotFeather.DFKeyEventArgs
+  parent: DotFeather
+  name: DFKeyEventArgs
+  nameWithType: DFKeyEventArgs
+  fullName: DotFeather.DFKeyEventArgs
 - uid: DotFeather.Texture2D
   commentId: T:DotFeather.Texture2D
   parent: DotFeather

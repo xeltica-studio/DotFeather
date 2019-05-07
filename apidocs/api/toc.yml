@@ -16,6 +16,10 @@
     name: DFKey
   - uid: DotFeather.DFKeyboard
     name: DFKeyboard
+  - uid: DotFeather.DFKeyCode
+    name: DFKeyCode
+  - uid: DotFeather.DFKeyEventArgs
+    name: DFKeyEventArgs
   - uid: DotFeather.DFMath
     name: DFMath
   - uid: DotFeather.DFMouse
@@ -39,6 +43,8 @@
   - uid: DotFeather.OpenTKManagedHandleBase`1
     name: OpenTKManagedHandleBase<T>
     name.vb: OpenTKManagedHandleBase(Of T)
+  - uid: DotFeather.RandomExtension
+    name: RandomExtension
   - uid: DotFeather.SpaceConverter
     name: SpaceConverter
   - uid: DotFeather.Sprite

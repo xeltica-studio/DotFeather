@@ -1,37 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: DotFeather.DFKey
-  commentId: T:DotFeather.DFKey
-  id: DFKey
+- uid: DotFeather.RandomExtension
+  commentId: T:DotFeather.RandomExtension
+  id: RandomExtension
   parent: DotFeather
   children:
-  - DotFeather.DFKey.IsKeyDown
-  - DotFeather.DFKey.IsKeyUp
-  - DotFeather.DFKey.IsPressed
-  - DotFeather.DFKey.op_Implicit(DotFeather.DFKey)~System.Boolean
+  - DotFeather.RandomExtension.NextColor(System.Random,System.Int32)
+  - DotFeather.RandomExtension.NextVector(System.Random,System.Int32,System.Int32)
+  - DotFeather.RandomExtension.NextVectorFloat(System.Random,System.Int32,System.Int32)
   langs:
   - csharp
   - vb
-  name: DFKey
-  nameWithType: DFKey
-  fullName: DotFeather.DFKey
+  name: RandomExtension
+  nameWithType: RandomExtension
+  fullName: DotFeather.RandomExtension
   type: Class
   source:
     remote:
-      path: DotFeather/InputSystems/DFKey.cs
+      path: DotFeather/Extensions/RandomExtension.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: DFKey
-    path: ../DotFeather/InputSystems/DFKey.cs
-    startLine: 7
+    id: RandomExtension
+    path: ../DotFeather/Extensions/RandomExtension.cs
+    startLine: 8
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーボードのキーを表します。\n"
+  summary: "\n乱数生成機を拡張します。\n"
   example: []
   syntax:
-    content: public class DFKey
-    content.vb: Public Class DFKey
+    content: public static class RandomExtension
+    content.vb: Public Module RandomExtension
   inheritance:
   - System.Object
   inheritedMembers:
@@ -44,167 +43,150 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
+  - static
   - class
   modifiers.vb:
   - Public
-  - Class
-- uid: DotFeather.DFKey.IsPressed
-  commentId: P:DotFeather.DFKey.IsPressed
-  id: IsPressed
-  parent: DotFeather.DFKey
+  - Module
+- uid: DotFeather.RandomExtension.NextColor(System.Random,System.Int32)
+  commentId: M:DotFeather.RandomExtension.NextColor(System.Random,System.Int32)
+  id: NextColor(System.Random,System.Int32)
+  isExtensionMethod: true
+  parent: DotFeather.RandomExtension
   langs:
   - csharp
   - vb
-  name: IsPressed
-  nameWithType: DFKey.IsPressed
-  fullName: DotFeather.DFKey.IsPressed
-  type: Property
+  name: NextColor(Random, Int32)
+  nameWithType: RandomExtension.NextColor(Random, Int32)
+  fullName: DotFeather.RandomExtension.NextColor(System.Random, System.Int32)
+  type: Method
   source:
     remote:
-      path: DotFeather/InputSystems/DFKey.cs
+      path: DotFeather/Extensions/RandomExtension.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: IsPressed
-    path: ../DotFeather/InputSystems/DFKey.cs
-    startLine: 15
+    id: NextColor
+    path: ../DotFeather/Extensions/RandomExtension.cs
+    startLine: 14
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーが押されているかどうかを示す値を取得します。\n"
+  summary: "\nランダムな色を取得します。\n"
   example: []
   syntax:
-    content: public bool IsPressed { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-      description: <code>true</code> であれば押されています。<code>false</code> であれば押されていません。
-    content.vb: Public ReadOnly Property IsPressed As Boolean
-  overload: DotFeather.DFKey.IsPressed*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKey.IsKeyDown
-  commentId: P:DotFeather.DFKey.IsKeyDown
-  id: IsKeyDown
-  parent: DotFeather.DFKey
-  langs:
-  - csharp
-  - vb
-  name: IsKeyDown
-  nameWithType: DFKey.IsKeyDown
-  fullName: DotFeather.DFKey.IsKeyDown
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKey.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: IsKeyDown
-    path: ../DotFeather/InputSystems/DFKey.cs
-    startLine: 21
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: "\nキーがこのフレームで押されたかどうかを示す値を取得します。\n"
-  example: []
-  syntax:
-    content: public bool IsKeyDown { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-      description: <code>true</code> であればたった今押されました。<code>false</code> であればそうでありません。
-    content.vb: Public ReadOnly Property IsKeyDown As Boolean
-  overload: DotFeather.DFKey.IsKeyDown*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKey.IsKeyUp
-  commentId: P:DotFeather.DFKey.IsKeyUp
-  id: IsKeyUp
-  parent: DotFeather.DFKey
-  langs:
-  - csharp
-  - vb
-  name: IsKeyUp
-  nameWithType: DFKey.IsKeyUp
-  fullName: DotFeather.DFKey.IsKeyUp
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKey.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: IsKeyUp
-    path: ../DotFeather/InputSystems/DFKey.cs
-    startLine: 27
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: "\nキーがこのフレームで離されたかどうかを示す値を取得します。\n"
-  example: []
-  syntax:
-    content: public bool IsKeyUp { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-      description: <code>true</code> であればたった今離されました。<code>false</code> であればそうでありません。
-    content.vb: Public ReadOnly Property IsKeyUp As Boolean
-  overload: DotFeather.DFKey.IsKeyUp*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKey.op_Implicit(DotFeather.DFKey)~System.Boolean
-  commentId: M:DotFeather.DFKey.op_Implicit(DotFeather.DFKey)~System.Boolean
-  id: op_Implicit(DotFeather.DFKey)~System.Boolean
-  parent: DotFeather.DFKey
-  langs:
-  - csharp
-  - vb
-  name: Implicit(DFKey to Boolean)
-  nameWithType: DFKey.Implicit(DFKey to Boolean)
-  fullName: DotFeather.DFKey.Implicit(DotFeather.DFKey to System.Boolean)
-  type: Operator
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKey.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: op_Implicit
-    path: ../DotFeather/InputSystems/DFKey.cs
-    startLine: 33
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: "\nキーが押されているかどうかを取得します。\n"
-  example: []
-  syntax:
-    content: public static implicit operator bool (DFKey key)
+    content: public static Color NextColor(this Random r, int max = 256)
     parameters:
-    - id: key
-      type: DotFeather.DFKey
+    - id: r
+      type: System.Random
+    - id: max
+      type: System.Int32
     return:
-      type: System.Boolean
-      description: <code>true</code> であれば押されています。<code>false</code> であれば押されていません。
-    content.vb: Public Shared Widening Operator CType(key As DFKey) As Boolean
-  overload: DotFeather.DFKey.op_Implicit*
-  nameWithType.vb: DFKey.Widening(DFKey to Boolean)
+      type: System.Drawing.Color
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function NextColor(r As Random, max As Integer = 256) As Color
+  overload: DotFeather.RandomExtension.NextColor*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: DotFeather.DFKey.Widening(DotFeather.DFKey to System.Boolean)
-  name.vb: Widening(DFKey to Boolean)
+- uid: DotFeather.RandomExtension.NextVector(System.Random,System.Int32,System.Int32)
+  commentId: M:DotFeather.RandomExtension.NextVector(System.Random,System.Int32,System.Int32)
+  id: NextVector(System.Random,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: DotFeather.RandomExtension
+  langs:
+  - csharp
+  - vb
+  name: NextVector(Random, Int32, Int32)
+  nameWithType: RandomExtension.NextVector(Random, Int32, Int32)
+  fullName: DotFeather.RandomExtension.NextVector(System.Random, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/RandomExtension.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: NextVector
+    path: ../DotFeather/Extensions/RandomExtension.cs
+    startLine: 19
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nランダムなベクトルを取得します。 x, y 成分はどちらも整数です。\n"
+  example: []
+  syntax:
+    content: public static Vector NextVector(this Random r, int xMax, int yMax)
+    parameters:
+    - id: r
+      type: System.Random
+    - id: xMax
+      type: System.Int32
+    - id: yMax
+      type: System.Int32
+    return:
+      type: DotFeather.Vector
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function NextVector(r As Random, xMax As Integer, yMax As Integer) As Vector
+  overload: DotFeather.RandomExtension.NextVector*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.RandomExtension.NextVectorFloat(System.Random,System.Int32,System.Int32)
+  commentId: M:DotFeather.RandomExtension.NextVectorFloat(System.Random,System.Int32,System.Int32)
+  id: NextVectorFloat(System.Random,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: DotFeather.RandomExtension
+  langs:
+  - csharp
+  - vb
+  name: NextVectorFloat(Random, Int32, Int32)
+  nameWithType: RandomExtension.NextVectorFloat(Random, Int32, Int32)
+  fullName: DotFeather.RandomExtension.NextVectorFloat(System.Random, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/RandomExtension.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: NextVectorFloat
+    path: ../DotFeather/Extensions/RandomExtension.cs
+    startLine: 24
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nランダムなベクター値を取得します。 x, y 成分はどちらも実数です。\n"
+  example: []
+  syntax:
+    content: public static Vector NextVectorFloat(this Random r, int xMax = 1, int yMax = 1)
+    parameters:
+    - id: r
+      type: System.Random
+    - id: xMax
+      type: System.Int32
+    - id: yMax
+      type: System.Int32
+    return:
+      type: DotFeather.Vector
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function NextVectorFloat(r As Random, xMax As Integer = 1, yMax As Integer = 1) As Vector
+  overload: DotFeather.RandomExtension.NextVectorFloat*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: DotFeather
   commentId: N:DotFeather
@@ -503,39 +485,51 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: DotFeather.DFKey.IsPressed*
-  commentId: Overload:DotFeather.DFKey.IsPressed
-  name: IsPressed
-  nameWithType: DFKey.IsPressed
-  fullName: DotFeather.DFKey.IsPressed
-- uid: System.Boolean
-  commentId: T:System.Boolean
+- uid: DotFeather.RandomExtension.NextColor*
+  commentId: Overload:DotFeather.RandomExtension.NextColor
+  name: NextColor
+  nameWithType: RandomExtension.NextColor
+  fullName: DotFeather.RandomExtension.NextColor
+- uid: System.Random
+  commentId: T:System.Random
   parent: System
   isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: DotFeather.DFKey.IsKeyDown*
-  commentId: Overload:DotFeather.DFKey.IsKeyDown
-  name: IsKeyDown
-  nameWithType: DFKey.IsKeyDown
-  fullName: DotFeather.DFKey.IsKeyDown
-- uid: DotFeather.DFKey.IsKeyUp*
-  commentId: Overload:DotFeather.DFKey.IsKeyUp
-  name: IsKeyUp
-  nameWithType: DFKey.IsKeyUp
-  fullName: DotFeather.DFKey.IsKeyUp
-- uid: DotFeather.DFKey.op_Implicit*
-  commentId: Overload:DotFeather.DFKey.op_Implicit
-  name: Implicit
-  nameWithType: DFKey.Implicit
-  fullName: DotFeather.DFKey.Implicit
-  nameWithType.vb: DFKey.Widening
-  fullName.vb: DotFeather.DFKey.Widening
-  name.vb: Widening
-- uid: DotFeather.DFKey
-  commentId: T:DotFeather.DFKey
+  name: Random
+  nameWithType: Random
+  fullName: System.Random
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Drawing.Color
+  commentId: T:System.Drawing.Color
+  parent: System.Drawing
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: System.Drawing.Color
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+- uid: DotFeather.RandomExtension.NextVector*
+  commentId: Overload:DotFeather.RandomExtension.NextVector
+  name: NextVector
+  nameWithType: RandomExtension.NextVector
+  fullName: DotFeather.RandomExtension.NextVector
+- uid: DotFeather.Vector
+  commentId: T:DotFeather.Vector
   parent: DotFeather
-  name: DFKey
-  nameWithType: DFKey
-  fullName: DotFeather.DFKey
+  name: Vector
+  nameWithType: Vector
+  fullName: DotFeather.Vector
+- uid: DotFeather.RandomExtension.NextVectorFloat*
+  commentId: Overload:DotFeather.RandomExtension.NextVectorFloat
+  name: NextVectorFloat
+  nameWithType: RandomExtension.NextVectorFloat
+  fullName: DotFeather.RandomExtension.NextVectorFloat

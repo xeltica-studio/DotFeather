@@ -11,6 +11,8 @@ items:
   - DotFeather.GameBase.Dpi
   - DotFeather.GameBase.Exit(System.Int32)
   - DotFeather.GameBase.Height
+  - DotFeather.GameBase.OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)
+  - DotFeather.GameBase.OnKeyUp(System.Object,DotFeather.DFKeyEventArgs)
   - DotFeather.GameBase.OnLoad(System.Object,System.EventArgs)
   - DotFeather.GameBase.OnResize(System.Object,System.EventArgs)
   - DotFeather.GameBase.OnUnload(System.Object,System.EventArgs)
@@ -507,7 +509,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Randomize
     path: ../DotFeather/GameBase.cs
-    startLine: 174
+    startLine: 175
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -546,7 +548,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Run
     path: ../DotFeather/GameBase.cs
-    startLine: 183
+    startLine: 184
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -581,7 +583,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Exit
     path: ../DotFeather/GameBase.cs
-    startLine: 193
+    startLine: 194
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -617,7 +619,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/GameBase.cs
-    startLine: 206
+    startLine: 207
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -659,7 +661,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/GameBase.cs
-    startLine: 214
+    startLine: 215
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -698,7 +700,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnLoad
     path: ../DotFeather/GameBase.cs
-    startLine: 219
+    startLine: 220
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -737,7 +739,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUnload
     path: ../DotFeather/GameBase.cs
-    startLine: 223
+    startLine: 225
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -776,7 +778,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnResize
     path: ../DotFeather/GameBase.cs
-    startLine: 227
+    startLine: 230
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -791,6 +793,84 @@ items:
       type: System.EventArgs
     content.vb: Protected Overridable Sub OnResize(sender As Object, e As EventArgs)
   overload: DotFeather.GameBase.OnResize*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: DotFeather.GameBase.OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)
+  commentId: M:DotFeather.GameBase.OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)
+  id: OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: OnKeyDown(Object, DFKeyEventArgs)
+  nameWithType: GameBase.OnKeyDown(Object, DFKeyEventArgs)
+  fullName: DotFeather.GameBase.OnKeyDown(System.Object, DotFeather.DFKeyEventArgs)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: OnKeyDown
+    path: ../DotFeather/GameBase.cs
+    startLine: 235
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nキーが押されたときに呼び出されます。\n"
+  example: []
+  syntax:
+    content: protected virtual void OnKeyDown(object sender, DFKeyEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DotFeather.DFKeyEventArgs
+    content.vb: Protected Overridable Sub OnKeyDown(sender As Object, e As DFKeyEventArgs)
+  overload: DotFeather.GameBase.OnKeyDown*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: DotFeather.GameBase.OnKeyUp(System.Object,DotFeather.DFKeyEventArgs)
+  commentId: M:DotFeather.GameBase.OnKeyUp(System.Object,DotFeather.DFKeyEventArgs)
+  id: OnKeyUp(System.Object,DotFeather.DFKeyEventArgs)
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: OnKeyUp(Object, DFKeyEventArgs)
+  nameWithType: GameBase.OnKeyUp(Object, DFKeyEventArgs)
+  fullName: DotFeather.GameBase.OnKeyUp(System.Object, DotFeather.DFKeyEventArgs)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: OnKeyUp
+    path: ../DotFeather/GameBase.cs
+    startLine: 240
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nキーが離されたときに呼び出されます。\n"
+  example: []
+  syntax:
+    content: protected virtual void OnKeyUp(object sender, DFKeyEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DotFeather.DFKeyEventArgs
+    content.vb: Protected Overridable Sub OnKeyUp(sender As Object, e As DFKeyEventArgs)
+  overload: DotFeather.GameBase.OnKeyUp*
   modifiers.csharp:
   - protected
   - virtual
@@ -815,7 +895,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Random
     path: ../DotFeather/GameBase.cs
-    startLine: 232
+    startLine: 245
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1424,6 +1504,22 @@ references:
   name: OnResize
   nameWithType: GameBase.OnResize
   fullName: DotFeather.GameBase.OnResize
+- uid: DotFeather.GameBase.OnKeyDown*
+  commentId: Overload:DotFeather.GameBase.OnKeyDown
+  name: OnKeyDown
+  nameWithType: GameBase.OnKeyDown
+  fullName: DotFeather.GameBase.OnKeyDown
+- uid: DotFeather.DFKeyEventArgs
+  commentId: T:DotFeather.DFKeyEventArgs
+  parent: DotFeather
+  name: DFKeyEventArgs
+  nameWithType: DFKeyEventArgs
+  fullName: DotFeather.DFKeyEventArgs
+- uid: DotFeather.GameBase.OnKeyUp*
+  commentId: Overload:DotFeather.GameBase.OnKeyUp
+  name: OnKeyUp
+  nameWithType: GameBase.OnKeyUp
+  fullName: DotFeather.GameBase.OnKeyUp
 - uid: DotFeather.GameBase.Random*
   commentId: Overload:DotFeather.GameBase.Random
   name: Random

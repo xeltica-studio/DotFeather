@@ -11,9 +11,11 @@ items:
   - DotFeather.Vector.GetHashCode
   - DotFeather.Vector.One
   - DotFeather.Vector.op_Addition(DotFeather.Vector,DotFeather.Vector)
+  - DotFeather.Vector.op_Division(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.op_Division(DotFeather.Vector,System.Single)
   - DotFeather.Vector.op_Equality(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.op_Inequality(DotFeather.Vector,DotFeather.Vector)
+  - DotFeather.Vector.op_Multiply(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.op_Multiply(DotFeather.Vector,System.Single)
   - DotFeather.Vector.op_Subtraction(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.op_UnaryNegation(DotFeather.Vector)
@@ -294,6 +296,47 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: DotFeather.Vector.op_Multiply(DotFeather.Vector,DotFeather.Vector)
+  commentId: M:DotFeather.Vector.op_Multiply(DotFeather.Vector,DotFeather.Vector)
+  id: op_Multiply(DotFeather.Vector,DotFeather.Vector)
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Vector, Vector)
+  nameWithType: Vector.Multiply(Vector, Vector)
+  fullName: DotFeather.Vector.Multiply(DotFeather.Vector, DotFeather.Vector)
+  type: Operator
+  source:
+    remote:
+      path: DotFeather/Models/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: op_Multiply
+    path: ../DotFeather/Models/Vector.cs
+    startLine: 35
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: ''
+  example: []
+  syntax:
+    content: public static Vector operator *(Vector v1, Vector v2)
+    parameters:
+    - id: v1
+      type: DotFeather.Vector
+    - id: v2
+      type: DotFeather.Vector
+    return:
+      type: DotFeather.Vector
+    content.vb: Public Shared Operator *(v1 As Vector, v2 As Vector) As Vector
+  overload: DotFeather.Vector.op_Multiply*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: DotFeather.Vector.op_Division(DotFeather.Vector,System.Single)
   commentId: M:DotFeather.Vector.op_Division(DotFeather.Vector,System.Single)
   id: op_Division(DotFeather.Vector,System.Single)
@@ -312,7 +355,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Division
     path: ../DotFeather/Models/Vector.cs
-    startLine: 35
+    startLine: 37
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -328,6 +371,47 @@ items:
     return:
       type: DotFeather.Vector
     content.vb: Public Shared Operator /(v1 As Vector, v2 As Single) As Vector
+  overload: DotFeather.Vector.op_Division*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.Vector.op_Division(DotFeather.Vector,DotFeather.Vector)
+  commentId: M:DotFeather.Vector.op_Division(DotFeather.Vector,DotFeather.Vector)
+  id: op_Division(DotFeather.Vector,DotFeather.Vector)
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Division(Vector, Vector)
+  nameWithType: Vector.Division(Vector, Vector)
+  fullName: DotFeather.Vector.Division(DotFeather.Vector, DotFeather.Vector)
+  type: Operator
+  source:
+    remote:
+      path: DotFeather/Models/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: op_Division
+    path: ../DotFeather/Models/Vector.cs
+    startLine: 39
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: ''
+  example: []
+  syntax:
+    content: public static Vector operator /(Vector v1, Vector v2)
+    parameters:
+    - id: v1
+      type: DotFeather.Vector
+    - id: v2
+      type: DotFeather.Vector
+    return:
+      type: DotFeather.Vector
+    content.vb: Public Shared Operator /(v1 As Vector, v2 As Vector) As Vector
   overload: DotFeather.Vector.op_Division*
   modifiers.csharp:
   - public
@@ -353,7 +437,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_UnaryNegation
     path: ../DotFeather/Models/Vector.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -392,7 +476,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Equality
     path: ../DotFeather/Models/Vector.cs
-    startLine: 41
+    startLine: 45
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -433,7 +517,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Inequality
     path: ../DotFeather/Models/Vector.cs
-    startLine: 43
+    startLine: 47
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -474,7 +558,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Equals
     path: ../DotFeather/Models/Vector.cs
-    startLine: 48
+    startLine: 52
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -514,7 +598,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Equals
     path: ../DotFeather/Models/Vector.cs
-    startLine: 56
+    startLine: 60
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -553,7 +637,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetHashCode
     path: ../DotFeather/Models/Vector.cs
-    startLine: 66
+    startLine: 70
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -590,7 +674,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToString
     path: ../DotFeather/Models/Vector.cs
-    startLine: 77
+    startLine: 81
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -627,7 +711,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Zero
     path: ../DotFeather/Models/Vector.cs
-    startLine: 82
+    startLine: 86
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -664,7 +748,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: One
     path: ../DotFeather/Models/Vector.cs
-    startLine: 87
+    startLine: 91
   assemblies:
   - DotFeather
   namespace: DotFeather

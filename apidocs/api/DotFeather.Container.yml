@@ -482,7 +482,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Container.cs
-    startLine: 90
+    startLine: 100
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -516,7 +516,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Container.cs
-    startLine: 95
+    startLine: 105
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -552,7 +552,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IndexOf
     path: ../DotFeather/Container.cs
-    startLine: 101
+    startLine: 111
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -591,7 +591,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RemoveAt
     path: ../DotFeather/Container.cs
-    startLine: 106
+    startLine: 116
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -628,7 +628,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Container.cs
-    startLine: 111
+    startLine: 121
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -662,7 +662,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Contains
     path: ../DotFeather/Container.cs
-    startLine: 120
+    startLine: 130
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -701,7 +701,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CopyTo
     path: ../DotFeather/Container.cs
-    startLine: 125
+    startLine: 135
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -743,7 +743,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Remove
     path: ../DotFeather/Container.cs
-    startLine: 130
+    startLine: 140
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -783,7 +783,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.IEnumerable.GetEnumerator
     path: ../DotFeather/Container.cs
-    startLine: 135
+    startLine: 145
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -817,7 +817,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Count
     path: ../DotFeather/Container.cs
-    startLine: 140
+    startLine: 150
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -856,7 +856,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsReadOnly
     path: ../DotFeather/Container.cs
-    startLine: 145
+    startLine: 155
   assemblies:
   - DotFeather
   namespace: DotFeather

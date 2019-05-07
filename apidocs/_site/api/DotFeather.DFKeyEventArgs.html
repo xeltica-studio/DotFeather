@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DFKey
+    <title>Class DFKeyEventArgs
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DFKey
+    <meta name="title" content="Class DFKeyEventArgs
    ">
     <meta name="generator" content="docfx 2.41.0.0">
     
@@ -68,21 +68,25 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DotFeather.DFKey">
+            <article class="content wrap" id="_content" data-uid="DotFeather.DFKeyEventArgs">
   
   
-  <h1 id="DotFeather_DFKey" data-uid="DotFeather.DFKey" class="text-break">Class DFKey
+  <h1 id="DotFeather_DFKeyEventArgs" data-uid="DotFeather.DFKeyEventArgs" class="text-break">Class DFKeyEventArgs
   </h1>
-  <div class="markdown level0 summary"><p>キーボードのキーを表します。</p>
+  <div class="markdown level0 summary"><p>キーボードイベントの引数です。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>&#35242;&#23376;&#38306;&#20418;</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DFKey</span></div>
+    <div class="level1"><span class="xref">System.EventArgs</span></div>
+    <div class="level2"><span class="xref">DFKeyEventArgs</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32153;&#25215;&#12373;&#12428;&#12383;&#12513;&#12531;&#12496;&#12540;</h5>
+    <div>
+      <span class="xref">System.EventArgs.Empty</span>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -107,27 +111,27 @@
   </div>
   <h6><strong>&#21517;&#21069;&#31354;&#38291;</strong>: <a class="xref" href="DotFeather.html">DotFeather</a></h6>
   <h6><strong>&#12450;&#12475;&#12531;&#12502;&#12522;</strong>: DotFeather.dll</h6>
-  <h5 id="DotFeather_DFKey_syntax">&#27083;&#25991;</h5>
+  <h5 id="DotFeather_DFKeyEventArgs_syntax">&#27083;&#25991;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DFKey</code></pre>
+    <pre><code class="lang-csharp hljs">public class DFKeyEventArgs : EventArgs</code></pre>
   </div>
   <h3 id="properties">&#12503;&#12525;&#12497;&#12486;&#12451;
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKey_IsKeyDown.md&amp;value=---%0Auid%3A%20DotFeather.DFKey.IsKeyDown%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKeyEventArgs_AltPressed.md&amp;value=---%0Auid%3A%20DotFeather.DFKeyEventArgs.AltPressed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/InputSystems/DFKey.cs/#L22">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/DFKeyEventArgs.cs/#L20">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
   </span>
-  <a id="DotFeather_DFKey_IsKeyDown_" data-uid="DotFeather.DFKey.IsKeyDown*"></a>
-  <h4 id="DotFeather_DFKey_IsKeyDown" data-uid="DotFeather.DFKey.IsKeyDown">IsKeyDown</h4>
-  <div class="markdown level1 summary"><p>キーがこのフレームで押されたかどうかを示す値を取得します。</p>
+  <a id="DotFeather_DFKeyEventArgs_AltPressed_" data-uid="DotFeather.DFKeyEventArgs.AltPressed*"></a>
+  <h4 id="DotFeather_DFKeyEventArgs_AltPressed" data-uid="DotFeather.DFKeyEventArgs.AltPressed">AltPressed</h4>
+  <div class="markdown level1 summary"><p>Alt キーが押されたかどうかを示す値を取得します。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#23459;&#35328;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsKeyDown { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AltPressed { get; }</code></pre>
   </div>
   <h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,26 +144,26 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p><code>true</code> であればたった今押されました。<code>false</code> であればそうでありません。</p>
+        <td><p>Alt キーが押された場合は <code>true</code>。それ以外の場合は <code>false</code>。</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKey_IsKeyUp.md&amp;value=---%0Auid%3A%20DotFeather.DFKey.IsKeyUp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKeyEventArgs_CtrlPressed.md&amp;value=---%0Auid%3A%20DotFeather.DFKeyEventArgs.CtrlPressed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/InputSystems/DFKey.cs/#L28">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/DFKeyEventArgs.cs/#L26">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
   </span>
-  <a id="DotFeather_DFKey_IsKeyUp_" data-uid="DotFeather.DFKey.IsKeyUp*"></a>
-  <h4 id="DotFeather_DFKey_IsKeyUp" data-uid="DotFeather.DFKey.IsKeyUp">IsKeyUp</h4>
-  <div class="markdown level1 summary"><p>キーがこのフレームで離されたかどうかを示す値を取得します。</p>
+  <a id="DotFeather_DFKeyEventArgs_CtrlPressed_" data-uid="DotFeather.DFKeyEventArgs.CtrlPressed*"></a>
+  <h4 id="DotFeather_DFKeyEventArgs_CtrlPressed" data-uid="DotFeather.DFKeyEventArgs.CtrlPressed">CtrlPressed</h4>
+  <div class="markdown level1 summary"><p>Ctrl キーが押されたかどうかを示す値を取得します。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#23459;&#35328;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsKeyUp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool CtrlPressed { get; }</code></pre>
   </div>
   <h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,26 +176,58 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p><code>true</code> であればたった今離されました。<code>false</code> であればそうでありません。</p>
+        <td><p>Ctrl キーが押された場合は <code>true</code>。それ以外の場合は <code>false</code>。</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKey_IsPressed.md&amp;value=---%0Auid%3A%20DotFeather.DFKey.IsPressed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKeyEventArgs_Key.md&amp;value=---%0Auid%3A%20DotFeather.DFKeyEventArgs.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/InputSystems/DFKey.cs/#L16">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/DFKeyEventArgs.cs/#L14">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
   </span>
-  <a id="DotFeather_DFKey_IsPressed_" data-uid="DotFeather.DFKey.IsPressed*"></a>
-  <h4 id="DotFeather_DFKey_IsPressed" data-uid="DotFeather.DFKey.IsPressed">IsPressed</h4>
-  <div class="markdown level1 summary"><p>キーが押されているかどうかを示す値を取得します。</p>
+  <a id="DotFeather_DFKeyEventArgs_Key_" data-uid="DotFeather.DFKeyEventArgs.Key*"></a>
+  <h4 id="DotFeather_DFKeyEventArgs_Key" data-uid="DotFeather.DFKeyEventArgs.Key">Key</h4>
+  <div class="markdown level1 summary"><p>押されたキーを取得します。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#23459;&#35328;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPressed { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DFKeyCode Key { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#22411;</th>
+        <th>&#27010;&#35201;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotFeather.DFKeyCode.html">DFKeyCode</a></td>
+        <td><p>押されたキー。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKeyEventArgs_ShiftPressed.md&amp;value=---%0Auid%3A%20DotFeather.DFKeyEventArgs.ShiftPressed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/DFKeyEventArgs.cs/#L32">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+  </span>
+  <a id="DotFeather_DFKeyEventArgs_ShiftPressed_" data-uid="DotFeather.DFKeyEventArgs.ShiftPressed*"></a>
+  <h4 id="DotFeather_DFKeyEventArgs_ShiftPressed" data-uid="DotFeather.DFKeyEventArgs.ShiftPressed">ShiftPressed</h4>
+  <div class="markdown level1 summary"><p>Shift キーが押されたかどうかを示す値を取得します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#23459;&#35328;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShiftPressed { get; }</code></pre>
   </div>
   <h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,58 +240,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p><code>true</code> であれば押されています。<code>false</code> であれば押されていません。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="operators">&#28436;&#31639;&#23376;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKey_op_Implicit_DotFeather_DFKey__System_Boolean.md&amp;value=---%0Auid%3A%20DotFeather.DFKey.op_Implicit(DotFeather.DFKey)~System.Boolean%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/InputSystems/DFKey.cs/#L34">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_DFKey_op_Implicit_" data-uid="DotFeather.DFKey.op_Implicit*"></a>
-  <h4 id="DotFeather_DFKey_op_Implicit_DotFeather_DFKey__System_Boolean" data-uid="DotFeather.DFKey.op_Implicit(DotFeather.DFKey)~System.Boolean">Implicit(DFKey to Boolean)</h4>
-  <div class="markdown level1 summary"><p>キーが押されているかどうかを取得します。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator bool (DFKey key)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.DFKey.html">DFKey</a></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p><code>true</code> であれば押されています。<code>false</code> であれば押されていません。</p>
+        <td><p>Shift キーが押された場合は <code>true</code>。それ以外の場合は <code>false</code>。</p>
 </td>
       </tr>
     </tbody>
@@ -268,10 +253,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKey.md&amp;value=---%0Auid%3A%20DotFeather.DFKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+                    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_DFKeyEventArgs.md&amp;value=---%0Auid%3A%20DotFeather.DFKeyEventArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
                   </li>
                   <li>
-                    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/InputSystems/DFKey.cs/#L8" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+                    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/DFKeyEventArgs.cs/#L8" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
                   </li>
                 </ul>
               </div>

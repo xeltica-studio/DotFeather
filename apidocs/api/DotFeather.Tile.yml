@@ -315,17 +315,17 @@ items:
   summary: "\n\n"
   example: []
   syntax:
-    content: public void Draw(GameBase game, Tilemap _, Vector location, Color? color)
+    content: public void Draw(GameBase game, Tilemap map, Vector location, Color? color)
     parameters:
     - id: game
       type: DotFeather.GameBase
-    - id: _
+    - id: map
       type: DotFeather.Tilemap
     - id: location
       type: DotFeather.Vector
     - id: color
       type: System.Nullable{System.Drawing.Color}
-    content.vb: Public Sub Draw(game As GameBase, _ As Tilemap, location As Vector, color As Color?)
+    content.vb: Public Sub Draw(game As GameBase, map As Tilemap, location As Vector, color As Color?)
   overload: DotFeather.Tile.Draw*
   implements:
   - DotFeather.ITile.Draw(DotFeather.GameBase,DotFeather.Tilemap,DotFeather.Vector,System.Nullable{System.Drawing.Color})

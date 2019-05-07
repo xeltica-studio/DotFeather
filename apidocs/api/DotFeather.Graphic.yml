@@ -358,7 +358,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Pixel
     path: ../DotFeather/Graphic.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -399,7 +399,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Pixel
     path: ../DotFeather/Graphic.cs
-    startLine: 57
+    startLine: 60
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -443,7 +443,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphic.cs
-    startLine: 68
+    startLine: 71
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -487,7 +487,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphic.cs
-    startLine: 82
+    startLine: 85
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -537,7 +537,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Rect
     path: ../DotFeather/Graphic.cs
-    startLine: 95
+    startLine: 98
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -590,7 +590,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Rect
     path: ../DotFeather/Graphic.cs
-    startLine: 110
+    startLine: 113
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -649,7 +649,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Triangle
     path: ../DotFeather/Graphic.cs
-    startLine: 123
+    startLine: 126
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -705,7 +705,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Triangle
     path: ../DotFeather/Graphic.cs
-    startLine: 135
+    startLine: 138
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -755,7 +755,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Ellipse
     path: ../DotFeather/Graphic.cs
-    startLine: 143
+    startLine: 146
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -807,7 +807,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Ellipse
     path: ../DotFeather/Graphic.cs
-    startLine: 174
+    startLine: 177
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -855,7 +855,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Texture
     path: ../DotFeather/Graphic.cs
-    startLine: 185
+    startLine: 188
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -899,7 +899,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphic.cs
-    startLine: 194
+    startLine: 197
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -933,7 +933,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphic.cs
-    startLine: 204
+    startLine: 207
   assemblies:
   - DotFeather
   namespace: DotFeather

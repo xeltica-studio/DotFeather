@@ -5,6 +5,7 @@ items:
   id: SystemDrawingTypesToGLConverterExtension
   parent: DotFeather
   children:
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
   - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Color)
   - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Point)
   - DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.PointF)
@@ -19,6 +20,7 @@ items:
   - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.RectangleF)
   - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Size)
   - DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.SizeF)
+  - DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
   langs:
   - csharp
   - vb
@@ -33,11 +35,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: SystemDrawingTypesToGLConverterExtension
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref> および <xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 間における類似した構造体の相互変換をする、拡張メソッドを追加します。\n"
+  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref>、 <xref href=\"DotFeather\" data-throw-if-not-resolved=\"false\"></xref> および <xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 間における類似した構造体の相互変換をする、拡張メソッドを追加します。\n"
   example: []
   syntax:
     content: public static class SystemDrawingTypesToGLConverterExtension
@@ -78,11 +80,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToGL
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nGL版に変換します。\n"
+  summary: "\nGL 版に変換します。\n"
   example: []
   syntax:
     content: public static Color ToGL(this Color c)
@@ -121,11 +123,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToDrawing
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nSystem.Drawing 版に変換します。\n"
+  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static Color ToDrawing(this Color c)
@@ -164,11 +166,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToGL
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nGL版に変換します。\n"
+  summary: "\n<xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static Point ToGL(this Point p)
@@ -207,11 +209,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToDrawing
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nSystem.Drawing 版に変換します。\n"
+  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static Point ToDrawing(this Point p)
@@ -250,11 +252,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToGL
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nGL版に変換します。\n"
+  summary: "\n<xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static PointF ToGL(this PointF p)
@@ -293,11 +295,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToDrawing
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nSystem.Drawing 版に変換します。\n"
+  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static PointF ToDrawing(this PointF p)
@@ -336,11 +338,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToGL
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nGL版に変換します。\n"
+  summary: "\n<xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static Size ToGL(this Size s)
@@ -379,11 +381,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToDrawing
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 49
+    startLine: 50
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nSystem.Drawing 版に変換します。\n"
+  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static Size ToDrawing(this Size s)
@@ -422,11 +424,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToGL
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 54
+    startLine: 55
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nGL版に変換します。\n"
+  summary: "\n<xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static SizeF ToGL(this SizeF s)
@@ -465,11 +467,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToDrawing
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nSystem.Drawing 版に変換します。\n"
+  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static SizeF ToDrawing(this SizeF s)
@@ -508,11 +510,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToGL
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nGL版に変換します。\n"
+  summary: "\n<xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static Rectangle ToGL(this Rectangle s)
@@ -551,11 +553,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToDrawing
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 69
+    startLine: 70
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nSystem.Drawing 版に変換します。\n"
+  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static Rectangle ToDrawing(this Rectangle s)
@@ -594,11 +596,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToGL
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 74
+    startLine: 75
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nGL版に変換します。\n"
+  summary: "\n<xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static RectangleF ToGL(this RectangleF s)
@@ -637,11 +639,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToDrawing
     path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
-    startLine: 79
+    startLine: 80
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nSystem.Drawing 版に変換します。\n"
+  summary: "\n<xref href=\"System.Drawing\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
   example: []
   syntax:
     content: public static RectangleF ToDrawing(this RectangleF s)
@@ -661,6 +663,92 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
+  id: ToDF(OpenTK.Input.Key)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToDF(Key)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDF(Key)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ToDF
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 85
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<xref href=\"DotFeather\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
+  example: []
+  syntax:
+    content: public static DFKeyCode ToDF(this Key key)
+    parameters:
+    - id: key
+      type: OpenTK.Input.Key
+    return:
+      type: DotFeather.DFKeyCode
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDF(key As Key) As DFKeyCode
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+  id: ToTK(DotFeather.DFKeyCode)
+  isExtensionMethod: true
+  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
+  langs:
+  - csharp
+  - vb
+  name: ToTK(DFKeyCode)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK(DFKeyCode)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ToTK
+    path: ../DotFeather/Extensions/SystemDrawingTypesToGLConverterExtension.cs
+    startLine: 90
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<xref href=\"OpenTK.Input\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
+  example: []
+  syntax:
+    content: public static Key ToTK(this DFKeyCode key)
+    parameters:
+    - id: key
+      type: DotFeather.DFKeyCode
+    return:
+      type: OpenTK.Input.Key
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToTK(key As DFKeyCode) As Key
+  overload: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: System.Drawing
   commentId: N:System.Drawing
@@ -668,17 +756,17 @@ references:
   name: System.Drawing
   nameWithType: System.Drawing
   fullName: System.Drawing
+- uid: DotFeather
+  commentId: N:DotFeather
+  name: DotFeather
+  nameWithType: DotFeather
+  fullName: DotFeather
 - uid: OpenTK
   commentId: N:OpenTK
   isExternal: true
   name: OpenTK
   nameWithType: OpenTK
   fullName: OpenTK
-- uid: DotFeather
-  commentId: N:DotFeather
-  name: DotFeather
-  nameWithType: DotFeather
-  fullName: DotFeather
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -1079,3 +1167,32 @@ references:
   name: RectangleF
   nameWithType: RectangleF
   fullName: OpenTK.RectangleF
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF*
+  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF
+  name: ToDF
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDF
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF
+- uid: OpenTK.Input.Key
+  commentId: T:OpenTK.Input.Key
+  parent: OpenTK.Input
+  isExternal: true
+  name: Key
+  nameWithType: Key
+  fullName: OpenTK.Input.Key
+- uid: DotFeather.DFKeyCode
+  commentId: T:DotFeather.DFKeyCode
+  parent: DotFeather
+  name: DFKeyCode
+  nameWithType: DFKeyCode
+  fullName: DotFeather.DFKeyCode
+- uid: OpenTK.Input
+  commentId: N:OpenTK.Input
+  isExternal: true
+  name: OpenTK.Input
+  nameWithType: OpenTK.Input
+  fullName: OpenTK.Input
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK*
+  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+  name: ToTK
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK

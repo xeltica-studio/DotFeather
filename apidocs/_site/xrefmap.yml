@@ -498,6 +498,32 @@ references:
   commentId: T:DotFeather.DFKey
   fullName: DotFeather.DFKey
   nameWithType: DFKey
+- uid: DotFeather.DFKey.IsKeyDown
+  name: IsKeyDown
+  href: api/DotFeather.DFKey.html#DotFeather_DFKey_IsKeyDown
+  commentId: P:DotFeather.DFKey.IsKeyDown
+  fullName: DotFeather.DFKey.IsKeyDown
+  nameWithType: DFKey.IsKeyDown
+- uid: DotFeather.DFKey.IsKeyDown*
+  name: IsKeyDown
+  href: api/DotFeather.DFKey.html#DotFeather_DFKey_IsKeyDown_
+  commentId: Overload:DotFeather.DFKey.IsKeyDown
+  isSpec: "True"
+  fullName: DotFeather.DFKey.IsKeyDown
+  nameWithType: DFKey.IsKeyDown
+- uid: DotFeather.DFKey.IsKeyUp
+  name: IsKeyUp
+  href: api/DotFeather.DFKey.html#DotFeather_DFKey_IsKeyUp
+  commentId: P:DotFeather.DFKey.IsKeyUp
+  fullName: DotFeather.DFKey.IsKeyUp
+  nameWithType: DFKey.IsKeyUp
+- uid: DotFeather.DFKey.IsKeyUp*
+  name: IsKeyUp
+  href: api/DotFeather.DFKey.html#DotFeather_DFKey_IsKeyUp_
+  commentId: Overload:DotFeather.DFKey.IsKeyUp
+  isSpec: "True"
+  fullName: DotFeather.DFKey.IsKeyUp
+  nameWithType: DFKey.IsKeyUp
 - uid: DotFeather.DFKey.IsPressed
   name: IsPressed
   href: api/DotFeather.DFKey.html#DotFeather_DFKey_IsPressed
@@ -511,6 +537,25 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKey.IsPressed
   nameWithType: DFKey.IsPressed
+- uid: DotFeather.DFKey.op_Implicit(DotFeather.DFKey)~System.Boolean
+  name: Implicit(DFKey to Boolean)
+  href: api/DotFeather.DFKey.html#DotFeather_DFKey_op_Implicit_DotFeather_DFKey__System_Boolean
+  commentId: M:DotFeather.DFKey.op_Implicit(DotFeather.DFKey)~System.Boolean
+  name.vb: Widening(DFKey to Boolean)
+  fullName: DotFeather.DFKey.Implicit(DotFeather.DFKey to System.Boolean)
+  fullName.vb: DotFeather.DFKey.Widening(DotFeather.DFKey to System.Boolean)
+  nameWithType: DFKey.Implicit(DFKey to Boolean)
+  nameWithType.vb: DFKey.Widening(DFKey to Boolean)
+- uid: DotFeather.DFKey.op_Implicit*
+  name: Implicit
+  href: api/DotFeather.DFKey.html#DotFeather_DFKey_op_Implicit_
+  commentId: Overload:DotFeather.DFKey.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: DotFeather.DFKey.Implicit
+  fullName.vb: DotFeather.DFKey.Widening
+  nameWithType: DFKey.Implicit
+  nameWithType.vb: DFKey.Widening
 - uid: DotFeather.DFKeyboard
   name: DFKeyboard
   href: api/DotFeather.DFKeyboard.html
@@ -569,19 +614,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.B
   nameWithType: DFKeyboard.B
-- uid: DotFeather.DFKeyboard.Back
-  name: Back
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_Back
-  commentId: P:DotFeather.DFKeyboard.Back
-  fullName: DotFeather.DFKeyboard.Back
-  nameWithType: DFKeyboard.Back
-- uid: DotFeather.DFKeyboard.Back*
-  name: Back
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_Back_
-  commentId: Overload:DotFeather.DFKeyboard.Back
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.Back
-  nameWithType: DFKeyboard.Back
 - uid: DotFeather.DFKeyboard.BackSlash
   name: BackSlash
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_BackSlash
@@ -1284,19 +1316,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.G
   nameWithType: DFKeyboard.G
-- uid: DotFeather.DFKeyboard.Grave
-  name: Grave
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_Grave
-  commentId: P:DotFeather.DFKeyboard.Grave
-  fullName: DotFeather.DFKeyboard.Grave
-  nameWithType: DFKeyboard.Grave
-- uid: DotFeather.DFKeyboard.Grave*
-  name: Grave
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_Grave_
-  commentId: Overload:DotFeather.DFKeyboard.Grave
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.Grave
-  nameWithType: DFKeyboard.Grave
 - uid: DotFeather.DFKeyboard.H
   name: H
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_H
@@ -1349,6 +1368,22 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.Insert
   nameWithType: DFKeyboard.Insert
+- uid: DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
+  name: Item[DFKeyCode]
+  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_Item_DotFeather_DFKeyCode_
+  commentId: P:DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
+  name.vb: Item(DFKeyCode)
+  fullName: DotFeather.DFKeyboard.Item[DotFeather.DFKeyCode]
+  fullName.vb: DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
+  nameWithType: DFKeyboard.Item[DFKeyCode]
+  nameWithType.vb: DFKeyboard.Item(DFKeyCode)
+- uid: DotFeather.DFKeyboard.Item*
+  name: Item
+  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_Item_
+  commentId: Overload:DotFeather.DFKeyboard.Item
+  isSpec: "True"
+  fullName: DotFeather.DFKeyboard.Item
+  nameWithType: DFKeyboard.Item
 - uid: DotFeather.DFKeyboard.J
   name: J
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_J
@@ -1505,32 +1540,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.Keypad9
   nameWithType: DFKeyboard.Keypad9
-- uid: DotFeather.DFKeyboard.KeypadAdd
-  name: KeypadAdd
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_KeypadAdd
-  commentId: P:DotFeather.DFKeyboard.KeypadAdd
-  fullName: DotFeather.DFKeyboard.KeypadAdd
-  nameWithType: DFKeyboard.KeypadAdd
-- uid: DotFeather.DFKeyboard.KeypadAdd*
-  name: KeypadAdd
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_KeypadAdd_
-  commentId: Overload:DotFeather.DFKeyboard.KeypadAdd
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.KeypadAdd
-  nameWithType: DFKeyboard.KeypadAdd
-- uid: DotFeather.DFKeyboard.KeypadDecimal
-  name: KeypadDecimal
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_KeypadDecimal
-  commentId: P:DotFeather.DFKeyboard.KeypadDecimal
-  fullName: DotFeather.DFKeyboard.KeypadDecimal
-  nameWithType: DFKeyboard.KeypadDecimal
-- uid: DotFeather.DFKeyboard.KeypadDecimal*
-  name: KeypadDecimal
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_KeypadDecimal_
-  commentId: Overload:DotFeather.DFKeyboard.KeypadDecimal
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.KeypadDecimal
-  nameWithType: DFKeyboard.KeypadDecimal
 - uid: DotFeather.DFKeyboard.KeypadDivide
   name: KeypadDivide
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_KeypadDivide
@@ -1609,19 +1618,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.KeypadPlus
   nameWithType: DFKeyboard.KeypadPlus
-- uid: DotFeather.DFKeyboard.KeypadSubtract
-  name: KeypadSubtract
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_KeypadSubtract
-  commentId: P:DotFeather.DFKeyboard.KeypadSubtract
-  fullName: DotFeather.DFKeyboard.KeypadSubtract
-  nameWithType: DFKeyboard.KeypadSubtract
-- uid: DotFeather.DFKeyboard.KeypadSubtract*
-  name: KeypadSubtract
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_KeypadSubtract_
-  commentId: Overload:DotFeather.DFKeyboard.KeypadSubtract
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.KeypadSubtract
-  nameWithType: DFKeyboard.KeypadSubtract
 - uid: DotFeather.DFKeyboard.L
   name: L
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_L
@@ -1635,19 +1631,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.L
   nameWithType: DFKeyboard.L
-- uid: DotFeather.DFKeyboard.LAlt
-  name: LAlt
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LAlt
-  commentId: P:DotFeather.DFKeyboard.LAlt
-  fullName: DotFeather.DFKeyboard.LAlt
-  nameWithType: DFKeyboard.LAlt
-- uid: DotFeather.DFKeyboard.LAlt*
-  name: LAlt
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LAlt_
-  commentId: Overload:DotFeather.DFKeyboard.LAlt
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.LAlt
-  nameWithType: DFKeyboard.LAlt
 - uid: DotFeather.DFKeyboard.LastKey
   name: LastKey
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LastKey
@@ -1661,32 +1644,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.LastKey
   nameWithType: DFKeyboard.LastKey
-- uid: DotFeather.DFKeyboard.LBracket
-  name: LBracket
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LBracket
-  commentId: P:DotFeather.DFKeyboard.LBracket
-  fullName: DotFeather.DFKeyboard.LBracket
-  nameWithType: DFKeyboard.LBracket
-- uid: DotFeather.DFKeyboard.LBracket*
-  name: LBracket
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LBracket_
-  commentId: Overload:DotFeather.DFKeyboard.LBracket
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.LBracket
-  nameWithType: DFKeyboard.LBracket
-- uid: DotFeather.DFKeyboard.LControl
-  name: LControl
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LControl
-  commentId: P:DotFeather.DFKeyboard.LControl
-  fullName: DotFeather.DFKeyboard.LControl
-  nameWithType: DFKeyboard.LControl
-- uid: DotFeather.DFKeyboard.LControl*
-  name: LControl
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LControl_
-  commentId: Overload:DotFeather.DFKeyboard.LControl
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.LControl
-  nameWithType: DFKeyboard.LControl
 - uid: DotFeather.DFKeyboard.Left
   name: Left
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_Left
@@ -1700,32 +1657,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.Left
   nameWithType: DFKeyboard.Left
-- uid: DotFeather.DFKeyboard.LShift
-  name: LShift
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LShift
-  commentId: P:DotFeather.DFKeyboard.LShift
-  fullName: DotFeather.DFKeyboard.LShift
-  nameWithType: DFKeyboard.LShift
-- uid: DotFeather.DFKeyboard.LShift*
-  name: LShift
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LShift_
-  commentId: Overload:DotFeather.DFKeyboard.LShift
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.LShift
-  nameWithType: DFKeyboard.LShift
-- uid: DotFeather.DFKeyboard.LWin
-  name: LWin
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LWin
-  commentId: P:DotFeather.DFKeyboard.LWin
-  fullName: DotFeather.DFKeyboard.LWin
-  nameWithType: DFKeyboard.LWin
-- uid: DotFeather.DFKeyboard.LWin*
-  name: LWin
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_LWin_
-  commentId: Overload:DotFeather.DFKeyboard.LWin
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.LWin
-  nameWithType: DFKeyboard.LWin
 - uid: DotFeather.DFKeyboard.M
   name: M
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_M
@@ -2077,45 +2008,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.R
   nameWithType: DFKeyboard.R
-- uid: DotFeather.DFKeyboard.RAlt
-  name: RAlt
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RAlt
-  commentId: P:DotFeather.DFKeyboard.RAlt
-  fullName: DotFeather.DFKeyboard.RAlt
-  nameWithType: DFKeyboard.RAlt
-- uid: DotFeather.DFKeyboard.RAlt*
-  name: RAlt
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RAlt_
-  commentId: Overload:DotFeather.DFKeyboard.RAlt
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.RAlt
-  nameWithType: DFKeyboard.RAlt
-- uid: DotFeather.DFKeyboard.RBracket
-  name: RBracket
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RBracket
-  commentId: P:DotFeather.DFKeyboard.RBracket
-  fullName: DotFeather.DFKeyboard.RBracket
-  nameWithType: DFKeyboard.RBracket
-- uid: DotFeather.DFKeyboard.RBracket*
-  name: RBracket
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RBracket_
-  commentId: Overload:DotFeather.DFKeyboard.RBracket
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.RBracket
-  nameWithType: DFKeyboard.RBracket
-- uid: DotFeather.DFKeyboard.RControl
-  name: RControl
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RControl
-  commentId: P:DotFeather.DFKeyboard.RControl
-  fullName: DotFeather.DFKeyboard.RControl
-  nameWithType: DFKeyboard.RControl
-- uid: DotFeather.DFKeyboard.RControl*
-  name: RControl
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RControl_
-  commentId: Overload:DotFeather.DFKeyboard.RControl
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.RControl
-  nameWithType: DFKeyboard.RControl
 - uid: DotFeather.DFKeyboard.Right
   name: Right
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_Right
@@ -2129,32 +2021,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.Right
   nameWithType: DFKeyboard.Right
-- uid: DotFeather.DFKeyboard.RShift
-  name: RShift
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RShift
-  commentId: P:DotFeather.DFKeyboard.RShift
-  fullName: DotFeather.DFKeyboard.RShift
-  nameWithType: DFKeyboard.RShift
-- uid: DotFeather.DFKeyboard.RShift*
-  name: RShift
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RShift_
-  commentId: Overload:DotFeather.DFKeyboard.RShift
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.RShift
-  nameWithType: DFKeyboard.RShift
-- uid: DotFeather.DFKeyboard.RWin
-  name: RWin
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RWin
-  commentId: P:DotFeather.DFKeyboard.RWin
-  fullName: DotFeather.DFKeyboard.RWin
-  nameWithType: DFKeyboard.RWin
-- uid: DotFeather.DFKeyboard.RWin*
-  name: RWin
-  href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_RWin_
-  commentId: Overload:DotFeather.DFKeyboard.RWin
-  isSpec: "True"
-  fullName: DotFeather.DFKeyboard.RWin
-  nameWithType: DFKeyboard.RWin
 - uid: DotFeather.DFKeyboard.S
   name: S
   href: api/DotFeather.DFKeyboard.html#DotFeather_DFKeyboard_S
@@ -2428,6 +2294,862 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFKeyboard.Z
   nameWithType: DFKeyboard.Z
+- uid: DotFeather.DFKeyCode
+  name: DFKeyCode
+  href: api/DotFeather.DFKeyCode.html
+  commentId: T:DotFeather.DFKeyCode
+  fullName: DotFeather.DFKeyCode
+  nameWithType: DFKeyCode
+- uid: DotFeather.DFKeyCode.A
+  name: A
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_A
+  commentId: F:DotFeather.DFKeyCode.A
+  fullName: DotFeather.DFKeyCode.A
+  nameWithType: DFKeyCode.A
+- uid: DotFeather.DFKeyCode.AltLeft
+  name: AltLeft
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_AltLeft
+  commentId: F:DotFeather.DFKeyCode.AltLeft
+  fullName: DotFeather.DFKeyCode.AltLeft
+  nameWithType: DFKeyCode.AltLeft
+- uid: DotFeather.DFKeyCode.AltRight
+  name: AltRight
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_AltRight
+  commentId: F:DotFeather.DFKeyCode.AltRight
+  fullName: DotFeather.DFKeyCode.AltRight
+  nameWithType: DFKeyCode.AltRight
+- uid: DotFeather.DFKeyCode.B
+  name: B
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_B
+  commentId: F:DotFeather.DFKeyCode.B
+  fullName: DotFeather.DFKeyCode.B
+  nameWithType: DFKeyCode.B
+- uid: DotFeather.DFKeyCode.BackSlash
+  name: BackSlash
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_BackSlash
+  commentId: F:DotFeather.DFKeyCode.BackSlash
+  fullName: DotFeather.DFKeyCode.BackSlash
+  nameWithType: DFKeyCode.BackSlash
+- uid: DotFeather.DFKeyCode.BackSpace
+  name: BackSpace
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_BackSpace
+  commentId: F:DotFeather.DFKeyCode.BackSpace
+  fullName: DotFeather.DFKeyCode.BackSpace
+  nameWithType: DFKeyCode.BackSpace
+- uid: DotFeather.DFKeyCode.BracketLeft
+  name: BracketLeft
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_BracketLeft
+  commentId: F:DotFeather.DFKeyCode.BracketLeft
+  fullName: DotFeather.DFKeyCode.BracketLeft
+  nameWithType: DFKeyCode.BracketLeft
+- uid: DotFeather.DFKeyCode.BracketRight
+  name: BracketRight
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_BracketRight
+  commentId: F:DotFeather.DFKeyCode.BracketRight
+  fullName: DotFeather.DFKeyCode.BracketRight
+  nameWithType: DFKeyCode.BracketRight
+- uid: DotFeather.DFKeyCode.C
+  name: C
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_C
+  commentId: F:DotFeather.DFKeyCode.C
+  fullName: DotFeather.DFKeyCode.C
+  nameWithType: DFKeyCode.C
+- uid: DotFeather.DFKeyCode.CapsLock
+  name: CapsLock
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_CapsLock
+  commentId: F:DotFeather.DFKeyCode.CapsLock
+  fullName: DotFeather.DFKeyCode.CapsLock
+  nameWithType: DFKeyCode.CapsLock
+- uid: DotFeather.DFKeyCode.Clear
+  name: Clear
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Clear
+  commentId: F:DotFeather.DFKeyCode.Clear
+  fullName: DotFeather.DFKeyCode.Clear
+  nameWithType: DFKeyCode.Clear
+- uid: DotFeather.DFKeyCode.Comma
+  name: Comma
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Comma
+  commentId: F:DotFeather.DFKeyCode.Comma
+  fullName: DotFeather.DFKeyCode.Comma
+  nameWithType: DFKeyCode.Comma
+- uid: DotFeather.DFKeyCode.ControlLeft
+  name: ControlLeft
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_ControlLeft
+  commentId: F:DotFeather.DFKeyCode.ControlLeft
+  fullName: DotFeather.DFKeyCode.ControlLeft
+  nameWithType: DFKeyCode.ControlLeft
+- uid: DotFeather.DFKeyCode.ControlRight
+  name: ControlRight
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_ControlRight
+  commentId: F:DotFeather.DFKeyCode.ControlRight
+  fullName: DotFeather.DFKeyCode.ControlRight
+  nameWithType: DFKeyCode.ControlRight
+- uid: DotFeather.DFKeyCode.D
+  name: D
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_D
+  commentId: F:DotFeather.DFKeyCode.D
+  fullName: DotFeather.DFKeyCode.D
+  nameWithType: DFKeyCode.D
+- uid: DotFeather.DFKeyCode.Delete
+  name: Delete
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Delete
+  commentId: F:DotFeather.DFKeyCode.Delete
+  fullName: DotFeather.DFKeyCode.Delete
+  nameWithType: DFKeyCode.Delete
+- uid: DotFeather.DFKeyCode.Down
+  name: Down
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Down
+  commentId: F:DotFeather.DFKeyCode.Down
+  fullName: DotFeather.DFKeyCode.Down
+  nameWithType: DFKeyCode.Down
+- uid: DotFeather.DFKeyCode.E
+  name: E
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_E
+  commentId: F:DotFeather.DFKeyCode.E
+  fullName: DotFeather.DFKeyCode.E
+  nameWithType: DFKeyCode.E
+- uid: DotFeather.DFKeyCode.End
+  name: End
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_End
+  commentId: F:DotFeather.DFKeyCode.End
+  fullName: DotFeather.DFKeyCode.End
+  nameWithType: DFKeyCode.End
+- uid: DotFeather.DFKeyCode.Enter
+  name: Enter
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Enter
+  commentId: F:DotFeather.DFKeyCode.Enter
+  fullName: DotFeather.DFKeyCode.Enter
+  nameWithType: DFKeyCode.Enter
+- uid: DotFeather.DFKeyCode.Escape
+  name: Escape
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Escape
+  commentId: F:DotFeather.DFKeyCode.Escape
+  fullName: DotFeather.DFKeyCode.Escape
+  nameWithType: DFKeyCode.Escape
+- uid: DotFeather.DFKeyCode.F
+  name: F
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F
+  commentId: F:DotFeather.DFKeyCode.F
+  fullName: DotFeather.DFKeyCode.F
+  nameWithType: DFKeyCode.F
+- uid: DotFeather.DFKeyCode.F1
+  name: F1
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F1
+  commentId: F:DotFeather.DFKeyCode.F1
+  fullName: DotFeather.DFKeyCode.F1
+  nameWithType: DFKeyCode.F1
+- uid: DotFeather.DFKeyCode.F10
+  name: F10
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F10
+  commentId: F:DotFeather.DFKeyCode.F10
+  fullName: DotFeather.DFKeyCode.F10
+  nameWithType: DFKeyCode.F10
+- uid: DotFeather.DFKeyCode.F11
+  name: F11
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F11
+  commentId: F:DotFeather.DFKeyCode.F11
+  fullName: DotFeather.DFKeyCode.F11
+  nameWithType: DFKeyCode.F11
+- uid: DotFeather.DFKeyCode.F12
+  name: F12
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F12
+  commentId: F:DotFeather.DFKeyCode.F12
+  fullName: DotFeather.DFKeyCode.F12
+  nameWithType: DFKeyCode.F12
+- uid: DotFeather.DFKeyCode.F13
+  name: F13
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F13
+  commentId: F:DotFeather.DFKeyCode.F13
+  fullName: DotFeather.DFKeyCode.F13
+  nameWithType: DFKeyCode.F13
+- uid: DotFeather.DFKeyCode.F14
+  name: F14
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F14
+  commentId: F:DotFeather.DFKeyCode.F14
+  fullName: DotFeather.DFKeyCode.F14
+  nameWithType: DFKeyCode.F14
+- uid: DotFeather.DFKeyCode.F15
+  name: F15
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F15
+  commentId: F:DotFeather.DFKeyCode.F15
+  fullName: DotFeather.DFKeyCode.F15
+  nameWithType: DFKeyCode.F15
+- uid: DotFeather.DFKeyCode.F16
+  name: F16
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F16
+  commentId: F:DotFeather.DFKeyCode.F16
+  fullName: DotFeather.DFKeyCode.F16
+  nameWithType: DFKeyCode.F16
+- uid: DotFeather.DFKeyCode.F17
+  name: F17
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F17
+  commentId: F:DotFeather.DFKeyCode.F17
+  fullName: DotFeather.DFKeyCode.F17
+  nameWithType: DFKeyCode.F17
+- uid: DotFeather.DFKeyCode.F18
+  name: F18
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F18
+  commentId: F:DotFeather.DFKeyCode.F18
+  fullName: DotFeather.DFKeyCode.F18
+  nameWithType: DFKeyCode.F18
+- uid: DotFeather.DFKeyCode.F19
+  name: F19
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F19
+  commentId: F:DotFeather.DFKeyCode.F19
+  fullName: DotFeather.DFKeyCode.F19
+  nameWithType: DFKeyCode.F19
+- uid: DotFeather.DFKeyCode.F2
+  name: F2
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F2
+  commentId: F:DotFeather.DFKeyCode.F2
+  fullName: DotFeather.DFKeyCode.F2
+  nameWithType: DFKeyCode.F2
+- uid: DotFeather.DFKeyCode.F20
+  name: F20
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F20
+  commentId: F:DotFeather.DFKeyCode.F20
+  fullName: DotFeather.DFKeyCode.F20
+  nameWithType: DFKeyCode.F20
+- uid: DotFeather.DFKeyCode.F21
+  name: F21
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F21
+  commentId: F:DotFeather.DFKeyCode.F21
+  fullName: DotFeather.DFKeyCode.F21
+  nameWithType: DFKeyCode.F21
+- uid: DotFeather.DFKeyCode.F22
+  name: F22
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F22
+  commentId: F:DotFeather.DFKeyCode.F22
+  fullName: DotFeather.DFKeyCode.F22
+  nameWithType: DFKeyCode.F22
+- uid: DotFeather.DFKeyCode.F23
+  name: F23
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F23
+  commentId: F:DotFeather.DFKeyCode.F23
+  fullName: DotFeather.DFKeyCode.F23
+  nameWithType: DFKeyCode.F23
+- uid: DotFeather.DFKeyCode.F24
+  name: F24
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F24
+  commentId: F:DotFeather.DFKeyCode.F24
+  fullName: DotFeather.DFKeyCode.F24
+  nameWithType: DFKeyCode.F24
+- uid: DotFeather.DFKeyCode.F25
+  name: F25
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F25
+  commentId: F:DotFeather.DFKeyCode.F25
+  fullName: DotFeather.DFKeyCode.F25
+  nameWithType: DFKeyCode.F25
+- uid: DotFeather.DFKeyCode.F26
+  name: F26
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F26
+  commentId: F:DotFeather.DFKeyCode.F26
+  fullName: DotFeather.DFKeyCode.F26
+  nameWithType: DFKeyCode.F26
+- uid: DotFeather.DFKeyCode.F27
+  name: F27
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F27
+  commentId: F:DotFeather.DFKeyCode.F27
+  fullName: DotFeather.DFKeyCode.F27
+  nameWithType: DFKeyCode.F27
+- uid: DotFeather.DFKeyCode.F28
+  name: F28
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F28
+  commentId: F:DotFeather.DFKeyCode.F28
+  fullName: DotFeather.DFKeyCode.F28
+  nameWithType: DFKeyCode.F28
+- uid: DotFeather.DFKeyCode.F29
+  name: F29
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F29
+  commentId: F:DotFeather.DFKeyCode.F29
+  fullName: DotFeather.DFKeyCode.F29
+  nameWithType: DFKeyCode.F29
+- uid: DotFeather.DFKeyCode.F3
+  name: F3
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F3
+  commentId: F:DotFeather.DFKeyCode.F3
+  fullName: DotFeather.DFKeyCode.F3
+  nameWithType: DFKeyCode.F3
+- uid: DotFeather.DFKeyCode.F30
+  name: F30
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F30
+  commentId: F:DotFeather.DFKeyCode.F30
+  fullName: DotFeather.DFKeyCode.F30
+  nameWithType: DFKeyCode.F30
+- uid: DotFeather.DFKeyCode.F31
+  name: F31
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F31
+  commentId: F:DotFeather.DFKeyCode.F31
+  fullName: DotFeather.DFKeyCode.F31
+  nameWithType: DFKeyCode.F31
+- uid: DotFeather.DFKeyCode.F32
+  name: F32
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F32
+  commentId: F:DotFeather.DFKeyCode.F32
+  fullName: DotFeather.DFKeyCode.F32
+  nameWithType: DFKeyCode.F32
+- uid: DotFeather.DFKeyCode.F33
+  name: F33
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F33
+  commentId: F:DotFeather.DFKeyCode.F33
+  fullName: DotFeather.DFKeyCode.F33
+  nameWithType: DFKeyCode.F33
+- uid: DotFeather.DFKeyCode.F34
+  name: F34
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F34
+  commentId: F:DotFeather.DFKeyCode.F34
+  fullName: DotFeather.DFKeyCode.F34
+  nameWithType: DFKeyCode.F34
+- uid: DotFeather.DFKeyCode.F35
+  name: F35
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F35
+  commentId: F:DotFeather.DFKeyCode.F35
+  fullName: DotFeather.DFKeyCode.F35
+  nameWithType: DFKeyCode.F35
+- uid: DotFeather.DFKeyCode.F4
+  name: F4
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F4
+  commentId: F:DotFeather.DFKeyCode.F4
+  fullName: DotFeather.DFKeyCode.F4
+  nameWithType: DFKeyCode.F4
+- uid: DotFeather.DFKeyCode.F5
+  name: F5
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F5
+  commentId: F:DotFeather.DFKeyCode.F5
+  fullName: DotFeather.DFKeyCode.F5
+  nameWithType: DFKeyCode.F5
+- uid: DotFeather.DFKeyCode.F6
+  name: F6
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F6
+  commentId: F:DotFeather.DFKeyCode.F6
+  fullName: DotFeather.DFKeyCode.F6
+  nameWithType: DFKeyCode.F6
+- uid: DotFeather.DFKeyCode.F7
+  name: F7
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F7
+  commentId: F:DotFeather.DFKeyCode.F7
+  fullName: DotFeather.DFKeyCode.F7
+  nameWithType: DFKeyCode.F7
+- uid: DotFeather.DFKeyCode.F8
+  name: F8
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F8
+  commentId: F:DotFeather.DFKeyCode.F8
+  fullName: DotFeather.DFKeyCode.F8
+  nameWithType: DFKeyCode.F8
+- uid: DotFeather.DFKeyCode.F9
+  name: F9
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_F9
+  commentId: F:DotFeather.DFKeyCode.F9
+  fullName: DotFeather.DFKeyCode.F9
+  nameWithType: DFKeyCode.F9
+- uid: DotFeather.DFKeyCode.G
+  name: G
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_G
+  commentId: F:DotFeather.DFKeyCode.G
+  fullName: DotFeather.DFKeyCode.G
+  nameWithType: DFKeyCode.G
+- uid: DotFeather.DFKeyCode.H
+  name: H
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_H
+  commentId: F:DotFeather.DFKeyCode.H
+  fullName: DotFeather.DFKeyCode.H
+  nameWithType: DFKeyCode.H
+- uid: DotFeather.DFKeyCode.Home
+  name: Home
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Home
+  commentId: F:DotFeather.DFKeyCode.Home
+  fullName: DotFeather.DFKeyCode.Home
+  nameWithType: DFKeyCode.Home
+- uid: DotFeather.DFKeyCode.I
+  name: I
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_I
+  commentId: F:DotFeather.DFKeyCode.I
+  fullName: DotFeather.DFKeyCode.I
+  nameWithType: DFKeyCode.I
+- uid: DotFeather.DFKeyCode.Insert
+  name: Insert
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Insert
+  commentId: F:DotFeather.DFKeyCode.Insert
+  fullName: DotFeather.DFKeyCode.Insert
+  nameWithType: DFKeyCode.Insert
+- uid: DotFeather.DFKeyCode.J
+  name: J
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_J
+  commentId: F:DotFeather.DFKeyCode.J
+  fullName: DotFeather.DFKeyCode.J
+  nameWithType: DFKeyCode.J
+- uid: DotFeather.DFKeyCode.K
+  name: K
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_K
+  commentId: F:DotFeather.DFKeyCode.K
+  fullName: DotFeather.DFKeyCode.K
+  nameWithType: DFKeyCode.K
+- uid: DotFeather.DFKeyCode.Keypad0
+  name: Keypad0
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad0
+  commentId: F:DotFeather.DFKeyCode.Keypad0
+  fullName: DotFeather.DFKeyCode.Keypad0
+  nameWithType: DFKeyCode.Keypad0
+- uid: DotFeather.DFKeyCode.Keypad1
+  name: Keypad1
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad1
+  commentId: F:DotFeather.DFKeyCode.Keypad1
+  fullName: DotFeather.DFKeyCode.Keypad1
+  nameWithType: DFKeyCode.Keypad1
+- uid: DotFeather.DFKeyCode.Keypad2
+  name: Keypad2
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad2
+  commentId: F:DotFeather.DFKeyCode.Keypad2
+  fullName: DotFeather.DFKeyCode.Keypad2
+  nameWithType: DFKeyCode.Keypad2
+- uid: DotFeather.DFKeyCode.Keypad3
+  name: Keypad3
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad3
+  commentId: F:DotFeather.DFKeyCode.Keypad3
+  fullName: DotFeather.DFKeyCode.Keypad3
+  nameWithType: DFKeyCode.Keypad3
+- uid: DotFeather.DFKeyCode.Keypad4
+  name: Keypad4
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad4
+  commentId: F:DotFeather.DFKeyCode.Keypad4
+  fullName: DotFeather.DFKeyCode.Keypad4
+  nameWithType: DFKeyCode.Keypad4
+- uid: DotFeather.DFKeyCode.Keypad5
+  name: Keypad5
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad5
+  commentId: F:DotFeather.DFKeyCode.Keypad5
+  fullName: DotFeather.DFKeyCode.Keypad5
+  nameWithType: DFKeyCode.Keypad5
+- uid: DotFeather.DFKeyCode.Keypad6
+  name: Keypad6
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad6
+  commentId: F:DotFeather.DFKeyCode.Keypad6
+  fullName: DotFeather.DFKeyCode.Keypad6
+  nameWithType: DFKeyCode.Keypad6
+- uid: DotFeather.DFKeyCode.Keypad7
+  name: Keypad7
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad7
+  commentId: F:DotFeather.DFKeyCode.Keypad7
+  fullName: DotFeather.DFKeyCode.Keypad7
+  nameWithType: DFKeyCode.Keypad7
+- uid: DotFeather.DFKeyCode.Keypad8
+  name: Keypad8
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad8
+  commentId: F:DotFeather.DFKeyCode.Keypad8
+  fullName: DotFeather.DFKeyCode.Keypad8
+  nameWithType: DFKeyCode.Keypad8
+- uid: DotFeather.DFKeyCode.Keypad9
+  name: Keypad9
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Keypad9
+  commentId: F:DotFeather.DFKeyCode.Keypad9
+  fullName: DotFeather.DFKeyCode.Keypad9
+  nameWithType: DFKeyCode.Keypad9
+- uid: DotFeather.DFKeyCode.KeypadDivide
+  name: KeypadDivide
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_KeypadDivide
+  commentId: F:DotFeather.DFKeyCode.KeypadDivide
+  fullName: DotFeather.DFKeyCode.KeypadDivide
+  nameWithType: DFKeyCode.KeypadDivide
+- uid: DotFeather.DFKeyCode.KeypadEnter
+  name: KeypadEnter
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_KeypadEnter
+  commentId: F:DotFeather.DFKeyCode.KeypadEnter
+  fullName: DotFeather.DFKeyCode.KeypadEnter
+  nameWithType: DFKeyCode.KeypadEnter
+- uid: DotFeather.DFKeyCode.KeypadMinus
+  name: KeypadMinus
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_KeypadMinus
+  commentId: F:DotFeather.DFKeyCode.KeypadMinus
+  fullName: DotFeather.DFKeyCode.KeypadMinus
+  nameWithType: DFKeyCode.KeypadMinus
+- uid: DotFeather.DFKeyCode.KeypadMultiply
+  name: KeypadMultiply
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_KeypadMultiply
+  commentId: F:DotFeather.DFKeyCode.KeypadMultiply
+  fullName: DotFeather.DFKeyCode.KeypadMultiply
+  nameWithType: DFKeyCode.KeypadMultiply
+- uid: DotFeather.DFKeyCode.KeypadPeriod
+  name: KeypadPeriod
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_KeypadPeriod
+  commentId: F:DotFeather.DFKeyCode.KeypadPeriod
+  fullName: DotFeather.DFKeyCode.KeypadPeriod
+  nameWithType: DFKeyCode.KeypadPeriod
+- uid: DotFeather.DFKeyCode.KeypadPlus
+  name: KeypadPlus
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_KeypadPlus
+  commentId: F:DotFeather.DFKeyCode.KeypadPlus
+  fullName: DotFeather.DFKeyCode.KeypadPlus
+  nameWithType: DFKeyCode.KeypadPlus
+- uid: DotFeather.DFKeyCode.L
+  name: L
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_L
+  commentId: F:DotFeather.DFKeyCode.L
+  fullName: DotFeather.DFKeyCode.L
+  nameWithType: DFKeyCode.L
+- uid: DotFeather.DFKeyCode.LastKey
+  name: LastKey
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_LastKey
+  commentId: F:DotFeather.DFKeyCode.LastKey
+  fullName: DotFeather.DFKeyCode.LastKey
+  nameWithType: DFKeyCode.LastKey
+- uid: DotFeather.DFKeyCode.Left
+  name: Left
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Left
+  commentId: F:DotFeather.DFKeyCode.Left
+  fullName: DotFeather.DFKeyCode.Left
+  nameWithType: DFKeyCode.Left
+- uid: DotFeather.DFKeyCode.M
+  name: M
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_M
+  commentId: F:DotFeather.DFKeyCode.M
+  fullName: DotFeather.DFKeyCode.M
+  nameWithType: DFKeyCode.M
+- uid: DotFeather.DFKeyCode.Menu
+  name: Menu
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Menu
+  commentId: F:DotFeather.DFKeyCode.Menu
+  fullName: DotFeather.DFKeyCode.Menu
+  nameWithType: DFKeyCode.Menu
+- uid: DotFeather.DFKeyCode.Minus
+  name: Minus
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Minus
+  commentId: F:DotFeather.DFKeyCode.Minus
+  fullName: DotFeather.DFKeyCode.Minus
+  nameWithType: DFKeyCode.Minus
+- uid: DotFeather.DFKeyCode.N
+  name: N
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_N
+  commentId: F:DotFeather.DFKeyCode.N
+  fullName: DotFeather.DFKeyCode.N
+  nameWithType: DFKeyCode.N
+- uid: DotFeather.DFKeyCode.NonUSBackSlash
+  name: NonUSBackSlash
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_NonUSBackSlash
+  commentId: F:DotFeather.DFKeyCode.NonUSBackSlash
+  fullName: DotFeather.DFKeyCode.NonUSBackSlash
+  nameWithType: DFKeyCode.NonUSBackSlash
+- uid: DotFeather.DFKeyCode.Number0
+  name: Number0
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number0
+  commentId: F:DotFeather.DFKeyCode.Number0
+  fullName: DotFeather.DFKeyCode.Number0
+  nameWithType: DFKeyCode.Number0
+- uid: DotFeather.DFKeyCode.Number1
+  name: Number1
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number1
+  commentId: F:DotFeather.DFKeyCode.Number1
+  fullName: DotFeather.DFKeyCode.Number1
+  nameWithType: DFKeyCode.Number1
+- uid: DotFeather.DFKeyCode.Number2
+  name: Number2
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number2
+  commentId: F:DotFeather.DFKeyCode.Number2
+  fullName: DotFeather.DFKeyCode.Number2
+  nameWithType: DFKeyCode.Number2
+- uid: DotFeather.DFKeyCode.Number3
+  name: Number3
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number3
+  commentId: F:DotFeather.DFKeyCode.Number3
+  fullName: DotFeather.DFKeyCode.Number3
+  nameWithType: DFKeyCode.Number3
+- uid: DotFeather.DFKeyCode.Number4
+  name: Number4
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number4
+  commentId: F:DotFeather.DFKeyCode.Number4
+  fullName: DotFeather.DFKeyCode.Number4
+  nameWithType: DFKeyCode.Number4
+- uid: DotFeather.DFKeyCode.Number5
+  name: Number5
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number5
+  commentId: F:DotFeather.DFKeyCode.Number5
+  fullName: DotFeather.DFKeyCode.Number5
+  nameWithType: DFKeyCode.Number5
+- uid: DotFeather.DFKeyCode.Number6
+  name: Number6
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number6
+  commentId: F:DotFeather.DFKeyCode.Number6
+  fullName: DotFeather.DFKeyCode.Number6
+  nameWithType: DFKeyCode.Number6
+- uid: DotFeather.DFKeyCode.Number7
+  name: Number7
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number7
+  commentId: F:DotFeather.DFKeyCode.Number7
+  fullName: DotFeather.DFKeyCode.Number7
+  nameWithType: DFKeyCode.Number7
+- uid: DotFeather.DFKeyCode.Number8
+  name: Number8
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number8
+  commentId: F:DotFeather.DFKeyCode.Number8
+  fullName: DotFeather.DFKeyCode.Number8
+  nameWithType: DFKeyCode.Number8
+- uid: DotFeather.DFKeyCode.Number9
+  name: Number9
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Number9
+  commentId: F:DotFeather.DFKeyCode.Number9
+  fullName: DotFeather.DFKeyCode.Number9
+  nameWithType: DFKeyCode.Number9
+- uid: DotFeather.DFKeyCode.NumLock
+  name: NumLock
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_NumLock
+  commentId: F:DotFeather.DFKeyCode.NumLock
+  fullName: DotFeather.DFKeyCode.NumLock
+  nameWithType: DFKeyCode.NumLock
+- uid: DotFeather.DFKeyCode.O
+  name: O
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_O
+  commentId: F:DotFeather.DFKeyCode.O
+  fullName: DotFeather.DFKeyCode.O
+  nameWithType: DFKeyCode.O
+- uid: DotFeather.DFKeyCode.P
+  name: P
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_P
+  commentId: F:DotFeather.DFKeyCode.P
+  fullName: DotFeather.DFKeyCode.P
+  nameWithType: DFKeyCode.P
+- uid: DotFeather.DFKeyCode.PageDown
+  name: PageDown
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_PageDown
+  commentId: F:DotFeather.DFKeyCode.PageDown
+  fullName: DotFeather.DFKeyCode.PageDown
+  nameWithType: DFKeyCode.PageDown
+- uid: DotFeather.DFKeyCode.PageUp
+  name: PageUp
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_PageUp
+  commentId: F:DotFeather.DFKeyCode.PageUp
+  fullName: DotFeather.DFKeyCode.PageUp
+  nameWithType: DFKeyCode.PageUp
+- uid: DotFeather.DFKeyCode.Pause
+  name: Pause
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Pause
+  commentId: F:DotFeather.DFKeyCode.Pause
+  fullName: DotFeather.DFKeyCode.Pause
+  nameWithType: DFKeyCode.Pause
+- uid: DotFeather.DFKeyCode.Period
+  name: Period
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Period
+  commentId: F:DotFeather.DFKeyCode.Period
+  fullName: DotFeather.DFKeyCode.Period
+  nameWithType: DFKeyCode.Period
+- uid: DotFeather.DFKeyCode.Plus
+  name: Plus
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Plus
+  commentId: F:DotFeather.DFKeyCode.Plus
+  fullName: DotFeather.DFKeyCode.Plus
+  nameWithType: DFKeyCode.Plus
+- uid: DotFeather.DFKeyCode.PrintScreen
+  name: PrintScreen
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_PrintScreen
+  commentId: F:DotFeather.DFKeyCode.PrintScreen
+  fullName: DotFeather.DFKeyCode.PrintScreen
+  nameWithType: DFKeyCode.PrintScreen
+- uid: DotFeather.DFKeyCode.Q
+  name: Q
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Q
+  commentId: F:DotFeather.DFKeyCode.Q
+  fullName: DotFeather.DFKeyCode.Q
+  nameWithType: DFKeyCode.Q
+- uid: DotFeather.DFKeyCode.Quote
+  name: Quote
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Quote
+  commentId: F:DotFeather.DFKeyCode.Quote
+  fullName: DotFeather.DFKeyCode.Quote
+  nameWithType: DFKeyCode.Quote
+- uid: DotFeather.DFKeyCode.R
+  name: R
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_R
+  commentId: F:DotFeather.DFKeyCode.R
+  fullName: DotFeather.DFKeyCode.R
+  nameWithType: DFKeyCode.R
+- uid: DotFeather.DFKeyCode.Right
+  name: Right
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Right
+  commentId: F:DotFeather.DFKeyCode.Right
+  fullName: DotFeather.DFKeyCode.Right
+  nameWithType: DFKeyCode.Right
+- uid: DotFeather.DFKeyCode.S
+  name: S
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_S
+  commentId: F:DotFeather.DFKeyCode.S
+  fullName: DotFeather.DFKeyCode.S
+  nameWithType: DFKeyCode.S
+- uid: DotFeather.DFKeyCode.ScrollLock
+  name: ScrollLock
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_ScrollLock
+  commentId: F:DotFeather.DFKeyCode.ScrollLock
+  fullName: DotFeather.DFKeyCode.ScrollLock
+  nameWithType: DFKeyCode.ScrollLock
+- uid: DotFeather.DFKeyCode.Semicolon
+  name: Semicolon
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Semicolon
+  commentId: F:DotFeather.DFKeyCode.Semicolon
+  fullName: DotFeather.DFKeyCode.Semicolon
+  nameWithType: DFKeyCode.Semicolon
+- uid: DotFeather.DFKeyCode.ShiftLeft
+  name: ShiftLeft
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_ShiftLeft
+  commentId: F:DotFeather.DFKeyCode.ShiftLeft
+  fullName: DotFeather.DFKeyCode.ShiftLeft
+  nameWithType: DFKeyCode.ShiftLeft
+- uid: DotFeather.DFKeyCode.ShiftRight
+  name: ShiftRight
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_ShiftRight
+  commentId: F:DotFeather.DFKeyCode.ShiftRight
+  fullName: DotFeather.DFKeyCode.ShiftRight
+  nameWithType: DFKeyCode.ShiftRight
+- uid: DotFeather.DFKeyCode.Slash
+  name: Slash
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Slash
+  commentId: F:DotFeather.DFKeyCode.Slash
+  fullName: DotFeather.DFKeyCode.Slash
+  nameWithType: DFKeyCode.Slash
+- uid: DotFeather.DFKeyCode.Sleep
+  name: Sleep
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Sleep
+  commentId: F:DotFeather.DFKeyCode.Sleep
+  fullName: DotFeather.DFKeyCode.Sleep
+  nameWithType: DFKeyCode.Sleep
+- uid: DotFeather.DFKeyCode.Space
+  name: Space
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Space
+  commentId: F:DotFeather.DFKeyCode.Space
+  fullName: DotFeather.DFKeyCode.Space
+  nameWithType: DFKeyCode.Space
+- uid: DotFeather.DFKeyCode.T
+  name: T
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_T
+  commentId: F:DotFeather.DFKeyCode.T
+  fullName: DotFeather.DFKeyCode.T
+  nameWithType: DFKeyCode.T
+- uid: DotFeather.DFKeyCode.Tab
+  name: Tab
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Tab
+  commentId: F:DotFeather.DFKeyCode.Tab
+  fullName: DotFeather.DFKeyCode.Tab
+  nameWithType: DFKeyCode.Tab
+- uid: DotFeather.DFKeyCode.Tilde
+  name: Tilde
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Tilde
+  commentId: F:DotFeather.DFKeyCode.Tilde
+  fullName: DotFeather.DFKeyCode.Tilde
+  nameWithType: DFKeyCode.Tilde
+- uid: DotFeather.DFKeyCode.U
+  name: U
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_U
+  commentId: F:DotFeather.DFKeyCode.U
+  fullName: DotFeather.DFKeyCode.U
+  nameWithType: DFKeyCode.U
+- uid: DotFeather.DFKeyCode.Unknown
+  name: Unknown
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Unknown
+  commentId: F:DotFeather.DFKeyCode.Unknown
+  fullName: DotFeather.DFKeyCode.Unknown
+  nameWithType: DFKeyCode.Unknown
+- uid: DotFeather.DFKeyCode.Up
+  name: Up
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Up
+  commentId: F:DotFeather.DFKeyCode.Up
+  fullName: DotFeather.DFKeyCode.Up
+  nameWithType: DFKeyCode.Up
+- uid: DotFeather.DFKeyCode.V
+  name: V
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_V
+  commentId: F:DotFeather.DFKeyCode.V
+  fullName: DotFeather.DFKeyCode.V
+  nameWithType: DFKeyCode.V
+- uid: DotFeather.DFKeyCode.W
+  name: W
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_W
+  commentId: F:DotFeather.DFKeyCode.W
+  fullName: DotFeather.DFKeyCode.W
+  nameWithType: DFKeyCode.W
+- uid: DotFeather.DFKeyCode.WinLeft
+  name: WinLeft
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_WinLeft
+  commentId: F:DotFeather.DFKeyCode.WinLeft
+  fullName: DotFeather.DFKeyCode.WinLeft
+  nameWithType: DFKeyCode.WinLeft
+- uid: DotFeather.DFKeyCode.WinRight
+  name: WinRight
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_WinRight
+  commentId: F:DotFeather.DFKeyCode.WinRight
+  fullName: DotFeather.DFKeyCode.WinRight
+  nameWithType: DFKeyCode.WinRight
+- uid: DotFeather.DFKeyCode.X
+  name: X
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_X
+  commentId: F:DotFeather.DFKeyCode.X
+  fullName: DotFeather.DFKeyCode.X
+  nameWithType: DFKeyCode.X
+- uid: DotFeather.DFKeyCode.Y
+  name: Y
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Y
+  commentId: F:DotFeather.DFKeyCode.Y
+  fullName: DotFeather.DFKeyCode.Y
+  nameWithType: DFKeyCode.Y
+- uid: DotFeather.DFKeyCode.Z
+  name: Z
+  href: api/DotFeather.DFKeyCode.html#DotFeather_DFKeyCode_Z
+  commentId: F:DotFeather.DFKeyCode.Z
+  fullName: DotFeather.DFKeyCode.Z
+  nameWithType: DFKeyCode.Z
+- uid: DotFeather.DFKeyEventArgs
+  name: DFKeyEventArgs
+  href: api/DotFeather.DFKeyEventArgs.html
+  commentId: T:DotFeather.DFKeyEventArgs
+  fullName: DotFeather.DFKeyEventArgs
+  nameWithType: DFKeyEventArgs
+- uid: DotFeather.DFKeyEventArgs.AltPressed
+  name: AltPressed
+  href: api/DotFeather.DFKeyEventArgs.html#DotFeather_DFKeyEventArgs_AltPressed
+  commentId: P:DotFeather.DFKeyEventArgs.AltPressed
+  fullName: DotFeather.DFKeyEventArgs.AltPressed
+  nameWithType: DFKeyEventArgs.AltPressed
+- uid: DotFeather.DFKeyEventArgs.AltPressed*
+  name: AltPressed
+  href: api/DotFeather.DFKeyEventArgs.html#DotFeather_DFKeyEventArgs_AltPressed_
+  commentId: Overload:DotFeather.DFKeyEventArgs.AltPressed
+  isSpec: "True"
+  fullName: DotFeather.DFKeyEventArgs.AltPressed
+  nameWithType: DFKeyEventArgs.AltPressed
+- uid: DotFeather.DFKeyEventArgs.CtrlPressed
+  name: CtrlPressed
+  href: api/DotFeather.DFKeyEventArgs.html#DotFeather_DFKeyEventArgs_CtrlPressed
+  commentId: P:DotFeather.DFKeyEventArgs.CtrlPressed
+  fullName: DotFeather.DFKeyEventArgs.CtrlPressed
+  nameWithType: DFKeyEventArgs.CtrlPressed
+- uid: DotFeather.DFKeyEventArgs.CtrlPressed*
+  name: CtrlPressed
+  href: api/DotFeather.DFKeyEventArgs.html#DotFeather_DFKeyEventArgs_CtrlPressed_
+  commentId: Overload:DotFeather.DFKeyEventArgs.CtrlPressed
+  isSpec: "True"
+  fullName: DotFeather.DFKeyEventArgs.CtrlPressed
+  nameWithType: DFKeyEventArgs.CtrlPressed
+- uid: DotFeather.DFKeyEventArgs.Key
+  name: Key
+  href: api/DotFeather.DFKeyEventArgs.html#DotFeather_DFKeyEventArgs_Key
+  commentId: P:DotFeather.DFKeyEventArgs.Key
+  fullName: DotFeather.DFKeyEventArgs.Key
+  nameWithType: DFKeyEventArgs.Key
+- uid: DotFeather.DFKeyEventArgs.Key*
+  name: Key
+  href: api/DotFeather.DFKeyEventArgs.html#DotFeather_DFKeyEventArgs_Key_
+  commentId: Overload:DotFeather.DFKeyEventArgs.Key
+  isSpec: "True"
+  fullName: DotFeather.DFKeyEventArgs.Key
+  nameWithType: DFKeyEventArgs.Key
+- uid: DotFeather.DFKeyEventArgs.ShiftPressed
+  name: ShiftPressed
+  href: api/DotFeather.DFKeyEventArgs.html#DotFeather_DFKeyEventArgs_ShiftPressed
+  commentId: P:DotFeather.DFKeyEventArgs.ShiftPressed
+  fullName: DotFeather.DFKeyEventArgs.ShiftPressed
+  nameWithType: DFKeyEventArgs.ShiftPressed
+- uid: DotFeather.DFKeyEventArgs.ShiftPressed*
+  name: ShiftPressed
+  href: api/DotFeather.DFKeyEventArgs.html#DotFeather_DFKeyEventArgs_ShiftPressed_
+  commentId: Overload:DotFeather.DFKeyEventArgs.ShiftPressed
+  isSpec: "True"
+  fullName: DotFeather.DFKeyEventArgs.ShiftPressed
+  nameWithType: DFKeyEventArgs.ShiftPressed
 - uid: DotFeather.DFMath
   name: DFMath
   href: api/DotFeather.DFMath.html
@@ -2685,6 +3407,32 @@ references:
   isSpec: "True"
   fullName: DotFeather.GameBase.Height
   nameWithType: GameBase.Height
+- uid: DotFeather.GameBase.OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)
+  name: OnKeyDown(Object, DFKeyEventArgs)
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_OnKeyDown_System_Object_DotFeather_DFKeyEventArgs_
+  commentId: M:DotFeather.GameBase.OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)
+  fullName: DotFeather.GameBase.OnKeyDown(System.Object, DotFeather.DFKeyEventArgs)
+  nameWithType: GameBase.OnKeyDown(Object, DFKeyEventArgs)
+- uid: DotFeather.GameBase.OnKeyDown*
+  name: OnKeyDown
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_OnKeyDown_
+  commentId: Overload:DotFeather.GameBase.OnKeyDown
+  isSpec: "True"
+  fullName: DotFeather.GameBase.OnKeyDown
+  nameWithType: GameBase.OnKeyDown
+- uid: DotFeather.GameBase.OnKeyUp(System.Object,DotFeather.DFKeyEventArgs)
+  name: OnKeyUp(Object, DFKeyEventArgs)
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_OnKeyUp_System_Object_DotFeather_DFKeyEventArgs_
+  commentId: M:DotFeather.GameBase.OnKeyUp(System.Object,DotFeather.DFKeyEventArgs)
+  fullName: DotFeather.GameBase.OnKeyUp(System.Object, DotFeather.DFKeyEventArgs)
+  nameWithType: GameBase.OnKeyUp(Object, DFKeyEventArgs)
+- uid: DotFeather.GameBase.OnKeyUp*
+  name: OnKeyUp
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_OnKeyUp_
+  commentId: Overload:DotFeather.GameBase.OnKeyUp
+  isSpec: "True"
+  fullName: DotFeather.GameBase.OnKeyUp
+  nameWithType: GameBase.OnKeyUp
 - uid: DotFeather.GameBase.OnLoad(System.Object,System.EventArgs)
   name: OnLoad(Object, EventArgs)
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_OnLoad_System_Object_System_EventArgs_
@@ -3533,6 +4281,51 @@ references:
   fullName.vb: DotFeather.OpenTKManagedHandleBase(Of T).Widening
   nameWithType: OpenTKManagedHandleBase<T>.Implicit
   nameWithType.vb: OpenTKManagedHandleBase(Of T).Widening
+- uid: DotFeather.RandomExtension
+  name: RandomExtension
+  href: api/DotFeather.RandomExtension.html
+  commentId: T:DotFeather.RandomExtension
+  fullName: DotFeather.RandomExtension
+  nameWithType: RandomExtension
+- uid: DotFeather.RandomExtension.NextColor(System.Random,System.Int32)
+  name: NextColor(Random, Int32)
+  href: api/DotFeather.RandomExtension.html#DotFeather_RandomExtension_NextColor_System_Random_System_Int32_
+  commentId: M:DotFeather.RandomExtension.NextColor(System.Random,System.Int32)
+  fullName: DotFeather.RandomExtension.NextColor(System.Random, System.Int32)
+  nameWithType: RandomExtension.NextColor(Random, Int32)
+- uid: DotFeather.RandomExtension.NextColor*
+  name: NextColor
+  href: api/DotFeather.RandomExtension.html#DotFeather_RandomExtension_NextColor_
+  commentId: Overload:DotFeather.RandomExtension.NextColor
+  isSpec: "True"
+  fullName: DotFeather.RandomExtension.NextColor
+  nameWithType: RandomExtension.NextColor
+- uid: DotFeather.RandomExtension.NextVector(System.Random,System.Int32,System.Int32)
+  name: NextVector(Random, Int32, Int32)
+  href: api/DotFeather.RandomExtension.html#DotFeather_RandomExtension_NextVector_System_Random_System_Int32_System_Int32_
+  commentId: M:DotFeather.RandomExtension.NextVector(System.Random,System.Int32,System.Int32)
+  fullName: DotFeather.RandomExtension.NextVector(System.Random, System.Int32, System.Int32)
+  nameWithType: RandomExtension.NextVector(Random, Int32, Int32)
+- uid: DotFeather.RandomExtension.NextVector*
+  name: NextVector
+  href: api/DotFeather.RandomExtension.html#DotFeather_RandomExtension_NextVector_
+  commentId: Overload:DotFeather.RandomExtension.NextVector
+  isSpec: "True"
+  fullName: DotFeather.RandomExtension.NextVector
+  nameWithType: RandomExtension.NextVector
+- uid: DotFeather.RandomExtension.NextVectorFloat(System.Random,System.Int32,System.Int32)
+  name: NextVectorFloat(Random, Int32, Int32)
+  href: api/DotFeather.RandomExtension.html#DotFeather_RandomExtension_NextVectorFloat_System_Random_System_Int32_System_Int32_
+  commentId: M:DotFeather.RandomExtension.NextVectorFloat(System.Random,System.Int32,System.Int32)
+  fullName: DotFeather.RandomExtension.NextVectorFloat(System.Random, System.Int32, System.Int32)
+  nameWithType: RandomExtension.NextVectorFloat(Random, Int32, Int32)
+- uid: DotFeather.RandomExtension.NextVectorFloat*
+  name: NextVectorFloat
+  href: api/DotFeather.RandomExtension.html#DotFeather_RandomExtension_NextVectorFloat_
+  commentId: Overload:DotFeather.RandomExtension.NextVectorFloat
+  isSpec: "True"
+  fullName: DotFeather.RandomExtension.NextVectorFloat
+  nameWithType: RandomExtension.NextVectorFloat
 - uid: DotFeather.SpaceConverter
   name: SpaceConverter
   href: api/DotFeather.SpaceConverter.html
@@ -3635,6 +4428,19 @@ references:
   commentId: T:DotFeather.SystemDrawingTypesToGLConverterExtension
   fullName: DotFeather.SystemDrawingTypesToGLConverterExtension
   nameWithType: SystemDrawingTypesToGLConverterExtension
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
+  name: ToDF(Key)
+  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDF_OpenTK_Input_Key_
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDF(Key)
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF*
+  name: ToDF
+  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDF_
+  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF
+  isSpec: "True"
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDF
 - uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Color)
   name: ToDrawing(Color)
   href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDrawing_OpenTK_Color_
@@ -3733,6 +4539,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL
   nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+  name: ToTK(DFKeyCode)
+  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToTK_DotFeather_DFKeyCode_
+  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK(DFKeyCode)
+- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK*
+  name: ToTK
+  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToTK_
+  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+  isSpec: "True"
+  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+  nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK
 - uid: DotFeather.TextDrawable
   name: TextDrawable
   href: api/DotFeather.TextDrawable.html
@@ -4596,6 +5415,12 @@ references:
   isSpec: "True"
   fullName: DotFeather.Vector.Addition
   nameWithType: Vector.Addition
+- uid: DotFeather.Vector.op_Division(DotFeather.Vector,DotFeather.Vector)
+  name: Division(Vector, Vector)
+  href: api/DotFeather.Vector.html#DotFeather_Vector_op_Division_DotFeather_Vector_DotFeather_Vector_
+  commentId: M:DotFeather.Vector.op_Division(DotFeather.Vector,DotFeather.Vector)
+  fullName: DotFeather.Vector.Division(DotFeather.Vector, DotFeather.Vector)
+  nameWithType: Vector.Division(Vector, Vector)
 - uid: DotFeather.Vector.op_Division(DotFeather.Vector,System.Single)
   name: Division(Vector, Single)
   href: api/DotFeather.Vector.html#DotFeather_Vector_op_Division_DotFeather_Vector_System_Single_
@@ -4635,6 +5460,12 @@ references:
   isSpec: "True"
   fullName: DotFeather.Vector.Inequality
   nameWithType: Vector.Inequality
+- uid: DotFeather.Vector.op_Multiply(DotFeather.Vector,DotFeather.Vector)
+  name: Multiply(Vector, Vector)
+  href: api/DotFeather.Vector.html#DotFeather_Vector_op_Multiply_DotFeather_Vector_DotFeather_Vector_
+  commentId: M:DotFeather.Vector.op_Multiply(DotFeather.Vector,DotFeather.Vector)
+  fullName: DotFeather.Vector.Multiply(DotFeather.Vector, DotFeather.Vector)
+  nameWithType: Vector.Multiply(Vector, Vector)
 - uid: DotFeather.Vector.op_Multiply(DotFeather.Vector,System.Single)
   name: Multiply(Vector, Single)
   href: api/DotFeather.Vector.html#DotFeather_Vector_op_Multiply_DotFeather_Vector_System_Single_

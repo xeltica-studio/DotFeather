@@ -9,7 +9,6 @@ items:
   - DotFeather.DFKeyboard.AltLeft
   - DotFeather.DFKeyboard.AltRight
   - DotFeather.DFKeyboard.B
-  - DotFeather.DFKeyboard.Back
   - DotFeather.DFKeyboard.BackSlash
   - DotFeather.DFKeyboard.BackSpace
   - DotFeather.DFKeyboard.BracketLeft
@@ -64,11 +63,11 @@ items:
   - DotFeather.DFKeyboard.F8
   - DotFeather.DFKeyboard.F9
   - DotFeather.DFKeyboard.G
-  - DotFeather.DFKeyboard.Grave
   - DotFeather.DFKeyboard.H
   - DotFeather.DFKeyboard.Home
   - DotFeather.DFKeyboard.I
   - DotFeather.DFKeyboard.Insert
+  - DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
   - DotFeather.DFKeyboard.J
   - DotFeather.DFKeyboard.K
   - DotFeather.DFKeyboard.Keypad0
@@ -81,23 +80,15 @@ items:
   - DotFeather.DFKeyboard.Keypad7
   - DotFeather.DFKeyboard.Keypad8
   - DotFeather.DFKeyboard.Keypad9
-  - DotFeather.DFKeyboard.KeypadAdd
-  - DotFeather.DFKeyboard.KeypadDecimal
   - DotFeather.DFKeyboard.KeypadDivide
   - DotFeather.DFKeyboard.KeypadEnter
   - DotFeather.DFKeyboard.KeypadMinus
   - DotFeather.DFKeyboard.KeypadMultiply
   - DotFeather.DFKeyboard.KeypadPeriod
   - DotFeather.DFKeyboard.KeypadPlus
-  - DotFeather.DFKeyboard.KeypadSubtract
   - DotFeather.DFKeyboard.L
-  - DotFeather.DFKeyboard.LAlt
   - DotFeather.DFKeyboard.LastKey
-  - DotFeather.DFKeyboard.LBracket
-  - DotFeather.DFKeyboard.LControl
   - DotFeather.DFKeyboard.Left
-  - DotFeather.DFKeyboard.LShift
-  - DotFeather.DFKeyboard.LWin
   - DotFeather.DFKeyboard.M
   - DotFeather.DFKeyboard.Menu
   - DotFeather.DFKeyboard.Minus
@@ -125,12 +116,7 @@ items:
   - DotFeather.DFKeyboard.Q
   - DotFeather.DFKeyboard.Quote
   - DotFeather.DFKeyboard.R
-  - DotFeather.DFKeyboard.RAlt
-  - DotFeather.DFKeyboard.RBracket
-  - DotFeather.DFKeyboard.RControl
   - DotFeather.DFKeyboard.Right
-  - DotFeather.DFKeyboard.RShift
-  - DotFeather.DFKeyboard.RWin
   - DotFeather.DFKeyboard.S
   - DotFeather.DFKeyboard.ScrollLock
   - DotFeather.DFKeyboard.Semicolon
@@ -166,7 +152,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: DFKeyboard
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -211,7 +197,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Unknown
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -248,7 +234,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ShiftLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -261,43 +247,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property ShiftLeft As DFKey
   overload: DotFeather.DFKeyboard.ShiftLeft*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.LShift
-  commentId: P:DotFeather.DFKeyboard.LShift
-  id: LShift
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: LShift
-  nameWithType: DFKeyboard.LShift
-  fullName: DotFeather.DFKeyboard.LShift
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: LShift
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 17
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey LShift { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property LShift As DFKey
-  overload: DotFeather.DFKeyboard.LShift*
   modifiers.csharp:
   - public
   - get
@@ -322,7 +271,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ShiftRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 20
+    startLine: 19
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -335,43 +284,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property ShiftRight As DFKey
   overload: DotFeather.DFKeyboard.ShiftRight*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.RShift
-  commentId: P:DotFeather.DFKeyboard.RShift
-  id: RShift
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: RShift
-  nameWithType: DFKeyboard.RShift
-  fullName: DotFeather.DFKeyboard.RShift
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: RShift
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 23
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey RShift { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property RShift As DFKey
-  overload: DotFeather.DFKeyboard.RShift*
   modifiers.csharp:
   - public
   - get
@@ -396,7 +308,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ControlLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 26
+    startLine: 22
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -409,43 +321,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property ControlLeft As DFKey
   overload: DotFeather.DFKeyboard.ControlLeft*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.LControl
-  commentId: P:DotFeather.DFKeyboard.LControl
-  id: LControl
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: LControl
-  nameWithType: DFKeyboard.LControl
-  fullName: DotFeather.DFKeyboard.LControl
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: LControl
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 29
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey LControl { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property LControl As DFKey
-  overload: DotFeather.DFKeyboard.LControl*
   modifiers.csharp:
   - public
   - get
@@ -470,7 +345,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ControlRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 32
+    startLine: 25
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -483,43 +358,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property ControlRight As DFKey
   overload: DotFeather.DFKeyboard.ControlRight*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.RControl
-  commentId: P:DotFeather.DFKeyboard.RControl
-  id: RControl
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: RControl
-  nameWithType: DFKeyboard.RControl
-  fullName: DotFeather.DFKeyboard.RControl
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: RControl
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 35
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey RControl { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property RControl As DFKey
-  overload: DotFeather.DFKeyboard.RControl*
   modifiers.csharp:
   - public
   - get
@@ -544,7 +382,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AltLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 38
+    startLine: 28
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -557,43 +395,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property AltLeft As DFKey
   overload: DotFeather.DFKeyboard.AltLeft*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.LAlt
-  commentId: P:DotFeather.DFKeyboard.LAlt
-  id: LAlt
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: LAlt
-  nameWithType: DFKeyboard.LAlt
-  fullName: DotFeather.DFKeyboard.LAlt
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: LAlt
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 41
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey LAlt { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property LAlt As DFKey
-  overload: DotFeather.DFKeyboard.LAlt*
   modifiers.csharp:
   - public
   - get
@@ -618,7 +419,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AltRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 44
+    startLine: 31
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -631,43 +432,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property AltRight As DFKey
   overload: DotFeather.DFKeyboard.AltRight*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.RAlt
-  commentId: P:DotFeather.DFKeyboard.RAlt
-  id: RAlt
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: RAlt
-  nameWithType: DFKeyboard.RAlt
-  fullName: DotFeather.DFKeyboard.RAlt
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: RAlt
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 47
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey RAlt { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property RAlt As DFKey
-  overload: DotFeather.DFKeyboard.RAlt*
   modifiers.csharp:
   - public
   - get
@@ -692,7 +456,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: WinLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 50
+    startLine: 34
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -705,43 +469,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property WinLeft As DFKey
   overload: DotFeather.DFKeyboard.WinLeft*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.LWin
-  commentId: P:DotFeather.DFKeyboard.LWin
-  id: LWin
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: LWin
-  nameWithType: DFKeyboard.LWin
-  fullName: DotFeather.DFKeyboard.LWin
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: LWin
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 53
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey LWin { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property LWin As DFKey
-  overload: DotFeather.DFKeyboard.LWin*
   modifiers.csharp:
   - public
   - get
@@ -766,7 +493,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: WinRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 56
+    startLine: 37
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -779,43 +506,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property WinRight As DFKey
   overload: DotFeather.DFKeyboard.WinRight*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.RWin
-  commentId: P:DotFeather.DFKeyboard.RWin
-  id: RWin
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: RWin
-  nameWithType: DFKeyboard.RWin
-  fullName: DotFeather.DFKeyboard.RWin
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: RWin
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 59
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey RWin { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property RWin As DFKey
-  overload: DotFeather.DFKeyboard.RWin*
   modifiers.csharp:
   - public
   - get
@@ -840,7 +530,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Menu
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 62
+    startLine: 40
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -877,7 +567,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 65
+    startLine: 43
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -914,7 +604,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 68
+    startLine: 46
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -951,7 +641,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 71
+    startLine: 49
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -988,7 +678,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 74
+    startLine: 52
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1025,7 +715,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 77
+    startLine: 55
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1062,7 +752,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 80
+    startLine: 58
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1099,7 +789,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 83
+    startLine: 61
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1136,7 +826,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 86
+    startLine: 64
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1173,7 +863,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 89
+    startLine: 67
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1210,7 +900,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F10
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 92
+    startLine: 70
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1247,7 +937,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F11
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 95
+    startLine: 73
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1284,7 +974,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F12
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 98
+    startLine: 76
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1321,7 +1011,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F13
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 101
+    startLine: 79
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1358,7 +1048,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F14
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 104
+    startLine: 82
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1395,7 +1085,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F15
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 107
+    startLine: 85
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1432,7 +1122,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F16
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 110
+    startLine: 88
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1469,7 +1159,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F17
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 113
+    startLine: 91
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1506,7 +1196,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F18
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 116
+    startLine: 94
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1543,7 +1233,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F19
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 119
+    startLine: 97
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1580,7 +1270,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F20
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 122
+    startLine: 100
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1617,7 +1307,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F21
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 125
+    startLine: 103
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1654,7 +1344,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F22
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 128
+    startLine: 106
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1691,7 +1381,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F23
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 131
+    startLine: 109
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1728,7 +1418,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F24
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 134
+    startLine: 112
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1765,7 +1455,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F25
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 137
+    startLine: 115
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1802,7 +1492,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F26
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 140
+    startLine: 118
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1839,7 +1529,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F27
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 143
+    startLine: 121
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1876,7 +1566,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F28
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 146
+    startLine: 124
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1913,7 +1603,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F29
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 149
+    startLine: 127
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1950,7 +1640,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F30
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 152
+    startLine: 130
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1987,7 +1677,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F31
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 155
+    startLine: 133
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2024,7 +1714,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F32
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 158
+    startLine: 136
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2061,7 +1751,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F33
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 161
+    startLine: 139
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2098,7 +1788,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F34
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 164
+    startLine: 142
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2135,7 +1825,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F35
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 167
+    startLine: 145
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2172,7 +1862,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Up
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 170
+    startLine: 148
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2209,7 +1899,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Down
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 173
+    startLine: 151
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2246,7 +1936,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Left
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 176
+    startLine: 154
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2283,7 +1973,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Right
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 179
+    startLine: 157
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2320,7 +2010,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Enter
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 182
+    startLine: 160
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2357,7 +2047,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Escape
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 185
+    startLine: 163
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2394,7 +2084,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Space
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 188
+    startLine: 166
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2431,7 +2121,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Tab
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 191
+    startLine: 169
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2468,7 +2158,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BackSpace
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 194
+    startLine: 172
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2481,43 +2171,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property BackSpace As DFKey
   overload: DotFeather.DFKeyboard.BackSpace*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.Back
-  commentId: P:DotFeather.DFKeyboard.Back
-  id: Back
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: Back
-  nameWithType: DFKeyboard.Back
-  fullName: DotFeather.DFKeyboard.Back
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: Back
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 197
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey Back { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Back As DFKey
-  overload: DotFeather.DFKeyboard.Back*
   modifiers.csharp:
   - public
   - get
@@ -2542,7 +2195,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Insert
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 200
+    startLine: 175
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2579,7 +2232,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Delete
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 203
+    startLine: 178
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2616,7 +2269,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: PageUp
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 206
+    startLine: 181
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2653,7 +2306,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: PageDown
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 209
+    startLine: 184
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2690,7 +2343,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Home
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 212
+    startLine: 187
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2727,7 +2380,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: End
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 215
+    startLine: 190
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2764,7 +2417,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CapsLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 218
+    startLine: 193
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2801,7 +2454,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ScrollLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 221
+    startLine: 196
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2838,7 +2491,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: PrintScreen
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 224
+    startLine: 199
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2875,7 +2528,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Pause
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 227
+    startLine: 202
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2912,7 +2565,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: NumLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 230
+    startLine: 205
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2949,7 +2602,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 233
+    startLine: 208
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2986,7 +2639,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Sleep
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 236
+    startLine: 211
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3023,7 +2676,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad0
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 239
+    startLine: 214
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3060,7 +2713,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 242
+    startLine: 217
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3097,7 +2750,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 245
+    startLine: 220
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3134,7 +2787,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 248
+    startLine: 223
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3171,7 +2824,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 251
+    startLine: 226
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3208,7 +2861,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 254
+    startLine: 229
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3245,7 +2898,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 257
+    startLine: 232
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3282,7 +2935,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 260
+    startLine: 235
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3319,7 +2972,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 263
+    startLine: 238
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3356,7 +3009,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 266
+    startLine: 241
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3393,7 +3046,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadDivide
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 269
+    startLine: 244
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3430,7 +3083,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadMultiply
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 272
+    startLine: 247
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3443,43 +3096,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property KeypadMultiply As DFKey
   overload: DotFeather.DFKeyboard.KeypadMultiply*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.KeypadSubtract
-  commentId: P:DotFeather.DFKeyboard.KeypadSubtract
-  id: KeypadSubtract
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: KeypadSubtract
-  nameWithType: DFKeyboard.KeypadSubtract
-  fullName: DotFeather.DFKeyboard.KeypadSubtract
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: KeypadSubtract
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 275
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey KeypadSubtract { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property KeypadSubtract As DFKey
-  overload: DotFeather.DFKeyboard.KeypadSubtract*
   modifiers.csharp:
   - public
   - get
@@ -3504,7 +3120,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadMinus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 278
+    startLine: 250
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3517,43 +3133,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property KeypadMinus As DFKey
   overload: DotFeather.DFKeyboard.KeypadMinus*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.KeypadAdd
-  commentId: P:DotFeather.DFKeyboard.KeypadAdd
-  id: KeypadAdd
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: KeypadAdd
-  nameWithType: DFKeyboard.KeypadAdd
-  fullName: DotFeather.DFKeyboard.KeypadAdd
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: KeypadAdd
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 281
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey KeypadAdd { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property KeypadAdd As DFKey
-  overload: DotFeather.DFKeyboard.KeypadAdd*
   modifiers.csharp:
   - public
   - get
@@ -3578,7 +3157,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadPlus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 284
+    startLine: 253
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3591,43 +3170,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property KeypadPlus As DFKey
   overload: DotFeather.DFKeyboard.KeypadPlus*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.KeypadDecimal
-  commentId: P:DotFeather.DFKeyboard.KeypadDecimal
-  id: KeypadDecimal
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: KeypadDecimal
-  nameWithType: DFKeyboard.KeypadDecimal
-  fullName: DotFeather.DFKeyboard.KeypadDecimal
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: KeypadDecimal
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 287
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey KeypadDecimal { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property KeypadDecimal As DFKey
-  overload: DotFeather.DFKeyboard.KeypadDecimal*
   modifiers.csharp:
   - public
   - get
@@ -3652,7 +3194,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadPeriod
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 290
+    startLine: 256
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3689,7 +3231,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadEnter
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 293
+    startLine: 259
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3726,7 +3268,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: A
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 296
+    startLine: 262
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3763,7 +3305,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: B
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 299
+    startLine: 265
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3800,7 +3342,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: C
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 302
+    startLine: 268
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3837,7 +3379,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: D
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 305
+    startLine: 271
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3874,7 +3416,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: E
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 308
+    startLine: 274
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3911,7 +3453,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 311
+    startLine: 277
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3948,7 +3490,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: G
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 314
+    startLine: 280
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3985,7 +3527,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: H
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 317
+    startLine: 283
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4022,7 +3564,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: I
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 320
+    startLine: 286
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4059,7 +3601,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: J
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 323
+    startLine: 289
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4096,7 +3638,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: K
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 326
+    startLine: 292
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4133,7 +3675,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: L
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 329
+    startLine: 295
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4170,7 +3712,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: M
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 332
+    startLine: 298
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4207,7 +3749,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: N
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 335
+    startLine: 301
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4244,7 +3786,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: O
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 338
+    startLine: 304
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4281,7 +3823,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: P
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 341
+    startLine: 307
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4318,7 +3860,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Q
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 344
+    startLine: 310
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4355,7 +3897,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: R
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 347
+    startLine: 313
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4392,7 +3934,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: S
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 350
+    startLine: 316
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4429,7 +3971,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: T
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 353
+    startLine: 319
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4466,7 +4008,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: U
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 356
+    startLine: 322
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4503,7 +4045,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: V
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 359
+    startLine: 325
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4540,7 +4082,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: W
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 362
+    startLine: 328
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4577,7 +4119,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: X
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 365
+    startLine: 331
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4614,7 +4156,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Y
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 368
+    startLine: 334
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4651,7 +4193,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Z
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 371
+    startLine: 337
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4688,7 +4230,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number0
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 374
+    startLine: 340
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4725,7 +4267,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 377
+    startLine: 343
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4762,7 +4304,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 380
+    startLine: 346
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4799,7 +4341,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 383
+    startLine: 349
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4836,7 +4378,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 386
+    startLine: 352
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4873,7 +4415,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 389
+    startLine: 355
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4910,7 +4452,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 392
+    startLine: 358
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4947,7 +4489,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 395
+    startLine: 361
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4984,7 +4526,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 398
+    startLine: 364
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5021,7 +4563,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 401
+    startLine: 367
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5058,7 +4600,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Tilde
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 404
+    startLine: 370
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5071,43 +4613,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property Tilde As DFKey
   overload: DotFeather.DFKeyboard.Tilde*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.Grave
-  commentId: P:DotFeather.DFKeyboard.Grave
-  id: Grave
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: Grave
-  nameWithType: DFKeyboard.Grave
-  fullName: DotFeather.DFKeyboard.Grave
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: Grave
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 407
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey Grave { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Grave As DFKey
-  overload: DotFeather.DFKeyboard.Grave*
   modifiers.csharp:
   - public
   - get
@@ -5132,7 +4637,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Minus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 410
+    startLine: 373
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5169,7 +4674,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Plus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 413
+    startLine: 376
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5206,7 +4711,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BracketLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 416
+    startLine: 379
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5219,43 +4724,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property BracketLeft As DFKey
   overload: DotFeather.DFKeyboard.BracketLeft*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.LBracket
-  commentId: P:DotFeather.DFKeyboard.LBracket
-  id: LBracket
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: LBracket
-  nameWithType: DFKeyboard.LBracket
-  fullName: DotFeather.DFKeyboard.LBracket
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: LBracket
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 419
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey LBracket { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property LBracket As DFKey
-  overload: DotFeather.DFKeyboard.LBracket*
   modifiers.csharp:
   - public
   - get
@@ -5280,7 +4748,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BracketRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 422
+    startLine: 382
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5293,43 +4761,6 @@ items:
       type: DotFeather.DFKey
     content.vb: Public ReadOnly Property BracketRight As DFKey
   overload: DotFeather.DFKeyboard.BracketRight*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFKeyboard.RBracket
-  commentId: P:DotFeather.DFKeyboard.RBracket
-  id: RBracket
-  parent: DotFeather.DFKeyboard
-  langs:
-  - csharp
-  - vb
-  name: RBracket
-  nameWithType: DFKeyboard.RBracket
-  fullName: DotFeather.DFKeyboard.RBracket
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFKeyboard.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: RBracket
-    path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 425
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: ''
-  example: []
-  syntax:
-    content: public DFKey RBracket { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property RBracket As DFKey
-  overload: DotFeather.DFKeyboard.RBracket*
   modifiers.csharp:
   - public
   - get
@@ -5354,7 +4785,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Semicolon
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 428
+    startLine: 385
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5391,7 +4822,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Quote
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 431
+    startLine: 388
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5428,7 +4859,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Comma
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 434
+    startLine: 391
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5465,7 +4896,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Period
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 437
+    startLine: 394
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5502,7 +4933,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Slash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 440
+    startLine: 397
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5539,7 +4970,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BackSlash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 443
+    startLine: 400
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5576,7 +5007,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: NonUSBackSlash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 446
+    startLine: 403
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5613,7 +5044,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LastKey
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 449
+    startLine: 406
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5632,6 +5063,49 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
+  commentId: P:DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
+  id: Item(DotFeather.DFKeyCode)
+  parent: DotFeather.DFKeyboard
+  langs:
+  - csharp
+  - vb
+  name: Item[DFKeyCode]
+  nameWithType: DFKeyboard.Item[DFKeyCode]
+  fullName: DotFeather.DFKeyboard.Item[DotFeather.DFKeyCode]
+  type: Property
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKeyboard.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: this[]
+    path: ../DotFeather/InputSystems/DFKeyboard.cs
+    startLine: 412
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<xref href=\"DotFeather.DFKeyCode\" data-throw-if-not-resolved=\"false\"></xref> を指定して特定のキーを取得します。\n"
+  example: []
+  syntax:
+    content: public DFKey this[DFKeyCode code] { get; }
+    parameters:
+    - id: code
+      type: DotFeather.DFKeyCode
+    return:
+      type: DotFeather.DFKey
+      description: ''
+    content.vb: Public ReadOnly Property Item(code As DFKeyCode) As DFKey
+  overload: DotFeather.DFKeyboard.Item*
+  nameWithType.vb: DFKeyboard.Item(DFKeyCode)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
+  name.vb: Item(DFKeyCode)
 references:
 - uid: DotFeather
   commentId: N:DotFeather
@@ -5946,81 +5420,41 @@ references:
   name: ShiftLeft
   nameWithType: DFKeyboard.ShiftLeft
   fullName: DotFeather.DFKeyboard.ShiftLeft
-- uid: DotFeather.DFKeyboard.LShift*
-  commentId: Overload:DotFeather.DFKeyboard.LShift
-  name: LShift
-  nameWithType: DFKeyboard.LShift
-  fullName: DotFeather.DFKeyboard.LShift
 - uid: DotFeather.DFKeyboard.ShiftRight*
   commentId: Overload:DotFeather.DFKeyboard.ShiftRight
   name: ShiftRight
   nameWithType: DFKeyboard.ShiftRight
   fullName: DotFeather.DFKeyboard.ShiftRight
-- uid: DotFeather.DFKeyboard.RShift*
-  commentId: Overload:DotFeather.DFKeyboard.RShift
-  name: RShift
-  nameWithType: DFKeyboard.RShift
-  fullName: DotFeather.DFKeyboard.RShift
 - uid: DotFeather.DFKeyboard.ControlLeft*
   commentId: Overload:DotFeather.DFKeyboard.ControlLeft
   name: ControlLeft
   nameWithType: DFKeyboard.ControlLeft
   fullName: DotFeather.DFKeyboard.ControlLeft
-- uid: DotFeather.DFKeyboard.LControl*
-  commentId: Overload:DotFeather.DFKeyboard.LControl
-  name: LControl
-  nameWithType: DFKeyboard.LControl
-  fullName: DotFeather.DFKeyboard.LControl
 - uid: DotFeather.DFKeyboard.ControlRight*
   commentId: Overload:DotFeather.DFKeyboard.ControlRight
   name: ControlRight
   nameWithType: DFKeyboard.ControlRight
   fullName: DotFeather.DFKeyboard.ControlRight
-- uid: DotFeather.DFKeyboard.RControl*
-  commentId: Overload:DotFeather.DFKeyboard.RControl
-  name: RControl
-  nameWithType: DFKeyboard.RControl
-  fullName: DotFeather.DFKeyboard.RControl
 - uid: DotFeather.DFKeyboard.AltLeft*
   commentId: Overload:DotFeather.DFKeyboard.AltLeft
   name: AltLeft
   nameWithType: DFKeyboard.AltLeft
   fullName: DotFeather.DFKeyboard.AltLeft
-- uid: DotFeather.DFKeyboard.LAlt*
-  commentId: Overload:DotFeather.DFKeyboard.LAlt
-  name: LAlt
-  nameWithType: DFKeyboard.LAlt
-  fullName: DotFeather.DFKeyboard.LAlt
 - uid: DotFeather.DFKeyboard.AltRight*
   commentId: Overload:DotFeather.DFKeyboard.AltRight
   name: AltRight
   nameWithType: DFKeyboard.AltRight
   fullName: DotFeather.DFKeyboard.AltRight
-- uid: DotFeather.DFKeyboard.RAlt*
-  commentId: Overload:DotFeather.DFKeyboard.RAlt
-  name: RAlt
-  nameWithType: DFKeyboard.RAlt
-  fullName: DotFeather.DFKeyboard.RAlt
 - uid: DotFeather.DFKeyboard.WinLeft*
   commentId: Overload:DotFeather.DFKeyboard.WinLeft
   name: WinLeft
   nameWithType: DFKeyboard.WinLeft
   fullName: DotFeather.DFKeyboard.WinLeft
-- uid: DotFeather.DFKeyboard.LWin*
-  commentId: Overload:DotFeather.DFKeyboard.LWin
-  name: LWin
-  nameWithType: DFKeyboard.LWin
-  fullName: DotFeather.DFKeyboard.LWin
 - uid: DotFeather.DFKeyboard.WinRight*
   commentId: Overload:DotFeather.DFKeyboard.WinRight
   name: WinRight
   nameWithType: DFKeyboard.WinRight
   fullName: DotFeather.DFKeyboard.WinRight
-- uid: DotFeather.DFKeyboard.RWin*
-  commentId: Overload:DotFeather.DFKeyboard.RWin
-  name: RWin
-  nameWithType: DFKeyboard.RWin
-  fullName: DotFeather.DFKeyboard.RWin
 - uid: DotFeather.DFKeyboard.Menu*
   commentId: Overload:DotFeather.DFKeyboard.Menu
   name: Menu
@@ -6246,11 +5680,6 @@ references:
   name: BackSpace
   nameWithType: DFKeyboard.BackSpace
   fullName: DotFeather.DFKeyboard.BackSpace
-- uid: DotFeather.DFKeyboard.Back*
-  commentId: Overload:DotFeather.DFKeyboard.Back
-  name: Back
-  nameWithType: DFKeyboard.Back
-  fullName: DotFeather.DFKeyboard.Back
 - uid: DotFeather.DFKeyboard.Insert*
   commentId: Overload:DotFeather.DFKeyboard.Insert
   name: Insert
@@ -6376,31 +5805,16 @@ references:
   name: KeypadMultiply
   nameWithType: DFKeyboard.KeypadMultiply
   fullName: DotFeather.DFKeyboard.KeypadMultiply
-- uid: DotFeather.DFKeyboard.KeypadSubtract*
-  commentId: Overload:DotFeather.DFKeyboard.KeypadSubtract
-  name: KeypadSubtract
-  nameWithType: DFKeyboard.KeypadSubtract
-  fullName: DotFeather.DFKeyboard.KeypadSubtract
 - uid: DotFeather.DFKeyboard.KeypadMinus*
   commentId: Overload:DotFeather.DFKeyboard.KeypadMinus
   name: KeypadMinus
   nameWithType: DFKeyboard.KeypadMinus
   fullName: DotFeather.DFKeyboard.KeypadMinus
-- uid: DotFeather.DFKeyboard.KeypadAdd*
-  commentId: Overload:DotFeather.DFKeyboard.KeypadAdd
-  name: KeypadAdd
-  nameWithType: DFKeyboard.KeypadAdd
-  fullName: DotFeather.DFKeyboard.KeypadAdd
 - uid: DotFeather.DFKeyboard.KeypadPlus*
   commentId: Overload:DotFeather.DFKeyboard.KeypadPlus
   name: KeypadPlus
   nameWithType: DFKeyboard.KeypadPlus
   fullName: DotFeather.DFKeyboard.KeypadPlus
-- uid: DotFeather.DFKeyboard.KeypadDecimal*
-  commentId: Overload:DotFeather.DFKeyboard.KeypadDecimal
-  name: KeypadDecimal
-  nameWithType: DFKeyboard.KeypadDecimal
-  fullName: DotFeather.DFKeyboard.KeypadDecimal
 - uid: DotFeather.DFKeyboard.KeypadPeriod*
   commentId: Overload:DotFeather.DFKeyboard.KeypadPeriod
   name: KeypadPeriod
@@ -6596,11 +6010,6 @@ references:
   name: Tilde
   nameWithType: DFKeyboard.Tilde
   fullName: DotFeather.DFKeyboard.Tilde
-- uid: DotFeather.DFKeyboard.Grave*
-  commentId: Overload:DotFeather.DFKeyboard.Grave
-  name: Grave
-  nameWithType: DFKeyboard.Grave
-  fullName: DotFeather.DFKeyboard.Grave
 - uid: DotFeather.DFKeyboard.Minus*
   commentId: Overload:DotFeather.DFKeyboard.Minus
   name: Minus
@@ -6616,21 +6025,11 @@ references:
   name: BracketLeft
   nameWithType: DFKeyboard.BracketLeft
   fullName: DotFeather.DFKeyboard.BracketLeft
-- uid: DotFeather.DFKeyboard.LBracket*
-  commentId: Overload:DotFeather.DFKeyboard.LBracket
-  name: LBracket
-  nameWithType: DFKeyboard.LBracket
-  fullName: DotFeather.DFKeyboard.LBracket
 - uid: DotFeather.DFKeyboard.BracketRight*
   commentId: Overload:DotFeather.DFKeyboard.BracketRight
   name: BracketRight
   nameWithType: DFKeyboard.BracketRight
   fullName: DotFeather.DFKeyboard.BracketRight
-- uid: DotFeather.DFKeyboard.RBracket*
-  commentId: Overload:DotFeather.DFKeyboard.RBracket
-  name: RBracket
-  nameWithType: DFKeyboard.RBracket
-  fullName: DotFeather.DFKeyboard.RBracket
 - uid: DotFeather.DFKeyboard.Semicolon*
   commentId: Overload:DotFeather.DFKeyboard.Semicolon
   name: Semicolon
@@ -6671,3 +6070,14 @@ references:
   name: LastKey
   nameWithType: DFKeyboard.LastKey
   fullName: DotFeather.DFKeyboard.LastKey
+- uid: DotFeather.DFKeyCode
+  commentId: T:DotFeather.DFKeyCode
+  parent: DotFeather
+  name: DFKeyCode
+  nameWithType: DFKeyCode
+  fullName: DotFeather.DFKeyCode
+- uid: DotFeather.DFKeyboard.Item*
+  commentId: Overload:DotFeather.DFKeyboard.Item
+  name: Item
+  nameWithType: DFKeyboard.Item
+  fullName: DotFeather.DFKeyboard.Item

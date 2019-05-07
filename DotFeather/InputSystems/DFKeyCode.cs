@@ -16,19 +16,9 @@ namespace DotFeather
 		ShiftLeft = 1,
 
 		/// <summary>
-		/// 左 Shift キー。
-		/// </summary>
-		LShift = 1,
-
-		/// <summary>
 		/// 右 Shift キー。
 		/// </summary>
 		ShiftRight = 2,
-
-		/// <summary>
-		/// 右 Shift キー。
-		/// </summary>
-		RShift = 2,
 
 		/// <summary>
 		/// 左 Ctrl キー。
@@ -36,19 +26,9 @@ namespace DotFeather
 		ControlLeft = 3,
 
 		/// <summary>
-		/// 左 Ctrl キー。
-		/// </summary>
-		LControl = 3,
-
-		/// <summary>
 		/// 右 Ctrl キー。
 		/// </summary>
 		ControlRight = 4,
-
-		/// <summary>
-		/// 右 Ctrl キー。
-		/// </summary>
-		RControl = 4,
 
 		/// <summary>
 		/// 左 Alt キー。
@@ -56,19 +36,9 @@ namespace DotFeather
 		AltLeft = 5,
 
 		/// <summary>
-		/// 左 Alt キー。
-		/// </summary>
-		LAlt = 5,
-
-		/// <summary>
 		/// 右 Alt キー。
 		/// </summary>
 		AltRight = 6,
-
-		/// <summary>
-		/// 右 Alt キー。
-		/// </summary>
-		RAlt = 6,
 
 		/// <summary>
 		/// 左 Windows キー。
@@ -76,19 +46,9 @@ namespace DotFeather
 		WinLeft = 7,
 
 		/// <summary>
-		/// 左 Windows キー。
-		/// </summary>
-		LWin = 7,
-
-		/// <summary>
 		/// 右 Windows キー。
 		/// </summary>
 		WinRight = 8,
-
-		/// <summary>
-		/// 右 Windows キー。
-		/// </summary>
-		RWin = 8,
 
 		/// <summary>
 		/// メニュー キー。
@@ -316,11 +276,6 @@ namespace DotFeather
 		BackSpace = 53,
 
 		/// <summary>
-		/// Back キー。
-		/// </summary>
-		Back = 53,
-
-		/// <summary>
 		/// Insert キー。
 		/// </summary>
 		Insert = 54,
@@ -448,27 +403,12 @@ namespace DotFeather
 		/// <summary>
 		/// キーパッドの - キー。
 		/// </summary>
-		KeypadSubtract = 79,
-
-		/// <summary>
-		/// キーパッドの - キー。
-		/// </summary>
 		KeypadMinus = 79,
-
-		/// <summary>
-		/// キーパッドの + キー。
-		/// </summary>
-		KeypadAdd = 80,
 
         /// <summary>
         /// キーパッドの + キー。
         /// </summary>
         KeypadPlus = 80,
-
-		/// <summary>
-		/// キーパッドの . キー。
-		/// </summary>
-		KeypadDecimal = 81,
 
 		/// <summary>
 		/// キーパッドの . キー。
@@ -666,11 +606,6 @@ namespace DotFeather
 		Tilde = 119,
 
 		/// <summary>
-		/// チルダキー。
-		/// </summary>
-		Grave = 119,
-
-		/// <summary>
 		/// - キー。
 		/// </summary>
 		Minus = 120,
@@ -686,19 +621,9 @@ namespace DotFeather
 		BracketLeft = 122,
 
 		/// <summary>
-		/// 左 Bracket キー。
-		/// </summary>
-		LBracket = 122,
-
-		/// <summary>
 		/// 右 Bracket キー。
 		/// </summary>
 		BracketRight = 123,
-
-		/// <summary>
-		/// 右 Bracket キー。
-		/// </summary>
-		RBracket = 123,
 
 		/// <summary>
 		/// Semicolon キー。

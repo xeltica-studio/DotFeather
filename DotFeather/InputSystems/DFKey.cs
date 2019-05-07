@@ -5,38 +5,33 @@ namespace DotFeather
 	/// <summary>
 	/// キーボードのキーを表します。
 	/// </summary>
-	public struct DFKey
+	public class DFKey
 	{
-		internal DFKey(DFKeyCode key)
-		{
-			source = key.ToTK();
-		}
+		internal DFKey() { }
 
         /// <summary>
         /// キーが押されているかどうかを示す値を取得します。
         /// </summary>
         /// <value><c>true</c> であれば押されています。<c>false</c> であれば押されていません。</value>
-        public bool IsPressed => Keyboard.GetState()[source];
+        public bool IsPressed { get; internal set; }
 
         /// <summary>
         /// キーがこのフレームで押されたかどうかを示す値を取得します。
         /// </summary>
         /// <returns><c>true</c> であればたった今押されました。<c>false</c> であればそうでありません。</returns>
-        public bool IsKeyDown => Keyboard.GetState().IsKeyDown(source);
+        public bool IsKeyDown { get; internal set; }
 
         /// <summary>
         /// キーがこのフレームで離されたかどうかを示す値を取得します。
         /// </summary>
         /// <returns><c>true</c> であればたった今離されました。<c>false</c> であればそうでありません。</returns>
-        public bool IsKeyUp => Keyboard.GetState().IsKeyUp(source);
+        public bool IsKeyUp { get; internal set; }
 
         /// <summary>
         /// キーが押されているかどうかを取得します。
         /// </summary>
         /// <value><c>true</c> であれば押されています。<c>false</c> であれば押されていません。</value>
         public static implicit operator bool(DFKey key) => key.IsPressed;
-
-		private readonly Key source;
 	}
 
 }

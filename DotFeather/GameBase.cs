@@ -124,6 +124,7 @@ namespace DotFeather
 					frameCount = 0;
 					prevSecond = DateTime.Now.Second;
 				}
+				Input.Keyboard.Update();
 				OnUpdate(s, new DFEventArgs
 				{
 					DeltaTime = e.Time,

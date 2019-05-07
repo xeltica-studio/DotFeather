@@ -32,4 +32,4 @@ map.Rect(2, 16, 16, 16, tile);
 Tile sprite = Tile.LoadFrom("./assets/castle.png");
 ```
 
-次: [コンテナー](container.md)
+次: [テキスト](text.md)

@@ -33,4 +33,4 @@ In addition, you can directly generate tiles by specifying path:
 Tile tile = Tile.LoadFrom("./assets/skeleton.png");
 ```
 
-Next: [Container](container.md)
+Next: [Text](text.md)

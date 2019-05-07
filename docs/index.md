@@ -16,6 +16,7 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
         - [Graphic](drawing/Graphic.md)
         - [Sprite](drawing/sprite.md)
         - [Tilemap](drawing/tilemap.md)
+        - [Text](drawing/text.md)
         - [Container](drawing/container.md)
     - Input
         - [from Mouse](input/mouse.md)

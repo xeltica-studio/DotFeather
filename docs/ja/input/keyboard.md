@@ -12,6 +12,17 @@ if (Input.Keyboard.A.IsPressed)
 {
 	Console.WriteLine("Aが押されている");
 }
+
+
+if (Input.Keyboard.B.IsKeyDown)
+{
+	Console.WriteLine("Aが押された");
+}
+
+if (Input.Keyboard.B.IsKeyUp)
+{
+	Console.WriteLine("Bが離された");
+}
 ```
 
 次: [オーディオ](../audio.md)

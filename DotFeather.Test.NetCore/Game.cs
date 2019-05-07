@@ -16,23 +16,23 @@ namespace DotFeather
 
 		protected override void OnLoad(object sender, EventArgs e)
 		{
-			neko = Sprite.LoadFrom("pokeball.png");
-			neko.Location = new Vector(64, 64);
+			var neko = Tile.LoadFrom("neko.png");
+			map = new Tilemap(Vector.One * 32);
+			map.Fill(0, 0, 16, 16, neko);
+			map.Location = new Vector(8, 8);
 			Root.Add(text = new TextDrawable("", new Font(FontFamily.GenericSansSerif, 32), Color.White));
-			Root.Add(neko);
+			Root.Add(map);
 		}
 
 		protected override void OnUpdate(object sender, DFEventArgs e)
 		{
-			if (Input.Keyboard.Escape.IsPressed)
+			if (Input.Keyboard.Escape.IsKeyUp)
 				Exit(0);
-			var delta = Time.Now % 10 < 5 ? 1 : 2;
-			neko.Scale = Vector.One * delta;
-			text.Text = $"{Time.Fps}\n{neko.Scale} {delta} {neko.Texture.Size} {neko.Width} {neko.Height}";
-			neko.Location = new Vector(Input.Mouse.Position.X, Input.Mouse.Position.Y);
+			text.Text = Input.Keyboard.Space.IsKeyDown ? "おした" : "おしてない";
+			map.Scale = Vector.One * Math.Abs((float)Math.Sin(DFMath.ToRadian((float)Time.Now * 90)) * 2);
         }
 
-        private Sprite neko;
+        private Tilemap map;
         private TextDrawable text;
     }
 }

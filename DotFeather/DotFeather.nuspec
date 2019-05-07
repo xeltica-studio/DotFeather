@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>DotFeather</id>
-    <version>1.1.2</version>
+    <version>1.2.0</version>
     <title>DotFeather</title>
     <authors>Xeltica</authors>
     <owners>Xeltica</owners>
@@ -13,27 +13,14 @@
     <tags>GameEngine</tags>
         <license type="expression">MIT</license>
     <releaseNotes>
-		1.1.2:
-		+ Fix some Drawables' Destroy() process
-		1.1.1:
-		+ Fix broken API Compatibility of TextDrawable.RenderedTexture
-
-		1.1.0:
-		+ Add TextureDrawableBase as a base of all drawable classes which draw textures	
-	    + Fix Sprite.Scale works so wrongly
-    	+ Add Time.Fps
-    	+ Optimize Behavior of TextDrawable 
-
-		1.0.3:
-		+ Fix drawing order is inverse
-
-		1.0.2:
-		+ Fix some properties of Container aren't public
-
-		1.0.1:
-		+ Add FontDrawable
-		+ Fix bugs
-		+ Change namespace
+		1.2.0:
+		+ Add some new features for DFKey
+		  - DFKey.KeyDown, DFKey.KeyUp and implicitly cast to boolean
+		+ Support Multiplying and Dividing between Vectors
+		+ Support Tilemap.Scale
+		+ Support Graphic.Scale
+		+ Support Container.Scale
+		+ Add RandomExtension to get random color and vector
 	</releaseNotes>
 	<dependencies>
 	  <dependency id="OpenTK.NetStandard" version="1.0.4" />

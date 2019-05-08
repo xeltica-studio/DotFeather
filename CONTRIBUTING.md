@@ -19,7 +19,7 @@ If you want me to add new features or find bugs, please post it to [GitHub Issue
 
 ## Continuous Integration
 
-DotFeather uses Appveyor to automatic deployment. Its configuration is in `/appveyor.yml`.
+DotFeather uses AppVeyor to automatic deployment. Its configuration is in `/appveyor.yml`.
 
 ## Coding Style
 

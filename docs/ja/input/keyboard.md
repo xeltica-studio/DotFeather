@@ -16,7 +16,7 @@ if (Input.Keyboard.A.IsPressed)
 
 if (Input.Keyboard.B.IsKeyDown)
 {
-	Console.WriteLine("Aが押された");
+	Console.WriteLine("Bが押された");
 }
 
 if (Input.Keyboard.B.IsKeyUp)

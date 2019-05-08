@@ -16,12 +16,12 @@ if (Input.Keyboard.A.IsPressed)
 
 if (Input.Keyboard.B.IsKeyDown)
 {
-	Console.WriteLine("Aが押された");
+	Console.WriteLine("B key is down");
 }
 
 if (Input.Keyboard.B.IsKeyUp)
 {
-	Console.WriteLine("Bが離された");
+	Console.WriteLine("B key is up");
 }
 ```
 

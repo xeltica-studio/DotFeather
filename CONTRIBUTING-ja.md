@@ -19,7 +19,7 @@
 
 ## 継続的インテグレーション
 
-DotFeather では、 Appveyor を用いてデプロイの自動化を行っています。設定ファイルは  `/appveyor.yml` にあります。
+DotFeather では、 AppVeyor を用いてデプロイの自動化を行っています。設定ファイルは  `/appveyor.yml` にあります。
 
 ## コーディング規則
 

@@ -1,4 +1,4 @@
-version: 1.2.0.{build}
+version: 1.2.1.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -42,23 +42,8 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    + Add some new features for DFKey
-      + DFKey.KeyDown, DFKey.KeyUp and implicitly cast to boolean
-    + Support Multiplying and Dividing between Vectors
-    + Support Tilemap.Scale
-    + Support Graphic.Scale
-    + Support Container.Scale
-    + Add RandomExtension to get random color and vector
-
-    ---
-
-    + DFKey へいくつか機能追加
-      + DFKey.KeyDown, DFKey.KeyUp および boolean への暗黙型変換
-    + ベクトル同士の乗算および除算を実装
-    + Tilemap のスケーリングサポート
-    + Graphic のスケーリングサポート
-    + Container のスケーリングサポート
-    + RandomExtension を追加し、ランダムな色やベクトルを取得できるように
+    + Improve WaveAudioSource
+      + Now support extended fmt chunk
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

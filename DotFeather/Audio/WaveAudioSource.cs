@@ -115,6 +115,10 @@ namespace DotFeather
 				reader.ReadInt16();
 				int bitsPerSample = reader.ReadInt16();
 
+				// 拡張とかあったりなかったりするらしい
+				if (size - 16 > 0)
+					reader.ReadBytes(size - 16);
+
 				if (bitsPerSample != 8 && bitsPerSample != 16)
 					throw new NotSupportedException("DotFeather only supports 8bit or 16bit per sample.");
 

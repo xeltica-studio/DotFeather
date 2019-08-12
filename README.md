@@ -2,7 +2,7 @@
 [![Build status](https://img.shields.io/appveyor/ci/xeltica/dotfeather.svg?style=for-the-badge)][ci]
 [![GitHub Releases](https://img.shields.io/github/release/xeltica/DotFeather.svg?style=for-the-badge)][releases]
 [![Nuget](https://img.shields.io/nuget/v/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
-
+[![Discord](https://img.shields.io/discord/572071627991416851?label=discord&style=for-the-badge)](https://discord.gg/e2TCF4m)
 
 DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET Standard 2.0.
 

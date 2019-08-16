@@ -15,10 +15,10 @@
 	<LangVersion>Latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-	<PackageReference Include="OpenTK.NetStandard" Version="1.0.4" />
 	<PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
 	<PackageReference Include="NVorbis" Version="0.8.6" />
 	<PackageReference Include="NUnit" Version="3.11.0" />
+	<PackageReference Include="OpenTK" Version="3.1.0" />
   </ItemGroup>
   <ItemGroup>
 	<Folder Include="InputSystems\" />

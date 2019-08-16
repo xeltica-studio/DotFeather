@@ -1,6 +1,6 @@
 ﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 using System;
-using OpenTK;
+using System.Drawing;
 using OpenTK.Graphics.OpenGL;
 
 namespace DotFeather
@@ -66,10 +66,10 @@ namespace DotFeather
 
 		private static void Vertex(double tcx, double tcy, (float x, float y) vx, System.Drawing.Color? color)
 		{
-			var col = color is System.Drawing.Color c ? c.ToGL() : Color.White;
+			var col = color ?? Color.White;
 
 			GL.TexCoord2(tcx, tcy);
-			GL.Color4(col);
+			GL.Color4(col.R, col.G, col.B, col.A);
 			GL.Vertex2(vx.x, vx.y);
 		}
 	}

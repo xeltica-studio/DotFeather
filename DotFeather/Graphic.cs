@@ -48,7 +48,7 @@ namespace DotFeather
 		/// <param name="color">色.</param>
 		public Graphic Pixel(Point pos, Color color)
 		{
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Points, 0, null, ((PointF)pos).ToGL()));
+			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Points, 0, null, ((PointF)pos)));
 			return this;
 		}
 
@@ -71,7 +71,7 @@ namespace DotFeather
 		/// <param name="color">色.</param>
 		public Graphic Line(Point begin, Point end, Color color)
 		{
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Lines, 0, null, ((PointF)begin).ToGL(), ((PointF)end).ToGL()));
+			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Lines, 0, null, ((PointF)begin), ((PointF)end)));
 			return this;
 		}
 
@@ -113,11 +113,11 @@ namespace DotFeather
 		/// <param name="lineColor">線の色。</param>
 		public Graphic Rect(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Quads, lineWidth, lineColor?.ToGL(),
-				new OpenTK.PointF(x1, y1),
-				new OpenTK.PointF(x1, y2),
-				new OpenTK.PointF(x2, y2),
-				new OpenTK.PointF(x2, y1)));
+			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Quads, lineWidth, lineColor,
+				new PointF(x1, y1),
+				new PointF(x1, y2),
+				new PointF(x2, y2),
+				new PointF(x2, y1)));
 			return this;
 		}
 
@@ -126,10 +126,10 @@ namespace DotFeather
 		/// </summary>
 		public Graphic Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Triangles,lineWidth, lineColor?.ToGL(),
-				new OpenTK.PointF(x1, y1),
-				new OpenTK.PointF(x2, y2),
-				new OpenTK.PointF(x3, y3)));
+			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Triangles,lineWidth, lineColor,
+				new PointF(x1, y1),
+				new PointF(x2, y2),
+				new PointF(x3, y3)));
 			return this;
 		}
 
@@ -146,7 +146,7 @@ namespace DotFeather
 		/// </summary>
 		public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
-			var list = new List<OpenTK.PointF>();
+			var list = new List<PointF>();
 
 			if (x1 > x2) Swap(ref x1, ref x2);
 			if (y1 > y2) Swap(ref y1, ref y2);
@@ -161,14 +161,14 @@ namespace DotFeather
 				var (rw, rh) = (width / 2, height / 2);
 				var (ox, oy) = (x1 + rw, y1 + rh);
 
-				list.Add(new OpenTK.PointF(
+				list.Add(new PointF(
 					(float)(Math.Cos(DFMath.ToRadian(i)) * rw + ox),
 					(float)(Math.Sin(DFMath.ToRadian(i)) * rh + oy)
 				));
 
 			}
 
-			Drawables.Add(new PrimitiveDrawable(color.ToGL(), PrimitiveType.Polygon, lineWidth, lineColor?.ToGL(), list.ToArray()));
+			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Polygon, lineWidth, lineColor, list.ToArray()));
 			return this;
 		}
 

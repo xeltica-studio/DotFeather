@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
-using SDBitmap = System.Drawing.Bitmap;
-using SDRect = System.Drawing.Rectangle;
-using SDSize = System.Drawing.Size;
+using System.Drawing;
+
 using SDColor = System.Drawing.Color;
-using SDPixelFormat = System.Drawing.Imaging.PixelFormat;
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
@@ -133,7 +131,7 @@ namespace DotFeather
 
 			window.RenderFrame += (_, __) =>
 			{
-				GL.ClearColor(BackgroundColor.ToGL());
+				GL.ClearColor(BackgroundColor);
 				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 				
 				Root.Draw(this, Vector.Zero);

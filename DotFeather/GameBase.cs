@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.Drawing;
@@ -10,10 +10,10 @@ using OpenTK.Graphics.OpenGL;
 
 namespace DotFeather
 {
-	/// <summary>
-	/// DotFeather のメインループおよび、各種メソッドを揃えている、ゲームエントリーポイントの基底クラスです。
-	/// </summary>
-	public abstract class GameBase : IDisposable
+    /// <summary>
+    /// DotFeather のメインループおよび、各種メソッドを揃えている、ゲームエントリーポイントの基底クラスです。
+    /// </summary>
+    public abstract class GameBase : IDisposable
 	{
 		/// <summary>
 		/// ウィンドウの X 座標を取得または設定します。
@@ -120,6 +120,15 @@ namespace DotFeather
 						break;
 				}
 			}
+		}
+
+		/// <summary>
+		/// ゲームがフルスクリーンであるかどうかを取得または設定します。
+		/// </summary>
+		public bool IsFullScreen
+		{
+			get => window.WindowState == WindowState.Fullscreen;
+			set => window.WindowState = value ? WindowState.Fullscreen : WindowState.Normal;
 		}
 
 		/// <summary>

@@ -22,7 +22,7 @@ namespace DotFeather
 		/// <summary></summary>
 		public float Angle { get; set; }
 		/// <summary></summary>
-		public Vector Scale { get; set; }
+		public Vector Scale { get; set; } = Vector.One;
 		/// <summary></summary>
 		public int ZOrder { get; set; }
 		/// <summary></summary>

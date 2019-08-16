@@ -24,7 +24,7 @@ namespace DotFeather
         public float Angle { get; set; }
         /// <summary>
         /// </summary>
-        public Vector Scale { get; set; }
+        public Vector Scale { get; set; } = Vector.One;
         /// <summary>
         /// </summary>
         public Color? DefaultColor { get; set; }

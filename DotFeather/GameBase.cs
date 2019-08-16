@@ -94,6 +94,35 @@ namespace DotFeather
 		public float Dpi { get; private set; }
 
 		/// <summary>
+		/// 現在のウィンドウ状態を取得または設定します。
+		/// </summary>
+		public WindowMode WindowMode
+		{
+			get
+			{
+				return  window.WindowBorder == WindowBorder.Resizable ? WindowMode.Resizable :
+						window.WindowBorder == WindowBorder.Fixed ? WindowMode.Fixed :
+						window.WindowBorder == WindowBorder.Hidden ? WindowMode.NoFrame : 
+						throw new InvalidOperationException("unexpected window state");
+			}
+			set
+			{
+				switch (value)
+				{
+					case WindowMode.Fixed:
+						window.WindowBorder = WindowBorder.Fixed;
+						break;
+					case WindowMode.NoFrame:
+						window.WindowBorder = WindowBorder.Hidden;
+						break;
+					case WindowMode.Resizable:
+						window.WindowBorder = WindowBorder.Resizable;
+						break;
+				}
+			}
+		}
+
+		/// <summary>
 		/// 指定したパラメーターで、 <see cref="GameBase"/> クラスの新しいインスタンスを初期化します。
 		/// </summary>
 		/// <param name="width">幅.</param>

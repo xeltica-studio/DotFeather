@@ -17,7 +17,7 @@ namespace DotFeather
 		protected override void OnLoad(object sender, EventArgs e)
 		{
 			var fnt = new Font(new FontFamily("ヒラギノ角ゴ Std"), 40);
-			red = new TextDrawable("ちくわぶ", fnt, Color.White);
+			red = new TextDrawable("ちくわぶ\nねこ", fnt, Color.White);
 			green = new TextDrawable("かに", fnt, Color.Aquamarine);
 			Root.Add(red);
 			Root.Add(green);
@@ -52,6 +52,18 @@ namespace DotFeather
 				green.Location += new Vector(0, 1) * (float)(speed * e.DeltaTime);
 			if (Input.Keyboard.Right)
 				green.Location += new Vector(1, 0) * (float)(speed * e.DeltaTime);
+
+			if (Input.Keyboard.Number1)
+				WindowMode = WindowMode.Fixed;
+
+			if (Input.Keyboard.Number2)
+				WindowMode = WindowMode.NoFrame;
+
+			if (Input.Keyboard.Number3)
+				WindowMode = WindowMode.Resizable;
+
+			if (Input.Keyboard.Number4)
+				IsFullScreen = !IsFullScreen;
         }
 
 		private TextureDrawableBase red, green;

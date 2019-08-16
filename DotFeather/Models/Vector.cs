@@ -90,5 +90,27 @@ namespace DotFeather
 		/// <c>new Vector(1, 1)</c> を取得します。
 		/// </summary>
 		public static readonly Vector One = new Vector(1, 1);
+
+		/// <summary>
+		/// <c>new Vector(-1, 0)</c> を取得します。
+		/// </summary>
+		public static readonly Vector Left = new Vector(-1, 0);
+
+		/// <summary>
+		/// <c>new Vector(0, -1)</c> を取得します。
+		/// </summary>
+		public static readonly Vector Up = new Vector(0, -1);
+
+		/// <summary>
+		/// <c>new Vector(1, 0)</c> を取得します。
+		/// </summary>
+		public static readonly Vector Right = new Vector(1, 0);
+
+		/// <summary>
+		/// <c>new Vector(0, 1)</c> を取得します。
+		/// </summary>
+		public static readonly Vector Down = new Vector(0, 1);
+
+		
 	}
 }

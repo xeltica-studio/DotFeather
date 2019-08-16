@@ -135,7 +135,9 @@ namespace DotFeather
 			{
 				GL.ClearColor(BackgroundColor.ToGL());
 				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+				
 				Root.Draw(this, Vector.Zero);
+				
 				window.SwapBuffers();
 				Dpi = (float)window.ClientSize.Width / window.Size.Width;
 			};
@@ -146,7 +148,7 @@ namespace DotFeather
 				GL.LineWidth(1);
 				window.VSync = VSyncMode.On;
 
-				GL.Enable(EnableCap.DepthTest);
+				GL.Disable(EnableCap.DepthTest);
 
 				window.WindowBorder = WindowBorder.Resizable;
 				OnLoad(s, e);

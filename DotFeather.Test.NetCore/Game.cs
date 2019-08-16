@@ -11,53 +11,49 @@ namespace DotFeather
 	{
         public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{
-			BackgroundColor = Color.Green;
+			BackgroundColor = Color.Black;
 		}
 
 		protected override void OnLoad(object sender, EventArgs e)
 		{
-			Root.Add(text = new TextDrawable("", new Font(FontFamily.GenericSansSerif, 32), Color.White));
-			g = new Graphic();
-			for (int i = 0; i < 4; i++)
-			{
-				RandomDraw();
-			}
-			Root.Add(g);
+			var fnt = new Font(new FontFamily("ヒラギノ角ゴ Std"), 40);
+			red = new TextDrawable("ちくわぶ", fnt, Color.White);
+			green = new TextDrawable("かに", fnt, Color.Aquamarine);
+			Root.Add(red);
+			Root.Add(green);
+			red.Location = new Vector(Width / 4 - red.Width / 2, Height / 2 - red.Height / 2);
+			green.Location = new Vector(Width / 4 * 3 - green.Width / 2, Height / 2 - green.Height / 2);
 		}
 
 		protected override void OnUpdate(object sender, DFEventArgs e)
 		{
 			if (Input.Keyboard.Escape.IsKeyUp)
 				Exit(0);
-			text.Text = Input.Keyboard.Space.IsKeyDown ? "おした" : "おしてない";
-			g.Scale = Vector.One * Math.Abs((float)Math.Sin(DFMath.ToRadian((float)Time.Now * 90)) * 2);
+			
 			if (Input.Keyboard.Space.IsKeyDown)
-				RandomDraw();
+			{
+				BackgroundColor = BackgroundColor == Color.Black ? Color.White : Color.Black;
+			}
+			const int speed = 256;
+			if (Input.Keyboard.W)
+				red.Location += new Vector(0, -1) * (float)(speed * e.DeltaTime);
+			if (Input.Keyboard.A)
+				red.Location += new Vector(-1, 0) * (float)(speed * e.DeltaTime);
+			if (Input.Keyboard.S)
+				red.Location += new Vector(0, 1) * (float)(speed * e.DeltaTime);
+			if (Input.Keyboard.D)
+				red.Location += new Vector(1, 0) * (float)(speed * e.DeltaTime);
+
+			if (Input.Keyboard.Up)
+				green.Location += new Vector(0, -1) * (float)(speed * e.DeltaTime);
+			if (Input.Keyboard.Left)
+				green.Location += new Vector(-1, 0) * (float)(speed * e.DeltaTime);
+			if (Input.Keyboard.Down)
+				green.Location += new Vector(0, 1) * (float)(speed * e.DeltaTime);
+			if (Input.Keyboard.Right)
+				green.Location += new Vector(1, 0) * (float)(speed * e.DeltaTime);
         }
 
-		private void RandomDraw()
-		{
-			switch (Random.Next(5))
-			{
-				case 0:
-					g.Pixel(Random.Next(0, 400), Random.Next(0, 400), Random.NextColor());
-					break;
-                case 1:
-                    g.Line(Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.NextColor());
-                    break;
-                case 2:
-					g.Rect(Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.NextColor(), Random.Next(5), Random.NextColor());
-                    break;
-                case 3:
-                    g.Ellipse(Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.NextColor(), Random.Next(5), Random.NextColor());
-                    break;
-                case 4:
-                    g.Triangle(Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.Next(0, 400), Random.NextColor(), Random.Next(5), Random.NextColor());
-                    break;
-			}
-		}
-
-        private TextDrawable text;
-		private Graphic g;
+		private TextureDrawableBase red, green;
     }
 }

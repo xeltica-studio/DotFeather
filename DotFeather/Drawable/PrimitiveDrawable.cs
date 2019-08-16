@@ -46,6 +46,9 @@ namespace DotFeather
 			var hw = game.Width / 2;
 			var hh = game.Height / 2;
 
+			GL.Enable(EnableCap.Blend);
+			GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
+
 			if (color.A > 0)
 			{
 				using (new GLContext(Primitive))
@@ -89,6 +92,8 @@ namespace DotFeather
 					Vertex(lc, first.Value);
 				}
 			}
+
+			GL.Disable(EnableCap.Blend);
 		}
 
 		public void Destroy() { }

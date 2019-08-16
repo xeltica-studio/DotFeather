@@ -95,11 +95,7 @@ namespace DotFeather
 			bmp.Dispose();
 			bmp = new Bitmap((int)size.Width, (int)size.Height);
 			g = Graphics.FromImage(bmp);
-			g.InterpolationMode = InterpolationMode.NearestNeighbor;
-			g.SmoothingMode = SmoothingMode.None;
-			g.PixelOffsetMode = PixelOffsetMode.HighSpeed;
-			g.TextRenderingHint = TextRenderingHint.SingleBitPerPixelGridFit;
-			g.DrawString(Text, Font, new SolidBrush(Color ?? System.Drawing.Color.Black), 0, 0, StringFormat.GenericTypographic);
+			g.DrawString(Text, Font, new SolidBrush(Color ?? System.Drawing.Color.Black), 0, 0, StringFormat.GenericDefault);
 
 			Texture.Dispose();
 			Texture = Texture2D.LoadFrom(bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb));

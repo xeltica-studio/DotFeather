@@ -63,6 +63,12 @@ namespace DotFeather
 		}
 
 		/// <summary>
+		/// このウィンドウが現在フォーカスされているかどうかを取得します。
+		/// </summary>
+		/// <value>The height.</value>
+		public bool IsFocused => window.Focused;		
+
+		/// <summary>
 		/// ウィンドウの背景色を取得または設定します。
 		/// </summary>
 		public SDColor BackgroundColor { get; set; }

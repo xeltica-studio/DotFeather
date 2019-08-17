@@ -6,9 +6,9 @@ using TK = OpenTK;
 namespace DotFeather
 {
 	/// <summary>
-	/// <see cref="System.Drawing"/>、 <see cref="DotFeather"/> および <see cref="OpenTK"/> 間における類似した構造体の相互変換をする、拡張メソッドを追加します。
+	/// <see cref="DotFeather"/> および <see cref="OpenTK"/> 間における類似した型の相互変換をする、拡張メソッドを追加します。
 	/// </summary>
-	public static class SystemDrawingTypesToGLConverterExtension
+	public static class TypesConverterExtension
 	{
         /// <summary>
         /// <see cref="DotFeather"/> 版に変換します。

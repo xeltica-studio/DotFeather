@@ -96,6 +96,49 @@ namespace DotFeather
 		}
 
 		/// <summary>
+		/// 画像ファイルを読み込み、9スライス用に切り抜きます。
+		/// </summary>
+		/// <param name="path">画像ファイル。</param>
+		/// <param name="left">左からのピクセル値。</param>
+		/// <param name="top">上からのピクセル値。</param>
+		/// <param name="right">右からのピクセル値。</param>
+		/// <param name="bottom">下からのピクセル値。</param>
+		/// <returns>切り取られた9枚のテクスチャ。</returns>
+		public static Texture2D[] LoadAndSplitFrom(string path, int left, int top, int right, int bottom)
+		{
+			using (var file = new Bitmap(path))
+			{
+				if (left > file.Width)
+					throw new ArgumentException(nameof(left));
+				if (top > file.Height)
+					throw new ArgumentException(nameof(top));
+				if (right > file.Width - left)
+					throw new ArgumentException(nameof(right));
+				if (bottom > file.Height - top)
+					throw new ArgumentException(nameof(bottom));
+				Rectangle[] atlas = 
+				{
+					new Rectangle(0, 0, left, top),
+					new Rectangle(left, 0, file.Width - left - right, top),
+					new Rectangle(file.Width - right, 0, right, top),
+					new Rectangle(0, top, left, file.Height - top - bottom),
+					new Rectangle(left, top, file.Width - left - right, file.Height - top - bottom),
+					new Rectangle(file.Width - right, top, right, file.Height - top - bottom),
+					new Rectangle(0, file.Height - bottom, left, bottom),
+					new Rectangle(left, file.Height - bottom, file.Width - left - right, bottom),
+					new Rectangle(file.Width - right, file.Height - bottom, right, bottom),
+				};
+				return atlas.Select(a => 
+				{
+					var locked = file.LockBits(a, ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+					var tex = LoadFrom(locked);
+					file.UnlockBits(locked);
+					return tex;
+				}).ToArray();
+			}
+		}
+
+		/// <summary>
 		/// この <see cref="Texture2D"/> を破棄します。
 		/// </summary>
 		public void Dispose()

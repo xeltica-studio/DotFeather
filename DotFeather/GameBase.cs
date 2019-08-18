@@ -167,6 +167,7 @@ namespace DotFeather
 					prevSecond = DateTime.Now.Second;
 				}
 				Input.Keyboard.Update();
+				Input.Mouse.Update();
 				OnUpdate(s, new DFEventArgs
 				{
 					DeltaTime = e.Time,

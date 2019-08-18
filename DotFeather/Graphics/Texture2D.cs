@@ -60,6 +60,31 @@ namespace DotFeather
 			return new Texture2D(texture, new Size(bmp.Width, bmp.Height));
 		}
 
+		public static Texture2D CreateSolid(Color color, int sizeX, int sizeY)
+		{
+			var texture = GL.GenTexture();
+			GL.BindTexture(TextureTarget.Texture2D, texture);
+			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
+			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
+
+			var arr = new float[sizeX, sizeY, 4];
+
+			for (var y = 0; y < sizeY; y++)
+			for (var x = 0; x < sizeX; x++)
+			{
+				arr[x, y, 0] = color.R / 256f;
+				arr[x, y, 1] = color.G / 256f;
+				arr[x, y, 2] = color.B / 256f;
+				arr[x, y, 3] = color.A / 256f;
+			}
+
+			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, sizeX, sizeY, 0, OpenTK.Graphics.OpenGL.PixelFormat.Rgba, PixelType.Float, arr);
+
+			return new Texture2D(texture, new Size(sizeX, sizeY));
+		}
+
+		public static Texture2D CreateSolid(Color color, Vector size) => CreateSolid(color, (int)size.X, (int)size.Y);
+
 		/// <summary>
 		/// 画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。
 		/// </summary>

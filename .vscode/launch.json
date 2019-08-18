@@ -12,7 +12,7 @@
 			"program": "${workspaceFolder}/DotFeather.Test.NetCore/bin/Debug/netcoreapp2.1/DotFeather.Test.NetCore.dll",
 			"args": [],
 			"cwd": "${workspaceFolder}/DotFeather.Test.NetCore",
-			"console": "internalConsole",
+			"console": "integratedTerminal",
 			"stopAtEntry": false
 		},
 		{

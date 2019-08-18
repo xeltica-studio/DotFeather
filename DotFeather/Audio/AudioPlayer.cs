@@ -63,7 +63,7 @@ namespace DotFeather
 				cts.Cancel();
 			}
 			cts = new CancellationTokenSource();
-			#pragma warning disable CS4104
+			#pragma warning disable CS4014
 			PlayAsync(source, loop, cts.Token);
 		}
 

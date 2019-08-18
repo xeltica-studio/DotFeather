@@ -7,6 +7,7 @@ using SDColor = System.Drawing.Color;
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
+using System.Collections;
 
 namespace DotFeather
 {
@@ -168,6 +169,7 @@ namespace DotFeather
 				}
 				Input.Keyboard.Update();
 				Input.Mouse.Update();
+				CoroutineRunner.Update();
 				OnUpdate(s, new DFEventArgs
 				{
 					DeltaTime = e.Time,
@@ -254,6 +256,16 @@ namespace DotFeather
 		{
 			window.Dispose();
 		}
+
+		/// <summary>
+		/// コルーチンを開始します。
+		/// </summary>
+        public Coroutine StartCoroutine(IEnumerator coroutine) => CoroutineRunner.Start(coroutine);
+
+		/// <summary>
+		/// コルーチンを停止します。
+		/// </summary>
+        public void StopCoroutine(Coroutine coroutine) => CoroutineRunner.Stop(coroutine);
 
 		/// <summary>
 		/// ゲームのフレーム更新時に呼び出されます。このメソッドをオーバーライドして、ゲームのメインループを記述してください。

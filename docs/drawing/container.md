@@ -32,4 +32,4 @@ container.X = 128;
 container.Y = 96;
 ```
 
-Next: [Mouse Input](../input/mouse.md)
+Next: [3-slice Sprite](./3slice.md)

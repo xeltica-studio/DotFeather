@@ -11,28 +11,30 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
 - API Documents
 	- [API Docs is here](https://dotfeather.netlify.com/api/) (sorry but Japanese only)
 - Tutorial
-    - [Inherit GameBase](gamebase.md)
-    - [Drawing](drawing.md)
-        - [Graphic](drawing/Graphic.md)
-        - [Sprite](drawing/sprite.md)
-        - [Tilemap](drawing/tilemap.md)
-        - [Text](drawing/text.md)
-        - [Container](drawing/container.md)
-    - Input
-        - [from Mouse](input/mouse.md)
-        - [from Keyboard](input/keyboard.md)
-    - [Audio](audio.md)
-        - [Load files](audio/load.md)
-        - [Play files](audio/play.md)
-    - Extensions
-        - [Original Rendering](plugin/render.md)
-        - [Original Audio Source](plugin/audiosource.md)
+	- [Inherit GameBase](gamebase.md)
+	- [Drawing](drawing.md)
+		- [Graphic](drawing/Graphic.md)
+		- [Sprite](drawing/sprite.md)
+		- [Tilemap](drawing/tilemap.md)
+		- [Text](drawing/text.md)
+		- [Container](drawing/container.md)
+		- [3-slice Sprite](drawing/3slice.md)
+	- Input
+		- [from Mouse](input/mouse.md)
+		- [from Keyboard](input/keyboard.md)
+	- [Audio](audio.md)
+		- [Load files](audio/load.md)
+		- [Play files](audio/play.md)
+	- [Coroutine](coroutine.md)
+	- Extensions
+		- [Original Rendering](plugin/render.md)
+		- [Original Audio Source](plugin/audiosource.md)
 
 <!--
-	 - Official Plugins (TBD)
-        - DotFeather.UI
-        - DotFeather.Router
-        - DotFeather.Management
-        - DotFeather.Management.Router
-        - DotFeather.UI.Mvvm
+	- Official Plugins (TBD)
+		- DotFeather.UI
+		- DotFeather.Router
+		- DotFeather.Management
+		- DotFeather.Management.Router
+		- DotFeather.UI.Mvvm
 -->

@@ -32,4 +32,4 @@ container.X = 128;
 container.Y = 96;
 ```
 
-Next: [3-slice Sprite](./3slice.md)
+Next: [9-slice Sprite](./9slice.md)

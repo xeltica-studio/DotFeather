@@ -8,7 +8,7 @@ There are some kinds of Object:
 - Sprite
 - Tilemap
 - Container
-- 3-slice Sprite
+- 9-slice Sprite
 
 
 All Objects implements `IDrawable` interface, and they will be rendered every frame.

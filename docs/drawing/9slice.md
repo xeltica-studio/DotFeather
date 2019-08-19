@@ -1,6 +1,6 @@
-# 3-slice Sprites
+# 9-slice Sprites
 
-3-slice Sprite is a sprite which can be resized smoothly by splitting a texture into 9 sheets.
+9-slice Sprite is a sprite which can be resized smoothly by splitting a texture into 9 sheets.
 
 It's available on other game-engines. See [Unity's description](https://docs.unity3d.com/2018.3/Documentation/Manual/9SliceSprites.html)
 

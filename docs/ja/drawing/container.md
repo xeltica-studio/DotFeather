@@ -32,4 +32,4 @@ container.X = 128;
 container.Y = 96;
 ```
 
-次: [3スライススプライト](./3slice.md)
+次: [9スライススプライト](./9slice.md)

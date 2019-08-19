@@ -18,7 +18,7 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
 		- [Tilemap](drawing/tilemap.md)
 		- [Text](drawing/text.md)
 		- [Container](drawing/container.md)
-		- [3-slice Sprite](drawing/3slice.md)
+		- [9-slice Sprite](drawing/9slice.md)
 	- Input
 		- [from Mouse](input/mouse.md)
 		- [from Keyboard](input/keyboard.md)

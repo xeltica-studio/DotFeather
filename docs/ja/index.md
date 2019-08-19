@@ -18,7 +18,7 @@ DotFeather は、NuGet パッケージマネージャーを使用することで
 		- [タイルマップ](drawing/tilemap.md)
 		- [テキスト](drawing/text.md)
 		- [コンテナー](drawing/container.md)
-		- [3スライススプライト](drawing/3slice.md)
+		- [9スライススプライト](drawing/9slice.md)
 	- インプット
 		- [マウス入力](input/mouse.md)
 		- [キーボード入力](input/keyboard.md)

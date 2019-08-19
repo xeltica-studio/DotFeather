@@ -32,4 +32,4 @@ container.X = 128;
 container.Y = 96;
 ```
 
-次: [マウス入力](../input/mouse.md)
+次: [3スライススプライト](./3slice.md)

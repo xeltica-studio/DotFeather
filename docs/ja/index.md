@@ -18,12 +18,14 @@ DotFeather は、NuGet パッケージマネージャーを使用することで
         - [タイルマップ](drawing/tilemap.md)
         - [テキスト](drawing/text.md)
         - [コンテナー](drawing/container.md)
+        - [3スライススプライト](drawing/3slice.md)
     - インプット
         - [マウス入力](input/mouse.md)
         - [キーボード入力](input/keyboard.md)
     - [オーディオ](audio.md)
         - [ファイルの読み込み](audio/load.md)
         - [ファイルの再生](audio/play.md)
+    - [コルーチン](coroutine.md)
     - 機能拡張
         - [独自レンダリング](plugin/render.md)
         - [独自オーディオソース](plugin/audiosource.md)

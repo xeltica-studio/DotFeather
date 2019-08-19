@@ -31,5 +31,4 @@ player.Stop(5);
 player.Stop();
 ```
 
-
-次: [Original Rendering](../plugin/render.md)
+Next: [Coroutine](./coroutine.md)

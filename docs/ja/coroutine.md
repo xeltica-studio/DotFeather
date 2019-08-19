@@ -104,7 +104,7 @@ DotFeather には、あらかじめ次のイールド命令がビルトインさ
 |---|---|
 |`WaitForSeconds(float seconds);`|seconds 秒だけ待機します。|
 |`WaitUntil(Func<bool> conditions);`|デリゲートで条件を渡して、満たされるまで待機します。|
-|`WaitWhile(Func<bool> conditions);`|WaitWhile の逆で、条件が満たされている間だけ待機します。|
+|`WaitWhile(Func<bool> conditions);`|WaitUntil の逆で、条件が満たされている間だけ待機します。|
 |`WaitUntilNextFrame();`|次のフレームまで待機します。|
 |`Coroutine`|コルーチンが終わるまで待機します。|
 |`IEnumerator`|コルーチンとして実行し、実行が終わるまで待機します。|

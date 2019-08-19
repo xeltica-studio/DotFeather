@@ -32,4 +32,4 @@ player.Stop();
 ```
 
 
-次: [独自レンダリング](../plugin/render.md)
+次: [コルーチン](../coroutine.md)

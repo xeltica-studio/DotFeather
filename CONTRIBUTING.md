@@ -41,13 +41,14 @@ Basically I compliant [C# Coding Conventions (Official)](https://docs.microsoft.
 
 ## To deploy
 
-This is just a note because this project is always deployed by @Xeltica, a main developer.
+This project is always deployed by @Xeltica, a main developer. So this note is for forked projects' maintainers.
 
 1. Make sure latest changes can be built and there is no wrong behaviors in sample code.
-1. Commit latest to master
-1. Rewrite version number at DotFeather/DotFeather.nuspec
-1. Rewrite version number at appveyor.yml
-1. Commit changes of 3. and 4.
-1. Add a tag named as version number to the commit.
-1. Push it
-1. Keep your fingers crossed.
+2. Commit latest to master
+3. Run `cd ./apidocs && docfx metadata && docfx build`
+4. Rewrite version number at DotFeather/DotFeather.nuspec
+5. Rewrite version number at appveyor.yml
+6. Commit changes of 3. and 4.
+7. Add a tag named as version number to the commit.
+8. Push it
+9. :pray:

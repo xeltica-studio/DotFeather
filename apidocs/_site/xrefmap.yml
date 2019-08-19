@@ -473,6 +473,141 @@ references:
   isSpec: "True"
   fullName: DotFeather.Container.ZOrder
   nameWithType: Container.ZOrder
+- uid: DotFeather.Coroutine
+  name: Coroutine
+  href: api/DotFeather.Coroutine.html
+  commentId: T:DotFeather.Coroutine
+  fullName: DotFeather.Coroutine
+  nameWithType: Coroutine
+- uid: DotFeather.Coroutine.Error(System.Action{System.Exception})
+  name: Error(Action<Exception>)
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_Error_System_Action_System_Exception__
+  commentId: M:DotFeather.Coroutine.Error(System.Action{System.Exception})
+  name.vb: Error(Action(Of Exception))
+  fullName: DotFeather.Coroutine.Error(System.Action<System.Exception>)
+  fullName.vb: DotFeather.Coroutine.Error(System.Action(Of System.Exception))
+  nameWithType: Coroutine.Error(Action<Exception>)
+  nameWithType.vb: Coroutine.Error(Action(Of Exception))
+- uid: DotFeather.Coroutine.Error*
+  name: Error
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_Error_
+  commentId: Overload:DotFeather.Coroutine.Error
+  isSpec: "True"
+  fullName: DotFeather.Coroutine.Error
+  nameWithType: Coroutine.Error
+- uid: DotFeather.Coroutine.ErrorAction
+  name: ErrorAction
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_ErrorAction
+  commentId: P:DotFeather.Coroutine.ErrorAction
+  fullName: DotFeather.Coroutine.ErrorAction
+  nameWithType: Coroutine.ErrorAction
+- uid: DotFeather.Coroutine.ErrorAction*
+  name: ErrorAction
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_ErrorAction_
+  commentId: Overload:DotFeather.Coroutine.ErrorAction
+  isSpec: "True"
+  fullName: DotFeather.Coroutine.ErrorAction
+  nameWithType: Coroutine.ErrorAction
+- uid: DotFeather.Coroutine.IsRunning
+  name: IsRunning
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_IsRunning
+  commentId: P:DotFeather.Coroutine.IsRunning
+  fullName: DotFeather.Coroutine.IsRunning
+  nameWithType: Coroutine.IsRunning
+- uid: DotFeather.Coroutine.IsRunning*
+  name: IsRunning
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_IsRunning_
+  commentId: Overload:DotFeather.Coroutine.IsRunning
+  isSpec: "True"
+  fullName: DotFeather.Coroutine.IsRunning
+  nameWithType: Coroutine.IsRunning
+- uid: DotFeather.Coroutine.KeepWaiting
+  name: KeepWaiting
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_KeepWaiting
+  commentId: P:DotFeather.Coroutine.KeepWaiting
+  fullName: DotFeather.Coroutine.KeepWaiting
+  nameWithType: Coroutine.KeepWaiting
+- uid: DotFeather.Coroutine.KeepWaiting*
+  name: KeepWaiting
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_KeepWaiting_
+  commentId: Overload:DotFeather.Coroutine.KeepWaiting
+  isSpec: "True"
+  fullName: DotFeather.Coroutine.KeepWaiting
+  nameWithType: Coroutine.KeepWaiting
+- uid: DotFeather.Coroutine.Then(System.Action{System.Object})
+  name: Then(Action<Object>)
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_Then_System_Action_System_Object__
+  commentId: M:DotFeather.Coroutine.Then(System.Action{System.Object})
+  name.vb: Then(Action(Of Object))
+  fullName: DotFeather.Coroutine.Then(System.Action<System.Object>)
+  fullName.vb: DotFeather.Coroutine.Then(System.Action(Of System.Object))
+  nameWithType: Coroutine.Then(Action<Object>)
+  nameWithType.vb: Coroutine.Then(Action(Of Object))
+- uid: DotFeather.Coroutine.Then*
+  name: Then
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_Then_
+  commentId: Overload:DotFeather.Coroutine.Then
+  isSpec: "True"
+  fullName: DotFeather.Coroutine.Then
+  nameWithType: Coroutine.Then
+- uid: DotFeather.Coroutine.ThenAction
+  name: ThenAction
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_ThenAction
+  commentId: P:DotFeather.Coroutine.ThenAction
+  fullName: DotFeather.Coroutine.ThenAction
+  nameWithType: Coroutine.ThenAction
+- uid: DotFeather.Coroutine.ThenAction*
+  name: ThenAction
+  href: api/DotFeather.Coroutine.html#DotFeather_Coroutine_ThenAction_
+  commentId: Overload:DotFeather.Coroutine.ThenAction
+  isSpec: "True"
+  fullName: DotFeather.Coroutine.ThenAction
+  nameWithType: Coroutine.ThenAction
+- uid: DotFeather.CoroutineRunner
+  name: CoroutineRunner
+  href: api/DotFeather.CoroutineRunner.html
+  commentId: T:DotFeather.CoroutineRunner
+  fullName: DotFeather.CoroutineRunner
+  nameWithType: CoroutineRunner
+- uid: DotFeather.CoroutineRunner.Start(System.Collections.IEnumerator)
+  name: Start(IEnumerator)
+  href: api/DotFeather.CoroutineRunner.html#DotFeather_CoroutineRunner_Start_System_Collections_IEnumerator_
+  commentId: M:DotFeather.CoroutineRunner.Start(System.Collections.IEnumerator)
+  fullName: DotFeather.CoroutineRunner.Start(System.Collections.IEnumerator)
+  nameWithType: CoroutineRunner.Start(IEnumerator)
+- uid: DotFeather.CoroutineRunner.Start*
+  name: Start
+  href: api/DotFeather.CoroutineRunner.html#DotFeather_CoroutineRunner_Start_
+  commentId: Overload:DotFeather.CoroutineRunner.Start
+  isSpec: "True"
+  fullName: DotFeather.CoroutineRunner.Start
+  nameWithType: CoroutineRunner.Start
+- uid: DotFeather.CoroutineRunner.Stop(DotFeather.Coroutine)
+  name: Stop(Coroutine)
+  href: api/DotFeather.CoroutineRunner.html#DotFeather_CoroutineRunner_Stop_DotFeather_Coroutine_
+  commentId: M:DotFeather.CoroutineRunner.Stop(DotFeather.Coroutine)
+  fullName: DotFeather.CoroutineRunner.Stop(DotFeather.Coroutine)
+  nameWithType: CoroutineRunner.Stop(Coroutine)
+- uid: DotFeather.CoroutineRunner.Stop*
+  name: Stop
+  href: api/DotFeather.CoroutineRunner.html#DotFeather_CoroutineRunner_Stop_
+  commentId: Overload:DotFeather.CoroutineRunner.Stop
+  isSpec: "True"
+  fullName: DotFeather.CoroutineRunner.Stop
+  nameWithType: CoroutineRunner.Stop
+- uid: DotFeather.CoroutineRunner.ToYieldInstruction(System.Object)
+  name: ToYieldInstruction(Object)
+  href: api/DotFeather.CoroutineRunner.html#DotFeather_CoroutineRunner_ToYieldInstruction_System_Object_
+  commentId: M:DotFeather.CoroutineRunner.ToYieldInstruction(System.Object)
+  fullName: DotFeather.CoroutineRunner.ToYieldInstruction(System.Object)
+  nameWithType: CoroutineRunner.ToYieldInstruction(Object)
+- uid: DotFeather.CoroutineRunner.ToYieldInstruction*
+  name: ToYieldInstruction
+  href: api/DotFeather.CoroutineRunner.html#DotFeather_CoroutineRunner_ToYieldInstruction_
+  commentId: Overload:DotFeather.CoroutineRunner.ToYieldInstruction
+  isSpec: "True"
+  fullName: DotFeather.CoroutineRunner.ToYieldInstruction
+  nameWithType: CoroutineRunner.ToYieldInstruction
 - uid: DotFeather.DFEventArgs
   name: DFEventArgs
   href: api/DotFeather.DFEventArgs.html
@@ -3258,6 +3393,19 @@ references:
   commentId: T:DotFeather.DFMouse
   fullName: DotFeather.DFMouse
   nameWithType: DFMouse
+- uid: DotFeather.DFMouse.IsLeft
+  name: IsLeft
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsLeft
+  commentId: P:DotFeather.DFMouse.IsLeft
+  fullName: DotFeather.DFMouse.IsLeft
+  nameWithType: DFMouse.IsLeft
+- uid: DotFeather.DFMouse.IsLeft*
+  name: IsLeft
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsLeft_
+  commentId: Overload:DotFeather.DFMouse.IsLeft
+  isSpec: "True"
+  fullName: DotFeather.DFMouse.IsLeft
+  nameWithType: DFMouse.IsLeft
 - uid: DotFeather.DFMouse.IsLeftClicked
   name: IsLeftClicked
   href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsLeftClicked
@@ -3271,6 +3419,45 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFMouse.IsLeftClicked
   nameWithType: DFMouse.IsLeftClicked
+- uid: DotFeather.DFMouse.IsLeftDown
+  name: IsLeftDown
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsLeftDown
+  commentId: P:DotFeather.DFMouse.IsLeftDown
+  fullName: DotFeather.DFMouse.IsLeftDown
+  nameWithType: DFMouse.IsLeftDown
+- uid: DotFeather.DFMouse.IsLeftDown*
+  name: IsLeftDown
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsLeftDown_
+  commentId: Overload:DotFeather.DFMouse.IsLeftDown
+  isSpec: "True"
+  fullName: DotFeather.DFMouse.IsLeftDown
+  nameWithType: DFMouse.IsLeftDown
+- uid: DotFeather.DFMouse.IsLeftUp
+  name: IsLeftUp
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsLeftUp
+  commentId: P:DotFeather.DFMouse.IsLeftUp
+  fullName: DotFeather.DFMouse.IsLeftUp
+  nameWithType: DFMouse.IsLeftUp
+- uid: DotFeather.DFMouse.IsLeftUp*
+  name: IsLeftUp
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsLeftUp_
+  commentId: Overload:DotFeather.DFMouse.IsLeftUp
+  isSpec: "True"
+  fullName: DotFeather.DFMouse.IsLeftUp
+  nameWithType: DFMouse.IsLeftUp
+- uid: DotFeather.DFMouse.IsMiddle
+  name: IsMiddle
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsMiddle
+  commentId: P:DotFeather.DFMouse.IsMiddle
+  fullName: DotFeather.DFMouse.IsMiddle
+  nameWithType: DFMouse.IsMiddle
+- uid: DotFeather.DFMouse.IsMiddle*
+  name: IsMiddle
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsMiddle_
+  commentId: Overload:DotFeather.DFMouse.IsMiddle
+  isSpec: "True"
+  fullName: DotFeather.DFMouse.IsMiddle
+  nameWithType: DFMouse.IsMiddle
 - uid: DotFeather.DFMouse.IsMiddleClicked
   name: IsMiddleClicked
   href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsMiddleClicked
@@ -3284,6 +3471,45 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFMouse.IsMiddleClicked
   nameWithType: DFMouse.IsMiddleClicked
+- uid: DotFeather.DFMouse.IsMiddleDown
+  name: IsMiddleDown
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsMiddleDown
+  commentId: P:DotFeather.DFMouse.IsMiddleDown
+  fullName: DotFeather.DFMouse.IsMiddleDown
+  nameWithType: DFMouse.IsMiddleDown
+- uid: DotFeather.DFMouse.IsMiddleDown*
+  name: IsMiddleDown
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsMiddleDown_
+  commentId: Overload:DotFeather.DFMouse.IsMiddleDown
+  isSpec: "True"
+  fullName: DotFeather.DFMouse.IsMiddleDown
+  nameWithType: DFMouse.IsMiddleDown
+- uid: DotFeather.DFMouse.IsMiddleUp
+  name: IsMiddleUp
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsMiddleUp
+  commentId: P:DotFeather.DFMouse.IsMiddleUp
+  fullName: DotFeather.DFMouse.IsMiddleUp
+  nameWithType: DFMouse.IsMiddleUp
+- uid: DotFeather.DFMouse.IsMiddleUp*
+  name: IsMiddleUp
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsMiddleUp_
+  commentId: Overload:DotFeather.DFMouse.IsMiddleUp
+  isSpec: "True"
+  fullName: DotFeather.DFMouse.IsMiddleUp
+  nameWithType: DFMouse.IsMiddleUp
+- uid: DotFeather.DFMouse.IsRight
+  name: IsRight
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsRight
+  commentId: P:DotFeather.DFMouse.IsRight
+  fullName: DotFeather.DFMouse.IsRight
+  nameWithType: DFMouse.IsRight
+- uid: DotFeather.DFMouse.IsRight*
+  name: IsRight
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsRight_
+  commentId: Overload:DotFeather.DFMouse.IsRight
+  isSpec: "True"
+  fullName: DotFeather.DFMouse.IsRight
+  nameWithType: DFMouse.IsRight
 - uid: DotFeather.DFMouse.IsRightClicked
   name: IsRightClicked
   href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsRightClicked
@@ -3297,6 +3523,32 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFMouse.IsRightClicked
   nameWithType: DFMouse.IsRightClicked
+- uid: DotFeather.DFMouse.IsRightDown
+  name: IsRightDown
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsRightDown
+  commentId: P:DotFeather.DFMouse.IsRightDown
+  fullName: DotFeather.DFMouse.IsRightDown
+  nameWithType: DFMouse.IsRightDown
+- uid: DotFeather.DFMouse.IsRightDown*
+  name: IsRightDown
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsRightDown_
+  commentId: Overload:DotFeather.DFMouse.IsRightDown
+  isSpec: "True"
+  fullName: DotFeather.DFMouse.IsRightDown
+  nameWithType: DFMouse.IsRightDown
+- uid: DotFeather.DFMouse.IsRightUp
+  name: IsRightUp
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsRightUp
+  commentId: P:DotFeather.DFMouse.IsRightUp
+  fullName: DotFeather.DFMouse.IsRightUp
+  nameWithType: DFMouse.IsRightUp
+- uid: DotFeather.DFMouse.IsRightUp*
+  name: IsRightUp
+  href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_IsRightUp_
+  commentId: Overload:DotFeather.DFMouse.IsRightUp
+  isSpec: "True"
+  fullName: DotFeather.DFMouse.IsRightUp
+  nameWithType: DFMouse.IsRightUp
 - uid: DotFeather.DFMouse.Position
   name: Position
   href: api/DotFeather.DFMouse.html#DotFeather_DFMouse_Position
@@ -3407,6 +3659,32 @@ references:
   isSpec: "True"
   fullName: DotFeather.GameBase.Height
   nameWithType: GameBase.Height
+- uid: DotFeather.GameBase.IsFocused
+  name: IsFocused
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_IsFocused
+  commentId: P:DotFeather.GameBase.IsFocused
+  fullName: DotFeather.GameBase.IsFocused
+  nameWithType: GameBase.IsFocused
+- uid: DotFeather.GameBase.IsFocused*
+  name: IsFocused
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_IsFocused_
+  commentId: Overload:DotFeather.GameBase.IsFocused
+  isSpec: "True"
+  fullName: DotFeather.GameBase.IsFocused
+  nameWithType: GameBase.IsFocused
+- uid: DotFeather.GameBase.IsFullScreen
+  name: IsFullScreen
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_IsFullScreen
+  commentId: P:DotFeather.GameBase.IsFullScreen
+  fullName: DotFeather.GameBase.IsFullScreen
+  nameWithType: GameBase.IsFullScreen
+- uid: DotFeather.GameBase.IsFullScreen*
+  name: IsFullScreen
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_IsFullScreen_
+  commentId: Overload:DotFeather.GameBase.IsFullScreen
+  isSpec: "True"
+  fullName: DotFeather.GameBase.IsFullScreen
+  nameWithType: GameBase.IsFullScreen
 - uid: DotFeather.GameBase.OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)
   name: OnKeyDown(Object, DFKeyEventArgs)
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_OnKeyDown_System_Object_DotFeather_DFKeyEventArgs_
@@ -3553,6 +3831,32 @@ references:
   isSpec: "True"
   fullName: DotFeather.GameBase.Run
   nameWithType: GameBase.Run
+- uid: DotFeather.GameBase.StartCoroutine(System.Collections.IEnumerator)
+  name: StartCoroutine(IEnumerator)
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_StartCoroutine_System_Collections_IEnumerator_
+  commentId: M:DotFeather.GameBase.StartCoroutine(System.Collections.IEnumerator)
+  fullName: DotFeather.GameBase.StartCoroutine(System.Collections.IEnumerator)
+  nameWithType: GameBase.StartCoroutine(IEnumerator)
+- uid: DotFeather.GameBase.StartCoroutine*
+  name: StartCoroutine
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_StartCoroutine_
+  commentId: Overload:DotFeather.GameBase.StartCoroutine
+  isSpec: "True"
+  fullName: DotFeather.GameBase.StartCoroutine
+  nameWithType: GameBase.StartCoroutine
+- uid: DotFeather.GameBase.StopCoroutine(DotFeather.Coroutine)
+  name: StopCoroutine(Coroutine)
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_StopCoroutine_DotFeather_Coroutine_
+  commentId: M:DotFeather.GameBase.StopCoroutine(DotFeather.Coroutine)
+  fullName: DotFeather.GameBase.StopCoroutine(DotFeather.Coroutine)
+  nameWithType: GameBase.StopCoroutine(Coroutine)
+- uid: DotFeather.GameBase.StopCoroutine*
+  name: StopCoroutine
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_StopCoroutine_
+  commentId: Overload:DotFeather.GameBase.StopCoroutine
+  isSpec: "True"
+  fullName: DotFeather.GameBase.StopCoroutine
+  nameWithType: GameBase.StopCoroutine
 - uid: DotFeather.GameBase.Title
   name: Title
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_Title
@@ -3592,6 +3896,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.GameBase.Width
   nameWithType: GameBase.Width
+- uid: DotFeather.GameBase.WindowMode
+  name: WindowMode
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_WindowMode
+  commentId: P:DotFeather.GameBase.WindowMode
+  fullName: DotFeather.GameBase.WindowMode
+  nameWithType: GameBase.WindowMode
+- uid: DotFeather.GameBase.WindowMode*
+  name: WindowMode
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_WindowMode_
+  commentId: Overload:DotFeather.GameBase.WindowMode
+  isSpec: "True"
+  fullName: DotFeather.GameBase.WindowMode
+  nameWithType: GameBase.WindowMode
 - uid: DotFeather.GameBase.X
   name: X
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_X
@@ -4159,6 +4476,184 @@ references:
   fullName.vb: DotFeather.MiscUtility.Swap(Of T)(ByRef T, ByRef T)
   nameWithType: MiscUtility.Swap<T>(ref T, ref T)
   nameWithType.vb: MiscUtility.Swap(Of T)(ByRef T, ByRef T)
+- uid: DotFeather.NineSliceSprite
+  name: NineSliceSprite
+  href: api/DotFeather.NineSliceSprite.html
+  commentId: T:DotFeather.NineSliceSprite
+  fullName: DotFeather.NineSliceSprite
+  nameWithType: NineSliceSprite
+- uid: DotFeather.NineSliceSprite.#ctor(DotFeather.Texture2D[])
+  name: NineSliceSprite(Texture2D[])
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite__ctor_DotFeather_Texture2D___
+  commentId: M:DotFeather.NineSliceSprite.#ctor(DotFeather.Texture2D[])
+  name.vb: NineSliceSprite(Texture2D())
+  fullName: DotFeather.NineSliceSprite.NineSliceSprite(DotFeather.Texture2D[])
+  fullName.vb: DotFeather.NineSliceSprite.NineSliceSprite(DotFeather.Texture2D())
+  nameWithType: NineSliceSprite.NineSliceSprite(Texture2D[])
+  nameWithType.vb: NineSliceSprite.NineSliceSprite(Texture2D())
+- uid: DotFeather.NineSliceSprite.#ctor*
+  name: NineSliceSprite
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite__ctor_
+  commentId: Overload:DotFeather.NineSliceSprite.#ctor
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.NineSliceSprite
+  nameWithType: NineSliceSprite.NineSliceSprite
+- uid: DotFeather.NineSliceSprite.Angle
+  name: Angle
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Angle
+  commentId: P:DotFeather.NineSliceSprite.Angle
+  fullName: DotFeather.NineSliceSprite.Angle
+  nameWithType: NineSliceSprite.Angle
+- uid: DotFeather.NineSliceSprite.Angle*
+  name: Angle
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Angle_
+  commentId: Overload:DotFeather.NineSliceSprite.Angle
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Angle
+  nameWithType: NineSliceSprite.Angle
+- uid: DotFeather.NineSliceSprite.Color
+  name: Color
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Color
+  commentId: P:DotFeather.NineSliceSprite.Color
+  fullName: DotFeather.NineSliceSprite.Color
+  nameWithType: NineSliceSprite.Color
+- uid: DotFeather.NineSliceSprite.Color*
+  name: Color
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Color_
+  commentId: Overload:DotFeather.NineSliceSprite.Color
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Color
+  nameWithType: NineSliceSprite.Color
+- uid: DotFeather.NineSliceSprite.Destroy
+  name: Destroy()
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Destroy
+  commentId: M:DotFeather.NineSliceSprite.Destroy
+  fullName: DotFeather.NineSliceSprite.Destroy()
+  nameWithType: NineSliceSprite.Destroy()
+- uid: DotFeather.NineSliceSprite.Destroy*
+  name: Destroy
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Destroy_
+  commentId: Overload:DotFeather.NineSliceSprite.Destroy
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Destroy
+  nameWithType: NineSliceSprite.Destroy
+- uid: DotFeather.NineSliceSprite.Draw(DotFeather.GameBase,DotFeather.Vector)
+  name: Draw(GameBase, Vector)
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Draw_DotFeather_GameBase_DotFeather_Vector_
+  commentId: M:DotFeather.NineSliceSprite.Draw(DotFeather.GameBase,DotFeather.Vector)
+  fullName: DotFeather.NineSliceSprite.Draw(DotFeather.GameBase, DotFeather.Vector)
+  nameWithType: NineSliceSprite.Draw(GameBase, Vector)
+- uid: DotFeather.NineSliceSprite.Draw*
+  name: Draw
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Draw_
+  commentId: Overload:DotFeather.NineSliceSprite.Draw
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Draw
+  nameWithType: NineSliceSprite.Draw
+- uid: DotFeather.NineSliceSprite.Height
+  name: Height
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Height
+  commentId: P:DotFeather.NineSliceSprite.Height
+  fullName: DotFeather.NineSliceSprite.Height
+  nameWithType: NineSliceSprite.Height
+- uid: DotFeather.NineSliceSprite.Height*
+  name: Height
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Height_
+  commentId: Overload:DotFeather.NineSliceSprite.Height
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Height
+  nameWithType: NineSliceSprite.Height
+- uid: DotFeather.NineSliceSprite.LoadFrom(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: LoadFrom(String, Int32, Int32, Int32, Int32)
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_LoadFrom_System_String_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:DotFeather.NineSliceSprite.LoadFrom(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: DotFeather.NineSliceSprite.LoadFrom(System.String, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: NineSliceSprite.LoadFrom(String, Int32, Int32, Int32, Int32)
+- uid: DotFeather.NineSliceSprite.LoadFrom*
+  name: LoadFrom
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_LoadFrom_
+  commentId: Overload:DotFeather.NineSliceSprite.LoadFrom
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.LoadFrom
+  nameWithType: NineSliceSprite.LoadFrom
+- uid: DotFeather.NineSliceSprite.Location
+  name: Location
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Location
+  commentId: P:DotFeather.NineSliceSprite.Location
+  fullName: DotFeather.NineSliceSprite.Location
+  nameWithType: NineSliceSprite.Location
+- uid: DotFeather.NineSliceSprite.Location*
+  name: Location
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Location_
+  commentId: Overload:DotFeather.NineSliceSprite.Location
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Location
+  nameWithType: NineSliceSprite.Location
+- uid: DotFeather.NineSliceSprite.Name
+  name: Name
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Name
+  commentId: P:DotFeather.NineSliceSprite.Name
+  fullName: DotFeather.NineSliceSprite.Name
+  nameWithType: NineSliceSprite.Name
+- uid: DotFeather.NineSliceSprite.Name*
+  name: Name
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Name_
+  commentId: Overload:DotFeather.NineSliceSprite.Name
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Name
+  nameWithType: NineSliceSprite.Name
+- uid: DotFeather.NineSliceSprite.Scale
+  name: Scale
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Scale
+  commentId: P:DotFeather.NineSliceSprite.Scale
+  fullName: DotFeather.NineSliceSprite.Scale
+  nameWithType: NineSliceSprite.Scale
+- uid: DotFeather.NineSliceSprite.Scale*
+  name: Scale
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Scale_
+  commentId: Overload:DotFeather.NineSliceSprite.Scale
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Scale
+  nameWithType: NineSliceSprite.Scale
+- uid: DotFeather.NineSliceSprite.Textures
+  name: Textures
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Textures
+  commentId: P:DotFeather.NineSliceSprite.Textures
+  fullName: DotFeather.NineSliceSprite.Textures
+  nameWithType: NineSliceSprite.Textures
+- uid: DotFeather.NineSliceSprite.Textures*
+  name: Textures
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Textures_
+  commentId: Overload:DotFeather.NineSliceSprite.Textures
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Textures
+  nameWithType: NineSliceSprite.Textures
+- uid: DotFeather.NineSliceSprite.Width
+  name: Width
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Width
+  commentId: P:DotFeather.NineSliceSprite.Width
+  fullName: DotFeather.NineSliceSprite.Width
+  nameWithType: NineSliceSprite.Width
+- uid: DotFeather.NineSliceSprite.Width*
+  name: Width
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_Width_
+  commentId: Overload:DotFeather.NineSliceSprite.Width
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.Width
+  nameWithType: NineSliceSprite.Width
+- uid: DotFeather.NineSliceSprite.ZOrder
+  name: ZOrder
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_ZOrder
+  commentId: P:DotFeather.NineSliceSprite.ZOrder
+  fullName: DotFeather.NineSliceSprite.ZOrder
+  nameWithType: NineSliceSprite.ZOrder
+- uid: DotFeather.NineSliceSprite.ZOrder*
+  name: ZOrder
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_ZOrder_
+  commentId: Overload:DotFeather.NineSliceSprite.ZOrder
+  isSpec: "True"
+  fullName: DotFeather.NineSliceSprite.ZOrder
+  nameWithType: NineSliceSprite.ZOrder
 - uid: DotFeather.OpenTKManagedHandleBase`1
   name: OpenTKManagedHandleBase<T>
   href: api/DotFeather.OpenTKManagedHandleBase-1.html
@@ -4422,136 +4917,6 @@ references:
   isSpec: "True"
   fullName: DotFeather.Sprite.Texture
   nameWithType: Sprite.Texture
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension
-  name: SystemDrawingTypesToGLConverterExtension
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html
-  commentId: T:DotFeather.SystemDrawingTypesToGLConverterExtension
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension
-  nameWithType: SystemDrawingTypesToGLConverterExtension
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
-  name: ToDF(Key)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDF_OpenTK_Input_Key_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF(OpenTK.Input.Key)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDF(Key)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF*
-  name: ToDF
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDF_
-  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF
-  isSpec: "True"
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDF
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDF
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Color)
-  name: ToDrawing(Color)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDrawing_OpenTK_Color_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Color)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Color)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(Color)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Point)
-  name: ToDrawing(Point)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDrawing_OpenTK_Point_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Point)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Point)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(Point)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.PointF)
-  name: ToDrawing(PointF)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDrawing_OpenTK_PointF_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.PointF)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.PointF)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(PointF)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Rectangle)
-  name: ToDrawing(Rectangle)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDrawing_OpenTK_Rectangle_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Rectangle)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Rectangle)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(Rectangle)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.RectangleF)
-  name: ToDrawing(RectangleF)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDrawing_OpenTK_RectangleF_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.RectangleF)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.RectangleF)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(RectangleF)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Size)
-  name: ToDrawing(Size)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDrawing_OpenTK_Size_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Size)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.Size)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(Size)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.SizeF)
-  name: ToDrawing(SizeF)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDrawing_OpenTK_SizeF_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.SizeF)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing(OpenTK.SizeF)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing(SizeF)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing*
-  name: ToDrawing
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToDrawing_
-  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing
-  isSpec: "True"
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToDrawing
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToDrawing
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Color)
-  name: ToGL(Color)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToGL_System_Drawing_Color_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Color)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Color)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(Color)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Point)
-  name: ToGL(Point)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToGL_System_Drawing_Point_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Point)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Point)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(Point)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.PointF)
-  name: ToGL(PointF)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToGL_System_Drawing_PointF_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.PointF)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.PointF)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(PointF)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Rectangle)
-  name: ToGL(Rectangle)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToGL_System_Drawing_Rectangle_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Rectangle)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Rectangle)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(Rectangle)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.RectangleF)
-  name: ToGL(RectangleF)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToGL_System_Drawing_RectangleF_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.RectangleF)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.RectangleF)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(RectangleF)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Size)
-  name: ToGL(Size)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToGL_System_Drawing_Size_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Size)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.Size)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(Size)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.SizeF)
-  name: ToGL(SizeF)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToGL_System_Drawing_SizeF_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.SizeF)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL(System.Drawing.SizeF)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL(SizeF)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL*
-  name: ToGL
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToGL_
-  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL
-  isSpec: "True"
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToGL
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToGL
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
-  name: ToTK(DFKeyCode)
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToTK_DotFeather_DFKeyCode_
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK(DFKeyCode)
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK*
-  name: ToTK
-  href: api/DotFeather.SystemDrawingTypesToGLConverterExtension.html#DotFeather_SystemDrawingTypesToGLConverterExtension_ToTK_
-  commentId: Overload:DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
-  isSpec: "True"
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK
 - uid: DotFeather.TextDrawable
   name: TextDrawable
   href: api/DotFeather.TextDrawable.html
@@ -4668,6 +5033,25 @@ references:
   isSpec: "True"
   fullName: DotFeather.Texture2D.Texture2D
   nameWithType: Texture2D.Texture2D
+- uid: DotFeather.Texture2D.CreateSolid(System.Drawing.Color,DotFeather.Vector)
+  name: CreateSolid(Color, Vector)
+  href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_CreateSolid_System_Drawing_Color_DotFeather_Vector_
+  commentId: M:DotFeather.Texture2D.CreateSolid(System.Drawing.Color,DotFeather.Vector)
+  fullName: DotFeather.Texture2D.CreateSolid(System.Drawing.Color, DotFeather.Vector)
+  nameWithType: Texture2D.CreateSolid(Color, Vector)
+- uid: DotFeather.Texture2D.CreateSolid(System.Drawing.Color,System.Int32,System.Int32)
+  name: CreateSolid(Color, Int32, Int32)
+  href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_CreateSolid_System_Drawing_Color_System_Int32_System_Int32_
+  commentId: M:DotFeather.Texture2D.CreateSolid(System.Drawing.Color,System.Int32,System.Int32)
+  fullName: DotFeather.Texture2D.CreateSolid(System.Drawing.Color, System.Int32, System.Int32)
+  nameWithType: Texture2D.CreateSolid(Color, Int32, Int32)
+- uid: DotFeather.Texture2D.CreateSolid*
+  name: CreateSolid
+  href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_CreateSolid_
+  commentId: Overload:DotFeather.Texture2D.CreateSolid
+  isSpec: "True"
+  fullName: DotFeather.Texture2D.CreateSolid
+  nameWithType: Texture2D.CreateSolid
 - uid: DotFeather.Texture2D.Dispose
   name: Dispose()
   href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_Dispose
@@ -4700,6 +5084,12 @@ references:
   commentId: M:DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,System.Drawing.Size)
   fullName: DotFeather.Texture2D.LoadAndSplitFrom(System.String, System.Int32, System.Int32, System.Drawing.Size)
   nameWithType: Texture2D.LoadAndSplitFrom(String, Int32, Int32, Size)
+- uid: DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: LoadAndSplitFrom(String, Int32, Int32, Int32, Int32)
+  href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_LoadAndSplitFrom_System_String_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: DotFeather.Texture2D.LoadAndSplitFrom(System.String, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: Texture2D.LoadAndSplitFrom(String, Int32, Int32, Int32, Int32)
 - uid: DotFeather.Texture2D.LoadAndSplitFrom*
   name: LoadAndSplitFrom
   href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_LoadAndSplitFrom_
@@ -5345,6 +5735,38 @@ references:
   isSpec: "True"
   fullName: DotFeather.Time.Now
   nameWithType: Time.Now
+- uid: DotFeather.TypesConverterExtension
+  name: TypesConverterExtension
+  href: api/DotFeather.TypesConverterExtension.html
+  commentId: T:DotFeather.TypesConverterExtension
+  fullName: DotFeather.TypesConverterExtension
+  nameWithType: TypesConverterExtension
+- uid: DotFeather.TypesConverterExtension.ToDF(OpenTK.Input.Key)
+  name: ToDF(Key)
+  href: api/DotFeather.TypesConverterExtension.html#DotFeather_TypesConverterExtension_ToDF_OpenTK_Input_Key_
+  commentId: M:DotFeather.TypesConverterExtension.ToDF(OpenTK.Input.Key)
+  fullName: DotFeather.TypesConverterExtension.ToDF(OpenTK.Input.Key)
+  nameWithType: TypesConverterExtension.ToDF(Key)
+- uid: DotFeather.TypesConverterExtension.ToDF*
+  name: ToDF
+  href: api/DotFeather.TypesConverterExtension.html#DotFeather_TypesConverterExtension_ToDF_
+  commentId: Overload:DotFeather.TypesConverterExtension.ToDF
+  isSpec: "True"
+  fullName: DotFeather.TypesConverterExtension.ToDF
+  nameWithType: TypesConverterExtension.ToDF
+- uid: DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
+  name: ToTK(DFKeyCode)
+  href: api/DotFeather.TypesConverterExtension.html#DotFeather_TypesConverterExtension_ToTK_DotFeather_DFKeyCode_
+  commentId: M:DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
+  fullName: DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
+  nameWithType: TypesConverterExtension.ToTK(DFKeyCode)
+- uid: DotFeather.TypesConverterExtension.ToTK*
+  name: ToTK
+  href: api/DotFeather.TypesConverterExtension.html#DotFeather_TypesConverterExtension_ToTK_
+  commentId: Overload:DotFeather.TypesConverterExtension.ToTK
+  isSpec: "True"
+  fullName: DotFeather.TypesConverterExtension.ToTK
+  nameWithType: TypesConverterExtension.ToTK
 - uid: DotFeather.Vector
   name: Vector
   href: api/DotFeather.Vector.html
@@ -5364,6 +5786,56 @@ references:
   isSpec: "True"
   fullName: DotFeather.Vector.Vector
   nameWithType: Vector.Vector
+- uid: DotFeather.Vector.Angle
+  name: Angle()
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Angle
+  commentId: M:DotFeather.Vector.Angle
+  fullName: DotFeather.Vector.Angle()
+  nameWithType: Vector.Angle()
+- uid: DotFeather.Vector.Angle(DotFeather.Vector)
+  name: Angle(Vector)
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Angle_DotFeather_Vector_
+  commentId: M:DotFeather.Vector.Angle(DotFeather.Vector)
+  fullName: DotFeather.Vector.Angle(DotFeather.Vector)
+  nameWithType: Vector.Angle(Vector)
+- uid: DotFeather.Vector.Angle(DotFeather.Vector,DotFeather.Vector)
+  name: Angle(Vector, Vector)
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Angle_DotFeather_Vector_DotFeather_Vector_
+  commentId: M:DotFeather.Vector.Angle(DotFeather.Vector,DotFeather.Vector)
+  fullName: DotFeather.Vector.Angle(DotFeather.Vector, DotFeather.Vector)
+  nameWithType: Vector.Angle(Vector, Vector)
+- uid: DotFeather.Vector.Angle*
+  name: Angle
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Angle_
+  commentId: Overload:DotFeather.Vector.Angle
+  isSpec: "True"
+  fullName: DotFeather.Vector.Angle
+  nameWithType: Vector.Angle
+- uid: DotFeather.Vector.Distance(DotFeather.Vector)
+  name: Distance(Vector)
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Distance_DotFeather_Vector_
+  commentId: M:DotFeather.Vector.Distance(DotFeather.Vector)
+  fullName: DotFeather.Vector.Distance(DotFeather.Vector)
+  nameWithType: Vector.Distance(Vector)
+- uid: DotFeather.Vector.Distance(DotFeather.Vector,DotFeather.Vector)
+  name: Distance(Vector, Vector)
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Distance_DotFeather_Vector_DotFeather_Vector_
+  commentId: M:DotFeather.Vector.Distance(DotFeather.Vector,DotFeather.Vector)
+  fullName: DotFeather.Vector.Distance(DotFeather.Vector, DotFeather.Vector)
+  nameWithType: Vector.Distance(Vector, Vector)
+- uid: DotFeather.Vector.Distance*
+  name: Distance
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Distance_
+  commentId: Overload:DotFeather.Vector.Distance
+  isSpec: "True"
+  fullName: DotFeather.Vector.Distance
+  nameWithType: Vector.Distance
+- uid: DotFeather.Vector.Down
+  name: Down
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Down
+  commentId: F:DotFeather.Vector.Down
+  fullName: DotFeather.Vector.Down
+  nameWithType: Vector.Down
 - uid: DotFeather.Vector.Equals(DotFeather.Vector)
   name: Equals(Vector)
   href: api/DotFeather.Vector.html#DotFeather_Vector_Equals_DotFeather_Vector_
@@ -5396,6 +5868,38 @@ references:
   isSpec: "True"
   fullName: DotFeather.Vector.GetHashCode
   nameWithType: Vector.GetHashCode
+- uid: DotFeather.Vector.Left
+  name: Left
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Left
+  commentId: F:DotFeather.Vector.Left
+  fullName: DotFeather.Vector.Left
+  nameWithType: Vector.Left
+- uid: DotFeather.Vector.Magnitude
+  name: Magnitude
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Magnitude
+  commentId: P:DotFeather.Vector.Magnitude
+  fullName: DotFeather.Vector.Magnitude
+  nameWithType: Vector.Magnitude
+- uid: DotFeather.Vector.Magnitude*
+  name: Magnitude
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Magnitude_
+  commentId: Overload:DotFeather.Vector.Magnitude
+  isSpec: "True"
+  fullName: DotFeather.Vector.Magnitude
+  nameWithType: Vector.Magnitude
+- uid: DotFeather.Vector.Normalized
+  name: Normalized
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Normalized
+  commentId: P:DotFeather.Vector.Normalized
+  fullName: DotFeather.Vector.Normalized
+  nameWithType: Vector.Normalized
+- uid: DotFeather.Vector.Normalized*
+  name: Normalized
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Normalized_
+  commentId: Overload:DotFeather.Vector.Normalized
+  isSpec: "True"
+  fullName: DotFeather.Vector.Normalized
+  nameWithType: Vector.Normalized
 - uid: DotFeather.Vector.One
   name: One
   href: api/DotFeather.Vector.html#DotFeather_Vector_One
@@ -5505,6 +6009,12 @@ references:
   isSpec: "True"
   fullName: DotFeather.Vector.UnaryNegation
   nameWithType: Vector.UnaryNegation
+- uid: DotFeather.Vector.Right
+  name: Right
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Right
+  commentId: F:DotFeather.Vector.Right
+  fullName: DotFeather.Vector.Right
+  nameWithType: Vector.Right
 - uid: DotFeather.Vector.ToString
   name: ToString()
   href: api/DotFeather.Vector.html#DotFeather_Vector_ToString
@@ -5518,6 +6028,12 @@ references:
   isSpec: "True"
   fullName: DotFeather.Vector.ToString
   nameWithType: Vector.ToString
+- uid: DotFeather.Vector.Up
+  name: Up
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Up
+  commentId: F:DotFeather.Vector.Up
+  fullName: DotFeather.Vector.Up
+  nameWithType: Vector.Up
 - uid: DotFeather.Vector.X
   name: X
   href: api/DotFeather.Vector.html#DotFeather_Vector_X
@@ -5650,6 +6166,127 @@ references:
   isSpec: "True"
   fullName: DotFeather.VorbisAudioSource.Samples
   nameWithType: VorbisAudioSource.Samples
+- uid: DotFeather.WaitForSeconds
+  name: WaitForSeconds
+  href: api/DotFeather.WaitForSeconds.html
+  commentId: T:DotFeather.WaitForSeconds
+  fullName: DotFeather.WaitForSeconds
+  nameWithType: WaitForSeconds
+- uid: DotFeather.WaitForSeconds.#ctor(System.Single)
+  name: WaitForSeconds(Single)
+  href: api/DotFeather.WaitForSeconds.html#DotFeather_WaitForSeconds__ctor_System_Single_
+  commentId: M:DotFeather.WaitForSeconds.#ctor(System.Single)
+  fullName: DotFeather.WaitForSeconds.WaitForSeconds(System.Single)
+  nameWithType: WaitForSeconds.WaitForSeconds(Single)
+- uid: DotFeather.WaitForSeconds.#ctor*
+  name: WaitForSeconds
+  href: api/DotFeather.WaitForSeconds.html#DotFeather_WaitForSeconds__ctor_
+  commentId: Overload:DotFeather.WaitForSeconds.#ctor
+  isSpec: "True"
+  fullName: DotFeather.WaitForSeconds.WaitForSeconds
+  nameWithType: WaitForSeconds.WaitForSeconds
+- uid: DotFeather.WaitForSeconds.KeepWaiting
+  name: KeepWaiting
+  href: api/DotFeather.WaitForSeconds.html#DotFeather_WaitForSeconds_KeepWaiting
+  commentId: P:DotFeather.WaitForSeconds.KeepWaiting
+  fullName: DotFeather.WaitForSeconds.KeepWaiting
+  nameWithType: WaitForSeconds.KeepWaiting
+- uid: DotFeather.WaitForSeconds.KeepWaiting*
+  name: KeepWaiting
+  href: api/DotFeather.WaitForSeconds.html#DotFeather_WaitForSeconds_KeepWaiting_
+  commentId: Overload:DotFeather.WaitForSeconds.KeepWaiting
+  isSpec: "True"
+  fullName: DotFeather.WaitForSeconds.KeepWaiting
+  nameWithType: WaitForSeconds.KeepWaiting
+- uid: DotFeather.WaitUntil
+  name: WaitUntil
+  href: api/DotFeather.WaitUntil.html
+  commentId: T:DotFeather.WaitUntil
+  fullName: DotFeather.WaitUntil
+  nameWithType: WaitUntil
+- uid: DotFeather.WaitUntil.#ctor(System.Func{System.Boolean})
+  name: WaitUntil(Func<Boolean>)
+  href: api/DotFeather.WaitUntil.html#DotFeather_WaitUntil__ctor_System_Func_System_Boolean__
+  commentId: M:DotFeather.WaitUntil.#ctor(System.Func{System.Boolean})
+  name.vb: WaitUntil(Func(Of Boolean))
+  fullName: DotFeather.WaitUntil.WaitUntil(System.Func<System.Boolean>)
+  fullName.vb: DotFeather.WaitUntil.WaitUntil(System.Func(Of System.Boolean))
+  nameWithType: WaitUntil.WaitUntil(Func<Boolean>)
+  nameWithType.vb: WaitUntil.WaitUntil(Func(Of Boolean))
+- uid: DotFeather.WaitUntil.#ctor*
+  name: WaitUntil
+  href: api/DotFeather.WaitUntil.html#DotFeather_WaitUntil__ctor_
+  commentId: Overload:DotFeather.WaitUntil.#ctor
+  isSpec: "True"
+  fullName: DotFeather.WaitUntil.WaitUntil
+  nameWithType: WaitUntil.WaitUntil
+- uid: DotFeather.WaitUntil.KeepWaiting
+  name: KeepWaiting
+  href: api/DotFeather.WaitUntil.html#DotFeather_WaitUntil_KeepWaiting
+  commentId: P:DotFeather.WaitUntil.KeepWaiting
+  fullName: DotFeather.WaitUntil.KeepWaiting
+  nameWithType: WaitUntil.KeepWaiting
+- uid: DotFeather.WaitUntil.KeepWaiting*
+  name: KeepWaiting
+  href: api/DotFeather.WaitUntil.html#DotFeather_WaitUntil_KeepWaiting_
+  commentId: Overload:DotFeather.WaitUntil.KeepWaiting
+  isSpec: "True"
+  fullName: DotFeather.WaitUntil.KeepWaiting
+  nameWithType: WaitUntil.KeepWaiting
+- uid: DotFeather.WaitUntilNextFrame
+  name: WaitUntilNextFrame
+  href: api/DotFeather.WaitUntilNextFrame.html
+  commentId: T:DotFeather.WaitUntilNextFrame
+  fullName: DotFeather.WaitUntilNextFrame
+  nameWithType: WaitUntilNextFrame
+- uid: DotFeather.WaitUntilNextFrame.KeepWaiting
+  name: KeepWaiting
+  href: api/DotFeather.WaitUntilNextFrame.html#DotFeather_WaitUntilNextFrame_KeepWaiting
+  commentId: P:DotFeather.WaitUntilNextFrame.KeepWaiting
+  fullName: DotFeather.WaitUntilNextFrame.KeepWaiting
+  nameWithType: WaitUntilNextFrame.KeepWaiting
+- uid: DotFeather.WaitUntilNextFrame.KeepWaiting*
+  name: KeepWaiting
+  href: api/DotFeather.WaitUntilNextFrame.html#DotFeather_WaitUntilNextFrame_KeepWaiting_
+  commentId: Overload:DotFeather.WaitUntilNextFrame.KeepWaiting
+  isSpec: "True"
+  fullName: DotFeather.WaitUntilNextFrame.KeepWaiting
+  nameWithType: WaitUntilNextFrame.KeepWaiting
+- uid: DotFeather.WaitWhile
+  name: WaitWhile
+  href: api/DotFeather.WaitWhile.html
+  commentId: T:DotFeather.WaitWhile
+  fullName: DotFeather.WaitWhile
+  nameWithType: WaitWhile
+- uid: DotFeather.WaitWhile.#ctor(System.Func{System.Boolean})
+  name: WaitWhile(Func<Boolean>)
+  href: api/DotFeather.WaitWhile.html#DotFeather_WaitWhile__ctor_System_Func_System_Boolean__
+  commentId: M:DotFeather.WaitWhile.#ctor(System.Func{System.Boolean})
+  name.vb: WaitWhile(Func(Of Boolean))
+  fullName: DotFeather.WaitWhile.WaitWhile(System.Func<System.Boolean>)
+  fullName.vb: DotFeather.WaitWhile.WaitWhile(System.Func(Of System.Boolean))
+  nameWithType: WaitWhile.WaitWhile(Func<Boolean>)
+  nameWithType.vb: WaitWhile.WaitWhile(Func(Of Boolean))
+- uid: DotFeather.WaitWhile.#ctor*
+  name: WaitWhile
+  href: api/DotFeather.WaitWhile.html#DotFeather_WaitWhile__ctor_
+  commentId: Overload:DotFeather.WaitWhile.#ctor
+  isSpec: "True"
+  fullName: DotFeather.WaitWhile.WaitWhile
+  nameWithType: WaitWhile.WaitWhile
+- uid: DotFeather.WaitWhile.KeepWaiting
+  name: KeepWaiting
+  href: api/DotFeather.WaitWhile.html#DotFeather_WaitWhile_KeepWaiting
+  commentId: P:DotFeather.WaitWhile.KeepWaiting
+  fullName: DotFeather.WaitWhile.KeepWaiting
+  nameWithType: WaitWhile.KeepWaiting
+- uid: DotFeather.WaitWhile.KeepWaiting*
+  name: KeepWaiting
+  href: api/DotFeather.WaitWhile.html#DotFeather_WaitWhile_KeepWaiting_
+  commentId: Overload:DotFeather.WaitWhile.KeepWaiting
+  isSpec: "True"
+  fullName: DotFeather.WaitWhile.KeepWaiting
+  nameWithType: WaitWhile.KeepWaiting
 - uid: DotFeather.WaveAudioSource
   name: WaveAudioSource
   href: api/DotFeather.WaveAudioSource.html
@@ -5737,3 +6374,46 @@ references:
   isSpec: "True"
   fullName: DotFeather.WaveAudioSource.Samples
   nameWithType: WaveAudioSource.Samples
+- uid: DotFeather.WindowMode
+  name: WindowMode
+  href: api/DotFeather.WindowMode.html
+  commentId: T:DotFeather.WindowMode
+  fullName: DotFeather.WindowMode
+  nameWithType: WindowMode
+- uid: DotFeather.WindowMode.Fixed
+  name: Fixed
+  href: api/DotFeather.WindowMode.html#DotFeather_WindowMode_Fixed
+  commentId: F:DotFeather.WindowMode.Fixed
+  fullName: DotFeather.WindowMode.Fixed
+  nameWithType: WindowMode.Fixed
+- uid: DotFeather.WindowMode.NoFrame
+  name: NoFrame
+  href: api/DotFeather.WindowMode.html#DotFeather_WindowMode_NoFrame
+  commentId: F:DotFeather.WindowMode.NoFrame
+  fullName: DotFeather.WindowMode.NoFrame
+  nameWithType: WindowMode.NoFrame
+- uid: DotFeather.WindowMode.Resizable
+  name: Resizable
+  href: api/DotFeather.WindowMode.html#DotFeather_WindowMode_Resizable
+  commentId: F:DotFeather.WindowMode.Resizable
+  fullName: DotFeather.WindowMode.Resizable
+  nameWithType: WindowMode.Resizable
+- uid: DotFeather.YieldInstruction
+  name: YieldInstruction
+  href: api/DotFeather.YieldInstruction.html
+  commentId: T:DotFeather.YieldInstruction
+  fullName: DotFeather.YieldInstruction
+  nameWithType: YieldInstruction
+- uid: DotFeather.YieldInstruction.KeepWaiting
+  name: KeepWaiting
+  href: api/DotFeather.YieldInstruction.html#DotFeather_YieldInstruction_KeepWaiting
+  commentId: P:DotFeather.YieldInstruction.KeepWaiting
+  fullName: DotFeather.YieldInstruction.KeepWaiting
+  nameWithType: YieldInstruction.KeepWaiting
+- uid: DotFeather.YieldInstruction.KeepWaiting*
+  name: KeepWaiting
+  href: api/DotFeather.YieldInstruction.html#DotFeather_YieldInstruction_KeepWaiting_
+  commentId: Overload:DotFeather.YieldInstruction.KeepWaiting
+  isSpec: "True"
+  fullName: DotFeather.YieldInstruction.KeepWaiting
+  nameWithType: YieldInstruction.KeepWaiting

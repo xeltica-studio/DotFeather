@@ -34,11 +34,11 @@ items:
   type: Class
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Graphic
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 11
   assemblies:
   - DotFeather
@@ -81,11 +81,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Drawables
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 17
   assemblies:
   - DotFeather
@@ -119,11 +119,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Location
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 20
   assemblies:
   - DotFeather
@@ -158,11 +158,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Angle
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 22
   assemblies:
   - DotFeather
@@ -197,11 +197,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Scale
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 24
   assemblies:
   - DotFeather
@@ -236,11 +236,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 26
   assemblies:
   - DotFeather
@@ -275,11 +275,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Name
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 28
   assemblies:
   - DotFeather
@@ -314,11 +314,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 33
   assemblies:
   - DotFeather
@@ -353,11 +353,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Pixel
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 48
   assemblies:
   - DotFeather
@@ -394,11 +394,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Pixel
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 60
   assemblies:
   - DotFeather
@@ -438,11 +438,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Line
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 71
   assemblies:
   - DotFeather
@@ -482,11 +482,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Line
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 85
   assemblies:
   - DotFeather
@@ -532,11 +532,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Rect
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 98
   assemblies:
   - DotFeather
@@ -585,11 +585,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Rect
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 113
   assemblies:
   - DotFeather
@@ -644,11 +644,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Triangle
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 126
   assemblies:
   - DotFeather
@@ -700,11 +700,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Triangle
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 138
   assemblies:
   - DotFeather
@@ -750,11 +750,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Ellipse
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 146
   assemblies:
   - DotFeather
@@ -802,11 +802,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Ellipse
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 177
   assemblies:
   - DotFeather
@@ -850,11 +850,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Texture
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 188
   assemblies:
   - DotFeather
@@ -894,11 +894,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Clear
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 197
   assemblies:
   - DotFeather
@@ -928,11 +928,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Graphic.cs
+      path: DotFeather/Graphics/Graphic.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
-    path: ../DotFeather/Graphic.cs
+    path: ../DotFeather/Graphics/Graphic.cs
     startLine: 207
   assemblies:
   - DotFeather

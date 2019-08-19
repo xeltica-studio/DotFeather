@@ -161,7 +161,7 @@ items:
     content: public enum DFKeyCode
     content.vb: Public Enum DFKeyCode
   extensionMethods:
-  - DotFeather.DFKeyCode.DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+  - DotFeather.DFKeyCode.DotFeather.TypesConverterExtension.ToTK
   modifiers.csharp:
   - public
   - enum
@@ -4662,18 +4662,18 @@ references:
   name: DotFeather
   nameWithType: DotFeather
   fullName: DotFeather
-- uid: DotFeather.DFKeyCode.DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
-  parent: DotFeather.SystemDrawingTypesToGLConverterExtension
-  definition: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+- uid: DotFeather.DFKeyCode.DotFeather.TypesConverterExtension.ToTK
+  commentId: M:DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
+  parent: DotFeather.TypesConverterExtension
+  definition: DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
   name: ToTK()
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK()
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK()
+  nameWithType: TypesConverterExtension.ToTK()
+  fullName: DotFeather.TypesConverterExtension.ToTK()
   spec.csharp:
-  - uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+  - uid: DotFeather.TypesConverterExtension.ToTK
     name: ToTK
-    nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK
-    fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+    nameWithType: TypesConverterExtension.ToTK
+    fullName: DotFeather.TypesConverterExtension.ToTK
   - name: (
     nameWithType: (
     fullName: (
@@ -4681,26 +4681,26 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+  - uid: DotFeather.TypesConverterExtension.ToTK
     name: ToTK
-    nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK
-    fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+    nameWithType: TypesConverterExtension.ToTK
+    fullName: DotFeather.TypesConverterExtension.ToTK
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
-  commentId: M:DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+- uid: DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
+  commentId: M:DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
   name: ToTK(DFKeyCode)
-  nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK(DFKeyCode)
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+  nameWithType: TypesConverterExtension.ToTK(DFKeyCode)
+  fullName: DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
   spec.csharp:
-  - uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+  - uid: DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
     name: ToTK
-    nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK
-    fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+    nameWithType: TypesConverterExtension.ToTK
+    fullName: DotFeather.TypesConverterExtension.ToTK
   - name: (
     nameWithType: (
     fullName: (
@@ -4712,10 +4712,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK(DotFeather.DFKeyCode)
+  - uid: DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
     name: ToTK
-    nameWithType: SystemDrawingTypesToGLConverterExtension.ToTK
-    fullName: DotFeather.SystemDrawingTypesToGLConverterExtension.ToTK
+    nameWithType: TypesConverterExtension.ToTK
+    fullName: DotFeather.TypesConverterExtension.ToTK
   - name: (
     nameWithType: (
     fullName: (
@@ -4726,12 +4726,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension
-  commentId: T:DotFeather.SystemDrawingTypesToGLConverterExtension
+- uid: DotFeather.TypesConverterExtension
+  commentId: T:DotFeather.TypesConverterExtension
   parent: DotFeather
-  name: SystemDrawingTypesToGLConverterExtension
-  nameWithType: SystemDrawingTypesToGLConverterExtension
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension
+  name: TypesConverterExtension
+  nameWithType: TypesConverterExtension
+  fullName: DotFeather.TypesConverterExtension
 - uid: DotFeather.DFKeyCode
   commentId: T:DotFeather.DFKeyCode
   parent: DotFeather

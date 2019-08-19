@@ -23,11 +23,11 @@ items:
   type: Class
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Tile
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 8
   assemblies:
   - DotFeather
@@ -70,11 +70,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Texture
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 13
   assemblies:
   - DotFeather
@@ -107,11 +107,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Animations
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 18
   assemblies:
   - DotFeather
@@ -144,11 +144,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Interval
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 23
   assemblies:
   - DotFeather
@@ -181,11 +181,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 31
   assemblies:
   - DotFeather
@@ -217,11 +217,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 37
   assemblies:
   - DotFeather
@@ -254,11 +254,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 50
   assemblies:
   - DotFeather
@@ -303,11 +303,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 64
   assemblies:
   - DotFeather
@@ -349,11 +349,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 88
   assemblies:
   - DotFeather
@@ -390,11 +390,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/Tile.cs
+      path: DotFeather/Graphics/Tiles/Tile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
-    path: ../DotFeather/Drawable/Tiles/Tile.cs
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
     startLine: 93
   assemblies:
   - DotFeather

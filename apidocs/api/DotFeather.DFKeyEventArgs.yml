@@ -18,11 +18,11 @@ items:
   type: Class
   source:
     remote:
-      path: DotFeather/Models/DFKeyEventArgs.cs
+      path: DotFeather/InputSystems/DFKeyEventArgs.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DFKeyEventArgs
-    path: ../DotFeather/Models/DFKeyEventArgs.cs
+    path: ../DotFeather/InputSystems/DFKeyEventArgs.cs
     startLine: 7
   assemblies:
   - DotFeather
@@ -65,11 +65,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Models/DFKeyEventArgs.cs
+      path: DotFeather/InputSystems/DFKeyEventArgs.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Key
-    path: ../DotFeather/Models/DFKeyEventArgs.cs
+    path: ../DotFeather/InputSystems/DFKeyEventArgs.cs
     startLine: 13
   assemblies:
   - DotFeather
@@ -103,11 +103,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Models/DFKeyEventArgs.cs
+      path: DotFeather/InputSystems/DFKeyEventArgs.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: AltPressed
-    path: ../DotFeather/Models/DFKeyEventArgs.cs
+    path: ../DotFeather/InputSystems/DFKeyEventArgs.cs
     startLine: 19
   assemblies:
   - DotFeather
@@ -141,11 +141,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Models/DFKeyEventArgs.cs
+      path: DotFeather/InputSystems/DFKeyEventArgs.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: CtrlPressed
-    path: ../DotFeather/Models/DFKeyEventArgs.cs
+    path: ../DotFeather/InputSystems/DFKeyEventArgs.cs
     startLine: 25
   assemblies:
   - DotFeather
@@ -179,11 +179,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Models/DFKeyEventArgs.cs
+      path: DotFeather/InputSystems/DFKeyEventArgs.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ShiftPressed
-    path: ../DotFeather/Models/DFKeyEventArgs.cs
+    path: ../DotFeather/InputSystems/DFKeyEventArgs.cs
     startLine: 31
   assemblies:
   - DotFeather

@@ -20,11 +20,11 @@ items:
   type: Class
   source:
     remote:
-      path: DotFeather/Sprite.cs
+      path: DotFeather/Graphics/Sprite.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Sprite
-    path: ../DotFeather/Sprite.cs
+    path: ../DotFeather/Graphics/Sprite.cs
     startLine: 8
   assemblies:
   - DotFeather
@@ -78,11 +78,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: DotFeather/Sprite.cs
+      path: DotFeather/Graphics/Sprite.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
-    path: ../DotFeather/Sprite.cs
+    path: ../DotFeather/Graphics/Sprite.cs
     startLine: 14
   assemblies:
   - DotFeather
@@ -123,11 +123,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Sprite.cs
+      path: DotFeather/Graphics/Sprite.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Texture
-    path: ../DotFeather/Sprite.cs
+    path: ../DotFeather/Graphics/Sprite.cs
     startLine: 28
   assemblies:
   - DotFeather
@@ -161,11 +161,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: DotFeather/Sprite.cs
+      path: DotFeather/Graphics/Sprite.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
-    path: ../DotFeather/Sprite.cs
+    path: ../DotFeather/Graphics/Sprite.cs
     startLine: 42
   assemblies:
   - DotFeather
@@ -209,11 +209,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: DotFeather/Sprite.cs
+      path: DotFeather/Graphics/Sprite.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
-    path: ../DotFeather/Sprite.cs
+    path: ../DotFeather/Graphics/Sprite.cs
     startLine: 54
   assemblies:
   - DotFeather
@@ -245,11 +245,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Sprite.cs
+      path: DotFeather/Graphics/Sprite.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
-    path: ../DotFeather/Sprite.cs
+    path: ../DotFeather/Graphics/Sprite.cs
     startLine: 66
   assemblies:
   - DotFeather
@@ -286,11 +286,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Sprite.cs
+      path: DotFeather/Graphics/Sprite.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
-    path: ../DotFeather/Sprite.cs
+    path: ../DotFeather/Graphics/Sprite.cs
     startLine: 71
   assemblies:
   - DotFeather

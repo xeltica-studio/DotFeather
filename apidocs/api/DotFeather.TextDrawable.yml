@@ -21,11 +21,11 @@ items:
   type: Class
   source:
     remote:
-      path: DotFeather/TextDrawable.cs
+      path: DotFeather/Graphics/TextDrawable.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: TextDrawable
-    path: ../DotFeather/TextDrawable.cs
+    path: ../DotFeather/Graphics/TextDrawable.cs
     startLine: 11
   assemblies:
   - DotFeather
@@ -79,11 +79,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/TextDrawable.cs
+      path: DotFeather/Graphics/TextDrawable.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Text
-    path: ../DotFeather/TextDrawable.cs
+    path: ../DotFeather/Graphics/TextDrawable.cs
     startLine: 17
   assemblies:
   - DotFeather
@@ -117,11 +117,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/TextDrawable.cs
+      path: DotFeather/Graphics/TextDrawable.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Font
-    path: ../DotFeather/TextDrawable.cs
+    path: ../DotFeather/Graphics/TextDrawable.cs
     startLine: 33
   assemblies:
   - DotFeather
@@ -155,11 +155,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/TextDrawable.cs
+      path: DotFeather/Graphics/TextDrawable.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Color
-    path: ../DotFeather/TextDrawable.cs
+    path: ../DotFeather/Graphics/TextDrawable.cs
     startLine: 49
   assemblies:
   - DotFeather
@@ -196,11 +196,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/TextDrawable.cs
+      path: DotFeather/Graphics/TextDrawable.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: RenderedTexture
-    path: ../DotFeather/TextDrawable.cs
+    path: ../DotFeather/Graphics/TextDrawable.cs
     startLine: 64
   assemblies:
   - DotFeather
@@ -233,11 +233,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: DotFeather/TextDrawable.cs
+      path: DotFeather/Graphics/TextDrawable.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
-    path: ../DotFeather/TextDrawable.cs
+    path: ../DotFeather/Graphics/TextDrawable.cs
     startLine: 76
   assemblies:
   - DotFeather
@@ -275,11 +275,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/TextDrawable.cs
+      path: DotFeather/Graphics/TextDrawable.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: UpdateTexture
-    path: ../DotFeather/TextDrawable.cs
+    path: ../DotFeather/Graphics/TextDrawable.cs
     startLine: 87
   assemblies:
   - DotFeather
@@ -307,12 +307,12 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/TextDrawable.cs
+      path: DotFeather/Graphics/TextDrawable.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
-    path: ../DotFeather/TextDrawable.cs
-    startLine: 113
+    path: ../DotFeather/Graphics/TextDrawable.cs
+    startLine: 109
   assemblies:
   - DotFeather
   namespace: DotFeather

@@ -25,11 +25,11 @@ items:
   type: Class
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: TextureDrawableBase
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 7
   assemblies:
   - DotFeather
@@ -77,11 +77,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 12
   assemblies:
   - DotFeather
@@ -118,11 +118,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Name
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 17
   assemblies:
   - DotFeather
@@ -159,11 +159,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Location
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 22
   assemblies:
   - DotFeather
@@ -200,11 +200,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Angle
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 27
   assemblies:
   - DotFeather
@@ -241,11 +241,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Scale
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 32
   assemblies:
   - DotFeather
@@ -282,11 +282,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Width
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 37
   assemblies:
   - DotFeather
@@ -321,11 +321,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Height
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 43
   assemblies:
   - DotFeather
@@ -361,11 +361,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Color
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 49
   assemblies:
   - DotFeather
@@ -401,11 +401,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Texture
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 54
   assemblies:
   - DotFeather
@@ -442,11 +442,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 59
   assemblies:
   - DotFeather
@@ -478,11 +478,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Drawable/TextureDrawableBase.cs
+      path: DotFeather/Graphics/TextureDrawableBase.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
-    path: ../DotFeather/Drawable/TextureDrawableBase.cs
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
     startLine: 66
   assemblies:
   - DotFeather

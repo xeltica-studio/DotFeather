@@ -37,11 +37,11 @@ items:
   type: Class
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Tilemap
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 10
   assemblies:
   - DotFeather
@@ -84,11 +84,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 14
   assemblies:
   - DotFeather
@@ -123,11 +123,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Name
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 17
   assemblies:
   - DotFeather
@@ -162,11 +162,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Location
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 20
   assemblies:
   - DotFeather
@@ -201,11 +201,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Angle
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 23
   assemblies:
   - DotFeather
@@ -240,11 +240,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Scale
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 26
   assemblies:
   - DotFeather
@@ -279,11 +279,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: DefaultColor
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 29
   assemblies:
   - DotFeather
@@ -316,11 +316,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: TileSize
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 35
   assemblies:
   - DotFeather
@@ -354,11 +354,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 41
   assemblies:
   - DotFeather
@@ -390,11 +390,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: this[]
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 50
   assemblies:
   - DotFeather
@@ -434,11 +434,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: this[]
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 59
   assemblies:
   - DotFeather
@@ -476,11 +476,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 67
   assemblies:
   - DotFeather
@@ -515,11 +515,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 80
   assemblies:
   - DotFeather
@@ -552,11 +552,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 84
   assemblies:
   - DotFeather
@@ -591,11 +591,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 89
   assemblies:
   - DotFeather
@@ -628,11 +628,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 93
   assemblies:
   - DotFeather
@@ -667,11 +667,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 98
   assemblies:
   - DotFeather
@@ -709,11 +709,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 103
   assemblies:
   - DotFeather
@@ -753,11 +753,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Clear
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 114
   assemblies:
   - DotFeather
@@ -785,11 +785,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Line
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 122
   assemblies:
   - DotFeather
@@ -828,11 +828,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Fill
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 166
   assemblies:
   - DotFeather
@@ -871,11 +871,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Line
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 176
   assemblies:
   - DotFeather
@@ -910,11 +910,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Fill
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 182
   assemblies:
   - DotFeather
@@ -949,11 +949,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Tilemap.cs
+      path: DotFeather/Graphics/Tilemap.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
-    path: ../DotFeather/Tilemap.cs
+    path: ../DotFeather/Graphics/Tilemap.cs
     startLine: 188
   assemblies:
   - DotFeather

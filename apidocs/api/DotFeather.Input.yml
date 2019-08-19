@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: DotFeather/Input.cs
+      path: DotFeather/InputSystems/Input.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Input
-    path: ../DotFeather/Input.cs
+    path: ../DotFeather/InputSystems/Input.cs
     startLine: 6
   assemblies:
   - DotFeather
@@ -60,11 +60,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Input.cs
+      path: DotFeather/InputSystems/Input.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Keyboard
-    path: ../DotFeather/Input.cs
+    path: ../DotFeather/InputSystems/Input.cs
     startLine: 11
   assemblies:
   - DotFeather
@@ -99,11 +99,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Input.cs
+      path: DotFeather/InputSystems/Input.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Mouse
-    path: ../DotFeather/Input.cs
+    path: ../DotFeather/InputSystems/Input.cs
     startLine: 17
   assemblies:
   - DotFeather

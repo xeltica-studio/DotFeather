@@ -6,9 +6,18 @@ items:
   parent: DotFeather
   children:
   - DotFeather.Vector.#ctor(System.Single,System.Single)
+  - DotFeather.Vector.Angle
+  - DotFeather.Vector.Angle(DotFeather.Vector)
+  - DotFeather.Vector.Angle(DotFeather.Vector,DotFeather.Vector)
+  - DotFeather.Vector.Distance(DotFeather.Vector)
+  - DotFeather.Vector.Distance(DotFeather.Vector,DotFeather.Vector)
+  - DotFeather.Vector.Down
   - DotFeather.Vector.Equals(DotFeather.Vector)
   - DotFeather.Vector.Equals(System.Object)
   - DotFeather.Vector.GetHashCode
+  - DotFeather.Vector.Left
+  - DotFeather.Vector.Magnitude
+  - DotFeather.Vector.Normalized
   - DotFeather.Vector.One
   - DotFeather.Vector.op_Addition(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.op_Division(DotFeather.Vector,DotFeather.Vector)
@@ -19,7 +28,9 @@ items:
   - DotFeather.Vector.op_Multiply(DotFeather.Vector,System.Single)
   - DotFeather.Vector.op_Subtraction(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.op_UnaryNegation(DotFeather.Vector)
+  - DotFeather.Vector.Right
   - DotFeather.Vector.ToString
+  - DotFeather.Vector.Up
   - DotFeather.Vector.X
   - DotFeather.Vector.Y
   - DotFeather.Vector.Zero
@@ -32,11 +43,11 @@ items:
   type: Struct
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Vector
-    path: ../DotFeather/Models/Vector.cs
+    path: ../DotFeather/Math/Vector.cs
     startLine: 6
   assemblies:
   - DotFeather
@@ -73,11 +84,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: X
-    path: ../DotFeather/Models/Vector.cs
+    path: ../DotFeather/Math/Vector.cs
     startLine: 11
   assemblies:
   - DotFeather
@@ -110,12 +121,12 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Y
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 15
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 16
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -134,6 +145,80 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: DotFeather.Vector.Magnitude
+  commentId: P:DotFeather.Vector.Magnitude
+  id: Magnitude
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Magnitude
+  nameWithType: Vector.Magnitude
+  fullName: DotFeather.Vector.Magnitude
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Magnitude
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 21
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nこのベクトルの長さを取得します。\n"
+  example: []
+  syntax:
+    content: public float Magnitude { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Magnitude As Single
+  overload: DotFeather.Vector.Magnitude*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotFeather.Vector.Normalized
+  commentId: P:DotFeather.Vector.Normalized
+  id: Normalized
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Normalized
+  nameWithType: Vector.Normalized
+  fullName: DotFeather.Vector.Normalized
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Normalized
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 26
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nこのベクトルと向きが等しい単位ベクトルを取得します。\n"
+  example: []
+  syntax:
+    content: public Vector Normalized { get; }
+    parameters: []
+    return:
+      type: DotFeather.Vector
+    content.vb: Public ReadOnly Property Normalized As Vector
+  overload: DotFeather.Vector.Normalized*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: DotFeather.Vector.#ctor(System.Single,System.Single)
   commentId: M:DotFeather.Vector.#ctor(System.Single,System.Single)
   id: '#ctor(System.Single,System.Single)'
@@ -147,12 +232,12 @@ items:
   type: Constructor
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 22
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 33
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -186,12 +271,12 @@ items:
   type: Operator
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Addition
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 29
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 40
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -227,12 +312,12 @@ items:
   type: Operator
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Subtraction
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 31
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 42
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -268,12 +353,12 @@ items:
   type: Operator
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Multiply
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 33
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 44
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -309,12 +394,12 @@ items:
   type: Operator
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Multiply
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 35
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 46
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -350,12 +435,12 @@ items:
   type: Operator
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Division
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 37
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 48
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -391,12 +476,12 @@ items:
   type: Operator
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Division
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 39
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 50
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -432,12 +517,12 @@ items:
   type: Operator
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_UnaryNegation
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 41
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 52
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -471,12 +556,12 @@ items:
   type: Operator
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Equality
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 45
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 56
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -512,12 +597,12 @@ items:
   type: Operator
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: op_Inequality
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 47
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 58
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -540,6 +625,89 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: DotFeather.Vector.Angle(DotFeather.Vector,DotFeather.Vector)
+  commentId: M:DotFeather.Vector.Angle(DotFeather.Vector,DotFeather.Vector)
+  id: Angle(DotFeather.Vector,DotFeather.Vector)
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Angle(Vector, Vector)
+  nameWithType: Vector.Angle(Vector, Vector)
+  fullName: DotFeather.Vector.Angle(DotFeather.Vector, DotFeather.Vector)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Angle
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 64
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n2ベクトル間の角を取得します。\n"
+  example: []
+  syntax:
+    content: public static float Angle(Vector from, Vector to)
+    parameters:
+    - id: from
+      type: DotFeather.Vector
+    - id: to
+      type: DotFeather.Vector
+    return:
+      type: System.Single
+      description: 2ベクトル間のラジアン。
+    content.vb: Public Shared Function Angle(from As Vector, to As Vector) As Single
+  overload: DotFeather.Vector.Angle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.Vector.Distance(DotFeather.Vector,DotFeather.Vector)
+  commentId: M:DotFeather.Vector.Distance(DotFeather.Vector,DotFeather.Vector)
+  id: Distance(DotFeather.Vector,DotFeather.Vector)
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Distance(Vector, Vector)
+  nameWithType: Vector.Distance(Vector, Vector)
+  fullName: DotFeather.Vector.Distance(DotFeather.Vector, DotFeather.Vector)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Distance
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 70
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n2ベクトル間の距離を取得します。\n"
+  example: []
+  syntax:
+    content: public static float Distance(Vector from, Vector to)
+    parameters:
+    - id: from
+      type: DotFeather.Vector
+    - id: to
+      type: DotFeather.Vector
+    return:
+      type: System.Single
+    content.vb: Public Shared Function Distance(from As Vector, to As Vector) As Single
+  overload: DotFeather.Vector.Distance*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: DotFeather.Vector.Equals(System.Object)
   commentId: M:DotFeather.Vector.Equals(System.Object)
   id: Equals(System.Object)
@@ -553,12 +721,12 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Equals
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 52
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 77
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -593,12 +761,12 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Equals
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 60
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 85
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -632,12 +800,12 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetHashCode
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 70
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 95
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -656,6 +824,114 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: DotFeather.Vector.Angle
+  commentId: M:DotFeather.Vector.Angle
+  id: Angle
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Angle()
+  nameWithType: Vector.Angle()
+  fullName: DotFeather.Vector.Angle()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Angle
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 106
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nこのベクトルの向きを取得します。\n"
+  example: []
+  syntax:
+    content: public float Angle()
+    return:
+      type: System.Single
+    content.vb: Public Function Angle As Single
+  overload: DotFeather.Vector.Angle*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Vector.Angle(DotFeather.Vector)
+  commentId: M:DotFeather.Vector.Angle(DotFeather.Vector)
+  id: Angle(DotFeather.Vector)
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Angle(Vector)
+  nameWithType: Vector.Angle(Vector)
+  fullName: DotFeather.Vector.Angle(DotFeather.Vector)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Angle
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 112
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nこのベクトルを基準とした、指定したベクトルの向きを取得します。\n"
+  example: []
+  syntax:
+    content: public float Angle(Vector to)
+    parameters:
+    - id: to
+      type: DotFeather.Vector
+    return:
+      type: System.Single
+    content.vb: Public Function Angle(to As Vector) As Single
+  overload: DotFeather.Vector.Angle*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Vector.Distance(DotFeather.Vector)
+  commentId: M:DotFeather.Vector.Distance(DotFeather.Vector)
+  id: Distance(DotFeather.Vector)
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Distance(Vector)
+  nameWithType: Vector.Distance(Vector)
+  fullName: DotFeather.Vector.Distance(DotFeather.Vector)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Distance
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 117
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n2ベクトル間の距離を取得します。\n"
+  example: []
+  syntax:
+    content: public float Distance(Vector to)
+    parameters:
+    - id: to
+      type: DotFeather.Vector
+    return:
+      type: System.Single
+    content.vb: Public Function Distance(to As Vector) As Single
+  overload: DotFeather.Vector.Distance*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: DotFeather.Vector.ToString
   commentId: M:DotFeather.Vector.ToString
   id: ToString
@@ -669,12 +945,12 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ToString
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 81
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 122
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -706,12 +982,12 @@ items:
   type: Field
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Zero
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 86
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 127
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -743,12 +1019,12 @@ items:
   type: Field
   source:
     remote:
-      path: DotFeather/Models/Vector.cs
+      path: DotFeather/Math/Vector.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: One
-    path: ../DotFeather/Models/Vector.cs
-    startLine: 91
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 132
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -759,6 +1035,154 @@ items:
     return:
       type: DotFeather.Vector
     content.vb: Public Shared ReadOnly One As Vector
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotFeather.Vector.Left
+  commentId: F:DotFeather.Vector.Left
+  id: Left
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: Vector.Left
+  fullName: DotFeather.Vector.Left
+  type: Field
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Left
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 137
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<code>new Vector(-1, 0)</code> を取得します。\n"
+  example: []
+  syntax:
+    content: public static readonly Vector Left
+    return:
+      type: DotFeather.Vector
+    content.vb: Public Shared ReadOnly Left As Vector
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotFeather.Vector.Up
+  commentId: F:DotFeather.Vector.Up
+  id: Up
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: Vector.Up
+  fullName: DotFeather.Vector.Up
+  type: Field
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Up
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 142
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<code>new Vector(0, -1)</code> を取得します。\n"
+  example: []
+  syntax:
+    content: public static readonly Vector Up
+    return:
+      type: DotFeather.Vector
+    content.vb: Public Shared ReadOnly Up As Vector
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotFeather.Vector.Right
+  commentId: F:DotFeather.Vector.Right
+  id: Right
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: Vector.Right
+  fullName: DotFeather.Vector.Right
+  type: Field
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Right
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 147
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<code>new Vector(1, 0)</code> を取得します。\n"
+  example: []
+  syntax:
+    content: public static readonly Vector Right
+    return:
+      type: DotFeather.Vector
+    content.vb: Public Shared ReadOnly Right As Vector
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotFeather.Vector.Down
+  commentId: F:DotFeather.Vector.Down
+  id: Down
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: Vector.Down
+  fullName: DotFeather.Vector.Down
+  type: Field
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Down
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 152
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n<code>new Vector(0, 1)</code> を取得します。\n"
+  example: []
+  syntax:
+    content: public static readonly Vector Down
+    return:
+      type: DotFeather.Vector
+    content.vb: Public Shared ReadOnly Down As Vector
   modifiers.csharp:
   - public
   - static
@@ -1029,6 +1453,16 @@ references:
   name: Y
   nameWithType: Vector.Y
   fullName: DotFeather.Vector.Y
+- uid: DotFeather.Vector.Magnitude*
+  commentId: Overload:DotFeather.Vector.Magnitude
+  name: Magnitude
+  nameWithType: Vector.Magnitude
+  fullName: DotFeather.Vector.Magnitude
+- uid: DotFeather.Vector.Normalized*
+  commentId: Overload:DotFeather.Vector.Normalized
+  name: Normalized
+  nameWithType: Vector.Normalized
+  fullName: DotFeather.Vector.Normalized
 - uid: DotFeather.Vector
   commentId: T:DotFeather.Vector
   parent: DotFeather
@@ -1082,6 +1516,16 @@ references:
   name: Inequality
   nameWithType: Vector.Inequality
   fullName: DotFeather.Vector.Inequality
+- uid: DotFeather.Vector.Angle*
+  commentId: Overload:DotFeather.Vector.Angle
+  name: Angle
+  nameWithType: Vector.Angle
+  fullName: DotFeather.Vector.Angle
+- uid: DotFeather.Vector.Distance*
+  commentId: Overload:DotFeather.Vector.Distance
+  name: Distance
+  nameWithType: Vector.Distance
+  fullName: DotFeather.Vector.Distance
 - uid: System.ValueType.Equals(System.Object)
   commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType

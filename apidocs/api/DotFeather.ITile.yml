@@ -16,11 +16,11 @@ items:
   type: Interface
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/ITile.cs
+      path: DotFeather/Graphics/Tiles/ITile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ITile
-    path: ../DotFeather/Drawable/Tiles/ITile.cs
+    path: ../DotFeather/Graphics/Tiles/ITile.cs
     startLine: 7
   assemblies:
   - DotFeather
@@ -49,11 +49,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/ITile.cs
+      path: DotFeather/Graphics/Tiles/ITile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
-    path: ../DotFeather/Drawable/Tiles/ITile.cs
+    path: ../DotFeather/Graphics/Tiles/ITile.cs
     startLine: 12
   assemblies:
   - DotFeather
@@ -89,11 +89,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Drawable/Tiles/ITile.cs
+      path: DotFeather/Graphics/Tiles/ITile.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
-    path: ../DotFeather/Drawable/Tiles/ITile.cs
+    path: ../DotFeather/Graphics/Tiles/ITile.cs
     startLine: 17
   assemblies:
   - DotFeather

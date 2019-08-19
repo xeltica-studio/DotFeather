@@ -10,6 +10,10 @@
     name: AudioPlayer
   - uid: DotFeather.Container
     name: Container
+  - uid: DotFeather.Coroutine
+    name: Coroutine
+  - uid: DotFeather.CoroutineRunner
+    name: CoroutineRunner
   - uid: DotFeather.DFEventArgs
     name: DFEventArgs
   - uid: DotFeather.DFKey
@@ -40,6 +44,8 @@
     name: ITile
   - uid: DotFeather.MiscUtility
     name: MiscUtility
+  - uid: DotFeather.NineSliceSprite
+    name: NineSliceSprite
   - uid: DotFeather.OpenTKManagedHandleBase`1
     name: OpenTKManagedHandleBase<T>
     name.vb: OpenTKManagedHandleBase(Of T)
@@ -49,8 +55,6 @@
     name: SpaceConverter
   - uid: DotFeather.Sprite
     name: Sprite
-  - uid: DotFeather.SystemDrawingTypesToGLConverterExtension
-    name: SystemDrawingTypesToGLConverterExtension
   - uid: DotFeather.TextDrawable
     name: TextDrawable
   - uid: DotFeather.Texture2D
@@ -65,9 +69,23 @@
     name: Tilemap
   - uid: DotFeather.Time
     name: Time
+  - uid: DotFeather.TypesConverterExtension
+    name: TypesConverterExtension
   - uid: DotFeather.Vector
     name: Vector
   - uid: DotFeather.VorbisAudioSource
     name: VorbisAudioSource
+  - uid: DotFeather.WaitForSeconds
+    name: WaitForSeconds
+  - uid: DotFeather.WaitUntil
+    name: WaitUntil
+  - uid: DotFeather.WaitUntilNextFrame
+    name: WaitUntilNextFrame
+  - uid: DotFeather.WaitWhile
+    name: WaitWhile
   - uid: DotFeather.WaveAudioSource
     name: WaveAudioSource
+  - uid: DotFeather.WindowMode
+    name: WindowMode
+  - uid: DotFeather.YieldInstruction
+    name: YieldInstruction

@@ -8,6 +8,8 @@ items:
   - DotFeather.ALSource
   - DotFeather.AudioPlayer
   - DotFeather.Container
+  - DotFeather.Coroutine
+  - DotFeather.CoroutineRunner
   - DotFeather.DFEventArgs
   - DotFeather.DFKey
   - DotFeather.DFKeyboard
@@ -23,11 +25,11 @@ items:
   - DotFeather.Input
   - DotFeather.ITile
   - DotFeather.MiscUtility
+  - DotFeather.NineSliceSprite
   - DotFeather.OpenTKManagedHandleBase`1
   - DotFeather.RandomExtension
   - DotFeather.SpaceConverter
   - DotFeather.Sprite
-  - DotFeather.SystemDrawingTypesToGLConverterExtension
   - DotFeather.TextDrawable
   - DotFeather.Texture2D
   - DotFeather.TextureDrawableBase
@@ -35,9 +37,16 @@ items:
   - DotFeather.Tile
   - DotFeather.Tilemap
   - DotFeather.Time
+  - DotFeather.TypesConverterExtension
   - DotFeather.Vector
   - DotFeather.VorbisAudioSource
+  - DotFeather.WaitForSeconds
+  - DotFeather.WaitUntil
+  - DotFeather.WaitUntilNextFrame
+  - DotFeather.WaitWhile
   - DotFeather.WaveAudioSource
+  - DotFeather.WindowMode
+  - DotFeather.YieldInstruction
   langs:
   - csharp
   - vb
@@ -69,24 +78,119 @@ references:
   name: WaveAudioSource
   nameWithType: WaveAudioSource
   fullName: DotFeather.WaveAudioSource
+- uid: DotFeather.Coroutine
+  commentId: T:DotFeather.Coroutine
+  parent: DotFeather
+  name: Coroutine
+  nameWithType: Coroutine
+  fullName: DotFeather.Coroutine
+- uid: DotFeather.CoroutineRunner
+  commentId: T:DotFeather.CoroutineRunner
+  name: CoroutineRunner
+  nameWithType: CoroutineRunner
+  fullName: DotFeather.CoroutineRunner
+- uid: DotFeather.WaitForSeconds
+  commentId: T:DotFeather.WaitForSeconds
+  name: WaitForSeconds
+  nameWithType: WaitForSeconds
+  fullName: DotFeather.WaitForSeconds
+- uid: DotFeather.WaitUntil
+  commentId: T:DotFeather.WaitUntil
+  name: WaitUntil
+  nameWithType: WaitUntil
+  fullName: DotFeather.WaitUntil
+- uid: DotFeather.WaitUntilNextFrame
+  commentId: T:DotFeather.WaitUntilNextFrame
+  name: WaitUntilNextFrame
+  nameWithType: WaitUntilNextFrame
+  fullName: DotFeather.WaitUntilNextFrame
+- uid: DotFeather.WaitWhile
+  commentId: T:DotFeather.WaitWhile
+  name: WaitWhile
+  nameWithType: WaitWhile
+  fullName: DotFeather.WaitWhile
+- uid: DotFeather.YieldInstruction
+  commentId: T:DotFeather.YieldInstruction
+  parent: DotFeather
+  name: YieldInstruction
+  nameWithType: YieldInstruction
+  fullName: DotFeather.YieldInstruction
+- uid: DotFeather.DFEventArgs
+  commentId: T:DotFeather.DFEventArgs
+  parent: DotFeather
+  name: DFEventArgs
+  nameWithType: DFEventArgs
+  fullName: DotFeather.DFEventArgs
+- uid: DotFeather.RandomExtension
+  commentId: T:DotFeather.RandomExtension
+  name: RandomExtension
+  nameWithType: RandomExtension
+  fullName: DotFeather.RandomExtension
+- uid: DotFeather.TypesConverterExtension
+  commentId: T:DotFeather.TypesConverterExtension
+  parent: DotFeather
+  name: TypesConverterExtension
+  nameWithType: TypesConverterExtension
+  fullName: DotFeather.TypesConverterExtension
+- uid: DotFeather.GameBase
+  commentId: T:DotFeather.GameBase
+  parent: DotFeather
+  name: GameBase
+  nameWithType: GameBase
+  fullName: DotFeather.GameBase
 - uid: DotFeather.Container
   commentId: T:DotFeather.Container
   parent: DotFeather
   name: Container
   nameWithType: Container
   fullName: DotFeather.Container
+- uid: DotFeather.Graphic
+  commentId: T:DotFeather.Graphic
+  parent: DotFeather
+  name: Graphic
+  nameWithType: Graphic
+  fullName: DotFeather.Graphic
 - uid: DotFeather.IDrawable
   commentId: T:DotFeather.IDrawable
   parent: DotFeather
   name: IDrawable
   nameWithType: IDrawable
   fullName: DotFeather.IDrawable
+- uid: DotFeather.NineSliceSprite
+  commentId: T:DotFeather.NineSliceSprite
+  parent: DotFeather
+  name: NineSliceSprite
+  nameWithType: NineSliceSprite
+  fullName: DotFeather.NineSliceSprite
+- uid: DotFeather.Sprite
+  commentId: T:DotFeather.Sprite
+  parent: DotFeather
+  name: Sprite
+  nameWithType: Sprite
+  fullName: DotFeather.Sprite
+- uid: DotFeather.TextDrawable
+  commentId: T:DotFeather.TextDrawable
+  name: TextDrawable
+  nameWithType: TextDrawable
+  fullName: DotFeather.TextDrawable
+- uid: DotFeather.Texture2D
+  commentId: T:DotFeather.Texture2D
+  parent: DotFeather
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: DotFeather.Texture2D
 - uid: DotFeather.TextureDrawableBase
   commentId: T:DotFeather.TextureDrawableBase
   parent: DotFeather
   name: TextureDrawableBase
   nameWithType: TextureDrawableBase
   fullName: DotFeather.TextureDrawableBase
+- uid: DotFeather.Tilemap
+  commentId: T:DotFeather.Tilemap
+  parent: DotFeather
+  name: Tilemap
+  nameWithType: Tilemap
+  fullName: DotFeather.Tilemap
 - uid: DotFeather.ITile
   commentId: T:DotFeather.ITile
   parent: DotFeather
@@ -99,29 +203,6 @@ references:
   name: Tile
   nameWithType: Tile
   fullName: DotFeather.Tile
-- uid: DotFeather.RandomExtension
-  commentId: T:DotFeather.RandomExtension
-  name: RandomExtension
-  nameWithType: RandomExtension
-  fullName: DotFeather.RandomExtension
-- uid: DotFeather.SystemDrawingTypesToGLConverterExtension
-  commentId: T:DotFeather.SystemDrawingTypesToGLConverterExtension
-  parent: DotFeather
-  name: SystemDrawingTypesToGLConverterExtension
-  nameWithType: SystemDrawingTypesToGLConverterExtension
-  fullName: DotFeather.SystemDrawingTypesToGLConverterExtension
-- uid: DotFeather.GameBase
-  commentId: T:DotFeather.GameBase
-  parent: DotFeather
-  name: GameBase
-  nameWithType: GameBase
-  fullName: DotFeather.GameBase
-- uid: DotFeather.Graphic
-  commentId: T:DotFeather.Graphic
-  parent: DotFeather
-  name: Graphic
-  nameWithType: Graphic
-  fullName: DotFeather.Graphic
 - uid: DotFeather.ALBuffer
   commentId: T:DotFeather.ALBuffer
   name: ALBuffer
@@ -194,11 +275,6 @@ references:
   name: TextureDrawer
   nameWithType: TextureDrawer
   fullName: DotFeather.TextureDrawer
-- uid: DotFeather.Input
-  commentId: T:DotFeather.Input
-  name: Input
-  nameWithType: Input
-  fullName: DotFeather.Input
 - uid: DotFeather.DFKey
   commentId: T:DotFeather.DFKey
   parent: DotFeather
@@ -217,58 +293,40 @@ references:
   name: DFKeyCode
   nameWithType: DFKeyCode
   fullName: DotFeather.DFKeyCode
-- uid: DotFeather.DFMouse
-  commentId: T:DotFeather.DFMouse
-  parent: DotFeather
-  name: DFMouse
-  nameWithType: DFMouse
-  fullName: DotFeather.DFMouse
-- uid: DotFeather.DFEventArgs
-  commentId: T:DotFeather.DFEventArgs
-  parent: DotFeather
-  name: DFEventArgs
-  nameWithType: DFEventArgs
-  fullName: DotFeather.DFEventArgs
 - uid: DotFeather.DFKeyEventArgs
   commentId: T:DotFeather.DFKeyEventArgs
   parent: DotFeather
   name: DFKeyEventArgs
   nameWithType: DFKeyEventArgs
   fullName: DotFeather.DFKeyEventArgs
-- uid: DotFeather.Texture2D
-  commentId: T:DotFeather.Texture2D
+- uid: DotFeather.DFMouse
+  commentId: T:DotFeather.DFMouse
   parent: DotFeather
-  name: Texture2D
-  nameWithType: Texture2D
-  fullName: DotFeather.Texture2D
+  name: DFMouse
+  nameWithType: DFMouse
+  fullName: DotFeather.DFMouse
+- uid: DotFeather.Input
+  commentId: T:DotFeather.Input
+  name: Input
+  nameWithType: Input
+  fullName: DotFeather.Input
 - uid: DotFeather.Vector
   commentId: T:DotFeather.Vector
   parent: DotFeather
   name: Vector
   nameWithType: Vector
   fullName: DotFeather.Vector
-- uid: DotFeather.Sprite
-  commentId: T:DotFeather.Sprite
-  parent: DotFeather
-  name: Sprite
-  nameWithType: Sprite
-  fullName: DotFeather.Sprite
-- uid: DotFeather.TextDrawable
-  commentId: T:DotFeather.TextDrawable
-  name: TextDrawable
-  nameWithType: TextDrawable
-  fullName: DotFeather.TextDrawable
-- uid: DotFeather.Tilemap
-  commentId: T:DotFeather.Tilemap
-  parent: DotFeather
-  name: Tilemap
-  nameWithType: Tilemap
-  fullName: DotFeather.Tilemap
 - uid: DotFeather.Time
   commentId: T:DotFeather.Time
   name: Time
   nameWithType: Time
   fullName: DotFeather.Time
+- uid: DotFeather.WindowMode
+  commentId: T:DotFeather.WindowMode
+  parent: DotFeather
+  name: WindowMode
+  nameWithType: WindowMode
+  fullName: DotFeather.WindowMode
 - uid: DotFeather
   commentId: N:DotFeather
   name: DotFeather

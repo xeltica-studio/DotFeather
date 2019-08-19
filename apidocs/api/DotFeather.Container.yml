@@ -35,11 +35,11 @@ items:
   type: Class
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Container
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 9
   assemblies:
   - DotFeather
@@ -86,11 +86,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 14
   assemblies:
   - DotFeather
@@ -125,11 +125,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Name
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 19
   assemblies:
   - DotFeather
@@ -164,11 +164,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Location
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 24
   assemblies:
   - DotFeather
@@ -203,11 +203,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Angle
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 29
   assemblies:
   - DotFeather
@@ -242,11 +242,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Scale
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 34
   assemblies:
   - DotFeather
@@ -281,11 +281,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: this[]
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 41
   assemblies:
   - DotFeather
@@ -327,11 +327,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Sort
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 50
   assemblies:
   - DotFeather
@@ -359,11 +359,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Add
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 57
   assemblies:
   - DotFeather
@@ -397,11 +397,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Insert
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 68
   assemblies:
   - DotFeather
@@ -438,11 +438,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Draw
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 77
   assemblies:
   - DotFeather
@@ -477,11 +477,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 100
   assemblies:
   - DotFeather
@@ -511,11 +511,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 105
   assemblies:
   - DotFeather
@@ -547,11 +547,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: IndexOf
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 111
   assemblies:
   - DotFeather
@@ -586,11 +586,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: RemoveAt
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 116
   assemblies:
   - DotFeather
@@ -623,11 +623,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Clear
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 121
   assemblies:
   - DotFeather
@@ -657,11 +657,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Contains
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 130
   assemblies:
   - DotFeather
@@ -696,11 +696,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: CopyTo
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 135
   assemblies:
   - DotFeather
@@ -738,11 +738,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Remove
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 140
   assemblies:
   - DotFeather
@@ -778,11 +778,11 @@ items:
   type: Method
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.IEnumerable.GetEnumerator
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 145
   assemblies:
   - DotFeather
@@ -812,11 +812,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: Count
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 150
   assemblies:
   - DotFeather
@@ -851,11 +851,11 @@ items:
   type: Property
   source:
     remote:
-      path: DotFeather/Container.cs
+      path: DotFeather/Graphics/Container.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
     id: IsReadOnly
-    path: ../DotFeather/Container.cs
+    path: ../DotFeather/Graphics/Container.cs
     startLine: 155
   assemblies:
   - DotFeather

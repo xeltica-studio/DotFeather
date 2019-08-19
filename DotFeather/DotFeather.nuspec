@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>DotFeather</id>
-		<version>1.2.1</version>
+		<version>1.3.0</version>
 		<title>DotFeather</title>
 		<authors>Xeltica</authors>
 		<owners>Xeltica</owners>
@@ -13,8 +13,20 @@
 		<tags>GameEngine</tags>
 				<license type="expression">MIT</license>
 		<releaseNotes>
-		1.2.1:
-			+ Improve WaveAudioSource: Now supports extended fmt chunk
+			+ Add Coroutine API
+			+ Add 9-slice sprite
+			+ Add Vector.Magnitude
+			+ Add Vector.Normalized
+			+ Add Vector.Angle()
+			+ Add Vector.Distance()
+			+ Add properties of button pressed and released to Input.Mouse
+			+ Add GameBase.WindowMode to switch window frame
+			+ Add GameBase.IsFullScreen property to use fullscreen
+			+ Add GameBase.IsFocused to check whether the window is top level
+			+ Add Texture2D.CreateSolid() to generate solid color texture
+			+ Support sprites' alpha blending
+			+ Update OpenTK Package
+			+ Update Microsoft.Windows.Compatibility Package
 	</releaseNotes>
 	<dependencies>
 		<dependency id="OpenTK.NetStandard" version="1.0.4" />

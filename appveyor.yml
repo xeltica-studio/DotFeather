@@ -1,4 +1,4 @@
-version: 1.2.1.{build}
+version: 1.3.0.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -42,8 +42,37 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    + Improve WaveAudioSource
-      + Now support extended fmt chunk
+    + コルーチン API の追加
+    + 9スライススプライトの追加
+    + Add Vector.Magnitude
+    + Add Vector.Normalized
+    + Add Vector.Angle()
+    + Add Vector.Distance()
+    + Input.Mouse にマウスボタンの押した瞬間、離した瞬間を取得するAPIを追加
+    + GameBase.WindowMode を追加し、ウィンドウフレームを切り替えられるように
+    + GameBase.IsFullScreen プロパティを追加し、フルスクリーン化できるように
+    + GameBase.IsFocused を追加し、ウィンドウが前面にあるか確認できるように
+    + Texture2D.CreateSolid() メソッドを追加し、単色テクスチャを作成できるように
+    + スプライトのアルファブレンドをサポート
+    + OpenTK パッケージの更新
+    + Microsoft.Windows.Compatibility パッケージの更新
+    
+    ----
+
+    + Add Coroutine API
+    + Add 9-slice sprite
+    + Add Vector.Magnitude
+    + Add Vector.Normalized
+    + Add Vector.Angle()
+    + Add Vector.Distance()
+    + Add properties of button pressed and released to Input.Mouse
+    + Add GameBase.WindowMode to switch window frame
+    + Add GameBase.IsFullScreen property to use fullscreen
+    + Add GameBase.IsFocused to check whether the window is top level
+    + Add Texture2D.CreateSolid() to generate solid color texture
+    + Support sprites' alpha blending
+    + Update OpenTK Package
+    + Update Microsoft.Windows.Compatibility Package
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

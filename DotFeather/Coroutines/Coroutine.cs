@@ -6,14 +6,14 @@ namespace DotFeather
 	/// <summary>
 	/// コルーチンを表します。
 	/// </summary>
-    public class Coroutine : YieldInstruction
-    {
+	public class Coroutine : YieldInstruction
+	{
 		/// <summary>
 		/// コルーチンが実行中であるかどうかを取得します。
 		/// </summary>
 		public bool IsRunning { get; }
 		
-        public override bool KeepWaiting => IsRunning;
+		public override bool KeepWaiting => IsRunning;
 
 		/// <summary>
 		/// 終了後に実行するコールバックを取得します。
@@ -55,5 +55,5 @@ namespace DotFeather
 		}
 
 		IEnumerator coroutine;
-    }
+	}
 }

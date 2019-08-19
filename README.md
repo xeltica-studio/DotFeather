@@ -20,12 +20,12 @@ DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET St
 ### In Planning
 
 - Linux/X11 Support (I have to fix bug to run DotFeahter on Linux.)
-  - for iOS / Android
+	- for iOS / Android
 - OpenGL ES 2.0 (Using OpenTK)
 - DirectX 9.0 (Using DXLib)
-  - It'll only works on Windows
+	- It'll only works on Windows
 - Metal2 (Using Xamarin.iOS and Xamarin.Mac)
-  - It'll only works on iOS & macOS
+	- It'll only works on iOS & macOS
 
 ## To Build
 
@@ -39,21 +39,21 @@ dotnet build
 ## Features
 
 - Lightweight processing
-  - It can display 10000 sprites at 60fps [<sup>*1</sup>](#f1)
+	- It can display 10000 sprites at 60fps [<sup>*1</sup>](#f1)
 - 2D-specified Graphics System
-  - Sprite - Display textures on the screen
-  - Tilemap - Map textures on the grid
-  - Graphic - Draw lines, rectangles etc
-  - Container - An object which can contain other drawables
-  - Text - An object which can draw text
-  - 9-slice Sprite - A special sprite to split into 9 sheets to resize smoothly
+	- Sprite - Display textures on the screen
+	- Tilemap - Map textures on the grid
+	- Graphic - Draw lines, rectangles etc
+	- Container - An object which can contain other drawables
+	- Text - An object which can draw text
+	- 9-slice Sprite - A special sprite to split into 9 sheets to resize smoothly
 - Keyboard Input
 - Mouse Input
 - Playing music
 - Playing SFX
 - High Extensibility
-  - Add original rendering method
-  - Add original audio processor
+	- Add original rendering method
+	- Add original audio processor
 
 ----
 

@@ -1,4 +1,4 @@
-﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
+#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 using System;
 using System.Drawing;
 using OpenTK.Graphics.OpenGL;
@@ -19,7 +19,7 @@ namespace DotFeather
 			var hh = game.Height / 2;
 
 			var w = width ?? texture.Size.Width;
-            var h = height ?? texture.Size.Height;
+	var h = height ?? texture.Size.Height;
 
 			w *= scale.X;
 			h *= scale.Y;
@@ -52,13 +52,13 @@ namespace DotFeather
 			GL.Enable(EnableCap.Texture2D);
 			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
 
-            using (new GLContext(PrimitiveType.Quads))
+	using (new GLContext(PrimitiveType.Quads))
 			{
 				Vertex(1, 1, verts[3], color);
 				Vertex(0, 1, verts[2], color);
 				Vertex(0, 0, verts[0], color);
 				Vertex(1, 0, verts[1], color);
-            }
+	}
 			
 			GL.Disable(EnableCap.Texture2D);
 			GL.Disable(EnableCap.Blend);

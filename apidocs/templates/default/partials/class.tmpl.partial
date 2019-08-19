@@ -7,12 +7,12 @@
 {{^_disableContribution}}
 {{#docurl}}
 <span class="small pull-right mobile-hide">
-  <span class="divider">|</span>
-  <a href="{{docurl}}">{{__global.improveThisDoc}}</a>
+	<span class="divider">|</span>
+	<a href="{{docurl}}">{{__global.improveThisDoc}}</a>
 </span>{{/docurl}}
 {{#sourceurl}}
 <span class="small pull-right mobile-hide">
-  <a href="{{sourceurl}}">{{__global.viewSource}}</a>
+	<a href="{{sourceurl}}">{{__global.viewSource}}</a>
 </span>{{/sourceurl}}
 {{/_disableContribution}}
 {{#overload}}
@@ -24,118 +24,118 @@
 <h5 class="decalaration">{{__global.declaration}}</h5>
 {{#syntax}}
 <div class="codewrapper">
-  <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
+	<pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
 </div>
 {{#parameters.0}}
 <h5 class="parameters">{{__global.parameters}}</h5>
 <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.name}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
+	<thead>
+		<tr>
+			<th>{{__global.type}}</th>
+			<th>{{__global.name}}</th>
+			<th>{{__global.description}}</th>
+		</tr>
+	</thead>
+	<tbody>
 {{/parameters.0}}
 {{#parameters}}
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td><span class="parametername">{{{id}}}</span></td>
-      <td>{{{description}}}</td>
-    </tr>
+		<tr>
+			<td>{{{type.specName.0.value}}}</td>
+			<td><span class="parametername">{{{id}}}</span></td>
+			<td>{{{description}}}</td>
+		</tr>
 {{/parameters}}
 {{#parameters.0}}
-  </tbody>
+	</tbody>
 </table>
 {{/parameters.0}}
 {{#return}}
 <h5 class="returns">{{__global.returns}}</h5>
 <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td>{{{description}}}</td>
-    </tr>
-  </tbody>
+	<thead>
+		<tr>
+			<th>{{__global.type}}</th>
+			<th>{{__global.description}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{{type.specName.0.value}}}</td>
+			<td>{{{description}}}</td>
+		</tr>
+	</tbody>
 </table>
 {{/return}}
 {{#typeParameters.0}}
 <h5 class="typeParameters">{{__global.typeParameters}}</h5>
 <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.name}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
+	<thead>
+		<tr>
+			<th>{{__global.name}}</th>
+			<th>{{__global.description}}</th>
+		</tr>
+	</thead>
+	<tbody>
 {{/typeParameters.0}}
 {{#typeParameters}}
-    <tr>
-      <td><span class="parametername">{{{id}}}</span></td>
-      <td>{{{description}}}</td>
-    </tr>
+		<tr>
+			<td><span class="parametername">{{{id}}}</span></td>
+			<td>{{{description}}}</td>
+		</tr>
 {{/typeParameters}}
 {{#typeParameters.0}}
-  </tbody>
+	</tbody>
 </table>
 {{/typeParameters.0}}
 {{#fieldValue}}
 <h5 class="fieldValue">{{__global.fieldValue}}</h5>
 <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td>{{{description}}}</td>
-    </tr>
-  </tbody>
+	<thead>
+		<tr>
+			<th>{{__global.type}}</th>
+			<th>{{__global.description}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{{type.specName.0.value}}}</td>
+			<td>{{{description}}}</td>
+		</tr>
+	</tbody>
 </table>
 {{/fieldValue}}
 {{#propertyValue}}
 <h5 class="propertyValue">{{__global.propertyValue}}</h5>
 <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td>{{{description}}}</td>
-    </tr>
-  </tbody>
+	<thead>
+		<tr>
+			<th>{{__global.type}}</th>
+			<th>{{__global.description}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{{type.specName.0.value}}}</td>
+			<td>{{{description}}}</td>
+		</tr>
+	</tbody>
 </table>
 {{/propertyValue}}
 {{#eventType}}
 <h5 class="eventType">{{__global.eventType}}</h5>
 <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td>{{{description}}}</td>
-    </tr>
-  </tbody>
+	<thead>
+		<tr>
+			<th>{{__global.type}}</th>
+			<th>{{__global.description}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{{type.specName.0.value}}}</td>
+			<td>{{{description}}}</td>
+		</tr>
+	</tbody>
 </table>
 {{/eventType}}
 {{/syntax}}
@@ -156,22 +156,22 @@
 {{#exceptions.0}}
 <h5 class="exceptions">{{__global.exceptions}}</h5>
 <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.condition}}</th>
-    </tr>
-  </thead>
-  <tbody>
+	<thead>
+		<tr>
+			<th>{{__global.type}}</th>
+			<th>{{__global.condition}}</th>
+		</tr>
+	</thead>
+	<tbody>
 {{/exceptions.0}}
 {{#exceptions}}
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td>{{{description}}}</td>
-    </tr>
+		<tr>
+			<td>{{{type.specName.0.value}}}</td>
+			<td>{{{description}}}</td>
+		</tr>
 {{/exceptions}}
 {{#exceptions.0}}
-  </tbody>
+	</tbody>
 </table>
 {{/exceptions.0}}
 {{#seealso.0}}
@@ -179,12 +179,12 @@
 <div class="seealso">
 {{/seealso.0}}
 {{#seealso}}
-  {{#isCref}}
-    <div>{{{type.specName.0.value}}}</div>
-  {{/isCref}}
-  {{^isCref}}
-    <div>{{{url}}}</div>
-  {{/isCref}}
+	{{#isCref}}
+		<div>{{{type.specName.0.value}}}</div>
+	{{/isCref}}
+	{{^isCref}}
+		<div>{{{url}}}</div>
+	{{/isCref}}
 {{/seealso}}
 {{#seealso.0}}
 </div>
@@ -196,12 +196,12 @@
 {{/implements.0}}
 {{#implements}}
 <div>
-  {{#definition}}
-    <xref uid="{{definition}}" altProperty="fullName" displayProperty="nameWithType"/>
-  {{/definition}}
-  {{^definition}}
-    <xref uid="{{uid}}" altProperty="fullName" displayProperty="nameWithType"/>
-  {{/definition}}
+	{{#definition}}
+		<xref uid="{{definition}}" altProperty="fullName" displayProperty="nameWithType"/>
+	{{/definition}}
+	{{^definition}}
+		<xref uid="{{uid}}" altProperty="fullName" displayProperty="nameWithType"/>
+	{{/definition}}
 </div>
 {{/implements}}
 {{#extensionMethods.0}}
@@ -209,12 +209,12 @@
 {{/extensionMethods.0}}
 {{#extensionMethods}}
 <div>
-  {{#definition}}
-    <xref uid="{{definition}}" altProperty="fullName" displayProperty="nameWithType"/>
-  {{/definition}}
-  {{^definition}}
-    <xref uid="{{uid}}" altProperty="fullName" displayProperty="nameWithType"/>
-  {{/definition}}
+	{{#definition}}
+		<xref uid="{{definition}}" altProperty="fullName" displayProperty="nameWithType"/>
+	{{/definition}}
+	{{^definition}}
+		<xref uid="{{uid}}" altProperty="fullName" displayProperty="nameWithType"/>
+	{{/definition}}
 </div>
 {{/extensionMethods}}
 {{#seealso.0}}
@@ -222,12 +222,12 @@
 <div class="seealso">
 {{/seealso.0}}
 {{#seealso}}
-  {{#isCref}}
-    <div>{{{type.specName.0.value}}}</div>
-  {{/isCref}}
-  {{^isCref}}
-    <div>{{{url}}}</div>
-  {{/isCref}}
+	{{#isCref}}
+		<div>{{{type.specName.0.value}}}</div>
+	{{/isCref}}
+	{{^isCref}}
+		<div>{{{url}}}</div>
+	{{/isCref}}
 {{/seealso}}
 {{#seealso.0}}
 </div>

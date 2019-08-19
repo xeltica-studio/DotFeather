@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -76,18 +76,18 @@ namespace DotFeather
 		/// 描画を開始します。
 		/// </summary>
 		public void Draw(GameBase game, Vector location)
-        {
-            for (var i = this.Count - 1; i >= 0; i--)
+	{
+	for (var i = this.Count - 1; i >= 0; i--)
 			{
 				if (this.Count - 1 < i)
 					continue;
 				// 位置を調整
-                var baseLoc = this[i].Location;
+		var baseLoc = this[i].Location;
 				var baseScale = this[i].Scale;
 				this[i].Scale *= Scale;
 				this[i].Location *= Scale;
 
-                this[i].Draw(game, Location + location);
+		this[i].Draw(game, Location + location);
 
 				// 戻す
 				this[i].Scale = baseScale;
@@ -100,10 +100,10 @@ namespace DotFeather
 		/// </summary>
 		public void Destroy() => Clear();
 
-        /// <summary>
-        /// 列挙子を取得します。
-        /// </summary>
-        public IEnumerator<IDrawable> GetEnumerator() => Children.GetEnumerator();
+	/// <summary>
+	/// 列挙子を取得します。
+	/// </summary>
+	public IEnumerator<IDrawable> GetEnumerator() => Children.GetEnumerator();
 
 		#region other inherited members
 		/// <summary>

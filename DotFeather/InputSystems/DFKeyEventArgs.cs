@@ -2,10 +2,10 @@ using System;
 
 namespace DotFeather
 {
-    /// <summary>
-    /// キーボードイベントの引数です。
-    /// </summary>
-    public class DFKeyEventArgs : EventArgs
+	/// <summary>
+	/// キーボードイベントの引数です。
+	/// </summary>
+	public class DFKeyEventArgs : EventArgs
 	{
 		/// <summary>
 		/// 押されたキーを取得します。
@@ -19,17 +19,17 @@ namespace DotFeather
 		/// <value>Alt キーが押された場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
 		public bool AltPressed { get; }
 
-        /// <summary>
-        /// Ctrl キーが押されたかどうかを示す値を取得します。
-        /// </summary>
-        /// <value>Ctrl キーが押された場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
-        public bool CtrlPressed { get; }
+		/// <summary>
+		/// Ctrl キーが押されたかどうかを示す値を取得します。
+		/// </summary>
+		/// <value>Ctrl キーが押された場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
+		public bool CtrlPressed { get; }
 
-        /// <summary>
-        /// Shift キーが押されたかどうかを示す値を取得します。
-        /// </summary>
-        /// <value>Shift キーが押された場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
-        public bool ShiftPressed { get; }
+		/// <summary>
+		/// Shift キーが押されたかどうかを示す値を取得します。
+		/// </summary>
+		/// <value>Shift キーが押された場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
+		public bool ShiftPressed { get; }
 
 		internal DFKeyEventArgs(OpenTK.Input.KeyboardKeyEventArgs e)
 		{

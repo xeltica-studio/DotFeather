@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace DotFeather
 {
 	/// <summary>
@@ -43,12 +43,12 @@ namespace DotFeather
 		public static Vector operator -(Vector v1, Vector v2) => new Vector(v1.X - v2.X, v1.Y - v2.Y);
 		/// <summary></summary>
 		public static Vector operator *(Vector v1, float v2) => new Vector(v1.X * v2, v1.Y * v2);
-        /// <summary></summary>
-        public static Vector operator *(Vector v1, Vector v2) => new Vector(v1.X * v2.X, v1.Y * v2.Y);
+	/// <summary></summary>
+	public static Vector operator *(Vector v1, Vector v2) => new Vector(v1.X * v2.X, v1.Y * v2.Y);
 		/// <summary></summary>
 		public static Vector operator /(Vector v1, float v2) => new Vector(v1.X / v2, v1.Y / v2);
-        /// <summary></summary>
-        public static Vector operator /(Vector v1, Vector v2) => new Vector(v1.X / v2.X, v1.Y / v2.Y);
+	/// <summary></summary>
+	public static Vector operator /(Vector v1, Vector v2) => new Vector(v1.X / v2.X, v1.Y / v2.Y);
 		/// <summary></summary>
 		public static Vector operator -(Vector v1) => new Vector(-v1.X, -v1.Y);
 
@@ -86,7 +86,7 @@ namespace DotFeather
 		public bool Equals(Vector other)
 		{
 			return X == other.X &&
-				   Y == other.Y;
+				Y == other.Y;
 #pragma warning restore RECS0018
 		}
 

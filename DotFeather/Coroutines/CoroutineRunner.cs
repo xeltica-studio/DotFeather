@@ -8,7 +8,7 @@ namespace DotFeather
 	/// <summary>
 	/// コルーチンを管理する静的クラスです。
 	/// </summary>
-    public static class CoroutineRunner
+	public static class CoroutineRunner
 	{
 		/// <summary>
 		/// コルーチンを開始します。

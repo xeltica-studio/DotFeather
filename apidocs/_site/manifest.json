@@ -1,522 +1,522 @@
 {
-  "homepages": [],
-  "source_base_path": "/Users/xeltica/Repos/DotFeather/apidocs",
-  "xrefmap": "xrefmap.yml",
-  "files": [
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.ALBuffer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.ALBuffer.html",
-          "hash": "INOFHF4kXWuUXYNgJFKtuA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.ALSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.ALSource.html",
-          "hash": "zBcJMZwlM3PQ7L7fx3dz0w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.AudioPlayer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.AudioPlayer.html",
-          "hash": "8AgvkrMNqP9AJnpohgWv8Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.Container.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.Container.html",
-          "hash": "oU/bwHDsFPTmZzX7CfXnmg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.DFEventArgs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.DFEventArgs.html",
-          "hash": "NOUF5qDo37m90z5JiwgCTQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.DFKey.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.DFKey.html",
-          "hash": "2Tg+3A2pXMgLQzHP8cjuzg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.DFKeyCode.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.DFKeyCode.html",
-          "hash": "mlzEXJICP3wplCKAVbRTAA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.DFKeyEventArgs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.DFKeyEventArgs.html",
-          "hash": "lZqEQf/7vMYinlau+Fqz0Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.DFKeyboard.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.DFKeyboard.html",
-          "hash": "7H36tml32YEzICFySth9WA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.DFMath.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.DFMath.html",
-          "hash": "A1y6JhDFGsXCOEjnr0Ynyg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.DFMouse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.DFMouse.html",
-          "hash": "EcR6iOLYbpkvhRlyYw7XWA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.GLContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.GLContext.html",
-          "hash": "BsVyuI2gCaku75bmNxWnPw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.GameBase.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.GameBase.html",
-          "hash": "ZrfKK6S4EZxO7lzkwVSEWA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.Graphic.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.Graphic.html",
-          "hash": "JF95Gnb3SoZsI50Kv77wqg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.IAudioSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.IAudioSource.html",
-          "hash": "Nks0sD5usQKdjsp+hzUbGQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.IDrawable.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.IDrawable.html",
-          "hash": "g3xuv7tjzywDghRc0WPd9A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.ITile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.ITile.html",
-          "hash": "o2T1gBznrUJZcZZyONo4IA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.Input.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.Input.html",
-          "hash": "vRGE3KV5UhbYAGARYC2i5Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.MiscUtility.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.MiscUtility.html",
-          "hash": "zTOV4XeKsFTz8tOu+5r4DQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.OpenTKManagedHandleBase-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.OpenTKManagedHandleBase-1.html",
-          "hash": "AiOpzxdZcfOrLfLIVIkgSg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.RandomExtension.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.RandomExtension.html",
-          "hash": "qSzRzL0SfXCdDvODlFyedw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.SpaceConverter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.SpaceConverter.html",
-          "hash": "8s/DtGxbgBVpmM1BWTjW+A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.Sprite.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.Sprite.html",
-          "hash": "wnSIph45DevTYZZVmZkHyg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.SystemDrawingTypesToGLConverterExtension.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.SystemDrawingTypesToGLConverterExtension.html",
-          "hash": "2/QmsrTDS0bb0D/QZqxCWw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.TextDrawable.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.TextDrawable.html",
-          "hash": "j7zO6MBUxS+c6g+HdpI4Nw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.Texture2D.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.Texture2D.html",
-          "hash": "zDR2axzz/Go8zGgpzfiHZQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.TextureDrawableBase.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.TextureDrawableBase.html",
-          "hash": "gTCqG2Fzx/E5f47cHx+9IQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.TextureDrawer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.TextureDrawer.html",
-          "hash": "MYt3WWHf9lQKmiiOZd4XpQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.Tile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.Tile.html",
-          "hash": "Zf120KbTZUhdjobe3duWMQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.Tilemap.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.Tilemap.html",
-          "hash": "NjH0foReVcCvTz0goCVc5g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.Time.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.Time.html",
-          "hash": "rLMFYpy7dpWoljtxSdVzxA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.Vector.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.Vector.html",
-          "hash": "VN1nSkR2eAibfBrUszs6bg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.VorbisAudioSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.VorbisAudioSource.html",
-          "hash": "1WBoo116NdRKZsxnaQZ4GQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.WaveAudioSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.WaveAudioSource.html",
-          "hash": "DVTQk7FpJG+8vY3Kjzo5bQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotFeather.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotFeather.html",
-          "hash": "vAzgAWOOGEcBctOsdMudLg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "api/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/index.html",
-          "hash": "tWo8t7xQrSu9Zh8YjFCc5w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "KbT7aNQrm7GYpMAxS8OGlA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "index.md",
-      "output": {
-        ".html": {
-          "relative_path": "index.html",
-          "hash": "hiy1dx4DOJpqeglCkIszcg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "toc.html",
-          "hash": "vtZtmIElW2xgl0b/W0Fd4g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    }
-  ],
-  "incremental_info": [
-    {
-      "status": {
-        "can_incremental": true,
-        "incrementalPhase": "build",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 2
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 35,
-          "skipped_file_count": 23
-        }
-      }
-    },
-    {
-      "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
-        "incrementalPhase": "postProcessing",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {}
-    }
-  ],
-  "version_info": {},
-  "groups": [
-    {
-      "xrefmap": "xrefmap.yml"
-    }
-  ]
+	"homepages": [],
+	"source_base_path": "/Users/xeltica/Repos/DotFeather/apidocs",
+	"xrefmap": "xrefmap.yml",
+	"files": [
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.ALBuffer.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.ALBuffer.html",
+					"hash": "INOFHF4kXWuUXYNgJFKtuA=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.ALSource.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.ALSource.html",
+					"hash": "zBcJMZwlM3PQ7L7fx3dz0w=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.AudioPlayer.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.AudioPlayer.html",
+					"hash": "8AgvkrMNqP9AJnpohgWv8Q=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.Container.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.Container.html",
+					"hash": "oU/bwHDsFPTmZzX7CfXnmg=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.DFEventArgs.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.DFEventArgs.html",
+					"hash": "NOUF5qDo37m90z5JiwgCTQ=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.DFKey.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.DFKey.html",
+					"hash": "2Tg+3A2pXMgLQzHP8cjuzg=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.DFKeyCode.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.DFKeyCode.html",
+					"hash": "mlzEXJICP3wplCKAVbRTAA=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.DFKeyEventArgs.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.DFKeyEventArgs.html",
+					"hash": "lZqEQf/7vMYinlau+Fqz0Q=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.DFKeyboard.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.DFKeyboard.html",
+					"hash": "7H36tml32YEzICFySth9WA=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.DFMath.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.DFMath.html",
+					"hash": "A1y6JhDFGsXCOEjnr0Ynyg=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.DFMouse.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.DFMouse.html",
+					"hash": "EcR6iOLYbpkvhRlyYw7XWA=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.GLContext.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.GLContext.html",
+					"hash": "BsVyuI2gCaku75bmNxWnPw=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.GameBase.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.GameBase.html",
+					"hash": "ZrfKK6S4EZxO7lzkwVSEWA=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.Graphic.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.Graphic.html",
+					"hash": "JF95Gnb3SoZsI50Kv77wqg=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.IAudioSource.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.IAudioSource.html",
+					"hash": "Nks0sD5usQKdjsp+hzUbGQ=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.IDrawable.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.IDrawable.html",
+					"hash": "g3xuv7tjzywDghRc0WPd9A=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.ITile.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.ITile.html",
+					"hash": "o2T1gBznrUJZcZZyONo4IA=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.Input.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.Input.html",
+					"hash": "vRGE3KV5UhbYAGARYC2i5Q=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.MiscUtility.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.MiscUtility.html",
+					"hash": "zTOV4XeKsFTz8tOu+5r4DQ=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.OpenTKManagedHandleBase-1.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.OpenTKManagedHandleBase-1.html",
+					"hash": "AiOpzxdZcfOrLfLIVIkgSg=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.RandomExtension.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.RandomExtension.html",
+					"hash": "qSzRzL0SfXCdDvODlFyedw=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.SpaceConverter.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.SpaceConverter.html",
+					"hash": "8s/DtGxbgBVpmM1BWTjW+A=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.Sprite.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.Sprite.html",
+					"hash": "wnSIph45DevTYZZVmZkHyg=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.SystemDrawingTypesToGLConverterExtension.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.SystemDrawingTypesToGLConverterExtension.html",
+					"hash": "2/QmsrTDS0bb0D/QZqxCWw=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.TextDrawable.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.TextDrawable.html",
+					"hash": "j7zO6MBUxS+c6g+HdpI4Nw=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.Texture2D.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.Texture2D.html",
+					"hash": "zDR2axzz/Go8zGgpzfiHZQ=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.TextureDrawableBase.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.TextureDrawableBase.html",
+					"hash": "gTCqG2Fzx/E5f47cHx+9IQ=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.TextureDrawer.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.TextureDrawer.html",
+					"hash": "MYt3WWHf9lQKmiiOZd4XpQ=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.Tile.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.Tile.html",
+					"hash": "Zf120KbTZUhdjobe3duWMQ=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.Tilemap.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.Tilemap.html",
+					"hash": "NjH0foReVcCvTz0goCVc5g=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.Time.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.Time.html",
+					"hash": "rLMFYpy7dpWoljtxSdVzxA=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.Vector.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.Vector.html",
+					"hash": "VN1nSkR2eAibfBrUszs6bg=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.VorbisAudioSource.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.VorbisAudioSource.html",
+					"hash": "1WBoo116NdRKZsxnaQZ4GQ=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.WaveAudioSource.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.WaveAudioSource.html",
+					"hash": "DVTQk7FpJG+8vY3Kjzo5bQ=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "ManagedReference",
+			"source_relative_path": "api/DotFeather.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/DotFeather.html",
+					"hash": "vAzgAWOOGEcBctOsdMudLg=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "Conceptual",
+			"source_relative_path": "api/index.md",
+			"output": {
+				".html": {
+					"relative_path": "api/index.html",
+					"hash": "tWo8t7xQrSu9Zh8YjFCc5w=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "Toc",
+			"source_relative_path": "api/toc.yml",
+			"output": {
+				".html": {
+					"relative_path": "api/toc.html",
+					"hash": "KbT7aNQrm7GYpMAxS8OGlA=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		},
+		{
+			"type": "Conceptual",
+			"source_relative_path": "index.md",
+			"output": {
+				".html": {
+					"relative_path": "index.html",
+					"hash": "hiy1dx4DOJpqeglCkIszcg=="
+				}
+			},
+			"is_incremental": true,
+			"version": ""
+		},
+		{
+			"type": "Toc",
+			"source_relative_path": "toc.yml",
+			"output": {
+				".html": {
+					"relative_path": "toc.html",
+					"hash": "vtZtmIElW2xgl0b/W0Fd4g=="
+				}
+			},
+			"is_incremental": false,
+			"version": ""
+		}
+	],
+	"incremental_info": [
+		{
+			"status": {
+				"can_incremental": true,
+				"incrementalPhase": "build",
+				"total_file_count": 0,
+				"skipped_file_count": 0
+			},
+			"processors": {
+				"TocDocumentProcessor": {
+					"can_incremental": false,
+					"details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+					"incrementalPhase": "build",
+					"total_file_count": 0,
+					"skipped_file_count": 0
+				},
+				"ConceptualDocumentProcessor": {
+					"can_incremental": true,
+					"incrementalPhase": "build",
+					"total_file_count": 2,
+					"skipped_file_count": 2
+				},
+				"ManagedReferenceDocumentProcessor": {
+					"can_incremental": true,
+					"incrementalPhase": "build",
+					"total_file_count": 35,
+					"skipped_file_count": 23
+				}
+			}
+		},
+		{
+			"status": {
+				"can_incremental": true,
+				"details": "Can support incremental post processing.",
+				"incrementalPhase": "postProcessing",
+				"total_file_count": 0,
+				"skipped_file_count": 0
+			},
+			"processors": {}
+		}
+	],
+	"version_info": {},
+	"groups": [
+		{
+			"xrefmap": "xrefmap.yml"
+		}
+	]
 }

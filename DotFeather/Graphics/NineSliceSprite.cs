@@ -1,4 +1,4 @@
-﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
+#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 
 
 using System;
@@ -18,7 +18,7 @@ namespace DotFeather
 		/// <value></value>
 		public Texture2D[] Textures { get; }
 
-        /// <summary>
+	/// <summary>
 		/// この <see cref="NineSliceSprite"/> の描画優先順位を取得または設定します。数値が低いほど奥に描画されます。
 		/// </summary>
 		public int ZOrder { get; set; }
@@ -58,11 +58,11 @@ namespace DotFeather
 		/// </summary>
 		public int Height { get; set; }
 
-        /// <summary>
-        /// <see cref="NineSliceSprite"/> クラスの新しいインスタンスを初期化します。
-        /// </summary>
-        /// <value></value>
-        public NineSliceSprite(Texture2D[] textures)
+	/// <summary>
+	/// <see cref="NineSliceSprite"/> クラスの新しいインスタンスを初期化します。
+	/// </summary>
+	/// <value></value>
+	public NineSliceSprite(Texture2D[] textures)
 		{
 			if (textures.Length != 9)
 				throw new ArgumentException(nameof(textures));
@@ -71,16 +71,16 @@ namespace DotFeather
 			Height = HeightOf(0) + HeightOf(3) + HeightOf(6);
 		}
 
-        /// <summary>
-        /// 指定した画像ファイルから <see cref="NineSliceSprite"/> を生成します。
-        /// </summary>
-        /// <param name="path">ファイルパス。</param>
-        /// <param name="left">左からのピクセル値。</param>
-        /// <param name="top">上からのピクセル値。</param>
-        /// <param name="right">右からのピクセル値。</param>
-        /// <param name="bottom">下からのピクセル値。</param>
-        /// <returns>生成された <see cref="Sprite"/>。</returns>
-        public static NineSliceSprite LoadFrom(string path, int left, int top, int right, int bottom) => new NineSliceSprite(path, left, top, right, bottom);
+	/// <summary>
+	/// 指定した画像ファイルから <see cref="NineSliceSprite"/> を生成します。
+	/// </summary>
+	/// <param name="path">ファイルパス。</param>
+	/// <param name="left">左からのピクセル値。</param>
+	/// <param name="top">上からのピクセル値。</param>
+	/// <param name="right">右からのピクセル値。</param>
+	/// <param name="bottom">下からのピクセル値。</param>
+	/// <returns>生成された <see cref="Sprite"/>。</returns>
+	public static NineSliceSprite LoadFrom(string path, int left, int top, int right, int bottom) => new NineSliceSprite(path, left, top, right, bottom);
 
 		/// <summary>
 		/// この <see cref="NineSliceSprite"/> を破棄します。
@@ -97,8 +97,8 @@ namespace DotFeather
 		/// <summary>
 		/// オブジェクトを描画します。
 		/// </summary>
-        public void Draw(GameBase game, Vector location)
-        {
+	public void Draw(GameBase game, Vector location)
+	{
 			var xSpan = this.Width - WidthOf(0) - WidthOf(2);
 			var ySpan = this.Height - HeightOf(0) - HeightOf(6);
 			TextureDrawer.Draw(game, Textures[0], location + Location, Scale, Angle, Color);
@@ -110,13 +110,13 @@ namespace DotFeather
 			TextureDrawer.Draw(game, Textures[6], location + Location + (new Vector(0, HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, null);
 			TextureDrawer.Draw(game, Textures[7], location + Location + (new Vector(WidthOf(0), HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, xSpan);
 			TextureDrawer.Draw(game, Textures[8], location + Location + (new Vector(WidthOf(0) + xSpan, HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, null);
-        }
+	}
 
 		private int WidthOf(int index) => Textures[index].Size.Width;
 
 		private int HeightOf(int index) => Textures[index].Size.Height;
 
-        private NineSliceSprite(string path, int left, int top, int right, int bottom)
+	private NineSliceSprite(string path, int left, int top, int right, int bottom)
 			: this(Texture2D.LoadAndSplitFrom(path, left, top, right, bottom))
 		{　
 			internalTexture = Textures;

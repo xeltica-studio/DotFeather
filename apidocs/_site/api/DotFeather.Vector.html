@@ -1,943 +1,943 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct Vector
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct Vector
-   ">
-    <meta name="generator" content="docfx 2.41.0.0">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Struct Vector
+	</title>
+		<meta name="viewport" content="width=device-width">
+		<meta name="title" content="Struct Vector
+	">
+		<meta name="generator" content="docfx 2.41.0.0">
     
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="../styles/docfx.vendor.css">
+		<link rel="stylesheet" href="../styles/docfx.css">
+		<link rel="stylesheet" href="../styles/main.css">
+		<meta property="docfx:navrel" content="../toc.html">
+		<meta property="docfx:tocrel" content="toc.html">
     
     
     
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
+	</head>
+	<body data-spy="scroll" data-target="#affix" data-offset="120">
+		<div id="wrapper">
+			<header>
         
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+				<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
               
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
+							<a class="navbar-brand" href="../index.html">
+								<img id="logo" class="svg" src="../logo.svg" alt="">
+							</a>
+						</div>
+						<div class="collapse navbar-collapse" id="navbar">
+							<form class="navbar-form navbar-right" role="search" id="search">
+								<div class="form-group">
+									<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+								</div>
+							</form>
+						</div>
+					</div>
+				</nav>
         
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+				<div class="subnav navbar navbar-default">
+					<div class="container hide-when-search" id="breadcrumb">
+						<ul class="breadcrumb">
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<div role="main" class="container body-content hide-when-search">
         
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DotFeather.Vector">
+				<div class="sidenav hide-when-search">
+					<a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+					<div class="sidetoggle collapse" id="sidetoggle">
+						<div id="sidetoc"></div>
+					</div>
+				</div>
+				<div class="article row grid-right">
+					<div class="col-md-10">
+						<article class="content wrap" id="_content" data-uid="DotFeather.Vector">
   
   
-  <h1 id="DotFeather_Vector" data-uid="DotFeather.Vector" class="text-break">Struct Vector
-  </h1>
-  <div class="markdown level0 summary"><p>2次元のベクトルです。</p>
+	<h1 id="DotFeather_Vector" data-uid="DotFeather.Vector" class="text-break">Struct Vector
+	</h1>
+	<div class="markdown level0 summary"><p>2次元のベクトルです。</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>&#23455;&#35013;</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="DotFeather.Vector.html">Vector</a>&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>&#32153;&#25215;&#12373;&#12428;&#12383;&#12513;&#12531;&#12496;&#12540;</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-  </div>
-  <h6><strong>&#21517;&#21069;&#31354;&#38291;</strong>: <a class="xref" href="DotFeather.html">DotFeather</a></h6>
-  <h6><strong>&#12450;&#12475;&#12531;&#12502;&#12522;</strong>: DotFeather.dll</h6>
-  <h5 id="DotFeather_Vector_syntax">&#27083;&#25991;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Vector : IEquatable&lt;Vector&gt;</code></pre>
-  </div>
-  <h3 id="constructors">&#12467;&#12531;&#12473;&#12488;&#12521;&#12463;&#12479;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector__ctor_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.%23ctor(System.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L23">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector__ctor_" data-uid="DotFeather.Vector.#ctor*"></a>
-  <h4 id="DotFeather_Vector__ctor_System_Single_System_Single_" data-uid="DotFeather.Vector.#ctor(System.Single,System.Single)">Vector(Single, Single)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="DotFeather.Vector.html">Vector</a> クラスの新しいインスタンスを初期化します。&quot;</p>
+	<div class="markdown level0 conceptual"></div>
+	<div classs="implements">
+		<h5>&#23455;&#35013;</h5>
+		<div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="DotFeather.Vector.html">Vector</a>&gt;</div>
+	</div>
+	<div class="inheritedMembers">
+		<h5>&#32153;&#25215;&#12373;&#12428;&#12383;&#12513;&#12531;&#12496;&#12540;</h5>
+		<div>
+			<span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+		</div>
+		<div>
+			<span class="xref">System.Object.GetType()</span>
+		</div>
+		<div>
+			<span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+		</div>
+	</div>
+	<h6><strong>&#21517;&#21069;&#31354;&#38291;</strong>: <a class="xref" href="DotFeather.html">DotFeather</a></h6>
+	<h6><strong>&#12450;&#12475;&#12531;&#12502;&#12522;</strong>: DotFeather.dll</h6>
+	<h5 id="DotFeather_Vector_syntax">&#27083;&#25991;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public struct Vector : IEquatable&lt;Vector&gt;</code></pre>
+	</div>
+	<h3 id="constructors">&#12467;&#12531;&#12473;&#12488;&#12521;&#12463;&#12479;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector__ctor_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.%23ctor(System.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L23">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector__ctor_" data-uid="DotFeather.Vector.#ctor*"></a>
+	<h4 id="DotFeather_Vector__ctor_System_Single_System_Single_" data-uid="DotFeather.Vector.#ctor(System.Single,System.Single)">Vector(Single, Single)</h4>
+	<div class="markdown level1 summary"><p><a class="xref" href="DotFeather.Vector.html">Vector</a> クラスの新しいインスタンスを初期化します。&quot;</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector(float x, float y)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">x</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">y</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="fields">&#12501;&#12451;&#12540;&#12523;&#12489;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_One.md&amp;value=---%0Auid%3A%20DotFeather.Vector.One%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L92">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <h4 id="DotFeather_Vector_One" data-uid="DotFeather.Vector.One">One</h4>
-  <div class="markdown level1 summary"><p><code>new Vector(1, 1)</code> を取得します。</p>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public Vector(float x, float y)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Single</span></td>
+				<td><span class="parametername">x</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Single</span></td>
+				<td><span class="parametername">y</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="fields">&#12501;&#12451;&#12540;&#12523;&#12489;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_One.md&amp;value=---%0Auid%3A%20DotFeather.Vector.One%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L92">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<h4 id="DotFeather_Vector_One" data-uid="DotFeather.Vector.One">One</h4>
+	<div class="markdown level1 summary"><p><code>new Vector(1, 1)</code> を取得します。</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly Vector One</code></pre>
-  </div>
-  <h5 class="fieldValue">&#12501;&#12451;&#12540;&#12523;&#12489;&#12398;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_Zero.md&amp;value=---%0Auid%3A%20DotFeather.Vector.Zero%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L87">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <h4 id="DotFeather_Vector_Zero" data-uid="DotFeather.Vector.Zero">Zero</h4>
-  <div class="markdown level1 summary"><p><code>new Vector(0, 0)</code> を取得します。</p>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static readonly Vector One</code></pre>
+	</div>
+	<h5 class="fieldValue">&#12501;&#12451;&#12540;&#12523;&#12489;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_Zero.md&amp;value=---%0Auid%3A%20DotFeather.Vector.Zero%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L87">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<h4 id="DotFeather_Vector_Zero" data-uid="DotFeather.Vector.Zero">Zero</h4>
+	<div class="markdown level1 summary"><p><code>new Vector(0, 0)</code> を取得します。</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly Vector Zero</code></pre>
-  </div>
-  <h5 class="fieldValue">&#12501;&#12451;&#12540;&#12523;&#12489;&#12398;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">&#12503;&#12525;&#12497;&#12486;&#12451;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_X.md&amp;value=---%0Auid%3A%20DotFeather.Vector.X%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L12">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_X_" data-uid="DotFeather.Vector.X*"></a>
-  <h4 id="DotFeather_Vector_X" data-uid="DotFeather.Vector.X">X</h4>
-  <div class="markdown level1 summary"><p>このベクトルの X 成分を取得または設定します。</p>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static readonly Vector Zero</code></pre>
+	</div>
+	<h5 class="fieldValue">&#12501;&#12451;&#12540;&#12523;&#12489;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="properties">&#12503;&#12525;&#12497;&#12486;&#12451;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_X.md&amp;value=---%0Auid%3A%20DotFeather.Vector.X%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L12">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_X_" data-uid="DotFeather.Vector.X*"></a>
+	<h4 id="DotFeather_Vector_X" data-uid="DotFeather.Vector.X">X</h4>
+	<div class="markdown level1 summary"><p>このベクトルの X 成分を取得または設定します。</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float X { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_Y.md&amp;value=---%0Auid%3A%20DotFeather.Vector.Y%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L16">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_Y_" data-uid="DotFeather.Vector.Y*"></a>
-  <h4 id="DotFeather_Vector_Y" data-uid="DotFeather.Vector.Y">Y</h4>
-  <div class="markdown level1 summary"><p>このベクトルの Y 成分を取得または設定します。</p>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public float X { get; set; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Single</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_Y.md&amp;value=---%0Auid%3A%20DotFeather.Vector.Y%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L16">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_Y_" data-uid="DotFeather.Vector.Y*"></a>
+	<h4 id="DotFeather_Vector_Y" data-uid="DotFeather.Vector.Y">Y</h4>
+	<div class="markdown level1 summary"><p>このベクトルの Y 成分を取得または設定します。</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Y { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">&#12513;&#12477;&#12483;&#12489;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_Equals_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.Equals(DotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L61">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_Equals_" data-uid="DotFeather.Vector.Equals*"></a>
-  <h4 id="DotFeather_Vector_Equals_DotFeather_Vector_" data-uid="DotFeather.Vector.Equals(DotFeather.Vector)">Equals(Vector)</h4>
-  <div class="markdown level1 summary"><p>このオブジェクトを比較します。</p>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public float Y { get; set; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Single</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="methods">&#12513;&#12477;&#12483;&#12489;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_Equals_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.Equals(DotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L61">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_Equals_" data-uid="DotFeather.Vector.Equals*"></a>
+	<h4 id="DotFeather_Vector_Equals_DotFeather_Vector_" data-uid="DotFeather.Vector.Equals(DotFeather.Vector)">Equals(Vector)</h4>
+	<div class="markdown level1 summary"><p>このオブジェクトを比較します。</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(Vector other)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_Equals_System_Object_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L53">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_Equals_" data-uid="DotFeather.Vector.Equals*"></a>
-  <h4 id="DotFeather_Vector_Equals_System_Object_" data-uid="DotFeather.Vector.Equals(System.Object)">Equals(Object)</h4>
-  <div class="markdown level1 summary"><p>このオブジェクトを比較します。</p>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public bool Equals(Vector other)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">other</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Boolean</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_Equals_System_Object_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L53">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_Equals_" data-uid="DotFeather.Vector.Equals*"></a>
+	<h4 id="DotFeather_Vector_Equals_System_Object_" data-uid="DotFeather.Vector.Equals(System.Object)">Equals(Object)</h4>
+	<div class="markdown level1 summary"><p>このオブジェクトを比較します。</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">obj</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">&#12458;&#12540;&#12496;&#12540;&#12521;&#12452;&#12489;</h5>
-  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_GetHashCode.md&amp;value=---%0Auid%3A%20DotFeather.Vector.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L71">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_GetHashCode_" data-uid="DotFeather.Vector.GetHashCode*"></a>
-  <h4 id="DotFeather_Vector_GetHashCode" data-uid="DotFeather.Vector.GetHashCode">GetHashCode()</h4>
-  <div class="markdown level1 summary"><p>このオブジェクトのハッシュ値を取得します。</p>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Object</span></td>
+				<td><span class="parametername">obj</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Boolean</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="overrides">&#12458;&#12540;&#12496;&#12540;&#12521;&#12452;&#12489;</h5>
+	<div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_GetHashCode.md&amp;value=---%0Auid%3A%20DotFeather.Vector.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L71">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_GetHashCode_" data-uid="DotFeather.Vector.GetHashCode*"></a>
+	<h4 id="DotFeather_Vector_GetHashCode" data-uid="DotFeather.Vector.GetHashCode">GetHashCode()</h4>
+	<div class="markdown level1 summary"><p>このオブジェクトのハッシュ値を取得します。</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-  </div>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">&#12458;&#12540;&#12496;&#12540;&#12521;&#12452;&#12489;</h5>
-  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_ToString.md&amp;value=---%0Auid%3A%20DotFeather.Vector.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L82">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_ToString_" data-uid="DotFeather.Vector.ToString*"></a>
-  <h4 id="DotFeather_Vector_ToString" data-uid="DotFeather.Vector.ToString">ToString()</h4>
-  <div class="markdown level1 summary"><p>このベクトルの文字列表現を取得します。</p>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+	</div>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="overrides">&#12458;&#12540;&#12496;&#12540;&#12521;&#12452;&#12489;</h5>
+	<div><span class="xref">System.ValueType.GetHashCode()</span></div>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_ToString.md&amp;value=---%0Auid%3A%20DotFeather.Vector.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L82">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_ToString_" data-uid="DotFeather.Vector.ToString*"></a>
+	<h4 id="DotFeather_Vector_ToString" data-uid="DotFeather.Vector.ToString">ToString()</h4>
+	<div class="markdown level1 summary"><p>このベクトルの文字列表現を取得します。</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">&#12458;&#12540;&#12496;&#12540;&#12521;&#12452;&#12489;</h5>
-  <div><span class="xref">System.ValueType.ToString()</span></div>
-  <h3 id="operators">&#28436;&#31639;&#23376;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Addition_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Addition(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L30">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_op_Addition_" data-uid="DotFeather.Vector.op_Addition*"></a>
-  <h4 id="DotFeather_Vector_op_Addition_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Addition(DotFeather.Vector,DotFeather.Vector)">Addition(Vector, Vector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector operator +(Vector v1, Vector v2)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Division_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Division(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L40">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_op_Division_" data-uid="DotFeather.Vector.op_Division*"></a>
-  <h4 id="DotFeather_Vector_op_Division_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Division(DotFeather.Vector,DotFeather.Vector)">Division(Vector, Vector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector operator /(Vector v1, Vector v2)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Division_DotFeather_Vector_System_Single_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Division(DotFeather.Vector%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L38">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_op_Division_" data-uid="DotFeather.Vector.op_Division*"></a>
-  <h4 id="DotFeather_Vector_op_Division_DotFeather_Vector_System_Single_" data-uid="DotFeather.Vector.op_Division(DotFeather.Vector,System.Single)">Division(Vector, Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector operator /(Vector v1, float v2)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">v2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Equality_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Equality(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L46">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_op_Equality_" data-uid="DotFeather.Vector.op_Equality*"></a>
-  <h4 id="DotFeather_Vector_op_Equality_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Equality(DotFeather.Vector,DotFeather.Vector)">Equality(Vector, Vector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(Vector v1, Vector v2)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Inequality_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Inequality(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L48">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_op_Inequality_" data-uid="DotFeather.Vector.op_Inequality*"></a>
-  <h4 id="DotFeather_Vector_op_Inequality_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Inequality(DotFeather.Vector,DotFeather.Vector)">Inequality(Vector, Vector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(Vector v1, Vector v2)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Multiply_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Multiply(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L36">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_op_Multiply_" data-uid="DotFeather.Vector.op_Multiply*"></a>
-  <h4 id="DotFeather_Vector_op_Multiply_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Multiply(DotFeather.Vector,DotFeather.Vector)">Multiply(Vector, Vector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector operator *(Vector v1, Vector v2)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Multiply_DotFeather_Vector_System_Single_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Multiply(DotFeather.Vector%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L34">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_op_Multiply_" data-uid="DotFeather.Vector.op_Multiply*"></a>
-  <h4 id="DotFeather_Vector_op_Multiply_DotFeather_Vector_System_Single_" data-uid="DotFeather.Vector.op_Multiply(DotFeather.Vector,System.Single)">Multiply(Vector, Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector operator *(Vector v1, float v2)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">v2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Subtraction_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Subtraction(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L32">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_op_Subtraction_" data-uid="DotFeather.Vector.op_Subtraction*"></a>
-  <h4 id="DotFeather_Vector_op_Subtraction_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Subtraction(DotFeather.Vector,DotFeather.Vector)">Subtraction(Vector, Vector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector operator -(Vector v1, Vector v2)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_UnaryNegation_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_UnaryNegation(DotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L42">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-  </span>
-  <a id="DotFeather_Vector_op_UnaryNegation_" data-uid="DotFeather.Vector.op_UnaryNegation*"></a>
-  <h4 id="DotFeather_Vector_op_UnaryNegation_DotFeather_Vector_" data-uid="DotFeather.Vector.op_UnaryNegation(DotFeather.Vector)">UnaryNegation(Vector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector operator -(Vector v1)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td><span class="parametername">v1</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#21364;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#27010;&#35201;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">&#23455;&#35013;</h3>
-  <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
-  </div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+	</div>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.String</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="overrides">&#12458;&#12540;&#12496;&#12540;&#12521;&#12452;&#12489;</h5>
+	<div><span class="xref">System.ValueType.ToString()</span></div>
+	<h3 id="operators">&#28436;&#31639;&#23376;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Addition_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Addition(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L30">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_op_Addition_" data-uid="DotFeather.Vector.op_Addition*"></a>
+	<h4 id="DotFeather_Vector_op_Addition_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Addition(DotFeather.Vector,DotFeather.Vector)">Addition(Vector, Vector)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static Vector operator +(Vector v1, Vector v2)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v1</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v2</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Division_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Division(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L40">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_op_Division_" data-uid="DotFeather.Vector.op_Division*"></a>
+	<h4 id="DotFeather_Vector_op_Division_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Division(DotFeather.Vector,DotFeather.Vector)">Division(Vector, Vector)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static Vector operator /(Vector v1, Vector v2)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v1</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v2</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Division_DotFeather_Vector_System_Single_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Division(DotFeather.Vector%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L38">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_op_Division_" data-uid="DotFeather.Vector.op_Division*"></a>
+	<h4 id="DotFeather_Vector_op_Division_DotFeather_Vector_System_Single_" data-uid="DotFeather.Vector.op_Division(DotFeather.Vector,System.Single)">Division(Vector, Single)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static Vector operator /(Vector v1, float v2)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v1</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Single</span></td>
+				<td><span class="parametername">v2</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Equality_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Equality(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L46">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_op_Equality_" data-uid="DotFeather.Vector.op_Equality*"></a>
+	<h4 id="DotFeather_Vector_op_Equality_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Equality(DotFeather.Vector,DotFeather.Vector)">Equality(Vector, Vector)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static bool operator ==(Vector v1, Vector v2)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v1</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v2</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Boolean</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Inequality_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Inequality(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L48">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_op_Inequality_" data-uid="DotFeather.Vector.op_Inequality*"></a>
+	<h4 id="DotFeather_Vector_op_Inequality_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Inequality(DotFeather.Vector,DotFeather.Vector)">Inequality(Vector, Vector)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static bool operator !=(Vector v1, Vector v2)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v1</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v2</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Boolean</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Multiply_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Multiply(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L36">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_op_Multiply_" data-uid="DotFeather.Vector.op_Multiply*"></a>
+	<h4 id="DotFeather_Vector_op_Multiply_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Multiply(DotFeather.Vector,DotFeather.Vector)">Multiply(Vector, Vector)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static Vector operator *(Vector v1, Vector v2)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v1</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v2</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Multiply_DotFeather_Vector_System_Single_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Multiply(DotFeather.Vector%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L34">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_op_Multiply_" data-uid="DotFeather.Vector.op_Multiply*"></a>
+	<h4 id="DotFeather_Vector_op_Multiply_DotFeather_Vector_System_Single_" data-uid="DotFeather.Vector.op_Multiply(DotFeather.Vector,System.Single)">Multiply(Vector, Single)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static Vector operator *(Vector v1, float v2)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v1</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Single</span></td>
+				<td><span class="parametername">v2</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_Subtraction_DotFeather_Vector_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_Subtraction(DotFeather.Vector%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L32">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_op_Subtraction_" data-uid="DotFeather.Vector.op_Subtraction*"></a>
+	<h4 id="DotFeather_Vector_op_Subtraction_DotFeather_Vector_DotFeather_Vector_" data-uid="DotFeather.Vector.op_Subtraction(DotFeather.Vector,DotFeather.Vector)">Subtraction(Vector, Vector)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static Vector operator -(Vector v1, Vector v2)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v1</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v2</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector_op_UnaryNegation_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Vector.op_UnaryNegation(DotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L42">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Vector_op_UnaryNegation_" data-uid="DotFeather.Vector.op_UnaryNegation*"></a>
+	<h4 id="DotFeather_Vector_op_UnaryNegation_DotFeather_Vector_" data-uid="DotFeather.Vector.op_UnaryNegation(DotFeather.Vector)">UnaryNegation(Vector)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public static Vector operator -(Vector v1)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td><span class="parametername">v1</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="implements">&#23455;&#35013;</h3>
+	<div>
+			<span class="xref">System.IEquatable&lt;T&gt;</span>
+	</div>
 </article>
-          </div>
+					</div>
           
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector.md&amp;value=---%0Auid%3A%20DotFeather.Vector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L7" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+					<div class="hidden-sm col-md-2" role="complementary">
+						<div class="sideaffix">
+							<div class="contribution">
+								<ul class="nav">
+									<li>
+										<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Vector.md&amp;value=---%0Auid%3A%20DotFeather.Vector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+									</li>
+									<li>
+										<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Models/Vector.cs/#L7" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+									</li>
+								</ul>
+							</div>
+							<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+							<!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
       
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
+			<footer>
+				<div class="grad-bottom"></div>
+				<div class="footer">
+					<div class="container">
+						<span class="pull-right">
+							<a href="#top">Back to top</a>
+						</span>
             
-            <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+						<span>Generated by <strong>DocFX</strong></span>
+					</div>
+				</div>
+			</footer>
+		</div>
     
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
-  </body>
+		<script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+		<script type="text/javascript" src="../styles/docfx.js"></script>
+		<script type="text/javascript" src="../styles/main.js"></script>
+	</body>
 </html>

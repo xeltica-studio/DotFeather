@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using OpenTK;
 using System.Linq;
 using OpenTK.Graphics.OpenGL;
@@ -57,7 +57,7 @@ namespace DotFeather
 					foreach (var dp in Buffer)
 					{
 						var vec = dp + new Vector2(Location.X + location.X, Location.Y + location.Y);
-                        vec *= new Vector2(Scale.X, Scale.Y);
+	vec *= new Vector2(Scale.X, Scale.Y);
 						// Convert device point to viewport point
 						var vp = vec.ToViewportPoint(hw, hh);
 						Vertex(color, vp);

@@ -8,7 +8,7 @@
 <div class="markdown level0 description">{{{description}}}</div>
 {{/description}}
 {{#conceptual}}
-  <div class="markdown level0 conceptual">{{{conceptual}}}</div>
+	<div class="markdown level0 conceptual">{{{conceptual}}}</div>
 {{/conceptual}}
 {{#tags}}
 <h2 id="{{htmlId}}">{{name}}</h2>
@@ -16,10 +16,10 @@
 <div class="markdown level0 description">{{{description}}}</div>
 {{/description}}
 {{#conceptual}}
-  <div class="markdown level0 conceptual">{{{conceptual}}}</div>
+	<div class="markdown level0 conceptual">{{{conceptual}}}</div>
 {{/conceptual}}
 {{#children}}
-  {{>partials/rest.child}}
+	{{>partials/rest.child}}
 {{/children}}
 {{/tags}}
 {{!if some children are not tagged while other children are tagged, add default title}}
@@ -29,9 +29,8 @@
 {{/isTagLayout}}
 {{/children.0}}
 {{#children}}
-  {{>partials/rest.child}}
+	{{>partials/rest.child}}
 {{/children}}
 {{#footer}}
 <div class="markdown level0 api-footer">{{{footer}}}</div>
 {{/footer}}
-

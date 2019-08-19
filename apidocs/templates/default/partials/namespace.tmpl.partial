@@ -5,9 +5,9 @@
 <div class="markdown level0 conceptual">{{{conceptual}}}</div>
 <div class="markdown level0 remarks">{{{remarks}}}</div>
 {{#children}}
-  <h3 id="{{id}}">{{>partials/namespaceSubtitle}}</h3>
-  {{#children}}
-    <h4><xref uid="{{uid}}" altProperty="fullName" displayProperty="name"/></h4>
-    <section>{{{summary}}}</section>
-  {{/children}}
+	<h3 id="{{id}}">{{>partials/namespaceSubtitle}}</h3>
+	{{#children}}
+		<h4><xref uid="{{uid}}" altProperty="fullName" displayProperty="name"/></h4>
+		<section>{{{summary}}}</section>
+	{{/children}}
 {{/children}}

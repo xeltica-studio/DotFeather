@@ -405,10 +405,10 @@ namespace DotFeather
 		/// </summary>
 		KeypadMinus = 79,
 
-        /// <summary>
-        /// キーパッドの + キー。
-        /// </summary>
-        KeypadPlus = 80,
+	/// <summary>
+	/// キーパッドの + キー。
+	/// </summary>
+	KeypadPlus = 80,
 
 		/// <summary>
 		/// キーパッドの . キー。
@@ -660,9 +660,9 @@ namespace DotFeather
 		/// </summary>
 		NonUSBackSlash = 130,
 
-        /// <summary>
-        /// LastKey キー。
-        /// </summary>
-        LastKey = 131
+	/// <summary>
+	/// LastKey キー。
+	/// </summary>
+	LastKey = 131
 	}
 }

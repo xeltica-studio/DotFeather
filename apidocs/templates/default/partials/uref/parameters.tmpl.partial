@@ -3,26 +3,26 @@
 {{#properties.0}}
 <h6 class="parameters">Properties</h6>
 <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.name}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
+	<thead>
+		<tr>
+			<th>{{__global.type}}</th>
+			<th>{{__global.name}}</th>
+			<th>{{__global.description}}</th>
+		</tr>
+	</thead>
+	<tbody>
 {{/properties.0}}
 {{#properties}}
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td><em class="text-break">{{{id}}}</em></td>
-      <td>
-        {{{description}}}
-        {{>partials/parameters}}
-      </td>
-    </tr>
+		<tr>
+			<td>{{{type.specName.0.value}}}</td>
+			<td><em class="text-break">{{{id}}}</em></td>
+			<td>
+				{{{description}}}
+				{{>partials/parameters}}
+			</td>
+		</tr>
 {{/properties}}
 {{#properties.0}}
-  </tbody>
+	</tbody>
 </table>
 {{/properties.0}}

@@ -1,4 +1,4 @@
-﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
+#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 
 
 namespace DotFeather
@@ -56,7 +56,7 @@ namespace DotFeather
 		{
 			Texture = texture;
 			Width = Texture.Size.Width;
-            Height = Texture.Size.Height;
+	Height = Texture.Size.Height;
 		}
 
 		/// <summary>

@@ -11,7 +11,7 @@ I'll show actual examples.
 // Check whether the user pressed A key
 if (Input.Keyboard.A.IsPressed)
 {
-    Console.WriteLine("A is pressed");
+	Console.WriteLine("A is pressed");
 }
 
 if (Input.Keyboard.B.IsKeyDown)

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using OpenTK.Graphics.OpenGL;
@@ -197,7 +197,7 @@ namespace DotFeather
 		/// </summary>
 		public Graphic Clear()
 		{
-            Drawables.ForEach(d => d.Destroy());
+	Drawables.ForEach(d => d.Destroy());
 			Drawables.Clear();
 			return this;
 		}

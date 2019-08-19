@@ -4,20 +4,20 @@
 {{#children}}
 <h3 id="{{id}}">{{>partials/classSubtitle}}</h3>
 <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.name}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  <thead>
-  <tbody>
-  {{#children}}
-    <tr>
-      <td id="{{id}}">{{name.0.value}}</td>
-      <td>{{{summary}}}</td>
-    </tr>
-  {{/children}}
-  </tbody>
+	<thead>
+		<tr>
+			<th>{{__global.name}}</th>
+			<th>{{__global.description}}</th>
+		</tr>
+	<thead>
+	<tbody>
+	{{#children}}
+		<tr>
+			<td id="{{id}}">{{name.0.value}}</td>
+			<td>{{{summary}}}</td>
+		</tr>
+	{{/children}}
+	</tbody>
 </table>
 {{/children}}
 {{#seealso.0}}
@@ -25,12 +25,12 @@
 <div class="seealso">
 {{/seealso.0}}
 {{#seealso}}
-  {{#isCref}}
-    <div>{{{type.specName.0.value}}}</div>
-  {{/isCref}}
-  {{^isCref}}
-    <div>{{{url}}}</div>
-  {{/isCref}}
+	{{#isCref}}
+		<div>{{{type.specName.0.value}}}</div>
+	{{/isCref}}
+	{{^isCref}}
+		<div>{{{url}}}</div>
+	{{/isCref}}
 {{/seealso}}
 {{#seealso.0}}
 </div>
@@ -40,11 +40,11 @@
 {{/extensionMethods.0}}
 {{#extensionMethods}}
 <div>
-  {{#definition}}
-    <xref uid="{{definition}}" fullName="{{fullName.0.value}}" name="{{nameWithType.0.value}}"/>
-  {{/definition}}
-  {{^definition}}
-    <xref uid="{{uid}}" fullName="{{fullName.0.value}}" name="{{nameWithType.0.value}}"/>
-  {{/definition}}
+	{{#definition}}
+		<xref uid="{{definition}}" fullName="{{fullName.0.value}}" name="{{nameWithType.0.value}}"/>
+	{{/definition}}
+	{{^definition}}
+		<xref uid="{{uid}}" fullName="{{fullName.0.value}}" name="{{nameWithType.0.value}}"/>
+	{{/definition}}
 </div>
 {{/extensionMethods}}

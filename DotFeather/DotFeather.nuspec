@@ -1,25 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-  <metadata>
-    <id>DotFeather</id>
-    <version>1.2.1</version>
-    <title>DotFeather</title>
-    <authors>Xeltica</authors>
-    <owners>Xeltica</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>https://github.com/xeltica/dotfeather</projectUrl>
-    <description>A lightweight, extensible and easy game engine.</description>
-    <copyright>(C)2018-2019 Xeltica</copyright>
-    <tags>GameEngine</tags>
-        <license type="expression">MIT</license>
-    <releaseNotes>
+	<metadata>
+		<id>DotFeather</id>
+		<version>1.2.1</version>
+		<title>DotFeather</title>
+		<authors>Xeltica</authors>
+		<owners>Xeltica</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<projectUrl>https://github.com/xeltica/dotfeather</projectUrl>
+		<description>A lightweight, extensible and easy game engine.</description>
+		<copyright>(C)2018-2019 Xeltica</copyright>
+		<tags>GameEngine</tags>
+				<license type="expression">MIT</license>
+		<releaseNotes>
 		1.2.1:
-      + Improve WaveAudioSource: Now supports extended fmt chunk
+			+ Improve WaveAudioSource: Now supports extended fmt chunk
 	</releaseNotes>
 	<dependencies>
-	  <dependency id="OpenTK.NetStandard" version="1.0.4" />
-	  <dependency id="Microsoft.Windows.Compatibility" version="2.0.1" />
-	  <dependency id="NVorbis" version="0.8.6" />
+		<dependency id="OpenTK.NetStandard" version="1.0.4" />
+		<dependency id="Microsoft.Windows.Compatibility" version="2.0.1" />
+		<dependency id="NVorbis" version="0.8.6" />
 	</dependencies>
-  </metadata>
+	</metadata>
 </package>

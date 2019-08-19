@@ -5,28 +5,28 @@
 <div class="markdown level0 conceptual">{{{conceptual}}}</div>
 {{#inheritance.0}}
 <div class="inheritance">
-  <h5>{{__global.inheritance}}</h5>
+	<h5>{{__global.inheritance}}</h5>
 {{/inheritance.0}}
 {{#inheritance}}
-    <div class="level{{index}}">{{{specName.0.value}}}</div>
+		<div class="level{{index}}">{{{specName.0.value}}}</div>
 {{/inheritance}}
 {{#inheritance.0}}
-    <div class="level{{item.level}}"><span class="xref">{{item.name.0.value}}</span></div>
+		<div class="level{{item.level}}"><span class="xref">{{item.name.0.value}}</span></div>
 </div>
 {{/inheritance.0}}
 {{#inheritedMembers.0}}
 <div class="inheritedMembers">
-  <h5>{{__global.inheritedMembers}}</h5>
+	<h5>{{__global.inheritedMembers}}</h5>
 {{/inheritedMembers.0}}
 {{#inheritedMembers}}
-  <div>
-  {{#definition}}
-    <xref uid="{{definition}}" altProperty="fullName" displayProperty="name"/>
-  {{/definition}}
-  {{^definition}}
-    <xref uid="{{uid}}" altProperty="fullName" displayProperty="name"/>
-  {{/definition}}
-  </div>
+	<div>
+	{{#definition}}
+		<xref uid="{{definition}}" altProperty="fullName" displayProperty="name"/>
+	{{/definition}}
+	{{^definition}}
+		<xref uid="{{uid}}" altProperty="fullName" displayProperty="name"/>
+	{{/definition}}
+	</div>
 {{/inheritedMembers}}
 {{#inheritedMembers.0}}
 </div>

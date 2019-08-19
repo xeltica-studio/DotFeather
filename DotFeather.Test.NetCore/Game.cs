@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,7 +10,7 @@ namespace DotFeather
 {
 	class Game : GameBase
 	{
-        public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
+	public Game(int width, int height, string title = null, int refreshRate = 60) : base(width, height, title, refreshRate)
 		{
 			BackgroundColor = Color.Black;
 		}
@@ -31,7 +31,7 @@ namespace DotFeather
 		{
 			if (Input.Keyboard.Escape.IsKeyUp)
 				Exit(0);
-        }
+	}
 
 		Sprite red, green;
     }

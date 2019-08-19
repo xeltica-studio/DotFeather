@@ -1,26 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+	<PropertyGroup>
 	<OutputType>Exe</OutputType>
 	<TargetFramework>netcoreapp2.1</TargetFramework>
 	<ReleaseVersion>0.7.0</ReleaseVersion>
-  </PropertyGroup>
+	</PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	<LangVersion>Latest</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
 	<LangVersion>Latest</LangVersion>
-  </PropertyGroup>
-  <ItemGroup>
+	</PropertyGroup>
+	<ItemGroup>
 	<ProjectReference Include="..\DotFeather\DotFeather.csproj" />
-  </ItemGroup>
-  <ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
 	<PackageReference Include="Microsoft.Windows.Compatibility" Version="2.1.1" />
-  </ItemGroup>
-  <ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
 	<None Update="*.png">
-	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</None>
-  </ItemGroup>
+	</ItemGroup>
 </Project>

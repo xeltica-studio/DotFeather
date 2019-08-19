@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.Drawing;
@@ -11,10 +11,10 @@ using System.Collections;
 
 namespace DotFeather
 {
-    /// <summary>
-    /// DotFeather のメインループおよび、各種メソッドを揃えている、ゲームエントリーポイントの基底クラスです。
-    /// </summary>
-    public abstract class GameBase : IDisposable
+	/// <summary>
+	/// DotFeather のメインループおよび、各種メソッドを揃えている、ゲームエントリーポイントの基底クラスです。
+	/// </summary>
+	public abstract class GameBase : IDisposable
 	{
 		/// <summary>
 		/// ウィンドウの X 座標を取得または設定します。
@@ -208,7 +208,7 @@ namespace DotFeather
 			window.Unload += OnUnload;
 
 			window.KeyDown += (s, e) => OnKeyDown(s, new DFKeyEventArgs(e));
-            window.KeyUp += (s, e) => OnKeyUp(s, new DFKeyEventArgs(e));
+			window.KeyUp += (s, e) => OnKeyUp(s, new DFKeyEventArgs(e));
 
 			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
 			{
@@ -260,12 +260,12 @@ namespace DotFeather
 		/// <summary>
 		/// コルーチンを開始します。
 		/// </summary>
-        public Coroutine StartCoroutine(IEnumerator coroutine) => CoroutineRunner.Start(coroutine);
+		public Coroutine StartCoroutine(IEnumerator coroutine) => CoroutineRunner.Start(coroutine);
 
 		/// <summary>
 		/// コルーチンを停止します。
 		/// </summary>
-        public void StopCoroutine(Coroutine coroutine) => CoroutineRunner.Stop(coroutine);
+		public void StopCoroutine(Coroutine coroutine) => CoroutineRunner.Stop(coroutine);
 
 		/// <summary>
 		/// ゲームのフレーム更新時に呼び出されます。このメソッドをオーバーライドして、ゲームのメインループを記述してください。
@@ -287,15 +287,15 @@ namespace DotFeather
 		/// </summary>
 		protected virtual void OnResize(object sender, EventArgs e) { }
 
-        /// <summary>
-        /// キーが押されたときに呼び出されます。
-        /// </summary>
-        protected virtual void OnKeyDown(object sender, DFKeyEventArgs e) { }
+		/// <summary>
+		/// キーが押されたときに呼び出されます。
+		/// </summary>
+		protected virtual void OnKeyDown(object sender, DFKeyEventArgs e) { }
 
-        /// <summary>
-        /// キーが離されたときに呼び出されます。
-        /// </summary>
-        protected virtual void OnKeyUp(object sender, DFKeyEventArgs e) { }
+		/// <summary>
+		/// キーが離されたときに呼び出されます。
+		/// </summary>
+		protected virtual void OnKeyUp(object sender, DFKeyEventArgs e) { }
 
 		/// <summary>
 		/// 乱数生成器を取得します。

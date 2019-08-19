@@ -3,7 +3,7 @@ namespace DotFeather
 	/// <summary>
 	/// 指定した秒数だけ待機するイールド命令です。
 	/// </summary>
-    public class WaitForSeconds : YieldInstruction
+	public class WaitForSeconds : YieldInstruction
 	{
 		public override bool KeepWaiting
 		{

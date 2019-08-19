@@ -9,4 +9,3 @@
 This project is intended for debugging under development, not sample code.
 
 It may be about the reference such as environment construction and coding. However, I won't support about here even if there are some bugs.
-

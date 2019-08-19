@@ -35,9 +35,9 @@ namespace DotFeather
 		{
 			get => font;
 			set
-            {
-                if (font == value)
-                    return;
+			{
+				if (font == value)
+					return;
 				font = value;
 				UpdateTexture();
 			}
@@ -51,9 +51,9 @@ namespace DotFeather
 		{
 			get => color;
 			set
-            {
-                if (color == value)
-                    return;
+			{
+				if (color == value)
+					return;
 				color = value;
 				UpdateTexture();
 			}

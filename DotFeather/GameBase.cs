@@ -170,6 +170,7 @@ namespace DotFeather
 				Input.Keyboard.Update();
 				Input.Mouse.Update();
 				CoroutineRunner.Update();
+				Root.OnUpdate(this);
 				OnUpdate(s, new DFEventArgs
 				{
 					DeltaTime = e.Time,

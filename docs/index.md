@@ -29,6 +29,7 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
 	- Extensions
 		- [Original Rendering](plugin/render.md)
 		- [Original Audio Source](plugin/audiosource.md)
+		- [IUpdatable](plugin/updatable.md)
 
 <!--
 	- Official Plugins (TBD)

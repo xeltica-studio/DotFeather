@@ -31,6 +31,7 @@
   "DotFeather.Container.Item(System.Int32)": "DotFeather.Container.yml",
   "DotFeather.Container.Location": "DotFeather.Container.yml",
   "DotFeather.Container.Name": "DotFeather.Container.yml",
+  "DotFeather.Container.OnUpdate(DotFeather.GameBase)": "DotFeather.Container.yml",
   "DotFeather.Container.Remove(DotFeather.IDrawable)": "DotFeather.Container.yml",
   "DotFeather.Container.RemoveAt(System.Int32)": "DotFeather.Container.yml",
   "DotFeather.Container.Scale": "DotFeather.Container.yml",

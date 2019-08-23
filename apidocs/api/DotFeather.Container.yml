@@ -20,6 +20,7 @@ items:
   - DotFeather.Container.Item(System.Int32)
   - DotFeather.Container.Location
   - DotFeather.Container.Name
+  - DotFeather.Container.OnUpdate(DotFeather.GameBase)
   - DotFeather.Container.Remove(DotFeather.IDrawable)
   - DotFeather.Container.RemoveAt(System.Int32)
   - DotFeather.Container.Scale
@@ -47,14 +48,15 @@ items:
   summary: "\n他の <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> オブジェクトを格納し、相対位置に描画するオブジェクトです。\n"
   example: []
   syntax:
-    content: 'public class Container : IDrawable, IList<IDrawable>, ICollection<IDrawable>, IEnumerable<IDrawable>, IEnumerable'
+    content: 'public class Container : IDrawable, IUpdatable, IList<IDrawable>, ICollection<IDrawable>, IEnumerable<IDrawable>, IEnumerable'
     content.vb: >-
       Public Class Container
-          Implements IDrawable, IList(Of IDrawable), ICollection(Of IDrawable), IEnumerable(Of IDrawable), IEnumerable
+          Implements IDrawable, IUpdatable, IList(Of IDrawable), ICollection(Of IDrawable), IEnumerable(Of IDrawable), IEnumerable
   inheritance:
   - System.Object
   implements:
   - DotFeather.IDrawable
+  - IUpdatable
   - System.Collections.Generic.IList{DotFeather.IDrawable}
   - System.Collections.Generic.ICollection{DotFeather.IDrawable}
   - System.Collections.Generic.IEnumerable{DotFeather.IDrawable}
@@ -464,6 +466,41 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: DotFeather.Container.OnUpdate(DotFeather.GameBase)
+  commentId: M:DotFeather.Container.OnUpdate(DotFeather.GameBase)
+  id: OnUpdate(DotFeather.GameBase)
+  parent: DotFeather.Container
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate(GameBase)
+  nameWithType: Container.OnUpdate(GameBase)
+  fullName: DotFeather.Container.OnUpdate(DotFeather.GameBase)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Graphics/Container.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: OnUpdate
+    path: ../DotFeather/Graphics/Container.cs
+    startLine: 97
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public void OnUpdate(GameBase game)
+    parameters:
+    - id: game
+      type: DotFeather.GameBase
+    content.vb: Public Sub OnUpdate(game As GameBase)
+  overload: DotFeather.Container.OnUpdate*
+  implements:
+  - IUpdatable.OnUpdate(DotFeather.GameBase)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: DotFeather.Container.Destroy
   commentId: M:DotFeather.Container.Destroy
   id: Destroy
@@ -482,7 +519,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 100
+    startLine: 105
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -516,7 +553,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 105
+    startLine: 110
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -552,7 +589,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IndexOf
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 111
+    startLine: 116
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -591,7 +628,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RemoveAt
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 116
+    startLine: 121
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -628,7 +665,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 121
+    startLine: 126
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -662,7 +699,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Contains
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 130
+    startLine: 135
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -701,7 +738,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CopyTo
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 135
+    startLine: 140
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -743,7 +780,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Remove
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 140
+    startLine: 145
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -783,7 +820,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.IEnumerable.GetEnumerator
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 145
+    startLine: 150
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -817,7 +854,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Count
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 150
+    startLine: 155
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -856,7 +893,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsReadOnly
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 155
+    startLine: 160
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -896,6 +933,11 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: IUpdatable
+  commentId: T:IUpdatable
+  name: IUpdatable
+  nameWithType: IUpdatable
+  fullName: IUpdatable
 - uid: System.Collections.Generic.IList{DotFeather.IDrawable}
   commentId: T:System.Collections.Generic.IList{DotFeather.IDrawable}
   parent: System.Collections.Generic
@@ -1886,6 +1928,47 @@ references:
   name: GameBase
   nameWithType: GameBase
   fullName: DotFeather.GameBase
+- uid: DotFeather.Container.OnUpdate*
+  commentId: Overload:DotFeather.Container.OnUpdate
+  name: OnUpdate
+  nameWithType: Container.OnUpdate
+  fullName: DotFeather.Container.OnUpdate
+- uid: IUpdatable.OnUpdate(DotFeather.GameBase)
+  commentId: M:IUpdatable.OnUpdate(DotFeather.GameBase)
+  parent: IUpdatable
+  name: OnUpdate(GameBase)
+  nameWithType: IUpdatable.OnUpdate(GameBase)
+  fullName: IUpdatable.OnUpdate(DotFeather.GameBase)
+  spec.csharp:
+  - uid: IUpdatable.OnUpdate(DotFeather.GameBase)
+    name: OnUpdate
+    nameWithType: IUpdatable.OnUpdate
+    fullName: IUpdatable.OnUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DotFeather.GameBase
+    name: GameBase
+    nameWithType: GameBase
+    fullName: DotFeather.GameBase
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: IUpdatable.OnUpdate(DotFeather.GameBase)
+    name: OnUpdate
+    nameWithType: IUpdatable.OnUpdate
+    fullName: IUpdatable.OnUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DotFeather.GameBase
+    name: GameBase
+    nameWithType: GameBase
+    fullName: DotFeather.GameBase
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: DotFeather.Container
   commentId: T:DotFeather.Container
   parent: DotFeather

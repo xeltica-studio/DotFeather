@@ -6,19 +6,7 @@
 
 You can implement the objects that can be handled on DotFeather simply by creating a class that implements the `IDrawable` interface.
 
-Here is the definition of the `IDrawable` interface in the latest version.
-
-```cs
-public interface IDrawable
-{
-	void Draw(GameBase game, Vector location);
-	int ZOrder { get; set; }
-	string Name { get; set; }
-	Vector Location { get; set; }
-	float Angle { get; set; }
-	Vector Scale { get; set; }
-}
-```
+See [API document] (https://dotfeather.netlify.com/api/dotfeather.idrawable) for the detailed definition.
 
 We recommend that you implement properties under ZOrder as auto-implemented properties.
 
@@ -38,5 +26,7 @@ public interface ITile
 ```
 
 Write the actual drawing process in the Draw method. Because tile instances are reused, it receives drawing position and color information as arguments for drawing. Coordinate information of `location` argument is not tile map coordinates, but screen pixel coordinates. Please draw at the same position.
+
+Drawables can receive draw-calls, but processing, which is not related to drawing such as collision detection, should not be written in the `Draw ()` method. If such processing is required, implement [IUpdatable interface](updatable.md) additionally.
 
 Next: [Original Audio Source](audiosource.md)

@@ -49,7 +49,7 @@ DotFeather では、 AppVeyor を用いてデプロイの自動化を行って�
 3. `cd ./apidocs && docfx metadata && docfx build` をする
 4. DotFeather/DotFeather.nuspec 内のバージョン表記を書き換える
 5. appveyor.yml 内のバージョン表記を書き換える
-6. 3.と4.の変更をコミットする
+6. 上記の変更をコミットする
 7. そのコミットにバージョン名のタグをつける
 8. push する
 9. :pray:

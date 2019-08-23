@@ -1,5 +1,7 @@
 # Original Audio Source
 
+**Note: This article is for Advanced Programmers.**
+
 You can play audio of any format by creating a class that implements the `IAudioSource` interface.
 
 Here is the definition of the latest version of `IAudioSource`:
@@ -27,3 +29,5 @@ The `SampleRate` property is the sampling frequency of the audio source.
 
 
 After creating that, you can play the audio source by using the `AudioPlayer` class.
+
+Next: [IUpdatable](updatable.md)

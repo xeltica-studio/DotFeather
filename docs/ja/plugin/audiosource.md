@@ -1,5 +1,7 @@
 # 独自オーディオソース
 
+**Note: この項目は DotFeather およびプログラミング上級者を対象としています。**
+
 `IAudioSource` インターフェイスを実装するクラスを作成することで、あらゆるフォーマットの音声を再生できます。
 
 
@@ -28,3 +30,5 @@ public interface IAudioSource
 
 
 これらを実装したオーディオソースは、実際に `AudioPlayer` クラスを用いて再生することが出来ます。
+
+Next: [IUpdatable](updatable.md)

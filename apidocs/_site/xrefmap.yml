@@ -391,6 +391,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.Container.Name
   nameWithType: Container.Name
+- uid: DotFeather.Container.OnUpdate(DotFeather.GameBase)
+  name: OnUpdate(GameBase)
+  href: api/DotFeather.Container.html#DotFeather_Container_OnUpdate_DotFeather_GameBase_
+  commentId: M:DotFeather.Container.OnUpdate(DotFeather.GameBase)
+  fullName: DotFeather.Container.OnUpdate(DotFeather.GameBase)
+  nameWithType: Container.OnUpdate(GameBase)
+- uid: DotFeather.Container.OnUpdate*
+  name: OnUpdate
+  href: api/DotFeather.Container.html#DotFeather_Container_OnUpdate_
+  commentId: Overload:DotFeather.Container.OnUpdate
+  isSpec: "True"
+  fullName: DotFeather.Container.OnUpdate
+  nameWithType: Container.OnUpdate
 - uid: DotFeather.Container.Remove(DotFeather.IDrawable)
   name: Remove(IDrawable)
   href: api/DotFeather.Container.html#DotFeather_Container_Remove_DotFeather_IDrawable_

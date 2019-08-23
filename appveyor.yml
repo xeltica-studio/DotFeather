@@ -48,7 +48,7 @@ deploy:
     ----
 
     + Add IUpdatable interface
-       + You can receive frame update events by implementing the `IUpdatable` interface in addition to the class that implements the `IDrawable` interface.
+      + You can receive frame update events by implementing the `IUpdatable` interface in addition to the class that implements the `IDrawable` interface.
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

@@ -1,4 +1,4 @@
-version: 1.4.0.{build}
+version: 1.5.0.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -42,13 +42,11 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    + IUpdatable インターフェイスを追加
-      + `IDrawable` インターフェイスを実装するクラスに追加で `IUpdatable` インターフェイスを実装することで、フレームアップデートのイベントを受け取ることができます。
-    
+    + Stream 型を引数に取る LoadFrom() メソッドのオーバーロードを追加
+
     ----
 
-    + Add IUpdatable interface
-      + You can receive frame update events by implementing the `IUpdatable` interface in addition to the class that implements the `IDrawable` interface.
+    + Add overloads of LoadFrom() method that takes Stream type as an argument
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>DotFeather</id>
-		<version>1.4.0</version>
+		<version>1.5.0</version>
 		<title>DotFeather</title>
 		<authors>Xeltica</authors>
 		<owners>Xeltica</owners>
@@ -13,11 +13,10 @@
 		<tags>GameEngine</tags>
 				<license type="expression">MIT</license>
 		<releaseNotes>
-		+ Add IUpdatable interface
-		+++ You can receive frame update events by implementing the `IUpdatable` interface in addition to the class that implements the `IDrawable` interface.
+		+ Add overloads of LoadFrom() method that takes Stream type as an argument
 		</releaseNotes>
 		<dependencies>
-			<dependency id="OpenTK.NetStandard" version="1.0.4" />
+			<dependency id="OpenTK" version="1.0.4" />
 			<dependency id="Microsoft.Windows.Compatibility" version="2.0.1" />
 			<dependency id="NVorbis" version="0.8.6" />
 		</dependencies>

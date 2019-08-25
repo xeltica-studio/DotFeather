@@ -55,7 +55,7 @@ CoroutineRunner.StopCoroutine(coroutine);
 
 ```cs
 StartCoroutine(CountDown(false))
-	.Then(_ => 
+	.Then(_ =>
 	{
 		Console.WriteLine("Successfully finished!");
 	});

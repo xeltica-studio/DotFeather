@@ -85,13 +85,13 @@ namespace DotFeather
 		}
 
 		private Sprite(string path)
-			: this(Texture2D.LoadFrom(path)) 
+			: this(Texture2D.LoadFrom(path))
 		{　
 			internalTexture = Texture;
 		}
 
 		private Sprite(Stream path)
-			: this(Texture2D.LoadFrom(path)) 
+			: this(Texture2D.LoadFrom(path))
 		{　
 			internalTexture = Texture;
 		}

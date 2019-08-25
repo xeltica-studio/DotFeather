@@ -5,7 +5,7 @@ DotFeather では、ゲームのメインループを GameBase 抽象クラス�
 ```cs
 public class Game : GameBase
 {
-	public Game(int width, int height, string title = null, int refreshRate = 60) 
+	public Game(int width, int height, string title = null, int refreshRate = 60)
 		: base(width, height, title, refreshRate) { }
 }
 ```

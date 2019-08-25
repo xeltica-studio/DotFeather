@@ -55,7 +55,7 @@ You can also specify a callback when the coroutine exits, and when an unhandled 
 
 ```cs
 StartCoroutine(CountDown(false))
-	.Then(_ => 
+	.Then(_ =>
 	{
 		Console.WriteLine("Successfully finished!");
 	});

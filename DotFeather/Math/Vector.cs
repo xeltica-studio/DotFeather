@@ -10,7 +10,7 @@ namespace DotFeather
 		/// このベクトルの X 成分を取得または設定します。
 		/// </summary>
 		public float X { get; set; }
-		
+
 		/// <summary>
 		/// このベクトルの Y 成分を取得または設定します。
 		/// </summary>
@@ -71,7 +71,7 @@ namespace DotFeather
 		public static float Distance(Vector from, Vector to) => (float)Math.Sqrt(
 			(to.X - from.X) * (to.X - from.X) + (to.Y - from.Y) * (to.Y - from.Y)
 		);
-		
+
 		/// <summary>
 		/// このオブジェクトを比較します。
 		/// </summary>
@@ -152,6 +152,6 @@ namespace DotFeather
 		/// </summary>
 		public static readonly Vector Down = new Vector(0, 1);
 
-		
+
 	}
 }

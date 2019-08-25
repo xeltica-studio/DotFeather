@@ -20,10 +20,10 @@ Actual behavior
 To Reproduce
 ====
 
-1. 
-2. 
-3. 
-4. 
+1.
+2.
+3.
+4.
 
 Environment
 ====

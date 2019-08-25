@@ -67,7 +67,7 @@ namespace DotFeather
 		/// このウィンドウが現在フォーカスされているかどうかを取得します。
 		/// </summary>
 		/// <value>The height.</value>
-		public bool IsFocused => window.Focused;		
+		public bool IsFocused => window.Focused;
 
 		/// <summary>
 		/// ウィンドウの背景色を取得または設定します。
@@ -109,7 +109,7 @@ namespace DotFeather
 			{
 				return  window.WindowBorder == WindowBorder.Resizable ? WindowMode.Resizable :
 						window.WindowBorder == WindowBorder.Fixed ? WindowMode.Fixed :
-						window.WindowBorder == WindowBorder.Hidden ? WindowMode.NoFrame : 
+						window.WindowBorder == WindowBorder.Hidden ? WindowMode.NoFrame :
 						throw new InvalidOperationException("unexpected window state");
 			}
 			set
@@ -181,9 +181,9 @@ namespace DotFeather
 			{
 				GL.ClearColor(BackgroundColor);
 				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-				
+
 				Root.Draw(this, Vector.Zero);
-				
+
 				window.SwapBuffers();
 				Dpi = (float)window.ClientSize.Width / window.Size.Width;
 			};

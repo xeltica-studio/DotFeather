@@ -12,7 +12,7 @@ namespace DotFeather
 		/// コルーチンが実行中であるかどうかを取得します。
 		/// </summary>
 		public bool IsRunning { get; }
-		
+
 		public override bool KeepWaiting => IsRunning;
 
 		/// <summary>
@@ -35,13 +35,13 @@ namespace DotFeather
 		/// </summary>
 		/// <param name="callback">コールバック。引数は最後に <c>yield return</c> した値が入ります。</param>
 		/// <returns></returns>
-		public Coroutine Then(Action<object> callback) 
+		public Coroutine Then(Action<object> callback)
 		{
 			ThenAction = callback;
 			return this;
 		}
 
-		public Coroutine Error(Action<Exception> callback) 
+		public Coroutine Error(Action<Exception> callback)
 		{
 			ErrorAction = callback;
 			return this;

@@ -97,7 +97,7 @@ namespace DotFeather
 			IsLeftDown = IsLeft && !pl;
 			IsRightDown = IsRight && !pr;
 			IsMiddleDown = IsMiddle && !pm;
-			
+
 			IsLeftUp = !IsLeft && pl;
 			IsRightUp = !IsRight && pr;
 			IsMiddleUp = !IsMiddle && pm;

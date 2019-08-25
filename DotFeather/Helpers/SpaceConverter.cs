@@ -11,7 +11,7 @@ namespace DotFeather
 		/// <summary>
 		/// スクリーン座標をViewport座標に変換します。
 		/// </summary>
-		public static Vector2 ToViewportPoint(this Vector2 dp, float halfWidth, float halfHeight) 
+		public static Vector2 ToViewportPoint(this Vector2 dp, float halfWidth, float halfHeight)
 			=> new Vector2((dp.X - halfWidth) / halfWidth, -(dp.Y - halfHeight) / halfHeight);
 
 		/// <summary>

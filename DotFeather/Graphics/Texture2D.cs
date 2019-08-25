@@ -195,7 +195,7 @@ namespace DotFeather
 					throw new ArgumentException(nameof(right));
 				if (bottom > file.Height - top)
 					throw new ArgumentException(nameof(bottom));
-				Rectangle[] atlas = 
+				Rectangle[] atlas =
 				{
 					new Rectangle(0, 0, left, top),
 					new Rectangle(left, 0, file.Width - left - right, top),
@@ -207,7 +207,7 @@ namespace DotFeather
 					new Rectangle(left, file.Height - bottom, file.Width - left - right, bottom),
 					new Rectangle(file.Width - right, file.Height - bottom, right, bottom),
 				};
-				return atlas.Select(a => 
+				return atlas.Select(a =>
 				{
 					var locked = file.LockBits(a, ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 					var tex = LoadFrom(locked);

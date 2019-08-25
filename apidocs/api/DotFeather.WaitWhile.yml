@@ -31,6 +31,7 @@ items:
     content: 'public class WaitWhile : YieldInstruction'
     content.vb: >-
       Public Class WaitWhile
+
           Inherits YieldInstruction
   inheritance:
   - System.Object

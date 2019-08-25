@@ -38,6 +38,7 @@ items:
     - id: T
     content.vb: >-
       Public MustInherit Class OpenTKManagedHandleBase(Of T)
+
           Implements IDisposable
   inheritance:
   - System.Object

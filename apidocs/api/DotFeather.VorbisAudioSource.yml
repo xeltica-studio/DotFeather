@@ -36,6 +36,7 @@ items:
     content: 'public class VorbisAudioSource : IAudioSource, IDisposable'
     content.vb: >-
       Public Class VorbisAudioSource
+
           Implements IAudioSource, IDisposable
   inheritance:
   - System.Object

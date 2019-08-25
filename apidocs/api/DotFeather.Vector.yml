@@ -58,6 +58,7 @@ items:
     content: 'public struct Vector : IEquatable<Vector>'
     content.vb: >-
       Public Structure Vector
+
           Implements IEquatable(Of Vector)
   implements:
   - System.IEquatable{DotFeather.Vector}

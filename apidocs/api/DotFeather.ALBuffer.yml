@@ -31,7 +31,9 @@ items:
     content: 'public class ALBuffer : OpenTKManagedHandleBase<int>, IDisposable'
     content.vb: >-
       Public Class ALBuffer
+
           Inherits OpenTKManagedHandleBase(Of Integer)
+
           Implements IDisposable
   inheritance:
   - System.Object

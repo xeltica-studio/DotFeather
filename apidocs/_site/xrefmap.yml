@@ -4576,6 +4576,12 @@ references:
   isSpec: "True"
   fullName: DotFeather.NineSliceSprite.Height
   nameWithType: NineSliceSprite.Height
+- uid: DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: LoadFrom(Stream, Int32, Int32, Int32, Int32)
+  href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_LoadFrom_System_IO_Stream_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: NineSliceSprite.LoadFrom(Stream, Int32, Int32, Int32, Int32)
 - uid: DotFeather.NineSliceSprite.LoadFrom(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
   name: LoadFrom(String, Int32, Int32, Int32, Int32)
   href: api/DotFeather.NineSliceSprite.html#DotFeather_NineSliceSprite_LoadFrom_System_String_System_Int32_System_Int32_System_Int32_System_Int32_
@@ -4904,6 +4910,12 @@ references:
   isSpec: "True"
   fullName: DotFeather.Sprite.Destroy
   nameWithType: Sprite.Destroy
+- uid: DotFeather.Sprite.LoadFrom(System.IO.Stream)
+  name: LoadFrom(Stream)
+  href: api/DotFeather.Sprite.html#DotFeather_Sprite_LoadFrom_System_IO_Stream_
+  commentId: M:DotFeather.Sprite.LoadFrom(System.IO.Stream)
+  fullName: DotFeather.Sprite.LoadFrom(System.IO.Stream)
+  nameWithType: Sprite.LoadFrom(Stream)
 - uid: DotFeather.Sprite.LoadFrom(System.String)
   name: LoadFrom(String)
   href: api/DotFeather.Sprite.html#DotFeather_Sprite_LoadFrom_System_String_
@@ -5091,6 +5103,18 @@ references:
   isSpec: "True"
   fullName: DotFeather.Texture2D.Handle
   nameWithType: Texture2D.Handle
+- uid: DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,System.Drawing.Size)
+  name: LoadAndSplitFrom(Stream, Int32, Int32, Size)
+  href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_LoadAndSplitFrom_System_IO_Stream_System_Int32_System_Int32_System_Drawing_Size_
+  commentId: M:DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,System.Drawing.Size)
+  fullName: DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream, System.Int32, System.Int32, System.Drawing.Size)
+  nameWithType: Texture2D.LoadAndSplitFrom(Stream, Int32, Int32, Size)
+- uid: DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: LoadAndSplitFrom(Stream, Int32, Int32, Int32, Int32)
+  href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_LoadAndSplitFrom_System_IO_Stream_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: Texture2D.LoadAndSplitFrom(Stream, Int32, Int32, Int32, Int32)
 - uid: DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,System.Drawing.Size)
   name: LoadAndSplitFrom(String, Int32, Int32, Size)
   href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_LoadAndSplitFrom_System_String_System_Int32_System_Int32_System_Drawing_Size_
@@ -5116,6 +5140,12 @@ references:
   commentId: M:DotFeather.Texture2D.LoadFrom(System.Drawing.Imaging.BitmapData)
   fullName: DotFeather.Texture2D.LoadFrom(System.Drawing.Imaging.BitmapData)
   nameWithType: Texture2D.LoadFrom(BitmapData)
+- uid: DotFeather.Texture2D.LoadFrom(System.IO.Stream)
+  name: LoadFrom(Stream)
+  href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_LoadFrom_System_IO_Stream_
+  commentId: M:DotFeather.Texture2D.LoadFrom(System.IO.Stream)
+  fullName: DotFeather.Texture2D.LoadFrom(System.IO.Stream)
+  nameWithType: Texture2D.LoadFrom(Stream)
 - uid: DotFeather.Texture2D.LoadFrom(System.String)
   name: LoadFrom(String)
   href: api/DotFeather.Texture2D.html#DotFeather_Texture2D_LoadFrom_System_String_
@@ -5402,6 +5432,12 @@ references:
   isSpec: "True"
   fullName: DotFeather.Tile.Interval
   nameWithType: Tile.Interval
+- uid: DotFeather.Tile.LoadFrom(System.IO.Stream)
+  name: LoadFrom(Stream)
+  href: api/DotFeather.Tile.html#DotFeather_Tile_LoadFrom_System_IO_Stream_
+  commentId: M:DotFeather.Tile.LoadFrom(System.IO.Stream)
+  fullName: DotFeather.Tile.LoadFrom(System.IO.Stream)
+  nameWithType: Tile.LoadFrom(Stream)
 - uid: DotFeather.Tile.LoadFrom(System.String)
   name: LoadFrom(String)
   href: api/DotFeather.Tile.html#DotFeather_Tile_LoadFrom_System_String_

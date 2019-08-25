@@ -11,6 +11,7 @@ items:
   - DotFeather.NineSliceSprite.Destroy
   - DotFeather.NineSliceSprite.Draw(DotFeather.GameBase,DotFeather.Vector)
   - DotFeather.NineSliceSprite.Height
+  - DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
   - DotFeather.NineSliceSprite.LoadFrom(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
   - DotFeather.NineSliceSprite.Location
   - DotFeather.NineSliceSprite.Name
@@ -32,7 +33,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: NineSliceSprite
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -42,6 +43,7 @@ items:
     content: 'public class NineSliceSprite : IDrawable'
     content.vb: >-
       Public Class NineSliceSprite
+
           Implements IDrawable
   inheritance:
   - System.Object
@@ -79,7 +81,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Textures
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -117,7 +119,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -156,7 +158,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 28
+    startLine: 29
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -195,7 +197,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 33
+    startLine: 34
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -234,7 +236,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 38
+    startLine: 39
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -273,7 +275,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -312,7 +314,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Color
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 48
+    startLine: 49
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -349,7 +351,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Width
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 53
+    startLine: 54
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -386,7 +388,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Height
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 58
+    startLine: 59
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -423,7 +425,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -461,7 +463,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 82
+    startLine: 83
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -496,6 +498,59 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: LoadFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: DotFeather.NineSliceSprite
+  langs:
+  - csharp
+  - vb
+  name: LoadFrom(Stream, Int32, Int32, Int32, Int32)
+  nameWithType: NineSliceSprite.LoadFrom(Stream, Int32, Int32, Int32, Int32)
+  fullName: DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream, System.Int32, System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Graphics/NineSliceSprite.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: LoadFrom
+    path: ../DotFeather/Graphics/NineSliceSprite.cs
+    startLine: 94
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n指定した画像ファイルから <xref href=\"DotFeather.NineSliceSprite\" data-throw-if-not-resolved=\"false\"></xref> を生成します。\n"
+  example: []
+  syntax:
+    content: public static NineSliceSprite LoadFrom(Stream stream, int left, int top, int right, int bottom)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: ファイルを示すストリーム。
+    - id: left
+      type: System.Int32
+      description: 左からのピクセル値。
+    - id: top
+      type: System.Int32
+      description: 上からのピクセル値。
+    - id: right
+      type: System.Int32
+      description: 右からのピクセル値。
+    - id: bottom
+      type: System.Int32
+      description: 下からのピクセル値。
+    return:
+      type: DotFeather.NineSliceSprite
+      description: 生成された <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref>。
+    content.vb: Public Shared Function LoadFrom(stream As Stream, left As Integer, top As Integer, right As Integer, bottom As Integer) As NineSliceSprite
+  overload: DotFeather.NineSliceSprite.LoadFrom*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: DotFeather.NineSliceSprite.Destroy
   commentId: M:DotFeather.NineSliceSprite.Destroy
   id: Destroy
@@ -514,7 +569,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 87
+    startLine: 99
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -548,7 +603,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 99
+    startLine: 111
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1104,6 +1159,19 @@ references:
   name: LoadFrom
   nameWithType: NineSliceSprite.LoadFrom
   fullName: DotFeather.NineSliceSprite.LoadFrom
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
 - uid: DotFeather.NineSliceSprite.Destroy*
   commentId: Overload:DotFeather.NineSliceSprite.Destroy
   name: Destroy

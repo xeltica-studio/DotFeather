@@ -37,6 +37,7 @@ items:
     content: 'public class AudioPlayer : IDisposable'
     content.vb: >-
       Public Class AudioPlayer
+
           Implements IDisposable
   inheritance:
   - System.Object

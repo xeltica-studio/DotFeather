@@ -49,6 +49,7 @@ items:
     content: 'public class Graphic : IDrawable'
     content.vb: >-
       Public Class Graphic
+
           Implements IDrawable
   inheritance:
   - System.Object

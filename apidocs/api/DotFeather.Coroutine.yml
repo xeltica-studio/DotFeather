@@ -35,6 +35,7 @@ items:
     content: 'public class Coroutine : YieldInstruction'
     content.vb: >-
       Public Class Coroutine
+
           Inherits YieldInstruction
   inheritance:
   - System.Object

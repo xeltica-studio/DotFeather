@@ -36,7 +36,9 @@ items:
     content: 'public class TextDrawable : TextureDrawableBase, IDrawable'
     content.vb: >-
       Public Class TextDrawable
+
           Inherits TextureDrawableBase
+
           Implements IDrawable
   inheritance:
   - System.Object

@@ -9,6 +9,7 @@ items:
   - DotFeather.Sprite.#ctor(DotFeather.Texture2D,DotFeather.Vector,System.Single,DotFeather.Vector,System.Int32,System.String)
   - DotFeather.Sprite.#ctor(DotFeather.Texture2D,System.Int32,System.Int32,System.Single,DotFeather.Vector)
   - DotFeather.Sprite.Destroy
+  - DotFeather.Sprite.LoadFrom(System.IO.Stream)
   - DotFeather.Sprite.LoadFrom(System.String)
   - DotFeather.Sprite.Texture
   langs:
@@ -25,7 +26,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Sprite
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -35,7 +36,9 @@ items:
     content: 'public class Sprite : TextureDrawableBase, IDrawable'
     content.vb: >-
       Public Class Sprite
+
           Inherits TextureDrawableBase
+
           Implements IDrawable
   inheritance:
   - System.Object
@@ -83,7 +86,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -128,7 +131,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Texture
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -166,7 +169,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 42
+    startLine: 44
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -214,7 +217,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 54
+    startLine: 56
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -250,7 +253,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 66
+    startLine: 68
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -266,6 +269,47 @@ items:
       type: DotFeather.Sprite
       description: 生成された <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref>。
     content.vb: Public Shared Function LoadFrom(path As String) As Sprite
+  overload: DotFeather.Sprite.LoadFrom*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.Sprite.LoadFrom(System.IO.Stream)
+  commentId: M:DotFeather.Sprite.LoadFrom(System.IO.Stream)
+  id: LoadFrom(System.IO.Stream)
+  parent: DotFeather.Sprite
+  langs:
+  - csharp
+  - vb
+  name: LoadFrom(Stream)
+  nameWithType: Sprite.LoadFrom(Stream)
+  fullName: DotFeather.Sprite.LoadFrom(System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Graphics/Sprite.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: LoadFrom
+    path: ../DotFeather/Graphics/Sprite.cs
+    startLine: 75
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n指定した画像ファイルから <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> を生成します。\n"
+  example: []
+  syntax:
+    content: public static Sprite LoadFrom(Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: ファイルを示すストリーム。
+    return:
+      type: DotFeather.Sprite
+      description: 生成された <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref>。
+    content.vb: Public Shared Function LoadFrom(stream As Stream) As Sprite
   overload: DotFeather.Sprite.LoadFrom*
   modifiers.csharp:
   - public
@@ -291,7 +335,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 71
+    startLine: 80
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -770,6 +814,19 @@ references:
   name: LoadFrom
   nameWithType: Sprite.LoadFrom
   fullName: DotFeather.Sprite.LoadFrom
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
 - uid: DotFeather.TextureDrawableBase.Destroy
   commentId: M:DotFeather.TextureDrawableBase.Destroy
   parent: DotFeather.TextureDrawableBase

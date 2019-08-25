@@ -51,6 +51,7 @@ items:
     content: 'public class Container : IDrawable, IUpdatable, IList<IDrawable>, ICollection<IDrawable>, IEnumerable<IDrawable>, IEnumerable'
     content.vb: >-
       Public Class Container
+
           Implements IDrawable, IUpdatable, IList(Of IDrawable), ICollection(Of IDrawable), IEnumerable(Of IDrawable), IEnumerable
   inheritance:
   - System.Object

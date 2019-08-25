@@ -30,6 +30,7 @@ items:
     content: 'public class WaitUntilNextFrame : YieldInstruction'
     content.vb: >-
       Public Class WaitUntilNextFrame
+
           Inherits YieldInstruction
   inheritance:
   - System.Object

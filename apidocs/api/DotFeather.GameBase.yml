@@ -56,6 +56,7 @@ items:
     content: 'public abstract class GameBase : IDisposable'
     content.vb: >-
       Public MustInherit Class GameBase
+
           Implements IDisposable
   inheritance:
   - System.Object

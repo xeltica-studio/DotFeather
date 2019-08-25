@@ -31,7 +31,9 @@ items:
     content: 'public class ALSource : OpenTKManagedHandleBase<int>, IDisposable'
     content.vb: >-
       Public Class ALSource
+
           Inherits OpenTKManagedHandleBase(Of Integer)
+
           Implements IDisposable
   inheritance:
   - System.Object

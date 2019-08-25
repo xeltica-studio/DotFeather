@@ -12,6 +12,7 @@ items:
   - DotFeather.Tile.Destroy
   - DotFeather.Tile.Draw(DotFeather.GameBase,DotFeather.Tilemap,DotFeather.Vector,System.Nullable{System.Drawing.Color})
   - DotFeather.Tile.Interval
+  - DotFeather.Tile.LoadFrom(System.IO.Stream)
   - DotFeather.Tile.LoadFrom(System.String)
   - DotFeather.Tile.Texture
   langs:
@@ -28,7 +29,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Tile
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -38,6 +39,7 @@ items:
     content: 'public class Tile : ITile'
     content.vb: >-
       Public Class Tile
+
           Implements ITile
   inheritance:
   - System.Object
@@ -75,7 +77,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Texture
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -112,7 +114,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Animations
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -149,7 +151,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Interval
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -186,7 +188,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 31
+    startLine: 32
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -222,7 +224,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 37
+    startLine: 38
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -259,7 +261,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 50
+    startLine: 51
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -308,7 +310,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -354,7 +356,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 88
+    startLine: 89
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -370,6 +372,47 @@ items:
       type: DotFeather.Tile
       description: 生成されたタイル。
     content.vb: Public Shared Function LoadFrom(path As String) As Tile
+  overload: DotFeather.Tile.LoadFrom*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.Tile.LoadFrom(System.IO.Stream)
+  commentId: M:DotFeather.Tile.LoadFrom(System.IO.Stream)
+  id: LoadFrom(System.IO.Stream)
+  parent: DotFeather.Tile
+  langs:
+  - csharp
+  - vb
+  name: LoadFrom(Stream)
+  nameWithType: Tile.LoadFrom(Stream)
+  fullName: DotFeather.Tile.LoadFrom(System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Graphics/Tiles/Tile.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: LoadFrom
+    path: ../DotFeather/Graphics/Tiles/Tile.cs
+    startLine: 96
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\n画像ファイルを指定して、タイルを生成します。\n"
+  example: []
+  syntax:
+    content: public static Tile LoadFrom(Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: ファイルを示すストリーム。
+    return:
+      type: DotFeather.Tile
+      description: 生成されたタイル。
+    content.vb: Public Shared Function LoadFrom(stream As Stream) As Tile
   overload: DotFeather.Tile.LoadFrom*
   modifiers.csharp:
   - public
@@ -395,7 +438,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 93
+    startLine: 101
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1015,6 +1058,19 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
 - uid: DotFeather.Tile.Destroy*
   commentId: Overload:DotFeather.Tile.Destroy
   name: Destroy

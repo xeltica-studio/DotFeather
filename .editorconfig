@@ -18,7 +18,7 @@ tab_width = 2
 [*.cs]
 dotnet_style_require_accessibility_modifiers = always
 
-[apidocs/*]
+[apidocs/**]
 indent_style = unset
 indent_size = unset
 tab_width = unset

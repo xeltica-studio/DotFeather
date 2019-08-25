@@ -1,6 +1,8 @@
 #pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 
 
+using System.IO;
+
 namespace DotFeather
 {
 	/// <summary>
@@ -67,6 +69,13 @@ namespace DotFeather
 		public static Sprite LoadFrom(string path) => new Sprite(path);
 
 		/// <summary>
+		/// 指定した画像ファイルから <see cref="Sprite"/> を生成します。
+		/// </summary>
+		/// <param name="stream">ファイルを示すストリーム。</param>
+		/// <returns>生成された <see cref="Sprite"/>。</returns>
+		public static Sprite LoadFrom(Stream stream) => new Sprite(stream);
+
+		/// <summary>
 		/// この <see cref="Sprite"/> を破棄します。
 		/// </summary>
 		public override void Destroy()
@@ -76,6 +85,12 @@ namespace DotFeather
 		}
 
 		private Sprite(string path)
+			: this(Texture2D.LoadFrom(path)) 
+		{　
+			internalTexture = Texture;
+		}
+
+		private Sprite(Stream path)
 			: this(Texture2D.LoadFrom(path)) 
 		{　
 			internalTexture = Texture;

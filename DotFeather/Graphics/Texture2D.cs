@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using OpenTK.Graphics.OpenGL;
 
@@ -40,7 +41,22 @@ namespace DotFeather
 		/// <param name="path">ファイルパス。</param>
 		public static Texture2D LoadFrom(string path)
 		{
-			using (var file = new Bitmap(path))
+			return LoadFrom(new Bitmap(path));
+		}
+
+		/// <summary>
+		/// 画像ファイルを読み込みます。
+		/// </summary>
+		/// <returns>読み込んだ画像のデータ。</returns>
+		/// <param name="stream">ストリーム。</param>
+		public static Texture2D LoadFrom(Stream stream)
+		{
+			return LoadFrom(new Bitmap(stream));
+		}
+
+		private static Texture2D LoadFrom(Bitmap bmp)
+		{
+			using (var file = bmp)
 			{
 				return LoadFrom(file.LockBits(new Rectangle(0, 0, file.Width, file.Height), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb));
 			}
@@ -95,7 +111,25 @@ namespace DotFeather
 		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
 		public static Texture2D[] LoadAndSplitFrom(string path, int horizonalCount, int verticalCount, Size sizeOfCroppedImage)
 		{
-			using (var file = new Bitmap(path))
+			return LoadAndSplitFrom(new Bitmap(path), horizonalCount, verticalCount, sizeOfCroppedImage);
+		}
+
+		/// <summary>
+		/// 画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。
+		/// </summary>
+		/// <returns>切り取られた全ての画像データ。</returns>
+		/// <param name="stream">画像のファイルを示すストリーム。</param>
+		/// <param name="horizonalCount">横方向の画像の枚数。</param>
+		/// <param name="verticalCount">盾向の画像の枚数。</param>
+		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
+		public static Texture2D[] LoadAndSplitFrom(Stream stream, int horizonalCount, int verticalCount, Size sizeOfCroppedImage)
+		{
+			return LoadAndSplitFrom(new Bitmap(stream), horizonalCount, verticalCount, sizeOfCroppedImage);
+		}
+
+		private static Texture2D[] LoadAndSplitFrom(Bitmap bmp, int horizonalCount, int verticalCount, Size sizeOfCroppedImage)
+		{
+			using (var file = bmp)
 			{
 				var datas = new List<Texture2D>();
 
@@ -132,7 +166,26 @@ namespace DotFeather
 		/// <returns>切り取られた9枚のテクスチャ。</returns>
 		public static Texture2D[] LoadAndSplitFrom(string path, int left, int top, int right, int bottom)
 		{
-			using (var file = new Bitmap(path))
+			return LoadAndSplitFrom(new Bitmap(path), left, top, right, bottom);
+		}
+
+		/// <summary>
+		/// 画像ファイルを読み込み、9スライス用に切り抜きます。
+		/// </summary>
+		/// <param name="stream">画像を示すストリーム。</param>
+		/// <param name="left">左からのピクセル値。</param>
+		/// <param name="top">上からのピクセル値。</param>
+		/// <param name="right">右からのピクセル値。</param>
+		/// <param name="bottom">下からのピクセル値。</param>
+		/// <returns>切り取られた9枚のテクスチャ。</returns>
+		public static Texture2D[] LoadAndSplitFrom(Stream stream, int left, int top, int right, int bottom)
+		{
+			return LoadAndSplitFrom(new Bitmap(stream), left, top, right, bottom);
+		}
+
+		private static Texture2D[] LoadAndSplitFrom(Bitmap bitmap, int left, int top, int right, int bottom)
+		{
+			using (var file = bitmap)
 			{
 				if (left > file.Width)
 					throw new ArgumentException(nameof(left));

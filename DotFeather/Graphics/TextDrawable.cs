@@ -74,7 +74,7 @@ namespace DotFeather
 		/// <param name="text"></param>
 		/// <param name="font"></param>
 		/// <param name="color"></param>
-		public TextDrawable(string text, Font font = default, Color color = default)
+		public TextDrawable(string text, Font font = default, Color? color = default)
 		{
 			this.text = text;
 			this.font = font;

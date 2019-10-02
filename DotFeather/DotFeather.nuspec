@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>DotFeather</id>
-		<version>1.5.0</version>
+		<version>1.6.0</version>
 		<title>DotFeather</title>
 		<authors>Xeltica</authors>
 		<owners>Xeltica</owners>
@@ -13,12 +13,14 @@
 		<tags>GameEngine</tags>
 				<license type="expression">MIT</license>
 		<releaseNotes>
-		+ Add overloads of LoadFrom() method that takes Stream type as an argument
+			See https://github.com/Xeltica/DotFeather/releases/tag/1.6.0
 		</releaseNotes>
 		<dependencies>
-			<dependency id="OpenTK" version="1.0.4" />
-			<dependency id="Microsoft.Windows.Compatibility" version="2.0.1" />
-			<dependency id="NVorbis" version="0.8.6" />
+			<group targetFramework=".NETStandard2.0">
+				<dependency id="OpenTK.NetStandard" version="1.0.7-prerelease" />
+				<dependency id="Microsoft.Windows.Compatibility" version="2.1.1" />
+				<dependency id="NVorbis" version="0.8.6" />
+			</group>
 		</dependencies>
 	</metadata>
 </package>

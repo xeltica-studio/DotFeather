@@ -1,4 +1,4 @@
-version: 1.5.0.{build}
+version: 1.6.0.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -42,11 +42,26 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    + Stream 型を引数に取る LoadFrom() メソッドのオーバーロードを追加
-
+    + スクリーンショットを撮影する API を**追加**
+    + キャプチャーモードを **追加**
+      + キャプチャーモードでは、カレントディレクトリに shot ディレクトリを追加し、全フレームを PNG イメージとして保存します。
+      + ffmpeg 等の外部ツールと組み合わせることで、動画作成に役立つでしょう。
+    + 起動後からの総フレーム数を取得できる `GameBase.TotalFrame` プロパティを**追加**
+    + キャプチャーボードであるかどうかを取得できる `GameBase.IsCaptureMode` プロパティを**追加**
+    + `TextDrawable` クラスのコンストラクタで色指定を省略すると透明になってしまう不具合を**修正**
+    + `Container` においてソートが本来と真逆に行われる不具合を**修正**
+    + `IDrawable.ZOrder` を変更しても反映されない不具合を**修正**
     ----
 
-    + Add overloads of LoadFrom() method that takes Stream type as an argument
+    + **Add** an API to take a screenshot
+    + **Add** a capture-mode feature
+      + When it turned on, the engine adds "shot" directory at the current directory, and save all frames as PNG images.
+      + It will be useful with third-party tools such as ffmpeg.
+    + **Add** a `GameBase.TotalFrame` property that returns total frames since the game launched
+    + **Add** a `GameBase.IsCaptureMode` property that returns whether the game is in capture mode
+    + **Fix** a bug that `TextDrawable` instances will be transparent when omit the color argument on the constructor
+    + **Fix* a bug that `Container` sorts the children in reverse
+    + **Fix** a bug that nothing happens when changing `IDrawable.ZOrder`
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

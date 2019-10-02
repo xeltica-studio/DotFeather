@@ -1,13 +1,12 @@
 using System;
-using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.Drawing;
 
-using SDColor = System.Drawing.Color;
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 using System.Collections;
+using System.IO;
 
 namespace DotFeather
 {
@@ -72,7 +71,7 @@ namespace DotFeather
 		/// <summary>
 		/// ウィンドウの背景色を取得または設定します。
 		/// </summary>
-		public SDColor BackgroundColor { get; set; }
+		public Color BackgroundColor { get; set; }
 
 		/// <summary>
 		/// このウィンドウのリフレッシュレートを取得または設定します。
@@ -99,6 +98,17 @@ namespace DotFeather
 		/// 現在のディスプレイの DPI を取得します。
 		/// </summary>
 		public float Dpi { get; private set; }
+
+		/// <summary>
+		/// 起動後からのトータルフレーム数を取得します。
+		/// </summary>
+		/// <value></value>
+		public long TotalFrame { get; private set; }
+
+		/// <summary>
+		/// ゲームがキャプチャモードであるかどうかを取得します。
+		/// </summary>
+		public bool IsCaptureMode { get; private set; }
 
 		/// <summary>
 		/// 現在のウィンドウ状態を取得または設定します。
@@ -145,55 +155,28 @@ namespace DotFeather
 		/// <param name="height">高さ.</param>
 		/// <param name="title">タイトル.</param>
 		/// <param name="refreshRate">リフレッシュレート.</param>
-		protected GameBase(int width, int height, string title = null, int refreshRate = 60)
+		/// <param name="isCaptureMode"><see langword="true"/> にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。</param>
+		protected GameBase(int width, int height, string title = null, int refreshRate = 60, bool isCaptureMode = false)
 		{
 			RefreshRate = refreshRate;
+			IsCaptureMode = isCaptureMode;
 
 			window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow)
 			{
-				VSync = VSyncMode.On,
+				VSync = VSyncMode.Adaptive,
 				TargetRenderFrequency = refreshRate,
 				TargetUpdateFrequency = refreshRate,
 			};
 
-			window.UpdateFrame += (s, e) =>
+			if (!Directory.Exists("./shot"))
 			{
-				Time.Now += e.Time;
-				Time.DeltaTime = e.Time;
-				frameCount++;
-				if (prevSecond != DateTime.Now.Second)
-				{
-					Time.Fps = frameCount;
-					frameCount = 0;
-					prevSecond = DateTime.Now.Second;
-				}
-				Input.Keyboard.Update();
-				Input.Mouse.Update();
-				CoroutineRunner.Update();
-				Root.OnUpdate(this);
-				OnUpdate(s, new DFEventArgs
-				{
-					DeltaTime = e.Time,
-				});
-			};
-
-			window.RenderFrame += (_, __) =>
-			{
-				GL.ClearColor(BackgroundColor);
-				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-
-				Root.Draw(this, Vector.Zero);
-
-				window.SwapBuffers();
-				Dpi = (float)window.ClientSize.Width / window.Size.Width;
-			};
+				Directory.CreateDirectory("shot");
+			}
 
 			window.Load += (s, e) =>
 			{
 				GL.ClearColor(Color.Black);
 				GL.LineWidth(1);
-				window.VSync = VSyncMode.On;
-
 				GL.Disable(EnableCap.DepthTest);
 
 				window.WindowBorder = WindowBorder.Resizable;
@@ -206,15 +189,13 @@ namespace DotFeather
 				OnResize(s, e);
 			};
 
+			window.RenderFrame += OnRenderFrame;
 			window.Unload += OnUnload;
-
 			window.KeyDown += (s, e) => OnKeyDown(s, new DFKeyEventArgs(e));
 			window.KeyUp += (s, e) => OnKeyUp(s, new DFKeyEventArgs(e));
 
 			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
-			{
 				Input.Mouse.Position = new System.Drawing.Point((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
-			};
 		}
 
 		/// <summary>
@@ -256,6 +237,25 @@ namespace DotFeather
 		public void Dispose()
 		{
 			window.Dispose();
+		}
+
+		/// <summary>
+		/// 現在の画面のスクリーンショットを撮影します。
+		/// </summary>
+		public Bitmap TakeScreenshot()
+		{
+			if (GraphicsContext.CurrentContext == null)
+				throw new GraphicsContextMissingException();
+			int w = Width;
+			int h = Height;
+			Bitmap bmp = new Bitmap(w, h);
+			System.Drawing.Imaging.BitmapData data =
+				bmp.LockBits(new Rectangle(0, 0, w, h), System.Drawing.Imaging.ImageLockMode.WriteOnly, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+			GL.ReadPixels(0, 0, w, h, OpenTK.Graphics.OpenGL.PixelFormat.Bgr, PixelType.UnsignedByte, data.Scan0);
+			bmp.UnlockBits(data);
+
+			bmp.RotateFlip(RotateFlipType.RotateNoneFlipY);
+			return bmp;
 		}
 
 		/// <summary>
@@ -302,6 +302,60 @@ namespace DotFeather
 		/// 乱数生成器を取得します。
 		/// </summary>
 		protected Random Random { get; private set; } = new Random();
+
+		private void OnRenderFrame(object sender, FrameEventArgs e)
+		{
+			GL.ClearColor(BackgroundColor);
+			GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+
+			var deltaTime = IsCaptureMode ? 1d / RefreshRate : e.Time;
+			Time.Now += deltaTime;
+			Time.DeltaTime = deltaTime;
+
+			CalculateFps();
+
+			Root.Draw(this, Vector.Zero);
+
+			Update(sender);
+
+			Dpi = (float)window.ClientSize.Width / window.Size.Width;
+
+			window.ProcessEvents();
+
+			if (IsCaptureMode)
+			{
+				var path = $"./shot/{TotalFrame:00000000}.png";
+				if (!File.Exists(path))
+				{
+					GL.Flush();
+					var bmp = TakeScreenshot();
+					bmp.Save(path, ImageFormat.Png);
+					bmp.Dispose();
+				}
+				TotalFrame++;
+			}
+			window.SwapBuffers();
+		}
+
+		private void Update(object sender)
+		{
+			Input.Keyboard.Update();
+			Input.Mouse.Update();
+			CoroutineRunner.Update();
+			Root.OnUpdate(this);
+			OnUpdate(sender, new DFEventArgs { DeltaTime = Time.DeltaTime });
+		}
+
+		private void CalculateFps()
+		{
+			frameCount++;
+			if (prevSecond != DateTime.Now.Second)
+			{
+				Time.Fps = frameCount;
+				frameCount = 0;
+				prevSecond = DateTime.Now.Second;
+			}
+		}
 
 		private int? statusCode;
 		private int frameCount;

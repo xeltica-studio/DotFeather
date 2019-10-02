@@ -49,7 +49,7 @@ namespace DotFeather
 		/// コンテナをソートします。
 		/// </summary>
 		public void Sort() =>
-			Children.Sort((d1, d2) => d1.ZOrder < d2.ZOrder ? -1 : d1.ZOrder > d2.ZOrder ? 1 : 0);
+			Children.Sort((d1, d2) => d1.ZOrder < d2.ZOrder ? 1 : d1.ZOrder > d2.ZOrder ? -1 : 0);
 
 		/// <summary>
 		/// このコンテナに子要素を追加します。
@@ -57,7 +57,6 @@ namespace DotFeather
 		/// <param name="child">子要素。</param>
 		public void Add(IDrawable child)
 		{
-			Sort();
 			Children.Add(child);
 		}
 
@@ -68,7 +67,6 @@ namespace DotFeather
 		/// <param name="item">子要素。</param>
 		public void Insert(int index, IDrawable item)
 		{
-			Sort();
 			Children.Insert(index, item);
 		}
 
@@ -77,6 +75,7 @@ namespace DotFeather
 		/// </summary>
 		public void Draw(GameBase game, Vector location)
 		{
+			Sort();
 			for (var i = this.Count - 1; i >= 0; i--)
 			{
 				if (this.Count - 1 < i)

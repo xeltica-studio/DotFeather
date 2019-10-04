@@ -13,17 +13,15 @@ DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET St
 - Windows
 - macOS
 
-## Supported Graphics Driver
+## Supported Rendering Backend
 
 - OpenGL 1.0 (Using OpenTK)
 
 ### In Planning
 
-- Linux/X11 Support (I have to fix bug to run DotFeahter on Linux.)
+- GNU/Linux Support (I have to fix bug to run DotFeahter on Linux.)
 	- for iOS / Android
 - OpenGL ES 2.0 (Using OpenTK)
-- DirectX 9.0 (Using DXLib)
-	- It'll only works on Windows
 - Metal2 (Using Xamarin.iOS and Xamarin.Mac)
 	- It'll only works on iOS & macOS
 
@@ -47,6 +45,8 @@ dotnet build
 	- Container - An object which can contain other drawables
 	- Text - An object which can draw text
 	- 9-slice Sprite - A special sprite to split into 9 sheets to resize smoothly
+- A Function to Take Screenshot
+- A Feature to capture screen as a serial-numbered pictures
 - Keyboard Input
 - Mouse Input
 - Playing music
@@ -57,8 +57,21 @@ dotnet build
 
 ----
 
-<p id="f1">1: It depends on your computer's spec.</p>
+<p id="f1">1: It depends on your computer's power.</p>
 
+## FAQ
+
+### An error that libgdiplus cannot be found on macOS
+
+Install homebrew and run the following command:
+
+```
+brew install mono-libgdiplus
+```
+
+### An error that libgdiplus cannot be found on GNU/Linux
+
+Install libgdiplus from your package manager or build it from source-code.
 
 ## Documents
 

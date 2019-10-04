@@ -20,11 +20,14 @@ namespace DotFeather
 			red = new ClickableSprite(Texture2D.CreateSolid(Color.FromArgb(0x7fff0000), 256, 256));
 			green = new ClickableSprite(Texture2D.CreateSolid(Color.FromArgb(0x7f00ff00), 256, 256));
 
+			var text = new TextDrawable("あひる", new Font(new FontFamily("ヒラギノ角ゴ Pro W8"), 40), Color.White);
+
 			red.Location = new Vector(64, 64);
 			green.Location = new Vector(192, 192);
 
 			Root.Add(green);
 			Root.Add(red);
+			Root.Add(text);
 
 			red.Click += (s) => Root.Remove(s);
 			green.Click += (s) => Root.Remove(s);

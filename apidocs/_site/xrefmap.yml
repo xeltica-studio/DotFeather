@@ -3594,12 +3594,12 @@ references:
   commentId: T:DotFeather.GameBase
   fullName: DotFeather.GameBase
   nameWithType: GameBase
-- uid: DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32)
-  name: GameBase(Int32, Int32, String, Int32)
-  href: api/DotFeather.GameBase.html#DotFeather_GameBase__ctor_System_Int32_System_Int32_System_String_System_Int32_
-  commentId: M:DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32)
-  fullName: DotFeather.GameBase.GameBase(System.Int32, System.Int32, System.String, System.Int32)
-  nameWithType: GameBase.GameBase(Int32, Int32, String, Int32)
+- uid: DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
+  name: GameBase(Int32, Int32, String, Int32, Boolean)
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_
+  commentId: M:DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
+  fullName: DotFeather.GameBase.GameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean)
+  nameWithType: GameBase.GameBase(Int32, Int32, String, Int32, Boolean)
 - uid: DotFeather.GameBase.#ctor*
   name: GameBase
   href: api/DotFeather.GameBase.html#DotFeather_GameBase__ctor_
@@ -3672,6 +3672,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.GameBase.Height
   nameWithType: GameBase.Height
+- uid: DotFeather.GameBase.IsCaptureMode
+  name: IsCaptureMode
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_IsCaptureMode
+  commentId: P:DotFeather.GameBase.IsCaptureMode
+  fullName: DotFeather.GameBase.IsCaptureMode
+  nameWithType: GameBase.IsCaptureMode
+- uid: DotFeather.GameBase.IsCaptureMode*
+  name: IsCaptureMode
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_IsCaptureMode_
+  commentId: Overload:DotFeather.GameBase.IsCaptureMode
+  isSpec: "True"
+  fullName: DotFeather.GameBase.IsCaptureMode
+  nameWithType: GameBase.IsCaptureMode
 - uid: DotFeather.GameBase.IsFocused
   name: IsFocused
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_IsFocused
@@ -3870,6 +3883,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.GameBase.StopCoroutine
   nameWithType: GameBase.StopCoroutine
+- uid: DotFeather.GameBase.TakeScreenshot
+  name: TakeScreenshot()
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_TakeScreenshot
+  commentId: M:DotFeather.GameBase.TakeScreenshot
+  fullName: DotFeather.GameBase.TakeScreenshot()
+  nameWithType: GameBase.TakeScreenshot()
+- uid: DotFeather.GameBase.TakeScreenshot*
+  name: TakeScreenshot
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_TakeScreenshot_
+  commentId: Overload:DotFeather.GameBase.TakeScreenshot
+  isSpec: "True"
+  fullName: DotFeather.GameBase.TakeScreenshot
+  nameWithType: GameBase.TakeScreenshot
 - uid: DotFeather.GameBase.Title
   name: Title
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_Title
@@ -3883,6 +3909,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.GameBase.Title
   nameWithType: GameBase.Title
+- uid: DotFeather.GameBase.TotalFrame
+  name: TotalFrame
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_TotalFrame
+  commentId: P:DotFeather.GameBase.TotalFrame
+  fullName: DotFeather.GameBase.TotalFrame
+  nameWithType: GameBase.TotalFrame
+- uid: DotFeather.GameBase.TotalFrame*
+  name: TotalFrame
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_TotalFrame_
+  commentId: Overload:DotFeather.GameBase.TotalFrame
+  isSpec: "True"
+  fullName: DotFeather.GameBase.TotalFrame
+  nameWithType: GameBase.TotalFrame
 - uid: DotFeather.GameBase.Visible
   name: Visible
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_Visible
@@ -4948,12 +4987,15 @@ references:
   commentId: T:DotFeather.TextDrawable
   fullName: DotFeather.TextDrawable
   nameWithType: TextDrawable
-- uid: DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)
-  name: TextDrawable(String, Font, Color)
-  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable__ctor_System_String_System_Drawing_Font_System_Drawing_Color_
-  commentId: M:DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)
-  fullName: DotFeather.TextDrawable.TextDrawable(System.String, System.Drawing.Font, System.Drawing.Color)
-  nameWithType: TextDrawable.TextDrawable(String, Font, Color)
+- uid: DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})
+  name: TextDrawable(String, Font, Nullable<Color>)
+  href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable__ctor_System_String_System_Drawing_Font_System_Nullable_System_Drawing_Color__
+  commentId: M:DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})
+  name.vb: TextDrawable(String, Font, Nullable(Of Color))
+  fullName: DotFeather.TextDrawable.TextDrawable(System.String, System.Drawing.Font, System.Nullable<System.Drawing.Color>)
+  fullName.vb: DotFeather.TextDrawable.TextDrawable(System.String, System.Drawing.Font, System.Nullable(Of System.Drawing.Color))
+  nameWithType: TextDrawable.TextDrawable(String, Font, Nullable<Color>)
+  nameWithType.vb: TextDrawable.TextDrawable(String, Font, Nullable(Of Color))
 - uid: DotFeather.TextDrawable.#ctor*
   name: TextDrawable
   href: api/DotFeather.TextDrawable.html#DotFeather_TextDrawable__ctor_

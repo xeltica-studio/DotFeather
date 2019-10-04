@@ -51,7 +51,6 @@ items:
     content: 'public class Container : IDrawable, IUpdatable, IList<IDrawable>, ICollection<IDrawable>, IEnumerable<IDrawable>, IEnumerable'
     content.vb: >-
       Public Class Container
-
           Implements IDrawable, IUpdatable, IList(Of IDrawable), ICollection(Of IDrawable), IEnumerable(Of IDrawable), IEnumerable
   inheritance:
   - System.Object
@@ -405,7 +404,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Insert
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 68
+    startLine: 67
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -446,7 +445,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 77
+    startLine: 75
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -485,7 +484,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 97
+    startLine: 96
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -520,7 +519,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 105
+    startLine: 104
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -554,7 +553,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 110
+    startLine: 109
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -590,7 +589,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IndexOf
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 116
+    startLine: 115
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -629,7 +628,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RemoveAt
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 121
+    startLine: 120
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -666,7 +665,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 126
+    startLine: 125
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -700,7 +699,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Contains
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 135
+    startLine: 134
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -739,7 +738,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CopyTo
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 140
+    startLine: 139
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -781,7 +780,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Remove
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 145
+    startLine: 144
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -821,7 +820,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.IEnumerable.GetEnumerator
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 150
+    startLine: 149
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -855,7 +854,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Count
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 155
+    startLine: 154
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -894,7 +893,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsReadOnly
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 160
+    startLine: 159
   assemblies:
   - DotFeather
   namespace: DotFeather

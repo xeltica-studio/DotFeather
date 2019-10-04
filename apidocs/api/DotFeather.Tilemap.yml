@@ -52,7 +52,6 @@ items:
     content: 'public class Tilemap : IDrawable'
     content.vb: >-
       Public Class Tilemap
-
           Implements IDrawable
   inheritance:
   - System.Object

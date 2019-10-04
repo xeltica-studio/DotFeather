@@ -43,7 +43,6 @@ items:
     content: 'public class NineSliceSprite : IDrawable'
     content.vb: >-
       Public Class NineSliceSprite
-
           Implements IDrawable
   inheritance:
   - System.Object

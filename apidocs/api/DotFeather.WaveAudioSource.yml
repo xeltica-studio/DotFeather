@@ -35,7 +35,6 @@ items:
     content: 'public class WaveAudioSource : IAudioSource'
     content.vb: >-
       Public Class WaveAudioSource
-
           Implements IAudioSource
   inheritance:
   - System.Object

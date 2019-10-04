@@ -30,7 +30,6 @@ items:
     content: 'public class DFEventArgs : EventArgs'
     content.vb: >-
       Public Class DFEventArgs
-
           Inherits EventArgs
   inheritance:
   - System.Object

@@ -39,7 +39,6 @@ items:
     content: 'public class Tile : ITile'
     content.vb: >-
       Public Class Tile
-
           Implements ITile
   inheritance:
   - System.Object

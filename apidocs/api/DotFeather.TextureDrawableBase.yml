@@ -40,7 +40,6 @@ items:
     content: 'public abstract class TextureDrawableBase : IDrawable'
     content.vb: >-
       Public MustInherit Class TextureDrawableBase
-
           Implements IDrawable
   inheritance:
   - System.Object

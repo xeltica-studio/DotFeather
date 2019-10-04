@@ -31,7 +31,6 @@ items:
     content: 'public sealed class GLContext : IDisposable'
     content.vb: >-
       Public NotInheritable Class GLContext
-
           Implements IDisposable
   inheritance:
   - System.Object

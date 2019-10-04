@@ -5,7 +5,7 @@ items:
   id: TextDrawable
   parent: DotFeather
   children:
-  - DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)
+  - DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})
   - DotFeather.TextDrawable.Color
   - DotFeather.TextDrawable.Destroy
   - DotFeather.TextDrawable.Font
@@ -36,9 +36,7 @@ items:
     content: 'public class TextDrawable : TextureDrawableBase, IDrawable'
     content.vb: >-
       Public Class TextDrawable
-
           Inherits TextureDrawableBase
-
           Implements IDrawable
   inheritance:
   - System.Object
@@ -222,16 +220,16 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)
-  commentId: M:DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)
-  id: '#ctor(System.String,System.Drawing.Font,System.Drawing.Color)'
+- uid: DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})
+  commentId: M:DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})
+  id: '#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})'
   parent: DotFeather.TextDrawable
   langs:
   - csharp
   - vb
-  name: TextDrawable(String, Font, Color)
-  nameWithType: TextDrawable.TextDrawable(String, Font, Color)
-  fullName: DotFeather.TextDrawable.TextDrawable(System.String, System.Drawing.Font, System.Drawing.Color)
+  name: TextDrawable(String, Font, Nullable<Color>)
+  nameWithType: TextDrawable.TextDrawable(String, Font, Nullable<Color>)
+  fullName: DotFeather.TextDrawable.TextDrawable(System.String, System.Drawing.Font, System.Nullable<System.Drawing.Color>)
   type: Constructor
   source:
     remote:
@@ -247,7 +245,7 @@ items:
   summary: "\n<xref href=\"DotFeather.TextDrawable\" data-throw-if-not-resolved=\"false\"></xref> の新しいインスタンスを初期化します。\n"
   example: []
   syntax:
-    content: public TextDrawable(string text, Font font = null, Color color = default(Color))
+    content: public TextDrawable(string text, Font font = null, Color? color = default(Color? ))
     parameters:
     - id: text
       type: System.String
@@ -256,14 +254,17 @@ items:
       type: System.Drawing.Font
       description: ''
     - id: color
-      type: System.Drawing.Color
+      type: System.Nullable{System.Drawing.Color}
       description: ''
-    content.vb: Public Sub New(text As String, font As Font = Nothing, color As Color = Nothing)
+    content.vb: Public Sub New(text As String, font As Font = Nothing, color As Color? = Nothing)
   overload: DotFeather.TextDrawable.#ctor*
+  nameWithType.vb: TextDrawable.TextDrawable(String, Font, Nullable(Of Color))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+  fullName.vb: DotFeather.TextDrawable.TextDrawable(System.String, System.Drawing.Font, System.Nullable(Of System.Drawing.Color))
+  name.vb: TextDrawable(String, Font, Nullable(Of Color))
 - uid: DotFeather.TextDrawable.UpdateTexture
   commentId: M:DotFeather.TextDrawable.UpdateTexture
   id: UpdateTexture
@@ -884,13 +885,6 @@ references:
   name: TextDrawable
   nameWithType: TextDrawable.TextDrawable
   fullName: DotFeather.TextDrawable.TextDrawable
-- uid: System.Drawing.Color
-  commentId: T:System.Drawing.Color
-  parent: System.Drawing
-  isExternal: true
-  name: Color
-  nameWithType: Color
-  fullName: System.Drawing.Color
 - uid: DotFeather.TextDrawable.UpdateTexture*
   commentId: Overload:DotFeather.TextDrawable.UpdateTexture
   name: UpdateTexture

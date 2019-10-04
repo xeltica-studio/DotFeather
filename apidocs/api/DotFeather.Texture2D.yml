@@ -42,7 +42,6 @@ items:
     content: 'public struct Texture2D : IDisposable'
     content.vb: >-
       Public Structure Texture2D
-
           Implements IDisposable
   implements:
   - System.IDisposable

@@ -31,7 +31,6 @@ items:
     content: 'public class WaitForSeconds : YieldInstruction'
     content.vb: >-
       Public Class WaitForSeconds
-
           Inherits YieldInstruction
   inheritance:
   - System.Object

@@ -124,9 +124,9 @@ namespace DotFeather
 			TextureDrawer.Draw(game, Textures[8], location + Location + (new Vector(WidthOf(0) + xSpan, HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, null);
 		}
 
-		private int WidthOf(int index) => Textures[index].Size.Width;
+		private int WidthOf(int index) => Textures[index].Size.X;
 
-		private int HeightOf(int index) => Textures[index].Size.Height;
+		private int HeightOf(int index) => Textures[index].Size.Y;
 
 		private NineSliceSprite(string path, int left, int top, int right, int bottom)
 				: this(Texture2D.LoadAndSplitFrom(path, left, top, right, bottom))

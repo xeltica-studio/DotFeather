@@ -195,7 +195,7 @@ namespace DotFeather
 			window.KeyUp += (s, e) => OnKeyUp(s, new DFKeyEventArgs(e));
 
 			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
-				DFMouse.Position = new System.Drawing.Point((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
+				DFMouse.Position = new Vector(e.Position.X / Dpi, e.Position.Y / Dpi);
 		}
 
 		/// <summary>

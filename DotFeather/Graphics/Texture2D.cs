@@ -21,14 +21,14 @@ namespace DotFeather
 		/// <summary>
 		/// このテクスチャのサイズを取得します。
 		/// </summary>
-		public Size Size { get; }
+		public VectorInt Size { get; }
 
 		/// <summary>
 		/// ハンドルとサイズを指定して、 <see cref="Texture2D"/> クラスの新しいインスタンスを初期化します。
 		/// </summary>
 		/// <param name="handle"></param>
 		/// <param name="size"></param>
-		public Texture2D(int handle, Size size)
+		public Texture2D(int handle, VectorInt size)
 		{
 			Handle = handle;
 			Size = size;
@@ -73,7 +73,7 @@ namespace DotFeather
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
 			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, bmp.Width, bmp.Height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Bgra, PixelType.UnsignedByte, bmp.Scan0);
-			return new Texture2D(texture, new Size(bmp.Width, bmp.Height));
+			return new Texture2D(texture, new VectorInt(bmp.Width, bmp.Height));
 		}
 
 		public static Texture2D CreateSolid(Color color, int sizeX, int sizeY)
@@ -96,10 +96,10 @@ namespace DotFeather
 
 			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, sizeX, sizeY, 0, OpenTK.Graphics.OpenGL.PixelFormat.Rgba, PixelType.Float, arr);
 
-			return new Texture2D(texture, new Size(sizeX, sizeY));
+			return new Texture2D(texture, new VectorInt(sizeX, sizeY));
 		}
 
-		public static Texture2D CreateSolid(Color color, Vector size) => CreateSolid(color, (int)size.X, (int)size.Y);
+		public static Texture2D CreateSolid(Color color, VectorInt size) => CreateSolid(color, size.X, size.Y);
 
 		/// <summary>
 		/// 画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。
@@ -109,7 +109,7 @@ namespace DotFeather
 		/// <param name="horizonalCount">横方向の画像の枚数。</param>
 		/// <param name="verticalCount">盾向の画像の枚数。</param>
 		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
-		public static Texture2D[] LoadAndSplitFrom(string path, int horizonalCount, int verticalCount, Size sizeOfCroppedImage)
+		public static Texture2D[] LoadAndSplitFrom(string path, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
 		{
 			return LoadAndSplitFrom(new Bitmap(path), horizonalCount, verticalCount, sizeOfCroppedImage);
 		}
@@ -122,12 +122,12 @@ namespace DotFeather
 		/// <param name="horizonalCount">横方向の画像の枚数。</param>
 		/// <param name="verticalCount">盾向の画像の枚数。</param>
 		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
-		public static Texture2D[] LoadAndSplitFrom(Stream stream, int horizonalCount, int verticalCount, Size sizeOfCroppedImage)
+		public static Texture2D[] LoadAndSplitFrom(Stream stream, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
 		{
 			return LoadAndSplitFrom(new Bitmap(stream), horizonalCount, verticalCount, sizeOfCroppedImage);
 		}
 
-		private static Texture2D[] LoadAndSplitFrom(Bitmap bmp, int horizonalCount, int verticalCount, Size sizeOfCroppedImage)
+		private static Texture2D[] LoadAndSplitFrom(Bitmap bmp, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
 		{
 			using (var file = bmp)
 			{
@@ -137,16 +137,16 @@ namespace DotFeather
 				{
 					for (int x = 0; x < horizonalCount; x++)
 					{
-						(var px, var py) = (x * sizeOfCroppedImage.Width, y * sizeOfCroppedImage.Height);
-						if (px + sizeOfCroppedImage.Width > file.Width)
+						(var px, var py) = (x * sizeOfCroppedImage.X, y * sizeOfCroppedImage.Y);
+						if (px + sizeOfCroppedImage.X > file.Width)
 						{
 							throw new ArgumentException(nameof(horizonalCount));
 						}
-						if (py + sizeOfCroppedImage.Height > file.Height)
+						if (py + sizeOfCroppedImage.Y > file.Height)
 						{
 							throw new ArgumentException(nameof(verticalCount));
 						}
-						var locked = file.LockBits(new Rectangle(px, py, sizeOfCroppedImage.Width, sizeOfCroppedImage.Height), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+						var locked = file.LockBits(new Rectangle(px, py, sizeOfCroppedImage.X, sizeOfCroppedImage.Y), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 						datas.Add(LoadFrom(locked));
 						file.UnlockBits(locked);
 					}

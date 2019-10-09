@@ -14,7 +14,7 @@ namespace DotFeather
 		/// <summary>
 		/// 頂点のバッファーを取得します。
 		/// </summary>
-		public Vector2[] Buffer { get; }
+		public Vector[] Buffer { get; }
 
 		/// <summary>
 		/// この <see cref="PrimitiveDrawable"/> のプリミティブタイプを取得します。
@@ -27,13 +27,13 @@ namespace DotFeather
 		public float Angle { get; set; }
 		public Vector Scale { get; set; }
 
-		public PrimitiveDrawable(Color c, PrimitiveType primitive, int lineWidth, Color? lineColor, params PointF[] vertexs)
+		public PrimitiveDrawable(Color c, PrimitiveType primitive, int lineWidth, Color? lineColor, params Vector[] vertexes)
 		{
 			color = c;
 			this.lineWidth = lineWidth;
 			this.lineColor = lineColor;
 
-			Buffer = vertexs.Select(v => new Vector2(v.X, v.Y)).ToArray();
+			Buffer = vertexes;
 			Primitive = primitive;
 		}
 
@@ -56,8 +56,8 @@ namespace DotFeather
 				{
 					foreach (var dp in Buffer)
 					{
-						var vec = dp + new Vector2(Location.X + location.X, Location.Y + location.Y);
-	vec *= new Vector2(Scale.X, Scale.Y);
+						var vec = dp + new Vector(Location.X + location.X, Location.Y + location.Y);
+						vec *= new Vector(Scale.X, Scale.Y);
 						// Convert device point to viewport point
 						var vp = vec.ToViewportPoint(hw, hh);
 						Vertex(color, vp);
@@ -70,18 +70,18 @@ namespace DotFeather
 				GL.LineWidth(lineWidth);
 				using (new GLContext(PrimitiveType.Lines))
 				{
-					Vector2? prevVertex = null;
-					Vector2? first = null;
+					Vector? prevVertex = null;
+					Vector? first = null;
 					foreach (var dp in Buffer)
 					{
-						var vec = dp + new Vector2(Location.X + location.X, Location.Y + location.Y);
-						vec *= new Vector2(Scale.X, Scale.Y);
+						var vec = dp + new Vector(Location.X + location.X, Location.Y + location.Y);
+						vec *= new Vector(Scale.X, Scale.Y);
 						// Convert device point to viewport point
 						var vp = vec.ToViewportPoint(hw, hh);
 						if (first == null)
 							first = vp;
 
-						if (prevVertex is Vector2 pv)
+						if (prevVertex is Vector pv)
 						{
 							var pVp = pv;
 							Vertex(lc, pVp);
@@ -99,10 +99,10 @@ namespace DotFeather
 
 		public void Destroy() { }
 
-		private void Vertex(Color col, Vector2 vec)
+		private void Vertex(Color col, Vector vec)
 		{
 			GL.Color4(col);
-			GL.Vertex2(vec);
+			GL.Vertex2(vec.X, vec.Y);
 		}
 
 		private readonly Color color;

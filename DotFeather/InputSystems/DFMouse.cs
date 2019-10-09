@@ -14,7 +14,7 @@ namespace DotFeather
 		/// マウスカーソルの座標を取得します。
 		/// </summary>
 		/// <value>The position.</value>
-		public static Point Position { get; internal set; }
+		public static VectorInt Position { get; internal set; }
 
 		/// <summary>
 		/// 左ボタンが押されているかどうかを示す値を取得または設定します。

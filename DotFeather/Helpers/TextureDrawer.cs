@@ -18,8 +18,8 @@ namespace DotFeather
 			var hw = game.Width / 2;
 			var hh = game.Height / 2;
 
-			var w = width ?? texture.Size.Width;
-	var h = height ?? texture.Size.Height;
+			var w = width ?? texture.Size.X;
+			var h = height ?? texture.Size.Y;
 
 			w *= scale.X;
 			h *= scale.Y;
@@ -52,13 +52,13 @@ namespace DotFeather
 			GL.Enable(EnableCap.Texture2D);
 			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
 
-	using (new GLContext(PrimitiveType.Quads))
+			using (new GLContext(PrimitiveType.Quads))
 			{
 				Vertex(1, 1, verts[3], color);
 				Vertex(0, 1, verts[2], color);
 				Vertex(0, 0, verts[0], color);
 				Vertex(1, 0, verts[1], color);
-	}
+			}
 
 			GL.Disable(EnableCap.Texture2D);
 			GL.Disable(EnableCap.Blend);

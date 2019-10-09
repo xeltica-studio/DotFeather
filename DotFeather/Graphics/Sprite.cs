@@ -57,8 +57,8 @@ namespace DotFeather
 		public Sprite(Texture2D texture)
 		{
 			Texture = texture;
-			Width = Texture.Size.Width;
-	Height = Texture.Size.Height;
+			Width = Texture.Size.X;
+			Height = Texture.Size.Y;
 		}
 
 		/// <summary>

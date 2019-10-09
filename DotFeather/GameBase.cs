@@ -195,7 +195,7 @@ namespace DotFeather
 			window.KeyUp += (s, e) => OnKeyUp(s, new DFKeyEventArgs(e));
 
 			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
-				Input.Mouse.Position = new System.Drawing.Point((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
+				DFMouse.Position = new System.Drawing.Point((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
 		}
 
 		/// <summary>
@@ -339,8 +339,8 @@ namespace DotFeather
 
 		private void Update(object sender)
 		{
-			Input.Keyboard.Update();
-			Input.Mouse.Update();
+			DFKeyboard.Update();
+			DFMouse.Update();
 			CoroutineRunner.Update();
 			Root.OnUpdate(this);
 			OnUpdate(sender, new DFEventArgs { DeltaTime = Time.DeltaTime });

@@ -35,7 +35,7 @@ namespace DotFeather
 
 		protected override void OnUpdate(object sender, DFEventArgs e)
 		{
-			if (Input.Keyboard.Escape.IsKeyUp)
+			if (DFKeyboard.Escape.IsKeyUp)
 				Exit(0);
 		}
 
@@ -50,9 +50,9 @@ namespace DotFeather
 
 		public void OnUpdate(GameBase game)
 		{
-			var (x, y) = (Input.Mouse.Position.X, Input.Mouse.Position.Y);
+			var (x, y) = (DFMouse.Position.X, DFMouse.Position.Y);
 
-			if (Location.X < x && Location.Y < y && x < Location.X + Width && y < Location.Y + Height && Input.Mouse.IsLeftUp)
+			if (Location.X < x && Location.Y < y && x < Location.X + Width && y < Location.Y + Height && DFMouse.IsLeftUp)
 			{
 				Click?.Invoke(this);
 			}

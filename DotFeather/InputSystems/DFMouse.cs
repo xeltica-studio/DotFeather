@@ -8,75 +8,64 @@ namespace DotFeather
 	/// <summary>
 	/// マウス カーソルの位置、マウスボタンの状態などを取得するクラスです。このクラスは継承できません。
 	/// </summary>
-	public sealed class DFMouse
+	public static class DFMouse
 	{
 		/// <summary>
 		/// マウスカーソルの座標を取得します。
 		/// </summary>
 		/// <value>The position.</value>
-		public Point Position { get; internal set; }
+		public static Point Position { get; internal set; }
 
 		/// <summary>
 		/// 左ボタンが押されているかどうかを示す値を取得または設定します。
 		/// </summary>
-		public bool IsLeft { get; private set; }
+		public static bool IsLeft { get; private set; }
 
 		/// <summary>
 		/// 右ボタンが押されているかどうかを示す値を取得または設定します。
 		/// </summary>
-		public bool IsRight { get; private set; }
+		public static bool IsRight { get; private set; }
 
 		/// <summary>
 		/// 中ボタンが押されているかどうかを示す値を取得または設定します。
 		/// </summary>
-		public bool IsMiddle { get; private set; }
+		public static bool IsMiddle { get; private set; }
 
 		/// <summary>
 		/// 左ボタンがたった今押されたかどうかを示す値を取得または設定します。
 		/// </summary>
-		public bool IsLeftDown { get; private set; }
+		public static bool IsLeftDown { get; private set; }
 
 		/// <summary>
 		/// 右ボタンがたった今押されたかどうかを示す値を取得または設定します。
 		/// </summary>
-		public bool IsRightDown { get; private set; }
+		public static bool IsRightDown { get; private set; }
 
 		/// <summary>
 		/// 中ボタンがたった今押されたかどうかを示す値を取得または設定します。
 		/// </summary>
-		public bool IsMiddleDown { get; private set; }
+		public static bool IsMiddleDown { get; private set; }
 
 		/// <summary>
 		/// 左ボタンがたった今離されたかどうかを示す値を取得または設定します。
 		/// </summary>
-		public bool IsLeftUp { get; private set; }
+		public static bool IsLeftUp { get; private set; }
 
 		/// <summary>
 		/// 右ボタンがたった今離されたかどうかを示す値を取得または設定します。
 		/// </summary>
-		public bool IsRightUp { get; private set; }
+		public static bool IsRightUp { get; private set; }
 
 		/// <summary>
 		/// 中ボタンがたった今離されたかどうかを示す値を取得または設定します。
 		/// </summary>
-		public bool IsMiddleUp { get; private set; }
-
-		#pragma warning disable CS1591 // Exceptionally, Obsolete APIs don't have to have XML comments
-
-		[Obsolete("Use IsLeft instead.")]
-		public bool IsLeftClicked => IsLeft;
-
-		[Obsolete("Use IsRight instead.")]
-		public bool IsRightClicked => IsRight;
-
-		[Obsolete("Use IsMiddle instead.")]
-		public bool IsMiddleClicked => IsMiddle;
+		public static bool IsMiddleUp { get; private set; }
 
 		/// <summary>
 		/// マウスホイールのスクロール量を取得します。
 		/// </summary>
 		/// <value></value>
-		public (float x, float y) Scroll
+		public static (float x, float y) Scroll
 		{
 			get
 			{
@@ -85,7 +74,7 @@ namespace DotFeather
 			}
 		}
 
-		internal void Update()
+		internal static void Update()
 		{
 			// previous values
 			bool pl = IsLeft, pr = IsRight, pm = IsMiddle;

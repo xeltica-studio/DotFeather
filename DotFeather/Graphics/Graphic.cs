@@ -25,7 +25,7 @@ namespace DotFeather
 
 		public int ZOrder { get; set; }
 
-		public string Name { get; set; }
+		public string Name { get; set; } = "";
 
 		/// <summary>
 		/// 実際に画面へ描画を行います。

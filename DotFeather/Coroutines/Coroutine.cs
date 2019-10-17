@@ -18,12 +18,12 @@ namespace DotFeather
 		/// <summary>
 		/// 終了後に実行するコールバックを取得します。
 		/// </summary>
-		public Action<object> ThenAction { get; internal set; }
+		public Action<object>? ThenAction { get; internal set; }
 
 		/// <summary>
 		/// ハンドルされていない例外が発生した時に実行するコールバックを取得します。
 		/// </summary>
-		public Action<Exception> ErrorAction { get; internal set; }
+		public Action<Exception>? ErrorAction { get; internal set; }
 
 		internal Coroutine(IEnumerator coroutine)
 		{

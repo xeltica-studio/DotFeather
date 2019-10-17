@@ -27,7 +27,7 @@ namespace DotFeather
 		/// <summary>
 		/// この <see cref="NineSliceSprite"/> の名前を取得または設定します。
 		/// </summary>
-		public string Name { get; set; }
+		public string Name { get; set; } = "";
 
 		/// <summary>
 		/// この <see cref="NineSliceSprite"/> の座標を取得または設定します。
@@ -140,6 +140,6 @@ namespace DotFeather
 			internalTexture = Textures;
 		}
 
-		private Texture2D[] internalTexture;
+		private Texture2D[]? internalTexture;
 	}
 }

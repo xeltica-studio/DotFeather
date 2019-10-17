@@ -58,10 +58,7 @@ namespace DotFeather
 		/// <param name="loop">ループを開始するサンプル位置。ループしない場合は <c>null</c> 。</param>
 		public void Play(IAudioSource source, int? loop = default)
 		{
-			if (cts != default)
-			{
-				cts.Cancel();
-			}
+			cts?.Cancel();
 			cts = new CancellationTokenSource();
 			#pragma warning disable CS4014
 			PlayAsync(source, loop, cts.Token);
@@ -73,11 +70,9 @@ namespace DotFeather
 		/// <param name="time">秒単位のフェードアウト時間。 0 を指定するとすぐに停止します。</param>
 		public void Stop(float time = 0)
 		{
-			if (cts == default)
-				return;
 			if (time == 0)
 			{
-				cts.Cancel();
+				cts?.Cancel();
 			}
 			else
 			{
@@ -92,7 +87,7 @@ namespace DotFeather
 						Gain = DFMath.Lerp(current, firstGain, 0);
 						await Task.Delay(1);
 					}
-					cts.Cancel();
+					cts?.Cancel();
 					w.Stop();
 					while (IsPlaying)
 						await Task.Delay(10);
@@ -222,6 +217,6 @@ namespace DotFeather
 
 		private float gain;
 		private AudioContext context;
-		private CancellationTokenSource cts;
+		private CancellationTokenSource? cts;
 	}
 }

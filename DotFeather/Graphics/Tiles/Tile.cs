@@ -17,7 +17,7 @@ namespace DotFeather
 		/// <summary>
 		/// アニメーションに使われるテクスチャの配列を取得します。
 		/// </summary>
-		public Texture2D[] Animations { get; private set; }
+		public Texture2D[] Animations { get; private set; } = new Texture2D[0];
 
 		/// <summary>
 		/// アニメーションにおけるテクスチャ1枚あたりの描画時間を取得します。
@@ -51,8 +51,6 @@ namespace DotFeather
 		/// <exception cref="ArgumentException">animations の長さが <c>0</c> です。</exception>
 		public Tile(Texture2D[] animations, double interval)
 		{
-			if (animations == null)
-				throw new ArgumentNullException(nameof(animations));
 			if (animations.Length < 1)
 				throw new ArgumentException(nameof(animations));
 			Animations = animations;
@@ -65,19 +63,15 @@ namespace DotFeather
 		/// </summary>
 		public void Draw(GameBase game, Tilemap map, Vector location, Color? color)
 		{
-			if (Animations != default)
+			if (timer > Interval)
 			{
-				if (timer > Interval)
-				{
-					animationState++;
-					if (animationState >= Animations.Length)
-						animationState = 0;
-				}
-
-				Texture = Animations[animationState];
-
-				timer += Time.DeltaTime;
+				animationState++;
+				if (animationState >= Animations.Length)
+					animationState = 0;
 			}
+
+			Texture = Animations[animationState];
+			timer += Time.DeltaTime;
 
 			TextureDrawer.Draw(game, Texture, location, map.Scale, map.Angle, color);
 		}

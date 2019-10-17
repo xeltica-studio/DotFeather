@@ -125,7 +125,7 @@ namespace DotFeather
 				if (fileChannels < 1 || 2 < fileChannels)
 					throw new NotSupportedException("DotFeather only supports 1ch or 2ch audio.");
 
-				string data = null;
+				string data = "";
 				while (true)
 				{
 					data = new string(reader.ReadChars(4));
@@ -143,7 +143,6 @@ namespace DotFeather
 			}
 		}
 
-		private int? loopStart;
 		private readonly byte[] store;
 		private readonly int channels;
 		private readonly int bits;

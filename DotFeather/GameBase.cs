@@ -85,7 +85,7 @@ namespace DotFeather
 		/// <value>ウィンドウタイトル。</value>
 		public string Title
 		{
-			get => window?.Title;
+			get => window.Title;
 			set => window.Title = value;
 		}
 
@@ -156,7 +156,7 @@ namespace DotFeather
 		/// <param name="title">タイトル.</param>
 		/// <param name="refreshRate">リフレッシュレート.</param>
 		/// <param name="isCaptureMode"><see langword="true"/> にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。</param>
-		protected GameBase(int width, int height, string title = null, int refreshRate = 60, bool isCaptureMode = false)
+		protected GameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false)
 		{
 			RefreshRate = refreshRate;
 			IsCaptureMode = isCaptureMode;

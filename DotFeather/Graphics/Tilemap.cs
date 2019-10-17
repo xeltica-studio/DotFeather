@@ -15,7 +15,7 @@ namespace DotFeather
 		public int ZOrder { get; set; }
 		/// <summary>
 		/// </summary>
-		public string Name { get; set; }
+		public string Name { get; set; } = "";
 		/// <summary>
 		/// </summary>
 		public Vector Location { get; set; }
@@ -48,7 +48,7 @@ namespace DotFeather
 		/// <summary>
 		///  指定した位置にあるタイルを取得または設定します。
 		/// </summary>
-		public ITile this[int x, int y]
+		public ITile? this[int x, int y]
 		{
 			get => GetTileAt(x, y);
 			set => SetTile(x, y, value);
@@ -57,7 +57,7 @@ namespace DotFeather
 		/// <summary>
 		///  指定した位置にあるタイルを取得または設定します。
 		/// </summary>
-		public ITile this[Vector point]
+		public ITile? this[Vector point]
 		{
 			get => GetTileAt(point);
 			set => SetTile(point, value);
@@ -78,11 +78,11 @@ namespace DotFeather
 		/// <summary>
 		/// 指定した位置にあるタイルを取得します。
 		/// </summary>
-		public ITile GetTileAt(Vector point) => GetTileAt((int)point.X, (int)point.Y);
+		public ITile? GetTileAt(Vector point) => GetTileAt((int)point.X, (int)point.Y);
 		/// <summary>
 		/// 指定した位置にあるタイルを取得します。
 		/// </summary>
-		public ITile GetTileAt(int x, int y) => tiles.ContainsKey((x, y)) ? tiles[(x, y)].tile : default;
+		public ITile? GetTileAt(int x, int y) => tiles.ContainsKey((x, y)) ? tiles[(x, y)].tile : default;
 
 		/// <summary>
 		/// 指定した位置にあるタイルの色を取得します。
@@ -96,14 +96,14 @@ namespace DotFeather
 		/// <summary>
 		/// 指定した位置にタイルを設置します。
 		/// </summary>
-		public void SetTile(Vector point, ITile tile, Color? color = default) => SetTile((int)point.X, (int)point.Y, tile, color);
+		public void SetTile(Vector point, ITile? tile, Color? color = null) => SetTile((int)point.X, (int)point.Y, tile, color);
 
 		/// <summary>
 		/// 指定した位置にタイルを設置します。
 		/// </summary>
-		public void SetTile(int x, int y, ITile tile, Color? color = default)
+		public void SetTile(int x, int y, ITile? tile, Color? color = null)
 		{
-			if (tile == default)
+			if (tile == null)
 				tiles.Remove((x, y));
 			else
 				tiles[(x, y)] = (tile, color ?? DefaultColor);

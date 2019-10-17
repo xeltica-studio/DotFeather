@@ -22,7 +22,7 @@ namespace DotFeather
 		public PrimitiveType Primitive { get; }
 
 		public int ZOrder { get; set; }
-		public string Name { get; set; }
+		public string Name { get; set; } = "";
 		public Vector Location { get; set; }
 		public float Angle { get; set; }
 		public Vector Scale { get; set; }
@@ -89,8 +89,8 @@ namespace DotFeather
 						}
 						prevVertex = vp;
 					}
-					Vertex(lc, prevVertex.Value);
-					Vertex(lc, first.Value);
+					Vertex(lc, prevVertex ?? Vector.One);
+					Vertex(lc, first ?? Vector.One);
 				}
 			}
 

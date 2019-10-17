@@ -17,7 +17,7 @@ namespace DotFeather
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の名前を取得または設定します。
 		/// </summary>
-		public string Name { get; set; }
+		public string Name { get; set; } = "";
 
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の座標を取得または設定します。

@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Text;
 using System.IO;
 using System.Linq;
+using SF = SixLabors.Fonts;
 
 namespace DotFeather
 {
@@ -20,7 +20,7 @@ namespace DotFeather
 			red = new ClickableSprite(Texture2D.CreateSolid(Color.FromArgb(0x7fff0000), 256, 256));
 			green = new ClickableSprite(Texture2D.CreateSolid(Color.FromArgb(0x7f00ff00), 256, 256));
 
-			var text = new TextDrawable("あひる", new Font(new FontFamily("ヒラギノ角ゴ Pro W8"), 40), Color.White);
+			var text = new TextDrawable("Ubuntu", new Font("Ubuntu", 120), Color.White);
 
 			red.Location = new Vector(64, 64);
 			green.Location = new Vector(192, 192);

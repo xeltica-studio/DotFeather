@@ -1,17 +1,22 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using SD = System.Drawing;
 using OpenTK.Graphics.OpenGL;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Advanced;
+using SixLabors.ImageSharp.Processing;
+using SixLabors.Primitives;
+using System.Runtime.InteropServices;
 
 namespace DotFeather
 {
-	/// <summary>
-	/// テクスチャのハンドルを持ちます。
-	/// </summary>
-	public struct Texture2D : IDisposable
+    /// <summary>
+    /// テクスチャのハンドルを持ちます。
+    /// </summary>
+    public struct Texture2D : IDisposable
 	{
 		/// <summary>
 		/// このテクスチャの OpenGL ハンドルを取得します。
@@ -41,7 +46,7 @@ namespace DotFeather
 		/// <param name="path">ファイルパス。</param>
 		public static Texture2D LoadFrom(string path)
 		{
-			return LoadFrom(new Bitmap(path));
+			return LoadFrom(Image.Load(path));
 		}
 
 		/// <summary>
@@ -51,55 +56,63 @@ namespace DotFeather
 		/// <param name="stream">ストリーム。</param>
 		public static Texture2D LoadFrom(Stream stream)
 		{
-			return LoadFrom(new Bitmap(stream));
+			return LoadFrom(Image.Load(stream));
 		}
 
-		private static Texture2D LoadFrom(Bitmap bmp)
+		public static Texture2D LoadFrom(Image bmp)
 		{
-			using (var file = bmp)
+			using (bmp)
+			using (var img = bmp.CloneAs<Rgba32>())
 			{
-				return LoadFrom(file.LockBits(new Rectangle(0, 0, file.Width, file.Height), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb));
+				var rgbaBytes = MemoryMarshal.AsBytes(img.GetPixelSpan()).ToArray();
+				return Create(rgbaBytes, img.Width, img.Height);
 			}
 		}
 
 		/// <summary>
 		/// テクスチャを登録し、ハンドルを返します。
 		/// </summary>
-		public static Texture2D LoadFrom(BitmapData bmp)
+		public static Texture2D Create(byte[,,] bmp)
 		{
-			var texture = GL.GenTexture();
-			GL.BindTexture(TextureTarget.Texture2D, texture);
-
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
-			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, bmp.Width, bmp.Height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Bgra, PixelType.UnsignedByte, bmp.Scan0);
-			return new Texture2D(texture, new VectorInt(bmp.Width, bmp.Height));
+			var width = bmp.GetLength(0);
+			var height = bmp.GetLength(1);
+			var arr = new byte[width * height * 4];
+			for (int y = 0, i = 0; y < height; y++)
+			for (var x = 0; x < width; x++)
+			{
+				for (var j = 0; j < 4; j++)
+					arr[i++] = bmp[x, y, j];
+			}
+			return Create(arr, width, height);
 		}
 
-		public static Texture2D CreateSolid(Color color, int sizeX, int sizeY)
+		public static Texture2D Create(byte[] bmp, int width, int height)
 		{
 			var texture = GL.GenTexture();
 			GL.BindTexture(TextureTarget.Texture2D, texture);
+
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
+			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, width, height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Rgba, PixelType.UnsignedByte, bmp);
+			return new Texture2D(texture, new VectorInt(width, height));
+		}
 
-			var arr = new float[sizeX, sizeY, 4];
+		public static Texture2D CreateSolid(SD.Color color, int sizeX, int sizeY)
+		{
+			var arr = new byte[sizeX, sizeY, 4];
 
 			for (var y = 0; y < sizeY; y++)
 			for (var x = 0; x < sizeX; x++)
 			{
-				arr[x, y, 0] = color.R / 256f;
-				arr[x, y, 1] = color.G / 256f;
-				arr[x, y, 2] = color.B / 256f;
-				arr[x, y, 3] = color.A / 256f;
+				arr[x, y, 0] = color.R;
+				arr[x, y, 1] = color.G;
+				arr[x, y, 2] = color.B;
+				arr[x, y, 3] = color.A;
 			}
-
-			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, sizeX, sizeY, 0, OpenTK.Graphics.OpenGL.PixelFormat.Rgba, PixelType.Float, arr);
-
-			return new Texture2D(texture, new VectorInt(sizeX, sizeY));
+			return Create(arr);
 		}
 
-		public static Texture2D CreateSolid(Color color, VectorInt size) => CreateSolid(color, size.X, size.Y);
+		public static Texture2D CreateSolid(SD.Color color, VectorInt size) => CreateSolid(color, size.X, size.Y);
 
 		/// <summary>
 		/// 画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。
@@ -111,7 +124,7 @@ namespace DotFeather
 		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
 		public static Texture2D[] LoadAndSplitFrom(string path, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
 		{
-			return LoadAndSplitFrom(new Bitmap(path), horizonalCount, verticalCount, sizeOfCroppedImage);
+			return LoadAndSplitFrom(Image.Load(path), horizonalCount, verticalCount, sizeOfCroppedImage);
 		}
 
 		/// <summary>
@@ -124,12 +137,13 @@ namespace DotFeather
 		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
 		public static Texture2D[] LoadAndSplitFrom(Stream stream, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
 		{
-			return LoadAndSplitFrom(new Bitmap(stream), horizonalCount, verticalCount, sizeOfCroppedImage);
+			return LoadAndSplitFrom(Image.Load(stream), horizonalCount, verticalCount, sizeOfCroppedImage);
 		}
 
-		private static Texture2D[] LoadAndSplitFrom(Bitmap bmp, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
+		private static Texture2D[] LoadAndSplitFrom(Image bmp, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
 		{
-			using (var file = bmp)
+			using (bmp)
+			using (var img = bmp.CloneAs<Rgba32>())
 			{
 				var datas = new List<Texture2D>();
 
@@ -138,17 +152,16 @@ namespace DotFeather
 					for (int x = 0; x < horizonalCount; x++)
 					{
 						(var px, var py) = (x * sizeOfCroppedImage.X, y * sizeOfCroppedImage.Y);
-						if (px + sizeOfCroppedImage.X > file.Width)
+						if (px + sizeOfCroppedImage.X > img.Width)
 						{
 							throw new ArgumentException(nameof(horizonalCount));
 						}
-						if (py + sizeOfCroppedImage.Y > file.Height)
+						if (py + sizeOfCroppedImage.Y > img.Height)
 						{
 							throw new ArgumentException(nameof(verticalCount));
 						}
-						var locked = file.LockBits(new Rectangle(px, py, sizeOfCroppedImage.X, sizeOfCroppedImage.Y), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-						datas.Add(LoadFrom(locked));
-						file.UnlockBits(locked);
+						using var cropped = img.Clone(ctx => ctx.Crop(new Rectangle(px, py, sizeOfCroppedImage.X, sizeOfCroppedImage.Y)));
+						datas.Add(LoadFrom(cropped));
 					}
 				}
 				return datas.ToArray();
@@ -166,7 +179,7 @@ namespace DotFeather
 		/// <returns>切り取られた9枚のテクスチャ。</returns>
 		public static Texture2D[] LoadAndSplitFrom(string path, int left, int top, int right, int bottom)
 		{
-			return LoadAndSplitFrom(new Bitmap(path), left, top, right, bottom);
+			return LoadAndSplitFrom(Image.Load(path), left, top, right, bottom);
 		}
 
 		/// <summary>
@@ -180,38 +193,38 @@ namespace DotFeather
 		/// <returns>切り取られた9枚のテクスチャ。</returns>
 		public static Texture2D[] LoadAndSplitFrom(Stream stream, int left, int top, int right, int bottom)
 		{
-			return LoadAndSplitFrom(new Bitmap(stream), left, top, right, bottom);
+			return LoadAndSplitFrom(Image.Load(stream), left, top, right, bottom);
 		}
 
-		private static Texture2D[] LoadAndSplitFrom(Bitmap bitmap, int left, int top, int right, int bottom)
+		private static Texture2D[] LoadAndSplitFrom(Image bitmap, int left, int top, int right, int bottom)
 		{
-			using (var file = bitmap)
+			using (bitmap)
+			using (var img = bitmap.CloneAs<Rgba32>())
 			{
-				if (left > file.Width)
+				if (left > img.Width)
 					throw new ArgumentException(nameof(left));
-				if (top > file.Height)
+				if (top > img.Height)
 					throw new ArgumentException(nameof(top));
-				if (right > file.Width - left)
+				if (right > img.Width - left)
 					throw new ArgumentException(nameof(right));
-				if (bottom > file.Height - top)
+				if (bottom > img.Height - top)
 					throw new ArgumentException(nameof(bottom));
 				Rectangle[] atlas =
 				{
 					new Rectangle(0, 0, left, top),
-					new Rectangle(left, 0, file.Width - left - right, top),
-					new Rectangle(file.Width - right, 0, right, top),
-					new Rectangle(0, top, left, file.Height - top - bottom),
-					new Rectangle(left, top, file.Width - left - right, file.Height - top - bottom),
-					new Rectangle(file.Width - right, top, right, file.Height - top - bottom),
-					new Rectangle(0, file.Height - bottom, left, bottom),
-					new Rectangle(left, file.Height - bottom, file.Width - left - right, bottom),
-					new Rectangle(file.Width - right, file.Height - bottom, right, bottom),
+					new Rectangle(left, 0, img.Width - left - right, top),
+					new Rectangle(img.Width - right, 0, right, top),
+					new Rectangle(0, top, left, img.Height - top - bottom),
+					new Rectangle(left, top, img.Width - left - right, img.Height - top - bottom),
+					new Rectangle(img.Width - right, top, right, img.Height - top - bottom),
+					new Rectangle(0, img.Height - bottom, left, bottom),
+					new Rectangle(left, img.Height - bottom, img.Width - left - right, bottom),
+					new Rectangle(img.Width - right, img.Height - bottom, right, bottom),
 				};
 				return atlas.Select(a =>
 				{
-					var locked = file.LockBits(a, ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+					using var locked = img.Clone(ctx => ctx.Crop(a));
 					var tex = LoadFrom(locked);
-					file.UnlockBits(locked);
 					return tex;
 				}).ToArray();
 			}

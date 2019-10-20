@@ -4,7 +4,7 @@
 [![Nuget](https://img.shields.io/nuget/v/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
 [![Discord](https://img.shields.io/discord/572071627991416851?label=discord&style=for-the-badge)](https://discord.gg/e2TCF4m)
 
-DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET Standard 2.0.
+DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET Standard 2.1.
 
 [日本語](README-ja.md) ・ English
 
@@ -12,18 +12,7 @@ DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET St
 
 - Windows
 - macOS
-
-## Supported Rendering Backend
-
-- OpenGL 1.0 (Using OpenTK)
-
-### In Planning
-
-- GNU/Linux Support (I have to fix bug to run DotFeahter on Linux.)
-	- for iOS / Android
-- OpenGL ES 2.0 (Using OpenTK)
-- Metal2 (Using Xamarin.iOS and Xamarin.Mac)
-	- It'll only works on iOS & macOS
+- GNU/Linux Support
 
 ## To Build
 
@@ -47,6 +36,7 @@ dotnet build
 	- 9-slice Sprite - A special sprite to split into 9 sheets to resize smoothly
 - A Function to Take Screenshot
 - A Feature to capture screen as a serial-numbered pictures
+- Scene Management
 - Keyboard Input
 - Mouse Input
 - Playing music
@@ -58,20 +48,6 @@ dotnet build
 ----
 
 <p id="f1">1: It depends on your computer's power.</p>
-
-## FAQ
-
-### An error that libgdiplus cannot be found on macOS
-
-Install homebrew and run the following command:
-
-```
-brew install mono-libgdiplus
-```
-
-### An error that libgdiplus cannot be found on GNU/Linux
-
-Install libgdiplus from your package manager or build it from source-code.
 
 ## Documents
 

@@ -18,6 +18,9 @@
 	<None Update="*.png">
 		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</None>
+	<None Update="*.ttf">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />

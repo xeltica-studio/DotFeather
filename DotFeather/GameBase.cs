@@ -168,7 +168,7 @@ namespace DotFeather
 				TargetUpdateFrequency = refreshRate,
 			};
 
-			if (!Directory.Exists("./shot"))
+			if (IsCaptureMode && !Directory.Exists("./shot"))
 			{
 				Directory.CreateDirectory("shot");
 			}

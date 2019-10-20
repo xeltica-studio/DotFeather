@@ -179,7 +179,6 @@ namespace DotFeather
 				GL.LineWidth(1);
 				GL.Disable(EnableCap.DepthTest);
 
-				window.WindowBorder = WindowBorder.Resizable;
 				OnLoad(s, e);
 			};
 

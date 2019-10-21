@@ -9,11 +9,11 @@ namespace DotFeather
 		/// <summary>
 		/// ゲームが起動してからの時刻を取得します。
 		/// </summary>
-		public static double Now { get; internal set; }
+		public static float Now { get; internal set; }
 		/// <summary>
 		/// 前回フレームとの差分時間を取得します。
 		/// </summary>
-		public static double DeltaTime { get; internal set; }
+		public static float DeltaTime { get; internal set; }
 
 		/// <summary>
 		/// 現在のフレームレートを取得します。

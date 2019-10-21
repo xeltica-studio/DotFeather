@@ -11,6 +11,6 @@ namespace DotFeather
 		/// 前回同じイベントを呼び出されてから経過した時間(秒単位)。
 		/// </summary>
 		/// <value>The delta time.</value>
-		public double DeltaTime { get; set; }
+		public float DeltaTime { get; set; }
 	}
 }

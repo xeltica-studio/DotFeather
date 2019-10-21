@@ -307,7 +307,7 @@ namespace DotFeather
 			GL.ClearColor(BackgroundColor);
 			GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-			var deltaTime = IsCaptureMode ? 1d / RefreshRate : e.Time;
+			var deltaTime = IsCaptureMode ? 1f / RefreshRate : (float)e.Time;
 			Time.Now += deltaTime;
 			Time.DeltaTime = deltaTime;
 
@@ -342,7 +342,7 @@ namespace DotFeather
 			DFMouse.Update();
 			CoroutineRunner.Update();
 			Root.OnUpdate(this);
-			OnUpdate(sender, new DFEventArgs { DeltaTime = Time.DeltaTime });
+			OnUpdate(sender, new DFEventArgs { DeltaTime = (float)Time.DeltaTime });
 		}
 
 		private void CalculateFps()

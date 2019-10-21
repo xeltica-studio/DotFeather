@@ -48,8 +48,8 @@ namespace DotFeather
 		/// <value>The width.</value>
 		public int Width
 		{
-			get => window.Size.Width;
-			set => window.Size = new Size(value, window.Size.Height);
+			get => window.ClientSize.Width;
+			set => window.ClientSize = new Size(value, window.Size.Height);
 		}
 
 		/// <summary>
@@ -58,8 +58,8 @@ namespace DotFeather
 		/// <value>The height.</value>
 		public int Height
 		{
-			get => window.Size.Height;
-			set => window.Size = new Size(window.Size.Width, value);
+			get => window.ClientSize.Height;
+			set => window.ClientSize = new Size(window.Size.Width, value);
 		}
 
 		/// <summary>

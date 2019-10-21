@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using OpenTK.Graphics.OpenGL;
 
 namespace DotFeather
 {
@@ -30,9 +32,24 @@ namespace DotFeather
 		public float Angle { get; set; }
 
 		/// <summary>
-		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> のスケーリングを取得または設定します。
+		/// Get or set scale of this <see cref="T:DotFeather.Drawable.IDrawable"/>.
 		/// </summary>
 		public Vector Scale { get; set; } = new Vector(1, 1);
+
+		/// <summary>
+		/// Get or set width of this <see cref="T:DotFeather.Drawable.IDrawable"/>.
+		/// </summary>
+		public int Width { get; set; } = 256;
+
+		/// <summary>
+		/// Get or set height of this <see cref="T:DotFeather.Drawable.IDrawable"/>.
+		/// </summary>
+		public int Height { get; set; } = 256;
+
+		/// <summary>
+		/// Get or set whether this container is trimmable. If true, this container draws children with trimming within rectangular range of this container.
+		/// </summary>
+		public bool IsTrimmable { get; set; }
 
 		/// <summary>
 		/// このコンテナーの子要素にアクセスします。
@@ -76,6 +93,26 @@ namespace DotFeather
 		public void Draw(GameBase game, Vector location)
 		{
 			Sort();
+
+			if (IsTrimmable)
+			{
+				var left = (VectorInt)(Location + location);
+				var size = (VectorInt)(new Vector(Width, Height) * Scale);
+
+				if (left.X < 0) left.X = 0;
+				if (left.Y < 0) left.Y = 0;
+
+				if (left.X + size.X > game.Width)
+					size.X = left.X + size.X - game.Width;
+
+				if (left.Y + size.Y > game.Height)
+					size.Y = left.Y + size.Y - game.Height;
+
+				left.Y = game.Height - left.Y - size.Y;
+
+				GL.Scissor(left.X, left.Y, size.X, size.Y);
+			}
+
 			for (var i = this.Count - 1; i >= 0; i--)
 			{
 				if (this.Count - 1 < i)
@@ -92,6 +129,9 @@ namespace DotFeather
 				this[i].Scale = baseScale;
 				this[i].Location = baseLoc;
 			}
+
+			if (IsTrimmable)
+				GL.Scissor(0, 0, game.Width, game.Height);
 		}
 
 		public void OnUpdate(GameBase game)

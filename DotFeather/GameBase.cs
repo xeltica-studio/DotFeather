@@ -178,6 +178,7 @@ namespace DotFeather
 				GL.ClearColor(Color.Black);
 				GL.LineWidth(1);
 				GL.Disable(EnableCap.DepthTest);
+				GL.Enable(EnableCap.ScissorTest);
 
 				OnLoad(s, e);
 			};

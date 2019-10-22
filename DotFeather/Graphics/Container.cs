@@ -34,7 +34,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get or set scale of this <see cref="T:DotFeather.Drawable.IDrawable"/>.
 		/// </summary>
-		public Vector Scale { get; set; } = new Vector(1, 1);
+		public Vector Scale { get; set; } = Vector.One;
 
 		/// <summary>
 		/// Get or set width of this <see cref="T:DotFeather.Drawable.IDrawable"/>.

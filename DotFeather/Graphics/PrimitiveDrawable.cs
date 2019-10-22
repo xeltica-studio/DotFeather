@@ -56,7 +56,7 @@ namespace DotFeather
 				{
 					foreach (var dp in Buffer)
 					{
-						var vec = dp + new Vector(Location.X + location.X, Location.Y + location.Y);
+						var vec = dp + Location + location;
 						vec *= new Vector(Scale.X, Scale.Y);
 						// Convert device point to viewport point
 						var vp = vec.ToViewportPoint(hw, hh);
@@ -74,7 +74,7 @@ namespace DotFeather
 					Vector? first = null;
 					foreach (var dp in Buffer)
 					{
-						var vec = dp + new Vector(Location.X + location.X, Location.Y + location.Y);
+						var vec = dp + Location + location;
 						vec *= new Vector(Scale.X, Scale.Y);
 						// Convert device point to viewport point
 						var vp = vec.ToViewportPoint(hw, hh);

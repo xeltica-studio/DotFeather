@@ -24,8 +24,7 @@ namespace DotFeather
 			w *= scale.X;
 			h *= scale.Y;
 
-			var left = location.X;
-			var top = location.Y;
+			var (left, top) = location;
 			var right = left + w;
 			var bottom = top + h;
 
@@ -36,14 +35,10 @@ namespace DotFeather
 
 			var verts = new[]
 			{
-				(location.X, location.Y)
-					.ToViewportPoint(hw, hh),
-				(location.X + w, location.Y)
-					.ToViewportPoint(hw, hh),
-				(location.X, location.Y + h)
-					.ToViewportPoint(hw, hh),
-				(location.X + w, location.Y + h)
-					.ToViewportPoint(hw, hh)
+				(left, top).ToViewportPoint(hw, hh),
+				(right, top).ToViewportPoint(hw, hh),
+				(left, bottom).ToViewportPoint(hw, hh),
+				(right, bottom).ToViewportPoint(hw, hh)
 			};
 
 			GL.Enable(EnableCap.Blend);

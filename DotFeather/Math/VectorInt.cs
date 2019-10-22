@@ -19,7 +19,7 @@ namespace DotFeather
 		/// <summary>
 		/// このベクトルの長さを取得します。
 		/// </summary>
-		public float Magnitude => (float)Math.Sqrt(X * X + Y * Y);
+		public float Magnitude => MathF.Sqrt(X * X + Y * Y);
 
 		/// <summary>
 		/// このベクトルと向きが等しい単位ベクトルを取得します。
@@ -33,8 +33,7 @@ namespace DotFeather
 		/// <param name="y"></param>
 		public VectorInt(int x, int y)
 		{
-			X = x;
-			Y = y;
+			(X, Y) = (x, y);
 		}
 
 
@@ -62,13 +61,13 @@ namespace DotFeather
 		/// 2ベクトル間の角を取得します。
 		/// </summary>
 		/// <returns>2ベクトル間のラジアン。</returns>
-		public static float Angle(VectorInt from, VectorInt to) => (float)Math.Atan2(to.Y - from.Y, to.X - from.X);
+		public static float Angle(VectorInt from, VectorInt to) => MathF.Atan2(to.Y - from.Y, to.X - from.X);
 
 
 		/// <summary>
 		/// 2ベクトル間の距離を取得します。
 		/// </summary>
-		public static float Distance(VectorInt from, VectorInt to) => (float)Math.Sqrt(
+		public static float Distance(VectorInt from, VectorInt to) => MathF.Sqrt(
 			(to.X - from.X) * (to.X - from.X) + (to.Y - from.Y) * (to.Y - from.Y)
 		);
 
@@ -103,7 +102,7 @@ namespace DotFeather
 		/// <summary>
 		/// このベクトルの向きを取得します。
 		/// </summary>
-		public float Angle() => (float)Math.Atan2(Y, X);
+		public float Angle() => MathF.Atan2(Y, X);
 
 
 		/// <summary>
@@ -115,6 +114,11 @@ namespace DotFeather
 		/// 2ベクトル間の距離を取得します。
 		/// </summary>
 		public float Distance(VectorInt to) => Distance(this, to);
+
+		/// <summary>
+		/// Deconstructs x and y.
+		/// </summary>
+		public void Deconstruct(out int x, out int y) => (x, y) = (X, Y);
 
 		/// <summary>
 		/// このベクトルの文字列表現を取得します。

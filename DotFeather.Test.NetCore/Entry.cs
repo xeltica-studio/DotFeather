@@ -4,7 +4,7 @@ namespace DotFeather
 	{
 		static void Main(string[] args)
 		{
-			using (var g = new Game(1280, 720))
+			using (var g = new Game(640, 480))
 			{
 				g.Run();
 			}

@@ -20,6 +20,11 @@ namespace DotFeather
 		public static Vector NextVector(this Random r, int xMax, int yMax) => new Vector(r.Next(xMax), r.Next(yMax));
 
 		/// <summary>
+		/// ランダムなベクトルを取得します。 x, y 成分はどちらも整数です。
+		/// </summary>
+		public static VectorInt NextVectorInt(this Random r, int xMax, int yMax) => new VectorInt(r.Next(xMax), r.Next(yMax));
+
+		/// <summary>
 		/// ランダムなベクター値を取得します。 x, y 成分はどちらも実数です。
 		/// </summary>
 		public static Vector NextVectorFloat(this Random r, int xMax = 1, int yMax = 1) => new Vector((float)r.NextDouble() * xMax, (float)r.NextDouble() * yMax);

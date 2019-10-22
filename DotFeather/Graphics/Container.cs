@@ -96,6 +96,7 @@ namespace DotFeather
 
 			if (IsTrimmable)
 			{
+				GL.Enable(EnableCap.ScissorTest);
 				var left = (VectorInt)(Location + location);
 				var size = (VectorInt)(new Vector(Width, Height) * Scale);
 
@@ -131,7 +132,10 @@ namespace DotFeather
 			}
 
 			if (IsTrimmable)
+			{
 				GL.Scissor(0, 0, game.Width, game.Height);
+				GL.Disable(EnableCap.ScissorTest);
+			}
 		}
 
 		public void OnUpdate(GameBase game)

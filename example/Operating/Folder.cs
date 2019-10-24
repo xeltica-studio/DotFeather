@@ -8,8 +8,10 @@ namespace DotFeather.Example
 
         public List<IFileSystemElement> Files { get; } = new List<IFileSystemElement>();
 
+		public Folder? Parent { get; }
+
         public int Count => Files.Count;
 
-        public Folder(string name) => Name = name;
+        public Folder(string name, Folder? parent = null) => (Name, Parent) = (name, parent);
     }
 }

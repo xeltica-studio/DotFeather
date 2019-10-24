@@ -10,12 +10,7 @@ namespace DotFeather.Example
 		/// <summary>
 		/// Get or set current path.
 		/// </summary>
-        public static string? Path { get; set; }
-
-		/// <summary>
-		/// Get formatted path string.
-		/// </summary>
-        public static string? FormattedPath => Path == null ? null : Path.ToUpperInvariant().Replace("/", " » ");
+        public static Folder CurrentDirectory { get; set; } = Root;
 
 		/// <summary>
 		/// Get Root Directory of Example File System.
@@ -44,7 +39,12 @@ namespace DotFeather.Example
                 var fileName = path.Substring(a + 1);
                 var folder = CreateOrGetFolder(folderPath);
 
-                var file = new SceneFile(fileName);
+                var file = new SceneFile(fileName, type, folder);
+
+				type.GetCustomAttributes<DescriptionAttribute>()
+					.ToList()
+					.ForEach(desc => file.Description[desc.Language] = desc.Text);
+
                 folder.Files.Add(file);
             }
         }
@@ -62,7 +62,7 @@ namespace DotFeather.Example
                 var el = current.Files.FirstOrDefault(f => f.Name == name);
                 if (el is null)
                 {
-                    var folder = new Folder(name);
+                    var folder = new Folder(name, current);
                     current.Files.Add(folder);
                     current = folder;
                 }

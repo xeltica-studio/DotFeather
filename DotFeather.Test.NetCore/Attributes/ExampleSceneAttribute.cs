@@ -1,6 +1,6 @@
 using System;
 
-namespace DotFeather
+namespace DotFeather.Example
 {
     [AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
 	public sealed class ExampleSceneAttribute : Attribute

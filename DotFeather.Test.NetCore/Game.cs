@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 
-namespace DotFeather
+namespace DotFeather.Example
 {
     class Game : GameBase
 	{

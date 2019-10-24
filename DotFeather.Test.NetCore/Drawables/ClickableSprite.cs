@@ -1,6 +1,6 @@
 using System;
 
-namespace DotFeather
+namespace DotFeather.Example
 {
     public class ClickableSprite : Sprite, IUpdatable
 	{

@@ -1,4 +1,4 @@
-namespace DotFeather
+namespace DotFeather.Example
 {
 	static class Entry
 	{

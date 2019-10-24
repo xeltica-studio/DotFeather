@@ -1,6 +1,6 @@
 using System;
 
-namespace DotFeather
+namespace DotFeather.Example
 {
     [System.AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
 	sealed class DescriptionAttribute : Attribute

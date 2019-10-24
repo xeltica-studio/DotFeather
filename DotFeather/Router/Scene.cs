@@ -20,6 +20,9 @@ namespace DotFeather
         public Random Random { get; private set; } = new Random();
 
         /// <summary>
+        /// Get or set background color.
+        /// </summary>
+        public Color? BackgroundColor { get; set; }
 
         /// <summary>
         /// Get or set window title.

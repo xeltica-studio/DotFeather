@@ -31,6 +31,8 @@ namespace DotFeather
             if (current != null)
             {
                 current.OnUpdate(this, Game, e);
+                if (current.BackgroundColor != null)
+                    Game.BackgroundColor = current.BackgroundColor.Value;
     
                 if (current.Title != null)
                     Game.Title = current.Title;

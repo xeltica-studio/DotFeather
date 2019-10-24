@@ -20,6 +20,10 @@ namespace DotFeather.Example
 		protected override void OnUpdate(object sender, DFEventArgs e)
 		{
 			router.Update(e);
+
+			// DPI に合わせる
+			// Handle DPI
+			Root.Scale = Vector.One * Dpi;
 		}
 
 		private Router router;

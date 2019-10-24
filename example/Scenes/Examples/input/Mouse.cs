@@ -1,9 +1,9 @@
 namespace DotFeather.Example
 {
-    [ExampleScene("/graphics/text")]
-    [Description("en", "Draw text on the screen.")]
-    [Description("ja", "画面上にテキストを描画します。")]
-    public class TextExampleScene : Scene
+    [ExampleScene("/input/mouse")]
+    [Description("en", "Display mouse states")]
+    [Description("ja", "マウスのステートを表示します")]
+    public class MouseExampleScene : Scene
     {
         public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
         {
@@ -15,4 +15,5 @@ namespace DotFeather.Example
 
         }
     }
+
 }

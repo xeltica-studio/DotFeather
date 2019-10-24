@@ -67,7 +67,7 @@ namespace DotFeather
 		/// 2ベクトル間の距離を取得します。
 		/// </summary>
 		public static float Distance(Vector from, Vector to) => MathF.Sqrt(
-			(to.X - from.X) * (to.X - from.X) + (to.Y - from.Y) * (to.Y - from.Y)
+			MathF.Abs((to.X - from.X) * (to.X - from.X) + (to.Y - from.Y) * (to.Y - from.Y))
 		);
 
 		/// <summary>

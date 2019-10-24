@@ -15,10 +15,22 @@ namespace DotFeather
         /// </summary>
         /// <returns></returns>
         internal static readonly Func<T> Instance = Creator();
+        internal static readonly Func<Type, Func<T>> InstanceOf = (t) => Creator(t);
 
         static Func<T> Creator()
         {
             Type t = typeof(T);
+            if (t == typeof(string))
+                return Expression.Lambda<Func<T>>(Expression.Constant(string.Empty)).Compile();
+
+            if (t.HasDefaultConstructor())
+                return Expression.Lambda<Func<T>>(Expression.New(t)).Compile();
+
+            return () => (T)FormatterServices.GetUninitializedObject(t);
+        }
+
+		static Func<T> Creator(Type t)
+        {
             if (t == typeof(string))
                 return Expression.Lambda<Func<T>>(Expression.Constant(string.Empty)).Compile();
 

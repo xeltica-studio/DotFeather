@@ -5,6 +5,7 @@ using SD = System.Drawing;
 using System.IO;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
+using System.Collections.Generic;
 
 namespace DotFeather
 {
@@ -133,7 +134,7 @@ namespace DotFeather
 			}
 			else
 			{
-				img.Mutate(ctx => ctx.DrawText(Text, f, isColor, SixLabors.Primitives.PointF.Empty));				
+				img.Mutate(ctx => ctx.DrawText(Text, f, isColor, SixLabors.Primitives.PointF.Empty));
 			}
 
 			Texture.Dispose();
@@ -153,16 +154,24 @@ namespace DotFeather
 		private SF.Font ResolveFont(Font f)
 		{
 			SF.FontFamily family;
-			if (File.Exists(f.Path))
+			if (fontCache.ContainsKey(f.Path))
+			{
+				family = fontCache[f.Path];
+			}
+			else if (File.Exists(f.Path))
 			{
 				family = new SF.FontCollection().Install(f.Path);
+				fontCache[f.Path] = family;
 			}
 			else
 			{
 				family = SF.SystemFonts.Find(f.Path);
+				fontCache[f.Path] = family;
 			}
 			return new SF.Font(family, f.Size, (SF.FontStyle)f.FontStyle);
 		}
+
+		private static Dictionary<string, SF.FontFamily> fontCache = new Dictionary<string, SF.FontFamily>();
 
 		private string text;
 		private Font font;

@@ -138,7 +138,7 @@ namespace DotFeather
 			}
 		}
 
-		public void OnUpdate(GameBase game)
+		public virtual void OnUpdate(GameBase game)
 		{
 			this.OfType<IUpdatable>().ToList().ForEach(u => u.OnUpdate(game));
 		}

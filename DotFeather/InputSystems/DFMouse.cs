@@ -65,14 +65,7 @@ namespace DotFeather
 		/// マウスホイールのスクロール量を取得します。
 		/// </summary>
 		/// <value></value>
-		public static (float x, float y) Scroll
-		{
-			get
-			{
-				var s = Mouse.GetState().Scroll;
-				return (s.X, s.Y);
-			}
-		}
+		public static Vector Scroll { get; private set; }
 
 		internal static void Update()
 		{
@@ -90,6 +83,14 @@ namespace DotFeather
 			IsLeftUp = !IsLeft && pl;
 			IsRightUp = !IsRight && pr;
 			IsMiddleUp = !IsMiddle && pm;
+
+			var scr = Mouse.GetCursorState().Scroll;
+			var scroll = new Vector(scr.X, scr.Y);
+
+			Scroll = scroll - prevScroll;
+			prevScroll = scroll;
 		}
+
+		private static Vector prevScroll;
 	}
 }

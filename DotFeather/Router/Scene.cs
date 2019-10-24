@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using DotFeather;
 
-namespace DotFeather.Router
+namespace DotFeather
 {
     /// <summary>
     /// シーンの抽象クラスです。

@@ -1,6 +1,6 @@
 using System;
 
-namespace DotFeather.Router
+namespace DotFeather
 {
     /// <summary>
     /// <see cref="New{T}"/> クラスの為の拡張メソッドを提供します。

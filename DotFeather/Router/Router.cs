@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using DotFeather;
 
-namespace DotFeather.Router
+namespace DotFeather
 {
     /// <summary>
     /// シーン遷移などを管理するクラスです。

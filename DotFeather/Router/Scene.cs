@@ -5,17 +5,17 @@ using System.Drawing;
 namespace DotFeather
 {
     /// <summary>
-    /// シーンの抽象クラスです。
+    /// Abstract scene class.
     /// </summary>
     public abstract class Scene
     {
         /// <summary>
-        /// シーンのルートコンテナーを取得します。
+        /// Get a root container of this scene.
         /// </summary>
         public Container Root { get; } = new Container();
 
         /// <summary>
-        /// 乱数生成器を取得します。
+        /// Get a random generator.
         /// </summary>
         public Random Random { get; private set; } = new Random();
 
@@ -30,26 +30,26 @@ namespace DotFeather
         public string? Title { get; set; }
 
         /// <summary>
-        /// 乱数を初期化します。
+        /// Initialize the random generator.
         /// </summary>
-        /// <param name="seed">シード値。指定しない場合は <see cref="Random"/> クラスのデフォルトコンストラクターを用いて初期化します。</param>
+        /// <param name="seed">Seed value. If not specified, using a default constructor of <see cref="Random"/> to initialize. </param>
         public void Randomize(int? seed = null)
         {
             Random = seed is int s ? new Random(s) : new Random();
         }
 
         /// <summary>
-        /// シーンの始まりに呼ばれます。
+        /// Called when the scene starts.
         /// </summary>
         public virtual void OnStart(Router router, GameBase game, Dictionary<string, object> args) { }
 
         /// <summary>
-        /// シーンのフレーム更新時に呼ばれます。
+        /// Called when updating frame of the scene.
         /// </summary>
         public virtual void OnUpdate(Router router, GameBase game, DFEventArgs e) { }
 
         /// <summary>
-        /// シーンの遷移時など、シーンが破棄される際に呼び出されます。
+        /// Called when the scene is disposed.
         /// </summary>
         public virtual void OnDestroy(Router router) { }
     }

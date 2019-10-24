@@ -20,9 +20,11 @@ namespace DotFeather
         public Random Random { get; private set; } = new Random();
 
         /// <summary>
-        /// 背景色を取得または設定します。
+
+        /// <summary>
+        /// Get or set window title.
         /// </summary>
-        public Color BackgroundColor { get; set; }
+        public string? Title { get; set; }
 
         /// <summary>
         /// 乱数を初期化します。

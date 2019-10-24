@@ -47,6 +47,7 @@ namespace DotFeather.Example
 
                 folder.Files.Add(file);
             }
+			CurrentDirectory = Root;
         }
 
 		/// <summary>

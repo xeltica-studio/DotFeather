@@ -97,7 +97,7 @@ namespace DotFeather
 		/// <summary>
 		/// 現在のディスプレイの DPI を取得します。
 		/// </summary>
-		public float Dpi { get; private set; }
+		public float Dpi => (float)window.ClientSize.Width / window.Size.Width;
 
 		/// <summary>
 		/// 起動後からのトータルフレーム数を取得します。
@@ -316,8 +316,6 @@ namespace DotFeather
 			Root.Draw(this, Vector.Zero);
 
 			Update(sender);
-
-			Dpi = (float)window.ClientSize.Width / window.Size.Width;
 
 			window.ProcessEvents();
 

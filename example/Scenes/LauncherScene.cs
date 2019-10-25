@@ -30,7 +30,6 @@ namespace DotFeather.Example
         public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
         {
             Title = $"DotFeather Example - {ExampleOS.CurrentDirectory.Name.ToUpperInvariant()}";
-			Title = DFMouse.Scroll.ToString();
 			listView.Width = (int)(game.Width / game.Dpi) - 32;
 			listView.Height = (int)(game.Height / game.Dpi) - 16 - (int)listView.Location.Y;
         }
@@ -220,9 +219,7 @@ namespace DotFeather.Example
 					if (item.Description != null)
 					{
 						y += 4;
-						Console.WriteLine("begin");
 						var desc = ExampleOS.Text(item.Description, 12, Color.LightGray);
-						Console.WriteLine("end");
 						desc.Location = new Vector(text.Location.X, y);
 						inner.Add(desc);
 						y += 12;

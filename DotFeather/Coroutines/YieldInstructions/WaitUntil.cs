@@ -3,7 +3,7 @@ using System;
 namespace DotFeather
 {
 	/// <summary>
-	/// 指定した条件が満たされるまで待機し続けるイールド命令です。
+	/// A yield instruction that keeps waiting until the specified condition is met.
 	/// </summary>
 	public class WaitUntil : YieldInstruction
 	{

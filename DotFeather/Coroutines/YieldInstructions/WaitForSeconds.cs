@@ -1,7 +1,7 @@
 namespace DotFeather
 {
 	/// <summary>
-	/// 指定した秒数だけ待機するイールド命令です。
+	/// A yield instruction that waits for a specified number of seconds.
 	/// </summary>
 	public class WaitForSeconds : YieldInstruction
 	{
@@ -14,10 +14,6 @@ namespace DotFeather
 			}
 		}
 
-		/// <summary>
-		/// 指定した時間待機するイールド命令を生成します。
-		/// </summary>
-		/// <param name="time"></param>
 		public WaitForSeconds(float time)
 		{
 			targetTime = time;

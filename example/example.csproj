@@ -5,6 +5,7 @@
 		<TargetFramework>netcoreapp3.0</TargetFramework>
 		<LangVersion>Latest</LangVersion>
 		<Nullable>Enable</Nullable>
+		<RuntimeIdentifiers>osx-x64</RuntimeIdentifiers>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -12,6 +13,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Update="*.wav">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="*.ogg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 		<None Update="*.png">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
@@ -21,6 +28,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />
+		<PackageReference Include="Microsoft.DotNet.ILCompiler" Version="1.0.0-alpha-*" />
+  		<PackageReference Include="Dotnet.Bundle" Version="0.9.12" />
+		<PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />
 	</ItemGroup>
 </Project>

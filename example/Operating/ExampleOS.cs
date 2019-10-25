@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Drawing;
 using System.Linq;
 using System.Reflection;
 
@@ -7,6 +8,9 @@ namespace DotFeather.Example
 {
     public static class ExampleOS
     {
+		public const string SYSTEM_FONT_PATH = "./font.ttf";
+		public const string VERSION = "1.0";
+
 		/// <summary>
 		/// Get or set current path.
 		/// </summary>
@@ -79,5 +83,10 @@ namespace DotFeather.Example
             }
             return current;
         }
+
+		public static TextDrawable Text(string text, int size, Color? color = null)
+		{
+			return new TextDrawable(text, new Font(ExampleOS.SYSTEM_FONT_PATH, size), color ?? Color.White);
+		}
     }
 }

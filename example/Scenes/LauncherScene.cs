@@ -9,13 +9,11 @@ namespace DotFeather.Example
 {
     public class LauncherScene : Scene
     {
-		const string SYSTEM_FONT_PATH = "./font.ttf";
-		const string VERSION = "1.0";
         public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
         {
             BackgroundColor = Color.FromArgb(255, 32, 32, 32);
-			var titleText = Text("DotFeather", 56);
-			var sampleProgramText = Text($"Example {VERSION}", 24);
+			var titleText = ExampleOS.Text("DotFeather", 56);
+			var sampleProgramText = ExampleOS.Text($"Example {ExampleOS.VERSION}", 24);
 			titleText.Location = new Vector(24, 24);
 			sampleProgramText.Location = new Vector(24 + titleText.Width + 8, 50);
 			this.router = router;
@@ -76,11 +74,6 @@ namespace DotFeather.Example
 				_ => new ListViewItem(el.Name),
 			}));
 			listView.EndUpdating();
-		}
-
-		private static TextDrawable Text(string text, int size, Color? color = null)
-		{
-			return new TextDrawable(text, new Font(SYSTEM_FONT_PATH, size), color ?? Color.White);
 		}
 
 		private ListView listView = new ListView();
@@ -218,7 +211,7 @@ namespace DotFeather.Example
 						icon.Width = icon.Height = itemHeight;
 						inner.Add(icon);
 					}
-					var text = Text(item.Text, itemHeight);
+					var text = ExampleOS.Text(item.Text, itemHeight);
 					text.Location = new Vector(padding + itemHeight + padding, y);
 					inner.Add(text);
 
@@ -228,7 +221,7 @@ namespace DotFeather.Example
 					{
 						y += 4;
 						Console.WriteLine("begin");
-						var desc = Text(item.Description, 12, Color.LightGray);
+						var desc = ExampleOS.Text(item.Description, 12, Color.LightGray);
 						Console.WriteLine("end");
 						desc.Location = new Vector(text.Location.X, y);
 						inner.Add(desc);

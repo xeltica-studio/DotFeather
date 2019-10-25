@@ -7,7 +7,7 @@ namespace DotFeather.Example
 	{
 		public string Language { get; set; }
 		public string Text { get; set; }
-		
+
 		// This is a positional argument
 		public DescriptionAttribute(string lang, string text) => (Language, Text) = (lang, text);
 	}

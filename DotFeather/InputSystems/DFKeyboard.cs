@@ -6,404 +6,272 @@ using OpenTK.Input;
 namespace DotFeather
 {
 	/// <summary>
-	/// キーボードのキーが押されているかどうか判別するクラスです。このクラスは継承できません。
+	/// Class that determines whether a key on the keyboard is pressed. This class can not be inherited.
 	/// </summary>
 	public static class DFKeyboard
 	{
-		/// <summary></summary>
 		public static DFKey Unknown { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey ShiftLeft { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey ShiftRight { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey ControlLeft { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey ControlRight { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey AltLeft { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey AltRight { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey WinLeft { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey WinRight { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Menu { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F1 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F2 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F3 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F4 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F5 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F6 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F7 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F8 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F9 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F10 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F11 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F12 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F13 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F14 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F15 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F16 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F17 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F18 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F19 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F20 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F21 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F22 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F23 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F24 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F25 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F26 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F27 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F28 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F29 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F30 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F31 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F32 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F33 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F34 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F35 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Up { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Down { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Left { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Right { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Enter { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Escape { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Space { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Tab { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey BackSpace { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Insert { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Delete { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey PageUp { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey PageDown { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Home { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey End { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey CapsLock { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey ScrollLock { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey PrintScreen { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Pause { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey NumLock { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Clear { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Sleep { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad0 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad1 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad2 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad3 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad4 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad5 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad6 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad7 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad8 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Keypad9 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey KeypadDivide { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey KeypadMultiply { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey KeypadMinus { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey KeypadPlus { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey KeypadPeriod { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey KeypadEnter { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey A { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey B { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey C { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey D { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey E { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey F { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey G { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey H { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey I { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey J { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey K { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey L { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey M { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey N { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey O { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey P { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Q { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey R { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey S { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey T { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey U { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey V { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey W { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey X { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Y { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Z { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number0 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number1 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number2 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number3 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number4 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number5 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number6 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number7 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number8 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Number9 { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Tilde { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Minus { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Plus { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey BracketLeft { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey BracketRight { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Semicolon { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Quote { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Comma { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Period { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey Slash { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey BackSlash { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey NonUSBackSlash { get; } = new DFKey();
 
-		/// <summary></summary>
 		public static DFKey LastKey { get; } = new DFKey();
 
 		/// <summary>

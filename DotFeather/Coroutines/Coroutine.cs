@@ -4,24 +4,24 @@ using System.Collections;
 namespace DotFeather
 {
 	/// <summary>
-	/// コルーチンを表します。
+	/// Coroutine class.
 	/// </summary>
 	public class Coroutine : YieldInstruction
 	{
 		/// <summary>
-		/// コルーチンが実行中であるかどうかを取得します。
+		/// Get whether the coroutine is running.
 		/// </summary>
 		public bool IsRunning { get; }
 
 		public override bool KeepWaiting => IsRunning;
 
 		/// <summary>
-		/// 終了後に実行するコールバックを取得します。
+		/// Get the callback to execute after exiting.
 		/// </summary>
 		public Action<object>? ThenAction { get; internal set; }
 
 		/// <summary>
-		/// ハンドルされていない例外が発生した時に実行するコールバックを取得します。
+		/// Get the callback that executes when an unhandled exception occurs.
 		/// </summary>
 		public Action<Exception>? ErrorAction { get; internal set; }
 
@@ -31,9 +31,9 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// コルーチン終了後のコールバックを設定します。
+		/// Set the callback after the coroutine ends.
 		/// </summary>
-		/// <param name="callback">コールバック。引数は最後に <c>yield return</c> した値が入ります。</param>
+		/// <param name="callback">Callback. The argument is the last <c>yield return</c>ed value of the coroutine.</param>
 		/// <returns></returns>
 		public Coroutine Then(Action<object> callback)
 		{
@@ -41,6 +41,12 @@ namespace DotFeather
 			return this;
 		}
 
+
+		/// <summary>
+		/// Set the callback when the coroutine throws an exception
+		/// </summary>
+		/// <param name="callback">Callback.</param>
+		/// <returns></returns>
 		public Coroutine Error(Action<Exception> callback)
 		{
 			ErrorAction = callback;

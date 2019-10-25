@@ -2,32 +2,32 @@ using System;
 namespace DotFeather
 {
 	/// <summary>
-	/// 2次元のベクトルです。
+	/// Two dimensional vector.
 	/// </summary>
 	public struct Vector : IEquatable<Vector>
 	{
 		/// <summary>
-		/// このベクトルの X 成分を取得または設定します。
+		/// Get or set X coordinate of this vector.
 		/// </summary>
 		public float X { get; set; }
 
 		/// <summary>
-		/// このベクトルの Y 成分を取得または設定します。
+		/// Get or set Y coordinate of this vector.
 		/// </summary>
 		public float Y { get; set; }
 
 		/// <summary>
-		/// このベクトルの長さを取得します。
+		/// Get length of this vector.
 		/// </summary>
 		public float Magnitude => MathF.Sqrt(X * X + Y * Y);
 
 		/// <summary>
-		/// このベクトルと向きが等しい単位ベクトルを取得します。
+		/// Get a unit vector with the same orientation as this vector.
 		/// </summary>
 		public Vector Normalized => new Vector(X / Magnitude, Y / Magnitude);
 
 		/// <summary>
-		/// <see cref="Vector"/> クラスの新しいインスタンスを初期化します。"
+		/// Initialize a new instance of <see cref="Vector"/> class.
 		/// </summary>
 		/// <param name="x"></param>
 		/// <param name="y"></param>
@@ -57,21 +57,21 @@ namespace DotFeather
 		public static explicit operator VectorInt(Vector v1) => new VectorInt((int)v1.X, (int)v1.Y);
 
 		/// <summary>
-		/// 2ベクトル間の角を取得します。
+		/// Get angle between 2 vectors.
 		/// </summary>
-		/// <returns>2ベクトル間のラジアン。</returns>
+		/// <returns>Radian angle between 2 vectors.</returns>
 		public static float Angle(Vector from, Vector to) => MathF.Atan2(to.Y - from.Y, to.X - from.X);
 
 
 		/// <summary>
-		/// 2ベクトル間の距離を取得します。
+		/// Get the distance between 2 vectors.
 		/// </summary>
 		public static float Distance(Vector from, Vector to) => MathF.Sqrt(
 			MathF.Abs((to.X - from.X) * (to.X - from.X) + (to.Y - from.Y) * (to.Y - from.Y))
 		);
 
 		/// <summary>
-		/// このオブジェクトを比較します。
+		/// Compare this object.
 		/// </summary>
 		public override bool Equals(object obj)
 		{
@@ -79,7 +79,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このオブジェクトを比較します。
+		/// Compare this object.
 		/// </summary>
 		public bool Equals(Vector other)
 		{
@@ -88,7 +88,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このオブジェクトのハッシュ値を取得します。
+		/// Get the hash value of this object.
 		/// </summary>
 		public override int GetHashCode()
 		{
@@ -99,18 +99,18 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このベクトルの向きを取得します。
+		/// Get angle of this vector.
 		/// </summary>
 		public float Angle() => MathF.Atan2(Y, X);
 
 
 		/// <summary>
-		/// このベクトルを基準とした、指定したベクトルの向きを取得します。
+		/// Get the direction of the specified vector relative to this vector.
 		/// </summary>
 		public float Angle(Vector to) => Angle(this, to);
 
 		/// <summary>
-		/// 2ベクトル間の距離を取得します。
+		/// Get the distance between two vectors.
 		/// </summary>
 		public float Distance(Vector to) => Distance(this, to);
 
@@ -120,37 +120,37 @@ namespace DotFeather
 		public void Deconstruct(out float x, out float y) => (x, y) = (X, Y);
 
 		/// <summary>
-		/// このベクトルの文字列表現を取得します。
+		/// Get formatted string of this vector.
 		/// </summary>
 		public override string ToString() => $"({X}, {Y})";
 
 		/// <summary>
-		/// <c>new Vector(0, 0)</c> を取得します。
+		/// Get <c>new Vector(0, 0)</c> .
 		/// </summary>
 		public static readonly Vector Zero = new Vector(0, 0);
 
 		/// <summary>
-		/// <c>new Vector(1, 1)</c> を取得します。
+		/// Get <c>new Vector(1, 1)</c> .
 		/// </summary>
 		public static readonly Vector One = new Vector(1, 1);
 
 		/// <summary>
-		/// <c>new Vector(-1, 0)</c> を取得します。
+		/// Get <c>new Vector(-1, 0)</c> .
 		/// </summary>
 		public static readonly Vector Left = new Vector(-1, 0);
 
 		/// <summary>
-		/// <c>new Vector(0, -1)</c> を取得します。
+		/// Get <c>new Vector(0, -1)</c> .
 		/// </summary>
 		public static readonly Vector Up = new Vector(0, -1);
 
 		/// <summary>
-		/// <c>new Vector(1, 0)</c> を取得します。
+		/// Get <c>new Vector(1, 0)</c> .
 		/// </summary>
 		public static readonly Vector Right = new Vector(1, 0);
 
 		/// <summary>
-		/// <c>new Vector(0, 1)</c> を取得します。
+		/// Get <c>new Vector(0, 1)</c> .
 		/// </summary>
 		public static readonly Vector Down = new Vector(0, 1);
 

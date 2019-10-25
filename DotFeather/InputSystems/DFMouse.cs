@@ -1,68 +1,66 @@
-using System;
-using System.Drawing;
 using OpenTK.Input;
 
 
 namespace DotFeather
 {
-	/// <summary>
-	/// マウス カーソルの位置、マウスボタンの状態などを取得するクラスです。このクラスは継承できません。
-	/// </summary>
-	public static class DFMouse
+    /// <summary>
+    /// This class gets the mouse cursor position, mouse button status, etc. This class can not be inherited.
+    /// </summary>
+    public static class DFMouse
 	{
 		/// <summary>
-		/// マウスカーソルの座標を取得します。
+		/// Get mouse cursor coordinates.
 		/// </summary>
 		/// <value>The position.</value>
 		public static VectorInt Position { get; internal set; }
 
 		/// <summary>
-		/// 左ボタンが押されているかどうかを示す値を取得または設定します。
+		/// Get or set whether left button pressed.
 		/// </summary>
 		public static bool IsLeft { get; private set; }
 
 		/// <summary>
-		/// 右ボタンが押されているかどうかを示す値を取得または設定します。
+		/// Get or set whether right button pressed.
 		/// </summary>
 		public static bool IsRight { get; private set; }
 
 		/// <summary>
-		/// 中ボタンが押されているかどうかを示す値を取得または設定します。
+		/// Get or set whether middle button pressed.
 		/// </summary>
 		public static bool IsMiddle { get; private set; }
 
 		/// <summary>
-		/// 左ボタンがたった今押されたかどうかを示す値を取得または設定します。
+		/// Get or set whether left button pressed down.
 		/// </summary>
 		public static bool IsLeftDown { get; private set; }
 
 		/// <summary>
-		/// 右ボタンがたった今押されたかどうかを示す値を取得または設定します。
+		/// Get or set whether right button pressed down.
 		/// </summary>
 		public static bool IsRightDown { get; private set; }
 
 		/// <summary>
-		/// 中ボタンがたった今押されたかどうかを示す値を取得または設定します。
+		/// Get or set whether middle button pressed down.
 		/// </summary>
 		public static bool IsMiddleDown { get; private set; }
 
 		/// <summary>
-		/// 左ボタンがたった今離されたかどうかを示す値を取得または設定します。
+		/// Get or set whether left button released up.
 		/// </summary>
 		public static bool IsLeftUp { get; private set; }
 
 		/// <summary>
-		/// 右ボタンがたった今離されたかどうかを示す値を取得または設定します。
+		/// Get or set whether right button released up.
 		/// </summary>
 		public static bool IsRightUp { get; private set; }
 
 		/// <summary>
-		/// 中ボタンがたった今離されたかどうかを示す値を取得または設定します。
+		/// Get or set whether middle button released up.
 		/// </summary>
 		public static bool IsMiddleUp { get; private set; }
 
 		/// <summary>
-		/// マウスホイールのスクロール量を取得します。
+		/// Get mouse wheel scroll amount.
 		/// </summary>
 		/// <value></value>
 		public static Vector Scroll { get; private set; }

@@ -6,12 +6,12 @@ using System.Linq;
 namespace DotFeather
 {
 	/// <summary>
-	/// コルーチンを管理する静的クラスです。
+	/// A static coroutine manager class.
 	/// </summary>
 	public static class CoroutineRunner
 	{
 		/// <summary>
-		/// コルーチンを開始します。
+		/// Start the specified coroutine.
 		/// </summary>
 		public static Coroutine Start(IEnumerator coroutine)
 		{
@@ -22,7 +22,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// コルーチンを停止します。
+		/// Stop the specified coroutine.
 		/// </summary>
 		public static void Stop(Coroutine coroutine)
 		{
@@ -57,11 +57,7 @@ namespace DotFeather
 			}
 		}
 
-		/// <summary>
-		/// 任意のオブジェクトをイールド命令に変換します。
-		/// </summary>
-		/// <returns>イールド命令であればそのまま、<see cref="IEnumerator"/> であればコルーチン、その他であれば <see cref="WaitUntilNextFrame"/> のインスタンスを返します。</returns>
-		public static YieldInstruction ToYieldInstruction(object obj)
+		private static YieldInstruction ToYieldInstruction(object obj)
 		{
 			switch (obj)
 			{

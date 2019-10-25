@@ -16,7 +16,7 @@ namespace DotFeather
 	public abstract class GameBase : IDisposable
 	{
 		/// <summary>
-		/// ウィンドウの X 座標を取得または設定します。
+		/// Get or set X coordinate of this window.
 		/// </summary>
 		public int X
 		{
@@ -25,7 +25,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// ウィンドウの Y 座標を取得または設定します。
+		/// Get or set Y coordinate of this window.
 		/// </summary>
 		public int Y
 		{
@@ -34,7 +34,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// ウィンドウが表示されているかどうかを示す値を取得または設定します。
+		/// Get or set whether this window is visible.
 		/// </summary>
 		public bool Visible
 		{
@@ -43,7 +43,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このウィンドウの幅を取得または設定します。
+		/// Get or set width of this window.
 		/// </summary>
 		/// <value>The width.</value>
 		public int Width
@@ -53,7 +53,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このウィンドウの高さを取得または設定します。
+		/// Get or set height of this window.
 		/// </summary>
 		/// <value>The height.</value>
 		public int Height
@@ -63,26 +63,25 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このウィンドウが現在フォーカスされているかどうかを取得します。
+		/// Get whether this window is focused.
 		/// </summary>
 		/// <value>The height.</value>
 		public bool IsFocused => window.Focused;
 
 		/// <summary>
-		/// ウィンドウの背景色を取得または設定します。
+		/// Get or set background color of this window.
 		/// </summary>
 		public Color BackgroundColor { get; set; }
 
 		/// <summary>
-		/// このウィンドウのリフレッシュレートを取得または設定します。
+		/// Get or set refresh rate of this window.
 		/// </summary>
 		/// <value>The refresh rate.</value>
 		public int RefreshRate { get; }
 
 		/// <summary>
-		/// このウィンドウのタイトルを取得または設定します。
+		/// Get or set title of this window.
 		/// </summary>
-		/// <value>ウィンドウタイトル。</value>
 		public string Title
 		{
 			get => window.Title;
@@ -90,28 +89,28 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このウィンドウのトップレベル <see cref="Container"/> を取得または設定します。
+		/// Get or set a top level <see cref="Container"/>  of this window.
 		/// </summary>
 		public Container Root { get; } = new Container();
 
 		/// <summary>
-		/// 現在のディスプレイの DPI を取得します。
+		/// Get DPI of the current display.
 		/// </summary>
 		public float Dpi => (float)window.ClientSize.Width / window.Size.Width;
 
 		/// <summary>
-		/// 起動後からのトータルフレーム数を取得します。
+		/// Get total number of frames since startup.
 		/// </summary>
 		/// <value></value>
 		public long TotalFrame { get; private set; }
 
 		/// <summary>
-		/// ゲームがキャプチャモードであるかどうかを取得します。
+		/// Get whether the game is in capture mode.
 		/// </summary>
 		public bool IsCaptureMode { get; private set; }
 
 		/// <summary>
-		/// 現在のウィンドウ状態を取得または設定します。
+		/// Get or set current window mode.
 		/// </summary>
 		public WindowMode WindowMode
 		{
@@ -140,7 +139,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// ゲームがフルスクリーンであるかどうかを取得または設定します。
+		/// Get or set whether the game is in fullscreen.
 		/// </summary>
 		public bool IsFullScreen
 		{
@@ -148,15 +147,15 @@ namespace DotFeather
 			set => window.WindowState = value ? WindowState.Fullscreen : WindowState.Normal;
 		}
 
-		/// <summary>
-		/// 指定したパラメーターで、 <see cref="GameBase"/> クラスの新しいインスタンスを初期化します。
-		/// </summary>
-		/// <param name="width">幅.</param>
-		/// <param name="height">高さ.</param>
-		/// <param name="title">タイトル.</param>
-		/// <param name="refreshRate">リフレッシュレート.</param>
-		/// <param name="isCaptureMode"><see langword="true"/> にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。</param>
-		protected GameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false)
+        /// <summary>
+        /// Initialize a new instance of <see cref="GameBase"/> class with specified parameters.
+        /// </summary>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="title"></param>
+        /// <param name="refreshRate"></param>
+        /// <param name="isCaptureMode">See <see langword="true"/> to enable capture mode. When the capture mode is enabled, a captured folder is created in the current directory, and all frame sequential images are automatically created. Although the operation is very slow, it always behaves as if the refresh rate and FPS match. Please use it for the production of video works.にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。</param>
+        protected GameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false)
 		{
 			RefreshRate = refreshRate;
 			IsCaptureMode = isCaptureMode;
@@ -188,6 +187,11 @@ namespace DotFeather
 				OnResize(s, e);
 			};
 
+			window.FileDrop += (s, e) =>
+			{
+
+			};
+
 			window.RenderFrame += OnRenderFrame;
 			window.Unload += OnUnload;
 			window.KeyDown += (s, e) => OnKeyDown(s, new DFKeyEventArgs(e));
@@ -198,18 +202,18 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 乱数を指定したシード値で初期化します。
+		/// Initializes a random number with the specified seed value.
 		/// </summary>
-		/// <param name="seed">シード値。<c>null</c> であれば、 <see cref="System.Random"/> の標準のコンストラクターを呼びます。</param>
+		/// <param name="seed">Seed value. If <c>null</c>, the default constructor of <see cref="System.Random"/> will be called.</param>
 		public void Randomize(int? seed = null)
 		{
 			Random = seed is int s ? new Random(s) : new Random();
 		}
 
 		/// <summary>
-		/// ゲームを実行します。
+		/// Run the game.
 		/// </summary>
-		/// <returns>返り値。</returns>
+		/// <returns>Status code.</returns>
 		public int Run()
 		{
 			window.Run(RefreshRate);
@@ -217,9 +221,9 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// ゲームを終了します。
+		/// End the game.
 		/// </summary>
-		/// <param name="status">返り値。</param>
+		/// <param name="status">Status code.</param>
 		public void Exit(int status = 0)
 		{
 			statusCode = status;
@@ -239,7 +243,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 現在の画面のスクリーンショットを撮影します。
+		/// Take a screenshot of the current screen.
 		/// </summary>
 		public Bitmap TakeScreenshot()
 		{
@@ -258,47 +262,47 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// コルーチンを開始します。
+		/// Start the coroutine.
 		/// </summary>
 		public Coroutine StartCoroutine(IEnumerator coroutine) => CoroutineRunner.Start(coroutine);
 
 		/// <summary>
-		/// コルーチンを停止します。
+		/// Stop the coroutine.
 		/// </summary>
 		public void StopCoroutine(Coroutine coroutine) => CoroutineRunner.Stop(coroutine);
 
 		/// <summary>
-		/// ゲームのフレーム更新時に呼び出されます。このメソッドをオーバーライドして、ゲームのメインループを記述してください。
+		/// Called when the game frame is updated. Override this method to write the main loop of the game.
 		/// </summary>
 		protected virtual void OnUpdate(object sender, DFEventArgs e) { }
 
 		/// <summary>
-		/// ウィンドウが開かれたときに一度だけ呼び出されます。
+		/// Called once when the window is opened.
 		/// </summary>
 		protected virtual void OnLoad(object sender, EventArgs e) { }
 
 		/// <summary>
-		/// ウィンドウが閉じられるときに一度だけ呼び出されます。
+		/// Called once when the window is closed.
 		/// </summary>
 		protected virtual void OnUnload(object sender, EventArgs e) { }
 
 		/// <summary>
-		/// ウィンドウがリサイズされたときに呼び出されます。
+		/// Called when the window is resized.
 		/// </summary>
 		protected virtual void OnResize(object sender, EventArgs e) { }
 
 		/// <summary>
-		/// キーが押されたときに呼び出されます。
+		/// Called when the key pressed.
 		/// </summary>
 		protected virtual void OnKeyDown(object sender, DFKeyEventArgs e) { }
 
 		/// <summary>
-		/// キーが離されたときに呼び出されます。
+		/// Called when the key released.
 		/// </summary>
 		protected virtual void OnKeyUp(object sender, DFKeyEventArgs e) { }
 
 		/// <summary>
-		/// 乱数生成器を取得します。
+		/// Get a random generator.
 		/// </summary>
 		protected Random Random { get; private set; } = new Random();
 

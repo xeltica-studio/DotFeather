@@ -4,18 +4,18 @@ using System.Collections.Generic;
 namespace DotFeather
 {
     /// <summary>
-    /// シーン遷移などを管理するクラスです。
+	/// Scene Management class.
     /// </summary>
     public class Router
     {
         /// <summary>
-        /// 親のゲームクラスを取得します。
+		/// Get the parent game class.
         /// </summary>
         /// <value></value>
         public GameBase Game { get; }
 
         /// <summary>
-        /// 親のゲームクラスを指定して <see cref="Router"/> クラスの新しいインスタンスを初期化します。
+		/// Initialize a new instance of <see cref="Router"/> class with the specified parent game class.
         /// </summary>
         /// <param name="gameBase"></param>
         public Router(GameBase gameBase)
@@ -24,7 +24,7 @@ namespace DotFeather
         }
 
         /// <summary>
-        /// ゲームクラスのアップデート時に呼び出してください。
+        /// Please call when updating the game class.
         /// </summary>
         public void Update(DFEventArgs e)
         {

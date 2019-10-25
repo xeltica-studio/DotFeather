@@ -5,32 +5,32 @@ using System.IO;
 namespace DotFeather
 {
 	/// <summary>
-	/// Wave ファイルフォーマットを表現するオーディオソースです。
+	/// An audio source that represents the Wave file format.
 	/// </summary>
 	public class WaveAudioSource : IAudioSource
 	{
 		/// <summary>
-		/// 合計サンプル数を取得または設定します。
+		/// Get the total number of samples.
 		/// </summary>
 		public int? Samples => store.Length;
 
 		/// <summary>
-		/// チャンネル数を取得または設定します。
+		/// Get channels.
 		/// </summary>
 		public int Channels => channels;
 
 		/// <summary>
-		/// 量子化ビット数を取得または設定します。
+		/// Get sampling bits.
 		/// </summary>
 		public int Bits => bits;
 
 		/// <summary>
-		/// サンプリング周波数を取得または設定します。
+		/// Get sampling rate.
 		/// </summary>
 		public int SampleRate => sampleRate;
 
 		/// <summary>
-		/// パスを指定して、 <see cref="WaveAudioSource"/> クラスの新しいインスタンスを初期化します。
+		/// Initialize a new instance of <see cref="WaveAudioSource"/> class with specified file path.
 		/// </summary>
 		/// <param name="path">ファイルパス。</param>
 		public WaveAudioSource(string path)
@@ -38,11 +38,6 @@ namespace DotFeather
 			store = LoadWave(File.OpenRead(path), out channels, out bits, out sampleRate);
 		}
 
-		/// <summary>
-		/// サンプルを列挙します。
-		/// </summary>
-		/// <param name="loopStart">ループ開始位置。ループしない場合は <c>null</c> 。</param>
-		/// <returns>サンプルのイテレーター。</returns>
 		public IEnumerable<(short left, short right)> EnumerateSamples(int? loopStart)
 		{
 			int currentSample = 0;

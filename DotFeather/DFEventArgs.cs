@@ -3,14 +3,27 @@ using System;
 namespace DotFeather
 {
 	/// <summary>
-	/// DotFeather の基本的なイベント引数です。
+	/// A basic event arguments.
 	/// </summary>
 	public class DFEventArgs : EventArgs
 	{
 		/// <summary>
-		/// 前回同じイベントを呼び出されてから経過した時間(秒単位)。
+		/// Get elapsed time (in seconds) since the same event was called last time.
 		/// </summary>
 		/// <value>The delta time.</value>
 		public float DeltaTime { get; set; }
+	}
+
+	/// <summary>
+	/// Arguments for file-dropped-event.
+	/// </summary>
+	public class FileDroppedEventArgs : EventArgs
+	{
+		/// <summary>
+		/// Get path of a dropped file.
+		/// </summary>
+		public string Path { get; set; }
+
+		public FileDroppedEventArgs(string path) => Path = path;
 	}
 }

@@ -2,32 +2,32 @@ using System;
 namespace DotFeather
 {
 	/// <summary>
-	/// 2次元のベクトルです。
+	/// Two dimensional vector.
 	/// </summary>
 	public struct VectorInt: IEquatable<VectorInt>
 	{
 		/// <summary>
-		/// このベクトルの X 成分を取得または設定します。
+		/// Get or set X coordinate of this vector.
 		/// </summary>
 		public int X { get; set; }
 
 		/// <summary>
-		/// このベクトルの Y 成分を取得または設定します。
+		/// Get or set Y coordinate of this vector.
 		/// </summary>
 		public int Y { get; set; }
 
 		/// <summary>
-		/// このベクトルの長さを取得します。
+		/// Get length of this vector.
 		/// </summary>
 		public float Magnitude => MathF.Sqrt(X * X + Y * Y);
 
 		/// <summary>
-		/// このベクトルと向きが等しい単位ベクトルを取得します。
+		/// Get a unit vector with the same orientation as this vector.
 		/// </summary>
 		public Vector Normalized => new Vector(X / Magnitude, Y / Magnitude);
 
 		/// <summary>
-		/// <see cref="VectorInt"/> クラスの新しいインスタンスを初期化します。"
+		/// Initialize a new instance of <see cref="Vector"/> class.
 		/// </summary>
 		/// <param name="x"></param>
 		/// <param name="y"></param>
@@ -58,21 +58,21 @@ namespace DotFeather
 		public static bool operator !=(VectorInt v1, VectorInt v2) => v1.X != v2.X || v1.Y != v2.Y;
 
 		/// <summary>
-		/// 2ベクトル間の角を取得します。
+		/// Get angle between 2 vectors.
 		/// </summary>
-		/// <returns>2ベクトル間のラジアン。</returns>
+		/// <returns>Radian angle between 2 vectors.</returns>
 		public static float Angle(VectorInt from, VectorInt to) => MathF.Atan2(to.Y - from.Y, to.X - from.X);
 
 
 		/// <summary>
-		/// 2ベクトル間の距離を取得します。
+		/// Get the distance between 2 vectors.
 		/// </summary>
 		public static float Distance(VectorInt from, VectorInt to) => MathF.Sqrt(
 			MathF.Abs((to.X - from.X) * (to.X - from.X) + (to.Y - from.Y) * (to.Y - from.Y))
 		);
 
 		/// <summary>
-		/// このオブジェクトを比較します。
+		/// Compare this object.
 		/// </summary>
 		public override bool Equals(object obj)
 		{
@@ -80,7 +80,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このオブジェクトを比較します。
+		/// Compare this object.
 		/// </summary>
 		public bool Equals(VectorInt other)
 		{
@@ -89,7 +89,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このオブジェクトのハッシュ値を取得します。
+		/// Get the hash value of this object.
 		/// </summary>
 		public override int GetHashCode()
 		{
@@ -100,18 +100,18 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このベクトルの向きを取得します。
+		/// Get angle of this vector.
 		/// </summary>
 		public float Angle() => MathF.Atan2(Y, X);
 
 
 		/// <summary>
-		/// このベクトルを基準とした、指定したベクトルの向きを取得します。
+		/// Get the direction of the specified vector relative to this vector.
 		/// </summary>
 		public float Angle(VectorInt to) => Angle(this, to);
 
 		/// <summary>
-		/// 2ベクトル間の距離を取得します。
+		/// Get the distance between two vectors.
 		/// </summary>
 		public float Distance(VectorInt to) => Distance(this, to);
 
@@ -121,40 +121,38 @@ namespace DotFeather
 		public void Deconstruct(out int x, out int y) => (x, y) = (X, Y);
 
 		/// <summary>
-		/// このベクトルの文字列表現を取得します。
+		/// Get formatted string of this vector.
 		/// </summary>
 		public override string ToString() => $"({X}, {Y})";
 
 		/// <summary>
-		/// <c>new VectorInt(0, 0)</c> を取得します。
+		/// Get <c>new VectorInt(0, 0)</c>.
 		/// </summary>
 		public static readonly VectorInt Zero = new VectorInt(0, 0);
 
 		/// <summary>
-		/// <c>new VectorInt(1, 1)</c> を取得します。
+		/// Get <c>new VectorInt(1, 1)</c>.
 		/// </summary>
 		public static readonly VectorInt One = new VectorInt(1, 1);
 
 		/// <summary>
-		/// <c>new VectorInt(-1, 0)</c> を取得します。
+		/// Get <c>new VectorInt(-1, 0)</c>.
 		/// </summary>
 		public static readonly VectorInt Left = new VectorInt(-1, 0);
 
 		/// <summary>
-		/// <c>new VectorInt(0, -1)</c> を取得します。
+		/// Get <c>new VectorInt(0, -1)</c>.
 		/// </summary>
 		public static readonly VectorInt Up = new VectorInt(0, -1);
 
 		/// <summary>
-		/// <c>new VectorInt(1, 0)</c> を取得します。
+		/// Get <c>new VectorInt(1, 0)</c>.
 		/// </summary>
 		public static readonly VectorInt Right = new VectorInt(1, 0);
 
 		/// <summary>
-		/// <c>new VectorInt(0, 1)</c> を取得します。
+		/// Get <c>new VectorInt(0, 1)</c>.
 		/// </summary>
 		public static readonly VectorInt Down = new VectorInt(0, 1);
-
-
 	}
 }

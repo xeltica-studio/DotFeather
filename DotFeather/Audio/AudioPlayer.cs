@@ -11,7 +11,7 @@ using OpenTK.Audio.OpenAL;
 namespace DotFeather
 {
 	/// <summary>
-	/// オーディオソースの再生機能を提供します。
+	/// Provides audio source playback functionality.
 	/// </summary>
 	public class AudioPlayer : IDisposable
 	{
@@ -48,7 +48,6 @@ namespace DotFeather
 		/// <summary>
 		/// Get whether this player is playing。
 		/// </summary>
-		/// <value>再生中である場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
 		public bool IsPlaying { get; private set; }
 
 		/// <summary>

@@ -16,7 +16,7 @@ namespace DotFeather
 	public class AudioPlayer : IDisposable
 	{
 		/// <summary>
-		/// <see cref="AudioPlayer"/> の新しいインスタンスを初期化します。
+		/// Initialize a new instance of <see cref="AudioPlayer"/> .
 		/// </summary>
 		public AudioPlayer()
 		{
@@ -25,9 +25,9 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 音量を取得または設定します。
+		/// Get or set volume.
 		/// </summary>
-		/// <value>0.0〜1.0の範囲での音量。</value>
+		/// <value>Volume range in 0.0 ~ 1.0.</value>
 		public float Gain
 		{
 			get => gain;
@@ -40,34 +40,64 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// ピッチを取得または設定します。
+		/// Get or set pitch of this player.
 		/// </summary>
-		/// <value>デフォルトを 1 とした、ピッチの倍率。</value>
+		/// <value>Pitch ratio value. Default is 1.</value>
 		public float Pitch { get; set; } = 1;
 
 		/// <summary>
-		/// 再生中かどうかを示す値を取得または設定します。
+		/// Get whether this player is playing。
 		/// </summary>
 		/// <value>再生中である場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
 		public bool IsPlaying { get; private set; }
 
 		/// <summary>
-		/// 再生を開始します。
+		/// Get current playing time of this player in milliseconds.
 		/// </summary>
-		/// <param name="source">再生する <see cref="IAudioSource"/> 。</param>
-		/// <param name="loop">ループを開始するサンプル位置。ループしない場合は <c>null</c> 。</param>
-		public void Play(IAudioSource source, int? loop = default)
+		public int Time { get; private set; }
+
+		/// <summary>
+		/// Get current playing time of this player in samples.
+		/// </summary>
+		public int TimeInSamples { get; private set; }
+
+		/// <summary>
+		/// Get length of loaded audio in milliseconds.
+		/// </summary>
+		public int Length { get; private set; }
+
+		/// <summary>
+		/// Get length of loaded audio in samples.
+		/// </summary>
+		public int LengthInSamples { get; private set; }
+
+		/// <summary>
+		/// Start playing.
+		/// </summary>
+		/// <param name="source">A <see cref="IAudioSource"/> to play.</param>
+		/// <param name="loop">Sample number of loop point. To disable loop, specify<c>null</c>.</param>
+		public async Task PlayAsync(IAudioSource source, int? loop = default)
 		{
 			cts?.Cancel();
 			cts = new CancellationTokenSource();
-			#pragma warning disable CS4014
-			PlayAsync(source, loop, cts.Token);
+			await PlayAsync(source, loop, cts.Token);
 		}
 
 		/// <summary>
-		/// 再生を停止します。
+		/// Start playing.
 		/// </summary>
-		/// <param name="time">秒単位のフェードアウト時間。 0 を指定するとすぐに停止します。</param>
+		/// <param name="source">A <see cref="IAudioSource"/> to play.</param>
+		/// <param name="loop">Sample number of loop point. To disable loop, specify<c>null</c>.</param>
+		public void Play(IAudioSource source, int? loop = default)
+		{
+			#pragma warning disable CS4014
+			PlayAsync(source, loop);
+		}
+
+		/// <summary>
+		/// Stop playing.
+		/// </summary>
+		/// <param name="time">Fade-out time. Specify 0 to stop soon.</param>
 		public void Stop(float time = 0)
 		{
 			if (time == 0)
@@ -94,12 +124,13 @@ namespace DotFeather
 					Gain = 1;
 				});
 			}
+			Time = TimeInSamples = 0;
 		}
 
 		/// <summary>
-		/// 指定した <see cref="IAudioSource"/> をインスタントに再生します。
+		/// Play specified <see cref="IAudioSource"/> instantly.
 		/// </summary>
-		/// <param name="source">再生する  <see cref="IAudioSource"/> 。</param>
+		/// <param name="source"><see cref="IAudioSource"/> to play.</param>
 		/// <returns></returns>
 		public async Task PlayOneShotAsync(IAudioSource source)
 		{
@@ -120,7 +151,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// Dispose します。
+		/// Dispose.
 		/// </summary>
 		public void Dispose()
 		{
@@ -130,8 +161,12 @@ namespace DotFeather
 		private async Task PlayAsync(IAudioSource source, int? loop = default, CancellationToken ct = default)
 		{
 			var enumerator = source.EnumerateSamples(loop).GetEnumerator();
-			var arr = new short[source.SampleRate * 2];
+			var arr = new short[source.SampleRate / 2 * 2];
 			var alBuffers = new ALBuffer[2];
+			TimeInSamples = Time = 0;
+
+			LengthInSamples = source.Samples ?? 0;
+			Length = (int)(LengthInSamples / (float)source.SampleRate * 1000);
 
 			using (var alSrc = new ALSource())
 			using (alBuffers[0] = new ALBuffer())
@@ -149,6 +184,8 @@ namespace DotFeather
 				AL.SourcePlay(alSrc);
 				var t = Environment.TickCount;
 				IsPlaying = true;
+				var prevOffset = 0;
+				var sampleCount = 1;
 				while (!ct.IsCancellationRequested)
 				{
 					int processedCount, queuedCount;
@@ -157,7 +194,17 @@ namespace DotFeather
 					do
 					{
 						AL.GetSource(alSrc, ALGetSourcei.BuffersProcessed, out processedCount);
-						await Task.Delay(20);
+						AL.GetSource(alSrc, ALGetSourcei.SampleOffset, out var offset);
+						if (prevOffset > offset)
+						{
+							sampleCount++;
+							TimeInSamples = (arr.Length / 2) * sampleCount;
+						}
+						TimeInSamples += offset - prevOffset;
+						if (TimeInSamples > LengthInSamples) TimeInSamples = LengthInSamples;
+						Time = (int)(TimeInSamples / (float)source.SampleRate * 1000);
+						prevOffset = offset;
+						await Task.Delay(1);
 					}
 					while (processedCount == 0 && !ct.IsCancellationRequested);
 

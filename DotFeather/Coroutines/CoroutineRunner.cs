@@ -53,6 +53,7 @@ namespace DotFeather
 					}
 					catch (Exception ex)
 					{
+						coroutine.Stop();
 						coroutine.ErrorAction?.Invoke(ex);
 					}
 				}

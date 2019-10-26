@@ -10,7 +10,7 @@ using System.Collections.Generic;
 namespace DotFeather
 {
 	/// <summary>
-	/// テキストを描画する <see cref="IDrawable"/> オブジェクトです。
+	/// A <see cref="IDrawable"/> object to render text.
 	/// </summary>
 	public class TextDrawable : TextureDrawableBase
 	{

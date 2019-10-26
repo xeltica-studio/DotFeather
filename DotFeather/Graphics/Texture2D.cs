@@ -14,22 +14,22 @@ using System.Runtime.InteropServices;
 namespace DotFeather
 {
     /// <summary>
-    /// テクスチャのハンドルを持ちます。
+    /// Wrap a handle of 2D texture.
     /// </summary>
     public struct Texture2D : IDisposable
 	{
 		/// <summary>
-		/// このテクスチャの OpenGL ハンドルを取得します。
+		/// Get a OpenGL handle of this texture.
 		/// </summary>
 		public int Handle { get; }
 
 		/// <summary>
-		/// このテクスチャのサイズを取得します。
+		/// Get size of this texture.
 		/// </summary>
 		public VectorInt Size { get; }
 
 		/// <summary>
-		/// ハンドルとサイズを指定して、 <see cref="Texture2D"/> クラスの新しいインスタンスを初期化します。
+		/// Initialize a new instance of  <see cref="Texture2D"/> with the specified handle and size.
 		/// </summary>
 		/// <param name="handle"></param>
 		/// <param name="size"></param>
@@ -40,20 +40,20 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 画像ファイルを読み込みます。
+		/// Load an image file as a texture.
 		/// </summary>
-		/// <returns>読み込んだ画像のデータ。</returns>
-		/// <param name="path">ファイルパス。</param>
+		/// <returns>Loaded texture</returns>
+		/// <param name="path">File path.</param>
 		public static Texture2D LoadFrom(string path)
 		{
 			return LoadFrom(Image.Load(path));
 		}
 
 		/// <summary>
-		/// 画像ファイルを読み込みます。
+		/// Load an image file as a texture.
 		/// </summary>
-		/// <returns>読み込んだ画像のデータ。</returns>
-		/// <param name="stream">ストリーム。</param>
+		/// <returns>Loaded texture</returns>
+		/// <param name="stream">File stream.</param>
 		public static Texture2D LoadFrom(Stream stream)
 		{
 			return LoadFrom(Image.Load(stream));
@@ -70,7 +70,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// テクスチャを登録し、ハンドルを返します。
+		/// Register a texture by a bitmap array.
 		/// </summary>
 		public static Texture2D Create(byte[,,] bmp)
 		{
@@ -86,6 +86,9 @@ namespace DotFeather
 			return Create(arr, width, height);
 		}
 
+		/// <summary>
+		/// Register a texture by a bitmap array.
+		/// </summary>
 		public static Texture2D Create(byte[] bmp, int width, int height)
 		{
 			var texture = GL.GenTexture();
@@ -97,6 +100,10 @@ namespace DotFeather
 			return new Texture2D(texture, new VectorInt(width, height));
 		}
 
+		/// <summary>
+		/// Generate a solid color texture with specified color and size.
+		/// </summary>
+		/// <returns>Generated texture.</returns>
 		public static Texture2D CreateSolid(SD.Color color, int sizeX, int sizeY)
 		{
 			var arr = new byte[sizeX, sizeY, 4];
@@ -112,32 +119,62 @@ namespace DotFeather
 			return Create(arr);
 		}
 
+		/// <summary>
+		/// Generate a solid color texture with specified color and size.
+		/// </summary>
+		/// <returns>Generated texture.</returns>
 		public static Texture2D CreateSolid(SD.Color color, VectorInt size) => CreateSolid(color, size.X, size.Y);
 
 		/// <summary>
-		/// 画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。
+		/// Reads an image file and cuts it out in order from the top left at the specified size.
 		/// </summary>
-		/// <returns>切り取られた全ての画像データ。</returns>
-		/// <param name="path">画像のファイルパス。</param>
-		/// <param name="horizonalCount">横方向の画像の枚数。</param>
-		/// <param name="verticalCount">盾向の画像の枚数。</param>
-		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
+		/// <returns>All the image data cut out.</returns>
+		/// <param name="path">File path</param>
+		/// <param name="horizonalCount">The number of images in the horizontal direction.</param>
+		/// <param name="verticalCount">The number of images in the vertical direction.</param>
+		/// <param name="sizeOfCroppedImage">The size of a piece of image.</param>
 		public static Texture2D[] LoadAndSplitFrom(string path, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
 		{
 			return LoadAndSplitFrom(Image.Load(path), horizonalCount, verticalCount, sizeOfCroppedImage);
 		}
 
 		/// <summary>
-		/// 画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。
+		/// Reads an image file and cuts it out in order from the top left at the specified size.
 		/// </summary>
-		/// <returns>切り取られた全ての画像データ。</returns>
-		/// <param name="stream">画像のファイルを示すストリーム。</param>
-		/// <param name="horizonalCount">横方向の画像の枚数。</param>
-		/// <param name="verticalCount">盾向の画像の枚数。</param>
-		/// <param name="sizeOfCroppedImage">画像1枚分のサイズ。</param>
+		/// <returns>All the image data cut out.</returns>
+		/// <param name="stream">File stream</param>
+		/// <param name="horizonalCount">The number of images in the horizontal direction.</param>
+		/// <param name="verticalCount">The number of images in the vertical direction.</param>
+		/// <param name="sizeOfCroppedImage">The size of a piece of image.</param>
 		public static Texture2D[] LoadAndSplitFrom(Stream stream, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
 		{
 			return LoadAndSplitFrom(Image.Load(stream), horizonalCount, verticalCount, sizeOfCroppedImage);
+		}
+
+		/// <summary>
+		/// 画像ファイルを読み込み、9スライス用に切り抜きます。
+		/// </summary>
+		/// <param name="path">File path.</param>
+		/// <param name="left">Pixel value from left.</param>
+		/// <param name="top">Pixel value from top.</param>
+		/// <param name="right">Pixel value from right.</param>
+		/// <param name="bottom">Pixel value from bottom.</param>
+		public static Texture2D[] LoadAndSplitFrom(string path, int left, int top, int right, int bottom)
+		{
+			return LoadAndSplitFrom(Image.Load(path), left, top, right, bottom);
+		}
+
+		/// <summary>
+		/// Load an image file and cut it out for 9 slices.
+		/// </summary>
+		/// /// <param name="stream">File stream.</param>
+		/// <param name="left">Pixel value from left.</param>
+		/// <param name="top">Pixel value from top.</param>
+		/// <param name="right">Pixel value from right.</param>
+		/// <param name="bottom">Pixel value from bottom.</param>
+		public static Texture2D[] LoadAndSplitFrom(Stream stream, int left, int top, int right, int bottom)
+		{
+			return LoadAndSplitFrom(Image.Load(stream), left, top, right, bottom);
 		}
 
 		private static Texture2D[] LoadAndSplitFrom(Image bmp, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
@@ -166,34 +203,6 @@ namespace DotFeather
 				}
 				return datas.ToArray();
 			}
-		}
-
-		/// <summary>
-		/// 画像ファイルを読み込み、9スライス用に切り抜きます。
-		/// </summary>
-		/// <param name="path">画像ファイル。</param>
-		/// <param name="left">左からのピクセル値。</param>
-		/// <param name="top">上からのピクセル値。</param>
-		/// <param name="right">右からのピクセル値。</param>
-		/// <param name="bottom">下からのピクセル値。</param>
-		/// <returns>切り取られた9枚のテクスチャ。</returns>
-		public static Texture2D[] LoadAndSplitFrom(string path, int left, int top, int right, int bottom)
-		{
-			return LoadAndSplitFrom(Image.Load(path), left, top, right, bottom);
-		}
-
-		/// <summary>
-		/// 画像ファイルを読み込み、9スライス用に切り抜きます。
-		/// </summary>
-		/// <param name="stream">画像を示すストリーム。</param>
-		/// <param name="left">左からのピクセル値。</param>
-		/// <param name="top">上からのピクセル値。</param>
-		/// <param name="right">右からのピクセル値。</param>
-		/// <param name="bottom">下からのピクセル値。</param>
-		/// <returns>切り取られた9枚のテクスチャ。</returns>
-		public static Texture2D[] LoadAndSplitFrom(Stream stream, int left, int top, int right, int bottom)
-		{
-			return LoadAndSplitFrom(Image.Load(stream), left, top, right, bottom);
 		}
 
 		private static Texture2D[] LoadAndSplitFrom(Image bitmap, int left, int top, int right, int bottom)

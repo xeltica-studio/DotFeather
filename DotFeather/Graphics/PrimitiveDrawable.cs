@@ -7,18 +7,12 @@ using System.Drawing;
 namespace DotFeather
 {
 	/// <summary>
-	/// <see cref="Graphic"/> クラスで内部的に使用されるオブジェクトです。
+	/// <see cref="Graphic"/> Internal drawable object.
 	/// </summary>
 	internal class PrimitiveDrawable : IDrawable
 	{
-		/// <summary>
-		/// 頂点のバッファーを取得します。
-		/// </summary>
 		public Vector[] Buffer { get; }
 
-		/// <summary>
-		/// この <see cref="PrimitiveDrawable"/> のプリミティブタイプを取得します。
-		/// </summary>
 		public PrimitiveType Primitive { get; }
 
 		public int ZOrder { get; set; }

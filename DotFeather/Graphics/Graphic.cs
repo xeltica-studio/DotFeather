@@ -179,7 +179,10 @@ namespace DotFeather
 		/// <param name="texture">A texture.</param>
 		public Graphic Texture(int x, int y, Texture2D texture)
 		{
-			Drawables.Add(new Sprite(texture, x, y));
+			Drawables.Add(new Sprite(texture)
+			{
+				Location = new Vector(x, y),
+			});
 			return this;
 		}
 

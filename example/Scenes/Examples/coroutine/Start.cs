@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace DotFeather.Example
 {
@@ -8,11 +8,10 @@ namespace DotFeather.Example
     [Description("ja", "複数のコルーチンを並行して実行します")]
     public class StartExampleScene : Scene
     {
-        public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+        public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
         {
 			var head = ExampleOS.Text("Start Coroutine", 48);
 			head.Location = Vector.One * 16;
-			log = ExampleOS.Text("", 16);
 			log.Location = new Vector(16, 32 + head.Height);
 			Root.Add(head);
 			Root.Add(log);
@@ -48,7 +47,7 @@ namespace DotFeather.Example
 
 		public void WriteLog(string text) => log.Text += text + "\n";
 
-		TextDrawable log;
+		TextDrawable log = ExampleOS.Text("", 16);
     }
 
 }

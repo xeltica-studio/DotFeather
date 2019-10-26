@@ -18,6 +18,7 @@ namespace DotFeather
 			var c = new Coroutine(coroutine);
 
 			coroutines[c] = null;
+			c.Start();
 			return c;
 		}
 
@@ -27,6 +28,7 @@ namespace DotFeather
 		public static void Stop(Coroutine coroutine)
 		{
 			coroutines.Remove(coroutine);
+			coroutine.Stop();
 		}
 
 		internal static void Update()
@@ -64,7 +66,7 @@ namespace DotFeather
 				case YieldInstruction y:
 					return y;
 				case IEnumerator ie:
-					return new Coroutine(ie);
+					return CoroutineRunner.Start(ie);
 				default:
 					return new WaitUntilNextFrame();
 			}

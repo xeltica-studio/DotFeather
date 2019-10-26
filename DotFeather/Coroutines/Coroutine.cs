@@ -11,7 +11,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get whether the coroutine is running.
 		/// </summary>
-		public bool IsRunning { get; }
+		public bool IsRunning { get; private set; }
 
 		public override bool KeepWaiting => IsRunning;
 
@@ -29,6 +29,10 @@ namespace DotFeather
 		{
 			this.coroutine = coroutine;
 		}
+
+		internal void Start() => IsRunning = true;
+
+		internal void Stop() => IsRunning = false;
 
 		/// <summary>
 		/// Set the callback after the coroutine ends.

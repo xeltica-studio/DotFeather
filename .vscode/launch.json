@@ -9,9 +9,9 @@
 			"type": "coreclr",
 			"request": "launch",
 			"preLaunchTask": "build",
-			"program": "${workspaceFolder}/example/bin/Debug/netcoreapp3.0/example.dll",
+			"program": "${workspaceFolder}/demo/bin/Debug/netcoreapp3.0/DotFeather.Demo.dll",
 			"args": [],
-			"cwd": "${workspaceFolder}/example",
+			"cwd": "${workspaceFolder}/demo",
 			"console": "integratedTerminal",
 			"stopAtEntry": false
 		},

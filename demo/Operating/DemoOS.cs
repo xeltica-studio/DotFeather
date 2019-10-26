@@ -1,0 +1,92 @@
+using System;
+using System.Collections;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
+
+namespace DotFeather.Demo
+{
+    public static class DemoOS
+    {
+		public const string SYSTEM_FONT_PATH = "./font.ttf";
+		public const string VERSION = "1.0";
+
+		/// <summary>
+		/// Get or set current path.
+		/// </summary>
+        public static Folder CurrentDirectory { get; set; } = Root;
+
+		/// <summary>
+		/// Get Root Directory of Demo File System.
+		/// </summary>
+        public static Folder Root { get; } = new Folder("/");
+
+		/// <summary>
+		/// Initialize Demo Operating System.
+		/// </summary>
+        public static void Init()
+        {
+            // 全てのシーンを読み込む
+			// Load All Scenes
+            var scenes = typeof(DemoOS).Assembly.GetTypes()
+                .Select(t => (t, a: t.GetCustomAttribute<DemoSceneAttribute>()))
+                .Where(t => t.a != null);
+
+            foreach (var (type, attr) in scenes)
+            {
+				// シーンをファイルシステムに追加
+				// Add scenes to the file system
+                var path = attr.Path;
+                if (path.IndexOf('/') < 0) path = "/" + path;
+                var a = path.LastIndexOf('/');
+                var folderPath = path.Remove(a);
+                var fileName = path.Substring(a + 1);
+                var folder = CreateOrGetFolder(folderPath);
+
+                var file = new SceneFile(fileName, type, folder);
+
+				type.GetCustomAttributes<DescriptionAttribute>()
+					.ToList()
+					.ForEach(desc => file.Description[desc.Language] = desc.Text);
+
+                folder.Files.Add(file);
+            }
+			CurrentDirectory = Root;
+        }
+
+		/// <summary>
+		/// Get folder, or create one if it doesn't exist.
+		/// </summary>
+        public static Folder CreateOrGetFolder(string path)
+        {
+            path = path.ToLowerInvariant();
+            var nest = path.Split('/').Where(s => !string.IsNullOrEmpty(s));
+            Folder current = Root;
+            foreach (var name in nest)
+            {
+                var el = current.Files.FirstOrDefault(f => f.Name == name);
+                if (el is null)
+                {
+                    var folder = new Folder(name, current);
+                    current.Files.Add(folder);
+                    current = folder;
+                }
+                else if (el is Folder f)
+                {
+                    current = f;
+                }
+                else
+                {
+                    // el is other non-null type
+                    throw new Exception($"'{path}' already exists");
+                }
+            }
+            return current;
+        }
+
+		public static TextDrawable Text(string text, int size, Color? color = null)
+		{
+			return new TextDrawable(text, new Font(DemoOS.SYSTEM_FONT_PATH, size), color ?? Color.White);
+		}
+    }
+}

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using OpenTK.Input;
 
@@ -275,9 +276,28 @@ namespace DotFeather
 		public static DFKey LastKey { get; } = new DFKey();
 
 		/// <summary>
-		/// <see cref="DFKeyCode"/> を指定して特定のキーを取得します。
+		/// Get all key codes;
 		/// </summary>
-		/// <value></value>
+		public static IEnumerable<DFKeyCode> AllKeyCodes => allCodes;
+
+		/// <summary>
+		/// Get all pressed keys.
+		/// </summary>
+		public static IEnumerable<DFKeyCode> AllPressedKeys => allCodes.Where(c => KeyOf(c).IsPressed);
+
+		/// <summary>
+		/// Get all keys which pressed then.
+		/// </summary>
+		public static IEnumerable<DFKeyCode> AllDownKeys => allCodes.Where(c => KeyOf(c).IsKeyDown);
+
+		/// <summary>
+		/// Get all keys which released then.
+		/// </summary>
+		public static IEnumerable<DFKeyCode> AllUpKeys => allCodes.Where(c => KeyOf(c).IsKeyUp);
+
+		/// <summary>
+		///Get a specific key by <see cref="DFKeyCode"/>.
+		/// </summary>
 		public static DFKey KeyOf(DFKeyCode code)
 		{
 			switch (code)

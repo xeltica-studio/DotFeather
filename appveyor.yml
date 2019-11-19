@@ -54,6 +54,7 @@ deploy:
     - `Container.IsTrimmable` プロパティを追加しました。コンテナーの占める領域の外にはみ出た描画可能オブジェクトをクリッピングする機能です
     - Random クラスに、ランダムな `VectorInt` 構造体を取得する拡張メソッドを追加
     - `AnimatingSprite` クラスを追加。アニメーションするスプライトを作成できます
+    - `AudioPlayer` クラスに、現在の音声再生時間を取得するプロパティを追加しました
 
     ### API 互換性を破壊する変更
     - `Input` クラスは削除されました。代わりに新しい `DFKeyboard` クラス、 `DFMouse` クラスを使用してください
@@ -68,6 +69,7 @@ deploy:
 
     ### バグ修正
     - キャプチャーモードの有効状態に関わらず、常にカレントディレクトリに shot フォルダが生成される問題を修正
+    - `IEnumerator` をイールド命令として使ったときにコルーチンが想定しない動きをする問題を修正
 
     ### その他
     - 大幅なリファクタリングを行いました
@@ -85,6 +87,7 @@ deploy:
     - Added `Container.IsTrimmable` property to clip drawables outside container's bounding box
     - Add extension method to Random class to get random `VectorInt` structure
     - Added `AnimatingSprite` class to create animated sprites
+    - Added a property to `AudioPlayer` class to get current playback time.
 
     ### API-compatibility breaking changes
     - The `Input` class has been removed. Use the new `DFKeyboard` class and `DFMouse` class instead
@@ -98,7 +101,8 @@ deploy:
     - DotFeather window can no longer be resized by default
 
     ### Bug fixes
-    - Fixed a problem that a shot folder is always created in the current directory regardless of whether capture mode is enabled
+    - Fixed a issue that a shot folder is always created in the current directory regardless of whether capture mode is enabled
+    - Fixed a issue that coroutine works unexpectedly when use `IEnumerator` as a yield instruction
 
     ### Others
     - Refactored very much

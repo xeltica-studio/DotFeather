@@ -8,6 +8,8 @@ using OpenTK.Graphics.OpenGL;
 using System.Collections;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DotFeather
 {
@@ -111,6 +113,23 @@ namespace DotFeather
         public bool IsCaptureMode { get; private set; }
 
         /// <summary>
+        /// Get or set a text color of the console.
+        /// </summary>
+        /// <value></value>
+        public Color ForegroundColor { get; set; } = Color.White;
+
+        /// <summary>
+        /// Get or set a cursor of the console.
+        /// </summary>
+        public VectorInt ConsoleCursor { get; set; }
+
+        /// <summary>
+        /// Get or set a font size of the console.
+        /// </summary>
+        /// <value></value>
+        public int ConsoleSize { get; set; } = 16;
+
+        /// <summary>
         /// Get or set current window mode.
         /// </summary>
         public WindowMode WindowMode
@@ -146,6 +165,33 @@ namespace DotFeather
         {
             get => window.WindowState == WindowState.Fullscreen;
             set => window.WindowState = value ? WindowState.Fullscreen : WindowState.Normal;
+        }
+
+        public void Print(object? obj)
+        {
+            var text = obj as string ?? obj?.ToString() ?? "null";
+            var (x, y) = ConsoleCursor;
+            x = Math.Max(0, x);
+            y = Math.Max(0, y);
+            if (y < consoleBuffer.Count)
+            {
+                // 置換
+                consoleBuffer[y] = consoleBuffer[y].ReplaceAt(x, text);
+            }
+            else
+            {
+                // 挿入
+                consoleBuffer.AddRange(Enumerable.Repeat("", y - consoleBuffer.Count));
+                consoleBuffer.Add(new string(' ', x) + text);
+            }
+            ConsoleCursor = new VectorInt(0, y + 1);
+        }
+
+        public void Cls()
+        {
+            consoleBuffer.Clear();
+            ConsoleSize = 16;
+            ConsoleCursor = VectorInt.Zero;
         }
 
         /// <summary>
@@ -200,6 +246,8 @@ namespace DotFeather
 
             window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
                 DFMouse.Position = new VectorInt((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
+
+            console = new TextDrawable("", Font.GetDefault(ConsoleSize), ForegroundColor);
         }
 
         /// <summary>
@@ -320,6 +368,8 @@ namespace DotFeather
 
             Root.Draw(this, Vector.Zero);
 
+            console.Draw(this, Vector.Zero);
+
             Update(sender);
 
             window.ProcessEvents();
@@ -344,8 +394,23 @@ namespace DotFeather
             DFKeyboard.Update();
             DFMouse.Update();
             CoroutineRunner.Update();
+            UpdateConsole();
             Root.OnUpdate(this);
             OnUpdate(sender, new DFEventArgs { DeltaTime = (float)Time.DeltaTime });
+        }
+
+        private void UpdateConsole()
+        {
+            var f = console.Font;
+            if (f.Size != ConsoleSize * Dpi)
+                console.Font = Font.GetDefault(ConsoleSize * Dpi);
+
+            var maxLine = Height / ConsoleSize;
+
+            var buf = consoleBuffer.Count > maxLine ? consoleBuffer.Skip(consoleBuffer.Count - maxLine) : consoleBuffer;
+
+            console.Color = ForegroundColor;
+            console.Text = string.Join('\n', buf);
         }
 
         private void CalculateFps()
@@ -362,6 +427,8 @@ namespace DotFeather
         private int? statusCode;
         private int frameCount;
         private int prevSecond;
+        private readonly List<string> consoleBuffer = new List<string>();
+        private readonly TextDrawable console;
         private readonly GameWindow window;
     }
 }

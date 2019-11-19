@@ -39,17 +39,17 @@ namespace DotFeather
             }
         }
 
-		/// <summary>
-		/// Register a scene by name.
-		/// </summary>
+        /// <summary>
+        /// Register a scene by name.
+        /// </summary>
         public void RegisterScene<T>(string name) where T : Scene
         {
             dic[name] = New<T>.Instance;
         }
 
-		/// <summary>
-		/// Register a scene by name.
-		/// </summary>
+        /// <summary>
+        /// Register a scene by name.
+        /// </summary>
         public void RegisterScene(Type t, string name)
         {
             dic[name] = New<Scene>.InstanceOf(t);
@@ -71,9 +71,9 @@ namespace DotFeather
             ChangeScene(New<Scene>.InstanceOf(t)(), args);
         }
 
-		/// <summary>
-		/// Change current scene by specifying path.
-		/// </summary>
+        /// <summary>
+        /// Change current scene by specifying path.
+        /// </summary>
         public void ChangeScene(string path, Dictionary<string, object>? args = null)
         {
             if (!dic.ContainsKey(path))
@@ -90,6 +90,7 @@ namespace DotFeather
                 Game.Root.Remove(current.Root);
                 current = null;
             }
+            Game.Cls();
             current = scene;
             current.OnStart(this, Game, args ?? new Dictionary<string, object>());
             Game.Root.Add(current.Root);

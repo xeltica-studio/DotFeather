@@ -243,17 +243,20 @@ namespace DotFeather
             };
 
             window.RenderFrame += OnRenderFrame;
+
             window.Unload += (s, e) =>
             {
                 Unload?.Invoke(s, e);
                 OnUnload(s, e);
             };
+
             window.KeyDown += (s, e) =>
             {
                 KeyDown?.Invoke(s, new DFKeyEventArgs(e));
 
                 OnKeyDown(s, new DFKeyEventArgs(e));
             };
+
             window.KeyUp += (s, e) =>
             {
                 KeyUp?.Invoke(s, new DFKeyEventArgs(e));

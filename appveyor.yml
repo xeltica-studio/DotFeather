@@ -45,16 +45,25 @@ deploy:
     ## 2.0.0 Powerful Renewal Update
 
     ### 新機能
-    - `DFKeyboard` 静的クラスを追加しました。キーボード入力を受け取るために用います
-    - `DFMouse` 静的クラスを追加しました。マウス入力を受け取るために用います
-    - `VectorInt` 構造体を追加しました。これまでの `Vector` 構造体の整数版であり、`Vector` 構造体に暗黙型変換されます
-    - `DotFeather.Router` の機能を統合しました
-      - パスをキーとしてシーンを登録できる新たな API を追加しました
-      - `Scene.Title` プロパティを追加しました。ウィンドウのタイトルをシーンから取得または設定できます。
-    - `Container.IsTrimmable` プロパティを追加しました。コンテナーの占める領域の外にはみ出た描画可能オブジェクトをクリッピングする機能です
+    - `DFKeyboard` 静的クラスを追加。キーボード入力を受け取るために用います
+    - `DFMouse` 静的クラスを追加。マウス入力を受け取るために用います
+    - `VectorInt` 構造体を追加。これまでの `Vector` 構造体の整数版であり、`Vector` 構造体に暗黙型変換されます
+    - `DotFeather.Router` の機能を統合
+      - パスをキーとしてシーンを登録できる新たな API を追加
+      - `Scene.Title` プロパティを追加。ウィンドウのタイトルをシーンから取得または設定できます
+    - `Container.IsTrimmable` プロパティを追加。コンテナーの占める領域の外にはみ出た描画可能オブジェクトをクリッピングする機能です
     - Random クラスに、ランダムな `VectorInt` 構造体を取得する拡張メソッドを追加
     - `AnimatingSprite` クラスを追加。アニメーションするスプライトを作成できます
-    - `AudioPlayer` クラスに、現在の音声再生時間を取得するプロパティを追加しました
+    - `AudioPlayer` クラスに、現在の音声再生時間を取得するプロパティを追加
+    - `GameBase` クラスに On から始まるフックメソッドに対応するイベントハンドラを追加
+    - `GameBase.OnDragDrop`, `GameBase.DragDrop` イベントを追加。ファイルのドラッグドロップを取得できます
+    - コンソールレイヤーを追加
+      - 簡易的に文字を表示できます。デバッグや簡易ゲーム作成にお使いください
+      - `GameBase.Print` メソッドで文字を表示できます
+      - `GameBase.Cls` メソッドでコンソールレイヤーをクリアできます
+      - `GameBase.ConsoleCursor` プロパティを追加。文字を表示するカーソルの位置を取得または設定できます
+      - `GameBase.ConsoleSize` プロパティを追加。コンソールの文字サイズを取得または設定できます
+      - `GameBase.ForegroundColor` プロパティを追加。コンソールの描画色を取得または設定できます
 
     ### API 互換性を破壊する変更
     - `Input` クラスは削除されました。代わりに新しい `DFKeyboard` クラス、 `DFMouse` クラスを使用してください
@@ -87,7 +96,16 @@ deploy:
     - Added `Container.IsTrimmable` property to clip drawables outside container's bounding box
     - Add extension method to Random class to get random `VectorInt` structure
     - Added `AnimatingSprite` class to create animated sprites
-    - Added a property to `AudioPlayer` class to get current playback time.
+    - Added a property to `AudioPlayer` class to get current playback time
+    - Added event handlers for hook methods starting with "On" to `GameBase` class
+    - Added `GameBase.OnDragDrop` method and `GameBase.DragDrop` event to get dragged and dropped file
+    - Added console layer
+      - It can simply output text. Let's use it for debugging, creating simple game, etc
+      - Call `GameBase.Print` method to print text
+      - Call `GameBase.Cls` method to clear the console
+      - Added `GameBase.ConsoleCursor` property to get or set cursor position to display text
+      - Added `GameBase.ConsoleSize` property to get or set text size of the console
+      - Added `GameBase.ForegroundColor` property to get or set text color of the console
 
     ### API-compatibility breaking changes
     - The `Input` class has been removed. Use the new `DFKeyboard` class and `DFMouse` class instead

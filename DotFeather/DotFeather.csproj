@@ -14,6 +14,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Include="./Resources/font.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
 	<PackageReference Include="NVorbis" Version="0.8.6" />
 	<PackageReference Include="OpenTK.NetStandard" Version="1.0.7-prerelease" />
 	<PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />

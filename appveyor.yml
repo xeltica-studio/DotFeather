@@ -1,4 +1,4 @@
-version: 1.6.0.{build}
+version: 2.0.0.{build}
 image: Visual Studio 2017
 skip_non_tags: true
 
@@ -42,26 +42,67 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    + スクリーンショットを撮影する API を**追加**
-    + キャプチャーモードを **追加**
-      + キャプチャーモードでは、カレントディレクトリに shot ディレクトリを追加し、全フレームを PNG イメージとして保存します。
-      + ffmpeg 等の外部ツールと組み合わせることで、動画作成に役立つでしょう。
-    + 起動後からの総フレーム数を取得できる `GameBase.TotalFrame` プロパティを**追加**
-    + キャプチャーボードであるかどうかを取得できる `GameBase.IsCaptureMode` プロパティを**追加**
-    + `TextDrawable` クラスのコンストラクタで色指定を省略すると透明になってしまう不具合を**修正**
-    + `Container` においてソートが本来と真逆に行われる不具合を**修正**
-    + `IDrawable.ZOrder` を変更しても反映されない不具合を**修正**
+    ## 2.0.0 Powerful Renewal Update
+
+    ### 新機能
+    - `DFKeyboard` 静的クラスを追加しました。キーボード入力を受け取るために用います
+    - `DFMouse` 静的クラスを追加しました。マウス入力を受け取るために用います
+    - `VectorInt` 構造体を追加しました。これまでの `Vector` 構造体の整数版であり、`Vector` 構造体に暗黙型変換されます
+    - `DotFeather.Router` の機能を統合しました
+      - パスをキーとしてシーンを登録できる新たな API を追加しました
+      - `Scene.Title` プロパティを追加しました。ウィンドウのタイトルをシーンから取得または設定できます。
+    - `Container.IsTrimmable` プロパティを追加しました。コンテナーの占める領域の外にはみ出た描画可能オブジェクトをクリッピングする機能です
+    - Random クラスに、ランダムな `VectorInt` 構造体を取得する拡張メソッドを追加
+    - `AnimatingSprite` クラスを追加。アニメーションするスプライトを作成できます
+
+    ### API 互換性を破壊する変更
+    - `Input` クラスは削除されました。代わりに新しい `DFKeyboard` クラス、 `DFMouse` クラスを使用してください
+    - `System.Drawing` 名前空間の `Point`, `Size` 構造体は API で使用しなくなりました。代わりに、新しい `VectorInt` 構造体を用いてください
+    - .NET Standard 2.1 に依存するようになりました。C# 8 環境では Null 安全になります
+    - System.Drawing.Common に依存していた画像処理ロジックを、 `ImageSharp` に変更
+      - `Texture2D` のメンバーのうち、内部的に使用されていたものが、この変更により破壊的変更されています
+    - `double` 型を用いていた API が、代わりに `float` 型を用いるようになりました
+
+    ### 仕様変更
+    - DotFeather ウィンドウがデフォルトでリサイズできない状態になりました
+
+    ### バグ修正
+    - キャプチャーモードの有効状態に関わらず、常にカレントディレクトリに shot フォルダが生成される問題を修正
+
+    ### その他
+    - 大幅なリファクタリングを行いました
+    - API ドキュメントを英語で書き直しました。ドキュメンテーションのローカライズ作業は先の話になりそうです
+
     ----
 
-    + **Add** an API to take a screenshot
-    + **Add** a capture-mode feature
-      + When it turned on, the engine adds "shot" directory at the current directory, and save all frames as PNG images.
-      + It will be useful with third-party tools such as ffmpeg.
-    + **Add** a `GameBase.TotalFrame` property that returns total frames since the game launched
-    + **Add** a `GameBase.IsCaptureMode` property that returns whether the game is in capture mode
-    + **Fix** a bug that `TextDrawable` instances will be transparent when omit the color argument on the constructor
-    + **Fix* a bug that `Container` sorts the children in reverse
-    + **Fix** a bug that nothing happens when changing `IDrawable.ZOrder`
+    ### New features
+    - Added `DFKeyboard` static class to handle keyboard input
+    - Added `DFMouse` static class to handle mouse input
+    - Added `VectorInt` structure. This is a integer version of `Vector` structure, and it can be casted implicitly to `Vector` structure
+    - Integrated features of `DotFeather.Router`
+      - Added new api to register scenes by path
+      - Added `Scene.Title` property. You can get or set title of the window from the scene
+    - Added `Container.IsTrimmable` property to clip drawables outside container's bounding box
+    - Add extension method to Random class to get random `VectorInt` structure
+    - Added `AnimatingSprite` class to create animated sprites
+
+    ### API-compatibility breaking changes
+    - The `Input` class has been removed. Use the new `DFKeyboard` class and `DFMouse` class instead
+    - The `Point` and` Size` structures in the `System.Drawing` namespace are no longer used by the API. Use the new `VectorInt` structure instead
+    - Now depends on .NET Standard 2.1. Null safe in C# 8 environment
+    - Changed image processing logic that relied on System.Drawing.Common to `ImageSharp`
+      - Some of the members of `Texture2D` that were used internally have been destructively changed
+    - APIs that used the `double` type now use the`float` type instead
+
+    ### Changes
+    - DotFeather window can no longer be resized by default
+
+    ### Bug fixes
+    - Fixed a problem that a shot folder is always created in the current directory regardless of whether capture mode is enabled
+
+    ### Others
+    - Refactored very much
+    - Rewrote all API documents in English
 
   auth_token:
     secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

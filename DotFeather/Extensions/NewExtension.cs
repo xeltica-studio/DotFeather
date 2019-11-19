@@ -18,5 +18,4 @@ namespace DotFeather
             return t.IsValueType || t.GetConstructor(Type.EmptyTypes) != null;
         }
     }
-
 }

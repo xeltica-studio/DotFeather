@@ -14,16 +14,16 @@ namespace DotFeather.Demo
             log.Location = new Vector(16, 32 + head.Height);
             Root.Add(head);
             Root.Add(log);
-
-            Log("[1]: No Frame");
-            Log("[2]: Resizable");
-            Log("[3]: Fixed");
-            Log("[4]: Toggle FullScreen");
-            Log("[ESC]: Escape");
         }
 
         public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
         {
+            log.Text = $@"[1]: No Frame
+[2]: Resizable
+[3]: Fixed
+[4]: Toggle FullScreen
+[ESC]: Escape";
+
             if (DFKeyboard.Escape.IsKeyUp)
                 router.ChangeScene<LauncherScene>();
             else if (DFKeyboard.Number1.IsKeyUp)
@@ -34,11 +34,6 @@ namespace DotFeather.Demo
                 game.WindowMode = WindowMode.Fixed;
             else if (DFKeyboard.Number4.IsKeyUp)
                 game.IsFullScreen ^= true;
-        }
-
-        void Log(string title)
-        {
-            log.Text += $"Changed title to '{title}'\n";
         }
 
         TextDrawable log = DemoOS.Text("", 16);

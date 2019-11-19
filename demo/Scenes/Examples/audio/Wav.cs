@@ -1,3 +1,5 @@
+#pragma warning disable CS4014
+
 namespace DotFeather.Demo
 {
     [DemoScene("/audio/wav sfx")]
@@ -7,29 +9,27 @@ namespace DotFeather.Demo
     {
         public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
         {
-			var head = DemoOS.Text("SFX Example", 48);
-			head.Location = Vector.One * 16;
-			var body = DemoOS.Text(@"[SPACE]: Replay
+            var head = DemoOS.Text("SFX Example", 48);
+            head.Location = Vector.One * 16;
+            var body = DemoOS.Text(@"[SPACE]: Replay
 
 [ESC]: Quit", 16);
-			body.Location = new Vector(16, 32 + head.Height);
-			Root.Add(head);
-			Root.Add(body);
-
-			player.PlayOneShotAsync(sfx);
+            body.Location = new Vector(16, 32 + head.Height);
+            Root.Add(head);
+            Root.Add(body);
+            player.PlayOneShotAsync(sfx);
         }
 
         public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
         {
-			if (DFKeyboard.Space.IsKeyUp)
-				player.PlayOneShotAsync(sfx);
+            if (DFKeyboard.Space.IsKeyUp)
+                player.PlayOneShotAsync(sfx);
 
-			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+            if (DFKeyboard.Escape.IsKeyUp)
+                router.ChangeScene<LauncherScene>();
         }
 
-		AudioPlayer player = new AudioPlayer();
-		WaveAudioSource sfx = new WaveAudioSource("sfx.wav");
+        AudioPlayer player = new AudioPlayer();
+        WaveAudioSource sfx = new WaveAudioSource("sfx.wav");
     }
-
 }

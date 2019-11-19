@@ -224,25 +224,41 @@ namespace DotFeather
                 GL.ClearColor(Color.Black);
                 GL.LineWidth(1);
                 GL.Disable(EnableCap.DepthTest);
-
+                Load?.Invoke(s, e);
                 OnLoad(s, e);
             };
 
             window.Resize += (s, e) =>
             {
                 GL.Viewport(window.ClientRectangle);
+                Load?.Invoke(s, e);
                 OnResize(s, e);
             };
 
             window.FileDrop += (s, e) =>
             {
-
+                var a = new DFFileDroppedEventArgs(e.FileName);
+                FileDrop?.Invoke(s, a);
+                OnFileDrop(s, a);
             };
 
             window.RenderFrame += OnRenderFrame;
-            window.Unload += OnUnload;
-            window.KeyDown += (s, e) => OnKeyDown(s, new DFKeyEventArgs(e));
-            window.KeyUp += (s, e) => OnKeyUp(s, new DFKeyEventArgs(e));
+            window.Unload += (s, e) =>
+            {
+                Unload?.Invoke(s, e);
+                OnUnload(s, e);
+            };
+            window.KeyDown += (s, e) =>
+            {
+                KeyDown?.Invoke(s, new DFKeyEventArgs(e));
+
+                OnKeyDown(s, new DFKeyEventArgs(e));
+            };
+            window.KeyUp += (s, e) =>
+            {
+                KeyUp?.Invoke(s, new DFKeyEventArgs(e));
+                OnKeyUp(s, new DFKeyEventArgs(e));
+            };
 
             window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
                 DFMouse.Position = new VectorInt((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
@@ -336,6 +352,11 @@ namespace DotFeather
         protected virtual void OnUnload(object sender, EventArgs e) { }
 
         /// <summary>
+        /// Called once when the window is closed.
+        /// </summary>
+        protected virtual void OnFileDrop(object sender, DFFileDroppedEventArgs e) { }
+
+        /// <summary>
         /// Called when the window is resized.
         /// </summary>
         protected virtual void OnResize(object sender, EventArgs e) { }
@@ -423,6 +444,13 @@ namespace DotFeather
                 prevSecond = DateTime.Now.Second;
             }
         }
+
+        public event EventHandler<EventArgs>? Load;
+        public event EventHandler<EventArgs>? Unload;
+        public event EventHandler<DFFileDroppedEventArgs>? FileDrop;
+        public event EventHandler<EventArgs>? Resize;
+        public event EventHandler<DFKeyEventArgs>? KeyDown;
+        public event EventHandler<DFKeyEventArgs>? KeyUp;
 
         private int? statusCode;
         private int frameCount;

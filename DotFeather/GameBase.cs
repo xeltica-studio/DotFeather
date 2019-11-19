@@ -145,15 +145,7 @@ namespace DotFeather
         public bool IsFullScreen
         {
             get => window.WindowState == WindowState.Fullscreen;
-            set
-            {
-                // In macOS, when the window is in maximized state, setting fullscreen crashes app.
-                // Maybe it's a bug of OpenTK (or SDL)
-                // so DotFeather avoid this behavior in this line
-                if (window.WindowState == WindowState.Maximized && RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                    return;
-                window.WindowState = value ? WindowState.Fullscreen : WindowState.Normal;
-            }
+            set => window.WindowState = value ? WindowState.Fullscreen : WindowState.Normal;
         }
 
         /// <summary>

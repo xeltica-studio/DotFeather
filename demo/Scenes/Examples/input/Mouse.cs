@@ -7,21 +7,19 @@ namespace DotFeather.Demo
     {
         public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
         {
-            var head = DemoOS.Text("Mouse State", 48);
-            head.Location = Vector.One * 16;
-            log.Location = new Vector(16, 32 + head.Height);
-            Root.Add(head);
-            Root.Add(log);
+
         }
 
         public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
         {
-            log.Text = $@"Left: {Left()}
-Middle: {Middle()}
-Right: {Right()}
-Scroll: {DFMouse.Scroll}
-Pos: {DFMouse.Position}
-Press [ESC] to return";
+            game.Cls();
+            game.Print("Mouse State");
+            game.Print($"Left: {Left()}");
+            game.Print($"Middle: {Middle()}");
+            game.Print($"Right: {Right()}");
+            game.Print($"Scroll: {DFMouse.Scroll}");
+            game.Print($"Pos: {DFMouse.Position}");
+            game.Print("Press [ESC] to return");
 
             if (DFKeyboard.Escape.IsKeyUp)
                 router.ChangeScene<LauncherScene>();
@@ -47,8 +45,5 @@ Press [ESC] to return";
                    DFMouse.IsRightUp ? "Released" :
                    DFMouse.IsRight ? "Pressing" : "";
         }
-
-        TextDrawable log = DemoOS.Text("", 16);
     }
-
 }

@@ -12,14 +12,20 @@ namespace DotFeather.Demo
         public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
         {
             BackgroundColor = Color.FromArgb(255, 32, 32, 32);
-			var titleText = DemoOS.Text("DotFeather", 56);
-			var sampleProgramText = DemoOS.Text($"Demo {DemoOS.VERSION}", 24);
-			titleText.Location = new Vector(24, 24);
-			sampleProgramText.Location = new Vector(24 + titleText.Width + 8, 50);
+            var titleText = new TextDrawable("DotFeather", 56, FontStyle.Normal, Color.White)
+            {
+                Location = new Vector(24, 24),
+            };
+            Root.Add(titleText);
+
+            var sampleProgramText = new TextDrawable($"Demo {DemoOS.VERSION}", 24, FontStyle.Normal, Color.White)
+            {
+                Location = new Vector(24 + titleText.Width + 8, 50),
+            };
+            Root.Add(sampleProgramText);
+
 			this.router = router;
 
-			Root.Add(titleText);
-			Root.Add(sampleProgramText);
 			Root.Add(listView);
 			listView.ItemSelected += ItemSelected;
 			listView.Location = new Vector(16, titleText.Location.Y + titleText.Height + 16);
@@ -210,7 +216,7 @@ namespace DotFeather.Demo
 						icon.Width = icon.Height = itemHeight;
 						inner.Add(icon);
 					}
-					var text = DemoOS.Text(item.Text, itemHeight);
+                    var text = new TextDrawable(item.Text, itemHeight, FontStyle.Normal, Color.White);
 					text.Location = new Vector(padding + itemHeight + padding, y);
 					inner.Add(text);
 
@@ -219,7 +225,7 @@ namespace DotFeather.Demo
 					if (item.Description != null)
 					{
 						y += 4;
-						var desc = DemoOS.Text(item.Description, 12, Color.LightGray);
+                        var desc = new TextDrawable(item.Description, 12, FontStyle.Normal, Color.LightGray);
 						desc.Location = new Vector(text.Location.X, y);
 						inner.Add(desc);
 						y += 12;

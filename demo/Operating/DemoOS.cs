@@ -8,34 +8,33 @@ namespace DotFeather.Demo
 {
     public static class DemoOS
     {
-		public const string SYSTEM_FONT_PATH = "./font.ttf";
-		public const string VERSION = "1.0";
+        public const string VERSION = "1.0";
 
-		/// <summary>
-		/// Get or set current path.
-		/// </summary>
+        /// <summary>
+        /// Get or set current path.
+        /// </summary>
         public static Folder CurrentDirectory { get; set; } = Root;
 
-		/// <summary>
-		/// Get Root Directory of Demo File System.
-		/// </summary>
+        /// <summary>
+        /// Get Root Directory of Demo File System.
+        /// </summary>
         public static Folder Root { get; } = new Folder("/");
 
-		/// <summary>
-		/// Initialize Demo Operating System.
-		/// </summary>
+        /// <summary>
+        /// Initialize Demo Operating System.
+        /// </summary>
         public static void Init()
         {
             // 全てのシーンを読み込む
-			// Load All Scenes
+            // Load All Scenes
             var scenes = typeof(DemoOS).Assembly.GetTypes()
                 .Select(t => (t, a: t.GetCustomAttribute<DemoSceneAttribute>()))
                 .Where(t => t.a != null);
 
             foreach (var (type, attr) in scenes)
             {
-				// シーンをファイルシステムに追加
-				// Add scenes to the file system
+                // シーンをファイルシステムに追加
+                // Add scenes to the file system
                 var path = attr.Path;
                 if (path.IndexOf('/') < 0) path = "/" + path;
                 var a = path.LastIndexOf('/');
@@ -45,18 +44,19 @@ namespace DotFeather.Demo
 
                 var file = new SceneFile(fileName, type, folder);
 
-				type.GetCustomAttributes<DescriptionAttribute>()
-					.ToList()
-					.ForEach(desc => file.Description[desc.Language] = desc.Text);
+                type.GetCustomAttributes<DescriptionAttribute>()
+                    .ToList()
+                    .ForEach(desc => file.Description[desc.Language] = desc.Text);
 
                 folder.Files.Add(file);
+                folder.Files.Sort((f1, f2) => f1.Name.CompareTo(f2.Name));
             }
-			CurrentDirectory = Root;
+            CurrentDirectory = Root;
         }
 
-		/// <summary>
-		/// Get folder, or create one if it doesn't exist.
-		/// </summary>
+        /// <summary>
+        /// Get folder, or create one if it doesn't exist.
+        /// </summary>
         public static Folder CreateOrGetFolder(string path)
         {
             path = path.ToLowerInvariant();
@@ -83,10 +83,5 @@ namespace DotFeather.Demo
             }
             return current;
         }
-
-		public static TextDrawable Text(string text, int size, Color? color = null)
-		{
-			return new TextDrawable(text, new Font(DemoOS.SYSTEM_FONT_PATH, size), color ?? Color.White);
-		}
     }
 }

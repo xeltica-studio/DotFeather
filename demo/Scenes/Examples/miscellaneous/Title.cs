@@ -9,13 +9,7 @@ namespace DotFeather.Demo
     {
         public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
         {
-            var head = DemoOS.Text("Title", 48);
-            head.Location = Vector.One * 16;
-            log.Location = new Vector(16, 32 + head.Height);
-            Root.Add(head);
-            Root.Add(log);
-
-            CoroutineRunner.Start(Main());
+            CoroutineRunner.Start(Main(game));
         }
 
         public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
@@ -24,27 +18,25 @@ namespace DotFeather.Demo
                 router.ChangeScene<LauncherScene>();
         }
 
-        IEnumerator Main()
+        IEnumerator Main(GameBase game)
         {
-            yield return SetTitle("Cupcake");
-            yield return SetTitle("Donut");
-            yield return SetTitle("Eclair");
-            yield return SetTitle("Froyo");
-            yield return SetTitle("Gingerbread");
-            yield return SetTitle("Honeycomb");
-            yield return SetTitle("Ice Cream Sandwich");
-            yield return SetTitle("Jelly Bean");
-            log.Text += "Press [ESC] to return";
+            yield return SetTitle("Cupcake", game);
+            yield return SetTitle("Donut", game);
+            yield return SetTitle("Eclair", game);
+            yield return SetTitle("Froyo", game);
+            yield return SetTitle("Gingerbread", game);
+            yield return SetTitle("Honeycomb", game);
+            yield return SetTitle("Ice Cream Sandwich", game);
+            yield return SetTitle("Jelly Bean", game);
+            game.Print("Press [ESC] to return");
         }
 
-        IEnumerator SetTitle(string title)
+        IEnumerator SetTitle(string title, GameBase game)
         {
             yield return new WaitForSeconds(1);
             Title = title;
-            log.Text += $"Changed title to '{title}'\n";
+            game.Print($"Changed title to '{title}'\n");
         }
-
-        TextDrawable log = DemoOS.Text("", 16);
     }
 
 }

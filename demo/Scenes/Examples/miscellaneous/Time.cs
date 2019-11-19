@@ -7,25 +7,20 @@ namespace DotFeather.Demo
     {
         public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
         {
-            var head = DemoOS.Text("Time", 48);
-            head.Location = Vector.One * 16;
-            log.Location = new Vector(16, 32 + head.Height);
-            Root.Add(head);
-            Root.Add(log);
+
         }
 
         public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
         {
-            log.Text = $@"Time: {Time.Now}
-DeltaTime: {Time.DeltaTime}
-Fps: {Time.Fps}
-Press [ESC] to return";
+            game.Cls();
+            game.Print($"Time: {Time.Now}");
+            game.Print($"DeltaTime: {Time.DeltaTime}");
+            game.Print($"Fps: {Time.Fps}");
+            game.Print("Press [ESC] to return");
 
             if (DFKeyboard.Escape.IsKeyUp)
                 router.ChangeScene<LauncherScene>();
         }
-
-        TextDrawable log = DemoOS.Text("", 16);
     }
 
 }

@@ -1,3 +1,5 @@
+using System.Drawing;
+
 namespace DotFeather.Demo
 {
     [DemoScene("/drawable/text")]
@@ -12,9 +14,21 @@ namespace DotFeather.Demo
 
         public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
         {
+            time += e.DeltaTime;
+            if (time > 0.125f)
+            {
+                var t = new TextDrawable($"Test {count++}", Font.GetDefault(Random.Next(8, 48)), Random.NextColor());
+                t.Location = Random.NextVector(game.Width, game.Height) / (int)game.Dpi;
+                Root.Add(t);
+                time = 0;
+            }
             if (DFKeyboard.Escape.IsKeyUp)
                 router.ChangeScene<LauncherScene>();
         }
+
+        private float time;
+        private int count;
+
     }
 
 }

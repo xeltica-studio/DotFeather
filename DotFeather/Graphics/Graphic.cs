@@ -30,7 +30,7 @@ namespace DotFeather
         public void Draw(GameBase game, Vector location)
         {
             // Drawables を用いて毎フレーム描画を行う
-            for (var i = Drawables.Count - 1; i >= 0; i--)
+            for (var i = 0; i < Drawables.Count; i++)
             {
                 Drawables[i].Scale = Scale;
                 Drawables[i].Draw(game, Location + location);

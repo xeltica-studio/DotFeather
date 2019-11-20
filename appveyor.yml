@@ -64,6 +64,8 @@ deploy:
       - `GameBase.ConsoleCursor` プロパティを追加。文字を表示するカーソルの位置を取得または設定できます
       - `GameBase.ConsoleSize` プロパティを追加。コンソールの文字サイズを取得または設定できます
       - `GameBase.ForegroundColor` プロパティを追加。コンソールの描画色を取得または設定できます
+    - `RoutingGameBase` クラスを追加
+      - ルーターのセットアップおよびゲームの開始が、 `new RoutingGameBase<TypeOfYourFirstScene>(640, 480).Run()` だけで完了します
 
     ### API 互換性を破壊する変更
     - `Input` クラスは削除されました。代わりに新しい `DFKeyboard` クラス、 `DFMouse` クラスを使用してください
@@ -106,6 +108,8 @@ deploy:
       - Added `GameBase.ConsoleCursor` property to get or set cursor position to display text
       - Added `GameBase.ConsoleSize` property to get or set text size of the console
       - Added `GameBase.ForegroundColor` property to get or set text color of the console
+    - Added `RoutingGameBase` class
+      - You can setup the router and run the game easily. Just run `new RoutingGameBase<TypeOfYourFirstScene>(640, 480).Run()`.
 
     ### API-compatibility breaking changes
     - The `Input` class has been removed. Use the new `DFKeyboard` class and `DFMouse` class instead

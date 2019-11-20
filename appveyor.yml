@@ -81,6 +81,8 @@ deploy:
     ### バグ修正
     - キャプチャーモードの有効状態に関わらず、常にカレントディレクトリに shot フォルダが生成される問題を修正
     - `IEnumerator` をイールド命令として使ったときにコルーチンが想定しない動きをする問題を修正
+    - Zオーダーの等しいオブジェクトが正しく描画されない不具合を修正
+    - タイルを1枚のテクスチャを用いて初期化したときに例外が発生する不具合を修正
 
     ### その他
     - 大幅なリファクタリングを行いました
@@ -123,9 +125,10 @@ deploy:
     - DotFeather window can no longer be resized by default
 
     ### Bug fixes
-    - Fixed a issue that a shot folder is always created in the current directory regardless of whether capture mode is enabled
-    - Fixed a issue that coroutine works unexpectedly when use `IEnumerator` as a yield instruction
-
+    - Fixed an issue that a shot folder is always created in the current directory regardless of whether capture mode is enabled
+    - Fixed an issue that coroutine works unexpectedly when use `IEnumerator` as a yield instruction
+    - Fixed an issue that objects with the same Z order are not drawn correctly.
+    - Fixed an issue that caused an exception when tiles were initialized with a single texture.
     ### Others
     - Refactored very much
     - Rewrote all API documents in English

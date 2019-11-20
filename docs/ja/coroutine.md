@@ -28,25 +28,25 @@ IEnumerator CountDown()
 このようにして定義したコルーチンは、次のようにして実行します。
 
 ```cs
-// GameBase 派生クラス内からは次のようにして呼び出せます。
+// ゲームクラス内からは次のようにして呼び出せます。
 var coroutine = StartCoroutine(CountDown());
 
 // その他のコンテキストからは次のようにして呼び出せます。
-var coroutine = CoroutineRunner.StartCoroutine(CountDown));
+var coroutine = CoroutineRunner.Start(CountDown));
 ```
 
-どちらの `StartCoroutine()` メソッドも、 [Coroutine クラス](https://dotfeather.netlify.com/api/dotfeather.coroutine) のインスタンスを返します。このインスタンスを操作することでコルーチンの制御ができます。
+どちらのメソッドも、 [Coroutine クラス](https://dotfeather.netlify.com/api/dotfeather.coroutine) のインスタンスを返します。このインスタンスを操作することでコルーチンの制御ができます。
 
 ## コルーチンの停止
 
 例えば、コルーチンを途中で停止する場合は `StopCoroutine` メソッドを呼び出します。
 
 ```cs
-// GameBase 派生クラス内からは次のようにして呼び出せます。
+// ゲームクラス内からは次のようにして呼び出せます。
 StopCoroutine(coroutine);
 
 // その他のコンテキストからは次のようにして呼び出せます。
-CoroutineRunner.StopCoroutine(coroutine);
+CoroutineRunner.Stop(coroutine);
 ```
 
 ## コルーチンコールバック
@@ -110,4 +110,4 @@ DotFeather には、あらかじめ次のイールド命令がビルトインさ
 |`IEnumerator`|コルーチンとして実行し、実行が終わるまで待機します。|
 |その他の Object 派生型および `null`|`WaitUntilNextFrame` として振る舞います。|
 
-次: [独自レンダリング](../plugin/render.md)
+次: [ルーター](./router.md)

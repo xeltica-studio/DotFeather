@@ -6,6 +6,7 @@ There are some kinds of Object:
 
 - Graphic
 - Sprite
+- Animating Sprite
 - Tilemap
 - Container
 - 9-slice Sprite

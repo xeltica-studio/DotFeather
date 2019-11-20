@@ -36,10 +36,10 @@ You should override virtual methods from GameBase and write main loop, loading a
 |OnUpdate()|will be called every frame update. Write main loop.|
 |OnResize()|will be called when size of the game window is changed.|
 |OnUnload()|will be called when the game is ended. Use for auto-saving or disposing any resources.|
+|OnDragDrop()|will be called when a file is dragged and dropped.|
+
 
 ## Properties
-
-プロパティの設定により、ゲームウィンドウのカスタマイズなどを行えます。
 
 You can set properties to customize the game window etc.
 
@@ -66,12 +66,10 @@ Initialize a random generator. You can specify seed value. If omitted, the curre
 
 Get a instance of the `Random` class of .NET Standard BCL.
 
-
-
 ### Exit() Method
-
-ゲームを終了します。終了コードを指定することもできます。
 
 End the game. You can specify an exit status.
 
-Next: [Drawing](drawing.md)
+There are many other features. See [API document] (https://dotfeather.netlify.com/api/dotfeather.gamebase) to find more details.
+
+Next: [Hello!](hello.md)

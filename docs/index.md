@@ -9,9 +9,10 @@ You can easily get DotFeather from NuGet Package Manager.
 Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
 
 - API Documents
-	- [API Docs is here](https://dotfeather.netlify.com/api/) (sorry but Japanese only)
+	- [API Docs is here](https://dotfeather.netlify.com/api/)
 - Tutorial
 	- [Inherit GameBase](gamebase.md)
+	- [Hello](hello.md)
 	- [Drawing](drawing.md)
 		- [Graphic](drawing/Graphic.md)
 		- [Sprite](drawing/sprite.md)
@@ -26,6 +27,7 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
 		- [Load files](audio/load.md)
 		- [Play files](audio/play.md)
 	- [Coroutine](coroutine.md)
+	- [Router](router.md)
 	- Extensions
 		- [Original Rendering](plugin/render.md)
 		- [Original Audio Source](plugin/audiosource.md)
@@ -34,8 +36,6 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
 <!--
 	- Official Plugins (TBD)
 		- DotFeather.UI
-		- DotFeather.Router
 		- DotFeather.Management
-		- DotFeather.Management.Router
 		- DotFeather.UI.Mvvm
 -->

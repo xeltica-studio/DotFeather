@@ -31,6 +31,11 @@ namespace DotFeather
             coroutine.Stop();
         }
 
+        public static void Clear()
+        {
+            coroutines.Clear();
+        }
+
         internal static void Update()
         {
             foreach (var (coroutine, obj) in coroutines.Select(c => (c.Key, c.Value)).ToArray())

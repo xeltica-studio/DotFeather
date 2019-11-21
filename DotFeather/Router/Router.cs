@@ -91,6 +91,7 @@ namespace DotFeather
                 current = null;
             }
             Game.Cls();
+            CoroutineRunner.Clear();
             current = scene;
             current.OnStart(this, Game, args ?? new Dictionary<string, object>());
             Game.Root.Add(current.Root);

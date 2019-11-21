@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace DotFeather.Demo
 {
-    public class SceneFile : IFileSystemElement
-    {
-        public string Name { get; }
+	public class SceneFile : IFileSystemElement
+	{
+		public string Name { get; }
 		public Type Scene { get; }
-        public Dictionary<string, string> Description { get; } = new Dictionary<string, string>();
+		public Dictionary<string, string> Description { get; } = new Dictionary<string, string>();
 
-        public Folder? Parent { get; }
+		public Folder? Parent { get; }
 
-        public SceneFile(string name, Type scene, Folder? parent = null) => (Name, Parent, Scene) = (name, parent, scene);
-    }
+		public SceneFile(string name, Type scene, Folder? parent = null) => (Name, Parent, Scene) = (name, parent, scene);
+	}
 }

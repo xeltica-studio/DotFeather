@@ -3,10 +3,10 @@ using OpenTK.Input;
 
 namespace DotFeather
 {
-    /// <summary>
-    /// This class gets the mouse cursor position, mouse button status, etc. This class can not be inherited.
-    /// </summary>
-    public static class DFMouse
+	/// <summary>
+	/// This class gets the mouse cursor position, mouse button status, etc. This class can not be inherited.
+	/// </summary>
+	public static class DFMouse
 	{
 		/// <summary>
 		/// Get mouse cursor coordinates.

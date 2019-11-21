@@ -1,7 +1,7 @@
 namespace DotFeather
 {
-    public enum FontStyle
-    {
-        Normal, Bold, Italic, BoldItalic,
-    }
+	public enum FontStyle
+	{
+		Normal, Bold, Italic, BoldItalic,
+	}
 }

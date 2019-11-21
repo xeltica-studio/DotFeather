@@ -13,10 +13,10 @@ using System.Runtime.InteropServices;
 
 namespace DotFeather
 {
-    /// <summary>
-    /// Wrap a handle of 2D texture.
-    /// </summary>
-    public struct Texture2D : IDisposable
+	/// <summary>
+	/// Wrap a handle of 2D texture.
+	/// </summary>
+	public struct Texture2D : IDisposable
 	{
 		/// <summary>
 		/// Get a OpenGL handle of this texture.

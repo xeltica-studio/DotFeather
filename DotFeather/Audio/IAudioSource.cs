@@ -2,10 +2,10 @@ using System.Collections.Generic;
 
 namespace DotFeather
 {
-    /// <summary>
-    /// Defines the specifications of sound sources that can be handled by the DotFeather API.
-    /// </summary>
-    public interface IAudioSource
+	/// <summary>
+	/// Defines the specifications of sound sources that can be handled by the DotFeather API.
+	/// </summary>
+	public interface IAudioSource
 	{
 		/// <summary>
 		/// Enumerate samples.

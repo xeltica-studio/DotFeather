@@ -2,7 +2,7 @@ using System;
 
 namespace DotFeather.Demo
 {
-    [System.AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
+	[System.AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
 	sealed class DescriptionAttribute : Attribute
 	{
 		public string Language { get; set; }

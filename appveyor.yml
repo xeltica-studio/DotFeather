@@ -66,6 +66,11 @@ deploy:
       - `GameBase.ForegroundColor` プロパティを追加。コンソールの描画色を取得または設定できます
     - `RoutingGameBase` クラスを追加
       - ルーターのセットアップおよびゲームの開始が、 `new RoutingGameBase<TypeOfYourFirstScene>(640, 480).Run()` だけで完了します
+    - `DFKey.ElapsedTime` プロパティを追加。キーを押されてから経過した時間を秒単位で取得できます
+    - `DFKey.ElapsedFrameCount` プロパティを追加。キーを押されてから経過したフレーム数を取得できます
+    - `DFKeyboard.GetChar()` メソッドを追加。入力した文字を1文字取得できます
+    - `DFKeyboard.GetString()` メソッドを追加。入力した文字を文字列として全て取得できます
+    - `DFKeyboard.HasChar()` メソッドを追加。文字がバッファに溜まっているかどうかを取得できます
 
     ### API 互換性を破壊する変更
     - `Input` クラスは削除されました。代わりに新しい `DFKeyboard` クラス、 `DFMouse` クラスを使用してください
@@ -77,12 +82,15 @@ deploy:
 
     ### 仕様変更
     - DotFeather ウィンドウがデフォルトでリサイズできない状態になりました
+    - using を使用しているコルーチンを強制停止したとき、自動的に `Dispose()` するようになりました
+    - finally 句のあるコルーチンを強制停止したとき、中身が実行されるようになりました
 
     ### バグ修正
-    - キャプチャーモードの有効状態に関わらず、常にカレントディレクトリに shot フォルダが生成される問題を修正
-    - `IEnumerator` をイールド命令として使ったときにコルーチンが想定しない動きをする問題を修正
-    - Zオーダーの等しいオブジェクトが正しく描画されない不具合を修正
-    - タイルを1枚のテクスチャを用いて初期化したときに例外が発生する不具合を修正
+    - キャプチャーモードの有効状態に関わらず、常にカレントディレクトリに shot フォルダが生成されるバグを修正
+    - `IEnumerator` をイールド命令として使ったときにコルーチンが想定しない動きをするバグを修正
+    - Zオーダーの等しいオブジェクトが正しく描画されないバグを修正
+    - タイルを1枚のテクスチャを用いて初期化したときに例外が発生するバグを修正
+    - `GameBase.TotalFrame` プロパティが、キャプチャモードでない場合更新されないバグを修正
 
     ### その他
     - 大幅なリファクタリングを行いました
@@ -112,6 +120,11 @@ deploy:
       - Added `GameBase.ForegroundColor` property to get or set text color of the console
     - Added `RoutingGameBase` class
       - You can setup the router and run the game easily. Just run `new RoutingGameBase<TypeOfYourFirstScene>(640, 480).Run()`.
+    - Added `DFKey.ElapsedTime` property. You can get the time in seconds since the key was pressed
+    - Added `DFKey.ElapsedFrameCount` property. You can get the number of frames that have passed since the key was pressed
+    - Added `DFKeyboard.GetChar ()` method. You can get a entered character
+    - Added `DFKeyboard.GetString ()` method. You can get all entered characters as a string
+    - Added `DFKeyboard.HasChar ()` method. You can get whether some characters are in the buffer
 
     ### API-compatibility breaking changes
     - The `Input` class has been removed. Use the new `DFKeyboard` class and `DFMouse` class instead
@@ -123,12 +136,16 @@ deploy:
 
     ### Changes
     - DotFeather window can no longer be resized by default
+    - `Dispose()` method will be called automatically when a coroutine using `using` is forcibly stopped
+    - Statements in the `finally` clause will be executed when the coroutine forcibly stopped
 
     ### Bug fixes
-    - Fixed an issue that a shot folder is always created in the current directory regardless of whether capture mode is enabled
-    - Fixed an issue that coroutine works unexpectedly when use `IEnumerator` as a yield instruction
-    - Fixed an issue that objects with the same Z order are not drawn correctly.
-    - Fixed an issue that caused an exception when tiles were initialized with a single texture.
+    - Fixed a bug that a shot folder is always created in the current directory regardless of whether capture mode is enabled
+    - Fixed a bug that coroutine works unexpectedly when use `IEnumerator` as a yield instruction
+    - Fixed a bug that objects with the same Z order are not drawn correctly.
+    - Fixed a bug that caused an exception when tiles were initialized with a single texture.
+    - Fixed a bug that `GameBase.TotalFrame` property is not updated when not in capture mode
+
     ### Others
     - Refactored very much
     - Rewrote all API documents in English

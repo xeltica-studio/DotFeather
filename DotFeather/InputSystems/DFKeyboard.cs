@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using OpenTK.Input;
 
 
@@ -571,18 +572,47 @@ namespace DotFeather
 			}
 		}
 
+		/// <summary>
+		/// Get input string from the keyboard buffer.
+		/// </summary>
+		public static string GetString()
+		{
+			if (!HasChar()) return "";
+
+			var buf = new StringBuilder();
+			while (HasChar())
+				buf.Append(GetChar());
+			return buf.ToString();
+		}
+
+		/// <summary>
+		/// Get an input char from the keyboard buffer.
+		/// </summary>
+		public static char GetChar() => HasChar() ? keychars.Dequeue() : '\0';
+
+		/// <summary>
+		/// Check whether some chars in the keyboard buffer.
+		/// </summary>
+		/// <returns></returns>
+		public static bool HasChar() => keychars.Count > 0;
+
 		internal static void Update()
 		{
 			foreach (var code in allCodes)
 			{
 				var isPressed = Keyboard.GetState()[code.ToTK()];
 				var prevIsPressed = prevState[(int)code];
-				KeyOf(code).IsPressed = isPressed;
-				KeyOf(code).IsKeyDown = isPressed && !prevIsPressed;
-				KeyOf(code).IsKeyUp = !isPressed && prevIsPressed;
+				var key = KeyOf(code);
+				key.IsPressed = isPressed;
+				key.IsKeyDown = isPressed && !prevIsPressed;
+				key.IsKeyUp = !isPressed && prevIsPressed;
+				key.ElapsedFrameCount = isPressed ? key.ElapsedFrameCount + 1 : 0;
+				key.ElapsedTime = isPressed ? key.ElapsedTime + Time.DeltaTime : 0;
 				prevState[(int)code] = isPressed;
 			}
 		}
+
+		internal static readonly Queue<char> keychars = new Queue<char>();
 
 		private static readonly DFKeyCode[] allCodes = (Enum.GetValues(typeof(DFKeyCode)) as DFKeyCode[]).Distinct().ToArray();
 		private static bool[] prevState = new bool[(int)DFKeyCode.LastKey + 1];

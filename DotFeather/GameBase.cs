@@ -250,6 +250,15 @@ namespace DotFeather
 				OnUnload(s, e);
 			};
 
+			window.KeyPress += (s, e) =>
+			{
+				DFKeyboard.keychars.Enqueue(e.KeyChar);
+
+				KeyPress?.Invoke(s, new DFKeyPressEventArgs(e.KeyChar));
+
+				OnKeyPress(s, new DFKeyPressEventArgs(e.KeyChar));
+			};
+
 			window.KeyDown += (s, e) =>
 			{
 				KeyDown?.Invoke(s, new DFKeyEventArgs(e));
@@ -367,6 +376,11 @@ namespace DotFeather
 		/// <summary>
 		/// Called when the key pressed.
 		/// </summary>
+		protected virtual void OnKeyPress(object sender, DFKeyPressEventArgs e) { }
+
+		/// <summary>
+		/// Called when the key pressed.
+		/// </summary>
 		protected virtual void OnKeyDown(object sender, DFKeyEventArgs e) { }
 
 		/// <summary>
@@ -453,6 +467,7 @@ namespace DotFeather
 		public event EventHandler<DFFileDroppedEventArgs>? FileDrop;
 		public event EventHandler<EventArgs>? Resize;
 		public event EventHandler<DFKeyEventArgs>? KeyDown;
+		public event EventHandler<DFKeyPressEventArgs>? KeyPress;
 		public event EventHandler<DFKeyEventArgs>? KeyUp;
 
 		private int? statusCode;

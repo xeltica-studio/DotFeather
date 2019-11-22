@@ -18,14 +18,13 @@ namespace DotFeather
 			var hw = game.Width / 2;
 			var hh = game.Height / 2;
 
-			var w = width ?? texture.Size.Width;
-	var h = height ?? texture.Size.Height;
+			var w = width ?? texture.Size.X;
+			var h = height ?? texture.Size.Y;
 
 			w *= scale.X;
 			h *= scale.Y;
 
-			var left = location.X;
-			var top = location.Y;
+			var (left, top) = location;
 			var right = left + w;
 			var bottom = top + h;
 
@@ -36,14 +35,10 @@ namespace DotFeather
 
 			var verts = new[]
 			{
-				(location.X, location.Y)
-					.ToViewportPoint(hw, hh),
-				(location.X + w, location.Y)
-					.ToViewportPoint(hw, hh),
-				(location.X, location.Y + h)
-					.ToViewportPoint(hw, hh),
-				(location.X + w, location.Y + h)
-					.ToViewportPoint(hw, hh)
+				(left, top).ToViewportPoint(hw, hh),
+				(right, top).ToViewportPoint(hw, hh),
+				(left, bottom).ToViewportPoint(hw, hh),
+				(right, bottom).ToViewportPoint(hw, hh)
 			};
 
 			GL.Enable(EnableCap.Blend);
@@ -52,13 +47,13 @@ namespace DotFeather
 			GL.Enable(EnableCap.Texture2D);
 			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
 
-	using (new GLContext(PrimitiveType.Quads))
+			using (new GLContext(PrimitiveType.Quads))
 			{
 				Vertex(1, 1, verts[3], color);
 				Vertex(0, 1, verts[2], color);
 				Vertex(0, 0, verts[0], color);
 				Vertex(1, 0, verts[1], color);
-	}
+			}
 
 			GL.Disable(EnableCap.Texture2D);
 			GL.Disable(EnableCap.Blend);

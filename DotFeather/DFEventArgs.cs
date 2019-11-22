@@ -3,14 +3,14 @@ using System;
 namespace DotFeather
 {
 	/// <summary>
-	/// DotFeather の基本的なイベント引数です。
+	/// A basic event arguments.
 	/// </summary>
 	public class DFEventArgs : EventArgs
 	{
 		/// <summary>
-		/// 前回同じイベントを呼び出されてから経過した時間(秒単位)。
+		/// Get elapsed time (in seconds) since the same event was called last time.
 		/// </summary>
 		/// <value>The delta time.</value>
-		public double DeltaTime { get; set; }
+		public float DeltaTime { get; set; }
 	}
 }

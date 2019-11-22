@@ -3,32 +3,28 @@ using System;
 namespace DotFeather
 {
 	/// <summary>
-	/// キーボードイベントの引数です。
+	/// Keyboard event argument.
 	/// </summary>
 	public class DFKeyEventArgs : EventArgs
 	{
 		/// <summary>
-		/// 押されたキーを取得します。
+		/// Get a pressed key.
 		/// </summary>
-		/// <value>押されたキー。</value>
 		public DFKeyCode Key { get; }
 
 		/// <summary>
-		/// Alt キーが押されたかどうかを示す値を取得します。
+		/// Gets a value indicating whether the Alt key was pressed.
 		/// </summary>
-		/// <value>Alt キーが押された場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
 		public bool AltPressed { get; }
 
 		/// <summary>
-		/// Ctrl キーが押されたかどうかを示す値を取得します。
+		/// Gets a value indicating whether the Ctrl key was pressed.
 		/// </summary>
-		/// <value>Ctrl キーが押された場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
 		public bool CtrlPressed { get; }
 
 		/// <summary>
-		/// Shift キーが押されたかどうかを示す値を取得します。
+		/// Gets a value indicating whether the Shift key was pressed.
 		/// </summary>
-		/// <value>Shift キーが押された場合は <c>true</c>。それ以外の場合は <c>false</c>。</value>
 		public bool ShiftPressed { get; }
 
 		internal DFKeyEventArgs(OpenTK.Input.KeyboardKeyEventArgs e)

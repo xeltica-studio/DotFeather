@@ -1,6 +1,6 @@
 # キーボード入力
 
-キーボードからの入力を取得するには、 `Input.Keyboard` プロパティを使用します。
+キーボードからの入力を取得するには、 `DFKeyBoard` プロパティを使用します。
 
 Keyboard プロパティの子要素には、あらゆるキーの名前がプロパティとしてあります。
 
@@ -8,18 +8,18 @@ Keyboard プロパティの子要素には、あらゆるキーの名前がプ�
 
 ```cs
 // A を押したか判定する
-if (Input.Keyboard.A.IsPressed)
+if (DFKeyBoard.A.IsPressed)
 {
 	Console.WriteLine("Aが押されている");
 }
 
 
-if (Input.Keyboard.B.IsKeyDown)
+if (DFKeyBoard.B.IsKeyDown)
 {
 	Console.WriteLine("Bが押された");
 }
 
-if (Input.Keyboard.B.IsKeyUp)
+if (DFKeyBoard.B.IsKeyUp)
 {
 	Console.WriteLine("Bが離された");
 }

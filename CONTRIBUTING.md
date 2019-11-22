@@ -27,7 +27,7 @@ Basically I compliant [C# Coding Conventions (Official)](https://docs.microsoft.
 
 + Use 4-character tabs for indentation
 + DON'T make fields `public`
-+ Define members of classes and structs the following orders
++ Define members of classes and structs the following orders:
 	+ Properties
 	+ Constructor(s)
 		+ If have many ones, arrange in ascending order of arguments.
@@ -38,6 +38,7 @@ Basically I compliant [C# Coding Conventions (Official)](https://docs.microsoft.
 	+ Delegates
 + If you overload methods, locate them adjacently.
 + Define an entrypoint method in a dedicated `static` class.
++ Make string-variables non-null, and initialize them with empty string.
 
 ## To deploy
 

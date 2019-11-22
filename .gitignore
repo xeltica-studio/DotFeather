@@ -39,7 +39,3 @@ Thumbs.db
 
 # dotCover
 *.dotCover
-DotFeather.Test.NetCore/Char.png
-DotFeather.Test.NetCore/Field.png
-
-*.png

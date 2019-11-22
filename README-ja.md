@@ -1,10 +1,11 @@
-# <img src="docs/logo.svg"/>
+# ![DotFeather](docs/logo.svg)
+
 [![Build status](https://img.shields.io/appveyor/ci/xeltica/dotfeather.svg?style=for-the-badge)][ci]
 [![GitHub Releases](https://img.shields.io/github/release-pre/xeltica/DotFeather.svg?style=for-the-badge)][releases]
 [![Nuget](https://img.shields.io/nuget/vpre/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
 [![Discord](https://img.shields.io/discord/572071627991416851?label=discord&style=for-the-badge)](https://discord.gg/e2TCF4m)
 
-DotFeather (ドットフェザー)は、 C# と .NET Standard 2.0 のための、軽量で汎用的な2Dゲームエンジンです。
+DotFeather (ドットフェザー)は、 C# と .NET Standard 2.1 のための、軽量で汎用的な2Dゲームエンジンです。
 
 [English](README.md) ・ 日本語
 
@@ -21,18 +22,7 @@ dotnet build
 
 - Windows
 - macOS
-
-## サポートされるレンダリング バックエンド
-
-- OpenGL 1.0 (OpenTK)
-
-### 計画中
-
-- GNU/Linux サポート (バグを直さないと動かない)
-- OpenGL ES 2.0 (OpenTK)
-	- iOS / Android 向け
-- Metal2 (Xamarin.iOS および Xamarin.Mac)
-	- iOS および macOS でのみ動作する
+- GNU/Linux
 
 ## 機能
 
@@ -49,6 +39,7 @@ dotnet build
 - マウス入力
 - スクリーンショット撮影機能
 - 動画作成を支援するための、画面を連番画像でキャプチャーする機能
+- シーン遷移機能
 - 音楽再生
 - 効果音再生
 - 返り値の取得やエラーハンドリングを備えた Unity ライクなコルーチンシステム
@@ -59,20 +50,6 @@ dotnet build
 ----
 
 <p id="f1">1: ユーザーのコンピュータースペックに依存します。</p>
-
-## よくある質問
-
-### macOS で libgdiplus が見つからないというエラーが起きる
-
-homebrew をインストールし、次のコマンドを実行してください
-
-```
-brew install mono-libgdiplus
-```
-
-### GNU/Linux で libgdiplus が見つからないというエラーが起きる
-
-libgdiplus を、各種パッケージマネージャー、或いはソースコードからビルドするなどをして導入してください。
 
 ## ドキュメント
 

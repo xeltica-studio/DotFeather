@@ -6,39 +6,31 @@ using static DotFeather.MiscUtility;
 namespace DotFeather
 {
 	/// <summary>
-	/// <see cref="ITile"/> オブジェクトを格子状にレンダリングする <see cref="IDrawable"/> オブジェクトです。
+	/// A <see cref="IDrawable"/> object to render <see cref="ITile"/> objects in a lattice.
 	/// </summary>
 	public class Tilemap : IDrawable
 	{
-		/// <summary>
-		/// </summary>
 		public int ZOrder { get; set; }
-		/// <summary>
-		/// </summary>
-		public string Name { get; set; }
-		/// <summary>
-		/// </summary>
+
+		public string Name { get; set; } = "";
+
 		public Vector Location { get; set; }
-		/// <summary>
-		/// </summary>
+
 		public float Angle { get; set; }
-		/// <summary>
-		/// </summary>
+
 		public Vector Scale { get; set; } = Vector.One;
-		/// <summary>
-		/// </summary>
+
 		public Color? DefaultColor { get; set; }
 
 		/// <summary>
-		/// タイルあたりのピクセス単位のサイズを取得または設定します。
+		/// Get or set the size in pixels per tile.
 		/// </summary>
-		/// <value></value>
 		public Vector TileSize { get; set; }
 
 		/// <summary>
-		/// <see cref="Tilemap"/> クラスの新しいインスタンスを初期化します。
+		/// Initialize a new instance of <see cref="Tilemap"/> class.
 		/// </summary>
-		/// <param name="tileSize">タイル1枚あたりのサイズ。</param>
+		/// <param name="tileSize">Size per the tile.</param>
 		public Tilemap(Vector tileSize)
 		{
 			TileSize = tileSize;
@@ -46,25 +38,23 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		///  指定した位置にあるタイルを取得または設定します。
+		/// Get or set the tile at the specified position.
 		/// </summary>
-		public ITile this[int x, int y]
+		public ITile? this[int x, int y]
 		{
 			get => GetTileAt(x, y);
 			set => SetTile(x, y, value);
 		}
 
 		/// <summary>
-		///  指定した位置にあるタイルを取得または設定します。
+		/// Get or set the tile at the specified position.
 		/// </summary>
-		public ITile this[Vector point]
+		public ITile? this[Vector point]
 		{
 			get => GetTileAt(point);
 			set => SetTile(point, value);
 		}
 
-		/// <summary>
-		/// </summary>
 		public void Draw(GameBase game, Vector location)
 		{
 			foreach (var kv in tiles)
@@ -76,41 +66,41 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 指定した位置にあるタイルを取得します。
+		///  Get the tile at the specified position.
 		/// </summary>
-		public ITile GetTileAt(Vector point) => GetTileAt((int)point.X, (int)point.Y);
+		public ITile? GetTileAt(Vector point) => GetTileAt((int)point.X, (int)point.Y);
 		/// <summary>
-		/// 指定した位置にあるタイルを取得します。
+		///  Get the tile at the specified position.
 		/// </summary>
-		public ITile GetTileAt(int x, int y) => tiles.ContainsKey((x, y)) ? tiles[(x, y)].tile : default;
+		public ITile? GetTileAt(int x, int y) => tiles.ContainsKey((x, y)) ? tiles[(x, y)].tile : default;
 
 		/// <summary>
-		/// 指定した位置にあるタイルの色を取得します。
+		/// Get color of the tile at the specified position.
 		/// </summary>
 		public Color? GetTileColorAt(Vector point) => GetTileColorAt((int)point.X, (int)point.Y);
 		/// <summary>
-		/// 指定した位置にあるタイルの色を取得します。
+		/// Get color of the tile at the specified position.
 		/// </summary>
 		public Color? GetTileColorAt(int x, int y) => tiles.ContainsKey((x, y)) ? tiles[(x, y)].color : default;
 
 		/// <summary>
-		/// 指定した位置にタイルを設置します。
+		/// Set the tile at the specified position.
 		/// </summary>
-		public void SetTile(Vector point, ITile tile, Color? color = default) => SetTile((int)point.X, (int)point.Y, tile, color);
+		public void SetTile(Vector point, ITile? tile, Color? color = null) => SetTile((int)point.X, (int)point.Y, tile, color);
 
 		/// <summary>
-		/// 指定した位置にタイルを設置します。
+		/// Set the tile at the specified position.
 		/// </summary>
-		public void SetTile(int x, int y, ITile tile, Color? color = default)
+		public void SetTile(int x, int y, ITile? tile, Color? color = null)
 		{
-			if (tile == default)
+			if (tile == null)
 				tiles.Remove((x, y));
 			else
 				tiles[(x, y)] = (tile, color ?? DefaultColor);
 		}
 
 		/// <summary>
-		/// タイルを全て削除します。
+		/// Remove all tiles.
 		/// </summary>
 		public void Clear()
 		{
@@ -118,7 +108,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// タイルを線形描画します。
+		/// Draw a line with specified tile.
 		/// </summary>
 		public void Line(int x1, int y1, int x2, int y2, ITile tile)
 		{
@@ -162,7 +152,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 指定した矩形にタイルを並べます。
+		/// Fill the specified rectangle with the specified tile.
 		/// </summary>
 		public void Fill(int x1, int y1, int width, int height, ITile tile)
 		{
@@ -172,19 +162,19 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// タイルを線形描画します。
+		/// Draw a line with specified tile.
 		/// </summary>
 		public void Line(Vector start, Vector end, ITile tile)
 			=> Line((int)start.X, (int)start.Y, (int)end.X, (int)end.Y, tile);
 
 		/// <summary>
-		/// 指定した矩形にタイルを並べます。
+		/// Fill the specified rectangle with the specified tile.
 		/// </summary>
 		public void Fill(Vector position, Vector size, ITile tile)
 			=> Line((int)position.X, (int)position.Y, (int)size.X, (int)size.Y, tile);
 
 		/// <summary>
-		/// この <see cref="Tilemap"/> を破棄します。
+		/// Destroy this <see cref="Tilemap"/>.
 		/// </summary>
 		public void Destroy()
 		{

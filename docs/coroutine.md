@@ -28,11 +28,11 @@ IEnumerator CountDown()
 The defined coroutines are executed as follows:
 
 ```cs
-// Call from the GameBase-inherited class
+// Call from the game-class
 var coroutine = StartCoroutine(CountDown());
 
 // Call from other contexts
-var coroutine = CoroutineRunner.StartCoroutine(CountDown));
+var coroutine = CoroutineRunner.Start(CountDown));
 ```
 
 Both `StartCoroutine ()` methods return an instance of the [Coroutine class](https://dotfeather.netlify.com/api/dotfeather.coroutine). You can control the coroutine by manipulating this instance.
@@ -42,11 +42,11 @@ Both `StartCoroutine ()` methods return an instance of the [Coroutine class](htt
 For example, to interrupt the coroutine, call `StopCoroutine` method.
 
 ```cs
-// Call from the GameBase-inherited class
+// Call from the game-class
 StopCoroutine(coroutine);
 
 // Call from other contexts
-CoroutineRunner.StopCoroutine(coroutine);
+CoroutineRunner.Stop(coroutine);
 ```
 
 ## Callbacks
@@ -111,4 +111,4 @@ DotFeather has some builtin yield instructions, and some objects are also specia
 |`IEnumerator`|Run as a coroutine, and wail until the coroutine is finished.|
 |Other Object-inherited types and `null`|Work as a `WaitUntilNextFrame`.|
 
-Next: [Original Rendering](../plugin/render.md)
+Next: [Router](router.md)

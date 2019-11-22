@@ -32,4 +32,16 @@ container.X = 128;
 container.Y = 96;
 ```
 
+Containers usually draw objects that are outside the container's own area, but you can also configure it to clip overhanging areas. Just write:
+
+```cs
+container.IsTrimmable = true;
+
+// Don't forget to specify the width and height
+container.Width = 128;
+container.Height = 128;
+```
+
+As a result, the child object that protrudes from the quadrilateral representing the container area is clipped.
+
 Next: [9-slice Sprite](./9slice.md)

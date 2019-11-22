@@ -5,45 +5,39 @@ using NVorbis;
 namespace DotFeather
 {
 	/// <summary>
-	/// Ogg Vorbis 形式のデータを表現するオーディオソースです。
+	/// An audio source that represents data in Ogg Vorbis format.
 	/// </summary>
 	public class VorbisAudioSource : IAudioSource, IDisposable
 	{
 		/// <summary>
-		/// 合計サンプル数を取得または設定します。
+		/// Get the total number of samples.
 		/// </summary>
 		/// <returns></returns>
 		public int? Samples => (int)reader.TotalSamples;
 
 		/// <summary>
-		/// チャンネル数を取得または設定します。
+		/// Get channels.
 		/// </summary>
 		public int Channels => reader.Channels;
 
 		/// <summary>
-		///  量子化ビット数を取得または設定します。
+		/// Get sample bits.
 		/// </summary>
 		public int Bits => 16;
 
 		/// <summary>
-		/// サンプリング周波数を取得または設定します。
+		/// Get sample rate.
 		/// </summary>
 		public int SampleRate => reader.SampleRate;
 
 		/// <summary>
-		/// ファイル名を指定して、 <see cref="VorbisAudioSource"/> クラスの新しいインスタンスを初期化します。
+		/// Initialize a new instance of <see cref="VorbisAudioSource"/> class with specified file path.
 		/// </summary>
-		/// <param name="path">ファイルパス。</param>
 		public VorbisAudioSource(string path)
 		{
 			reader = new NVorbis.VorbisReader(path);
 		}
 
-		/// <summary>
-		/// サンプルを列挙します。
-		/// </summary>
-		/// <param name="loopStart">ループ開始位置。ループしない場合は <c>null</c> 。</param>
-		/// <returns>サンプルのイテレーター。</returns>
 		public IEnumerable<(short left, short right)> EnumerateSamples(int? loopStart)
 		{
 			var buf = new float[2];
@@ -63,7 +57,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// このオブジェクトを破棄します、
+		/// Dispose this object.
 		/// </summary>
 		public void Dispose()
 		{

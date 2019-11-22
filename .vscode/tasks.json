@@ -7,7 +7,7 @@
 			"type": "process",
 			"args": [
 				"build",
-				"${workspaceFolder}/DotFeather.Test.NetCore/DotFeather.Test.NetCore.csproj"
+				"${workspaceFolder}/demo/DotFeather.Demo.csproj"
 			],
 			"problemMatcher": "$tsc"
 		},
@@ -17,7 +17,7 @@
 			"type": "process",
 			"args": [
 				"publish",
-				"${workspaceFolder}/DotFeather.Test.NetCore/DotFeather.Test.NetCore.csproj"
+				"${workspaceFolder}/demo/DotFeather.Demo.csproj"
 			],
 			"problemMatcher": "$tsc"
 		},
@@ -28,7 +28,7 @@
 			"args": [
 				"watch",
 				"run",
-				"${workspaceFolder}/DotFeather.Test.NetCore/DotFeather.Test.NetCore.csproj"
+				"${workspaceFolder}/demo/DotFeather.Demo.csproj"
 			],
 			"problemMatcher": "$tsc"
 		}

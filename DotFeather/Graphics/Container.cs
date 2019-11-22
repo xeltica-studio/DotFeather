@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using OpenTK.Graphics.OpenGL;
 
 namespace DotFeather
 {
@@ -17,7 +19,7 @@ namespace DotFeather
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の名前を取得または設定します。
 		/// </summary>
-		public string Name { get; set; }
+		public string Name { get; set; } = "";
 
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の座標を取得または設定します。
@@ -30,9 +32,24 @@ namespace DotFeather
 		public float Angle { get; set; }
 
 		/// <summary>
-		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> のスケーリングを取得または設定します。
+		/// Get or set scale of this <see cref="T:DotFeather.Drawable.IDrawable"/>.
 		/// </summary>
-		public Vector Scale { get; set; } = new Vector(1, 1);
+		public Vector Scale { get; set; } = Vector.One;
+
+		/// <summary>
+		/// Get or set width of this <see cref="T:DotFeather.Drawable.IDrawable"/>.
+		/// </summary>
+		public int Width { get; set; } = 256;
+
+		/// <summary>
+		/// Get or set height of this <see cref="T:DotFeather.Drawable.IDrawable"/>.
+		/// </summary>
+		public int Height { get; set; } = 256;
+
+		/// <summary>
+		/// Get or set whether this container is trimmable. If true, this container draws children with trimming within rectangular range of this container.
+		/// </summary>
+		public bool IsTrimmable { get; set; }
 
 		/// <summary>
 		/// このコンテナーの子要素にアクセスします。
@@ -49,7 +66,10 @@ namespace DotFeather
 		/// コンテナをソートします。
 		/// </summary>
 		public void Sort() =>
-			Children.Sort((d1, d2) => d1.ZOrder < d2.ZOrder ? 1 : d1.ZOrder > d2.ZOrder ? -1 : 0);
+			Children.Sort((d1, d2) =>
+				d1.ZOrder < d2.ZOrder ? 1 : d1.ZOrder > d2.ZOrder ? -1 :
+				countMap[d1] < countMap[d2] ? 1 : -1
+			);
 
 		/// <summary>
 		/// このコンテナに子要素を追加します。
@@ -57,7 +77,9 @@ namespace DotFeather
 		/// <param name="child">子要素。</param>
 		public void Add(IDrawable child)
 		{
+			countMap[child] = count++;
 			Children.Add(child);
+			Sort();
 		}
 
 		/// <summary>
@@ -75,7 +97,26 @@ namespace DotFeather
 		/// </summary>
 		public void Draw(GameBase game, Vector location)
 		{
-			Sort();
+			if (IsTrimmable)
+			{
+				GL.Enable(EnableCap.ScissorTest);
+				var left = (VectorInt)(Location + location);
+				var size = (VectorInt)(new Vector(Width, Height) * Scale);
+
+				if (left.X < 0) left.X = 0;
+				if (left.Y < 0) left.Y = 0;
+
+				if (left.X + size.X > game.Width)
+					size.X = left.X + size.X - game.Width;
+
+				if (left.Y + size.Y > game.Height)
+					size.Y = left.Y + size.Y - game.Height;
+
+				left.Y = game.Height - left.Y - size.Y;
+
+				GL.Scissor(left.X, left.Y, size.X, size.Y);
+			}
+
 			for (var i = this.Count - 1; i >= 0; i--)
 			{
 				if (this.Count - 1 < i)
@@ -92,9 +133,15 @@ namespace DotFeather
 				this[i].Scale = baseScale;
 				this[i].Location = baseLoc;
 			}
+
+			if (IsTrimmable)
+			{
+				GL.Scissor(0, 0, game.Width, game.Height);
+				GL.Disable(EnableCap.ScissorTest);
+			}
 		}
 
-		public void OnUpdate(GameBase game)
+		public virtual void OnUpdate(GameBase game)
 		{
 			this.OfType<IUpdatable>().ToList().ForEach(u => u.OnUpdate(game));
 		}
@@ -118,7 +165,12 @@ namespace DotFeather
 		/// <summary>
 		/// 指定した位置にあるオブジェクトを削除します。
 		/// </summary>
-		public void RemoveAt(int index) => Children.RemoveAt(index);
+		public void RemoveAt(int index)
+		{
+			countMap.Remove(Children[index]);
+			Children.RemoveAt(index);
+			Sort();
+		}
 
 		/// <summary>
 		/// オブジェクトを削除します。
@@ -126,6 +178,7 @@ namespace DotFeather
 		public void Clear()
 		{
 			Children.ForEach(child => child.Destroy());
+			countMap.Clear();
 			Children.Clear();
 		}
 
@@ -142,7 +195,13 @@ namespace DotFeather
 		/// <summary>
 		/// 指定したオブジェクトを削除します。
 		/// </summary>
-		public bool Remove(IDrawable item) => Children.Remove(item);
+		public bool Remove(IDrawable item)
+		{
+			var res = Children.Remove(item);
+			countMap.Remove(item);
+			Sort();
+			return res;
+		}
 
 		/// <summary>
 		/// 列挙子を取得します。
@@ -161,5 +220,9 @@ namespace DotFeather
 		#endregion
 
 		private List<IDrawable> Children { get; } = new List<IDrawable>(10000);
+
+		private Dictionary<IDrawable, int> countMap = new Dictionary<IDrawable, int>();
+
+		private int count = 0;
 	}
 }

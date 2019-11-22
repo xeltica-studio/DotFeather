@@ -16,8 +16,9 @@ public class ClickableSprite : Sprite, IUpdatable
 	public void OnUpdate(GameBase game)
 	{
 		var (x, y) = (Input.Mouse.Position.X, Input.Mouse.Position.Y);
+		var (lx, ly) = Location;
 
-		if (Location.X < x && Location.Y < y && x < Location.X + Width && y < Location.Y + Height && Input.Mouse.IsLeftUp)
+		if (lx < x && ly < y && x < lx + Width && y < ly + Height && Input.Mouse.IsLeftUp)
 		{
 			game.BackgroundColor = Color.Red;
 		}

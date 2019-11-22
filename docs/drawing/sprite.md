@@ -38,4 +38,28 @@ In addition, you can directly generate sprites by specifying path:
 Sprite sprite = Sprite.LoadFrom("./assets/skeleton.png");
 ```
 
+## Animating Sprite
+
+`AnimatingSprite` class loads splitted textures array, and perform texture-animation.
+
+
+
+Let's actually use `AnimatingSprite` as following example:
+
+```cs
+var zombieWalking = new AnimatingSprite(textures, -1, 4);
+Root.Add(zombieWalking);
+
+// Don't forget
+zombieWalking.StartAnimating();
+```
+
+In the constructor of the `AnimatingSprite` class, you can specify the texture array as the first argument, the loop count as the second argument, and the time as the third argument.
+
+If the number of loops is 1 or more, it loops that number of times. If 0, do not loop. And if it is -1, it loops infinitely.
+
+Time is the frame time until switching to the next texture. For example, if it is 5, a single texture will be displayed in 5 frames.
+
+Since `AnimatingSprite` does not animate automatically after initialization, be sure to call the` StartWalking` method.
+
 Next: [Tilemap](tilemap.md)

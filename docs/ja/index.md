@@ -12,6 +12,7 @@ DotFeather は、NuGet パッケージマネージャーを使用することで
 	- [API ドキュメントはこちら](https://dotfeather.netlify.com/api/)
 - チュートリアル
 	- [GameBase の継承](gamebase.md)
+	- [Hello](hello.md)
 	- [描画](drawing.md)
 		- [グラフィック](drawing/graphic.md)
 		- [スプライト](drawing/sprite.md)
@@ -26,6 +27,7 @@ DotFeather は、NuGet パッケージマネージャーを使用することで
 		- [ファイルの読み込み](audio/load.md)
 		- [ファイルの再生](audio/play.md)
 	- [コルーチン](coroutine.md)
+	- [ルーター](router.md)
 	- 機能拡張
 		- [独自レンダリング](plugin/render.md)
 		- [独自オーディオソース](plugin/audiosource.md)
@@ -34,8 +36,6 @@ DotFeather は、NuGet パッケージマネージャーを使用することで
 <!--
 	- 公式プラグイン (執筆中)
 		- DotFeather.UI
-		- DotFeather.Router
 		- DotFeather.Management
-		- DotFeather.Management.Router
 		- DotFeather.UI.Mvvm
 -->

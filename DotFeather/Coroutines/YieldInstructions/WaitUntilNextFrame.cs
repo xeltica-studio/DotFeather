@@ -1,7 +1,7 @@
 namespace DotFeather
 {
 	/// <summary>
-	/// 次回フレームまで待機するイールド命令です。
+	/// A yield instruction to wait until the next frame.
 	/// </summary>
 	public class WaitUntilNextFrame : YieldInstruction
 	{

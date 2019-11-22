@@ -1,91 +1,71 @@
-using System;
-using System.Drawing;
 using OpenTK.Input;
 
 
 namespace DotFeather
 {
 	/// <summary>
-	/// マウス カーソルの位置、マウスボタンの状態などを取得するクラスです。このクラスは継承できません。
+	/// This class gets the mouse cursor position, mouse button status, etc. This class can not be inherited.
 	/// </summary>
-	public sealed class DFMouse
+	public static class DFMouse
 	{
 		/// <summary>
-		/// マウスカーソルの座標を取得します。
+		/// Get mouse cursor coordinates.
 		/// </summary>
 		/// <value>The position.</value>
-		public Point Position { get; internal set; }
+		public static VectorInt Position { get; internal set; }
 
 		/// <summary>
-		/// 左ボタンが押されているかどうかを示す値を取得または設定します。
+		/// Get or set whether left button pressed.
 		/// </summary>
-		public bool IsLeft { get; private set; }
+		public static bool IsLeft { get; private set; }
 
 		/// <summary>
-		/// 右ボタンが押されているかどうかを示す値を取得または設定します。
+		/// Get or set whether right button pressed.
 		/// </summary>
-		public bool IsRight { get; private set; }
+		public static bool IsRight { get; private set; }
 
 		/// <summary>
-		/// 中ボタンが押されているかどうかを示す値を取得または設定します。
+		/// Get or set whether middle button pressed.
 		/// </summary>
-		public bool IsMiddle { get; private set; }
+		public static bool IsMiddle { get; private set; }
 
 		/// <summary>
-		/// 左ボタンがたった今押されたかどうかを示す値を取得または設定します。
+		/// Get or set whether left button pressed down.
 		/// </summary>
-		public bool IsLeftDown { get; private set; }
+		public static bool IsLeftDown { get; private set; }
 
 		/// <summary>
-		/// 右ボタンがたった今押されたかどうかを示す値を取得または設定します。
+		/// Get or set whether right button pressed down.
 		/// </summary>
-		public bool IsRightDown { get; private set; }
+		public static bool IsRightDown { get; private set; }
 
 		/// <summary>
-		/// 中ボタンがたった今押されたかどうかを示す値を取得または設定します。
+		/// Get or set whether middle button pressed down.
 		/// </summary>
-		public bool IsMiddleDown { get; private set; }
+		public static bool IsMiddleDown { get; private set; }
 
 		/// <summary>
-		/// 左ボタンがたった今離されたかどうかを示す値を取得または設定します。
+		/// Get or set whether left button released up.
 		/// </summary>
-		public bool IsLeftUp { get; private set; }
+		public static bool IsLeftUp { get; private set; }
 
 		/// <summary>
-		/// 右ボタンがたった今離されたかどうかを示す値を取得または設定します。
+		/// Get or set whether right button released up.
 		/// </summary>
-		public bool IsRightUp { get; private set; }
+		public static bool IsRightUp { get; private set; }
 
 		/// <summary>
-		/// 中ボタンがたった今離されたかどうかを示す値を取得または設定します。
+		/// Get or set whether middle button released up.
 		/// </summary>
-		public bool IsMiddleUp { get; private set; }
-
-		#pragma warning disable CS1591 // Exceptionally, Obsolete APIs don't have to have XML comments
-
-		[Obsolete("Use IsLeft instead.")]
-		public bool IsLeftClicked => IsLeft;
-
-		[Obsolete("Use IsRight instead.")]
-		public bool IsRightClicked => IsRight;
-
-		[Obsolete("Use IsMiddle instead.")]
-		public bool IsMiddleClicked => IsMiddle;
+		public static bool IsMiddleUp { get; private set; }
 
 		/// <summary>
-		/// マウスホイールのスクロール量を取得します。
+		/// Get mouse wheel scroll amount.
 		/// </summary>
 		/// <value></value>
-		public (float x, float y) Scroll
-		{
-			get
-			{
-				var s = Mouse.GetState().Scroll;
-				return (s.X, s.Y);
-			}
-		}
+		public static Vector Scroll { get; private set; }
 
-		internal void Update()
+		internal static void Update()
 		{
 			// previous values
 			bool pl = IsLeft, pr = IsRight, pm = IsMiddle;
@@ -101,6 +81,14 @@ namespace DotFeather
 			IsLeftUp = !IsLeft && pl;
 			IsRightUp = !IsRight && pr;
 			IsMiddleUp = !IsMiddle && pm;
+
+			var scr = Mouse.GetCursorState().Scroll;
+			var scroll = new Vector(scr.X, scr.Y);
+
+			Scroll = scroll - prevScroll;
+			prevScroll = scroll;
 		}
+
+		private static Vector prevScroll;
 	}
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotFeather", "DotFeather\DotFeather.csproj", "{2ACE8212-D057-459D-A088-21F734BC7A3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotFeather.Test.NetCore", "DotFeather.Test.NetCore\DotFeather.Test.NetCore.csproj", "{87982A1E-FCFD-481B-91A0-A5A94B68496A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotFeather.Demo", "demo\DotFeather.Demo.csproj", "{87982A1E-FCFD-481B-91A0-A5A94B68496A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

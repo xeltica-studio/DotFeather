@@ -13,7 +13,7 @@
 		<tags>GameEngine</tags>
 				<license type="expression">MIT</license>
 		<releaseNotes>
-			See https://github.com/Xeltica/DotFeather/releases/tag/1.6.0
+			See https://github.com/Xeltica/DotFeather/releases/tag/2.0.0
 		</releaseNotes>
 		<dependencies>
 			<group targetFramework=".NETStandard2.0">

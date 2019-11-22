@@ -4,19 +4,35 @@ To display string on your DotFeather window, use `TextDrawable` class.
 
 ## Usage
 
-To use `TextDrawable`, you have to load fonts before that. Initialize `System.Drawing.Font` to load a font.
+To use `TextDrawable`, initialize like this:
 
 ```cs
-var font = new Font("Arial", 24);
-```
-
-I won't describe more usage of `System.Drawing.Font` class, but it can also load original fonts, so let's search more information.
-
-Initialize an object with fonts.
-
-```cs
-var text = new TextDrawable("Hello, DotFeather!", font, Color.White);
+var text = new TextDrawable("Hello, DotFeather!");
 Root.Add(text);
 ```
+Optinally, you can specify text size, font style and color.
 
-次: [Container](container.md)
+### Use your own font
+
+By default, TextDrawable uses the builtin font, but you can also use your own font or OS-provided fonts as needed.
+
+To change the font, first initialize an instance of the `Font` class.
+
+```cs
+// Specify the font by path
+var font = new Font("./font.ttf", 32, FontStyle.Normal);
+
+// Use system font
+var sans = new Font("Comic Sans MS", 16);
+
+// Initialize default font
+var defaultFont = Font.GetDefault(24);
+```
+
+After initializing the instance, provide it to `TextDrawable` constructor to initialize it.
+
+```cs
+var text = new TextDrawable("* do you wanna have a bad time?", sans, Color.White);
+Root.add(text);
+```
+Next: [Container](container.md)

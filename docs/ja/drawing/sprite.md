@@ -38,4 +38,26 @@ Root.Add(sprite);
 Sprite sprite = Sprite.LoadFrom("./assets/skeleton.png");
 ```
 
+## アニメーションするスプライト
+
+`AnimatingSprite` クラスは、分割読み込みしたテクスチャの配列を読み込んで、自動的にテクスチャアニメーションを行います。
+
+次のようにして、`AnimatingSprite` を実際に使ってみましょう。
+
+```cs
+var zombieWalking = new AnimatingSprite(textures, -1, 4);
+Root.Add(zombieWalking);
+
+// 忘れずに
+zombieWalking.StartAnimating();
+```
+
+`AnimatingSprite` クラスのコンストラクターは、第1引数にテクスチャ配列、第2引数にループ回数、そして第3引数に時間を指定します。
+
+ループ回数は、1以上であればその回数ループします。0であればループしません。そして、-1であれば無限ループします。
+
+時間は、次のテクスチャに切り替わるまでのフレーム時間です。例えば、5であれば、1枚のテクスチャが5フレーム表示されます。
+
+`AnimatingSprite` は、初期化後に自動的にはアニメーションを行わないので、かならず `StartWalking` メソッドを呼び出してください。
+
 次: [タイルマップ](tilemap.md)

@@ -9,60 +9,40 @@ using System.Linq;
 namespace DotFeather
 {
 	/// <summary>
-	/// 9 スライステクスチャを描画する <see cref="IDrawable"/> オブジェクトです。
+	/// A <see cref="IDrawable"/> object to draw 9-slice sprite.
 	/// </summary>
 	public class NineSliceSprite : IDrawable
 	{
 		/// <summary>
-		/// 9枚のテクスチャを取得します。
+		///　Get 9 textures.
 		/// </summary>
-		/// <value></value>
 		public Texture2D[] Textures { get; }
 
-		/// <summary>
-		/// この <see cref="NineSliceSprite"/> の描画優先順位を取得または設定します。数値が低いほど奥に描画されます。
-		/// </summary>
 		public int ZOrder { get; set; }
 
-		/// <summary>
-		/// この <see cref="NineSliceSprite"/> の名前を取得または設定します。
-		/// </summary>
-		public string Name { get; set; }
+		public string Name { get; set; } = "";
 
-		/// <summary>
-		/// この <see cref="NineSliceSprite"/> の座標を取得または設定します。
-		/// </summary>
 		public Vector Location { get; set; }
 
-		/// <summary>
-		/// この <see cref="NineSliceSprite"/> の角度を取得または設定します。
-		/// </summary>
 		public float Angle { get; set; }
 
-		/// <summary>
-		/// この <see cref="NineSliceSprite"/> のスケーリングを取得または設定します。
-		/// </summary>
 		public Vector Scale { get; set; } = Vector.One;
 
-		/// <summary>
-		/// この <see cref="NineSliceSprite"/> のカラーを取得または設定します。
-		/// </summary>
 		public Color? Color { get; set; }
 
 		/// <summary>
-		/// 幅を取得または設定します。
+		/// Get or set width.
 		/// </summary>
 		public int Width { get; set; }
 
 		/// <summary>
-		/// 高さを取得または設定します。
+		/// Get or set height.
 		/// </summary>
 		public int Height { get; set; }
 
 		/// <summary>
-		/// <see cref="NineSliceSprite"/> クラスの新しいインスタンスを初期化します。
+		/// Initialize a new instance of <see cref="NineSliceSprite"/> class.
 		/// </summary>
-		/// <value></value>
 		public NineSliceSprite(Texture2D[] textures)
 		{
 			if (textures.Length != 9)
@@ -73,29 +53,29 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 指定した画像ファイルから <see cref="NineSliceSprite"/> を生成します。
+		/// Generate <see cref="NineSliceSprite"/> from the specified texture.
 		/// </summary>
-		/// <param name="path">ファイルパス。</param>
-		/// <param name="left">左からのピクセル値。</param>
-		/// <param name="top">上からのピクセル値。</param>
-		/// <param name="right">右からのピクセル値。</param>
-		/// <param name="bottom">下からのピクセル値。</param>
-		/// <returns>生成された <see cref="Sprite"/>。</returns>
+		/// <param name="path">File path.</param>
+		/// <param name="left">Pixel value from left.</param>
+		/// <param name="top">Pixel value from top.</param>
+		/// <param name="right">Pixel value from right.</param>
+		/// <param name="bottom">Pixel value from bottom.</param>
+		/// <returns>Generated <see cref="NineSliceSprite"/>。</returns>
 		public static NineSliceSprite LoadFrom(string path, int left, int top, int right, int bottom) => new NineSliceSprite(path, left, top, right, bottom);
 
 		/// <summary>
-		/// 指定した画像ファイルから <see cref="NineSliceSprite"/> を生成します。
+		/// Generate <see cref="NineSliceSprite"/> from the specified texture.
 		/// </summary>
-		/// <param name="stream">ファイルを示すストリーム。</param>
-		/// <param name="left">左からのピクセル値。</param>
-		/// <param name="top">上からのピクセル値。</param>
-		/// <param name="right">右からのピクセル値。</param>
-		/// <param name="bottom">下からのピクセル値。</param>
-		/// <returns>生成された <see cref="Sprite"/>。</returns>
+		/// <param name="stream">File stream.</param>
+		/// <param name="left">Pixel value from left.</param>
+		/// <param name="top">Pixel value from top.</param>
+		/// <param name="right">Pixel value from right.</param>
+		/// <param name="bottom">Pixel value from bottom.</param>
+		/// <returns>Generated <see cref="NineSliceSprite"/>。</returns>
 		public static NineSliceSprite LoadFrom(Stream stream, int left, int top, int right, int bottom) => new NineSliceSprite(stream, left, top, right, bottom);
 
 		/// <summary>
-		/// この <see cref="NineSliceSprite"/> を破棄します。
+		/// Dispose this <see cref="NineSliceSprite"/>.
 		/// </summary>
 		public void Destroy()
 		{
@@ -107,7 +87,7 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// オブジェクトを描画します。
+		/// Draw the object.
 		/// </summary>
 		public void Draw(GameBase game, Vector location)
 		{
@@ -124,9 +104,9 @@ namespace DotFeather
 			TextureDrawer.Draw(game, Textures[8], location + Location + (new Vector(WidthOf(0) + xSpan, HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, null);
 		}
 
-		private int WidthOf(int index) => Textures[index].Size.Width;
+		private int WidthOf(int index) => Textures[index].Size.X;
 
-		private int HeightOf(int index) => Textures[index].Size.Height;
+		private int HeightOf(int index) => Textures[index].Size.Y;
 
 		private NineSliceSprite(string path, int left, int top, int right, int bottom)
 				: this(Texture2D.LoadAndSplitFrom(path, left, top, right, bottom))
@@ -140,6 +120,6 @@ namespace DotFeather
 			internalTexture = Textures;
 		}
 
-		private Texture2D[] internalTexture;
+		private Texture2D[]? internalTexture;
 	}
 }

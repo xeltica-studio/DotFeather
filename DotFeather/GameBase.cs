@@ -423,7 +423,7 @@ namespace DotFeather
 					bmp.Dispose();
 				}
 			}
-				TotalFrame++;
+			TotalFrame++;
 			window.SwapBuffers();
 		}
 

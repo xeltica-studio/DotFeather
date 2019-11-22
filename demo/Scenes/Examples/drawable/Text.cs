@@ -28,7 +28,5 @@ namespace DotFeather.Demo
 
 		private float time;
 		private int count;
-
 	}
-
 }

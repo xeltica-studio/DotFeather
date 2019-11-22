@@ -1,5 +1,3 @@
-using System;
-
 namespace DotFeather.Demo
 {
 	[DemoScene("/sample3")]

@@ -5,11 +5,6 @@ namespace DotFeather.Demo
 	[Description("ja", "時間情報を表示します")]
 	public class TimeExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
-		{
-
-		}
-
 		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
 		{
 			game.Cls();
@@ -22,5 +17,4 @@ namespace DotFeather.Demo
 				router.ChangeScene<LauncherScene>();
 		}
 	}
-
 }

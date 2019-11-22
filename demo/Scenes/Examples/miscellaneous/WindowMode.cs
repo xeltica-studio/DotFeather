@@ -1,5 +1,3 @@
-using System.Collections;
-
 namespace DotFeather.Demo
 {
 	[DemoScene("/miscellaneous/window mode")]
@@ -31,5 +29,4 @@ namespace DotFeather.Demo
 				game.IsFullScreen ^= true;
 		}
 	}
-
 }

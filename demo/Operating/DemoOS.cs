@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Drawing;
 using System.Linq;
 using System.Reflection;
 
@@ -8,6 +6,9 @@ namespace DotFeather.Demo
 {
 	public static class DemoOS
 	{
+		/// <summary>
+		/// Get or set the version of DemoOS.
+		/// </summary>
 		public const string VERSION = "1.0";
 
 		/// <summary>

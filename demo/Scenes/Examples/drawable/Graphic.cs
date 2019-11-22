@@ -44,5 +44,4 @@ namespace DotFeather.Demo
 		private float time;
 		private Graphic g = new Graphic();
 	}
-
 }

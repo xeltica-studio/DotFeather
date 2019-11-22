@@ -11,7 +11,10 @@ namespace DotFeather.Demo
 		{
 			game.Print("Hello, world!");
 			game.Print("Press [ESC] to exit");
+		}
 
+		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		{
 			if (DFKeyboard.Escape.IsKeyUp)
 				router.ChangeScene<LauncherScene>();
 		}

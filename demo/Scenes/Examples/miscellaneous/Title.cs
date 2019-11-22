@@ -38,5 +38,4 @@ namespace DotFeather.Demo
 			game.Print($"Changed title to '{title}'\n");
 		}
 	}
-
 }

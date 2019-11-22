@@ -52,5 +52,4 @@ namespace DotFeather.Demo
 			game.Print("Press ESC to return");
 		}
 	}
-
 }

@@ -1,10 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using System.Drawing;
 using System.Globalization;
-using System.Linq;
 
 namespace DotFeather.Demo
 {
@@ -181,7 +178,6 @@ namespace DotFeather.Demo
 						}
 					}
 				}
-
 
 				if (innerY < -(padding + (itemHeight + padding + 16) * Items.Count) + Height)
 					innerY = -(padding + (itemHeight + padding + 16) * Items.Count) + Height;

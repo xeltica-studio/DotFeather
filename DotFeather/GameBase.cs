@@ -422,8 +422,8 @@ namespace DotFeather
 					bmp.Save(path, ImageFormat.Png);
 					bmp.Dispose();
 				}
-				TotalFrame++;
 			}
+				TotalFrame++;
 			window.SwapBuffers();
 		}
 

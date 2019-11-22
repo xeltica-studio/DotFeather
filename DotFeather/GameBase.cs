@@ -231,7 +231,7 @@ namespace DotFeather
 			window.Resize += (s, e) =>
 			{
 				GL.Viewport(window.ClientRectangle);
-				Load?.Invoke(s, e);
+				Resize?.Invoke(s, e);
 				OnResize(s, e);
 			};
 

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>DotFeather</id>
-		<version>1.6.0</version>
+		<version>2.0.0</version>
 		<title>DotFeather</title>
 		<authors>Xeltica</authors>
 		<owners>Xeltica</owners>
@@ -11,14 +11,14 @@
 		<description>A lightweight, extensible and easy game engine.</description>
 		<copyright>(C)2018-2019 Xeltica</copyright>
 		<tags>GameEngine</tags>
-				<license type="expression">MIT</license>
+			<license type="expression">MIT</license>
 		<releaseNotes>
 			See https://github.com/Xeltica/DotFeather/releases/tag/2.0.0
 		</releaseNotes>
 		<dependencies>
-			<group targetFramework=".NETStandard2.0">
+			<group targetFramework=".NETStandard2.1">
 				<dependency id="OpenTK.NetStandard" version="1.0.7-prerelease" />
-				<dependency id="Microsoft.Windows.Compatibility" version="2.1.1" />
+				<dependency id="SixLabors.ImageSharp.Drawing" version="1.0.0-beta0007" />
 				<dependency id="NVorbis" version="0.8.6" />
 			</group>
 		</dependencies>

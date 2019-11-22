@@ -1,16 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
-	<TargetFramework>netstandard2.1</TargetFramework>
-	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<ReleaseVersion>1.6.0</ReleaseVersion>
-	<Nullable>Enable</Nullable>
-	<NoWarn>CS1591</NoWarn>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<ReleaseVersion>2.0.0</ReleaseVersion>
+		<Nullable>Enable</Nullable>
+		<NoWarn>CS1591</NoWarn>
 	</PropertyGroup>
 
 	<PropertyGroup>
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	<LangVersion>Latest</LangVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<LangVersion>Latest</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -18,8 +17,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	<PackageReference Include="NVorbis" Version="0.8.6" />
-	<PackageReference Include="OpenTK.NetStandard" Version="1.0.7-prerelease" />
-	<PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />
+		<PackageReference Include="NVorbis" Version="0.8.6" />
+		<PackageReference Include="OpenTK.NetStandard" Version="1.0.7-prerelease" />
+		<PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />
 	</ItemGroup>
 </Project>

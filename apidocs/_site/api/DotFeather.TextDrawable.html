@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="title" content="Class TextDrawable
 	 ">
-		<meta name="generator" content="docfx 2.44.0.0">
+		<meta name="generator" content="docfx 2.47.0.0">
 		
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
 	
 	<h1 id="DotFeather_TextDrawable" data-uid="DotFeather.TextDrawable" class="text-break">Class TextDrawable
 	</h1>
-	<div class="markdown level0 summary"><p>テキストを描画する <a class="xref" href="DotFeather.IDrawable.html">IDrawable</a> オブジェクトです。</p>
+	<div class="markdown level0 summary"><p>A <a class="xref" href="DotFeather.IDrawable.html">IDrawable</a> object to render text.</p>
 </div>
 	<div class="markdown level0 conceptual"></div>
 	<div class="inheritance">
@@ -147,19 +147,19 @@
 	</h3>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
-		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable__ctor_System_String_System_Drawing_Font_System_Nullable_System_Drawing_Color__.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.%23ctor(System.String%2CSystem.Drawing.Font%2CSystem.Nullable%7BSystem.Drawing.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable__ctor_System_String_DotFeather_Font_System_Nullable_System_Drawing_Color__.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.%23ctor(System.String%2CDotFeather.Font%2CSystem.Nullable%7BSystem.Drawing.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L77">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L108">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_TextDrawable__ctor_" data-uid="DotFeather.TextDrawable.#ctor*"></a>
-	<h4 id="DotFeather_TextDrawable__ctor_System_String_System_Drawing_Font_System_Nullable_System_Drawing_Color__" data-uid="DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})">TextDrawable(String, Font, Nullable&lt;Color&gt;)</h4>
-	<div class="markdown level1 summary"><p><a class="xref" href="DotFeather.TextDrawable.html">TextDrawable</a> の新しいインスタンスを初期化します。</p>
+	<h4 id="DotFeather_TextDrawable__ctor_System_String_DotFeather_Font_System_Nullable_System_Drawing_Color__" data-uid="DotFeather.TextDrawable.#ctor(System.String,DotFeather.Font,System.Nullable{System.Drawing.Color})">TextDrawable(String, Font, Nullable&lt;Color&gt;)</h4>
+	<div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="DotFeather.TextDrawable.html">TextDrawable</a>.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
 	<div class="codewrapper">
-		<pre><code class="lang-csharp hljs">public TextDrawable(string text, Font font = null, Color? color = default(Color? ))</code></pre>
+		<pre><code class="lang-csharp hljs">public TextDrawable(string text, Font font, Color? color = default(Color? ))</code></pre>
 	</div>
 	<h5 class="parameters">&#24341;&#25968;</h5>
 	<table class="table table-bordered table-striped table-condensed">
@@ -177,8 +177,56 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><span class="xref">System.Drawing.Font</span></td>
+				<td><a class="xref" href="DotFeather.Font.html">Font</a></td>
 				<td><span class="parametername">font</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Drawing.Color</span>&gt;</td>
+				<td><span class="parametername">color</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable__ctor_System_String_System_Single_DotFeather_FontStyle_System_Nullable_System_Drawing_Color__.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.%23ctor(System.String%2CSystem.Single%2CDotFeather.FontStyle%2CSystem.Nullable%7BSystem.Drawing.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L119">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_TextDrawable__ctor_" data-uid="DotFeather.TextDrawable.#ctor*"></a>
+	<h4 id="DotFeather_TextDrawable__ctor_System_String_System_Single_DotFeather_FontStyle_System_Nullable_System_Drawing_Color__" data-uid="DotFeather.TextDrawable.#ctor(System.String,System.Single,DotFeather.FontStyle,System.Nullable{System.Drawing.Color})">TextDrawable(String, Single, FontStyle, Nullable&lt;Color&gt;)</h4>
+	<div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="DotFeather.TextDrawable.html">TextDrawable</a>.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public TextDrawable(string text, float fontSize = 16F, FontStyle fontStyle = FontStyle.Normal, Color? color = default(Color? ))</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.String</span></td>
+				<td><span class="parametername">text</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Single</span></td>
+				<td><span class="parametername">fontSize</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a class="xref" href="DotFeather.FontStyle.html">FontStyle</a></td>
+				<td><span class="parametername">fontStyle</span></td>
 				<td></td>
 			</tr>
 			<tr>
@@ -192,14 +240,76 @@
 	</h3>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable_BorderColor.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.BorderColor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L69">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_TextDrawable_BorderColor_" data-uid="DotFeather.TextDrawable.BorderColor*"></a>
+	<h4 id="DotFeather_TextDrawable_BorderColor" data-uid="DotFeather.TextDrawable.BorderColor">BorderColor</h4>
+	<div class="markdown level1 summary"><p>Get or set a color of the border.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public Color? BorderColor { get; set; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Drawing.Color</span>&gt;</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable_BorderThickness.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.BorderThickness%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L84">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_TextDrawable_BorderThickness_" data-uid="DotFeather.TextDrawable.BorderThickness*"></a>
+	<h4 id="DotFeather_TextDrawable_BorderThickness" data-uid="DotFeather.TextDrawable.BorderThickness">BorderThickness</h4>
+	<div class="markdown level1 summary"><p>Get or set a thickness of the border.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public int BorderThickness { get; set; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable_Color.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.Color%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L50">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L54">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_TextDrawable_Color_" data-uid="DotFeather.TextDrawable.Color*"></a>
 	<h4 id="DotFeather_TextDrawable_Color" data-uid="DotFeather.TextDrawable.Color">Color</h4>
-	<div class="markdown level1 summary"><p>描画色を取得または設定します。</p>
+	<div class="markdown level1 summary"><p>Get and set a color to draw.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -228,11 +338,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable_Font.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.Font%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L34">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L38">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_TextDrawable_Font_" data-uid="DotFeather.TextDrawable.Font*"></a>
 	<h4 id="DotFeather_TextDrawable_Font" data-uid="DotFeather.TextDrawable.Font">Font</h4>
-	<div class="markdown level1 summary"><p>描画に使用するフォントを取得または設定します。</p>
+	<div class="markdown level1 summary"><p>Get or set a font to draw.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -249,7 +359,7 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td><span class="xref">System.Drawing.Font</span></td>
+				<td><a class="xref" href="DotFeather.Font.html">Font</a></td>
 				<td></td>
 			</tr>
 		</tbody>
@@ -259,7 +369,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable_RenderedTexture.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.RenderedTexture%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L65">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L99">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_TextDrawable_RenderedTexture_" data-uid="DotFeather.TextDrawable.RenderedTexture*"></a>
 	<h4 id="DotFeather_TextDrawable_RenderedTexture" data-uid="DotFeather.TextDrawable.RenderedTexture">RenderedTexture</h4>
@@ -290,11 +400,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable_Text.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L18">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L22">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_TextDrawable_Text_" data-uid="DotFeather.TextDrawable.Text*"></a>
 	<h4 id="DotFeather_TextDrawable_Text" data-uid="DotFeather.TextDrawable.Text">Text</h4>
-	<div class="markdown level1 summary"><p>描画されるテキストを取得または設定します。</p>
+	<div class="markdown level1 summary"><p>Get or set a text to draw.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -323,11 +433,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable_Destroy.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L110">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L158">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_TextDrawable_Destroy_" data-uid="DotFeather.TextDrawable.Destroy*"></a>
 	<h4 id="DotFeather_TextDrawable_Destroy" data-uid="DotFeather.TextDrawable.Destroy">Destroy()</h4>
-	<div class="markdown level1 summary"><p>このオブジェクトを破棄します。</p>
+	<div class="markdown level1 summary"><p>Dispose this object.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -341,11 +451,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable_UpdateTexture.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable.UpdateTexture%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L88">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L130">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_TextDrawable_UpdateTexture_" data-uid="DotFeather.TextDrawable.UpdateTexture*"></a>
 	<h4 id="DotFeather_TextDrawable_UpdateTexture" data-uid="DotFeather.TextDrawable.UpdateTexture">UpdateTexture()</h4>
-	<div class="markdown level1 summary"><p>テクスチャを更新します。</p>
+	<div class="markdown level1 summary"><p>Update the texture.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -367,7 +477,7 @@
 										<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_TextDrawable.md&amp;value=---%0Auid%3A%20DotFeather.TextDrawable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 									</li>
 									<li>
-										<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L12" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+										<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/TextDrawable.cs/#L16" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 									</li>
 								</ul>
 							</div>

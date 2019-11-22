@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="title" content="Class AudioPlayer
 	 ">
-		<meta name="generator" content="docfx 2.44.0.0">
+		<meta name="generator" content="docfx 2.47.0.0">
 		
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
 	
 	<h1 id="DotFeather_AudioPlayer" data-uid="DotFeather.AudioPlayer" class="text-break">Class AudioPlayer
 	</h1>
-	<div class="markdown level0 summary"><p>オーディオソースの再生機能を提供します。</p>
+	<div class="markdown level0 summary"><p>Provides audio source playback functionality.</p>
 </div>
 	<div class="markdown level0 conceptual"></div>
 	<div class="inheritance">
@@ -126,7 +126,7 @@
 	</span>
 	<a id="DotFeather_AudioPlayer__ctor_" data-uid="DotFeather.AudioPlayer.#ctor*"></a>
 	<h4 id="DotFeather_AudioPlayer__ctor" data-uid="DotFeather.AudioPlayer.#ctor">AudioPlayer()</h4>
-	<div class="markdown level1 summary"><p><a class="xref" href="DotFeather.AudioPlayer.html">AudioPlayer</a> の新しいインスタンスを初期化します。</p>
+	<div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="DotFeather.AudioPlayer.html">AudioPlayer</a> .</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -144,7 +144,7 @@
 	</span>
 	<a id="DotFeather_AudioPlayer_Gain_" data-uid="DotFeather.AudioPlayer.Gain*"></a>
 	<h4 id="DotFeather_AudioPlayer_Gain" data-uid="DotFeather.AudioPlayer.Gain">Gain</h4>
-	<div class="markdown level1 summary"><p>音量を取得または設定します。</p>
+	<div class="markdown level1 summary"><p>Get or set volume.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -162,7 +162,7 @@
 		<tbody>
 			<tr>
 				<td><span class="xref">System.Single</span></td>
-				<td><p>0.0〜1.0の範囲での音量。</p>
+				<td><p>Volume range in 0.0 ~ 1.0.</p>
 </td>
 			</tr>
 		</tbody>
@@ -172,11 +172,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_IsPlaying.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.IsPlaying%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L52">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L51">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_AudioPlayer_IsPlaying_" data-uid="DotFeather.AudioPlayer.IsPlaying*"></a>
 	<h4 id="DotFeather_AudioPlayer_IsPlaying" data-uid="DotFeather.AudioPlayer.IsPlaying">IsPlaying</h4>
-	<div class="markdown level1 summary"><p>再生中かどうかを示す値を取得または設定します。</p>
+	<div class="markdown level1 summary"><p>Get whether this player is playing。</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -194,8 +194,69 @@
 		<tbody>
 			<tr>
 				<td><span class="xref">System.Boolean</span></td>
-				<td><p>再生中である場合は <code>true</code>。それ以外の場合は <code>false</code>。</p>
-</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_Length.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L66">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_AudioPlayer_Length_" data-uid="DotFeather.AudioPlayer.Length*"></a>
+	<h4 id="DotFeather_AudioPlayer_Length" data-uid="DotFeather.AudioPlayer.Length">Length</h4>
+	<div class="markdown level1 summary"><p>Get length of loaded audio in milliseconds.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public int Length { get; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_LengthInSamples.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.LengthInSamples%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L71">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_AudioPlayer_LengthInSamples_" data-uid="DotFeather.AudioPlayer.LengthInSamples*"></a>
+	<h4 id="DotFeather_AudioPlayer_LengthInSamples" data-uid="DotFeather.AudioPlayer.LengthInSamples">LengthInSamples</h4>
+	<div class="markdown level1 summary"><p>Get length of loaded audio in samples.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public int LengthInSamples { get; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>
@@ -208,7 +269,7 @@
 	</span>
 	<a id="DotFeather_AudioPlayer_Pitch_" data-uid="DotFeather.AudioPlayer.Pitch*"></a>
 	<h4 id="DotFeather_AudioPlayer_Pitch" data-uid="DotFeather.AudioPlayer.Pitch">Pitch</h4>
-	<div class="markdown level1 summary"><p>ピッチを取得または設定します。</p>
+	<div class="markdown level1 summary"><p>Get or set pitch of this player.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -226,8 +287,70 @@
 		<tbody>
 			<tr>
 				<td><span class="xref">System.Single</span></td>
-				<td><p>デフォルトを 1 とした、ピッチの倍率。</p>
+				<td><p>Pitch ratio value. Default is 1.</p>
 </td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_Time.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.Time%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L56">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_AudioPlayer_Time_" data-uid="DotFeather.AudioPlayer.Time*"></a>
+	<h4 id="DotFeather_AudioPlayer_Time" data-uid="DotFeather.AudioPlayer.Time">Time</h4>
+	<div class="markdown level1 summary"><p>Get current playing time of this player in milliseconds.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public int Time { get; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_TimeInSamples.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.TimeInSamples%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L61">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_AudioPlayer_TimeInSamples_" data-uid="DotFeather.AudioPlayer.TimeInSamples*"></a>
+	<h4 id="DotFeather_AudioPlayer_TimeInSamples" data-uid="DotFeather.AudioPlayer.TimeInSamples">TimeInSamples</h4>
+	<div class="markdown level1 summary"><p>Get current playing time of this player in samples.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public int TimeInSamples { get; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>
@@ -238,11 +361,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_Dispose.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L130">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L155">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_AudioPlayer_Dispose_" data-uid="DotFeather.AudioPlayer.Dispose*"></a>
 	<h4 id="DotFeather_AudioPlayer_Dispose" data-uid="DotFeather.AudioPlayer.Dispose">Dispose()</h4>
-	<div class="markdown level1 summary"><p>Dispose します。</p>
+	<div class="markdown level1 summary"><p>Dispose.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -254,11 +377,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_Play_DotFeather_IAudioSource_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.Play(DotFeather.IAudioSource%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L59">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L90">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_AudioPlayer_Play_" data-uid="DotFeather.AudioPlayer.Play*"></a>
 	<h4 id="DotFeather_AudioPlayer_Play_DotFeather_IAudioSource_System_Nullable_System_Int32__" data-uid="DotFeather.AudioPlayer.Play(DotFeather.IAudioSource,System.Nullable{System.Int32})">Play(IAudioSource, Nullable&lt;Int32&gt;)</h4>
-	<div class="markdown level1 summary"><p>再生を開始します。</p>
+	<div class="markdown level1 summary"><p>Start playing.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -278,14 +401,69 @@
 			<tr>
 				<td><a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a></td>
 				<td><span class="parametername">source</span></td>
-				<td><p>再生する <a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a> 。</p>
+				<td><p>A <a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a> to play.</p>
 </td>
 			</tr>
 			<tr>
 				<td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
 				<td><span class="parametername">loop</span></td>
-				<td><p>ループを開始するサンプル位置。ループしない場合は <code>null</code> 。</p>
+				<td><p>Sample number of loop point. To disable loop, specify<code>null</code>.</p>
 </td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_PlayAsync_DotFeather_IAudioSource_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.PlayAsync(DotFeather.IAudioSource%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L78">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_AudioPlayer_PlayAsync_" data-uid="DotFeather.AudioPlayer.PlayAsync*"></a>
+	<h4 id="DotFeather_AudioPlayer_PlayAsync_DotFeather_IAudioSource_System_Nullable_System_Int32__" data-uid="DotFeather.AudioPlayer.PlayAsync(DotFeather.IAudioSource,System.Nullable{System.Int32})">PlayAsync(IAudioSource, Nullable&lt;Int32&gt;)</h4>
+	<div class="markdown level1 summary"><p>Start playing.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public Task PlayAsync(IAudioSource source, int? loop = default(int? ))</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a></td>
+				<td><span class="parametername">source</span></td>
+				<td><p>A <a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a> to play.</p>
+</td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+				<td><span class="parametername">loop</span></td>
+				<td><p>Sample number of loop point. To disable loop, specify<code>null</code>.</p>
+</td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Threading.Tasks.Task</span></td>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>
@@ -294,11 +472,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_PlayOneShotAsync_DotFeather_IAudioSource_.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.PlayOneShotAsync(DotFeather.IAudioSource)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L109">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L134">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_AudioPlayer_PlayOneShotAsync_" data-uid="DotFeather.AudioPlayer.PlayOneShotAsync*"></a>
 	<h4 id="DotFeather_AudioPlayer_PlayOneShotAsync_DotFeather_IAudioSource_" data-uid="DotFeather.AudioPlayer.PlayOneShotAsync(DotFeather.IAudioSource)">PlayOneShotAsync(IAudioSource)</h4>
-	<div class="markdown level1 summary"><p>指定した <a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a> をインスタントに再生します。</p>
+	<div class="markdown level1 summary"><p>Play specified <a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a> instantly.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -318,7 +496,7 @@
 			<tr>
 				<td><a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a></td>
 				<td><span class="parametername">source</span></td>
-				<td><p>再生する  <a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a> 。</p>
+				<td><p><a class="xref" href="DotFeather.IAudioSource.html">IAudioSource</a> to play.</p>
 </td>
 			</tr>
 		</tbody>
@@ -343,11 +521,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_AudioPlayer_Stop_System_Single_.md&amp;value=---%0Auid%3A%20DotFeather.AudioPlayer.Stop(System.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L74">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Audio/AudioPlayer.cs/#L100">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_AudioPlayer_Stop_" data-uid="DotFeather.AudioPlayer.Stop*"></a>
 	<h4 id="DotFeather_AudioPlayer_Stop_System_Single_" data-uid="DotFeather.AudioPlayer.Stop(System.Single)">Stop(Single)</h4>
-	<div class="markdown level1 summary"><p>再生を停止します。</p>
+	<div class="markdown level1 summary"><p>Stop playing.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -367,7 +545,7 @@
 			<tr>
 				<td><span class="xref">System.Single</span></td>
 				<td><span class="parametername">time</span></td>
-				<td><p>秒単位のフェードアウト時間。 0 を指定するとすぐに停止します。</p>
+				<td><p>Fade-out time. Specify 0 to stop soon.</p>
 </td>
 			</tr>
 		</tbody>

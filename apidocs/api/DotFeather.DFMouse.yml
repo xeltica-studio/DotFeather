@@ -6,15 +6,12 @@ items:
   parent: DotFeather
   children:
   - DotFeather.DFMouse.IsLeft
-  - DotFeather.DFMouse.IsLeftClicked
   - DotFeather.DFMouse.IsLeftDown
   - DotFeather.DFMouse.IsLeftUp
   - DotFeather.DFMouse.IsMiddle
-  - DotFeather.DFMouse.IsMiddleClicked
   - DotFeather.DFMouse.IsMiddleDown
   - DotFeather.DFMouse.IsMiddleUp
   - DotFeather.DFMouse.IsRight
-  - DotFeather.DFMouse.IsRightClicked
   - DotFeather.DFMouse.IsRightDown
   - DotFeather.DFMouse.IsRightUp
   - DotFeather.DFMouse.Position
@@ -33,15 +30,15 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: DFMouse
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 10
+    startLine: 8
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nマウス カーソルの位置、マウスボタンの状態などを取得するクラスです。このクラスは継承できません。\n"
+  summary: "\nThis class gets the mouse cursor position, mouse button status, etc. This class can not be inherited.\n"
   example: []
   syntax:
-    content: public sealed class DFMouse
-    content.vb: Public NotInheritable Class DFMouse
+    content: public static class DFMouse
+    content.vb: Public Module DFMouse
   inheritance:
   - System.Object
   inheritedMembers:
@@ -54,12 +51,11 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
-  - sealed
+  - static
   - class
   modifiers.vb:
   - Public
-  - NotInheritable
-  - Class
+  - Module
 - uid: DotFeather.DFMouse.Position
   commentId: P:DotFeather.DFMouse.Position
   id: Position
@@ -78,25 +74,27 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Position
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 16
+    startLine: 14
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nマウスカーソルの座標を取得します。\n"
+  summary: "\nGet mouse cursor coordinates.\n"
   example: []
   syntax:
-    content: public Point Position { get; }
+    content: public static VectorInt Position { get; }
     parameters: []
     return:
-      type: System.Drawing.Point
+      type: DotFeather.VectorInt
       description: The position.
-    content.vb: Public ReadOnly Property Position As Point
+    content.vb: Public Shared ReadOnly Property Position As VectorInt
   overload: DotFeather.DFMouse.Position*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.IsLeft
   commentId: P:DotFeather.DFMouse.IsLeft
@@ -116,24 +114,26 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsLeft
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 21
+    startLine: 19
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n左ボタンが押されているかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether left button pressed.\n"
   example: []
   syntax:
-    content: public bool IsLeft { get; }
+    content: public static bool IsLeft { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLeft As Boolean
+    content.vb: Public Shared ReadOnly Property IsLeft As Boolean
   overload: DotFeather.DFMouse.IsLeft*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.IsRight
   commentId: P:DotFeather.DFMouse.IsRight
@@ -153,24 +153,26 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsRight
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 26
+    startLine: 24
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n右ボタンが押されているかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether right button pressed.\n"
   example: []
   syntax:
-    content: public bool IsRight { get; }
+    content: public static bool IsRight { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsRight As Boolean
+    content.vb: Public Shared ReadOnly Property IsRight As Boolean
   overload: DotFeather.DFMouse.IsRight*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.IsMiddle
   commentId: P:DotFeather.DFMouse.IsMiddle
@@ -190,24 +192,26 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsMiddle
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 31
+    startLine: 29
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n中ボタンが押されているかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether middle button pressed.\n"
   example: []
   syntax:
-    content: public bool IsMiddle { get; }
+    content: public static bool IsMiddle { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsMiddle As Boolean
+    content.vb: Public Shared ReadOnly Property IsMiddle As Boolean
   overload: DotFeather.DFMouse.IsMiddle*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.IsLeftDown
   commentId: P:DotFeather.DFMouse.IsLeftDown
@@ -227,24 +231,26 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsLeftDown
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 36
+    startLine: 34
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n左ボタンがたった今押されたかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether left button pressed down.\n"
   example: []
   syntax:
-    content: public bool IsLeftDown { get; }
+    content: public static bool IsLeftDown { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLeftDown As Boolean
+    content.vb: Public Shared ReadOnly Property IsLeftDown As Boolean
   overload: DotFeather.DFMouse.IsLeftDown*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.IsRightDown
   commentId: P:DotFeather.DFMouse.IsRightDown
@@ -264,24 +270,26 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsRightDown
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 41
+    startLine: 39
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n右ボタンがたった今押されたかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether right button pressed down.\n"
   example: []
   syntax:
-    content: public bool IsRightDown { get; }
+    content: public static bool IsRightDown { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsRightDown As Boolean
+    content.vb: Public Shared ReadOnly Property IsRightDown As Boolean
   overload: DotFeather.DFMouse.IsRightDown*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.IsMiddleDown
   commentId: P:DotFeather.DFMouse.IsMiddleDown
@@ -301,24 +309,26 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsMiddleDown
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 46
+    startLine: 44
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n中ボタンがたった今押されたかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether middle button pressed down.\n"
   example: []
   syntax:
-    content: public bool IsMiddleDown { get; }
+    content: public static bool IsMiddleDown { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsMiddleDown As Boolean
+    content.vb: Public Shared ReadOnly Property IsMiddleDown As Boolean
   overload: DotFeather.DFMouse.IsMiddleDown*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.IsLeftUp
   commentId: P:DotFeather.DFMouse.IsLeftUp
@@ -338,24 +348,26 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsLeftUp
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 51
+    startLine: 49
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n左ボタンがたった今離されたかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether left button released up.\n"
   example: []
   syntax:
-    content: public bool IsLeftUp { get; }
+    content: public static bool IsLeftUp { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsLeftUp As Boolean
+    content.vb: Public Shared ReadOnly Property IsLeftUp As Boolean
   overload: DotFeather.DFMouse.IsLeftUp*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.IsRightUp
   commentId: P:DotFeather.DFMouse.IsRightUp
@@ -375,24 +387,26 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsRightUp
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 56
+    startLine: 54
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n右ボタンがたった今離されたかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether right button released up.\n"
   example: []
   syntax:
-    content: public bool IsRightUp { get; }
+    content: public static bool IsRightUp { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsRightUp As Boolean
+    content.vb: Public Shared ReadOnly Property IsRightUp As Boolean
   overload: DotFeather.DFMouse.IsRightUp*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.IsMiddleUp
   commentId: P:DotFeather.DFMouse.IsMiddleUp
@@ -412,165 +426,26 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsMiddleUp
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 61
+    startLine: 59
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n中ボタンがたった今離されたかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether middle button released up.\n"
   example: []
   syntax:
-    content: public bool IsMiddleUp { get; }
+    content: public static bool IsMiddleUp { get; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property IsMiddleUp As Boolean
+    content.vb: Public Shared ReadOnly Property IsMiddleUp As Boolean
   overload: DotFeather.DFMouse.IsMiddleUp*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
-  - ReadOnly
-- uid: DotFeather.DFMouse.IsLeftClicked
-  commentId: P:DotFeather.DFMouse.IsLeftClicked
-  id: IsLeftClicked
-  parent: DotFeather.DFMouse
-  langs:
-  - csharp
-  - vb
-  name: IsLeftClicked
-  nameWithType: DFMouse.IsLeftClicked
-  fullName: DotFeather.DFMouse.IsLeftClicked
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFMouse.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: IsLeftClicked
-    path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 65
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  syntax:
-    content: >-
-      [Obsolete("Use IsLeft instead.")]
-
-      public bool IsLeftClicked { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <Obsolete("Use IsLeft instead.")>
-
-      Public ReadOnly Property IsLeftClicked As Boolean
-  overload: DotFeather.DFMouse.IsLeftClicked*
-  attributes:
-  - type: System.ObsoleteAttribute
-    ctor: System.ObsoleteAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: Use IsLeft instead.
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFMouse.IsRightClicked
-  commentId: P:DotFeather.DFMouse.IsRightClicked
-  id: IsRightClicked
-  parent: DotFeather.DFMouse
-  langs:
-  - csharp
-  - vb
-  name: IsRightClicked
-  nameWithType: DFMouse.IsRightClicked
-  fullName: DotFeather.DFMouse.IsRightClicked
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFMouse.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: IsRightClicked
-    path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 68
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  syntax:
-    content: >-
-      [Obsolete("Use IsRight instead.")]
-
-      public bool IsRightClicked { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <Obsolete("Use IsRight instead.")>
-
-      Public ReadOnly Property IsRightClicked As Boolean
-  overload: DotFeather.DFMouse.IsRightClicked*
-  attributes:
-  - type: System.ObsoleteAttribute
-    ctor: System.ObsoleteAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: Use IsRight instead.
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: DotFeather.DFMouse.IsMiddleClicked
-  commentId: P:DotFeather.DFMouse.IsMiddleClicked
-  id: IsMiddleClicked
-  parent: DotFeather.DFMouse
-  langs:
-  - csharp
-  - vb
-  name: IsMiddleClicked
-  nameWithType: DFMouse.IsMiddleClicked
-  fullName: DotFeather.DFMouse.IsMiddleClicked
-  type: Property
-  source:
-    remote:
-      path: DotFeather/InputSystems/DFMouse.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: IsMiddleClicked
-    path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 71
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  syntax:
-    content: >-
-      [Obsolete("Use IsMiddle instead.")]
-
-      public bool IsMiddleClicked { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <Obsolete("Use IsMiddle instead.")>
-
-      Public ReadOnly Property IsMiddleClicked As Boolean
-  overload: DotFeather.DFMouse.IsMiddleClicked*
-  attributes:
-  - type: System.ObsoleteAttribute
-    ctor: System.ObsoleteAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: Use IsMiddle instead.
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFMouse.Scroll
   commentId: P:DotFeather.DFMouse.Scroll
@@ -590,25 +465,27 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Scroll
     path: ../DotFeather/InputSystems/DFMouse.cs
-    startLine: 78
+    startLine: 65
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nマウスホイールのスクロール量を取得します。\n"
+  summary: "\nGet mouse wheel scroll amount.\n"
   example: []
   syntax:
-    content: public (float x, float y)Scroll { get; }
+    content: public static Vector Scroll { get; }
     parameters: []
     return:
-      type: System.ValueTuple{System.Single,System.Single}
+      type: DotFeather.Vector
       description: ''
-    content.vb: Public ReadOnly Property Scroll As(x As Single, y As Single)
+    content.vb: Public Shared ReadOnly Property Scroll As Vector
   overload: DotFeather.DFMouse.Scroll*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 references:
 - uid: DotFeather
@@ -913,19 +790,12 @@ references:
   name: Position
   nameWithType: DFMouse.Position
   fullName: DotFeather.DFMouse.Position
-- uid: System.Drawing.Point
-  commentId: T:System.Drawing.Point
-  parent: System.Drawing
-  isExternal: true
-  name: Point
-  nameWithType: Point
-  fullName: System.Drawing.Point
-- uid: System.Drawing
-  commentId: N:System.Drawing
-  isExternal: true
-  name: System.Drawing
-  nameWithType: System.Drawing
-  fullName: System.Drawing
+- uid: DotFeather.VectorInt
+  commentId: T:DotFeather.VectorInt
+  parent: DotFeather
+  name: VectorInt
+  nameWithType: VectorInt
+  fullName: DotFeather.VectorInt
 - uid: DotFeather.DFMouse.IsLeft*
   commentId: Overload:DotFeather.DFMouse.IsLeft
   name: IsLeft
@@ -978,83 +848,14 @@ references:
   name: IsMiddleUp
   nameWithType: DFMouse.IsMiddleUp
   fullName: DotFeather.DFMouse.IsMiddleUp
-- uid: DotFeather.DFMouse.IsLeftClicked*
-  commentId: Overload:DotFeather.DFMouse.IsLeftClicked
-  name: IsLeftClicked
-  nameWithType: DFMouse.IsLeftClicked
-  fullName: DotFeather.DFMouse.IsLeftClicked
-- uid: DotFeather.DFMouse.IsRightClicked*
-  commentId: Overload:DotFeather.DFMouse.IsRightClicked
-  name: IsRightClicked
-  nameWithType: DFMouse.IsRightClicked
-  fullName: DotFeather.DFMouse.IsRightClicked
-- uid: DotFeather.DFMouse.IsMiddleClicked*
-  commentId: Overload:DotFeather.DFMouse.IsMiddleClicked
-  name: IsMiddleClicked
-  nameWithType: DFMouse.IsMiddleClicked
-  fullName: DotFeather.DFMouse.IsMiddleClicked
 - uid: DotFeather.DFMouse.Scroll*
   commentId: Overload:DotFeather.DFMouse.Scroll
   name: Scroll
   nameWithType: DFMouse.Scroll
   fullName: DotFeather.DFMouse.Scroll
-- uid: System.ValueTuple{System.Single,System.Single}
-  commentId: T:System.ValueTuple{System.Single,System.Single}
-  parent: System
-  isExternal: true
-  name: ValueTuple<Single, Single>
-  nameWithType: ValueTuple<Single, Single>
-  fullName: System.ValueTuple<System.Single, System.Single>
-  nameWithType.vb: ValueTuple(Of Single, Single)
-  fullName.vb: System.ValueTuple(Of System.Single, System.Single)
-  name.vb: ValueTuple(Of Single, Single)
-  spec.csharp:
-  - uid: System.ValueTuple`2
-    name: ValueTuple
-    nameWithType: ValueTuple
-    fullName: System.ValueTuple
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.Single
-    name: Single
-    nameWithType: Single
-    fullName: System.Single
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Single
-    name: Single
-    nameWithType: Single
-    fullName: System.Single
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.ValueTuple`2
-    name: ValueTuple
-    nameWithType: ValueTuple
-    fullName: System.ValueTuple
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.Single
-    name: Single
-    nameWithType: Single
-    fullName: System.Single
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Single
-    name: Single
-    nameWithType: Single
-    fullName: System.Single
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
+- uid: DotFeather.Vector
+  commentId: T:DotFeather.Vector
+  parent: DotFeather
+  name: Vector
+  nameWithType: Vector
+  fullName: DotFeather.Vector

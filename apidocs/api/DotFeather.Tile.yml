@@ -309,7 +309,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 65
+    startLine: 63
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -355,7 +355,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 89
+    startLine: 83
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -396,7 +396,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 96
+    startLine: 90
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -437,7 +437,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Tiles/Tile.cs
-    startLine: 101
+    startLine: 95
   assemblies:
   - DotFeather
   namespace: DotFeather

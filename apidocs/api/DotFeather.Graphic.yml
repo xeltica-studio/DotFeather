@@ -10,19 +10,19 @@ items:
   - DotFeather.Graphic.Destroy
   - DotFeather.Graphic.Draw(DotFeather.GameBase,DotFeather.Vector)
   - DotFeather.Graphic.Drawables
-  - DotFeather.Graphic.Ellipse(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+  - DotFeather.Graphic.Ellipse(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   - DotFeather.Graphic.Ellipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
-  - DotFeather.Graphic.Line(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color)
+  - DotFeather.Graphic.Line(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color)
   - DotFeather.Graphic.Line(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color)
   - DotFeather.Graphic.Location
   - DotFeather.Graphic.Name
-  - DotFeather.Graphic.Pixel(System.Drawing.Point,System.Drawing.Color)
+  - DotFeather.Graphic.Pixel(DotFeather.VectorInt,System.Drawing.Color)
   - DotFeather.Graphic.Pixel(System.Int32,System.Int32,System.Drawing.Color)
-  - DotFeather.Graphic.Rect(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+  - DotFeather.Graphic.Rect(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   - DotFeather.Graphic.Rect(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   - DotFeather.Graphic.Scale
   - DotFeather.Graphic.Texture(System.Int32,System.Int32,DotFeather.Texture2D)
-  - DotFeather.Graphic.Triangle(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+  - DotFeather.Graphic.Triangle(DotFeather.VectorInt,DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   - DotFeather.Graphic.Triangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   - DotFeather.Graphic.ZOrder
   langs:
@@ -43,7 +43,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n図形描画を行える、グラフィック用のレイヤーです。\n"
+  summary: "\nThis is a graphic layer to draw shapes.\n"
   example: []
   syntax:
     content: 'public class Graphic : IDrawable'
@@ -90,14 +90,14 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n現在の <xref href=\"DotFeather.Graphic\" data-throw-if-not-resolved=\"false\"></xref> が持つ描画オブジェクトのリストを取得します。\n"
+  summary: "\nGet the list of drawing objects that the current <xref href=\"DotFeather.Graphic\" data-throw-if-not-resolved=\"false\"></xref> has.\n"
   example: []
   syntax:
     content: public List<IDrawable> Drawables { get; }
     parameters: []
     return:
       type: System.Collections.Generic.List{DotFeather.IDrawable}
-      description: 描画可能オブジェクトのリスト。
+      description: A list of drawable objects
     content.vb: Public ReadOnly Property Drawables As List(Of IDrawable)
   overload: DotFeather.Graphic.Drawables*
   modifiers.csharp:
@@ -124,12 +124,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 20
+    startLine: 19
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public Vector Location { get; set; }
     parameters: []
@@ -163,12 +161,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 22
+    startLine: 21
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public float Angle { get; set; }
     parameters: []
@@ -202,12 +198,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 24
+    startLine: 23
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public Vector Scale { get; set; }
     parameters: []
@@ -241,12 +235,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 26
+    startLine: 25
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public int ZOrder { get; set; }
     parameters: []
@@ -280,12 +272,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 28
+    startLine: 27
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public string Name { get; set; }
     parameters: []
@@ -319,12 +309,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 33
+    startLine: 29
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n実際に画面へ描画を行います。\n"
-  example: []
   syntax:
     content: public void Draw(GameBase game, Vector location)
     parameters:
@@ -340,16 +328,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: DotFeather.Graphic.Pixel(System.Drawing.Point,System.Drawing.Color)
-  commentId: M:DotFeather.Graphic.Pixel(System.Drawing.Point,System.Drawing.Color)
-  id: Pixel(System.Drawing.Point,System.Drawing.Color)
+- uid: DotFeather.Graphic.Pixel(DotFeather.VectorInt,System.Drawing.Color)
+  commentId: M:DotFeather.Graphic.Pixel(DotFeather.VectorInt,System.Drawing.Color)
+  id: Pixel(DotFeather.VectorInt,System.Drawing.Color)
   parent: DotFeather.Graphic
   langs:
   - csharp
   - vb
-  name: Pixel(Point, Color)
-  nameWithType: Graphic.Pixel(Point, Color)
-  fullName: DotFeather.Graphic.Pixel(System.Drawing.Point, System.Drawing.Color)
+  name: Pixel(VectorInt, Color)
+  nameWithType: Graphic.Pixel(VectorInt, Color)
+  fullName: DotFeather.Graphic.Pixel(DotFeather.VectorInt, System.Drawing.Color)
   type: Method
   source:
     remote:
@@ -358,24 +346,22 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Pixel
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 48
+    startLine: 42
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n点を描画します。\n"
+  summary: "\nDraw a point.\n"
   example: []
   syntax:
-    content: public Graphic Pixel(Point pos, Color color)
+    content: public Graphic Pixel(VectorInt pos, Color color)
     parameters:
     - id: pos
-      type: System.Drawing.Point
-      description: 座標.
+      type: DotFeather.VectorInt
     - id: color
       type: System.Drawing.Color
-      description: 色.
     return:
       type: DotFeather.Graphic
-    content.vb: Public Function Pixel(pos As Point, color As Color) As Graphic
+    content.vb: Public Function Pixel(pos As VectorInt, color As Color) As Graphic
   overload: DotFeather.Graphic.Pixel*
   modifiers.csharp:
   - public
@@ -399,24 +385,21 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Pixel
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 60
+    startLine: 51
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n点を描画します。\n"
+  summary: "\nDraw a point.\n"
   example: []
   syntax:
     content: public Graphic Pixel(int x, int y, Color color)
     parameters:
     - id: x
       type: System.Int32
-      description: Z座標。
     - id: y
       type: System.Int32
-      description: Y座標。
     - id: color
       type: System.Drawing.Color
-      description: 色.
     return:
       type: DotFeather.Graphic
     content.vb: Public Function Pixel(x As Integer, y As Integer, color As Color) As Graphic
@@ -425,16 +408,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: DotFeather.Graphic.Line(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color)
-  commentId: M:DotFeather.Graphic.Line(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color)
-  id: Line(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color)
+- uid: DotFeather.Graphic.Line(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color)
+  commentId: M:DotFeather.Graphic.Line(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color)
+  id: Line(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color)
   parent: DotFeather.Graphic
   langs:
   - csharp
   - vb
-  name: Line(Point, Point, Color)
-  nameWithType: Graphic.Line(Point, Point, Color)
-  fullName: DotFeather.Graphic.Line(System.Drawing.Point, System.Drawing.Point, System.Drawing.Color)
+  name: Line(VectorInt, VectorInt, Color)
+  nameWithType: Graphic.Line(VectorInt, VectorInt, Color)
+  fullName: DotFeather.Graphic.Line(DotFeather.VectorInt, DotFeather.VectorInt, System.Drawing.Color)
   type: Method
   source:
     remote:
@@ -443,27 +426,27 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 71
+    startLine: 62
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n線を描画します。\n"
+  summary: "\nDraw a line.\n"
   example: []
   syntax:
-    content: public Graphic Line(Point begin, Point end, Color color)
+    content: public Graphic Line(VectorInt begin, VectorInt end, Color color)
     parameters:
     - id: begin
-      type: System.Drawing.Point
-      description: 始点の座標.
+      type: DotFeather.VectorInt
+      description: Position of the start point.
     - id: end
-      type: System.Drawing.Point
-      description: 終点の座標.
+      type: DotFeather.VectorInt
+      description: Position of the end point.
     - id: color
       type: System.Drawing.Color
-      description: 色.
+      description: color.
     return:
       type: DotFeather.Graphic
-    content.vb: Public Function Line(begin As Point, end As Point, color As Color) As Graphic
+    content.vb: Public Function Line(begin As VectorInt, end As VectorInt, color As Color) As Graphic
   overload: DotFeather.Graphic.Line*
   modifiers.csharp:
   - public
@@ -487,30 +470,30 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 85
+    startLine: 76
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n線を描画します。\n"
+  summary: "\nDraw a line.\n"
   example: []
   syntax:
     content: public Graphic Line(int x1, int y1, int x2, int y2, Color color)
     parameters:
     - id: x1
       type: System.Int32
-      description: 始点のX座標。
+      description: X coordinate of the start point.
     - id: y1
       type: System.Int32
-      description: 始点のY座標。
+      description: Y coordinate of the start point.
     - id: x2
       type: System.Int32
-      description: 終点のX座標。
+      description: X coordinate of the end point.
     - id: y2
       type: System.Int32
-      description: 終点のX座標。
+      description: X coordinate of the end point.
     - id: color
       type: System.Drawing.Color
-      description: 色.
+      description: color.
     return:
       type: DotFeather.Graphic
     content.vb: Public Function Line(x1 As Integer, y1 As Integer, x2 As Integer, y2 As Integer, color As Color) As Graphic
@@ -519,16 +502,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: DotFeather.Graphic.Rect(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
-  commentId: M:DotFeather.Graphic.Rect(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
-  id: Rect(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+- uid: DotFeather.Graphic.Rect(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+  commentId: M:DotFeather.Graphic.Rect(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+  id: Rect(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   parent: DotFeather.Graphic
   langs:
   - csharp
   - vb
-  name: Rect(Point, Point, Color, Int32, Nullable<Color>)
-  nameWithType: Graphic.Rect(Point, Point, Color, Int32, Nullable<Color>)
-  fullName: DotFeather.Graphic.Rect(System.Drawing.Point, System.Drawing.Point, System.Drawing.Color, System.Int32, System.Nullable<System.Drawing.Color>)
+  name: Rect(VectorInt, VectorInt, Color, Int32, Nullable<Color>)
+  nameWithType: Graphic.Rect(VectorInt, VectorInt, Color, Int32, Nullable<Color>)
+  fullName: DotFeather.Graphic.Rect(DotFeather.VectorInt, DotFeather.VectorInt, System.Drawing.Color, System.Int32, System.Nullable<System.Drawing.Color>)
   type: Method
   source:
     remote:
@@ -537,41 +520,41 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Rect
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 98
+    startLine: 89
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n矩形を描画します。\n"
+  summary: "\nDraw a rectangle.\n"
   example: []
   syntax:
-    content: public Graphic Rect(Point begin, Point end, Color color, int lineWidth = 0, Color? lineColor = default(Color? ))
+    content: public Graphic Rect(VectorInt begin, VectorInt end, Color color, int lineWidth = 0, Color? lineColor = default(Color? ))
     parameters:
     - id: begin
-      type: System.Drawing.Point
-      description: 始点の座標.
+      type: DotFeather.VectorInt
+      description: Position of the start point.
     - id: end
-      type: System.Drawing.Point
-      description: 終点の座標.
+      type: DotFeather.VectorInt
+      description: Position of the end point.
     - id: color
       type: System.Drawing.Color
-      description: 色.
+      description: Color.
     - id: lineWidth
       type: System.Int32
-      description: 線の幅。
+      description: Width of the outline.
     - id: lineColor
       type: System.Nullable{System.Drawing.Color}
-      description: 線の色。
+      description: Color of the outline.
     return:
       type: DotFeather.Graphic
-    content.vb: Public Function Rect(begin As Point, end As Point, color As Color, lineWidth As Integer = 0, lineColor As Color? = Nothing) As Graphic
+    content.vb: Public Function Rect(begin As VectorInt, end As VectorInt, color As Color, lineWidth As Integer = 0, lineColor As Color? = Nothing) As Graphic
   overload: DotFeather.Graphic.Rect*
-  nameWithType.vb: Graphic.Rect(Point, Point, Color, Int32, Nullable(Of Color))
+  nameWithType.vb: Graphic.Rect(VectorInt, VectorInt, Color, Int32, Nullable(Of Color))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: DotFeather.Graphic.Rect(System.Drawing.Point, System.Drawing.Point, System.Drawing.Color, System.Int32, System.Nullable(Of System.Drawing.Color))
-  name.vb: Rect(Point, Point, Color, Int32, Nullable(Of Color))
+  fullName.vb: DotFeather.Graphic.Rect(DotFeather.VectorInt, DotFeather.VectorInt, System.Drawing.Color, System.Int32, System.Nullable(Of System.Drawing.Color))
+  name.vb: Rect(VectorInt, VectorInt, Color, Int32, Nullable(Of Color))
 - uid: DotFeather.Graphic.Rect(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   commentId: M:DotFeather.Graphic.Rect(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   id: Rect(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
@@ -590,36 +573,36 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Rect
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 113
+    startLine: 104
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n矩形を描画します。\n"
+  summary: "\nDraw a rectangle.\n"
   example: []
   syntax:
     content: public Graphic Rect(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default(Color? ))
     parameters:
     - id: x1
       type: System.Int32
-      description: 始点のX座標。
+      description: X coordinate of the start point.
     - id: y1
       type: System.Int32
-      description: 始点のY座標。
+      description: Y coordinate of the start point.
     - id: x2
       type: System.Int32
-      description: 終点のX座標。
+      description: X coordinate of the end point.
     - id: y2
       type: System.Int32
-      description: 終点のX座標。
+      description: X coordinate of the end point.
     - id: color
       type: System.Drawing.Color
-      description: 色.
+      description: Color.
     - id: lineWidth
       type: System.Int32
-      description: 線の幅。
+      description: Width of the outline.
     - id: lineColor
       type: System.Nullable{System.Drawing.Color}
-      description: 線の色。
+      description: Color of the outline.
     return:
       type: DotFeather.Graphic
     content.vb: Public Function Rect(x1 As Integer, y1 As Integer, x2 As Integer, y2 As Integer, color As Color, lineWidth As Integer = 0, lineColor As Color? = Nothing) As Graphic
@@ -649,11 +632,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Triangle
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 126
+    startLine: 117
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n三角形を描画します。\n"
+  summary: "\nDraw a triangle.\n"
   example: []
   syntax:
     content: public Graphic Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color, int lineWidth = 0, Color? lineColor = default(Color? ))
@@ -687,16 +670,16 @@ items:
   - Public
   fullName.vb: DotFeather.Graphic.Triangle(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Drawing.Color, System.Int32, System.Nullable(Of System.Drawing.Color))
   name.vb: Triangle(Int32, Int32, Int32, Int32, Int32, Int32, Color, Int32, Nullable(Of Color))
-- uid: DotFeather.Graphic.Triangle(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
-  commentId: M:DotFeather.Graphic.Triangle(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
-  id: Triangle(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+- uid: DotFeather.Graphic.Triangle(DotFeather.VectorInt,DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+  commentId: M:DotFeather.Graphic.Triangle(DotFeather.VectorInt,DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+  id: Triangle(DotFeather.VectorInt,DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   parent: DotFeather.Graphic
   langs:
   - csharp
   - vb
-  name: Triangle(Point, Point, Point, Color, Int32, Nullable<Color>)
-  nameWithType: Graphic.Triangle(Point, Point, Point, Color, Int32, Nullable<Color>)
-  fullName: DotFeather.Graphic.Triangle(System.Drawing.Point, System.Drawing.Point, System.Drawing.Point, System.Drawing.Color, System.Int32, System.Nullable<System.Drawing.Color>)
+  name: Triangle(VectorInt, VectorInt, VectorInt, Color, Int32, Nullable<Color>)
+  nameWithType: Graphic.Triangle(VectorInt, VectorInt, VectorInt, Color, Int32, Nullable<Color>)
+  fullName: DotFeather.Graphic.Triangle(DotFeather.VectorInt, DotFeather.VectorInt, DotFeather.VectorInt, System.Drawing.Color, System.Int32, System.Nullable<System.Drawing.Color>)
   type: Method
   source:
     remote:
@@ -705,21 +688,21 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Triangle
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 138
+    startLine: 129
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n三角形を描画します。\n"
+  summary: "\nDraw a triangle.\n"
   example: []
   syntax:
-    content: public Graphic Triangle(Point p1, Point p2, Point p3, Color color, int lineWidth = 0, Color? lineColor = default(Color? ))
+    content: public Graphic Triangle(VectorInt p1, VectorInt p2, VectorInt p3, Color color, int lineWidth = 0, Color? lineColor = default(Color? ))
     parameters:
     - id: p1
-      type: System.Drawing.Point
+      type: DotFeather.VectorInt
     - id: p2
-      type: System.Drawing.Point
+      type: DotFeather.VectorInt
     - id: p3
-      type: System.Drawing.Point
+      type: DotFeather.VectorInt
     - id: color
       type: System.Drawing.Color
     - id: lineWidth
@@ -728,15 +711,15 @@ items:
       type: System.Nullable{System.Drawing.Color}
     return:
       type: DotFeather.Graphic
-    content.vb: Public Function Triangle(p1 As Point, p2 As Point, p3 As Point, color As Color, lineWidth As Integer = 0, lineColor As Color? = Nothing) As Graphic
+    content.vb: Public Function Triangle(p1 As VectorInt, p2 As VectorInt, p3 As VectorInt, color As Color, lineWidth As Integer = 0, lineColor As Color? = Nothing) As Graphic
   overload: DotFeather.Graphic.Triangle*
-  nameWithType.vb: Graphic.Triangle(Point, Point, Point, Color, Int32, Nullable(Of Color))
+  nameWithType.vb: Graphic.Triangle(VectorInt, VectorInt, VectorInt, Color, Int32, Nullable(Of Color))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: DotFeather.Graphic.Triangle(System.Drawing.Point, System.Drawing.Point, System.Drawing.Point, System.Drawing.Color, System.Int32, System.Nullable(Of System.Drawing.Color))
-  name.vb: Triangle(Point, Point, Point, Color, Int32, Nullable(Of Color))
+  fullName.vb: DotFeather.Graphic.Triangle(DotFeather.VectorInt, DotFeather.VectorInt, DotFeather.VectorInt, System.Drawing.Color, System.Int32, System.Nullable(Of System.Drawing.Color))
+  name.vb: Triangle(VectorInt, VectorInt, VectorInt, Color, Int32, Nullable(Of Color))
 - uid: DotFeather.Graphic.Ellipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   commentId: M:DotFeather.Graphic.Ellipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   id: Ellipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
@@ -755,11 +738,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Ellipse
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 146
+    startLine: 137
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n楕円を描画します。\n"
+  summary: "\nDraw an ellipse.\n"
   example: []
   syntax:
     content: public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default(Color? ))
@@ -789,16 +772,16 @@ items:
   - Public
   fullName.vb: DotFeather.Graphic.Ellipse(System.Int32, System.Int32, System.Int32, System.Int32, System.Drawing.Color, System.Int32, System.Nullable(Of System.Drawing.Color))
   name.vb: Ellipse(Int32, Int32, Int32, Int32, Color, Int32, Nullable(Of Color))
-- uid: DotFeather.Graphic.Ellipse(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
-  commentId: M:DotFeather.Graphic.Ellipse(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
-  id: Ellipse(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+- uid: DotFeather.Graphic.Ellipse(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+  commentId: M:DotFeather.Graphic.Ellipse(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
+  id: Ellipse(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})
   parent: DotFeather.Graphic
   langs:
   - csharp
   - vb
-  name: Ellipse(Point, Point, Color, Int32, Nullable<Color>)
-  nameWithType: Graphic.Ellipse(Point, Point, Color, Int32, Nullable<Color>)
-  fullName: DotFeather.Graphic.Ellipse(System.Drawing.Point, System.Drawing.Point, System.Drawing.Color, System.Int32, System.Nullable<System.Drawing.Color>)
+  name: Ellipse(VectorInt, VectorInt, Color, Int32, Nullable<Color>)
+  nameWithType: Graphic.Ellipse(VectorInt, VectorInt, Color, Int32, Nullable<Color>)
+  fullName: DotFeather.Graphic.Ellipse(DotFeather.VectorInt, DotFeather.VectorInt, System.Drawing.Color, System.Int32, System.Nullable<System.Drawing.Color>)
   type: Method
   source:
     remote:
@@ -807,19 +790,19 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Ellipse
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 177
+    startLine: 168
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n楕円を描画します。\n"
+  summary: "\nDraw an ellipse.\n"
   example: []
   syntax:
-    content: public Graphic Ellipse(Point p1, Point p2, Color color, int lineWidth = 0, Color? lineColor = default(Color? ))
+    content: public Graphic Ellipse(VectorInt p1, VectorInt p2, Color color, int lineWidth = 0, Color? lineColor = default(Color? ))
     parameters:
     - id: p1
-      type: System.Drawing.Point
+      type: DotFeather.VectorInt
     - id: p2
-      type: System.Drawing.Point
+      type: DotFeather.VectorInt
     - id: color
       type: System.Drawing.Color
     - id: lineWidth
@@ -828,15 +811,15 @@ items:
       type: System.Nullable{System.Drawing.Color}
     return:
       type: DotFeather.Graphic
-    content.vb: Public Function Ellipse(p1 As Point, p2 As Point, color As Color, lineWidth As Integer = 0, lineColor As Color? = Nothing) As Graphic
+    content.vb: Public Function Ellipse(p1 As VectorInt, p2 As VectorInt, color As Color, lineWidth As Integer = 0, lineColor As Color? = Nothing) As Graphic
   overload: DotFeather.Graphic.Ellipse*
-  nameWithType.vb: Graphic.Ellipse(Point, Point, Color, Int32, Nullable(Of Color))
+  nameWithType.vb: Graphic.Ellipse(VectorInt, VectorInt, Color, Int32, Nullable(Of Color))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: DotFeather.Graphic.Ellipse(System.Drawing.Point, System.Drawing.Point, System.Drawing.Color, System.Int32, System.Nullable(Of System.Drawing.Color))
-  name.vb: Ellipse(Point, Point, Color, Int32, Nullable(Of Color))
+  fullName.vb: DotFeather.Graphic.Ellipse(DotFeather.VectorInt, DotFeather.VectorInt, System.Drawing.Color, System.Int32, System.Nullable(Of System.Drawing.Color))
+  name.vb: Ellipse(VectorInt, VectorInt, Color, Int32, Nullable(Of Color))
 - uid: DotFeather.Graphic.Texture(System.Int32,System.Int32,DotFeather.Texture2D)
   commentId: M:DotFeather.Graphic.Texture(System.Int32,System.Int32,DotFeather.Texture2D)
   id: Texture(System.Int32,System.Int32,DotFeather.Texture2D)
@@ -855,11 +838,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Texture
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 188
+    startLine: 179
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nテクスチャを描画します。\n"
+  summary: "\nDraw a texture.\n"
   example: []
   syntax:
     content: public Graphic Texture(int x, int y, Texture2D texture)
@@ -872,7 +855,7 @@ items:
       description: The first y value.
     - id: texture
       type: DotFeather.Texture2D
-      description: テクスチャ。
+      description: A texture.
     return:
       type: DotFeather.Graphic
     content.vb: Public Function Texture(x As Integer, y As Integer, texture As Texture2D) As Graphic
@@ -899,11 +882,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 197
+    startLine: 191
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのグラフィックレイヤーを削除します。\n"
+  summary: "\nClear this graphic layer.\n"
   example: []
   syntax:
     content: public Graphic Clear()
@@ -933,11 +916,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Graphic.cs
-    startLine: 207
+    startLine: 201
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.Graphic\" data-throw-if-not-resolved=\"false\"></xref> を削除します。\n"
+  summary: "\nDestroy this <xref href=\"DotFeather.Graphic\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public void Destroy()
@@ -1499,13 +1482,12 @@ references:
   name: Pixel
   nameWithType: Graphic.Pixel
   fullName: DotFeather.Graphic.Pixel
-- uid: System.Drawing.Point
-  commentId: T:System.Drawing.Point
-  parent: System.Drawing
-  isExternal: true
-  name: Point
-  nameWithType: Point
-  fullName: System.Drawing.Point
+- uid: DotFeather.VectorInt
+  commentId: T:DotFeather.VectorInt
+  parent: DotFeather
+  name: VectorInt
+  nameWithType: VectorInt
+  fullName: DotFeather.VectorInt
 - uid: System.Drawing.Color
   commentId: T:System.Drawing.Color
   parent: System.Drawing

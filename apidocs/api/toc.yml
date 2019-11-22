@@ -6,6 +6,8 @@
     name: ALBuffer
   - uid: DotFeather.ALSource
     name: ALSource
+  - uid: DotFeather.AnimatingSprite
+    name: AnimatingSprite
   - uid: DotFeather.AudioPlayer
     name: AudioPlayer
   - uid: DotFeather.Container
@@ -16,6 +18,8 @@
     name: CoroutineRunner
   - uid: DotFeather.DFEventArgs
     name: DFEventArgs
+  - uid: DotFeather.DFFileDroppedEventArgs
+    name: DFFileDroppedEventArgs
   - uid: DotFeather.DFKey
     name: DFKey
   - uid: DotFeather.DFKeyboard
@@ -24,10 +28,16 @@
     name: DFKeyCode
   - uid: DotFeather.DFKeyEventArgs
     name: DFKeyEventArgs
+  - uid: DotFeather.DFKeyPressEventArgs
+    name: DFKeyPressEventArgs
   - uid: DotFeather.DFMath
     name: DFMath
   - uid: DotFeather.DFMouse
     name: DFMouse
+  - uid: DotFeather.Font
+    name: Font
+  - uid: DotFeather.FontStyle
+    name: FontStyle
   - uid: DotFeather.GameBase
     name: GameBase
   - uid: DotFeather.GLContext
@@ -38,8 +48,6 @@
     name: IAudioSource
   - uid: DotFeather.IDrawable
     name: IDrawable
-  - uid: DotFeather.Input
-    name: Input
   - uid: DotFeather.ITile
     name: ITile
   - uid: DotFeather.MiscUtility
@@ -51,10 +59,19 @@
     name.vb: OpenTKManagedHandleBase(Of T)
   - uid: DotFeather.RandomExtension
     name: RandomExtension
+  - uid: DotFeather.Router
+    name: Router
+  - uid: DotFeather.RoutingGameBase`1
+    name: RoutingGameBase<T>
+    name.vb: RoutingGameBase(Of T)
+  - uid: DotFeather.Scene
+    name: Scene
   - uid: DotFeather.SpaceConverter
     name: SpaceConverter
   - uid: DotFeather.Sprite
     name: Sprite
+  - uid: DotFeather.StringExtension
+    name: StringExtension
   - uid: DotFeather.TextDrawable
     name: TextDrawable
   - uid: DotFeather.Texture2D
@@ -73,6 +90,8 @@
     name: TypesConverterExtension
   - uid: DotFeather.Vector
     name: Vector
+  - uid: DotFeather.VectorInt
+    name: VectorInt
   - uid: DotFeather.VorbisAudioSource
     name: VorbisAudioSource
   - uid: DotFeather.WaitForSeconds

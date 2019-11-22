@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="title" content="Class Sprite
 	 ">
-		<meta name="generator" content="docfx 2.44.0.0">
+		<meta name="generator" content="docfx 2.47.0.0">
 		
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
 	
 	<h1 id="DotFeather_Sprite" data-uid="DotFeather.Sprite" class="text-break">Class Sprite
 	</h1>
-	<div class="markdown level0 summary"><p>テクスチャを描画する <a class="xref" href="DotFeather.IDrawable.html">IDrawable</a> オブジェクトです。</p>
+	<div class="markdown level0 summary"><p>A <a class="xref" href="DotFeather.IDrawable.html">IDrawable</a> object to draw a texture.</p>
 </div>
 	<div class="markdown level0 conceptual"></div>
 	<div class="inheritance">
@@ -81,6 +81,7 @@
 		<div class="level0"><span class="xref">System.Object</span></div>
 		<div class="level1"><a class="xref" href="DotFeather.TextureDrawableBase.html">TextureDrawableBase</a></div>
 		<div class="level2"><span class="xref">Sprite</span></div>
+			<div class="level3"><a class="xref" href="DotFeather.AnimatingSprite.html">AnimatingSprite</a></div>
 	</div>
 	<div classs="implements">
 		<h5>&#23455;&#35013;</h5>
@@ -150,11 +151,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Sprite__ctor_DotFeather_Texture2D_.md&amp;value=---%0Auid%3A%20DotFeather.Sprite.%23ctor(DotFeather.Texture2D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L57">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L26">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Sprite__ctor_" data-uid="DotFeather.Sprite.#ctor*"></a>
 	<h4 id="DotFeather_Sprite__ctor_DotFeather_Texture2D_" data-uid="DotFeather.Sprite.#ctor(DotFeather.Texture2D)">Sprite(Texture2D)</h4>
-	<div class="markdown level1 summary"><p><a class="xref" href="DotFeather.Sprite.html">Sprite</a> クラスの新しいインスタンスを初期化します。</p>
+	<div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="DotFeather.Sprite.html">Sprite</a> class.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -174,123 +175,7 @@
 			<tr>
 				<td><a class="xref" href="DotFeather.Texture2D.html">Texture2D</a></td>
 				<td><span class="parametername">texture</span></td>
-				<td><p>この <a class="xref" href="DotFeather.Sprite.html">Sprite</a> が使用するテクスチャ。</p>
-</td>
-			</tr>
-		</tbody>
-	</table>
-	<span class="small pull-right mobile-hide">
-		<span class="divider">|</span>
-		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Sprite__ctor_DotFeather_Texture2D_DotFeather_Vector_System_Single_DotFeather_Vector_System_Int32_System_String_.md&amp;value=---%0Auid%3A%20DotFeather.Sprite.%23ctor(DotFeather.Texture2D%2CDotFeather.Vector%2CSystem.Single%2CDotFeather.Vector%2CSystem.Int32%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-	</span>
-	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L17">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-	</span>
-	<a id="DotFeather_Sprite__ctor_" data-uid="DotFeather.Sprite.#ctor*"></a>
-	<h4 id="DotFeather_Sprite__ctor_DotFeather_Texture2D_DotFeather_Vector_System_Single_DotFeather_Vector_System_Int32_System_String_" data-uid="DotFeather.Sprite.#ctor(DotFeather.Texture2D,DotFeather.Vector,System.Single,DotFeather.Vector,System.Int32,System.String)">Sprite(Texture2D, Vector, Single, Vector, Int32, String)</h4>
-	<div class="markdown level1 summary"><p><a class="xref" href="DotFeather.Sprite.html">Sprite</a> クラスの新しいインスタンスを初期化します。</p>
-</div>
-	<div class="markdown level1 conceptual"></div>
-	<h5 class="decalaration">&#23459;&#35328;</h5>
-	<div class="codewrapper">
-		<pre><code class="lang-csharp hljs">public Sprite(Texture2D texture, Vector location, float angle, Vector scale, int zOrder, string name)</code></pre>
-	</div>
-	<h5 class="parameters">&#24341;&#25968;</h5>
-	<table class="table table-bordered table-striped table-condensed">
-		<thead>
-			<tr>
-				<th>&#22411;</th>
-				<th>&#21517;&#21069;</th>
-				<th>&#27010;&#35201;</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><a class="xref" href="DotFeather.Texture2D.html">Texture2D</a></td>
-				<td><span class="parametername">texture</span></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-				<td><span class="parametername">location</span></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><span class="xref">System.Single</span></td>
-				<td><span class="parametername">angle</span></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-				<td><span class="parametername">scale</span></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><span class="xref">System.Int32</span></td>
-				<td><span class="parametername">zOrder</span></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><span class="xref">System.String</span></td>
-				<td><span class="parametername">name</span></td>
-				<td></td>
-			</tr>
-		</tbody>
-	</table>
-	<span class="small pull-right mobile-hide">
-		<span class="divider">|</span>
-		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Sprite__ctor_DotFeather_Texture2D_System_Int32_System_Int32_System_Single_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Sprite.%23ctor(DotFeather.Texture2D%2CSystem.Int32%2CSystem.Int32%2CSystem.Single%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
-	</span>
-	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L45">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
-	</span>
-	<a id="DotFeather_Sprite__ctor_" data-uid="DotFeather.Sprite.#ctor*"></a>
-	<h4 id="DotFeather_Sprite__ctor_DotFeather_Texture2D_System_Int32_System_Int32_System_Single_DotFeather_Vector_" data-uid="DotFeather.Sprite.#ctor(DotFeather.Texture2D,System.Int32,System.Int32,System.Single,DotFeather.Vector)">Sprite(Texture2D, Int32, Int32, Single, Vector)</h4>
-	<div class="markdown level1 summary"><p><a class="xref" href="DotFeather.Sprite.html">Sprite</a> クラスの新しいインスタンスを初期化します。</p>
-</div>
-	<div class="markdown level1 conceptual"></div>
-	<h5 class="decalaration">&#23459;&#35328;</h5>
-	<div class="codewrapper">
-		<pre><code class="lang-csharp hljs">public Sprite(Texture2D texture, int x, int y, float angle = 0F, Vector scale = default(Vector))</code></pre>
-	</div>
-	<h5 class="parameters">&#24341;&#25968;</h5>
-	<table class="table table-bordered table-striped table-condensed">
-		<thead>
-			<tr>
-				<th>&#22411;</th>
-				<th>&#21517;&#21069;</th>
-				<th>&#27010;&#35201;</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><a class="xref" href="DotFeather.Texture2D.html">Texture2D</a></td>
-				<td><span class="parametername">texture</span></td>
-				<td><p>この <a class="xref" href="DotFeather.Sprite.html">Sprite</a> が使用するテクスチャ。</p>
-</td>
-			</tr>
-			<tr>
-				<td><span class="xref">System.Int32</span></td>
-				<td><span class="parametername">x</span></td>
-				<td><p>初期位置 X。</p>
-</td>
-			</tr>
-			<tr>
-				<td><span class="xref">System.Int32</span></td>
-				<td><span class="parametername">y</span></td>
-				<td><p>初期位置 Y。</p>
-</td>
-			</tr>
-			<tr>
-				<td><span class="xref">System.Single</span></td>
-				<td><span class="parametername">angle</span></td>
-				<td><p>初期角度。</p>
-</td>
-			</tr>
-			<tr>
-				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
-				<td><span class="parametername">scale</span></td>
-				<td><p>初期スケール</p>
+				<td><p>A texture for this <a class="xref" href="DotFeather.Sprite.html">Sprite</a>.</p>
 </td>
 			</tr>
 		</tbody>
@@ -302,11 +187,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Sprite_Texture.md&amp;value=---%0Auid%3A%20DotFeather.Sprite.Texture%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L31">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L16">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Sprite_Texture_" data-uid="DotFeather.Sprite.Texture*"></a>
 	<h4 id="DotFeather_Sprite_Texture" data-uid="DotFeather.Sprite.Texture">Texture</h4>
-	<div class="markdown level1 summary"><p>この <a class="xref" href="DotFeather.Sprite.html">Sprite</a> が描画するテクスチャを取得または設定します。</p>
+	<div class="markdown level1 summary"><p>Get or set a texture drawn by this <a class="xref" href="DotFeather.Sprite.html">Sprite</a>.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -335,11 +220,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Sprite_Destroy.md&amp;value=---%0Auid%3A%20DotFeather.Sprite.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L81">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L50">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Sprite_Destroy_" data-uid="DotFeather.Sprite.Destroy*"></a>
 	<h4 id="DotFeather_Sprite_Destroy" data-uid="DotFeather.Sprite.Destroy">Destroy()</h4>
-	<div class="markdown level1 summary"><p>この <a class="xref" href="DotFeather.Sprite.html">Sprite</a> を破棄します。</p>
+	<div class="markdown level1 summary"><p>Dispose this <a class="xref" href="DotFeather.Sprite.html">Sprite</a>.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -353,11 +238,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Sprite_LoadFrom_System_IO_Stream_.md&amp;value=---%0Auid%3A%20DotFeather.Sprite.LoadFrom(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L76">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L45">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Sprite_LoadFrom_" data-uid="DotFeather.Sprite.LoadFrom*"></a>
 	<h4 id="DotFeather_Sprite_LoadFrom_System_IO_Stream_" data-uid="DotFeather.Sprite.LoadFrom(System.IO.Stream)">LoadFrom(Stream)</h4>
-	<div class="markdown level1 summary"><p>指定した画像ファイルから <a class="xref" href="DotFeather.Sprite.html">Sprite</a> を生成します。</p>
+	<div class="markdown level1 summary"><p>Generate a <a class="xref" href="DotFeather.Sprite.html">Sprite</a> from the specified image file.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -377,7 +262,7 @@
 			<tr>
 				<td><span class="xref">System.IO.Stream</span></td>
 				<td><span class="parametername">stream</span></td>
-				<td><p>ファイルを示すストリーム。</p>
+				<td><p>File stream.</p>
 </td>
 			</tr>
 		</tbody>
@@ -393,7 +278,7 @@
 		<tbody>
 			<tr>
 				<td><a class="xref" href="DotFeather.Sprite.html">Sprite</a></td>
-				<td><p>生成された <a class="xref" href="DotFeather.Sprite.html">Sprite</a>。</p>
+				<td><p>Generated <a class="xref" href="DotFeather.Sprite.html">Sprite</a>。</p>
 </td>
 			</tr>
 		</tbody>
@@ -403,11 +288,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Sprite_LoadFrom_System_String_.md&amp;value=---%0Auid%3A%20DotFeather.Sprite.LoadFrom(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L69">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Sprite.cs/#L38">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Sprite_LoadFrom_" data-uid="DotFeather.Sprite.LoadFrom*"></a>
 	<h4 id="DotFeather_Sprite_LoadFrom_System_String_" data-uid="DotFeather.Sprite.LoadFrom(System.String)">LoadFrom(String)</h4>
-	<div class="markdown level1 summary"><p>指定した画像ファイルから <a class="xref" href="DotFeather.Sprite.html">Sprite</a> を生成します。</p>
+	<div class="markdown level1 summary"><p>Generate a <a class="xref" href="DotFeather.Sprite.html">Sprite</a> from the specified image file.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -427,7 +312,7 @@
 			<tr>
 				<td><span class="xref">System.String</span></td>
 				<td><span class="parametername">path</span></td>
-				<td><p>ファイルパス。</p>
+				<td><p>File path.</p>
 </td>
 			</tr>
 		</tbody>
@@ -443,7 +328,7 @@
 		<tbody>
 			<tr>
 				<td><a class="xref" href="DotFeather.Sprite.html">Sprite</a></td>
-				<td><p>生成された <a class="xref" href="DotFeather.Sprite.html">Sprite</a>。</p>
+				<td><p>Generated <a class="xref" href="DotFeather.Sprite.html">Sprite</a>。</p>
 </td>
 			</tr>
 		</tbody>

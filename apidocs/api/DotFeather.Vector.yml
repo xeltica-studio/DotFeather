@@ -9,6 +9,7 @@ items:
   - DotFeather.Vector.Angle
   - DotFeather.Vector.Angle(DotFeather.Vector)
   - DotFeather.Vector.Angle(DotFeather.Vector,DotFeather.Vector)
+  - DotFeather.Vector.Deconstruct(System.Single@,System.Single@)
   - DotFeather.Vector.Distance(DotFeather.Vector)
   - DotFeather.Vector.Distance(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.Down
@@ -23,6 +24,7 @@ items:
   - DotFeather.Vector.op_Division(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.op_Division(DotFeather.Vector,System.Single)
   - DotFeather.Vector.op_Equality(DotFeather.Vector,DotFeather.Vector)
+  - DotFeather.Vector.op_Explicit(DotFeather.Vector)~DotFeather.VectorInt
   - DotFeather.Vector.op_Inequality(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.op_Multiply(DotFeather.Vector,DotFeather.Vector)
   - DotFeather.Vector.op_Multiply(DotFeather.Vector,System.Single)
@@ -52,7 +54,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n2次元のベクトルです。\n"
+  summary: "\nTwo dimensional vector.\n"
   example: []
   syntax:
     content: 'public struct Vector : IEquatable<Vector>'
@@ -65,6 +67,8 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - DotFeather.Vector.DotFeather.SpaceConverter.ToViewportPoint(System.Single,System.Single)
   modifiers.csharp:
   - public
   - struct
@@ -93,7 +97,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのベクトルの X 成分を取得または設定します。\n"
+  summary: "\nGet or set X coordinate of this vector.\n"
   example: []
   syntax:
     content: public float X { get; set; }
@@ -130,7 +134,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのベクトルの Y 成分を取得または設定します。\n"
+  summary: "\nGet or set Y coordinate of this vector.\n"
   example: []
   syntax:
     content: public float Y { get; set; }
@@ -167,7 +171,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのベクトルの長さを取得します。\n"
+  summary: "\nGet length of this vector.\n"
   example: []
   syntax:
     content: public float Magnitude { get; }
@@ -204,7 +208,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのベクトルと向きが等しい単位ベクトルを取得します。\n"
+  summary: "\nGet a unit vector with the same orientation as this vector.\n"
   example: []
   syntax:
     content: public Vector Normalized { get; }
@@ -241,7 +245,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather.Vector\" data-throw-if-not-resolved=\"false\"></xref> クラスの新しいインスタンスを初期化します。&quot;\n"
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.Vector\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
     content: public Vector(float x, float y)
@@ -276,12 +280,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Addition
     path: ../DotFeather/Math/Vector.cs
-    startLine: 40
+    startLine: 38
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public static Vector operator +(Vector v1, Vector v2)
     parameters:
@@ -317,12 +319,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Subtraction
     path: ../DotFeather/Math/Vector.cs
-    startLine: 42
+    startLine: 40
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public static Vector operator -(Vector v1, Vector v2)
     parameters:
@@ -358,12 +358,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Multiply
     path: ../DotFeather/Math/Vector.cs
-    startLine: 44
+    startLine: 42
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public static Vector operator *(Vector v1, float v2)
     parameters:
@@ -399,12 +397,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Multiply
     path: ../DotFeather/Math/Vector.cs
-    startLine: 46
+    startLine: 44
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public static Vector operator *(Vector v1, Vector v2)
     parameters:
@@ -440,12 +436,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Division
     path: ../DotFeather/Math/Vector.cs
-    startLine: 48
+    startLine: 46
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public static Vector operator /(Vector v1, float v2)
     parameters:
@@ -481,12 +475,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Division
     path: ../DotFeather/Math/Vector.cs
-    startLine: 50
+    startLine: 48
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public static Vector operator /(Vector v1, Vector v2)
     parameters:
@@ -522,12 +514,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_UnaryNegation
     path: ../DotFeather/Math/Vector.cs
-    startLine: 52
+    startLine: 50
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public static Vector operator -(Vector v1)
     parameters:
@@ -561,12 +551,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Equality
     path: ../DotFeather/Math/Vector.cs
-    startLine: 56
+    startLine: 52
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public static bool operator ==(Vector v1, Vector v2)
     parameters:
@@ -602,12 +590,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Inequality
     path: ../DotFeather/Math/Vector.cs
-    startLine: 58
+    startLine: 54
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
     content: public static bool operator !=(Vector v1, Vector v2)
     parameters:
@@ -625,6 +611,46 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: DotFeather.Vector.op_Explicit(DotFeather.Vector)~DotFeather.VectorInt
+  commentId: M:DotFeather.Vector.op_Explicit(DotFeather.Vector)~DotFeather.VectorInt
+  id: op_Explicit(DotFeather.Vector)~DotFeather.VectorInt
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Explicit(Vector to VectorInt)
+  nameWithType: Vector.Explicit(Vector to VectorInt)
+  fullName: DotFeather.Vector.Explicit(DotFeather.Vector to DotFeather.VectorInt)
+  type: Operator
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: op_Explicit
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 56
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public static explicit operator VectorInt(Vector v1)
+    parameters:
+    - id: v1
+      type: DotFeather.Vector
+    return:
+      type: DotFeather.VectorInt
+    content.vb: Public Shared Narrowing Operator CType(v1 As Vector) As VectorInt
+  overload: DotFeather.Vector.op_Explicit*
+  nameWithType.vb: Vector.Narrowing(Vector to VectorInt)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotFeather.Vector.Narrowing(DotFeather.Vector to DotFeather.VectorInt)
+  name.vb: Narrowing(Vector to VectorInt)
 - uid: DotFeather.Vector.Angle(DotFeather.Vector,DotFeather.Vector)
   commentId: M:DotFeather.Vector.Angle(DotFeather.Vector,DotFeather.Vector)
   id: Angle(DotFeather.Vector,DotFeather.Vector)
@@ -643,11 +669,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Math/Vector.cs
-    startLine: 64
+    startLine: 62
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n2ベクトル間の角を取得します。\n"
+  summary: "\nGet angle between 2 vectors.\n"
   example: []
   syntax:
     content: public static float Angle(Vector from, Vector to)
@@ -658,7 +684,7 @@ items:
       type: DotFeather.Vector
     return:
       type: System.Single
-      description: 2ベクトル間のラジアン。
+      description: Radian angle between 2 vectors.
     content.vb: Public Shared Function Angle(from As Vector, to As Vector) As Single
   overload: DotFeather.Vector.Angle*
   modifiers.csharp:
@@ -685,11 +711,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Distance
     path: ../DotFeather/Math/Vector.cs
-    startLine: 70
+    startLine: 68
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n2ベクトル間の距離を取得します。\n"
+  summary: "\nGet the distance between 2 vectors.\n"
   example: []
   syntax:
     content: public static float Distance(Vector from, Vector to)
@@ -726,11 +752,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Equals
     path: ../DotFeather/Math/Vector.cs
-    startLine: 77
+    startLine: 75
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトを比較します。\n"
+  summary: "\nCompare this object.\n"
   example: []
   syntax:
     content: public override bool Equals(object obj)
@@ -766,11 +792,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Equals
     path: ../DotFeather/Math/Vector.cs
-    startLine: 85
+    startLine: 83
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトを比較します。\n"
+  summary: "\nCompare this object.\n"
   example: []
   syntax:
     content: public bool Equals(Vector other)
@@ -805,11 +831,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetHashCode
     path: ../DotFeather/Math/Vector.cs
-    startLine: 95
+    startLine: 92
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトのハッシュ値を取得します。\n"
+  summary: "\nGet the hash value of this object.\n"
   example: []
   syntax:
     content: public override int GetHashCode()
@@ -842,11 +868,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Math/Vector.cs
-    startLine: 106
+    startLine: 103
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのベクトルの向きを取得します。\n"
+  summary: "\nGet angle of this vector.\n"
   example: []
   syntax:
     content: public float Angle()
@@ -876,11 +902,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Math/Vector.cs
-    startLine: 112
+    startLine: 109
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのベクトルを基準とした、指定したベクトルの向きを取得します。\n"
+  summary: "\nGet the direction of the specified vector relative to this vector.\n"
   example: []
   syntax:
     content: public float Angle(Vector to)
@@ -913,11 +939,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Distance
     path: ../DotFeather/Math/Vector.cs
-    startLine: 117
+    startLine: 114
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n2ベクトル間の距離を取得します。\n"
+  summary: "\nGet the distance between two vectors.\n"
   example: []
   syntax:
     content: public float Distance(Vector to)
@@ -932,6 +958,46 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: DotFeather.Vector.Deconstruct(System.Single@,System.Single@)
+  commentId: M:DotFeather.Vector.Deconstruct(System.Single@,System.Single@)
+  id: Deconstruct(System.Single@,System.Single@)
+  parent: DotFeather.Vector
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Single, out Single)
+  nameWithType: Vector.Deconstruct(out Single, out Single)
+  fullName: DotFeather.Vector.Deconstruct(out System.Single, out System.Single)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Math/Vector.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Deconstruct
+    path: ../DotFeather/Math/Vector.cs
+    startLine: 119
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nDeconstructs x and y.\n"
+  example: []
+  syntax:
+    content: public void Deconstruct(out float x, out float y)
+    parameters:
+    - id: x
+      type: System.Single
+    - id: y
+      type: System.Single
+    content.vb: Public Sub Deconstruct(ByRef x As Single, ByRef y As Single)
+  overload: DotFeather.Vector.Deconstruct*
+  nameWithType.vb: Vector.Deconstruct(ByRef Single, ByRef Single)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotFeather.Vector.Deconstruct(ByRef System.Single, ByRef System.Single)
+  name.vb: Deconstruct(ByRef Single, ByRef Single)
 - uid: DotFeather.Vector.ToString
   commentId: M:DotFeather.Vector.ToString
   id: ToString
@@ -950,11 +1016,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToString
     path: ../DotFeather/Math/Vector.cs
-    startLine: 122
+    startLine: 124
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのベクトルの文字列表現を取得します。\n"
+  summary: "\nGet formatted string of this vector.\n"
   example: []
   syntax:
     content: public override string ToString()
@@ -987,11 +1053,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Zero
     path: ../DotFeather/Math/Vector.cs
-    startLine: 127
+    startLine: 129
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<code>new Vector(0, 0)</code> を取得します。\n"
+  summary: "\nGet <code>new Vector(0, 0)</code> .\n"
   example: []
   syntax:
     content: public static readonly Vector Zero
@@ -1024,11 +1090,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: One
     path: ../DotFeather/Math/Vector.cs
-    startLine: 132
+    startLine: 134
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<code>new Vector(1, 1)</code> を取得します。\n"
+  summary: "\nGet <code>new Vector(1, 1)</code> .\n"
   example: []
   syntax:
     content: public static readonly Vector One
@@ -1061,11 +1127,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Left
     path: ../DotFeather/Math/Vector.cs
-    startLine: 137
+    startLine: 139
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<code>new Vector(-1, 0)</code> を取得します。\n"
+  summary: "\nGet <code>new Vector(-1, 0)</code> .\n"
   example: []
   syntax:
     content: public static readonly Vector Left
@@ -1098,11 +1164,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Up
     path: ../DotFeather/Math/Vector.cs
-    startLine: 142
+    startLine: 144
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<code>new Vector(0, -1)</code> を取得します。\n"
+  summary: "\nGet <code>new Vector(0, -1)</code> .\n"
   example: []
   syntax:
     content: public static readonly Vector Up
@@ -1135,11 +1201,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Right
     path: ../DotFeather/Math/Vector.cs
-    startLine: 147
+    startLine: 149
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<code>new Vector(1, 0)</code> を取得します。\n"
+  summary: "\nGet <code>new Vector(1, 0)</code> .\n"
   example: []
   syntax:
     content: public static readonly Vector Right
@@ -1172,11 +1238,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Down
     path: ../DotFeather/Math/Vector.cs
-    startLine: 152
+    startLine: 154
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<code>new Vector(0, 1)</code> を取得します。\n"
+  summary: "\nGet <code>new Vector(0, 1)</code> .\n"
   example: []
   syntax:
     content: public static readonly Vector Down
@@ -1384,6 +1450,61 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: DotFeather.Vector.DotFeather.SpaceConverter.ToViewportPoint(System.Single,System.Single)
+  commentId: M:DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
+  parent: DotFeather.SpaceConverter
+  definition: DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
+  name: ToViewportPoint(Single, Single)
+  nameWithType: SpaceConverter.ToViewportPoint(Single, Single)
+  fullName: DotFeather.SpaceConverter.ToViewportPoint(System.Single, System.Single)
+  spec.csharp:
+  - uid: DotFeather.SpaceConverter.ToViewportPoint(System.Single,System.Single)
+    name: ToViewportPoint
+    nameWithType: SpaceConverter.ToViewportPoint
+    fullName: DotFeather.SpaceConverter.ToViewportPoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotFeather.SpaceConverter.ToViewportPoint(System.Single,System.Single)
+    name: ToViewportPoint
+    nameWithType: SpaceConverter.ToViewportPoint
+    fullName: DotFeather.SpaceConverter.ToViewportPoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.IEquatable`1
   commentId: T:System.IEquatable`1
   isExternal: true
@@ -1436,6 +1557,80 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
+  commentId: M:DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
+  isExternal: true
+  name: ToViewportPoint(Vector, Single, Single)
+  nameWithType: SpaceConverter.ToViewportPoint(Vector, Single, Single)
+  fullName: DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector, System.Single, System.Single)
+  spec.csharp:
+  - uid: DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
+    name: ToViewportPoint
+    nameWithType: SpaceConverter.ToViewportPoint
+    fullName: DotFeather.SpaceConverter.ToViewportPoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DotFeather.Vector
+    name: Vector
+    nameWithType: Vector
+    fullName: DotFeather.Vector
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
+    name: ToViewportPoint
+    nameWithType: SpaceConverter.ToViewportPoint
+    fullName: DotFeather.SpaceConverter.ToViewportPoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DotFeather.Vector
+    name: Vector
+    nameWithType: Vector
+    fullName: DotFeather.Vector
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotFeather.SpaceConverter
+  commentId: T:DotFeather.SpaceConverter
+  parent: DotFeather
+  name: SpaceConverter
+  nameWithType: SpaceConverter
+  fullName: DotFeather.SpaceConverter
 - uid: DotFeather.Vector.X*
   commentId: Overload:DotFeather.Vector.X
   name: X
@@ -1516,6 +1711,20 @@ references:
   name: Inequality
   nameWithType: Vector.Inequality
   fullName: DotFeather.Vector.Inequality
+- uid: DotFeather.Vector.op_Explicit*
+  commentId: Overload:DotFeather.Vector.op_Explicit
+  name: Explicit
+  nameWithType: Vector.Explicit
+  fullName: DotFeather.Vector.Explicit
+  nameWithType.vb: Vector.Narrowing
+  fullName.vb: DotFeather.Vector.Narrowing
+  name.vb: Narrowing
+- uid: DotFeather.VectorInt
+  commentId: T:DotFeather.VectorInt
+  parent: DotFeather
+  name: VectorInt
+  nameWithType: VectorInt
+  fullName: DotFeather.VectorInt
 - uid: DotFeather.Vector.Angle*
   commentId: Overload:DotFeather.Vector.Angle
   name: Angle
@@ -1701,6 +1910,11 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: DotFeather.Vector.Deconstruct*
+  commentId: Overload:DotFeather.Vector.Deconstruct
+  name: Deconstruct
+  nameWithType: Vector.Deconstruct
+  fullName: DotFeather.Vector.Deconstruct
 - uid: System.ValueType.ToString
   commentId: M:System.ValueType.ToString
   parent: System.ValueType

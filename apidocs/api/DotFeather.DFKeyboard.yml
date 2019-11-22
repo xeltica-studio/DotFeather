@@ -6,6 +6,10 @@ items:
   parent: DotFeather
   children:
   - DotFeather.DFKeyboard.A
+  - DotFeather.DFKeyboard.AllDownKeys
+  - DotFeather.DFKeyboard.AllKeyCodes
+  - DotFeather.DFKeyboard.AllPressedKeys
+  - DotFeather.DFKeyboard.AllUpKeys
   - DotFeather.DFKeyboard.AltLeft
   - DotFeather.DFKeyboard.AltRight
   - DotFeather.DFKeyboard.B
@@ -63,13 +67,16 @@ items:
   - DotFeather.DFKeyboard.F8
   - DotFeather.DFKeyboard.F9
   - DotFeather.DFKeyboard.G
+  - DotFeather.DFKeyboard.GetChar
+  - DotFeather.DFKeyboard.GetString
   - DotFeather.DFKeyboard.H
+  - DotFeather.DFKeyboard.HasChar
   - DotFeather.DFKeyboard.Home
   - DotFeather.DFKeyboard.I
   - DotFeather.DFKeyboard.Insert
-  - DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
   - DotFeather.DFKeyboard.J
   - DotFeather.DFKeyboard.K
+  - DotFeather.DFKeyboard.KeyOf(DotFeather.DFKeyCode)
   - DotFeather.DFKeyboard.Keypad0
   - DotFeather.DFKeyboard.Keypad1
   - DotFeather.DFKeyboard.Keypad2
@@ -152,15 +159,15 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: DFKeyboard
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーボードのキーが押されているかどうか判別するクラスです。このクラスは継承できません。\n"
+  summary: "\nClass that determines whether a key on the keyboard is pressed. This class can not be inherited.\n"
   example: []
   syntax:
-    content: public sealed class DFKeyboard
-    content.vb: Public NotInheritable Class DFKeyboard
+    content: public static class DFKeyboard
+    content.vb: Public Module DFKeyboard
   inheritance:
   - System.Object
   inheritedMembers:
@@ -173,12 +180,11 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
-  - sealed
+  - static
   - class
   modifiers.vb:
   - Public
-  - NotInheritable
-  - Class
+  - Module
 - uid: DotFeather.DFKeyboard.Unknown
   commentId: P:DotFeather.DFKeyboard.Unknown
   id: Unknown
@@ -197,24 +203,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Unknown
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Unknown { get; }
+    content: public static DFKey Unknown { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Unknown As DFKey
+    content.vb: Public Shared ReadOnly Property Unknown As DFKey
   overload: DotFeather.DFKeyboard.Unknown*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.ShiftLeft
   commentId: P:DotFeather.DFKeyboard.ShiftLeft
@@ -238,20 +244,20 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey ShiftLeft { get; }
+    content: public static DFKey ShiftLeft { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property ShiftLeft As DFKey
+    content.vb: Public Shared ReadOnly Property ShiftLeft As DFKey
   overload: DotFeather.DFKeyboard.ShiftLeft*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.ShiftRight
   commentId: P:DotFeather.DFKeyboard.ShiftRight
@@ -271,24 +277,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ShiftRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 19
+    startLine: 18
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey ShiftRight { get; }
+    content: public static DFKey ShiftRight { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property ShiftRight As DFKey
+    content.vb: Public Shared ReadOnly Property ShiftRight As DFKey
   overload: DotFeather.DFKeyboard.ShiftRight*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.ControlLeft
   commentId: P:DotFeather.DFKeyboard.ControlLeft
@@ -308,24 +314,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ControlLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 22
+    startLine: 20
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey ControlLeft { get; }
+    content: public static DFKey ControlLeft { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property ControlLeft As DFKey
+    content.vb: Public Shared ReadOnly Property ControlLeft As DFKey
   overload: DotFeather.DFKeyboard.ControlLeft*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.ControlRight
   commentId: P:DotFeather.DFKeyboard.ControlRight
@@ -345,24 +351,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ControlRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 25
+    startLine: 22
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey ControlRight { get; }
+    content: public static DFKey ControlRight { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property ControlRight As DFKey
+    content.vb: Public Shared ReadOnly Property ControlRight As DFKey
   overload: DotFeather.DFKeyboard.ControlRight*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.AltLeft
   commentId: P:DotFeather.DFKeyboard.AltLeft
@@ -382,24 +388,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AltLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 28
+    startLine: 24
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey AltLeft { get; }
+    content: public static DFKey AltLeft { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property AltLeft As DFKey
+    content.vb: Public Shared ReadOnly Property AltLeft As DFKey
   overload: DotFeather.DFKeyboard.AltLeft*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.AltRight
   commentId: P:DotFeather.DFKeyboard.AltRight
@@ -419,24 +425,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AltRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 31
+    startLine: 26
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey AltRight { get; }
+    content: public static DFKey AltRight { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property AltRight As DFKey
+    content.vb: Public Shared ReadOnly Property AltRight As DFKey
   overload: DotFeather.DFKeyboard.AltRight*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.WinLeft
   commentId: P:DotFeather.DFKeyboard.WinLeft
@@ -456,24 +462,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: WinLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 34
+    startLine: 28
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey WinLeft { get; }
+    content: public static DFKey WinLeft { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property WinLeft As DFKey
+    content.vb: Public Shared ReadOnly Property WinLeft As DFKey
   overload: DotFeather.DFKeyboard.WinLeft*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.WinRight
   commentId: P:DotFeather.DFKeyboard.WinRight
@@ -493,24 +499,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: WinRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 37
+    startLine: 30
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey WinRight { get; }
+    content: public static DFKey WinRight { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property WinRight As DFKey
+    content.vb: Public Shared ReadOnly Property WinRight As DFKey
   overload: DotFeather.DFKeyboard.WinRight*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Menu
   commentId: P:DotFeather.DFKeyboard.Menu
@@ -530,24 +536,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Menu
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 40
+    startLine: 32
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Menu { get; }
+    content: public static DFKey Menu { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Menu As DFKey
+    content.vb: Public Shared ReadOnly Property Menu As DFKey
   overload: DotFeather.DFKeyboard.Menu*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F1
   commentId: P:DotFeather.DFKeyboard.F1
@@ -567,24 +573,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 43
+    startLine: 34
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F1 { get; }
+    content: public static DFKey F1 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F1 As DFKey
+    content.vb: Public Shared ReadOnly Property F1 As DFKey
   overload: DotFeather.DFKeyboard.F1*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F2
   commentId: P:DotFeather.DFKeyboard.F2
@@ -604,24 +610,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 46
+    startLine: 36
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F2 { get; }
+    content: public static DFKey F2 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F2 As DFKey
+    content.vb: Public Shared ReadOnly Property F2 As DFKey
   overload: DotFeather.DFKeyboard.F2*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F3
   commentId: P:DotFeather.DFKeyboard.F3
@@ -641,24 +647,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 49
+    startLine: 38
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F3 { get; }
+    content: public static DFKey F3 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F3 As DFKey
+    content.vb: Public Shared ReadOnly Property F3 As DFKey
   overload: DotFeather.DFKeyboard.F3*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F4
   commentId: P:DotFeather.DFKeyboard.F4
@@ -678,24 +684,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 52
+    startLine: 40
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F4 { get; }
+    content: public static DFKey F4 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F4 As DFKey
+    content.vb: Public Shared ReadOnly Property F4 As DFKey
   overload: DotFeather.DFKeyboard.F4*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F5
   commentId: P:DotFeather.DFKeyboard.F5
@@ -715,24 +721,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 55
+    startLine: 42
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F5 { get; }
+    content: public static DFKey F5 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F5 As DFKey
+    content.vb: Public Shared ReadOnly Property F5 As DFKey
   overload: DotFeather.DFKeyboard.F5*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F6
   commentId: P:DotFeather.DFKeyboard.F6
@@ -752,24 +758,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 58
+    startLine: 44
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F6 { get; }
+    content: public static DFKey F6 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F6 As DFKey
+    content.vb: Public Shared ReadOnly Property F6 As DFKey
   overload: DotFeather.DFKeyboard.F6*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F7
   commentId: P:DotFeather.DFKeyboard.F7
@@ -789,24 +795,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 61
+    startLine: 46
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F7 { get; }
+    content: public static DFKey F7 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F7 As DFKey
+    content.vb: Public Shared ReadOnly Property F7 As DFKey
   overload: DotFeather.DFKeyboard.F7*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F8
   commentId: P:DotFeather.DFKeyboard.F8
@@ -826,24 +832,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 64
+    startLine: 48
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F8 { get; }
+    content: public static DFKey F8 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F8 As DFKey
+    content.vb: Public Shared ReadOnly Property F8 As DFKey
   overload: DotFeather.DFKeyboard.F8*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F9
   commentId: P:DotFeather.DFKeyboard.F9
@@ -863,24 +869,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 67
+    startLine: 50
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F9 { get; }
+    content: public static DFKey F9 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F9 As DFKey
+    content.vb: Public Shared ReadOnly Property F9 As DFKey
   overload: DotFeather.DFKeyboard.F9*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F10
   commentId: P:DotFeather.DFKeyboard.F10
@@ -900,24 +906,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F10
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 70
+    startLine: 52
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F10 { get; }
+    content: public static DFKey F10 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F10 As DFKey
+    content.vb: Public Shared ReadOnly Property F10 As DFKey
   overload: DotFeather.DFKeyboard.F10*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F11
   commentId: P:DotFeather.DFKeyboard.F11
@@ -937,24 +943,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F11
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 73
+    startLine: 54
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F11 { get; }
+    content: public static DFKey F11 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F11 As DFKey
+    content.vb: Public Shared ReadOnly Property F11 As DFKey
   overload: DotFeather.DFKeyboard.F11*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F12
   commentId: P:DotFeather.DFKeyboard.F12
@@ -974,24 +980,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F12
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 76
+    startLine: 56
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F12 { get; }
+    content: public static DFKey F12 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F12 As DFKey
+    content.vb: Public Shared ReadOnly Property F12 As DFKey
   overload: DotFeather.DFKeyboard.F12*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F13
   commentId: P:DotFeather.DFKeyboard.F13
@@ -1011,24 +1017,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F13
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 79
+    startLine: 58
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F13 { get; }
+    content: public static DFKey F13 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F13 As DFKey
+    content.vb: Public Shared ReadOnly Property F13 As DFKey
   overload: DotFeather.DFKeyboard.F13*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F14
   commentId: P:DotFeather.DFKeyboard.F14
@@ -1048,24 +1054,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F14
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 82
+    startLine: 60
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F14 { get; }
+    content: public static DFKey F14 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F14 As DFKey
+    content.vb: Public Shared ReadOnly Property F14 As DFKey
   overload: DotFeather.DFKeyboard.F14*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F15
   commentId: P:DotFeather.DFKeyboard.F15
@@ -1085,24 +1091,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F15
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 85
+    startLine: 62
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F15 { get; }
+    content: public static DFKey F15 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F15 As DFKey
+    content.vb: Public Shared ReadOnly Property F15 As DFKey
   overload: DotFeather.DFKeyboard.F15*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F16
   commentId: P:DotFeather.DFKeyboard.F16
@@ -1122,24 +1128,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F16
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 88
+    startLine: 64
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F16 { get; }
+    content: public static DFKey F16 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F16 As DFKey
+    content.vb: Public Shared ReadOnly Property F16 As DFKey
   overload: DotFeather.DFKeyboard.F16*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F17
   commentId: P:DotFeather.DFKeyboard.F17
@@ -1159,24 +1165,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F17
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 91
+    startLine: 66
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F17 { get; }
+    content: public static DFKey F17 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F17 As DFKey
+    content.vb: Public Shared ReadOnly Property F17 As DFKey
   overload: DotFeather.DFKeyboard.F17*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F18
   commentId: P:DotFeather.DFKeyboard.F18
@@ -1196,24 +1202,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F18
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 94
+    startLine: 68
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F18 { get; }
+    content: public static DFKey F18 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F18 As DFKey
+    content.vb: Public Shared ReadOnly Property F18 As DFKey
   overload: DotFeather.DFKeyboard.F18*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F19
   commentId: P:DotFeather.DFKeyboard.F19
@@ -1233,24 +1239,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F19
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 97
+    startLine: 70
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F19 { get; }
+    content: public static DFKey F19 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F19 As DFKey
+    content.vb: Public Shared ReadOnly Property F19 As DFKey
   overload: DotFeather.DFKeyboard.F19*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F20
   commentId: P:DotFeather.DFKeyboard.F20
@@ -1270,24 +1276,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F20
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 100
+    startLine: 72
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F20 { get; }
+    content: public static DFKey F20 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F20 As DFKey
+    content.vb: Public Shared ReadOnly Property F20 As DFKey
   overload: DotFeather.DFKeyboard.F20*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F21
   commentId: P:DotFeather.DFKeyboard.F21
@@ -1307,24 +1313,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F21
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 103
+    startLine: 74
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F21 { get; }
+    content: public static DFKey F21 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F21 As DFKey
+    content.vb: Public Shared ReadOnly Property F21 As DFKey
   overload: DotFeather.DFKeyboard.F21*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F22
   commentId: P:DotFeather.DFKeyboard.F22
@@ -1344,24 +1350,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F22
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 106
+    startLine: 76
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F22 { get; }
+    content: public static DFKey F22 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F22 As DFKey
+    content.vb: Public Shared ReadOnly Property F22 As DFKey
   overload: DotFeather.DFKeyboard.F22*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F23
   commentId: P:DotFeather.DFKeyboard.F23
@@ -1381,24 +1387,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F23
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 109
+    startLine: 78
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F23 { get; }
+    content: public static DFKey F23 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F23 As DFKey
+    content.vb: Public Shared ReadOnly Property F23 As DFKey
   overload: DotFeather.DFKeyboard.F23*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F24
   commentId: P:DotFeather.DFKeyboard.F24
@@ -1418,24 +1424,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F24
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 112
+    startLine: 80
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F24 { get; }
+    content: public static DFKey F24 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F24 As DFKey
+    content.vb: Public Shared ReadOnly Property F24 As DFKey
   overload: DotFeather.DFKeyboard.F24*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F25
   commentId: P:DotFeather.DFKeyboard.F25
@@ -1455,24 +1461,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F25
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 115
+    startLine: 82
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F25 { get; }
+    content: public static DFKey F25 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F25 As DFKey
+    content.vb: Public Shared ReadOnly Property F25 As DFKey
   overload: DotFeather.DFKeyboard.F25*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F26
   commentId: P:DotFeather.DFKeyboard.F26
@@ -1492,24 +1498,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F26
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 118
+    startLine: 84
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F26 { get; }
+    content: public static DFKey F26 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F26 As DFKey
+    content.vb: Public Shared ReadOnly Property F26 As DFKey
   overload: DotFeather.DFKeyboard.F26*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F27
   commentId: P:DotFeather.DFKeyboard.F27
@@ -1529,24 +1535,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F27
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 121
+    startLine: 86
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F27 { get; }
+    content: public static DFKey F27 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F27 As DFKey
+    content.vb: Public Shared ReadOnly Property F27 As DFKey
   overload: DotFeather.DFKeyboard.F27*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F28
   commentId: P:DotFeather.DFKeyboard.F28
@@ -1566,24 +1572,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F28
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 124
+    startLine: 88
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F28 { get; }
+    content: public static DFKey F28 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F28 As DFKey
+    content.vb: Public Shared ReadOnly Property F28 As DFKey
   overload: DotFeather.DFKeyboard.F28*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F29
   commentId: P:DotFeather.DFKeyboard.F29
@@ -1603,24 +1609,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F29
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 127
+    startLine: 90
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F29 { get; }
+    content: public static DFKey F29 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F29 As DFKey
+    content.vb: Public Shared ReadOnly Property F29 As DFKey
   overload: DotFeather.DFKeyboard.F29*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F30
   commentId: P:DotFeather.DFKeyboard.F30
@@ -1640,24 +1646,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F30
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 130
+    startLine: 92
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F30 { get; }
+    content: public static DFKey F30 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F30 As DFKey
+    content.vb: Public Shared ReadOnly Property F30 As DFKey
   overload: DotFeather.DFKeyboard.F30*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F31
   commentId: P:DotFeather.DFKeyboard.F31
@@ -1677,24 +1683,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F31
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 133
+    startLine: 94
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F31 { get; }
+    content: public static DFKey F31 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F31 As DFKey
+    content.vb: Public Shared ReadOnly Property F31 As DFKey
   overload: DotFeather.DFKeyboard.F31*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F32
   commentId: P:DotFeather.DFKeyboard.F32
@@ -1714,24 +1720,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F32
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 136
+    startLine: 96
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F32 { get; }
+    content: public static DFKey F32 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F32 As DFKey
+    content.vb: Public Shared ReadOnly Property F32 As DFKey
   overload: DotFeather.DFKeyboard.F32*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F33
   commentId: P:DotFeather.DFKeyboard.F33
@@ -1751,24 +1757,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F33
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 139
+    startLine: 98
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F33 { get; }
+    content: public static DFKey F33 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F33 As DFKey
+    content.vb: Public Shared ReadOnly Property F33 As DFKey
   overload: DotFeather.DFKeyboard.F33*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F34
   commentId: P:DotFeather.DFKeyboard.F34
@@ -1788,24 +1794,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F34
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 142
+    startLine: 100
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F34 { get; }
+    content: public static DFKey F34 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F34 As DFKey
+    content.vb: Public Shared ReadOnly Property F34 As DFKey
   overload: DotFeather.DFKeyboard.F34*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F35
   commentId: P:DotFeather.DFKeyboard.F35
@@ -1825,24 +1831,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F35
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 145
+    startLine: 102
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F35 { get; }
+    content: public static DFKey F35 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F35 As DFKey
+    content.vb: Public Shared ReadOnly Property F35 As DFKey
   overload: DotFeather.DFKeyboard.F35*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Up
   commentId: P:DotFeather.DFKeyboard.Up
@@ -1862,24 +1868,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Up
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 148
+    startLine: 104
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Up { get; }
+    content: public static DFKey Up { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Up As DFKey
+    content.vb: Public Shared ReadOnly Property Up As DFKey
   overload: DotFeather.DFKeyboard.Up*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Down
   commentId: P:DotFeather.DFKeyboard.Down
@@ -1899,24 +1905,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Down
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 151
+    startLine: 106
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Down { get; }
+    content: public static DFKey Down { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Down As DFKey
+    content.vb: Public Shared ReadOnly Property Down As DFKey
   overload: DotFeather.DFKeyboard.Down*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Left
   commentId: P:DotFeather.DFKeyboard.Left
@@ -1936,24 +1942,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Left
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 154
+    startLine: 108
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Left { get; }
+    content: public static DFKey Left { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Left As DFKey
+    content.vb: Public Shared ReadOnly Property Left As DFKey
   overload: DotFeather.DFKeyboard.Left*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Right
   commentId: P:DotFeather.DFKeyboard.Right
@@ -1973,24 +1979,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Right
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 157
+    startLine: 110
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Right { get; }
+    content: public static DFKey Right { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Right As DFKey
+    content.vb: Public Shared ReadOnly Property Right As DFKey
   overload: DotFeather.DFKeyboard.Right*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Enter
   commentId: P:DotFeather.DFKeyboard.Enter
@@ -2010,24 +2016,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Enter
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 160
+    startLine: 112
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Enter { get; }
+    content: public static DFKey Enter { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Enter As DFKey
+    content.vb: Public Shared ReadOnly Property Enter As DFKey
   overload: DotFeather.DFKeyboard.Enter*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Escape
   commentId: P:DotFeather.DFKeyboard.Escape
@@ -2047,24 +2053,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Escape
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 163
+    startLine: 114
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Escape { get; }
+    content: public static DFKey Escape { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Escape As DFKey
+    content.vb: Public Shared ReadOnly Property Escape As DFKey
   overload: DotFeather.DFKeyboard.Escape*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Space
   commentId: P:DotFeather.DFKeyboard.Space
@@ -2084,24 +2090,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Space
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 166
+    startLine: 116
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Space { get; }
+    content: public static DFKey Space { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Space As DFKey
+    content.vb: Public Shared ReadOnly Property Space As DFKey
   overload: DotFeather.DFKeyboard.Space*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Tab
   commentId: P:DotFeather.DFKeyboard.Tab
@@ -2121,24 +2127,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Tab
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 169
+    startLine: 118
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Tab { get; }
+    content: public static DFKey Tab { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Tab As DFKey
+    content.vb: Public Shared ReadOnly Property Tab As DFKey
   overload: DotFeather.DFKeyboard.Tab*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.BackSpace
   commentId: P:DotFeather.DFKeyboard.BackSpace
@@ -2158,24 +2164,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BackSpace
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 172
+    startLine: 120
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey BackSpace { get; }
+    content: public static DFKey BackSpace { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property BackSpace As DFKey
+    content.vb: Public Shared ReadOnly Property BackSpace As DFKey
   overload: DotFeather.DFKeyboard.BackSpace*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Insert
   commentId: P:DotFeather.DFKeyboard.Insert
@@ -2195,24 +2201,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Insert
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 175
+    startLine: 122
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Insert { get; }
+    content: public static DFKey Insert { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Insert As DFKey
+    content.vb: Public Shared ReadOnly Property Insert As DFKey
   overload: DotFeather.DFKeyboard.Insert*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Delete
   commentId: P:DotFeather.DFKeyboard.Delete
@@ -2232,24 +2238,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Delete
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 178
+    startLine: 124
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Delete { get; }
+    content: public static DFKey Delete { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Delete As DFKey
+    content.vb: Public Shared ReadOnly Property Delete As DFKey
   overload: DotFeather.DFKeyboard.Delete*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.PageUp
   commentId: P:DotFeather.DFKeyboard.PageUp
@@ -2269,24 +2275,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: PageUp
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 181
+    startLine: 126
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey PageUp { get; }
+    content: public static DFKey PageUp { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property PageUp As DFKey
+    content.vb: Public Shared ReadOnly Property PageUp As DFKey
   overload: DotFeather.DFKeyboard.PageUp*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.PageDown
   commentId: P:DotFeather.DFKeyboard.PageDown
@@ -2306,24 +2312,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: PageDown
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 184
+    startLine: 128
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey PageDown { get; }
+    content: public static DFKey PageDown { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property PageDown As DFKey
+    content.vb: Public Shared ReadOnly Property PageDown As DFKey
   overload: DotFeather.DFKeyboard.PageDown*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Home
   commentId: P:DotFeather.DFKeyboard.Home
@@ -2343,24 +2349,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Home
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 187
+    startLine: 130
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Home { get; }
+    content: public static DFKey Home { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Home As DFKey
+    content.vb: Public Shared ReadOnly Property Home As DFKey
   overload: DotFeather.DFKeyboard.Home*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.End
   commentId: P:DotFeather.DFKeyboard.End
@@ -2380,24 +2386,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: End
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 190
+    startLine: 132
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey End { get; }
+    content: public static DFKey End { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property End As DFKey
+    content.vb: Public Shared ReadOnly Property End As DFKey
   overload: DotFeather.DFKeyboard.End*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.CapsLock
   commentId: P:DotFeather.DFKeyboard.CapsLock
@@ -2417,24 +2423,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CapsLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 193
+    startLine: 134
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey CapsLock { get; }
+    content: public static DFKey CapsLock { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property CapsLock As DFKey
+    content.vb: Public Shared ReadOnly Property CapsLock As DFKey
   overload: DotFeather.DFKeyboard.CapsLock*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.ScrollLock
   commentId: P:DotFeather.DFKeyboard.ScrollLock
@@ -2454,24 +2460,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ScrollLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 196
+    startLine: 136
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey ScrollLock { get; }
+    content: public static DFKey ScrollLock { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property ScrollLock As DFKey
+    content.vb: Public Shared ReadOnly Property ScrollLock As DFKey
   overload: DotFeather.DFKeyboard.ScrollLock*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.PrintScreen
   commentId: P:DotFeather.DFKeyboard.PrintScreen
@@ -2491,24 +2497,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: PrintScreen
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 199
+    startLine: 138
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey PrintScreen { get; }
+    content: public static DFKey PrintScreen { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property PrintScreen As DFKey
+    content.vb: Public Shared ReadOnly Property PrintScreen As DFKey
   overload: DotFeather.DFKeyboard.PrintScreen*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Pause
   commentId: P:DotFeather.DFKeyboard.Pause
@@ -2528,24 +2534,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Pause
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 202
+    startLine: 140
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Pause { get; }
+    content: public static DFKey Pause { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Pause As DFKey
+    content.vb: Public Shared ReadOnly Property Pause As DFKey
   overload: DotFeather.DFKeyboard.Pause*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.NumLock
   commentId: P:DotFeather.DFKeyboard.NumLock
@@ -2565,24 +2571,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: NumLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 205
+    startLine: 142
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey NumLock { get; }
+    content: public static DFKey NumLock { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property NumLock As DFKey
+    content.vb: Public Shared ReadOnly Property NumLock As DFKey
   overload: DotFeather.DFKeyboard.NumLock*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Clear
   commentId: P:DotFeather.DFKeyboard.Clear
@@ -2602,24 +2608,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 208
+    startLine: 144
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Clear { get; }
+    content: public static DFKey Clear { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Clear As DFKey
+    content.vb: Public Shared ReadOnly Property Clear As DFKey
   overload: DotFeather.DFKeyboard.Clear*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Sleep
   commentId: P:DotFeather.DFKeyboard.Sleep
@@ -2639,24 +2645,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Sleep
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 211
+    startLine: 146
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Sleep { get; }
+    content: public static DFKey Sleep { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Sleep As DFKey
+    content.vb: Public Shared ReadOnly Property Sleep As DFKey
   overload: DotFeather.DFKeyboard.Sleep*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad0
   commentId: P:DotFeather.DFKeyboard.Keypad0
@@ -2676,24 +2682,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad0
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 214
+    startLine: 148
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad0 { get; }
+    content: public static DFKey Keypad0 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad0 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad0 As DFKey
   overload: DotFeather.DFKeyboard.Keypad0*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad1
   commentId: P:DotFeather.DFKeyboard.Keypad1
@@ -2713,24 +2719,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 217
+    startLine: 150
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad1 { get; }
+    content: public static DFKey Keypad1 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad1 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad1 As DFKey
   overload: DotFeather.DFKeyboard.Keypad1*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad2
   commentId: P:DotFeather.DFKeyboard.Keypad2
@@ -2750,24 +2756,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 220
+    startLine: 152
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad2 { get; }
+    content: public static DFKey Keypad2 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad2 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad2 As DFKey
   overload: DotFeather.DFKeyboard.Keypad2*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad3
   commentId: P:DotFeather.DFKeyboard.Keypad3
@@ -2787,24 +2793,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 223
+    startLine: 154
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad3 { get; }
+    content: public static DFKey Keypad3 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad3 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad3 As DFKey
   overload: DotFeather.DFKeyboard.Keypad3*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad4
   commentId: P:DotFeather.DFKeyboard.Keypad4
@@ -2824,24 +2830,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 226
+    startLine: 156
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad4 { get; }
+    content: public static DFKey Keypad4 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad4 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad4 As DFKey
   overload: DotFeather.DFKeyboard.Keypad4*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad5
   commentId: P:DotFeather.DFKeyboard.Keypad5
@@ -2861,24 +2867,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 229
+    startLine: 158
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad5 { get; }
+    content: public static DFKey Keypad5 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad5 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad5 As DFKey
   overload: DotFeather.DFKeyboard.Keypad5*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad6
   commentId: P:DotFeather.DFKeyboard.Keypad6
@@ -2898,24 +2904,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 232
+    startLine: 160
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad6 { get; }
+    content: public static DFKey Keypad6 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad6 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad6 As DFKey
   overload: DotFeather.DFKeyboard.Keypad6*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad7
   commentId: P:DotFeather.DFKeyboard.Keypad7
@@ -2935,24 +2941,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 235
+    startLine: 162
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad7 { get; }
+    content: public static DFKey Keypad7 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad7 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad7 As DFKey
   overload: DotFeather.DFKeyboard.Keypad7*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad8
   commentId: P:DotFeather.DFKeyboard.Keypad8
@@ -2972,24 +2978,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 238
+    startLine: 164
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad8 { get; }
+    content: public static DFKey Keypad8 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad8 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad8 As DFKey
   overload: DotFeather.DFKeyboard.Keypad8*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Keypad9
   commentId: P:DotFeather.DFKeyboard.Keypad9
@@ -3009,24 +3015,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 241
+    startLine: 166
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Keypad9 { get; }
+    content: public static DFKey Keypad9 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Keypad9 As DFKey
+    content.vb: Public Shared ReadOnly Property Keypad9 As DFKey
   overload: DotFeather.DFKeyboard.Keypad9*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.KeypadDivide
   commentId: P:DotFeather.DFKeyboard.KeypadDivide
@@ -3046,24 +3052,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadDivide
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 244
+    startLine: 168
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey KeypadDivide { get; }
+    content: public static DFKey KeypadDivide { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property KeypadDivide As DFKey
+    content.vb: Public Shared ReadOnly Property KeypadDivide As DFKey
   overload: DotFeather.DFKeyboard.KeypadDivide*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.KeypadMultiply
   commentId: P:DotFeather.DFKeyboard.KeypadMultiply
@@ -3083,24 +3089,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadMultiply
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 247
+    startLine: 170
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey KeypadMultiply { get; }
+    content: public static DFKey KeypadMultiply { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property KeypadMultiply As DFKey
+    content.vb: Public Shared ReadOnly Property KeypadMultiply As DFKey
   overload: DotFeather.DFKeyboard.KeypadMultiply*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.KeypadMinus
   commentId: P:DotFeather.DFKeyboard.KeypadMinus
@@ -3120,24 +3126,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadMinus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 250
+    startLine: 172
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey KeypadMinus { get; }
+    content: public static DFKey KeypadMinus { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property KeypadMinus As DFKey
+    content.vb: Public Shared ReadOnly Property KeypadMinus As DFKey
   overload: DotFeather.DFKeyboard.KeypadMinus*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.KeypadPlus
   commentId: P:DotFeather.DFKeyboard.KeypadPlus
@@ -3157,24 +3163,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadPlus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 253
+    startLine: 174
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey KeypadPlus { get; }
+    content: public static DFKey KeypadPlus { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property KeypadPlus As DFKey
+    content.vb: Public Shared ReadOnly Property KeypadPlus As DFKey
   overload: DotFeather.DFKeyboard.KeypadPlus*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.KeypadPeriod
   commentId: P:DotFeather.DFKeyboard.KeypadPeriod
@@ -3194,24 +3200,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadPeriod
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 256
+    startLine: 176
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey KeypadPeriod { get; }
+    content: public static DFKey KeypadPeriod { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property KeypadPeriod As DFKey
+    content.vb: Public Shared ReadOnly Property KeypadPeriod As DFKey
   overload: DotFeather.DFKeyboard.KeypadPeriod*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.KeypadEnter
   commentId: P:DotFeather.DFKeyboard.KeypadEnter
@@ -3231,24 +3237,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadEnter
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 259
+    startLine: 178
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey KeypadEnter { get; }
+    content: public static DFKey KeypadEnter { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property KeypadEnter As DFKey
+    content.vb: Public Shared ReadOnly Property KeypadEnter As DFKey
   overload: DotFeather.DFKeyboard.KeypadEnter*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.A
   commentId: P:DotFeather.DFKeyboard.A
@@ -3268,24 +3274,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: A
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 262
+    startLine: 180
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey A { get; }
+    content: public static DFKey A { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property A As DFKey
+    content.vb: Public Shared ReadOnly Property A As DFKey
   overload: DotFeather.DFKeyboard.A*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.B
   commentId: P:DotFeather.DFKeyboard.B
@@ -3305,24 +3311,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: B
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 265
+    startLine: 182
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey B { get; }
+    content: public static DFKey B { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property B As DFKey
+    content.vb: Public Shared ReadOnly Property B As DFKey
   overload: DotFeather.DFKeyboard.B*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.C
   commentId: P:DotFeather.DFKeyboard.C
@@ -3342,24 +3348,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: C
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 268
+    startLine: 184
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey C { get; }
+    content: public static DFKey C { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property C As DFKey
+    content.vb: Public Shared ReadOnly Property C As DFKey
   overload: DotFeather.DFKeyboard.C*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.D
   commentId: P:DotFeather.DFKeyboard.D
@@ -3379,24 +3385,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: D
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 271
+    startLine: 186
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey D { get; }
+    content: public static DFKey D { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property D As DFKey
+    content.vb: Public Shared ReadOnly Property D As DFKey
   overload: DotFeather.DFKeyboard.D*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.E
   commentId: P:DotFeather.DFKeyboard.E
@@ -3416,24 +3422,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: E
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 274
+    startLine: 188
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey E { get; }
+    content: public static DFKey E { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property E As DFKey
+    content.vb: Public Shared ReadOnly Property E As DFKey
   overload: DotFeather.DFKeyboard.E*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.F
   commentId: P:DotFeather.DFKeyboard.F
@@ -3453,24 +3459,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 277
+    startLine: 190
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey F { get; }
+    content: public static DFKey F { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property F As DFKey
+    content.vb: Public Shared ReadOnly Property F As DFKey
   overload: DotFeather.DFKeyboard.F*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.G
   commentId: P:DotFeather.DFKeyboard.G
@@ -3490,24 +3496,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: G
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 280
+    startLine: 192
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey G { get; }
+    content: public static DFKey G { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property G As DFKey
+    content.vb: Public Shared ReadOnly Property G As DFKey
   overload: DotFeather.DFKeyboard.G*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.H
   commentId: P:DotFeather.DFKeyboard.H
@@ -3527,24 +3533,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: H
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 283
+    startLine: 194
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey H { get; }
+    content: public static DFKey H { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property H As DFKey
+    content.vb: Public Shared ReadOnly Property H As DFKey
   overload: DotFeather.DFKeyboard.H*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.I
   commentId: P:DotFeather.DFKeyboard.I
@@ -3564,24 +3570,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: I
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 286
+    startLine: 196
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey I { get; }
+    content: public static DFKey I { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property I As DFKey
+    content.vb: Public Shared ReadOnly Property I As DFKey
   overload: DotFeather.DFKeyboard.I*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.J
   commentId: P:DotFeather.DFKeyboard.J
@@ -3601,24 +3607,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: J
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 289
+    startLine: 198
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey J { get; }
+    content: public static DFKey J { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property J As DFKey
+    content.vb: Public Shared ReadOnly Property J As DFKey
   overload: DotFeather.DFKeyboard.J*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.K
   commentId: P:DotFeather.DFKeyboard.K
@@ -3638,24 +3644,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: K
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 292
+    startLine: 200
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey K { get; }
+    content: public static DFKey K { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property K As DFKey
+    content.vb: Public Shared ReadOnly Property K As DFKey
   overload: DotFeather.DFKeyboard.K*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.L
   commentId: P:DotFeather.DFKeyboard.L
@@ -3675,24 +3681,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: L
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 295
+    startLine: 202
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey L { get; }
+    content: public static DFKey L { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property L As DFKey
+    content.vb: Public Shared ReadOnly Property L As DFKey
   overload: DotFeather.DFKeyboard.L*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.M
   commentId: P:DotFeather.DFKeyboard.M
@@ -3712,24 +3718,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: M
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 298
+    startLine: 204
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey M { get; }
+    content: public static DFKey M { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property M As DFKey
+    content.vb: Public Shared ReadOnly Property M As DFKey
   overload: DotFeather.DFKeyboard.M*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.N
   commentId: P:DotFeather.DFKeyboard.N
@@ -3749,24 +3755,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: N
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 301
+    startLine: 206
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey N { get; }
+    content: public static DFKey N { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property N As DFKey
+    content.vb: Public Shared ReadOnly Property N As DFKey
   overload: DotFeather.DFKeyboard.N*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.O
   commentId: P:DotFeather.DFKeyboard.O
@@ -3786,24 +3792,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: O
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 304
+    startLine: 208
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey O { get; }
+    content: public static DFKey O { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property O As DFKey
+    content.vb: Public Shared ReadOnly Property O As DFKey
   overload: DotFeather.DFKeyboard.O*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.P
   commentId: P:DotFeather.DFKeyboard.P
@@ -3823,24 +3829,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: P
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 307
+    startLine: 210
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey P { get; }
+    content: public static DFKey P { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property P As DFKey
+    content.vb: Public Shared ReadOnly Property P As DFKey
   overload: DotFeather.DFKeyboard.P*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Q
   commentId: P:DotFeather.DFKeyboard.Q
@@ -3860,24 +3866,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Q
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 310
+    startLine: 212
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Q { get; }
+    content: public static DFKey Q { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Q As DFKey
+    content.vb: Public Shared ReadOnly Property Q As DFKey
   overload: DotFeather.DFKeyboard.Q*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.R
   commentId: P:DotFeather.DFKeyboard.R
@@ -3897,24 +3903,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: R
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 313
+    startLine: 214
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey R { get; }
+    content: public static DFKey R { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property R As DFKey
+    content.vb: Public Shared ReadOnly Property R As DFKey
   overload: DotFeather.DFKeyboard.R*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.S
   commentId: P:DotFeather.DFKeyboard.S
@@ -3934,24 +3940,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: S
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 316
+    startLine: 216
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey S { get; }
+    content: public static DFKey S { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property S As DFKey
+    content.vb: Public Shared ReadOnly Property S As DFKey
   overload: DotFeather.DFKeyboard.S*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.T
   commentId: P:DotFeather.DFKeyboard.T
@@ -3971,24 +3977,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: T
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 319
+    startLine: 218
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey T { get; }
+    content: public static DFKey T { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property T As DFKey
+    content.vb: Public Shared ReadOnly Property T As DFKey
   overload: DotFeather.DFKeyboard.T*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.U
   commentId: P:DotFeather.DFKeyboard.U
@@ -4008,24 +4014,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: U
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 322
+    startLine: 220
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey U { get; }
+    content: public static DFKey U { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property U As DFKey
+    content.vb: Public Shared ReadOnly Property U As DFKey
   overload: DotFeather.DFKeyboard.U*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.V
   commentId: P:DotFeather.DFKeyboard.V
@@ -4045,24 +4051,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: V
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 325
+    startLine: 222
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey V { get; }
+    content: public static DFKey V { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property V As DFKey
+    content.vb: Public Shared ReadOnly Property V As DFKey
   overload: DotFeather.DFKeyboard.V*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.W
   commentId: P:DotFeather.DFKeyboard.W
@@ -4082,24 +4088,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: W
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 328
+    startLine: 224
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey W { get; }
+    content: public static DFKey W { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property W As DFKey
+    content.vb: Public Shared ReadOnly Property W As DFKey
   overload: DotFeather.DFKeyboard.W*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.X
   commentId: P:DotFeather.DFKeyboard.X
@@ -4119,24 +4125,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: X
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 331
+    startLine: 226
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey X { get; }
+    content: public static DFKey X { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property X As DFKey
+    content.vb: Public Shared ReadOnly Property X As DFKey
   overload: DotFeather.DFKeyboard.X*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Y
   commentId: P:DotFeather.DFKeyboard.Y
@@ -4156,24 +4162,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Y
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 334
+    startLine: 228
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Y { get; }
+    content: public static DFKey Y { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Y As DFKey
+    content.vb: Public Shared ReadOnly Property Y As DFKey
   overload: DotFeather.DFKeyboard.Y*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Z
   commentId: P:DotFeather.DFKeyboard.Z
@@ -4193,24 +4199,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Z
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 337
+    startLine: 230
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Z { get; }
+    content: public static DFKey Z { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Z As DFKey
+    content.vb: Public Shared ReadOnly Property Z As DFKey
   overload: DotFeather.DFKeyboard.Z*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number0
   commentId: P:DotFeather.DFKeyboard.Number0
@@ -4230,24 +4236,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number0
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 340
+    startLine: 232
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number0 { get; }
+    content: public static DFKey Number0 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number0 As DFKey
+    content.vb: Public Shared ReadOnly Property Number0 As DFKey
   overload: DotFeather.DFKeyboard.Number0*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number1
   commentId: P:DotFeather.DFKeyboard.Number1
@@ -4267,24 +4273,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 343
+    startLine: 234
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number1 { get; }
+    content: public static DFKey Number1 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number1 As DFKey
+    content.vb: Public Shared ReadOnly Property Number1 As DFKey
   overload: DotFeather.DFKeyboard.Number1*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number2
   commentId: P:DotFeather.DFKeyboard.Number2
@@ -4304,24 +4310,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 346
+    startLine: 236
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number2 { get; }
+    content: public static DFKey Number2 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number2 As DFKey
+    content.vb: Public Shared ReadOnly Property Number2 As DFKey
   overload: DotFeather.DFKeyboard.Number2*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number3
   commentId: P:DotFeather.DFKeyboard.Number3
@@ -4341,24 +4347,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 349
+    startLine: 238
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number3 { get; }
+    content: public static DFKey Number3 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number3 As DFKey
+    content.vb: Public Shared ReadOnly Property Number3 As DFKey
   overload: DotFeather.DFKeyboard.Number3*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number4
   commentId: P:DotFeather.DFKeyboard.Number4
@@ -4378,24 +4384,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 352
+    startLine: 240
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number4 { get; }
+    content: public static DFKey Number4 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number4 As DFKey
+    content.vb: Public Shared ReadOnly Property Number4 As DFKey
   overload: DotFeather.DFKeyboard.Number4*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number5
   commentId: P:DotFeather.DFKeyboard.Number5
@@ -4415,24 +4421,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 355
+    startLine: 242
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number5 { get; }
+    content: public static DFKey Number5 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number5 As DFKey
+    content.vb: Public Shared ReadOnly Property Number5 As DFKey
   overload: DotFeather.DFKeyboard.Number5*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number6
   commentId: P:DotFeather.DFKeyboard.Number6
@@ -4452,24 +4458,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 358
+    startLine: 244
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number6 { get; }
+    content: public static DFKey Number6 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number6 As DFKey
+    content.vb: Public Shared ReadOnly Property Number6 As DFKey
   overload: DotFeather.DFKeyboard.Number6*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number7
   commentId: P:DotFeather.DFKeyboard.Number7
@@ -4489,24 +4495,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 361
+    startLine: 246
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number7 { get; }
+    content: public static DFKey Number7 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number7 As DFKey
+    content.vb: Public Shared ReadOnly Property Number7 As DFKey
   overload: DotFeather.DFKeyboard.Number7*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number8
   commentId: P:DotFeather.DFKeyboard.Number8
@@ -4526,24 +4532,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 364
+    startLine: 248
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number8 { get; }
+    content: public static DFKey Number8 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number8 As DFKey
+    content.vb: Public Shared ReadOnly Property Number8 As DFKey
   overload: DotFeather.DFKeyboard.Number8*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Number9
   commentId: P:DotFeather.DFKeyboard.Number9
@@ -4563,24 +4569,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 367
+    startLine: 250
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Number9 { get; }
+    content: public static DFKey Number9 { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Number9 As DFKey
+    content.vb: Public Shared ReadOnly Property Number9 As DFKey
   overload: DotFeather.DFKeyboard.Number9*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Tilde
   commentId: P:DotFeather.DFKeyboard.Tilde
@@ -4600,24 +4606,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Tilde
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 370
+    startLine: 252
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Tilde { get; }
+    content: public static DFKey Tilde { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Tilde As DFKey
+    content.vb: Public Shared ReadOnly Property Tilde As DFKey
   overload: DotFeather.DFKeyboard.Tilde*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Minus
   commentId: P:DotFeather.DFKeyboard.Minus
@@ -4637,24 +4643,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Minus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 373
+    startLine: 254
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Minus { get; }
+    content: public static DFKey Minus { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Minus As DFKey
+    content.vb: Public Shared ReadOnly Property Minus As DFKey
   overload: DotFeather.DFKeyboard.Minus*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Plus
   commentId: P:DotFeather.DFKeyboard.Plus
@@ -4674,24 +4680,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Plus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 376
+    startLine: 256
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Plus { get; }
+    content: public static DFKey Plus { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Plus As DFKey
+    content.vb: Public Shared ReadOnly Property Plus As DFKey
   overload: DotFeather.DFKeyboard.Plus*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.BracketLeft
   commentId: P:DotFeather.DFKeyboard.BracketLeft
@@ -4711,24 +4717,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BracketLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 379
+    startLine: 258
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey BracketLeft { get; }
+    content: public static DFKey BracketLeft { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property BracketLeft As DFKey
+    content.vb: Public Shared ReadOnly Property BracketLeft As DFKey
   overload: DotFeather.DFKeyboard.BracketLeft*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.BracketRight
   commentId: P:DotFeather.DFKeyboard.BracketRight
@@ -4748,24 +4754,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BracketRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 382
+    startLine: 260
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey BracketRight { get; }
+    content: public static DFKey BracketRight { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property BracketRight As DFKey
+    content.vb: Public Shared ReadOnly Property BracketRight As DFKey
   overload: DotFeather.DFKeyboard.BracketRight*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Semicolon
   commentId: P:DotFeather.DFKeyboard.Semicolon
@@ -4785,24 +4791,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Semicolon
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 385
+    startLine: 262
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Semicolon { get; }
+    content: public static DFKey Semicolon { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Semicolon As DFKey
+    content.vb: Public Shared ReadOnly Property Semicolon As DFKey
   overload: DotFeather.DFKeyboard.Semicolon*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Quote
   commentId: P:DotFeather.DFKeyboard.Quote
@@ -4822,24 +4828,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Quote
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 388
+    startLine: 264
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Quote { get; }
+    content: public static DFKey Quote { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Quote As DFKey
+    content.vb: Public Shared ReadOnly Property Quote As DFKey
   overload: DotFeather.DFKeyboard.Quote*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Comma
   commentId: P:DotFeather.DFKeyboard.Comma
@@ -4859,24 +4865,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Comma
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 391
+    startLine: 266
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Comma { get; }
+    content: public static DFKey Comma { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Comma As DFKey
+    content.vb: Public Shared ReadOnly Property Comma As DFKey
   overload: DotFeather.DFKeyboard.Comma*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Period
   commentId: P:DotFeather.DFKeyboard.Period
@@ -4896,24 +4902,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Period
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 394
+    startLine: 268
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Period { get; }
+    content: public static DFKey Period { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Period As DFKey
+    content.vb: Public Shared ReadOnly Property Period As DFKey
   overload: DotFeather.DFKeyboard.Period*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.Slash
   commentId: P:DotFeather.DFKeyboard.Slash
@@ -4933,24 +4939,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Slash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 397
+    startLine: 270
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey Slash { get; }
+    content: public static DFKey Slash { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property Slash As DFKey
+    content.vb: Public Shared ReadOnly Property Slash As DFKey
   overload: DotFeather.DFKeyboard.Slash*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.BackSlash
   commentId: P:DotFeather.DFKeyboard.BackSlash
@@ -4970,24 +4976,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BackSlash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 400
+    startLine: 272
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey BackSlash { get; }
+    content: public static DFKey BackSlash { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property BackSlash As DFKey
+    content.vb: Public Shared ReadOnly Property BackSlash As DFKey
   overload: DotFeather.DFKeyboard.BackSlash*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.NonUSBackSlash
   commentId: P:DotFeather.DFKeyboard.NonUSBackSlash
@@ -5007,24 +5013,24 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: NonUSBackSlash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 403
+    startLine: 274
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey NonUSBackSlash { get; }
+    content: public static DFKey NonUSBackSlash { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property NonUSBackSlash As DFKey
+    content.vb: Public Shared ReadOnly Property NonUSBackSlash As DFKey
   overload: DotFeather.DFKeyboard.NonUSBackSlash*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
 - uid: DotFeather.DFKeyboard.LastKey
   commentId: P:DotFeather.DFKeyboard.LastKey
@@ -5044,68 +5050,329 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LastKey
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 406
+    startLine: 276
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: ''
-  example: []
   syntax:
-    content: public DFKey LastKey { get; }
+    content: public static DFKey LastKey { get; }
     parameters: []
     return:
       type: DotFeather.DFKey
-    content.vb: Public ReadOnly Property LastKey As DFKey
+    content.vb: Public Shared ReadOnly Property LastKey As DFKey
   overload: DotFeather.DFKeyboard.LastKey*
   modifiers.csharp:
   - public
+  - static
   - get
   modifiers.vb:
   - Public
+  - Shared
   - ReadOnly
-- uid: DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
-  commentId: P:DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
-  id: Item(DotFeather.DFKeyCode)
+- uid: DotFeather.DFKeyboard.AllKeyCodes
+  commentId: P:DotFeather.DFKeyboard.AllKeyCodes
+  id: AllKeyCodes
   parent: DotFeather.DFKeyboard
   langs:
   - csharp
   - vb
-  name: Item[DFKeyCode]
-  nameWithType: DFKeyboard.Item[DFKeyCode]
-  fullName: DotFeather.DFKeyboard.Item[DotFeather.DFKeyCode]
+  name: AllKeyCodes
+  nameWithType: DFKeyboard.AllKeyCodes
+  fullName: DotFeather.DFKeyboard.AllKeyCodes
   type: Property
   source:
     remote:
       path: DotFeather/InputSystems/DFKeyboard.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: this[]
+    id: AllKeyCodes
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 412
+    startLine: 281
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather.DFKeyCode\" data-throw-if-not-resolved=\"false\"></xref> を指定して特定のキーを取得します。\n"
+  summary: "\nGet all key codes;\n"
   example: []
   syntax:
-    content: public DFKey this[DFKeyCode code] { get; }
+    content: public static IEnumerable<DFKeyCode> AllKeyCodes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{DotFeather.DFKeyCode}
+    content.vb: Public Shared ReadOnly Property AllKeyCodes As IEnumerable(Of DFKeyCode)
+  overload: DotFeather.DFKeyboard.AllKeyCodes*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotFeather.DFKeyboard.AllPressedKeys
+  commentId: P:DotFeather.DFKeyboard.AllPressedKeys
+  id: AllPressedKeys
+  parent: DotFeather.DFKeyboard
+  langs:
+  - csharp
+  - vb
+  name: AllPressedKeys
+  nameWithType: DFKeyboard.AllPressedKeys
+  fullName: DotFeather.DFKeyboard.AllPressedKeys
+  type: Property
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKeyboard.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: AllPressedKeys
+    path: ../DotFeather/InputSystems/DFKeyboard.cs
+    startLine: 286
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet all pressed keys.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<DFKeyCode> AllPressedKeys { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{DotFeather.DFKeyCode}
+    content.vb: Public Shared ReadOnly Property AllPressedKeys As IEnumerable(Of DFKeyCode)
+  overload: DotFeather.DFKeyboard.AllPressedKeys*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotFeather.DFKeyboard.AllDownKeys
+  commentId: P:DotFeather.DFKeyboard.AllDownKeys
+  id: AllDownKeys
+  parent: DotFeather.DFKeyboard
+  langs:
+  - csharp
+  - vb
+  name: AllDownKeys
+  nameWithType: DFKeyboard.AllDownKeys
+  fullName: DotFeather.DFKeyboard.AllDownKeys
+  type: Property
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKeyboard.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: AllDownKeys
+    path: ../DotFeather/InputSystems/DFKeyboard.cs
+    startLine: 291
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet all keys which pressed then.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<DFKeyCode> AllDownKeys { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{DotFeather.DFKeyCode}
+    content.vb: Public Shared ReadOnly Property AllDownKeys As IEnumerable(Of DFKeyCode)
+  overload: DotFeather.DFKeyboard.AllDownKeys*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotFeather.DFKeyboard.AllUpKeys
+  commentId: P:DotFeather.DFKeyboard.AllUpKeys
+  id: AllUpKeys
+  parent: DotFeather.DFKeyboard
+  langs:
+  - csharp
+  - vb
+  name: AllUpKeys
+  nameWithType: DFKeyboard.AllUpKeys
+  fullName: DotFeather.DFKeyboard.AllUpKeys
+  type: Property
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKeyboard.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: AllUpKeys
+    path: ../DotFeather/InputSystems/DFKeyboard.cs
+    startLine: 296
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet all keys which released then.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<DFKeyCode> AllUpKeys { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{DotFeather.DFKeyCode}
+    content.vb: Public Shared ReadOnly Property AllUpKeys As IEnumerable(Of DFKeyCode)
+  overload: DotFeather.DFKeyboard.AllUpKeys*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotFeather.DFKeyboard.KeyOf(DotFeather.DFKeyCode)
+  commentId: M:DotFeather.DFKeyboard.KeyOf(DotFeather.DFKeyCode)
+  id: KeyOf(DotFeather.DFKeyCode)
+  parent: DotFeather.DFKeyboard
+  langs:
+  - csharp
+  - vb
+  name: KeyOf(DFKeyCode)
+  nameWithType: DFKeyboard.KeyOf(DFKeyCode)
+  fullName: DotFeather.DFKeyboard.KeyOf(DotFeather.DFKeyCode)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKeyboard.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: KeyOf
+    path: ../DotFeather/InputSystems/DFKeyboard.cs
+    startLine: 301
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet a specific key by <xref href=\"DotFeather.DFKeyCode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static DFKey KeyOf(DFKeyCode code)
     parameters:
     - id: code
       type: DotFeather.DFKeyCode
     return:
       type: DotFeather.DFKey
-      description: ''
-    content.vb: Public ReadOnly Property Item(code As DFKeyCode) As DFKey
-  overload: DotFeather.DFKeyboard.Item*
-  nameWithType.vb: DFKeyboard.Item(DFKeyCode)
+    content.vb: Public Shared Function KeyOf(code As DFKeyCode) As DFKey
+  overload: DotFeather.DFKeyboard.KeyOf*
   modifiers.csharp:
   - public
-  - get
+  - static
   modifiers.vb:
   - Public
-  - ReadOnly
-  fullName.vb: DotFeather.DFKeyboard.Item(DotFeather.DFKeyCode)
-  name.vb: Item(DFKeyCode)
+  - Shared
+- uid: DotFeather.DFKeyboard.GetString
+  commentId: M:DotFeather.DFKeyboard.GetString
+  id: GetString
+  parent: DotFeather.DFKeyboard
+  langs:
+  - csharp
+  - vb
+  name: GetString()
+  nameWithType: DFKeyboard.GetString()
+  fullName: DotFeather.DFKeyboard.GetString()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKeyboard.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: GetString
+    path: ../DotFeather/InputSystems/DFKeyboard.cs
+    startLine: 577
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet input string from the keyboard buffer.\n"
+  example: []
+  syntax:
+    content: public static string GetString()
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetString As String
+  overload: DotFeather.DFKeyboard.GetString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFKeyboard.GetChar
+  commentId: M:DotFeather.DFKeyboard.GetChar
+  id: GetChar
+  parent: DotFeather.DFKeyboard
+  langs:
+  - csharp
+  - vb
+  name: GetChar()
+  nameWithType: DFKeyboard.GetChar()
+  fullName: DotFeather.DFKeyboard.GetChar()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKeyboard.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: GetChar
+    path: ../DotFeather/InputSystems/DFKeyboard.cs
+    startLine: 590
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet an input char from the keyboard buffer.\n"
+  example: []
+  syntax:
+    content: public static char GetChar()
+    return:
+      type: System.Char
+    content.vb: Public Shared Function GetChar As Char
+  overload: DotFeather.DFKeyboard.GetChar*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.DFKeyboard.HasChar
+  commentId: M:DotFeather.DFKeyboard.HasChar
+  id: HasChar
+  parent: DotFeather.DFKeyboard
+  langs:
+  - csharp
+  - vb
+  name: HasChar()
+  nameWithType: DFKeyboard.HasChar()
+  fullName: DotFeather.DFKeyboard.HasChar()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKeyboard.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: HasChar
+    path: ../DotFeather/InputSystems/DFKeyboard.cs
+    startLine: 596
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nCheck whether some chars in the keyboard buffer.\n"
+  example: []
+  syntax:
+    content: public static bool HasChar()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function HasChar As Boolean
+  overload: DotFeather.DFKeyboard.HasChar*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: DotFeather
   commentId: N:DotFeather
@@ -6070,14 +6337,157 @@ references:
   name: LastKey
   nameWithType: DFKeyboard.LastKey
   fullName: DotFeather.DFKeyboard.LastKey
+- uid: DotFeather.DFKeyboard.AllKeyCodes*
+  commentId: Overload:DotFeather.DFKeyboard.AllKeyCodes
+  name: AllKeyCodes
+  nameWithType: DFKeyboard.AllKeyCodes
+  fullName: DotFeather.DFKeyboard.AllKeyCodes
+- uid: System.Collections.Generic.IEnumerable{DotFeather.DFKeyCode}
+  commentId: T:System.Collections.Generic.IEnumerable{DotFeather.DFKeyCode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<DFKeyCode>
+  nameWithType: IEnumerable<DFKeyCode>
+  fullName: System.Collections.Generic.IEnumerable<DotFeather.DFKeyCode>
+  nameWithType.vb: IEnumerable(Of DFKeyCode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of DotFeather.DFKeyCode)
+  name.vb: IEnumerable(Of DFKeyCode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DotFeather.DFKeyCode
+    name: DFKeyCode
+    nameWithType: DFKeyCode
+    fullName: DotFeather.DFKeyCode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DotFeather.DFKeyCode
+    name: DFKeyCode
+    nameWithType: DFKeyCode
+    fullName: DotFeather.DFKeyCode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: DotFeather.DFKeyboard.AllPressedKeys*
+  commentId: Overload:DotFeather.DFKeyboard.AllPressedKeys
+  name: AllPressedKeys
+  nameWithType: DFKeyboard.AllPressedKeys
+  fullName: DotFeather.DFKeyboard.AllPressedKeys
+- uid: DotFeather.DFKeyboard.AllDownKeys*
+  commentId: Overload:DotFeather.DFKeyboard.AllDownKeys
+  name: AllDownKeys
+  nameWithType: DFKeyboard.AllDownKeys
+  fullName: DotFeather.DFKeyboard.AllDownKeys
+- uid: DotFeather.DFKeyboard.AllUpKeys*
+  commentId: Overload:DotFeather.DFKeyboard.AllUpKeys
+  name: AllUpKeys
+  nameWithType: DFKeyboard.AllUpKeys
+  fullName: DotFeather.DFKeyboard.AllUpKeys
 - uid: DotFeather.DFKeyCode
   commentId: T:DotFeather.DFKeyCode
   parent: DotFeather
   name: DFKeyCode
   nameWithType: DFKeyCode
   fullName: DotFeather.DFKeyCode
-- uid: DotFeather.DFKeyboard.Item*
-  commentId: Overload:DotFeather.DFKeyboard.Item
-  name: Item
-  nameWithType: DFKeyboard.Item
-  fullName: DotFeather.DFKeyboard.Item
+- uid: DotFeather.DFKeyboard.KeyOf*
+  commentId: Overload:DotFeather.DFKeyboard.KeyOf
+  name: KeyOf
+  nameWithType: DFKeyboard.KeyOf
+  fullName: DotFeather.DFKeyboard.KeyOf
+- uid: DotFeather.DFKeyboard.GetString*
+  commentId: Overload:DotFeather.DFKeyboard.GetString
+  name: GetString
+  nameWithType: DFKeyboard.GetString
+  fullName: DotFeather.DFKeyboard.GetString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DotFeather.DFKeyboard.GetChar*
+  commentId: Overload:DotFeather.DFKeyboard.GetChar
+  name: GetChar
+  nameWithType: DFKeyboard.GetChar
+  fullName: DotFeather.DFKeyboard.GetChar
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  name: Char
+  nameWithType: Char
+  fullName: System.Char
+- uid: DotFeather.DFKeyboard.HasChar*
+  commentId: Overload:DotFeather.DFKeyboard.HasChar
+  name: HasChar
+  nameWithType: DFKeyboard.HasChar
+  fullName: DotFeather.DFKeyboard.HasChar
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

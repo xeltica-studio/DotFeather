@@ -25,7 +25,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した条件が満たされている間、待機し続けるイールド命令です。\n"
+  summary: "\nA yield instruction that keeps waiting while the specified condition is met.\n"
   example: []
   syntax:
     content: 'public class WaitWhile : YieldInstruction'

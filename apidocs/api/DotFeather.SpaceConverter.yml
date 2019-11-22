@@ -5,7 +5,7 @@ items:
   id: SpaceConverter
   parent: DotFeather
   children:
-  - DotFeather.SpaceConverter.ToViewportPoint(OpenTK.Vector2,System.Single,System.Single)
+  - DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
   - DotFeather.SpaceConverter.ToViewportPoint(System.ValueTuple{System.Single,System.Single},System.Single,System.Single)
   langs:
   - csharp
@@ -47,17 +47,17 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: DotFeather.SpaceConverter.ToViewportPoint(OpenTK.Vector2,System.Single,System.Single)
-  commentId: M:DotFeather.SpaceConverter.ToViewportPoint(OpenTK.Vector2,System.Single,System.Single)
-  id: ToViewportPoint(OpenTK.Vector2,System.Single,System.Single)
+- uid: DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
+  commentId: M:DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
+  id: ToViewportPoint(DotFeather.Vector,System.Single,System.Single)
   isExtensionMethod: true
   parent: DotFeather.SpaceConverter
   langs:
   - csharp
   - vb
-  name: ToViewportPoint(Vector2, Single, Single)
-  nameWithType: SpaceConverter.ToViewportPoint(Vector2, Single, Single)
-  fullName: DotFeather.SpaceConverter.ToViewportPoint(OpenTK.Vector2, System.Single, System.Single)
+  name: ToViewportPoint(Vector, Single, Single)
+  nameWithType: SpaceConverter.ToViewportPoint(Vector, Single, Single)
+  fullName: DotFeather.SpaceConverter.ToViewportPoint(DotFeather.Vector, System.Single, System.Single)
   type: Method
   source:
     remote:
@@ -73,20 +73,20 @@ items:
   summary: "\nスクリーン座標をViewport座標に変換します。\n"
   example: []
   syntax:
-    content: public static Vector2 ToViewportPoint(this Vector2 dp, float halfWidth, float halfHeight)
+    content: public static Vector ToViewportPoint(this Vector dp, float halfWidth, float halfHeight)
     parameters:
     - id: dp
-      type: OpenTK.Vector2
+      type: DotFeather.Vector
     - id: halfWidth
       type: System.Single
     - id: halfHeight
       type: System.Single
     return:
-      type: OpenTK.Vector2
+      type: DotFeather.Vector
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function ToViewportPoint(dp As Vector2, halfWidth As Single, halfHeight As Single) As Vector2
+      Public Shared Function ToViewportPoint(dp As Vector, halfWidth As Single, halfHeight As Single) As Vector
   overload: DotFeather.SpaceConverter.ToViewportPoint*
   modifiers.csharp:
   - public
@@ -120,7 +120,7 @@ items:
   summary: "\nスクリーン座標をViewport座標に変換します。\n"
   example: []
   syntax:
-    content: public static (float, float)ToViewportPoint(this(float, float)dp, float halfWidth, float halfHeight)
+    content: public static (float, float) ToViewportPoint(this (float, float) dp, float halfWidth, float halfHeight)
     parameters:
     - id: dp
       type: System.ValueTuple{System.Single,System.Single}
@@ -445,13 +445,12 @@ references:
   name: ToViewportPoint
   nameWithType: SpaceConverter.ToViewportPoint
   fullName: DotFeather.SpaceConverter.ToViewportPoint
-- uid: OpenTK.Vector2
-  commentId: T:OpenTK.Vector2
-  parent: OpenTK
-  isExternal: true
-  name: Vector2
-  nameWithType: Vector2
-  fullName: OpenTK.Vector2
+- uid: DotFeather.Vector
+  commentId: T:DotFeather.Vector
+  parent: DotFeather
+  name: Vector
+  nameWithType: Vector
+  fullName: DotFeather.Vector
 - uid: System.Single
   commentId: T:System.Single
   parent: System
@@ -459,12 +458,6 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: OpenTK
-  commentId: N:OpenTK
-  isExternal: true
-  name: OpenTK
-  nameWithType: OpenTK
-  fullName: OpenTK
 - uid: System.ValueTuple{System.Single,System.Single}
   commentId: T:System.ValueTuple{System.Single,System.Single}
   parent: System

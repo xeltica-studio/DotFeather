@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Class RoutingGameBase&lt;T&gt;
+	 </title>
+		<meta name="viewport" content="width=device-width">
+		<meta name="title" content="Class RoutingGameBase&lt;T&gt;
+	 ">
+		<meta name="generator" content="docfx 2.47.0.0">
+		
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="../styles/docfx.vendor.css">
+		<link rel="stylesheet" href="../styles/docfx.css">
+		<link rel="stylesheet" href="../styles/main.css">
+		<meta property="docfx:navrel" content="../toc.html">
+		<meta property="docfx:tocrel" content="toc.html">
+		
+		
+		
+	</head>
+	<body data-spy="scroll" data-target="#affix" data-offset="120">
+		<div id="wrapper">
+			<header>
+				
+				<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							
+							<a class="navbar-brand" href="../index.html">
+								<img id="logo" class="svg" src="../logo.svg" alt="">
+							</a>
+						</div>
+						<div class="collapse navbar-collapse" id="navbar">
+							<form class="navbar-form navbar-right" role="search" id="search">
+								<div class="form-group">
+									<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+								</div>
+							</form>
+						</div>
+					</div>
+				</nav>
+				
+				<div class="subnav navbar navbar-default">
+					<div class="container hide-when-search" id="breadcrumb">
+						<ul class="breadcrumb">
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<div role="main" class="container body-content hide-when-search">
+				
+				<div class="sidenav hide-when-search">
+					<a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+					<div class="sidetoggle collapse" id="sidetoggle">
+						<div id="sidetoc"></div>
+					</div>
+				</div>
+				<div class="article row grid-right">
+					<div class="col-md-10">
+						<article class="content wrap" id="_content" data-uid="DotFeather.RoutingGameBase`1">
+	
+	
+	<h1 id="DotFeather_RoutingGameBase_1" data-uid="DotFeather.RoutingGameBase`1" class="text-break">Class RoutingGameBase&lt;T&gt;
+	</h1>
+	<div class="markdown level0 summary"></div>
+	<div class="markdown level0 conceptual"></div>
+	<div class="inheritance">
+		<h5>&#35242;&#23376;&#38306;&#20418;</h5>
+		<div class="level0"><span class="xref">System.Object</span></div>
+		<div class="level1"><a class="xref" href="DotFeather.GameBase.html">GameBase</a></div>
+		<div class="level2"><span class="xref">RoutingGameBase&lt;T&gt;</span></div>
+	</div>
+	<div classs="implements">
+		<h5>&#23455;&#35013;</h5>
+		<div><span class="xref">System.IDisposable</span></div>
+	</div>
+	<div class="inheritedMembers">
+		<h5>&#32153;&#25215;&#12373;&#12428;&#12383;&#12513;&#12531;&#12496;&#12540;</h5>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_X">GameBase.X</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Y">GameBase.Y</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Visible">GameBase.Visible</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Width">GameBase.Width</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Height">GameBase.Height</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_IsFocused">GameBase.IsFocused</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_BackgroundColor">GameBase.BackgroundColor</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_RefreshRate">GameBase.RefreshRate</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Title">GameBase.Title</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Root">GameBase.Root</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Dpi">GameBase.Dpi</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_TotalFrame">GameBase.TotalFrame</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_IsCaptureMode">GameBase.IsCaptureMode</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_ForegroundColor">GameBase.ForegroundColor</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_ConsoleCursor">GameBase.ConsoleCursor</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_ConsoleSize">GameBase.ConsoleSize</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_WindowMode">GameBase.WindowMode</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_IsFullScreen">GameBase.IsFullScreen</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Print_System_Object_">GameBase.Print(Object)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Cls">GameBase.Cls()</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Randomize_System_Nullable_System_Int32__">GameBase.Randomize(Nullable&lt;Int32&gt;)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Run">GameBase.Run()</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Exit_System_Int32_">GameBase.Exit(Int32)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Dispose">GameBase.Dispose()</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_TakeScreenshot">GameBase.TakeScreenshot()</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_StartCoroutine_System_Collections_IEnumerator_">GameBase.StartCoroutine(IEnumerator)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_StopCoroutine_DotFeather_Coroutine_">GameBase.StopCoroutine(Coroutine)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_OnUnload_System_Object_System_EventArgs_">GameBase.OnUnload(Object, EventArgs)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_OnFileDrop_System_Object_DotFeather_DFFileDroppedEventArgs_">GameBase.OnFileDrop(Object, DFFileDroppedEventArgs)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_OnResize_System_Object_System_EventArgs_">GameBase.OnResize(Object, EventArgs)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_OnKeyPress_System_Object_DotFeather_DFKeyPressEventArgs_">GameBase.OnKeyPress(Object, DFKeyPressEventArgs)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_OnKeyDown_System_Object_DotFeather_DFKeyEventArgs_">GameBase.OnKeyDown(Object, DFKeyEventArgs)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_OnKeyUp_System_Object_DotFeather_DFKeyEventArgs_">GameBase.OnKeyUp(Object, DFKeyEventArgs)</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Random">GameBase.Random</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Load">GameBase.Load</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Unload">GameBase.Unload</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_FileDrop">GameBase.FileDrop</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Resize">GameBase.Resize</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_KeyDown">GameBase.KeyDown</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_KeyPress">GameBase.KeyPress</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_KeyUp">GameBase.KeyUp</a>
+		</div>
+		<div>
+			<span class="xref">System.Object.Equals(System.Object)</span>
+		</div>
+		<div>
+			<span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+		</div>
+		<div>
+			<span class="xref">System.Object.GetHashCode()</span>
+		</div>
+		<div>
+			<span class="xref">System.Object.GetType()</span>
+		</div>
+		<div>
+			<span class="xref">System.Object.MemberwiseClone()</span>
+		</div>
+		<div>
+			<span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+		</div>
+		<div>
+			<span class="xref">System.Object.ToString()</span>
+		</div>
+	</div>
+	<h6><strong>&#21517;&#21069;&#31354;&#38291;</strong>: <a class="xref" href="DotFeather.html">DotFeather</a></h6>
+	<h6><strong>&#12450;&#12475;&#12531;&#12502;&#12522;</strong>: DotFeather.dll</h6>
+	<h5 id="DotFeather_RoutingGameBase_1_syntax">&#27083;&#25991;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public class RoutingGameBase&lt;T&gt; : GameBase, IDisposable where T : Scene</code></pre>
+	</div>
+	<h5 class="typeParameters">&#22411;&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="parametername">T</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="constructors">&#12467;&#12531;&#12473;&#12488;&#12521;&#12463;&#12479;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_RoutingGameBase_1__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20DotFeather.RoutingGameBase%601.%23ctor(System.Int32%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Router/RoutingGameBase.cs/#L7">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_RoutingGameBase_1__ctor_" data-uid="DotFeather.RoutingGameBase`1.#ctor*"></a>
+	<h4 id="DotFeather_RoutingGameBase_1__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_" data-uid="DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)">RoutingGameBase(Int32, Int32, String, Int32, Boolean)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public RoutingGameBase(int width, int height, string title = &quot;&quot;, int refreshRate = 60, bool isCaptureMode = false)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td><span class="parametername">width</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td><span class="parametername">height</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.String</span></td>
+				<td><span class="parametername">title</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td><span class="parametername">refreshRate</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Boolean</span></td>
+				<td><span class="parametername">isCaptureMode</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="methods">&#12513;&#12477;&#12483;&#12489;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_RoutingGameBase_1_OnLoad_System_Object_System_EventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.RoutingGameBase%601.OnLoad(System.Object%2CSystem.EventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Router/RoutingGameBase.cs/#L12">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_RoutingGameBase_1_OnLoad_" data-uid="DotFeather.RoutingGameBase`1.OnLoad*"></a>
+	<h4 id="DotFeather_RoutingGameBase_1_OnLoad_System_Object_System_EventArgs_" data-uid="DotFeather.RoutingGameBase`1.OnLoad(System.Object,System.EventArgs)">OnLoad(Object, EventArgs)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">protected override void OnLoad(object sender, EventArgs e)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Object</span></td>
+				<td><span class="parametername">sender</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.EventArgs</span></td>
+				<td><span class="parametername">e</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="overrides">&#12458;&#12540;&#12496;&#12540;&#12521;&#12452;&#12489;</h5>
+	<div><a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_OnLoad_System_Object_System_EventArgs_">GameBase.OnLoad(Object, EventArgs)</a></div>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_RoutingGameBase_1_OnUpdate_System_Object_DotFeather_DFEventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.RoutingGameBase%601.OnUpdate(System.Object%2CDotFeather.DFEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Router/RoutingGameBase.cs/#L18">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_RoutingGameBase_1_OnUpdate_" data-uid="DotFeather.RoutingGameBase`1.OnUpdate*"></a>
+	<h4 id="DotFeather_RoutingGameBase_1_OnUpdate_System_Object_DotFeather_DFEventArgs_" data-uid="DotFeather.RoutingGameBase`1.OnUpdate(System.Object,DotFeather.DFEventArgs)">OnUpdate(Object, DFEventArgs)</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">protected override void OnUpdate(object sender, DFEventArgs e)</code></pre>
+	</div>
+	<h5 class="parameters">&#24341;&#25968;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#21517;&#21069;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Object</span></td>
+				<td><span class="parametername">sender</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a class="xref" href="DotFeather.DFEventArgs.html">DFEventArgs</a></td>
+				<td><span class="parametername">e</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h5 class="overrides">&#12458;&#12540;&#12496;&#12540;&#12521;&#12452;&#12489;</h5>
+	<div><a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_OnUpdate_System_Object_DotFeather_DFEventArgs_">GameBase.OnUpdate(Object, DFEventArgs)</a></div>
+	<h3 id="events">&#12452;&#12505;&#12531;&#12488;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_RoutingGameBase_1_Update.md&amp;value=---%0Auid%3A%20DotFeather.RoutingGameBase%601.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Router/RoutingGameBase.cs/#L25">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<h4 id="DotFeather_RoutingGameBase_1_Update" data-uid="DotFeather.RoutingGameBase`1.Update">Update</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public event EventHandler&lt;DFEventArgs&gt; Update</code></pre>
+	</div>
+	<h5 class="eventType">&#12452;&#12505;&#12531;&#12488;&#24418;&#24335;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="DotFeather.DFEventArgs.html">DFEventArgs</a>&gt;</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3 id="implements">&#23455;&#35013;</h3>
+	<div>
+			<span class="xref">System.IDisposable</span>
+	</div>
+</article>
+					</div>
+					
+					<div class="hidden-sm col-md-2" role="complementary">
+						<div class="sideaffix">
+							<div class="contribution">
+								<ul class="nav">
+									<li>
+										<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_RoutingGameBase_1.md&amp;value=---%0Auid%3A%20DotFeather.RoutingGameBase%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+									</li>
+									<li>
+										<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Router/RoutingGameBase.cs/#L5" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+									</li>
+								</ul>
+							</div>
+							<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+							<!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<footer>
+				<div class="grad-bottom"></div>
+				<div class="footer">
+					<div class="container">
+						<span class="pull-right">
+							<a href="#top">Back to top</a>
+						</span>
+						
+						<span>Generated by <strong>DocFX</strong></span>
+					</div>
+				</div>
+			</footer>
+		</div>
+		
+		<script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+		<script type="text/javascript" src="../styles/docfx.js"></script>
+		<script type="text/javascript" src="../styles/main.js"></script>
+	</body>
+</html>

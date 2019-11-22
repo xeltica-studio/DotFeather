@@ -6,8 +6,6 @@ items:
   parent: DotFeather
   children:
   - DotFeather.Sprite.#ctor(DotFeather.Texture2D)
-  - DotFeather.Sprite.#ctor(DotFeather.Texture2D,DotFeather.Vector,System.Single,DotFeather.Vector,System.Int32,System.String)
-  - DotFeather.Sprite.#ctor(DotFeather.Texture2D,System.Int32,System.Int32,System.Single,DotFeather.Vector)
   - DotFeather.Sprite.Destroy
   - DotFeather.Sprite.LoadFrom(System.IO.Stream)
   - DotFeather.Sprite.LoadFrom(System.String)
@@ -30,7 +28,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nテクスチャを描画する <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> オブジェクトです。\n"
+  summary: "\nA <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> object to draw a texture.\n"
   example: []
   syntax:
     content: 'public class Sprite : TextureDrawableBase, IDrawable'
@@ -41,6 +39,8 @@ items:
   inheritance:
   - System.Object
   - DotFeather.TextureDrawableBase
+  derivedClasses:
+  - DotFeather.AnimatingSprite
   implements:
   - DotFeather.IDrawable
   inheritedMembers:
@@ -66,51 +66,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: DotFeather.Sprite.#ctor(DotFeather.Texture2D,DotFeather.Vector,System.Single,DotFeather.Vector,System.Int32,System.String)
-  commentId: M:DotFeather.Sprite.#ctor(DotFeather.Texture2D,DotFeather.Vector,System.Single,DotFeather.Vector,System.Int32,System.String)
-  id: '#ctor(DotFeather.Texture2D,DotFeather.Vector,System.Single,DotFeather.Vector,System.Int32,System.String)'
-  parent: DotFeather.Sprite
-  langs:
-  - csharp
-  - vb
-  name: Sprite(Texture2D, Vector, Single, Vector, Int32, String)
-  nameWithType: Sprite.Sprite(Texture2D, Vector, Single, Vector, Int32, String)
-  fullName: DotFeather.Sprite.Sprite(DotFeather.Texture2D, DotFeather.Vector, System.Single, DotFeather.Vector, System.Int32, System.String)
-  type: Constructor
-  source:
-    remote:
-      path: DotFeather/Graphics/Sprite.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: .ctor
-    path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 16
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> クラスの新しいインスタンスを初期化します。\n"
-  example: []
-  syntax:
-    content: public Sprite(Texture2D texture, Vector location, float angle, Vector scale, int zOrder, string name)
-    parameters:
-    - id: texture
-      type: DotFeather.Texture2D
-    - id: location
-      type: DotFeather.Vector
-    - id: angle
-      type: System.Single
-    - id: scale
-      type: DotFeather.Vector
-    - id: zOrder
-      type: System.Int32
-    - id: name
-      type: System.String
-    content.vb: Public Sub New(texture As Texture2D, location As Vector, angle As Single, scale As Vector, zOrder As Integer, name As String)
-  overload: DotFeather.Sprite.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: DotFeather.Sprite.Texture
   commentId: P:DotFeather.Sprite.Texture
   id: Texture
@@ -129,72 +84,23 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Texture
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 30
+    startLine: 15
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> が描画するテクスチャを取得または設定します。\n"
+  summary: "\nGet or set a texture drawn by this <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public Texture2D Texture { get; set; }
     parameters: []
     return:
       type: DotFeather.Texture2D
-      description: ''
     content.vb: Public Property Texture As Texture2D
   overload: DotFeather.Sprite.Texture*
   modifiers.csharp:
   - public
   - get
   - set
-  modifiers.vb:
-  - Public
-- uid: DotFeather.Sprite.#ctor(DotFeather.Texture2D,System.Int32,System.Int32,System.Single,DotFeather.Vector)
-  commentId: M:DotFeather.Sprite.#ctor(DotFeather.Texture2D,System.Int32,System.Int32,System.Single,DotFeather.Vector)
-  id: '#ctor(DotFeather.Texture2D,System.Int32,System.Int32,System.Single,DotFeather.Vector)'
-  parent: DotFeather.Sprite
-  langs:
-  - csharp
-  - vb
-  name: Sprite(Texture2D, Int32, Int32, Single, Vector)
-  nameWithType: Sprite.Sprite(Texture2D, Int32, Int32, Single, Vector)
-  fullName: DotFeather.Sprite.Sprite(DotFeather.Texture2D, System.Int32, System.Int32, System.Single, DotFeather.Vector)
-  type: Constructor
-  source:
-    remote:
-      path: DotFeather/Graphics/Sprite.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: .ctor
-    path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 44
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> クラスの新しいインスタンスを初期化します。\n"
-  example: []
-  syntax:
-    content: public Sprite(Texture2D texture, int x, int y, float angle = 0F, Vector scale = default(Vector))
-    parameters:
-    - id: texture
-      type: DotFeather.Texture2D
-      description: この <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref> が使用するテクスチャ。
-    - id: x
-      type: System.Int32
-      description: 初期位置 X。
-    - id: y
-      type: System.Int32
-      description: 初期位置 Y。
-    - id: angle
-      type: System.Single
-      description: 初期角度。
-    - id: scale
-      type: DotFeather.Vector
-      description: 初期スケール
-    content.vb: Public Sub New(texture As Texture2D, x As Integer, y As Integer, angle As Single = 0F, scale As Vector = Nothing)
-  overload: DotFeather.Sprite.#ctor*
-  modifiers.csharp:
-  - public
   modifiers.vb:
   - Public
 - uid: DotFeather.Sprite.#ctor(DotFeather.Texture2D)
@@ -215,18 +121,18 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 56
+    startLine: 25
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> クラスの新しいインスタンスを初期化します。\n"
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
     content: public Sprite(Texture2D texture)
     parameters:
     - id: texture
       type: DotFeather.Texture2D
-      description: この <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref> が使用するテクスチャ。
+      description: A texture for this <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref>.
     content.vb: Public Sub New(texture As Texture2D)
   overload: DotFeather.Sprite.#ctor*
   modifiers.csharp:
@@ -251,21 +157,21 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 68
+    startLine: 37
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した画像ファイルから <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> を生成します。\n"
+  summary: "\nGenerate a <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> from the specified image file.\n"
   example: []
   syntax:
     content: public static Sprite LoadFrom(string path)
     parameters:
     - id: path
       type: System.String
-      description: ファイルパス。
+      description: File path.
     return:
       type: DotFeather.Sprite
-      description: 生成された <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref>。
+      description: Generated <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref>。
     content.vb: Public Shared Function LoadFrom(path As String) As Sprite
   overload: DotFeather.Sprite.LoadFrom*
   modifiers.csharp:
@@ -292,21 +198,21 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 75
+    startLine: 44
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した画像ファイルから <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> を生成します。\n"
+  summary: "\nGenerate a <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> from the specified image file.\n"
   example: []
   syntax:
     content: public static Sprite LoadFrom(Stream stream)
     parameters:
     - id: stream
       type: System.IO.Stream
-      description: ファイルを示すストリーム。
+      description: File stream.
     return:
       type: DotFeather.Sprite
-      description: 生成された <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref>。
+      description: Generated <xref href="DotFeather.Sprite" data-throw-if-not-resolved="false"></xref>。
     content.vb: Public Shared Function LoadFrom(stream As Stream) As Sprite
   overload: DotFeather.Sprite.LoadFrom*
   modifiers.csharp:
@@ -333,11 +239,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Sprite.cs
-    startLine: 80
+    startLine: 49
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref> を破棄します。\n"
+  summary: "\nDispose this <xref href=\"DotFeather.Sprite\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override void Destroy()
@@ -764,37 +670,27 @@ references:
   name: Sprite
   nameWithType: Sprite
   fullName: DotFeather.Sprite
-- uid: DotFeather.Sprite.#ctor*
-  commentId: Overload:DotFeather.Sprite.#ctor
-  name: Sprite
-  nameWithType: Sprite.Sprite
-  fullName: DotFeather.Sprite.Sprite
+- uid: DotFeather.Sprite.Texture*
+  commentId: Overload:DotFeather.Sprite.Texture
+  name: Texture
+  nameWithType: Sprite.Texture
+  fullName: DotFeather.Sprite.Texture
 - uid: DotFeather.Texture2D
   commentId: T:DotFeather.Texture2D
   parent: DotFeather
   name: Texture2D
   nameWithType: Texture2D
   fullName: DotFeather.Texture2D
-- uid: DotFeather.Vector
-  commentId: T:DotFeather.Vector
-  parent: DotFeather
-  name: Vector
-  nameWithType: Vector
-  fullName: DotFeather.Vector
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  name: Single
-  nameWithType: Single
-  fullName: System.Single
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
+- uid: DotFeather.Sprite.#ctor*
+  commentId: Overload:DotFeather.Sprite.#ctor
+  name: Sprite
+  nameWithType: Sprite.Sprite
+  fullName: DotFeather.Sprite.Sprite
+- uid: DotFeather.Sprite.LoadFrom*
+  commentId: Overload:DotFeather.Sprite.LoadFrom
+  name: LoadFrom
+  nameWithType: Sprite.LoadFrom
+  fullName: DotFeather.Sprite.LoadFrom
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -802,16 +698,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: DotFeather.Sprite.Texture*
-  commentId: Overload:DotFeather.Sprite.Texture
-  name: Texture
-  nameWithType: Sprite.Texture
-  fullName: DotFeather.Sprite.Texture
-- uid: DotFeather.Sprite.LoadFrom*
-  commentId: Overload:DotFeather.Sprite.LoadFrom
-  name: LoadFrom
-  nameWithType: Sprite.LoadFrom
-  fullName: DotFeather.Sprite.LoadFrom
 - uid: System.IO.Stream
   commentId: T:System.IO.Stream
   parent: System.IO

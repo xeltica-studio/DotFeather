@@ -26,7 +26,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nDotFeather Window のモードを列挙します。\n"
+  summary: "\nEnumerates modes of the DotFeather Window.\n"
   example: []
   syntax:
     content: public enum WindowMode
@@ -59,7 +59,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: リサイズ可能。
+  summary: Resizable.
   example: []
   syntax:
     content: Resizable = 0
@@ -93,7 +93,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: サイズ固定。
+  summary: Fixed size.
   example: []
   syntax:
     content: Fixed = 1
@@ -127,7 +127,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: フレーム無し。
+  summary: No window frame.
   example: []
   syntax:
     content: NoFrame = 2

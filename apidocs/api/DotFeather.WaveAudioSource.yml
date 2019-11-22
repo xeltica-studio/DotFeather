@@ -29,7 +29,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nWave ファイルフォーマットを表現するオーディオソースです。\n"
+  summary: "\nAn audio source that represents the Wave file format.\n"
   example: []
   syntax:
     content: 'public class WaveAudioSource : IAudioSource'
@@ -76,7 +76,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n合計サンプル数を取得または設定します。\n"
+  summary: "\nGet the total number of samples.\n"
   example: []
   syntax:
     content: public int? Samples { get; }
@@ -115,7 +115,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nチャンネル数を取得または設定します。\n"
+  summary: "\nGet channels.\n"
   example: []
   syntax:
     content: public int Channels { get; }
@@ -154,7 +154,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n量子化ビット数を取得または設定します。\n"
+  summary: "\nGet sampling bits.\n"
   example: []
   syntax:
     content: public int Bits { get; }
@@ -193,7 +193,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nサンプリング周波数を取得または設定します。\n"
+  summary: "\nGet sampling rate.\n"
   example: []
   syntax:
     content: public int SampleRate { get; }
@@ -232,7 +232,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nパスを指定して、 <xref href=\"DotFeather.WaveAudioSource\" data-throw-if-not-resolved=\"false\"></xref> クラスの新しいインスタンスを初期化します。\n"
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.WaveAudioSource\" data-throw-if-not-resolved=\"false\"></xref> class with specified file path.\n"
   example: []
   syntax:
     content: public WaveAudioSource(string path)
@@ -264,21 +264,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: EnumerateSamples
     path: ../DotFeather/Audio/WaveAudioSource.cs
-    startLine: 45
+    startLine: 40
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nサンプルを列挙します。\n"
-  example: []
   syntax:
     content: public IEnumerable<(short left, short right)> EnumerateSamples(int? loopStart)
     parameters:
     - id: loopStart
       type: System.Nullable{System.Int32}
-      description: ループ開始位置。ループしない場合は <code>null</code> 。
     return:
       type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int16,System.Int16}}
-      description: サンプルのイテレーター。
     content.vb: Public Function EnumerateSamples(loopStart As Integer?) As IEnumerable(Of(left As Short, right As Short))
   overload: DotFeather.WaveAudioSource.EnumerateSamples*
   implements:

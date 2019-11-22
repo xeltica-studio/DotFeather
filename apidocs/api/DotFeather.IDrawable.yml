@@ -30,7 +30,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n描画処理を行うクラスはすべてこのインターフェイスを実装します。\n"
+  summary: "\nAll classes that drawing something implement this interface.\n"
   example: []
   syntax:
     content: public interface IDrawable
@@ -63,7 +63,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n画面への描画を開始します。\n"
+  summary: "\nStart drawing on the screen.\n"
   example: []
   syntax:
     content: void Draw(GameBase game, Vector location)
@@ -98,7 +98,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> の描画優先順位を取得または設定します。数値が低いほど奥に描画されます。\n"
+  summary: "\nGet or set z order of this <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref>. The higher the value, the object will be drawn in the foreground.\n"
   example: []
   syntax:
     content: int ZOrder { get; set; }
@@ -132,7 +132,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> の名前を取得または設定します。\n"
+  summary: "\nGet or set name of this <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: string Name { get; set; }
@@ -166,7 +166,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> の座標を取得または設定します。\n"
+  summary: "\nGet or set location of this <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: Vector Location { get; set; }
@@ -200,7 +200,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> の角度を取得または設定します。\n"
+  summary: "\nGet or set angle of this <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: float Angle { get; set; }
@@ -234,7 +234,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> のスケーリングを取得または設定します。\n"
+  summary: "\nGet or set scaling amount of this <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: Vector Scale { get; set; }
@@ -268,7 +268,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> を完全に破棄します。\n"
+  summary: "\nDestroy this <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: void Destroy()

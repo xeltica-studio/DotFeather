@@ -5,7 +5,7 @@ items:
   id: GLContext
   parent: DotFeather
   children:
-  - DotFeather.GLContext.#ctor(OpenTK.Graphics.OpenGL.PrimitiveType)
+  - DotFeather.GLContext.#ctor(PrimitiveType)
   - DotFeather.GLContext.Dispose
   langs:
   - csharp
@@ -25,7 +25,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"OpenTK.Graphics.OpenGL.GL.Begin(OpenTK.Graphics.OpenGL.PrimitiveType)\" data-throw-if-not-resolved=\"false\"></xref> および <xref href=\"OpenTK.Graphics.OpenGL.GL.End\" data-throw-if-not-resolved=\"false\"></xref> を <code>using</code> 句で扱えるようにしたクラスです。このクラスは継承できません。\n"
+  summary: "\n<see cref=\"!:GL.Begin(PrimitiveType)\"></see> および <see cref=\"!:GL.End()\"></see> を <code>using</code> 句で扱えるようにしたクラスです。このクラスは継承できません。\n"
   example: []
   syntax:
     content: 'public sealed class GLContext : IDisposable'
@@ -52,16 +52,16 @@ items:
   - Public
   - NotInheritable
   - Class
-- uid: DotFeather.GLContext.#ctor(OpenTK.Graphics.OpenGL.PrimitiveType)
-  commentId: M:DotFeather.GLContext.#ctor(OpenTK.Graphics.OpenGL.PrimitiveType)
-  id: '#ctor(OpenTK.Graphics.OpenGL.PrimitiveType)'
+- uid: DotFeather.GLContext.#ctor(PrimitiveType)
+  commentId: M:DotFeather.GLContext.#ctor(PrimitiveType)
+  id: '#ctor(PrimitiveType)'
   parent: DotFeather.GLContext
   langs:
   - csharp
   - vb
   name: GLContext(PrimitiveType)
   nameWithType: GLContext.GLContext(PrimitiveType)
-  fullName: DotFeather.GLContext.GLContext(OpenTK.Graphics.OpenGL.PrimitiveType)
+  fullName: DotFeather.GLContext.GLContext(PrimitiveType)
   type: Constructor
   source:
     remote:
@@ -80,7 +80,7 @@ items:
     content: public GLContext(PrimitiveType p)
     parameters:
     - id: p
-      type: OpenTK.Graphics.OpenGL.PrimitiveType
+      type: PrimitiveType
       description: ''
     content.vb: Public Sub New(p As PrimitiveType)
   overload: DotFeather.GLContext.#ctor*
@@ -123,12 +123,6 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: OpenTK.Graphics.OpenGL.GL.Begin(OpenTK.Graphics.OpenGL.PrimitiveType)
-  commentId: M:OpenTK.Graphics.OpenGL.GL.Begin(OpenTK.Graphics.OpenGL.PrimitiveType)
-  isExternal: true
-- uid: OpenTK.Graphics.OpenGL.GL.End
-  commentId: M:OpenTK.Graphics.OpenGL.GL.End
-  isExternal: true
 - uid: DotFeather
   commentId: N:DotFeather
   name: DotFeather
@@ -443,19 +437,12 @@ references:
   name: GLContext
   nameWithType: GLContext.GLContext
   fullName: DotFeather.GLContext.GLContext
-- uid: OpenTK.Graphics.OpenGL.PrimitiveType
-  commentId: T:OpenTK.Graphics.OpenGL.PrimitiveType
-  parent: OpenTK.Graphics.OpenGL
+- uid: PrimitiveType
+  commentId: '!:PrimitiveType'
   isExternal: true
   name: PrimitiveType
   nameWithType: PrimitiveType
-  fullName: OpenTK.Graphics.OpenGL.PrimitiveType
-- uid: OpenTK.Graphics.OpenGL
-  commentId: N:OpenTK.Graphics.OpenGL
-  isExternal: true
-  name: OpenTK.Graphics.OpenGL
-  nameWithType: OpenTK.Graphics.OpenGL
-  fullName: OpenTK.Graphics.OpenGL
+  fullName: PrimitiveType
 - uid: DotFeather.GLContext.Dispose*
   commentId: Overload:DotFeather.GLContext.Dispose
   name: Dispose

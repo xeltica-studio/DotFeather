@@ -29,7 +29,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nコルーチンを表します。\n"
+  summary: "\nCoroutine class.\n"
   example: []
   syntax:
     content: 'public class Coroutine : YieldInstruction'
@@ -75,7 +75,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nコルーチンが実行中であるかどうかを取得します。\n"
+  summary: "\nGet whether the coroutine is running.\n"
   example: []
   syntax:
     content: public bool IsRunning { get; }
@@ -150,7 +150,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n終了後に実行するコールバックを取得します。\n"
+  summary: "\nGet the callback to execute after exiting.\n"
   example: []
   syntax:
     content: public Action<object> ThenAction { get; }
@@ -187,7 +187,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nハンドルされていない例外が発生した時に実行するコールバックを取得します。\n"
+  summary: "\nGet the callback that executes when an unhandled exception occurs.\n"
   example: []
   syntax:
     content: public Action<Exception> ErrorAction { get; }
@@ -220,18 +220,18 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Then
     path: ../DotFeather/Coroutines/Coroutine.cs
-    startLine: 37
+    startLine: 47
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nコルーチン終了後のコールバックを設定します。\n"
+  summary: "\nSet the callback after the coroutine ends.\n"
   example: []
   syntax:
     content: public Coroutine Then(Action<object> callback)
     parameters:
     - id: callback
       type: System.Action{System.Object}
-      description: コールバック。引数は最後に <code>yield return</code> した値が入ります。
+      description: Callback. The argument is the last <code>yield return</code>ed value of the coroutine.
     return:
       type: DotFeather.Coroutine
       description: ''
@@ -262,17 +262,21 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Error
     path: ../DotFeather/Coroutines/Coroutine.cs
-    startLine: 43
+    startLine: 59
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\nSet the callback when the coroutine throws an exception\n"
+  example: []
   syntax:
     content: public Coroutine Error(Action<Exception> callback)
     parameters:
     - id: callback
       type: System.Action{System.Exception}
+      description: Callback.
     return:
       type: DotFeather.Coroutine
+      description: ''
     content.vb: Public Function Error(callback As Action(Of Exception)) As Coroutine
   overload: DotFeather.Coroutine.Error*
   nameWithType.vb: Coroutine.Error(Action(Of Exception))

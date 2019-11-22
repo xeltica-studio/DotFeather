@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="title" content="Class Coroutine
 	 ">
-		<meta name="generator" content="docfx 2.44.0.0">
+		<meta name="generator" content="docfx 2.47.0.0">
 		
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
 	
 	<h1 id="DotFeather_Coroutine" data-uid="DotFeather.Coroutine" class="text-break">Class Coroutine
 	</h1>
-	<div class="markdown level0 summary"><p>コルーチンを表します。</p>
+	<div class="markdown level0 summary"><p>Coroutine class.</p>
 </div>
 	<div class="markdown level0 conceptual"></div>
 	<div class="inheritance">
@@ -123,7 +123,7 @@
 	</span>
 	<a id="DotFeather_Coroutine_ErrorAction_" data-uid="DotFeather.Coroutine.ErrorAction*"></a>
 	<h4 id="DotFeather_Coroutine_ErrorAction" data-uid="DotFeather.Coroutine.ErrorAction">ErrorAction</h4>
-	<div class="markdown level1 summary"><p>ハンドルされていない例外が発生した時に実行するコールバックを取得します。</p>
+	<div class="markdown level1 summary"><p>Get the callback that executes when an unhandled exception occurs.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -154,7 +154,7 @@
 	</span>
 	<a id="DotFeather_Coroutine_IsRunning_" data-uid="DotFeather.Coroutine.IsRunning*"></a>
 	<h4 id="DotFeather_Coroutine_IsRunning" data-uid="DotFeather.Coroutine.IsRunning">IsRunning</h4>
-	<div class="markdown level1 summary"><p>コルーチンが実行中であるかどうかを取得します。</p>
+	<div class="markdown level1 summary"><p>Get whether the coroutine is running.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -217,7 +217,7 @@
 	</span>
 	<a id="DotFeather_Coroutine_ThenAction_" data-uid="DotFeather.Coroutine.ThenAction*"></a>
 	<h4 id="DotFeather_Coroutine_ThenAction" data-uid="DotFeather.Coroutine.ThenAction">ThenAction</h4>
-	<div class="markdown level1 summary"><p>終了後に実行するコールバックを取得します。</p>
+	<div class="markdown level1 summary"><p>Get the callback to execute after exiting.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -246,11 +246,12 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Coroutine_Error_System_Action_System_Exception__.md&amp;value=---%0Auid%3A%20DotFeather.Coroutine.Error(System.Action%7BSystem.Exception%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Coroutines/Coroutine.cs/#L44">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Coroutines/Coroutine.cs/#L60">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Coroutine_Error_" data-uid="DotFeather.Coroutine.Error*"></a>
 	<h4 id="DotFeather_Coroutine_Error_System_Action_System_Exception__" data-uid="DotFeather.Coroutine.Error(System.Action{System.Exception})">Error(Action&lt;Exception&gt;)</h4>
-	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 summary"><p>Set the callback when the coroutine throws an exception</p>
+</div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
 	<div class="codewrapper">
@@ -269,7 +270,8 @@
 			<tr>
 				<td><span class="xref">System.Action</span>&lt;<span class="xref">System.Exception</span>&gt;</td>
 				<td><span class="parametername">callback</span></td>
-				<td></td>
+				<td><p>Callback.</p>
+</td>
 			</tr>
 		</tbody>
 	</table>
@@ -293,11 +295,11 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Coroutine_Then_System_Action_System_Object__.md&amp;value=---%0Auid%3A%20DotFeather.Coroutine.Then(System.Action%7BSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Coroutines/Coroutine.cs/#L38">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Coroutines/Coroutine.cs/#L48">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Coroutine_Then_" data-uid="DotFeather.Coroutine.Then*"></a>
 	<h4 id="DotFeather_Coroutine_Then_System_Action_System_Object__" data-uid="DotFeather.Coroutine.Then(System.Action{System.Object})">Then(Action&lt;Object&gt;)</h4>
-	<div class="markdown level1 summary"><p>コルーチン終了後のコールバックを設定します。</p>
+	<div class="markdown level1 summary"><p>Set the callback after the coroutine ends.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -317,7 +319,7 @@
 			<tr>
 				<td><span class="xref">System.Action</span>&lt;<span class="xref">System.Object</span>&gt;</td>
 				<td><span class="parametername">callback</span></td>
-				<td><p>コールバック。引数は最後に <code>yield return</code> した値が入ります。</p>
+				<td><p>Callback. The argument is the last <code>yield return</code>ed value of the coroutine.</p>
 </td>
 			</tr>
 		</tbody>

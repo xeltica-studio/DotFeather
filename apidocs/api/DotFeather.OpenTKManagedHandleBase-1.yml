@@ -277,7 +277,7 @@ items:
     content: public static implicit operator T(OpenTKManagedHandleBase<T> handle)
     parameters:
     - id: handle
-      type: DotFeather.OpenTKManagedHandleBase`1
+      type: DotFeather.OpenTKManagedHandleBase{{T}}
     return:
       type: '{T}'
     content.vb: Public Shared Widening Operator CType(handle As OpenTKManagedHandleBase(Of T)) As T
@@ -321,7 +321,7 @@ items:
     - id: handle
       type: '{T}'
     return:
-      type: DotFeather.OpenTKManagedHandleBase`1
+      type: DotFeather.OpenTKManagedHandleBase{{T}}
     content.vb: Public Shared Widening Operator CType(handle As T) As OpenTKManagedHandleBase(Of T)
   overload: DotFeather.OpenTKManagedHandleBase`1.op_Implicit*
   nameWithType.vb: OpenTKManagedHandleBase(Of T).Widening(T to OpenTKManagedHandleBase(Of T))
@@ -700,7 +700,6 @@ references:
   fullName.vb: DotFeather.OpenTKManagedHandleBase(Of T).DisposeHandle
 - uid: DotFeather.OpenTKManagedHandleBase`1
   commentId: T:DotFeather.OpenTKManagedHandleBase`1
-  parent: DotFeather
   name: OpenTKManagedHandleBase<T>
   nameWithType: OpenTKManagedHandleBase<T>
   fullName: DotFeather.OpenTKManagedHandleBase<T>
@@ -788,3 +787,41 @@ references:
   nameWithType.vb: OpenTKManagedHandleBase(Of T).Widening
   fullName.vb: DotFeather.OpenTKManagedHandleBase(Of T).Widening
   name.vb: Widening
+- uid: DotFeather.OpenTKManagedHandleBase{{T}}
+  commentId: T:DotFeather.OpenTKManagedHandleBase{`0}
+  parent: DotFeather
+  definition: DotFeather.OpenTKManagedHandleBase`1
+  name: OpenTKManagedHandleBase<T>
+  nameWithType: OpenTKManagedHandleBase<T>
+  fullName: DotFeather.OpenTKManagedHandleBase<T>
+  nameWithType.vb: OpenTKManagedHandleBase(Of T)
+  fullName.vb: DotFeather.OpenTKManagedHandleBase(Of T)
+  name.vb: OpenTKManagedHandleBase(Of T)
+  spec.csharp:
+  - uid: DotFeather.OpenTKManagedHandleBase`1
+    name: OpenTKManagedHandleBase
+    nameWithType: OpenTKManagedHandleBase
+    fullName: DotFeather.OpenTKManagedHandleBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DotFeather.OpenTKManagedHandleBase`1
+    name: OpenTKManagedHandleBase
+    nameWithType: OpenTKManagedHandleBase
+    fullName: DotFeather.OpenTKManagedHandleBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

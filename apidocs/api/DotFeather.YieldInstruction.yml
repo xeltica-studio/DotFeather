@@ -24,7 +24,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nコルーチンの待機を制御する、イールド命令を表す抽象クラスです。\n"
+  summary: "\nA base yield instructions class that control coroutine waits.\n"
   example: []
   syntax:
     content: public abstract class YieldInstruction
@@ -75,7 +75,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n待機中であるかどうかを取得します。\n"
+  summary: "\nGet whether it is waiting.\n"
   example: []
   syntax:
     content: public abstract bool KeepWaiting { get; }

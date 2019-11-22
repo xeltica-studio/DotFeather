@@ -5,6 +5,8 @@ items:
   id: DFKey
   parent: DotFeather
   children:
+  - DotFeather.DFKey.ElapsedFrameCount
+  - DotFeather.DFKey.ElapsedTime
   - DotFeather.DFKey.IsKeyDown
   - DotFeather.DFKey.IsKeyUp
   - DotFeather.DFKey.IsPressed
@@ -27,7 +29,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーボードのキーを表します。\n"
+  summary: "\nRepresents a keyboard key.\n"
   example: []
   syntax:
     content: public class DFKey
@@ -66,20 +68,95 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsPressed
     path: ../DotFeather/InputSystems/DFKey.cs
-    startLine: 15
+    startLine: 14
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーが押されているかどうかを示す値を取得します。\n"
+  summary: "\nGets a value that indicates whether the key is pressed.\n"
   example: []
   syntax:
     content: public bool IsPressed { get; }
     parameters: []
     return:
       type: System.Boolean
-      description: <code>true</code> であれば押されています。<code>false</code> であれば押されていません。
     content.vb: Public ReadOnly Property IsPressed As Boolean
   overload: DotFeather.DFKey.IsPressed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotFeather.DFKey.ElapsedFrameCount
+  commentId: P:DotFeather.DFKey.ElapsedFrameCount
+  id: ElapsedFrameCount
+  parent: DotFeather.DFKey
+  langs:
+  - csharp
+  - vb
+  name: ElapsedFrameCount
+  nameWithType: DFKey.ElapsedFrameCount
+  fullName: DotFeather.DFKey.ElapsedFrameCount
+  type: Property
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKey.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ElapsedFrameCount
+    path: ../DotFeather/InputSystems/DFKey.cs
+    startLine: 20
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGets the frame count elapsed since the key was pressed.\n"
+  example: []
+  syntax:
+    content: public int ElapsedFrameCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public ReadOnly Property ElapsedFrameCount As Integer
+  overload: DotFeather.DFKey.ElapsedFrameCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotFeather.DFKey.ElapsedTime
+  commentId: P:DotFeather.DFKey.ElapsedTime
+  id: ElapsedTime
+  parent: DotFeather.DFKey
+  langs:
+  - csharp
+  - vb
+  name: ElapsedTime
+  nameWithType: DFKey.ElapsedTime
+  fullName: DotFeather.DFKey.ElapsedTime
+  type: Property
+  source:
+    remote:
+      path: DotFeather/InputSystems/DFKey.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ElapsedTime
+    path: ../DotFeather/InputSystems/DFKey.cs
+    startLine: 26
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGets the time elapsed since the key was pressed.\n"
+  example: []
+  syntax:
+    content: public float ElapsedTime { get; }
+    parameters: []
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Public ReadOnly Property ElapsedTime As Single
+  overload: DotFeather.DFKey.ElapsedTime*
   modifiers.csharp:
   - public
   - get
@@ -104,18 +181,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsKeyDown
     path: ../DotFeather/InputSystems/DFKey.cs
-    startLine: 21
+    startLine: 31
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーがこのフレームで押されたかどうかを示す値を取得します。\n"
+  summary: "\nGets whether the key was pressed at this frame.\n"
   example: []
   syntax:
     content: public bool IsKeyDown { get; }
     parameters: []
     return:
       type: System.Boolean
-      description: <code>true</code> であればたった今押されました。<code>false</code> であればそうでありません。
     content.vb: Public ReadOnly Property IsKeyDown As Boolean
   overload: DotFeather.DFKey.IsKeyDown*
   modifiers.csharp:
@@ -142,18 +218,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsKeyUp
     path: ../DotFeather/InputSystems/DFKey.cs
-    startLine: 27
+    startLine: 36
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーがこのフレームで離されたかどうかを示す値を取得します。\n"
+  summary: "\nGets whether the key was released at this frame.\n"
   example: []
   syntax:
     content: public bool IsKeyUp { get; }
     parameters: []
     return:
       type: System.Boolean
-      description: <code>true</code> であればたった今離されました。<code>false</code> であればそうでありません。
     content.vb: Public ReadOnly Property IsKeyUp As Boolean
   overload: DotFeather.DFKey.IsKeyUp*
   modifiers.csharp:
@@ -180,12 +255,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: op_Implicit
     path: ../DotFeather/InputSystems/DFKey.cs
-    startLine: 33
+    startLine: 38
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーが押されているかどうかを取得します。\n"
-  example: []
   syntax:
     content: public static implicit operator bool (DFKey key)
     parameters:
@@ -193,7 +266,6 @@ items:
       type: DotFeather.DFKey
     return:
       type: System.Boolean
-      description: <code>true</code> であれば押されています。<code>false</code> であれば押されていません。
     content.vb: Public Shared Widening Operator CType(key As DFKey) As Boolean
   overload: DotFeather.DFKey.op_Implicit*
   nameWithType.vb: DFKey.Widening(DFKey to Boolean)
@@ -515,6 +587,30 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: DotFeather.DFKey.ElapsedFrameCount*
+  commentId: Overload:DotFeather.DFKey.ElapsedFrameCount
+  name: ElapsedFrameCount
+  nameWithType: DFKey.ElapsedFrameCount
+  fullName: DotFeather.DFKey.ElapsedFrameCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: DotFeather.DFKey.ElapsedTime*
+  commentId: Overload:DotFeather.DFKey.ElapsedTime
+  name: ElapsedTime
+  nameWithType: DFKey.ElapsedTime
+  fullName: DotFeather.DFKey.ElapsedTime
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: DotFeather.DFKey.IsKeyDown*
   commentId: Overload:DotFeather.DFKey.IsKeyDown
   name: IsKeyDown

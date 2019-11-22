@@ -30,7 +30,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nOgg Vorbis 形式のデータを表現するオーディオソースです。\n"
+  summary: "\nAn audio source that represents data in Ogg Vorbis format.\n"
   example: []
   syntax:
     content: 'public class VorbisAudioSource : IAudioSource, IDisposable'
@@ -78,7 +78,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n合計サンプル数を取得または設定します。\n"
+  summary: "\nGet the total number of samples.\n"
   example: []
   syntax:
     content: public int? Samples { get; }
@@ -118,7 +118,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nチャンネル数を取得または設定します。\n"
+  summary: "\nGet channels.\n"
   example: []
   syntax:
     content: public int Channels { get; }
@@ -157,7 +157,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n量子化ビット数を取得または設定します。\n"
+  summary: "\nGet sample bits.\n"
   example: []
   syntax:
     content: public int Bits { get; }
@@ -196,7 +196,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nサンプリング周波数を取得または設定します。\n"
+  summary: "\nGet sample rate.\n"
   example: []
   syntax:
     content: public int SampleRate { get; }
@@ -231,18 +231,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Audio/VorbisAudioSource.cs
-    startLine: 36
+    startLine: 35
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nファイル名を指定して、 <xref href=\"DotFeather.VorbisAudioSource\" data-throw-if-not-resolved=\"false\"></xref> クラスの新しいインスタンスを初期化します。\n"
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.VorbisAudioSource\" data-throw-if-not-resolved=\"false\"></xref> class with specified file path.\n"
   example: []
   syntax:
     content: public VorbisAudioSource(string path)
     parameters:
     - id: path
       type: System.String
-      description: ファイルパス。
     content.vb: Public Sub New(path As String)
   overload: DotFeather.VorbisAudioSource.#ctor*
   modifiers.csharp:
@@ -267,21 +266,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: EnumerateSamples
     path: ../DotFeather/Audio/VorbisAudioSource.cs
-    startLine: 46
+    startLine: 40
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nサンプルを列挙します。\n"
-  example: []
   syntax:
     content: public IEnumerable<(short left, short right)> EnumerateSamples(int? loopStart)
     parameters:
     - id: loopStart
       type: System.Nullable{System.Int32}
-      description: ループ開始位置。ループしない場合は <code>null</code> 。
     return:
       type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int16,System.Int16}}
-      description: サンプルのイテレーター。
     content.vb: Public Function EnumerateSamples(loopStart As Integer?) As IEnumerable(Of(left As Short, right As Short))
   overload: DotFeather.VorbisAudioSource.EnumerateSamples*
   implements:
@@ -311,11 +306,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/Audio/VorbisAudioSource.cs
-    startLine: 67
+    startLine: 61
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトを破棄します、\n"
+  summary: "\nDispose this object.\n"
   example: []
   syntax:
     content: public void Dispose()

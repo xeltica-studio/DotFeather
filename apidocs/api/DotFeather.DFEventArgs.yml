@@ -24,7 +24,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nDotFeather の基本的なイベント引数です。\n"
+  summary: "\nA basic event arguments.\n"
   example: []
   syntax:
     content: 'public class DFEventArgs : EventArgs'
@@ -71,15 +71,15 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n前回同じイベントを呼び出されてから経過した時間(秒単位)。\n"
+  summary: "\nGet elapsed time (in seconds) since the same event was called last time.\n"
   example: []
   syntax:
-    content: public double DeltaTime { get; set; }
+    content: public float DeltaTime { get; set; }
     parameters: []
     return:
-      type: System.Double
+      type: System.Single
       description: The delta time.
-    content.vb: Public Property DeltaTime As Double
+    content.vb: Public Property DeltaTime As Single
   overload: DotFeather.DFEventArgs.DeltaTime*
   modifiers.csharp:
   - public
@@ -404,10 +404,10 @@ references:
   name: DeltaTime
   nameWithType: DFEventArgs.DeltaTime
   fullName: DotFeather.DFEventArgs.DeltaTime
-- uid: System.Double
-  commentId: T:System.Double
+- uid: System.Single
+  commentId: T:System.Single
   parent: System
   isExternal: true
-  name: Double
-  nameWithType: Double
-  fullName: System.Double
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

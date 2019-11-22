@@ -14,9 +14,11 @@ items:
   - DotFeather.Container.Destroy
   - DotFeather.Container.Draw(DotFeather.GameBase,DotFeather.Vector)
   - DotFeather.Container.GetEnumerator
+  - DotFeather.Container.Height
   - DotFeather.Container.IndexOf(DotFeather.IDrawable)
   - DotFeather.Container.Insert(System.Int32,DotFeather.IDrawable)
   - DotFeather.Container.IsReadOnly
+  - DotFeather.Container.IsTrimmable
   - DotFeather.Container.Item(System.Int32)
   - DotFeather.Container.Location
   - DotFeather.Container.Name
@@ -26,6 +28,7 @@ items:
   - DotFeather.Container.Scale
   - DotFeather.Container.Sort
   - DotFeather.Container.System#Collections#IEnumerable#GetEnumerator
+  - DotFeather.Container.Width
   - DotFeather.Container.ZOrder
   langs:
   - csharp
@@ -41,7 +44,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Container
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -93,7 +96,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -132,7 +135,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -171,7 +174,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -210,7 +213,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 29
+    startLine: 31
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -249,11 +252,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.Drawable.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> のスケーリングを取得または設定します。\n"
+  summary: "\nGet or set scale of this <xref href=\"DotFeather.Drawable.IDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public Vector Scale { get; set; }
@@ -264,6 +267,117 @@ items:
   overload: DotFeather.Container.Scale*
   implements:
   - DotFeather.IDrawable.Scale
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Container.Width
+  commentId: P:DotFeather.Container.Width
+  id: Width
+  parent: DotFeather.Container
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Container.Width
+  fullName: DotFeather.Container.Width
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/Container.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Width
+    path: ../DotFeather/Graphics/Container.cs
+    startLine: 41
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set width of this <xref href=\"DotFeather.Drawable.IDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int Width { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Width As Integer
+  overload: DotFeather.Container.Width*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Container.Height
+  commentId: P:DotFeather.Container.Height
+  id: Height
+  parent: DotFeather.Container
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Container.Height
+  fullName: DotFeather.Container.Height
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/Container.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Height
+    path: ../DotFeather/Graphics/Container.cs
+    startLine: 46
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set height of this <xref href=\"DotFeather.Drawable.IDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int Height { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Height As Integer
+  overload: DotFeather.Container.Height*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Container.IsTrimmable
+  commentId: P:DotFeather.Container.IsTrimmable
+  id: IsTrimmable
+  parent: DotFeather.Container
+  langs:
+  - csharp
+  - vb
+  name: IsTrimmable
+  nameWithType: Container.IsTrimmable
+  fullName: DotFeather.Container.IsTrimmable
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/Container.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: IsTrimmable
+    path: ../DotFeather/Graphics/Container.cs
+    startLine: 51
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set whether this container is trimmable. If true, this container draws children with trimming within rectangular range of this container.\n"
+  example: []
+  syntax:
+    content: public bool IsTrimmable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsTrimmable As Boolean
+  overload: DotFeather.Container.IsTrimmable*
   modifiers.csharp:
   - public
   - get
@@ -288,7 +402,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 41
+    startLine: 58
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -334,7 +448,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Sort
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 50
+    startLine: 67
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -366,7 +480,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Add
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 57
+    startLine: 77
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -404,7 +518,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Insert
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 67
+    startLine: 89
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -445,7 +559,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 75
+    startLine: 97
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -484,23 +598,25 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 96
+    startLine: 143
   assemblies:
   - DotFeather
   namespace: DotFeather
   syntax:
-    content: public void OnUpdate(GameBase game)
+    content: public virtual void OnUpdate(GameBase game)
     parameters:
     - id: game
       type: DotFeather.GameBase
-    content.vb: Public Sub OnUpdate(game As GameBase)
+    content.vb: Public Overridable Sub OnUpdate(game As GameBase)
   overload: DotFeather.Container.OnUpdate*
   implements:
   - IUpdatable.OnUpdate(DotFeather.GameBase)
   modifiers.csharp:
   - public
+  - virtual
   modifiers.vb:
   - Public
+  - Overridable
 - uid: DotFeather.Container.Destroy
   commentId: M:DotFeather.Container.Destroy
   id: Destroy
@@ -519,7 +635,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 104
+    startLine: 151
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -553,7 +669,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 109
+    startLine: 156
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -589,7 +705,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IndexOf
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 115
+    startLine: 162
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -628,7 +744,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RemoveAt
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 120
+    startLine: 167
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -665,7 +781,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 125
+    startLine: 177
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -699,7 +815,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Contains
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 134
+    startLine: 187
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -738,7 +854,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CopyTo
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 139
+    startLine: 192
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -780,7 +896,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Remove
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 144
+    startLine: 197
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -820,7 +936,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: System.Collections.IEnumerable.GetEnumerator
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 149
+    startLine: 208
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -854,7 +970,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Count
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 154
+    startLine: 213
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -893,7 +1009,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsReadOnly
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 159
+    startLine: 218
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1570,6 +1686,28 @@ references:
   name: Scale
   nameWithType: IDrawable.Scale
   fullName: DotFeather.IDrawable.Scale
+- uid: DotFeather.Container.Width*
+  commentId: Overload:DotFeather.Container.Width
+  name: Width
+  nameWithType: Container.Width
+  fullName: DotFeather.Container.Width
+- uid: DotFeather.Container.Height*
+  commentId: Overload:DotFeather.Container.Height
+  name: Height
+  nameWithType: Container.Height
+  fullName: DotFeather.Container.Height
+- uid: DotFeather.Container.IsTrimmable*
+  commentId: Overload:DotFeather.Container.IsTrimmable
+  name: IsTrimmable
+  nameWithType: Container.IsTrimmable
+  fullName: DotFeather.Container.IsTrimmable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: DotFeather.Container.Item*
   commentId: Overload:DotFeather.Container.Item
   name: Item
@@ -2449,13 +2587,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: System.Collections.Generic.ICollection`1.Contains(`0)
   commentId: M:System.Collections.Generic.ICollection`1.Contains(`0)
   isExternal: true

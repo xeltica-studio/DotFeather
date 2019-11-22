@@ -26,7 +26,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n時間に関係する情報を提供します。\n"
+  summary: "\nProvides time related information.\n"
   example: []
   syntax:
     content: public static class Time
@@ -70,14 +70,14 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nゲームが起動してからの時刻を取得します。\n"
+  summary: "\nGet the time since the game started.\n"
   example: []
   syntax:
-    content: public static double Now { get; }
+    content: public static float Now { get; }
     parameters: []
     return:
-      type: System.Double
-    content.vb: Public Shared ReadOnly Property Now As Double
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property Now As Single
   overload: DotFeather.Time.Now*
   modifiers.csharp:
   - public
@@ -109,14 +109,14 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n前回フレームとの差分時間を取得します。\n"
+  summary: "\nGet the delta time from the previous frame.\n"
   example: []
   syntax:
-    content: public static double DeltaTime { get; }
+    content: public static float DeltaTime { get; }
     parameters: []
     return:
-      type: System.Double
-    content.vb: Public Shared ReadOnly Property DeltaTime As Double
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property DeltaTime As Single
   overload: DotFeather.Time.DeltaTime*
   modifiers.csharp:
   - public
@@ -148,7 +148,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n現在のフレームレートを取得します。\n"
+  summary: "\nGet the current frame rate.\n"
   example: []
   syntax:
     content: public static int Fps { get; }
@@ -468,13 +468,13 @@ references:
   name: Now
   nameWithType: Time.Now
   fullName: DotFeather.Time.Now
-- uid: System.Double
-  commentId: T:System.Double
+- uid: System.Single
+  commentId: T:System.Single
   parent: System
   isExternal: true
-  name: Double
-  nameWithType: Double
-  fullName: System.Double
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
 - uid: DotFeather.Time.DeltaTime*
   commentId: Overload:DotFeather.Time.DeltaTime
   name: DeltaTime

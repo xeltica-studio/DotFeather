@@ -5,7 +5,10 @@ items:
   id: TextDrawable
   parent: DotFeather
   children:
-  - DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})
+  - DotFeather.TextDrawable.#ctor(System.String,DotFeather.Font,System.Nullable{System.Drawing.Color})
+  - DotFeather.TextDrawable.#ctor(System.String,System.Single,DotFeather.FontStyle,System.Nullable{System.Drawing.Color})
+  - DotFeather.TextDrawable.BorderColor
+  - DotFeather.TextDrawable.BorderThickness
   - DotFeather.TextDrawable.Color
   - DotFeather.TextDrawable.Destroy
   - DotFeather.TextDrawable.Font
@@ -26,11 +29,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TextDrawable
     path: ../DotFeather/Graphics/TextDrawable.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nテキストを描画する <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> オブジェクトです。\n"
+  summary: "\nA <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> object to render text.\n"
   example: []
   syntax:
     content: 'public class TextDrawable : TextureDrawableBase, IDrawable'
@@ -84,11 +87,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Text
     path: ../DotFeather/Graphics/TextDrawable.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n描画されるテキストを取得または設定します。\n"
+  summary: "\nGet or set a text to draw.\n"
   example: []
   syntax:
     content: public string Text { get; set; }
@@ -122,17 +125,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Font
     path: ../DotFeather/Graphics/TextDrawable.cs
-    startLine: 33
+    startLine: 37
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n描画に使用するフォントを取得または設定します。\n"
+  summary: "\nGet or set a font to draw.\n"
   example: []
   syntax:
     content: public Font Font { get; set; }
     parameters: []
     return:
-      type: System.Drawing.Font
+      type: DotFeather.Font
       description: ''
     content.vb: Public Property Font As Font
   overload: DotFeather.TextDrawable.Font*
@@ -160,11 +163,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Color
     path: ../DotFeather/Graphics/TextDrawable.cs
-    startLine: 49
+    startLine: 53
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n描画色を取得または設定します。\n"
+  summary: "\nGet and set a color to draw.\n"
   example: []
   syntax:
     content: public override Color? Color { get; set; }
@@ -183,6 +186,80 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: DotFeather.TextDrawable.BorderColor
+  commentId: P:DotFeather.TextDrawable.BorderColor
+  id: BorderColor
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: BorderColor
+  nameWithType: TextDrawable.BorderColor
+  fullName: DotFeather.TextDrawable.BorderColor
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/TextDrawable.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: BorderColor
+    path: ../DotFeather/Graphics/TextDrawable.cs
+    startLine: 68
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set a color of the border.\n"
+  example: []
+  syntax:
+    content: public Color? BorderColor { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Drawing.Color}
+    content.vb: Public Property BorderColor As Color?
+  overload: DotFeather.TextDrawable.BorderColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.TextDrawable.BorderThickness
+  commentId: P:DotFeather.TextDrawable.BorderThickness
+  id: BorderThickness
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: BorderThickness
+  nameWithType: TextDrawable.BorderThickness
+  fullName: DotFeather.TextDrawable.BorderThickness
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/TextDrawable.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: BorderThickness
+    path: ../DotFeather/Graphics/TextDrawable.cs
+    startLine: 83
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set a thickness of the border.\n"
+  example: []
+  syntax:
+    content: public int BorderThickness { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property BorderThickness As Integer
+  overload: DotFeather.TextDrawable.BorderThickness*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: DotFeather.TextDrawable.RenderedTexture
   commentId: P:DotFeather.TextDrawable.RenderedTexture
   id: RenderedTexture
@@ -201,7 +278,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RenderedTexture
     path: ../DotFeather/Graphics/TextDrawable.cs
-    startLine: 64
+    startLine: 98
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -220,16 +297,16 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})
-  commentId: M:DotFeather.TextDrawable.#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})
-  id: '#ctor(System.String,System.Drawing.Font,System.Nullable{System.Drawing.Color})'
+- uid: DotFeather.TextDrawable.#ctor(System.String,DotFeather.Font,System.Nullable{System.Drawing.Color})
+  commentId: M:DotFeather.TextDrawable.#ctor(System.String,DotFeather.Font,System.Nullable{System.Drawing.Color})
+  id: '#ctor(System.String,DotFeather.Font,System.Nullable{System.Drawing.Color})'
   parent: DotFeather.TextDrawable
   langs:
   - csharp
   - vb
   name: TextDrawable(String, Font, Nullable<Color>)
   nameWithType: TextDrawable.TextDrawable(String, Font, Nullable<Color>)
-  fullName: DotFeather.TextDrawable.TextDrawable(System.String, System.Drawing.Font, System.Nullable<System.Drawing.Color>)
+  fullName: DotFeather.TextDrawable.TextDrawable(System.String, DotFeather.Font, System.Nullable<System.Drawing.Color>)
   type: Constructor
   source:
     remote:
@@ -238,33 +315,74 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/TextDrawable.cs
-    startLine: 76
+    startLine: 107
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather.TextDrawable\" data-throw-if-not-resolved=\"false\"></xref> の新しいインスタンスを初期化します。\n"
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.TextDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public TextDrawable(string text, Font font = null, Color? color = default(Color? ))
+    content: public TextDrawable(string text, Font font, Color? color = default(Color? ))
     parameters:
     - id: text
       type: System.String
-      description: ''
     - id: font
-      type: System.Drawing.Font
-      description: ''
+      type: DotFeather.Font
     - id: color
       type: System.Nullable{System.Drawing.Color}
-      description: ''
-    content.vb: Public Sub New(text As String, font As Font = Nothing, color As Color? = Nothing)
+    content.vb: Public Sub New(text As String, font As Font, color As Color? = Nothing)
   overload: DotFeather.TextDrawable.#ctor*
   nameWithType.vb: TextDrawable.TextDrawable(String, Font, Nullable(Of Color))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: DotFeather.TextDrawable.TextDrawable(System.String, System.Drawing.Font, System.Nullable(Of System.Drawing.Color))
+  fullName.vb: DotFeather.TextDrawable.TextDrawable(System.String, DotFeather.Font, System.Nullable(Of System.Drawing.Color))
   name.vb: TextDrawable(String, Font, Nullable(Of Color))
+- uid: DotFeather.TextDrawable.#ctor(System.String,System.Single,DotFeather.FontStyle,System.Nullable{System.Drawing.Color})
+  commentId: M:DotFeather.TextDrawable.#ctor(System.String,System.Single,DotFeather.FontStyle,System.Nullable{System.Drawing.Color})
+  id: '#ctor(System.String,System.Single,DotFeather.FontStyle,System.Nullable{System.Drawing.Color})'
+  parent: DotFeather.TextDrawable
+  langs:
+  - csharp
+  - vb
+  name: TextDrawable(String, Single, FontStyle, Nullable<Color>)
+  nameWithType: TextDrawable.TextDrawable(String, Single, FontStyle, Nullable<Color>)
+  fullName: DotFeather.TextDrawable.TextDrawable(System.String, System.Single, DotFeather.FontStyle, System.Nullable<System.Drawing.Color>)
+  type: Constructor
+  source:
+    remote:
+      path: DotFeather/Graphics/TextDrawable.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: .ctor
+    path: ../DotFeather/Graphics/TextDrawable.cs
+    startLine: 118
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.TextDrawable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public TextDrawable(string text, float fontSize = 16F, FontStyle fontStyle = FontStyle.Normal, Color? color = default(Color? ))
+    parameters:
+    - id: text
+      type: System.String
+    - id: fontSize
+      type: System.Single
+    - id: fontStyle
+      type: DotFeather.FontStyle
+    - id: color
+      type: System.Nullable{System.Drawing.Color}
+    content.vb: Public Sub New(text As String, fontSize As Single = 16F, fontStyle As FontStyle = FontStyle.Normal, color As Color? = Nothing)
+  overload: DotFeather.TextDrawable.#ctor*
+  nameWithType.vb: TextDrawable.TextDrawable(String, Single, FontStyle, Nullable(Of Color))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotFeather.TextDrawable.TextDrawable(System.String, System.Single, DotFeather.FontStyle, System.Nullable(Of System.Drawing.Color))
+  name.vb: TextDrawable(String, Single, FontStyle, Nullable(Of Color))
 - uid: DotFeather.TextDrawable.UpdateTexture
   commentId: M:DotFeather.TextDrawable.UpdateTexture
   id: UpdateTexture
@@ -283,11 +401,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: UpdateTexture
     path: ../DotFeather/Graphics/TextDrawable.cs
-    startLine: 87
+    startLine: 129
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nテクスチャを更新します。\n"
+  summary: "\nUpdate the texture.\n"
   example: []
   syntax:
     content: public void UpdateTexture()
@@ -315,11 +433,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/TextDrawable.cs
-    startLine: 109
+    startLine: 157
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトを破棄します。\n"
+  summary: "\nDispose this object.\n"
   example: []
   syntax:
     content: public override void Destroy()
@@ -757,19 +875,12 @@ references:
   name: Font
   nameWithType: TextDrawable.Font
   fullName: DotFeather.TextDrawable.Font
-- uid: System.Drawing.Font
-  commentId: T:System.Drawing.Font
-  parent: System.Drawing
-  isExternal: true
+- uid: DotFeather.Font
+  commentId: T:DotFeather.Font
+  parent: DotFeather
   name: Font
   nameWithType: Font
-  fullName: System.Drawing.Font
-- uid: System.Drawing
-  commentId: N:System.Drawing
-  isExternal: true
-  name: System.Drawing
-  nameWithType: System.Drawing
-  fullName: System.Drawing
+  fullName: DotFeather.Font
 - uid: DotFeather.TextureDrawableBase.Color
   commentId: P:DotFeather.TextureDrawableBase.Color
   parent: DotFeather.TextureDrawableBase
@@ -864,6 +975,23 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: DotFeather.TextDrawable.BorderColor*
+  commentId: Overload:DotFeather.TextDrawable.BorderColor
+  name: BorderColor
+  nameWithType: TextDrawable.BorderColor
+  fullName: DotFeather.TextDrawable.BorderColor
+- uid: DotFeather.TextDrawable.BorderThickness*
+  commentId: Overload:DotFeather.TextDrawable.BorderThickness
+  name: BorderThickness
+  nameWithType: TextDrawable.BorderThickness
+  fullName: DotFeather.TextDrawable.BorderThickness
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: DotFeather.TextDrawable.RenderedTexture*
   commentId: Overload:DotFeather.TextDrawable.RenderedTexture
   name: RenderedTexture
@@ -885,6 +1013,19 @@ references:
   name: TextDrawable
   nameWithType: TextDrawable.TextDrawable
   fullName: DotFeather.TextDrawable.TextDrawable
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: DotFeather.FontStyle
+  commentId: T:DotFeather.FontStyle
+  parent: DotFeather
+  name: FontStyle
+  nameWithType: FontStyle
+  fullName: DotFeather.FontStyle
 - uid: DotFeather.TextDrawable.UpdateTexture*
   commentId: Overload:DotFeather.TextDrawable.UpdateTexture
   name: UpdateTexture

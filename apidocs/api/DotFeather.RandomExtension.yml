@@ -8,6 +8,7 @@ items:
   - DotFeather.RandomExtension.NextColor(System.Random,System.Int32)
   - DotFeather.RandomExtension.NextVector(System.Random,System.Int32,System.Int32)
   - DotFeather.RandomExtension.NextVectorFloat(System.Random,System.Int32,System.Int32)
+  - DotFeather.RandomExtension.NextVectorInt(System.Random,System.Int32,System.Int32)
   langs:
   - csharp
   - vb
@@ -26,7 +27,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n乱数生成機を拡張します。\n"
+  summary: "\nExtend the random number generator.\n"
   example: []
   syntax:
     content: public static class RandomExtension
@@ -71,7 +72,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nランダムな色を取得します。\n"
+  summary: "\nGet a random color.\n"
   example: []
   syntax:
     content: public static Color NextColor(this Random r, int max = 256)
@@ -116,7 +117,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nランダムなベクトルを取得します。 x, y 成分はどちらも整数です。\n"
+  summary: "\nGet a random vector. Both x and y coords are integers.\n"
   example: []
   syntax:
     content: public static Vector NextVector(this Random r, int xMax, int yMax)
@@ -134,6 +135,53 @@ items:
 
       Public Shared Function NextVector(r As Random, xMax As Integer, yMax As Integer) As Vector
   overload: DotFeather.RandomExtension.NextVector*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.RandomExtension.NextVectorInt(System.Random,System.Int32,System.Int32)
+  commentId: M:DotFeather.RandomExtension.NextVectorInt(System.Random,System.Int32,System.Int32)
+  id: NextVectorInt(System.Random,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: DotFeather.RandomExtension
+  langs:
+  - csharp
+  - vb
+  name: NextVectorInt(Random, Int32, Int32)
+  nameWithType: RandomExtension.NextVectorInt(Random, Int32, Int32)
+  fullName: DotFeather.RandomExtension.NextVectorInt(System.Random, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Extensions/RandomExtension.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: NextVectorInt
+    path: ../DotFeather/Extensions/RandomExtension.cs
+    startLine: 24
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet a random vector. Both x and y coords are integers.\n"
+  example: []
+  syntax:
+    content: public static VectorInt NextVectorInt(this Random r, int xMax, int yMax)
+    parameters:
+    - id: r
+      type: System.Random
+    - id: xMax
+      type: System.Int32
+    - id: yMax
+      type: System.Int32
+    return:
+      type: DotFeather.VectorInt
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function NextVectorInt(r As Random, xMax As Integer, yMax As Integer) As VectorInt
+  overload: DotFeather.RandomExtension.NextVectorInt*
   modifiers.csharp:
   - public
   - static
@@ -159,11 +207,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: NextVectorFloat
     path: ../DotFeather/Extensions/RandomExtension.cs
-    startLine: 24
+    startLine: 29
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nランダムなベクター値を取得します。 x, y 成分はどちらも実数です。\n"
+  summary: "\nGet a random vector. Both x and y coords are real numbers.\n"
   example: []
   syntax:
     content: public static Vector NextVectorFloat(this Random r, int xMax = 1, int yMax = 1)
@@ -528,6 +576,17 @@ references:
   name: Vector
   nameWithType: Vector
   fullName: DotFeather.Vector
+- uid: DotFeather.RandomExtension.NextVectorInt*
+  commentId: Overload:DotFeather.RandomExtension.NextVectorInt
+  name: NextVectorInt
+  nameWithType: RandomExtension.NextVectorInt
+  fullName: DotFeather.RandomExtension.NextVectorInt
+- uid: DotFeather.VectorInt
+  commentId: T:DotFeather.VectorInt
+  parent: DotFeather
+  name: VectorInt
+  nameWithType: VectorInt
+  fullName: DotFeather.VectorInt
 - uid: DotFeather.RandomExtension.NextVectorFloat*
   commentId: Overload:DotFeather.RandomExtension.NextVectorFloat
   name: NextVectorFloat

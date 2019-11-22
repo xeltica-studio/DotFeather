@@ -27,7 +27,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーボードイベントの引数です。\n"
+  summary: "\nKeyboard event argument.\n"
   example: []
   syntax:
     content: 'public class DFKeyEventArgs : EventArgs'
@@ -70,18 +70,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Key
     path: ../DotFeather/InputSystems/DFKeyEventArgs.cs
-    startLine: 13
+    startLine: 12
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n押されたキーを取得します。\n"
+  summary: "\nGet a pressed key.\n"
   example: []
   syntax:
     content: public DFKeyCode Key { get; }
     parameters: []
     return:
       type: DotFeather.DFKeyCode
-      description: 押されたキー。
     content.vb: Public ReadOnly Property Key As DFKeyCode
   overload: DotFeather.DFKeyEventArgs.Key*
   modifiers.csharp:
@@ -108,18 +107,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AltPressed
     path: ../DotFeather/InputSystems/DFKeyEventArgs.cs
-    startLine: 19
+    startLine: 17
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nAlt キーが押されたかどうかを示す値を取得します。\n"
+  summary: "\nGets a value indicating whether the Alt key was pressed.\n"
   example: []
   syntax:
     content: public bool AltPressed { get; }
     parameters: []
     return:
       type: System.Boolean
-      description: Alt キーが押された場合は <code>true</code>。それ以外の場合は <code>false</code>。
     content.vb: Public ReadOnly Property AltPressed As Boolean
   overload: DotFeather.DFKeyEventArgs.AltPressed*
   modifiers.csharp:
@@ -146,18 +144,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CtrlPressed
     path: ../DotFeather/InputSystems/DFKeyEventArgs.cs
-    startLine: 25
+    startLine: 22
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nCtrl キーが押されたかどうかを示す値を取得します。\n"
+  summary: "\nGets a value indicating whether the Ctrl key was pressed.\n"
   example: []
   syntax:
     content: public bool CtrlPressed { get; }
     parameters: []
     return:
       type: System.Boolean
-      description: Ctrl キーが押された場合は <code>true</code>。それ以外の場合は <code>false</code>。
     content.vb: Public ReadOnly Property CtrlPressed As Boolean
   overload: DotFeather.DFKeyEventArgs.CtrlPressed*
   modifiers.csharp:
@@ -184,18 +181,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ShiftPressed
     path: ../DotFeather/InputSystems/DFKeyEventArgs.cs
-    startLine: 31
+    startLine: 27
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nShift キーが押されたかどうかを示す値を取得します。\n"
+  summary: "\nGets a value indicating whether the Shift key was pressed.\n"
   example: []
   syntax:
     content: public bool ShiftPressed { get; }
     parameters: []
     return:
       type: System.Boolean
-      description: Shift キーが押された場合は <code>true</code>。それ以外の場合は <code>false</code>。
     content.vb: Public ReadOnly Property ShiftPressed As Boolean
   overload: DotFeather.DFKeyEventArgs.ShiftPressed*
   modifiers.csharp:

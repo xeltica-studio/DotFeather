@@ -5,16 +5,18 @@ items:
   id: Texture2D
   parent: DotFeather
   children:
-  - DotFeather.Texture2D.#ctor(System.Int32,System.Drawing.Size)
-  - DotFeather.Texture2D.CreateSolid(System.Drawing.Color,DotFeather.Vector)
+  - DotFeather.Texture2D.#ctor(System.Int32,DotFeather.VectorInt)
+  - DotFeather.Texture2D.Create(System.Byte[],System.Int32,System.Int32)
+  - DotFeather.Texture2D.Create(System.Byte[0:,0:,0:])
+  - DotFeather.Texture2D.CreateSolid(System.Drawing.Color,DotFeather.VectorInt)
   - DotFeather.Texture2D.CreateSolid(System.Drawing.Color,System.Int32,System.Int32)
   - DotFeather.Texture2D.Dispose
   - DotFeather.Texture2D.Handle
-  - DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,System.Drawing.Size)
+  - DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,DotFeather.VectorInt)
   - DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
-  - DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,System.Drawing.Size)
+  - DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,DotFeather.VectorInt)
   - DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
-  - DotFeather.Texture2D.LoadFrom(System.Drawing.Imaging.BitmapData)
+  - DotFeather.Texture2D.LoadFrom(Image)
   - DotFeather.Texture2D.LoadFrom(System.IO.Stream)
   - DotFeather.Texture2D.LoadFrom(System.String)
   - DotFeather.Texture2D.Size
@@ -32,11 +34,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Texture2D
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 13
+    startLine: 18
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nテクスチャのハンドルを持ちます。\n"
+  summary: "\nWrap a handle of 2D texture.\n"
   example: []
   syntax:
     content: 'public struct Texture2D : IDisposable'
@@ -76,11 +78,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Handle
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 18
+    startLine: 23
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのテクスチャの OpenGL ハンドルを取得します。\n"
+  summary: "\nGet a OpenGL handle of this texture.\n"
   example: []
   syntax:
     content: public int Handle { get; }
@@ -113,18 +115,18 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Size
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 23
+    startLine: 28
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのテクスチャのサイズを取得します。\n"
+  summary: "\nGet size of this texture.\n"
   example: []
   syntax:
-    content: public Size Size { get; }
+    content: public VectorInt Size { get; }
     parameters: []
     return:
-      type: System.Drawing.Size
-    content.vb: Public ReadOnly Property Size As Size
+      type: DotFeather.VectorInt
+    content.vb: Public ReadOnly Property Size As VectorInt
   overload: DotFeather.Texture2D.Size*
   modifiers.csharp:
   - public
@@ -132,16 +134,16 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: DotFeather.Texture2D.#ctor(System.Int32,System.Drawing.Size)
-  commentId: M:DotFeather.Texture2D.#ctor(System.Int32,System.Drawing.Size)
-  id: '#ctor(System.Int32,System.Drawing.Size)'
+- uid: DotFeather.Texture2D.#ctor(System.Int32,DotFeather.VectorInt)
+  commentId: M:DotFeather.Texture2D.#ctor(System.Int32,DotFeather.VectorInt)
+  id: '#ctor(System.Int32,DotFeather.VectorInt)'
   parent: DotFeather.Texture2D
   langs:
   - csharp
   - vb
-  name: Texture2D(Int32, Size)
-  nameWithType: Texture2D.Texture2D(Int32, Size)
-  fullName: DotFeather.Texture2D.Texture2D(System.Int32, System.Drawing.Size)
+  name: Texture2D(Int32, VectorInt)
+  nameWithType: Texture2D.Texture2D(Int32, VectorInt)
+  fullName: DotFeather.Texture2D.Texture2D(System.Int32, DotFeather.VectorInt)
   type: Constructor
   source:
     remote:
@@ -150,22 +152,22 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 30
+    startLine: 35
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nハンドルとサイズを指定して、 <xref href=\"DotFeather.Texture2D\" data-throw-if-not-resolved=\"false\"></xref> クラスの新しいインスタンスを初期化します。\n"
+  summary: "\nInitialize a new instance of  <xref href=\"DotFeather.Texture2D\" data-throw-if-not-resolved=\"false\"></xref> with the specified handle and size.\n"
   example: []
   syntax:
-    content: public Texture2D(int handle, Size size)
+    content: public Texture2D(int handle, VectorInt size)
     parameters:
     - id: handle
       type: System.Int32
       description: ''
     - id: size
-      type: System.Drawing.Size
+      type: DotFeather.VectorInt
       description: ''
-    content.vb: Public Sub New(handle As Integer, size As Size)
+    content.vb: Public Sub New(handle As Integer, size As VectorInt)
   overload: DotFeather.Texture2D.#ctor*
   modifiers.csharp:
   - public
@@ -189,21 +191,21 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 41
+    startLine: 46
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n画像ファイルを読み込みます。\n"
+  summary: "\nLoad an image file as a texture.\n"
   example: []
   syntax:
     content: public static Texture2D LoadFrom(string path)
     parameters:
     - id: path
       type: System.String
-      description: ファイルパス。
+      description: File path.
     return:
       type: DotFeather.Texture2D
-      description: 読み込んだ画像のデータ。
+      description: Loaded texture
     content.vb: Public Shared Function LoadFrom(path As String) As Texture2D
   overload: DotFeather.Texture2D.LoadFrom*
   modifiers.csharp:
@@ -230,21 +232,21 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 51
+    startLine: 56
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n画像ファイルを読み込みます。\n"
+  summary: "\nLoad an image file as a texture.\n"
   example: []
   syntax:
     content: public static Texture2D LoadFrom(Stream stream)
     parameters:
     - id: stream
       type: System.IO.Stream
-      description: ストリーム。
+      description: File stream.
     return:
       type: DotFeather.Texture2D
-      description: 読み込んだ画像のデータ。
+      description: Loaded texture
     content.vb: Public Shared Function LoadFrom(stream As Stream) As Texture2D
   overload: DotFeather.Texture2D.LoadFrom*
   modifiers.csharp:
@@ -253,16 +255,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: DotFeather.Texture2D.LoadFrom(System.Drawing.Imaging.BitmapData)
-  commentId: M:DotFeather.Texture2D.LoadFrom(System.Drawing.Imaging.BitmapData)
-  id: LoadFrom(System.Drawing.Imaging.BitmapData)
+- uid: DotFeather.Texture2D.LoadFrom(Image)
+  commentId: M:DotFeather.Texture2D.LoadFrom(Image)
+  id: LoadFrom(Image)
   parent: DotFeather.Texture2D
   langs:
   - csharp
   - vb
-  name: LoadFrom(BitmapData)
-  nameWithType: Texture2D.LoadFrom(BitmapData)
-  fullName: DotFeather.Texture2D.LoadFrom(System.Drawing.Imaging.BitmapData)
+  name: LoadFrom(Image)
+  nameWithType: Texture2D.LoadFrom(Image)
+  fullName: DotFeather.Texture2D.LoadFrom(Image)
   type: Method
   source:
     remote:
@@ -271,20 +273,18 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 67
+    startLine: 61
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nテクスチャを登録し、ハンドルを返します。\n"
-  example: []
   syntax:
-    content: public static Texture2D LoadFrom(BitmapData bmp)
+    content: public static Texture2D LoadFrom(Image bmp)
     parameters:
     - id: bmp
-      type: System.Drawing.Imaging.BitmapData
+      type: Image
     return:
       type: DotFeather.Texture2D
-    content.vb: Public Shared Function LoadFrom(bmp As BitmapData) As Texture2D
+    content.vb: Public Shared Function LoadFrom(bmp As Image) As Texture2D
   overload: DotFeather.Texture2D.LoadFrom*
   modifiers.csharp:
   - public
@@ -292,6 +292,94 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: DotFeather.Texture2D.Create(System.Byte[0:,0:,0:])
+  commentId: M:DotFeather.Texture2D.Create(System.Byte[0:,0:,0:])
+  id: Create(System.Byte[0:,0:,0:])
+  parent: DotFeather.Texture2D
+  langs:
+  - csharp
+  - vb
+  name: Create(Byte[,,])
+  nameWithType: Texture2D.Create(Byte[,,])
+  fullName: DotFeather.Texture2D.Create(System.Byte[,,])
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Graphics/Texture2D.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Create
+    path: ../DotFeather/Graphics/Texture2D.cs
+    startLine: 74
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nRegister a texture by a bitmap array.\n"
+  example: []
+  syntax:
+    content: public static Texture2D Create(byte[,, ] bmp)
+    parameters:
+    - id: bmp
+      type: System.Byte[,,]
+    return:
+      type: DotFeather.Texture2D
+    content.vb: Public Shared Function Create(bmp As Byte(,,)) As Texture2D
+  overload: DotFeather.Texture2D.Create*
+  nameWithType.vb: Texture2D.Create(Byte(,,))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotFeather.Texture2D.Create(System.Byte(,,))
+  name.vb: Create(Byte(,,))
+- uid: DotFeather.Texture2D.Create(System.Byte[],System.Int32,System.Int32)
+  commentId: M:DotFeather.Texture2D.Create(System.Byte[],System.Int32,System.Int32)
+  id: Create(System.Byte[],System.Int32,System.Int32)
+  parent: DotFeather.Texture2D
+  langs:
+  - csharp
+  - vb
+  name: Create(Byte[], Int32, Int32)
+  nameWithType: Texture2D.Create(Byte[], Int32, Int32)
+  fullName: DotFeather.Texture2D.Create(System.Byte[], System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Graphics/Texture2D.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Create
+    path: ../DotFeather/Graphics/Texture2D.cs
+    startLine: 91
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nRegister a texture by a bitmap array.\n"
+  example: []
+  syntax:
+    content: public static Texture2D Create(byte[] bmp, int width, int height)
+    parameters:
+    - id: bmp
+      type: System.Byte[]
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    return:
+      type: DotFeather.Texture2D
+    content.vb: Public Shared Function Create(bmp As Byte(), width As Integer, height As Integer) As Texture2D
+  overload: DotFeather.Texture2D.Create*
+  nameWithType.vb: Texture2D.Create(Byte(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotFeather.Texture2D.Create(System.Byte(), System.Int32, System.Int32)
+  name.vb: Create(Byte(), Int32, Int32)
 - uid: DotFeather.Texture2D.CreateSolid(System.Drawing.Color,System.Int32,System.Int32)
   commentId: M:DotFeather.Texture2D.CreateSolid(System.Drawing.Color,System.Int32,System.Int32)
   id: CreateSolid(System.Drawing.Color,System.Int32,System.Int32)
@@ -310,10 +398,12 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CreateSolid
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 78
+    startLine: 106
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\nGenerate a solid color texture with specified color and size.\n"
+  example: []
   syntax:
     content: public static Texture2D CreateSolid(Color color, int sizeX, int sizeY)
     parameters:
@@ -325,6 +415,7 @@ items:
       type: System.Int32
     return:
       type: DotFeather.Texture2D
+      description: Generated texture.
     content.vb: Public Shared Function CreateSolid(color As Color, sizeX As Integer, sizeY As Integer) As Texture2D
   overload: DotFeather.Texture2D.CreateSolid*
   modifiers.csharp:
@@ -333,16 +424,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: DotFeather.Texture2D.CreateSolid(System.Drawing.Color,DotFeather.Vector)
-  commentId: M:DotFeather.Texture2D.CreateSolid(System.Drawing.Color,DotFeather.Vector)
-  id: CreateSolid(System.Drawing.Color,DotFeather.Vector)
+- uid: DotFeather.Texture2D.CreateSolid(System.Drawing.Color,DotFeather.VectorInt)
+  commentId: M:DotFeather.Texture2D.CreateSolid(System.Drawing.Color,DotFeather.VectorInt)
+  id: CreateSolid(System.Drawing.Color,DotFeather.VectorInt)
   parent: DotFeather.Texture2D
   langs:
   - csharp
   - vb
-  name: CreateSolid(Color, Vector)
-  nameWithType: Texture2D.CreateSolid(Color, Vector)
-  fullName: DotFeather.Texture2D.CreateSolid(System.Drawing.Color, DotFeather.Vector)
+  name: CreateSolid(Color, VectorInt)
+  nameWithType: Texture2D.CreateSolid(Color, VectorInt)
+  fullName: DotFeather.Texture2D.CreateSolid(System.Drawing.Color, DotFeather.VectorInt)
   type: Method
   source:
     remote:
@@ -351,20 +442,23 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CreateSolid
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 101
+    startLine: 125
   assemblies:
   - DotFeather
   namespace: DotFeather
+  summary: "\nGenerate a solid color texture with specified color and size.\n"
+  example: []
   syntax:
-    content: public static Texture2D CreateSolid(Color color, Vector size)
+    content: public static Texture2D CreateSolid(Color color, VectorInt size)
     parameters:
     - id: color
       type: System.Drawing.Color
     - id: size
-      type: DotFeather.Vector
+      type: DotFeather.VectorInt
     return:
       type: DotFeather.Texture2D
-    content.vb: Public Shared Function CreateSolid(color As Color, size As Vector) As Texture2D
+      description: Generated texture.
+    content.vb: Public Shared Function CreateSolid(color As Color, size As VectorInt) As Texture2D
   overload: DotFeather.Texture2D.CreateSolid*
   modifiers.csharp:
   - public
@@ -372,16 +466,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,System.Drawing.Size)
-  commentId: M:DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,System.Drawing.Size)
-  id: LoadAndSplitFrom(System.String,System.Int32,System.Int32,System.Drawing.Size)
+- uid: DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,DotFeather.VectorInt)
+  commentId: M:DotFeather.Texture2D.LoadAndSplitFrom(System.String,System.Int32,System.Int32,DotFeather.VectorInt)
+  id: LoadAndSplitFrom(System.String,System.Int32,System.Int32,DotFeather.VectorInt)
   parent: DotFeather.Texture2D
   langs:
   - csharp
   - vb
-  name: LoadAndSplitFrom(String, Int32, Int32, Size)
-  nameWithType: Texture2D.LoadAndSplitFrom(String, Int32, Int32, Size)
-  fullName: DotFeather.Texture2D.LoadAndSplitFrom(System.String, System.Int32, System.Int32, System.Drawing.Size)
+  name: LoadAndSplitFrom(String, Int32, Int32, VectorInt)
+  nameWithType: Texture2D.LoadAndSplitFrom(String, Int32, Int32, VectorInt)
+  fullName: DotFeather.Texture2D.LoadAndSplitFrom(System.String, System.Int32, System.Int32, DotFeather.VectorInt)
   type: Method
   source:
     remote:
@@ -390,31 +484,31 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadAndSplitFrom
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 111
+    startLine: 135
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。\n"
+  summary: "\nReads an image file and cuts it out in order from the top left at the specified size.\n"
   example: []
   syntax:
-    content: public static Texture2D[] LoadAndSplitFrom(string path, int horizonalCount, int verticalCount, Size sizeOfCroppedImage)
+    content: public static Texture2D[] LoadAndSplitFrom(string path, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
     parameters:
     - id: path
       type: System.String
-      description: 画像のファイルパス。
+      description: File path
     - id: horizonalCount
       type: System.Int32
-      description: 横方向の画像の枚数。
+      description: The number of images in the horizontal direction.
     - id: verticalCount
       type: System.Int32
-      description: 盾向の画像の枚数。
+      description: The number of images in the vertical direction.
     - id: sizeOfCroppedImage
-      type: System.Drawing.Size
-      description: 画像1枚分のサイズ。
+      type: DotFeather.VectorInt
+      description: The size of a piece of image.
     return:
       type: DotFeather.Texture2D[]
-      description: 切り取られた全ての画像データ。
-    content.vb: Public Shared Function LoadAndSplitFrom(path As String, horizonalCount As Integer, verticalCount As Integer, sizeOfCroppedImage As Size) As Texture2D()
+      description: All the image data cut out.
+    content.vb: Public Shared Function LoadAndSplitFrom(path As String, horizonalCount As Integer, verticalCount As Integer, sizeOfCroppedImage As VectorInt) As Texture2D()
   overload: DotFeather.Texture2D.LoadAndSplitFrom*
   modifiers.csharp:
   - public
@@ -422,16 +516,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,System.Drawing.Size)
-  commentId: M:DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,System.Drawing.Size)
-  id: LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,System.Drawing.Size)
+- uid: DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,DotFeather.VectorInt)
+  commentId: M:DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,DotFeather.VectorInt)
+  id: LoadAndSplitFrom(System.IO.Stream,System.Int32,System.Int32,DotFeather.VectorInt)
   parent: DotFeather.Texture2D
   langs:
   - csharp
   - vb
-  name: LoadAndSplitFrom(Stream, Int32, Int32, Size)
-  nameWithType: Texture2D.LoadAndSplitFrom(Stream, Int32, Int32, Size)
-  fullName: DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream, System.Int32, System.Int32, System.Drawing.Size)
+  name: LoadAndSplitFrom(Stream, Int32, Int32, VectorInt)
+  nameWithType: Texture2D.LoadAndSplitFrom(Stream, Int32, Int32, VectorInt)
+  fullName: DotFeather.Texture2D.LoadAndSplitFrom(System.IO.Stream, System.Int32, System.Int32, DotFeather.VectorInt)
   type: Method
   source:
     remote:
@@ -440,31 +534,31 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadAndSplitFrom
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 124
+    startLine: 148
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n画像ファイルを読み込み、指定したサイズで左上から順番に切り取ります。\n"
+  summary: "\nReads an image file and cuts it out in order from the top left at the specified size.\n"
   example: []
   syntax:
-    content: public static Texture2D[] LoadAndSplitFrom(Stream stream, int horizonalCount, int verticalCount, Size sizeOfCroppedImage)
+    content: public static Texture2D[] LoadAndSplitFrom(Stream stream, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
     parameters:
     - id: stream
       type: System.IO.Stream
-      description: 画像のファイルを示すストリーム。
+      description: File stream
     - id: horizonalCount
       type: System.Int32
-      description: 横方向の画像の枚数。
+      description: The number of images in the horizontal direction.
     - id: verticalCount
       type: System.Int32
-      description: 盾向の画像の枚数。
+      description: The number of images in the vertical direction.
     - id: sizeOfCroppedImage
-      type: System.Drawing.Size
-      description: 画像1枚分のサイズ。
+      type: DotFeather.VectorInt
+      description: The size of a piece of image.
     return:
       type: DotFeather.Texture2D[]
-      description: 切り取られた全ての画像データ。
-    content.vb: Public Shared Function LoadAndSplitFrom(stream As Stream, horizonalCount As Integer, verticalCount As Integer, sizeOfCroppedImage As Size) As Texture2D()
+      description: All the image data cut out.
+    content.vb: Public Shared Function LoadAndSplitFrom(stream As Stream, horizonalCount As Integer, verticalCount As Integer, sizeOfCroppedImage As VectorInt) As Texture2D()
   overload: DotFeather.Texture2D.LoadAndSplitFrom*
   modifiers.csharp:
   - public
@@ -490,7 +584,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadAndSplitFrom
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 166
+    startLine: 161
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -501,22 +595,21 @@ items:
     parameters:
     - id: path
       type: System.String
-      description: 画像ファイル。
+      description: File path.
     - id: left
       type: System.Int32
-      description: 左からのピクセル値。
+      description: Pixel value from left.
     - id: top
       type: System.Int32
-      description: 上からのピクセル値。
+      description: Pixel value from top.
     - id: right
       type: System.Int32
-      description: 右からのピクセル値。
+      description: Pixel value from right.
     - id: bottom
       type: System.Int32
-      description: 下からのピクセル値。
+      description: Pixel value from bottom.
     return:
       type: DotFeather.Texture2D[]
-      description: 切り取られた9枚のテクスチャ。
     content.vb: Public Shared Function LoadAndSplitFrom(path As String, left As Integer, top As Integer, right As Integer, bottom As Integer) As Texture2D()
   overload: DotFeather.Texture2D.LoadAndSplitFrom*
   modifiers.csharp:
@@ -543,33 +636,32 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadAndSplitFrom
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 180
+    startLine: 174
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n画像ファイルを読み込み、9スライス用に切り抜きます。\n"
+  summary: "\nLoad an image file and cut it out for 9 slices.\n"
   example: []
   syntax:
     content: public static Texture2D[] LoadAndSplitFrom(Stream stream, int left, int top, int right, int bottom)
     parameters:
     - id: stream
       type: System.IO.Stream
-      description: 画像を示すストリーム。
+      description: File stream.
     - id: left
       type: System.Int32
-      description: 左からのピクセル値。
+      description: Pixel value from left.
     - id: top
       type: System.Int32
-      description: 上からのピクセル値。
+      description: Pixel value from top.
     - id: right
       type: System.Int32
-      description: 右からのピクセル値。
+      description: Pixel value from right.
     - id: bottom
       type: System.Int32
-      description: 下からのピクセル値。
+      description: Pixel value from bottom.
     return:
       type: DotFeather.Texture2D[]
-      description: 切り取られた9枚のテクスチャ。
     content.vb: Public Shared Function LoadAndSplitFrom(stream As Stream, left As Integer, top As Integer, right As Integer, bottom As Integer) As Texture2D()
   overload: DotFeather.Texture2D.LoadAndSplitFrom*
   modifiers.csharp:
@@ -596,7 +688,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/Graphics/Texture2D.cs
-    startLine: 222
+    startLine: 244
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -910,19 +1002,12 @@ references:
   name: Size
   nameWithType: Texture2D.Size
   fullName: DotFeather.Texture2D.Size
-- uid: System.Drawing.Size
-  commentId: T:System.Drawing.Size
-  parent: System.Drawing
-  isExternal: true
-  name: Size
-  nameWithType: Size
-  fullName: System.Drawing.Size
-- uid: System.Drawing
-  commentId: N:System.Drawing
-  isExternal: true
-  name: System.Drawing
-  nameWithType: System.Drawing
-  fullName: System.Drawing
+- uid: DotFeather.VectorInt
+  commentId: T:DotFeather.VectorInt
+  parent: DotFeather
+  name: VectorInt
+  nameWithType: VectorInt
+  fullName: DotFeather.VectorInt
 - uid: DotFeather.Texture2D
   commentId: T:DotFeather.Texture2D
   parent: DotFeather
@@ -959,19 +1044,69 @@ references:
   name: System.IO
   nameWithType: System.IO
   fullName: System.IO
-- uid: System.Drawing.Imaging.BitmapData
-  commentId: T:System.Drawing.Imaging.BitmapData
-  parent: System.Drawing.Imaging
+- uid: Image
+  commentId: '!:Image'
   isExternal: true
-  name: BitmapData
-  nameWithType: BitmapData
-  fullName: System.Drawing.Imaging.BitmapData
-- uid: System.Drawing.Imaging
-  commentId: N:System.Drawing.Imaging
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: DotFeather.Texture2D.Create*
+  commentId: Overload:DotFeather.Texture2D.Create
+  name: Create
+  nameWithType: Texture2D.Create
+  fullName: DotFeather.Texture2D.Create
+- uid: System.Byte[,,]
   isExternal: true
-  name: System.Drawing.Imaging
-  nameWithType: System.Drawing.Imaging
-  fullName: System.Drawing.Imaging
+  name: Byte[,,]
+  nameWithType: Byte[,,]
+  fullName: System.Byte[,,]
+  nameWithType.vb: Byte(,,)
+  fullName.vb: System.Byte(,,)
+  name.vb: Byte(,,)
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[,,]'
+    nameWithType: '[,,]'
+    fullName: '[,,]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: (,,)
+    nameWithType: (,,)
+    fullName: (,,)
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: DotFeather.Texture2D.CreateSolid*
   commentId: Overload:DotFeather.Texture2D.CreateSolid
   name: CreateSolid
@@ -984,12 +1119,12 @@ references:
   name: Color
   nameWithType: Color
   fullName: System.Drawing.Color
-- uid: DotFeather.Vector
-  commentId: T:DotFeather.Vector
-  parent: DotFeather
-  name: Vector
-  nameWithType: Vector
-  fullName: DotFeather.Vector
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
 - uid: DotFeather.Texture2D.LoadAndSplitFrom*
   commentId: Overload:DotFeather.Texture2D.LoadAndSplitFrom
   name: LoadAndSplitFrom

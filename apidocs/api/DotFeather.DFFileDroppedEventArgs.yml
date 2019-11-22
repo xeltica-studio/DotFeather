@@ -1,38 +1,42 @@
 ### YamlMime:ManagedReference
 items:
-- uid: DotFeather.Input
-  commentId: T:DotFeather.Input
-  id: Input
+- uid: DotFeather.DFFileDroppedEventArgs
+  commentId: T:DotFeather.DFFileDroppedEventArgs
+  id: DFFileDroppedEventArgs
   parent: DotFeather
   children:
-  - DotFeather.Input.Keyboard
-  - DotFeather.Input.Mouse
+  - DotFeather.DFFileDroppedEventArgs.#ctor(System.String)
+  - DotFeather.DFFileDroppedEventArgs.Path
   langs:
   - csharp
   - vb
-  name: Input
-  nameWithType: Input
-  fullName: DotFeather.Input
+  name: DFFileDroppedEventArgs
+  nameWithType: DFFileDroppedEventArgs
+  fullName: DotFeather.DFFileDroppedEventArgs
   type: Class
   source:
     remote:
-      path: DotFeather/InputSystems/Input.cs
+      path: DotFeather/InputSystems/DFFileDroppedEventArgs.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: Input
-    path: ../DotFeather/InputSystems/Input.cs
-    startLine: 6
+    id: DFFileDroppedEventArgs
+    path: ../DotFeather/InputSystems/DFFileDroppedEventArgs.cs
+    startLine: 7
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nユーザーからのインプットを受け付ける静的クラスです。\n"
+  summary: "\nArguments for file-dropped-event.\n"
   example: []
   syntax:
-    content: public static class Input
-    content.vb: Public Module Input
+    content: 'public class DFFileDroppedEventArgs : EventArgs'
+    content.vb: >-
+      Public Class DFFileDroppedEventArgs
+          Inherits EventArgs
   inheritance:
   - System.Object
+  - System.EventArgs
   inheritedMembers:
+  - System.EventArgs.Empty
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -42,90 +46,80 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
-  - static
   - class
   modifiers.vb:
   - Public
-  - Module
-- uid: DotFeather.Input.Keyboard
-  commentId: P:DotFeather.Input.Keyboard
-  id: Keyboard
-  parent: DotFeather.Input
+  - Class
+- uid: DotFeather.DFFileDroppedEventArgs.Path
+  commentId: P:DotFeather.DFFileDroppedEventArgs.Path
+  id: Path
+  parent: DotFeather.DFFileDroppedEventArgs
   langs:
   - csharp
   - vb
-  name: Keyboard
-  nameWithType: Input.Keyboard
-  fullName: DotFeather.Input.Keyboard
+  name: Path
+  nameWithType: DFFileDroppedEventArgs.Path
+  fullName: DotFeather.DFFileDroppedEventArgs.Path
   type: Property
   source:
     remote:
-      path: DotFeather/InputSystems/Input.cs
+      path: DotFeather/InputSystems/DFFileDroppedEventArgs.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: Keyboard
-    path: ../DotFeather/InputSystems/Input.cs
-    startLine: 11
+    id: Path
+    path: ../DotFeather/InputSystems/DFFileDroppedEventArgs.cs
+    startLine: 12
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーボードの値を読み取ります。\n"
+  summary: "\nGet path of a dropped file.\n"
   example: []
   syntax:
-    content: public static DFKeyboard Keyboard { get; }
+    content: public string Path { get; set; }
     parameters: []
     return:
-      type: DotFeather.DFKeyboard
-    content.vb: Public Shared ReadOnly Property Keyboard As DFKeyboard
-  overload: DotFeather.Input.Keyboard*
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: DotFeather.DFFileDroppedEventArgs.Path*
   modifiers.csharp:
   - public
-  - static
   - get
+  - set
   modifiers.vb:
   - Public
-  - Shared
-  - ReadOnly
-- uid: DotFeather.Input.Mouse
-  commentId: P:DotFeather.Input.Mouse
-  id: Mouse
-  parent: DotFeather.Input
+- uid: DotFeather.DFFileDroppedEventArgs.#ctor(System.String)
+  commentId: M:DotFeather.DFFileDroppedEventArgs.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: DotFeather.DFFileDroppedEventArgs
   langs:
   - csharp
   - vb
-  name: Mouse
-  nameWithType: Input.Mouse
-  fullName: DotFeather.Input.Mouse
-  type: Property
+  name: DFFileDroppedEventArgs(String)
+  nameWithType: DFFileDroppedEventArgs.DFFileDroppedEventArgs(String)
+  fullName: DotFeather.DFFileDroppedEventArgs.DFFileDroppedEventArgs(System.String)
+  type: Constructor
   source:
     remote:
-      path: DotFeather/InputSystems/Input.cs
+      path: DotFeather/InputSystems/DFFileDroppedEventArgs.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: Mouse
-    path: ../DotFeather/InputSystems/Input.cs
-    startLine: 17
+    id: .ctor
+    path: ../DotFeather/InputSystems/DFFileDroppedEventArgs.cs
+    startLine: 14
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nマウスの値を読み取ります。\n"
-  example: []
   syntax:
-    content: public static DFMouse Mouse { get; }
-    parameters: []
-    return:
-      type: DotFeather.DFMouse
-      description: The mouse.
-    content.vb: Public Shared ReadOnly Property Mouse As DFMouse
-  overload: DotFeather.Input.Mouse*
+    content: public DFFileDroppedEventArgs(string path)
+    parameters:
+    - id: path
+      type: System.String
+    content.vb: Public Sub New(path As String)
+  overload: DotFeather.DFFileDroppedEventArgs.#ctor*
   modifiers.csharp:
   - public
-  - static
-  - get
   modifiers.vb:
   - Public
-  - Shared
-  - ReadOnly
 references:
 - uid: DotFeather
   commentId: N:DotFeather
@@ -139,6 +133,20 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -424,25 +432,20 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: DotFeather.Input.Keyboard*
-  commentId: Overload:DotFeather.Input.Keyboard
-  name: Keyboard
-  nameWithType: Input.Keyboard
-  fullName: DotFeather.Input.Keyboard
-- uid: DotFeather.DFKeyboard
-  commentId: T:DotFeather.DFKeyboard
-  parent: DotFeather
-  name: DFKeyboard
-  nameWithType: DFKeyboard
-  fullName: DotFeather.DFKeyboard
-- uid: DotFeather.Input.Mouse*
-  commentId: Overload:DotFeather.Input.Mouse
-  name: Mouse
-  nameWithType: Input.Mouse
-  fullName: DotFeather.Input.Mouse
-- uid: DotFeather.DFMouse
-  commentId: T:DotFeather.DFMouse
-  parent: DotFeather
-  name: DFMouse
-  nameWithType: DFMouse
-  fullName: DotFeather.DFMouse
+- uid: DotFeather.DFFileDroppedEventArgs.Path*
+  commentId: Overload:DotFeather.DFFileDroppedEventArgs.Path
+  name: Path
+  nameWithType: DFFileDroppedEventArgs.Path
+  fullName: DotFeather.DFFileDroppedEventArgs.Path
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DotFeather.DFFileDroppedEventArgs.#ctor*
+  commentId: Overload:DotFeather.DFFileDroppedEventArgs.#ctor
+  name: DFFileDroppedEventArgs
+  nameWithType: DFFileDroppedEventArgs.DFFileDroppedEventArgs
+  fullName: DotFeather.DFFileDroppedEventArgs.DFFileDroppedEventArgs

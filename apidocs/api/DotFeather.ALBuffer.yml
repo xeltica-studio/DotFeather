@@ -515,7 +515,6 @@ references:
   fullName: System
 - uid: DotFeather.OpenTKManagedHandleBase`1
   commentId: T:DotFeather.OpenTKManagedHandleBase`1
-  parent: DotFeather
   name: OpenTKManagedHandleBase<T>
   nameWithType: OpenTKManagedHandleBase<T>
   fullName: DotFeather.OpenTKManagedHandleBase<T>

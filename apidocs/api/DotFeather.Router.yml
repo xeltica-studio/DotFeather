@@ -1,0 +1,836 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotFeather.Router
+  commentId: T:DotFeather.Router
+  id: Router
+  parent: DotFeather
+  children:
+  - DotFeather.Router.#ctor(DotFeather.GameBase)
+  - DotFeather.Router.ChangeScene(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DotFeather.Router.ChangeScene(System.Type,System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DotFeather.Router.ChangeScene``1(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DotFeather.Router.Game
+  - DotFeather.Router.RegisterScene(System.Type,System.String)
+  - DotFeather.Router.RegisterScene``1(System.String)
+  - DotFeather.Router.Update(DotFeather.DFEventArgs)
+  langs:
+  - csharp
+  - vb
+  name: Router
+  nameWithType: Router
+  fullName: DotFeather.Router
+  type: Class
+  source:
+    remote:
+      path: DotFeather/Router/Router.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Router
+    path: ../DotFeather/Router/Router.cs
+    startLine: 8
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nScene Management class.\n"
+  example: []
+  syntax:
+    content: public class Router
+    content.vb: Public Class Router
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DotFeather.Router.Game
+  commentId: P:DotFeather.Router.Game
+  id: Game
+  parent: DotFeather.Router
+  langs:
+  - csharp
+  - vb
+  name: Game
+  nameWithType: Router.Game
+  fullName: DotFeather.Router.Game
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Router/Router.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Game
+    path: ../DotFeather/Router/Router.cs
+    startLine: 14
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet the parent game class.\n"
+  example: []
+  syntax:
+    content: public GameBase Game { get; }
+    parameters: []
+    return:
+      type: DotFeather.GameBase
+      description: ''
+    content.vb: Public ReadOnly Property Game As GameBase
+  overload: DotFeather.Router.Game*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotFeather.Router.#ctor(DotFeather.GameBase)
+  commentId: M:DotFeather.Router.#ctor(DotFeather.GameBase)
+  id: '#ctor(DotFeather.GameBase)'
+  parent: DotFeather.Router
+  langs:
+  - csharp
+  - vb
+  name: Router(GameBase)
+  nameWithType: Router.Router(GameBase)
+  fullName: DotFeather.Router.Router(DotFeather.GameBase)
+  type: Constructor
+  source:
+    remote:
+      path: DotFeather/Router/Router.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: .ctor
+    path: ../DotFeather/Router/Router.cs
+    startLine: 20
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.Router\" data-throw-if-not-resolved=\"false\"></xref> class with the specified parent game class.\n"
+  example: []
+  syntax:
+    content: public Router(GameBase gameBase)
+    parameters:
+    - id: gameBase
+      type: DotFeather.GameBase
+      description: ''
+    content.vb: Public Sub New(gameBase As GameBase)
+  overload: DotFeather.Router.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Router.Update(DotFeather.DFEventArgs)
+  commentId: M:DotFeather.Router.Update(DotFeather.DFEventArgs)
+  id: Update(DotFeather.DFEventArgs)
+  parent: DotFeather.Router
+  langs:
+  - csharp
+  - vb
+  name: Update(DFEventArgs)
+  nameWithType: Router.Update(DFEventArgs)
+  fullName: DotFeather.Router.Update(DotFeather.DFEventArgs)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Router/Router.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Update
+    path: ../DotFeather/Router/Router.cs
+    startLine: 28
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nPlease call when updating the game class.\n"
+  example: []
+  syntax:
+    content: public void Update(DFEventArgs e)
+    parameters:
+    - id: e
+      type: DotFeather.DFEventArgs
+    content.vb: Public Sub Update(e As DFEventArgs)
+  overload: DotFeather.Router.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Router.RegisterScene``1(System.String)
+  commentId: M:DotFeather.Router.RegisterScene``1(System.String)
+  id: RegisterScene``1(System.String)
+  parent: DotFeather.Router
+  langs:
+  - csharp
+  - vb
+  name: RegisterScene<T>(String)
+  nameWithType: Router.RegisterScene<T>(String)
+  fullName: DotFeather.Router.RegisterScene<T>(System.String)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Router/Router.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: RegisterScene
+    path: ../DotFeather/Router/Router.cs
+    startLine: 44
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nRegister a scene by name.\n"
+  example: []
+  syntax:
+    content: >-
+      public void RegisterScene<T>(string name)
+          where T : Scene
+    parameters:
+    - id: name
+      type: System.String
+    typeParameters:
+    - id: T
+    content.vb: Public Sub RegisterScene(Of T As Scene)(name As String)
+  overload: DotFeather.Router.RegisterScene*
+  nameWithType.vb: Router.RegisterScene(Of T)(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotFeather.Router.RegisterScene(Of T)(System.String)
+  name.vb: RegisterScene(Of T)(String)
+- uid: DotFeather.Router.RegisterScene(System.Type,System.String)
+  commentId: M:DotFeather.Router.RegisterScene(System.Type,System.String)
+  id: RegisterScene(System.Type,System.String)
+  parent: DotFeather.Router
+  langs:
+  - csharp
+  - vb
+  name: RegisterScene(Type, String)
+  nameWithType: Router.RegisterScene(Type, String)
+  fullName: DotFeather.Router.RegisterScene(System.Type, System.String)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Router/Router.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: RegisterScene
+    path: ../DotFeather/Router/Router.cs
+    startLine: 52
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nRegister a scene by name.\n"
+  example: []
+  syntax:
+    content: public void RegisterScene(Type t, string name)
+    parameters:
+    - id: t
+      type: System.Type
+    - id: name
+      type: System.String
+    content.vb: Public Sub RegisterScene(t As Type, name As String)
+  overload: DotFeather.Router.RegisterScene*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.Router.ChangeScene``1(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DotFeather.Router.ChangeScene``1(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: ChangeScene``1(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DotFeather.Router
+  langs:
+  - csharp
+  - vb
+  name: ChangeScene<T>(Dictionary<String, Object>)
+  nameWithType: Router.ChangeScene<T>(Dictionary<String, Object>)
+  fullName: DotFeather.Router.ChangeScene<T>(System.Collections.Generic.Dictionary<System.String, System.Object>)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Router/Router.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ChangeScene
+    path: ../DotFeather/Router/Router.cs
+    startLine: 60
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nChange current scene by type.\n"
+  example: []
+  syntax:
+    content: >-
+      public void ChangeScene<T>(Dictionary<string, object> args = null)
+          where T : Scene
+    parameters:
+    - id: args
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    typeParameters:
+    - id: T
+    content.vb: Public Sub ChangeScene(Of T As Scene)(args As Dictionary(Of String, Object) = Nothing)
+  overload: DotFeather.Router.ChangeScene*
+  nameWithType.vb: Router.ChangeScene(Of T)(Dictionary(Of String, Object))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotFeather.Router.ChangeScene(Of T)(System.Collections.Generic.Dictionary(Of System.String, System.Object))
+  name.vb: ChangeScene(Of T)(Dictionary(Of String, Object))
+- uid: DotFeather.Router.ChangeScene(System.Type,System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DotFeather.Router.ChangeScene(System.Type,System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: ChangeScene(System.Type,System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DotFeather.Router
+  langs:
+  - csharp
+  - vb
+  name: ChangeScene(Type, Dictionary<String, Object>)
+  nameWithType: Router.ChangeScene(Type, Dictionary<String, Object>)
+  fullName: DotFeather.Router.ChangeScene(System.Type, System.Collections.Generic.Dictionary<System.String, System.Object>)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Router/Router.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ChangeScene
+    path: ../DotFeather/Router/Router.cs
+    startLine: 68
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nChange current scene by type.\n"
+  example: []
+  syntax:
+    content: public void ChangeScene(Type t, Dictionary<string, object> args = null)
+    parameters:
+    - id: t
+      type: System.Type
+    - id: args
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Sub ChangeScene(t As Type, args As Dictionary(Of String, Object) = Nothing)
+  overload: DotFeather.Router.ChangeScene*
+  nameWithType.vb: Router.ChangeScene(Type, Dictionary(Of String, Object))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotFeather.Router.ChangeScene(System.Type, System.Collections.Generic.Dictionary(Of System.String, System.Object))
+  name.vb: ChangeScene(Type, Dictionary(Of String, Object))
+- uid: DotFeather.Router.ChangeScene(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DotFeather.Router.ChangeScene(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: ChangeScene(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DotFeather.Router
+  langs:
+  - csharp
+  - vb
+  name: ChangeScene(String, Dictionary<String, Object>)
+  nameWithType: Router.ChangeScene(String, Dictionary<String, Object>)
+  fullName: DotFeather.Router.ChangeScene(System.String, System.Collections.Generic.Dictionary<System.String, System.Object>)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Router/Router.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ChangeScene
+    path: ../DotFeather/Router/Router.cs
+    startLine: 76
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nChange current scene by specifying path.\n"
+  example: []
+  syntax:
+    content: public void ChangeScene(string path, Dictionary<string, object> args = null)
+    parameters:
+    - id: path
+      type: System.String
+    - id: args
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Sub ChangeScene(path As String, args As Dictionary(Of String, Object) = Nothing)
+  overload: DotFeather.Router.ChangeScene*
+  nameWithType.vb: Router.ChangeScene(String, Dictionary(Of String, Object))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotFeather.Router.ChangeScene(System.String, System.Collections.Generic.Dictionary(Of System.String, System.Object))
+  name.vb: ChangeScene(String, Dictionary(Of String, Object))
+references:
+- uid: DotFeather
+  commentId: N:DotFeather
+  name: DotFeather
+  nameWithType: DotFeather
+  fullName: DotFeather
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotFeather.Router.Game*
+  commentId: Overload:DotFeather.Router.Game
+  name: Game
+  nameWithType: Router.Game
+  fullName: DotFeather.Router.Game
+- uid: DotFeather.GameBase
+  commentId: T:DotFeather.GameBase
+  parent: DotFeather
+  name: GameBase
+  nameWithType: GameBase
+  fullName: DotFeather.GameBase
+- uid: DotFeather.Router
+  commentId: T:DotFeather.Router
+  parent: DotFeather
+  name: Router
+  nameWithType: Router
+  fullName: DotFeather.Router
+- uid: DotFeather.Router.#ctor*
+  commentId: Overload:DotFeather.Router.#ctor
+  name: Router
+  nameWithType: Router.Router
+  fullName: DotFeather.Router.Router
+- uid: DotFeather.Router.Update*
+  commentId: Overload:DotFeather.Router.Update
+  name: Update
+  nameWithType: Router.Update
+  fullName: DotFeather.Router.Update
+- uid: DotFeather.DFEventArgs
+  commentId: T:DotFeather.DFEventArgs
+  parent: DotFeather
+  name: DFEventArgs
+  nameWithType: DFEventArgs
+  fullName: DotFeather.DFEventArgs
+- uid: DotFeather.Router.RegisterScene*
+  commentId: Overload:DotFeather.Router.RegisterScene
+  name: RegisterScene
+  nameWithType: Router.RegisterScene
+  fullName: DotFeather.Router.RegisterScene
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: DotFeather.Router.ChangeScene*
+  commentId: Overload:DotFeather.Router.ChangeScene
+  name: ChangeScene
+  nameWithType: Router.ChangeScene
+  fullName: DotFeather.Router.ChangeScene
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, Object>
+  nameWithType: Dictionary<String, Object>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

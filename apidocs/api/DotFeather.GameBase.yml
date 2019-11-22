@@ -7,22 +7,35 @@ items:
   children:
   - DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
   - DotFeather.GameBase.BackgroundColor
+  - DotFeather.GameBase.Cls
+  - DotFeather.GameBase.ConsoleCursor
+  - DotFeather.GameBase.ConsoleSize
   - DotFeather.GameBase.Dispose
   - DotFeather.GameBase.Dpi
   - DotFeather.GameBase.Exit(System.Int32)
+  - DotFeather.GameBase.FileDrop
+  - DotFeather.GameBase.ForegroundColor
   - DotFeather.GameBase.Height
   - DotFeather.GameBase.IsCaptureMode
   - DotFeather.GameBase.IsFocused
   - DotFeather.GameBase.IsFullScreen
+  - DotFeather.GameBase.KeyDown
+  - DotFeather.GameBase.KeyPress
+  - DotFeather.GameBase.KeyUp
+  - DotFeather.GameBase.Load
+  - DotFeather.GameBase.OnFileDrop(System.Object,DotFeather.DFFileDroppedEventArgs)
   - DotFeather.GameBase.OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)
+  - DotFeather.GameBase.OnKeyPress(System.Object,DotFeather.DFKeyPressEventArgs)
   - DotFeather.GameBase.OnKeyUp(System.Object,DotFeather.DFKeyEventArgs)
   - DotFeather.GameBase.OnLoad(System.Object,System.EventArgs)
   - DotFeather.GameBase.OnResize(System.Object,System.EventArgs)
   - DotFeather.GameBase.OnUnload(System.Object,System.EventArgs)
   - DotFeather.GameBase.OnUpdate(System.Object,DotFeather.DFEventArgs)
+  - DotFeather.GameBase.Print(System.Object)
   - DotFeather.GameBase.Random
   - DotFeather.GameBase.Randomize(System.Nullable{System.Int32})
   - DotFeather.GameBase.RefreshRate
+  - DotFeather.GameBase.Resize
   - DotFeather.GameBase.Root
   - DotFeather.GameBase.Run
   - DotFeather.GameBase.StartCoroutine(System.Collections.IEnumerator)
@@ -30,6 +43,7 @@ items:
   - DotFeather.GameBase.TakeScreenshot
   - DotFeather.GameBase.Title
   - DotFeather.GameBase.TotalFrame
+  - DotFeather.GameBase.Unload
   - DotFeather.GameBase.Visible
   - DotFeather.GameBase.Width
   - DotFeather.GameBase.WindowMode
@@ -49,7 +63,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GameBase
     path: ../DotFeather/GameBase.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -62,6 +76,8 @@ items:
           Implements IDisposable
   inheritance:
   - System.Object
+  derivedClasses:
+  - DotFeather.RoutingGameBase`1
   implements:
   - System.IDisposable
   inheritedMembers:
@@ -98,11 +114,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: X
     path: ../DotFeather/GameBase.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nウィンドウの X 座標を取得または設定します。\n"
+  summary: "\nGet or set X coordinate of this window.\n"
   example: []
   syntax:
     content: public int X { get; set; }
@@ -135,11 +151,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Y
     path: ../DotFeather/GameBase.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nウィンドウの Y 座標を取得または設定します。\n"
+  summary: "\nGet or set Y coordinate of this window.\n"
   example: []
   syntax:
     content: public int Y { get; set; }
@@ -172,11 +188,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Visible
     path: ../DotFeather/GameBase.cs
-    startLine: 38
+    startLine: 41
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nウィンドウが表示されているかどうかを示す値を取得または設定します。\n"
+  summary: "\nGet or set whether this window is visible.\n"
   example: []
   syntax:
     content: public bool Visible { get; set; }
@@ -209,11 +225,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Width
     path: ../DotFeather/GameBase.cs
-    startLine: 48
+    startLine: 51
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのウィンドウの幅を取得または設定します。\n"
+  summary: "\nGet or set width of this window.\n"
   example: []
   syntax:
     content: public int Width { get; set; }
@@ -247,11 +263,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Height
     path: ../DotFeather/GameBase.cs
-    startLine: 58
+    startLine: 61
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのウィンドウの高さを取得または設定します。\n"
+  summary: "\nGet or set height of this window.\n"
   example: []
   syntax:
     content: public int Height { get; set; }
@@ -285,11 +301,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsFocused
     path: ../DotFeather/GameBase.cs
-    startLine: 68
+    startLine: 71
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのウィンドウが現在フォーカスされているかどうかを取得します。\n"
+  summary: "\nGet whether this window is focused.\n"
   example: []
   syntax:
     content: public bool IsFocused { get; }
@@ -323,11 +339,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BackgroundColor
     path: ../DotFeather/GameBase.cs
-    startLine: 73
+    startLine: 76
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nウィンドウの背景色を取得または設定します。\n"
+  summary: "\nGet or set background color of this window.\n"
   example: []
   syntax:
     content: public Color BackgroundColor { get; set; }
@@ -360,11 +376,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RefreshRate
     path: ../DotFeather/GameBase.cs
-    startLine: 79
+    startLine: 82
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのウィンドウのリフレッシュレートを取得または設定します。\n"
+  summary: "\nGet or set refresh rate of this window.\n"
   example: []
   syntax:
     content: public int RefreshRate { get; }
@@ -398,18 +414,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Title
     path: ../DotFeather/GameBase.cs
-    startLine: 85
+    startLine: 87
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのウィンドウのタイトルを取得または設定します。\n"
+  summary: "\nGet or set title of this window.\n"
   example: []
   syntax:
     content: public string Title { get; set; }
     parameters: []
     return:
       type: System.String
-      description: ウィンドウタイトル。
     content.vb: Public Property Title As String
   overload: DotFeather.GameBase.Title*
   modifiers.csharp:
@@ -436,11 +451,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Root
     path: ../DotFeather/GameBase.cs
-    startLine: 94
+    startLine: 96
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのウィンドウのトップレベル <xref href=\"DotFeather.Container\" data-throw-if-not-resolved=\"false\"></xref> を取得または設定します。\n"
+  summary: "\nGet or set a top level <xref href=\"DotFeather.Container\" data-throw-if-not-resolved=\"false\"></xref>  of this window.\n"
   example: []
   syntax:
     content: public Container Root { get; }
@@ -473,11 +488,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dpi
     path: ../DotFeather/GameBase.cs
-    startLine: 99
+    startLine: 101
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n現在のディスプレイの DPI を取得します。\n"
+  summary: "\nGet DPI of the current display.\n"
   example: []
   syntax:
     content: public float Dpi { get; }
@@ -510,11 +525,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TotalFrame
     path: ../DotFeather/GameBase.cs
-    startLine: 105
+    startLine: 107
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n起動後からのトータルフレーム数を取得します。\n"
+  summary: "\nGet total number of frames since startup.\n"
   example: []
   syntax:
     content: public long TotalFrame { get; }
@@ -548,11 +563,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsCaptureMode
     path: ../DotFeather/GameBase.cs
-    startLine: 110
+    startLine: 112
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nゲームがキャプチャモードであるかどうかを取得します。\n"
+  summary: "\nGet whether the game is in capture mode.\n"
   example: []
   syntax:
     content: public bool IsCaptureMode { get; }
@@ -567,6 +582,119 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: DotFeather.GameBase.ForegroundColor
+  commentId: P:DotFeather.GameBase.ForegroundColor
+  id: ForegroundColor
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: ForegroundColor
+  nameWithType: GameBase.ForegroundColor
+  fullName: DotFeather.GameBase.ForegroundColor
+  type: Property
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ForegroundColor
+    path: ../DotFeather/GameBase.cs
+    startLine: 118
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set a text color of the console.\n"
+  example: []
+  syntax:
+    content: public Color ForegroundColor { get; set; }
+    parameters: []
+    return:
+      type: System.Drawing.Color
+      description: ''
+    content.vb: Public Property ForegroundColor As Color
+  overload: DotFeather.GameBase.ForegroundColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.ConsoleCursor
+  commentId: P:DotFeather.GameBase.ConsoleCursor
+  id: ConsoleCursor
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: ConsoleCursor
+  nameWithType: GameBase.ConsoleCursor
+  fullName: DotFeather.GameBase.ConsoleCursor
+  type: Property
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ConsoleCursor
+    path: ../DotFeather/GameBase.cs
+    startLine: 123
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set a cursor of the console.\n"
+  example: []
+  syntax:
+    content: public VectorInt ConsoleCursor { get; set; }
+    parameters: []
+    return:
+      type: DotFeather.VectorInt
+    content.vb: Public Property ConsoleCursor As VectorInt
+  overload: DotFeather.GameBase.ConsoleCursor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.ConsoleSize
+  commentId: P:DotFeather.GameBase.ConsoleSize
+  id: ConsoleSize
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: ConsoleSize
+  nameWithType: GameBase.ConsoleSize
+  fullName: DotFeather.GameBase.ConsoleSize
+  type: Property
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ConsoleSize
+    path: ../DotFeather/GameBase.cs
+    startLine: 129
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set a font size of the console.\n"
+  example: []
+  syntax:
+    content: public int ConsoleSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Property ConsoleSize As Integer
+  overload: DotFeather.GameBase.ConsoleSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: DotFeather.GameBase.WindowMode
   commentId: P:DotFeather.GameBase.WindowMode
   id: WindowMode
@@ -585,11 +713,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: WindowMode
     path: ../DotFeather/GameBase.cs
-    startLine: 115
+    startLine: 134
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n現在のウィンドウ状態を取得または設定します。\n"
+  summary: "\nGet or set current window mode.\n"
   example: []
   syntax:
     content: public WindowMode WindowMode { get; set; }
@@ -622,11 +750,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsFullScreen
     path: ../DotFeather/GameBase.cs
-    startLine: 144
+    startLine: 163
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nゲームがフルスクリーンであるかどうかを取得または設定します。\n"
+  summary: "\nGet or set whether the game is in fullscreen.\n"
   example: []
   syntax:
     content: public bool IsFullScreen { get; set; }
@@ -639,6 +767,69 @@ items:
   - public
   - get
   - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.Print(System.Object)
+  commentId: M:DotFeather.GameBase.Print(System.Object)
+  id: Print(System.Object)
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: Print(Object)
+  nameWithType: GameBase.Print(Object)
+  fullName: DotFeather.GameBase.Print(System.Object)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Print
+    path: ../DotFeather/GameBase.cs
+    startLine: 169
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public void Print(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    content.vb: Public Sub Print(obj As Object)
+  overload: DotFeather.GameBase.Print*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.Cls
+  commentId: M:DotFeather.GameBase.Cls
+  id: Cls
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: Cls()
+  nameWithType: GameBase.Cls()
+  fullName: DotFeather.GameBase.Cls()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Cls
+    path: ../DotFeather/GameBase.cs
+    startLine: 189
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public void Cls()
+    content.vb: Public Sub Cls
+  overload: DotFeather.GameBase.Cls*
+  modifiers.csharp:
+  - public
   modifiers.vb:
   - Public
 - uid: DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
@@ -659,31 +850,31 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/GameBase.cs
-    startLine: 158
+    startLine: 204
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定したパラメーターで、 <xref href=\"DotFeather.GameBase\" data-throw-if-not-resolved=\"false\"></xref> クラスの新しいインスタンスを初期化します。\n"
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.GameBase\" data-throw-if-not-resolved=\"false\"></xref> class with specified parameters.\n"
   example: []
   syntax:
-    content: protected GameBase(int width, int height, string title = null, int refreshRate = 60, bool isCaptureMode = false)
+    content: protected GameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false)
     parameters:
     - id: width
       type: System.Int32
-      description: 幅.
+      description: ''
     - id: height
       type: System.Int32
-      description: 高さ.
+      description: ''
     - id: title
       type: System.String
-      description: タイトル.
+      description: ''
     - id: refreshRate
       type: System.Int32
-      description: リフレッシュレート.
+      description: ''
     - id: isCaptureMode
       type: System.Boolean
-      description: <xref uid="langword_csharp_true" name="true" href=""></xref> にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。
-    content.vb: Protected Sub New(width As Integer, height As Integer, title As String = Nothing, refreshRate As Integer = 60, isCaptureMode As Boolean = False)
+      description: See <xref uid="langword_csharp_true" name="true" href=""></xref> to enable capture mode. When the capture mode is enabled, a captured folder is created in the current directory, and all frame sequential images are automatically created. Although the operation is very slow, it always behaves as if the refresh rate and FPS match. Please use it for the production of video works.にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。
+    content.vb: Protected Sub New(width As Integer, height As Integer, title As String = "", refreshRate As Integer = 60, isCaptureMode As Boolean = False)
   overload: DotFeather.GameBase.#ctor*
   modifiers.csharp:
   - protected
@@ -707,18 +898,18 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Randomize
     path: ../DotFeather/GameBase.cs
-    startLine: 204
+    startLine: 284
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n乱数を指定したシード値で初期化します。\n"
+  summary: "\nInitializes a random number with the specified seed value.\n"
   example: []
   syntax:
     content: public void Randomize(int? seed = default(int? ))
     parameters:
     - id: seed
       type: System.Nullable{System.Int32}
-      description: シード値。<code>null</code> であれば、 <xref href="System.Random" data-throw-if-not-resolved="false"></xref> の標準のコンストラクターを呼びます。
+      description: Seed value. If <code>null</code>, the default constructor of <xref href="System.Random" data-throw-if-not-resolved="false"></xref> will be called.
     content.vb: Public Sub Randomize(seed As Integer? = Nothing)
   overload: DotFeather.GameBase.Randomize*
   nameWithType.vb: GameBase.Randomize(Nullable(Of Int32))
@@ -746,17 +937,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Run
     path: ../DotFeather/GameBase.cs
-    startLine: 213
+    startLine: 293
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nゲームを実行します。\n"
+  summary: "\nRun the game.\n"
   example: []
   syntax:
     content: public int Run()
     return:
       type: System.Int32
-      description: 返り値。
+      description: Status code.
     content.vb: Public Function Run As Integer
   overload: DotFeather.GameBase.Run*
   modifiers.csharp:
@@ -781,18 +972,18 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Exit
     path: ../DotFeather/GameBase.cs
-    startLine: 223
+    startLine: 303
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nゲームを終了します。\n"
+  summary: "\nEnd the game.\n"
   example: []
   syntax:
     content: public void Exit(int status = 0)
     parameters:
     - id: status
       type: System.Int32
-      description: 返り値。
+      description: Status code.
     content.vb: Public Sub Exit(status As Integer = 0)
   overload: DotFeather.GameBase.Exit*
   modifiers.csharp:
@@ -817,7 +1008,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/GameBase.cs
-    startLine: 236
+    startLine: 316
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -859,16 +1050,16 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TakeScreenshot
     path: ../DotFeather/GameBase.cs
-    startLine: 244
+    startLine: 324
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n現在の画面のスクリーンショットを撮影します。\n"
+  summary: "\nTake a screenshot of the current screen.\n"
   example: []
   syntax:
     content: public Bitmap TakeScreenshot()
     return:
-      type: System.Drawing.Bitmap
+      type: Bitmap
     content.vb: Public Function TakeScreenshot As Bitmap
   overload: DotFeather.GameBase.TakeScreenshot*
   modifiers.csharp:
@@ -893,11 +1084,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: StartCoroutine
     path: ../DotFeather/GameBase.cs
-    startLine: 263
+    startLine: 343
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nコルーチンを開始します。\n"
+  summary: "\nStart the coroutine.\n"
   example: []
   syntax:
     content: public Coroutine StartCoroutine(IEnumerator coroutine)
@@ -930,11 +1121,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: StopCoroutine
     path: ../DotFeather/GameBase.cs
-    startLine: 268
+    startLine: 348
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nコルーチンを停止します。\n"
+  summary: "\nStop the coroutine.\n"
   example: []
   syntax:
     content: public void StopCoroutine(Coroutine coroutine)
@@ -965,11 +1156,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/GameBase.cs
-    startLine: 273
+    startLine: 353
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nゲームのフレーム更新時に呼び出されます。このメソッドをオーバーライドして、ゲームのメインループを記述してください。\n"
+  summary: "\nCalled when the game frame is updated. Override this method to write the main loop of the game.\n"
   example: []
   syntax:
     content: protected virtual void OnUpdate(object sender, DFEventArgs e)
@@ -1004,11 +1195,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnLoad
     path: ../DotFeather/GameBase.cs
-    startLine: 278
+    startLine: 358
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nウィンドウが開かれたときに一度だけ呼び出されます。\n"
+  summary: "\nCalled once when the window is opened.\n"
   example: []
   syntax:
     content: protected virtual void OnLoad(object sender, EventArgs e)
@@ -1043,11 +1234,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUnload
     path: ../DotFeather/GameBase.cs
-    startLine: 283
+    startLine: 363
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nウィンドウが閉じられるときに一度だけ呼び出されます。\n"
+  summary: "\nCalled once when the window is closed.\n"
   example: []
   syntax:
     content: protected virtual void OnUnload(object sender, EventArgs e)
@@ -1058,6 +1249,45 @@ items:
       type: System.EventArgs
     content.vb: Protected Overridable Sub OnUnload(sender As Object, e As EventArgs)
   overload: DotFeather.GameBase.OnUnload*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: DotFeather.GameBase.OnFileDrop(System.Object,DotFeather.DFFileDroppedEventArgs)
+  commentId: M:DotFeather.GameBase.OnFileDrop(System.Object,DotFeather.DFFileDroppedEventArgs)
+  id: OnFileDrop(System.Object,DotFeather.DFFileDroppedEventArgs)
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: OnFileDrop(Object, DFFileDroppedEventArgs)
+  nameWithType: GameBase.OnFileDrop(Object, DFFileDroppedEventArgs)
+  fullName: DotFeather.GameBase.OnFileDrop(System.Object, DotFeather.DFFileDroppedEventArgs)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: OnFileDrop
+    path: ../DotFeather/GameBase.cs
+    startLine: 368
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nCalled once when the window is closed.\n"
+  example: []
+  syntax:
+    content: protected virtual void OnFileDrop(object sender, DFFileDroppedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DotFeather.DFFileDroppedEventArgs
+    content.vb: Protected Overridable Sub OnFileDrop(sender As Object, e As DFFileDroppedEventArgs)
+  overload: DotFeather.GameBase.OnFileDrop*
   modifiers.csharp:
   - protected
   - virtual
@@ -1082,11 +1312,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnResize
     path: ../DotFeather/GameBase.cs
-    startLine: 288
+    startLine: 373
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nウィンドウがリサイズされたときに呼び出されます。\n"
+  summary: "\nCalled when the window is resized.\n"
   example: []
   syntax:
     content: protected virtual void OnResize(object sender, EventArgs e)
@@ -1097,6 +1327,45 @@ items:
       type: System.EventArgs
     content.vb: Protected Overridable Sub OnResize(sender As Object, e As EventArgs)
   overload: DotFeather.GameBase.OnResize*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: DotFeather.GameBase.OnKeyPress(System.Object,DotFeather.DFKeyPressEventArgs)
+  commentId: M:DotFeather.GameBase.OnKeyPress(System.Object,DotFeather.DFKeyPressEventArgs)
+  id: OnKeyPress(System.Object,DotFeather.DFKeyPressEventArgs)
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: OnKeyPress(Object, DFKeyPressEventArgs)
+  nameWithType: GameBase.OnKeyPress(Object, DFKeyPressEventArgs)
+  fullName: DotFeather.GameBase.OnKeyPress(System.Object, DotFeather.DFKeyPressEventArgs)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: OnKeyPress
+    path: ../DotFeather/GameBase.cs
+    startLine: 378
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nCalled when the key pressed.\n"
+  example: []
+  syntax:
+    content: protected virtual void OnKeyPress(object sender, DFKeyPressEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DotFeather.DFKeyPressEventArgs
+    content.vb: Protected Overridable Sub OnKeyPress(sender As Object, e As DFKeyPressEventArgs)
+  overload: DotFeather.GameBase.OnKeyPress*
   modifiers.csharp:
   - protected
   - virtual
@@ -1121,11 +1390,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyDown
     path: ../DotFeather/GameBase.cs
-    startLine: 293
+    startLine: 383
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーが押されたときに呼び出されます。\n"
+  summary: "\nCalled when the key pressed.\n"
   example: []
   syntax:
     content: protected virtual void OnKeyDown(object sender, DFKeyEventArgs e)
@@ -1160,11 +1429,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyUp
     path: ../DotFeather/GameBase.cs
-    startLine: 298
+    startLine: 388
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nキーが離されたときに呼び出されます。\n"
+  summary: "\nCalled when the key released.\n"
   example: []
   syntax:
     content: protected virtual void OnKeyUp(object sender, DFKeyEventArgs e)
@@ -1199,11 +1468,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Random
     path: ../DotFeather/GameBase.cs
-    startLine: 303
+    startLine: 393
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n乱数生成器を取得します。\n"
+  summary: "\nGet a random generator.\n"
   example: []
   syntax:
     content: protected Random Random { get; }
@@ -1218,6 +1487,223 @@ items:
   modifiers.vb:
   - Protected
   - ReadOnly
+- uid: DotFeather.GameBase.Load
+  commentId: E:DotFeather.GameBase.Load
+  id: Load
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: Load
+  nameWithType: GameBase.Load
+  fullName: DotFeather.GameBase.Load
+  type: Event
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Load
+    path: ../DotFeather/GameBase.cs
+    startLine: 464
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public event EventHandler<EventArgs> Load
+    return:
+      type: System.EventHandler{System.EventArgs}
+    content.vb: Public Event Load As EventHandler(Of EventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.Unload
+  commentId: E:DotFeather.GameBase.Unload
+  id: Unload
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: Unload
+  nameWithType: GameBase.Unload
+  fullName: DotFeather.GameBase.Unload
+  type: Event
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Unload
+    path: ../DotFeather/GameBase.cs
+    startLine: 465
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public event EventHandler<EventArgs> Unload
+    return:
+      type: System.EventHandler{System.EventArgs}
+    content.vb: Public Event Unload As EventHandler(Of EventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.FileDrop
+  commentId: E:DotFeather.GameBase.FileDrop
+  id: FileDrop
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: FileDrop
+  nameWithType: GameBase.FileDrop
+  fullName: DotFeather.GameBase.FileDrop
+  type: Event
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: FileDrop
+    path: ../DotFeather/GameBase.cs
+    startLine: 466
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public event EventHandler<DFFileDroppedEventArgs> FileDrop
+    return:
+      type: System.EventHandler{DotFeather.DFFileDroppedEventArgs}
+    content.vb: Public Event FileDrop As EventHandler(Of DFFileDroppedEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.Resize
+  commentId: E:DotFeather.GameBase.Resize
+  id: Resize
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: Resize
+  nameWithType: GameBase.Resize
+  fullName: DotFeather.GameBase.Resize
+  type: Event
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Resize
+    path: ../DotFeather/GameBase.cs
+    startLine: 467
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public event EventHandler<EventArgs> Resize
+    return:
+      type: System.EventHandler{System.EventArgs}
+    content.vb: Public Event Resize As EventHandler(Of EventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.KeyDown
+  commentId: E:DotFeather.GameBase.KeyDown
+  id: KeyDown
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: KeyDown
+  nameWithType: GameBase.KeyDown
+  fullName: DotFeather.GameBase.KeyDown
+  type: Event
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: KeyDown
+    path: ../DotFeather/GameBase.cs
+    startLine: 468
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public event EventHandler<DFKeyEventArgs> KeyDown
+    return:
+      type: System.EventHandler{DotFeather.DFKeyEventArgs}
+    content.vb: Public Event KeyDown As EventHandler(Of DFKeyEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.KeyPress
+  commentId: E:DotFeather.GameBase.KeyPress
+  id: KeyPress
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: KeyPress
+  nameWithType: GameBase.KeyPress
+  fullName: DotFeather.GameBase.KeyPress
+  type: Event
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: KeyPress
+    path: ../DotFeather/GameBase.cs
+    startLine: 469
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public event EventHandler<DFKeyPressEventArgs> KeyPress
+    return:
+      type: System.EventHandler{DotFeather.DFKeyPressEventArgs}
+    content.vb: Public Event KeyPress As EventHandler(Of DFKeyPressEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.KeyUp
+  commentId: E:DotFeather.GameBase.KeyUp
+  id: KeyUp
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: KeyUp
+  nameWithType: GameBase.KeyUp
+  fullName: DotFeather.GameBase.KeyUp
+  type: Event
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: KeyUp
+    path: ../DotFeather/GameBase.cs
+    startLine: 470
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public event EventHandler<DFKeyEventArgs> KeyUp
+    return:
+      type: System.EventHandler{DotFeather.DFKeyEventArgs}
+    content.vb: Public Event KeyUp As EventHandler(Of DFKeyEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: DotFeather
   commentId: N:DotFeather
@@ -1642,6 +2128,27 @@ references:
   name: IsCaptureMode
   nameWithType: GameBase.IsCaptureMode
   fullName: DotFeather.GameBase.IsCaptureMode
+- uid: DotFeather.GameBase.ForegroundColor*
+  commentId: Overload:DotFeather.GameBase.ForegroundColor
+  name: ForegroundColor
+  nameWithType: GameBase.ForegroundColor
+  fullName: DotFeather.GameBase.ForegroundColor
+- uid: DotFeather.GameBase.ConsoleCursor*
+  commentId: Overload:DotFeather.GameBase.ConsoleCursor
+  name: ConsoleCursor
+  nameWithType: GameBase.ConsoleCursor
+  fullName: DotFeather.GameBase.ConsoleCursor
+- uid: DotFeather.VectorInt
+  commentId: T:DotFeather.VectorInt
+  parent: DotFeather
+  name: VectorInt
+  nameWithType: VectorInt
+  fullName: DotFeather.VectorInt
+- uid: DotFeather.GameBase.ConsoleSize*
+  commentId: Overload:DotFeather.GameBase.ConsoleSize
+  name: ConsoleSize
+  nameWithType: GameBase.ConsoleSize
+  fullName: DotFeather.GameBase.ConsoleSize
 - uid: DotFeather.GameBase.WindowMode*
   commentId: Overload:DotFeather.GameBase.WindowMode
   name: WindowMode
@@ -1658,6 +2165,16 @@ references:
   name: IsFullScreen
   nameWithType: GameBase.IsFullScreen
   fullName: DotFeather.GameBase.IsFullScreen
+- uid: DotFeather.GameBase.Print*
+  commentId: Overload:DotFeather.GameBase.Print
+  name: Print
+  nameWithType: GameBase.Print
+  fullName: DotFeather.GameBase.Print
+- uid: DotFeather.GameBase.Cls*
+  commentId: Overload:DotFeather.GameBase.Cls
+  name: Cls
+  nameWithType: GameBase.Cls
+  fullName: DotFeather.GameBase.Cls
 - uid: DotFeather.GameBase
   commentId: T:DotFeather.GameBase
   parent: DotFeather
@@ -1776,7 +2293,32 @@ references:
   fullName: DotFeather.GameBase.Exit
 - uid: DotFeather.GameBase.Dispose
   commentId: M:DotFeather.GameBase.Dispose
-  isExternal: true
+  parent: DotFeather.GameBase
+  name: Dispose()
+  nameWithType: GameBase.Dispose()
+  fullName: DotFeather.GameBase.Dispose()
+  spec.csharp:
+  - uid: DotFeather.GameBase.Dispose
+    name: Dispose
+    nameWithType: GameBase.Dispose
+    fullName: DotFeather.GameBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotFeather.GameBase.Dispose
+    name: Dispose
+    nameWithType: GameBase.Dispose
+    fullName: DotFeather.GameBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: DotFeather.GameBase.Dispose*
   commentId: Overload:DotFeather.GameBase.Dispose
   name: Dispose
@@ -1818,13 +2360,12 @@ references:
   name: TakeScreenshot
   nameWithType: GameBase.TakeScreenshot
   fullName: DotFeather.GameBase.TakeScreenshot
-- uid: System.Drawing.Bitmap
-  commentId: T:System.Drawing.Bitmap
-  parent: System.Drawing
+- uid: Bitmap
+  commentId: '!:Bitmap'
   isExternal: true
   name: Bitmap
   nameWithType: Bitmap
-  fullName: System.Drawing.Bitmap
+  fullName: Bitmap
 - uid: DotFeather.GameBase.StartCoroutine*
   commentId: Overload:DotFeather.GameBase.StartCoroutine
   name: StartCoroutine
@@ -1882,11 +2423,33 @@ references:
   name: OnUnload
   nameWithType: GameBase.OnUnload
   fullName: DotFeather.GameBase.OnUnload
+- uid: DotFeather.GameBase.OnFileDrop*
+  commentId: Overload:DotFeather.GameBase.OnFileDrop
+  name: OnFileDrop
+  nameWithType: GameBase.OnFileDrop
+  fullName: DotFeather.GameBase.OnFileDrop
+- uid: DotFeather.DFFileDroppedEventArgs
+  commentId: T:DotFeather.DFFileDroppedEventArgs
+  parent: DotFeather
+  name: DFFileDroppedEventArgs
+  nameWithType: DFFileDroppedEventArgs
+  fullName: DotFeather.DFFileDroppedEventArgs
 - uid: DotFeather.GameBase.OnResize*
   commentId: Overload:DotFeather.GameBase.OnResize
   name: OnResize
   nameWithType: GameBase.OnResize
   fullName: DotFeather.GameBase.OnResize
+- uid: DotFeather.GameBase.OnKeyPress*
+  commentId: Overload:DotFeather.GameBase.OnKeyPress
+  name: OnKeyPress
+  nameWithType: GameBase.OnKeyPress
+  fullName: DotFeather.GameBase.OnKeyPress
+- uid: DotFeather.DFKeyPressEventArgs
+  commentId: T:DotFeather.DFKeyPressEventArgs
+  parent: DotFeather
+  name: DFKeyPressEventArgs
+  nameWithType: DFKeyPressEventArgs
+  fullName: DotFeather.DFKeyPressEventArgs
 - uid: DotFeather.GameBase.OnKeyDown*
   commentId: Overload:DotFeather.GameBase.OnKeyDown
   name: OnKeyDown
@@ -1908,3 +2471,212 @@ references:
   name: Random
   nameWithType: GameBase.Random
   fullName: DotFeather.GameBase.Random
+- uid: System.EventHandler{System.EventArgs}
+  commentId: T:System.EventHandler{System.EventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<EventArgs>
+  nameWithType: EventHandler<EventArgs>
+  fullName: System.EventHandler<System.EventArgs>
+  nameWithType.vb: EventHandler(Of EventArgs)
+  fullName.vb: System.EventHandler(Of System.EventArgs)
+  name.vb: EventHandler(Of EventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.EventArgs
+    name: EventArgs
+    nameWithType: EventArgs
+    fullName: System.EventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.EventArgs
+    name: EventArgs
+    nameWithType: EventArgs
+    fullName: System.EventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler{DotFeather.DFFileDroppedEventArgs}
+  commentId: T:System.EventHandler{DotFeather.DFFileDroppedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<DFFileDroppedEventArgs>
+  nameWithType: EventHandler<DFFileDroppedEventArgs>
+  fullName: System.EventHandler<DotFeather.DFFileDroppedEventArgs>
+  nameWithType.vb: EventHandler(Of DFFileDroppedEventArgs)
+  fullName.vb: System.EventHandler(Of DotFeather.DFFileDroppedEventArgs)
+  name.vb: EventHandler(Of DFFileDroppedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DotFeather.DFFileDroppedEventArgs
+    name: DFFileDroppedEventArgs
+    nameWithType: DFFileDroppedEventArgs
+    fullName: DotFeather.DFFileDroppedEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DotFeather.DFFileDroppedEventArgs
+    name: DFFileDroppedEventArgs
+    nameWithType: DFFileDroppedEventArgs
+    fullName: DotFeather.DFFileDroppedEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler{DotFeather.DFKeyEventArgs}
+  commentId: T:System.EventHandler{DotFeather.DFKeyEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<DFKeyEventArgs>
+  nameWithType: EventHandler<DFKeyEventArgs>
+  fullName: System.EventHandler<DotFeather.DFKeyEventArgs>
+  nameWithType.vb: EventHandler(Of DFKeyEventArgs)
+  fullName.vb: System.EventHandler(Of DotFeather.DFKeyEventArgs)
+  name.vb: EventHandler(Of DFKeyEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DotFeather.DFKeyEventArgs
+    name: DFKeyEventArgs
+    nameWithType: DFKeyEventArgs
+    fullName: DotFeather.DFKeyEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DotFeather.DFKeyEventArgs
+    name: DFKeyEventArgs
+    nameWithType: DFKeyEventArgs
+    fullName: DotFeather.DFKeyEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler{DotFeather.DFKeyPressEventArgs}
+  commentId: T:System.EventHandler{DotFeather.DFKeyPressEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<DFKeyPressEventArgs>
+  nameWithType: EventHandler<DFKeyPressEventArgs>
+  fullName: System.EventHandler<DotFeather.DFKeyPressEventArgs>
+  nameWithType.vb: EventHandler(Of DFKeyPressEventArgs)
+  fullName.vb: System.EventHandler(Of DotFeather.DFKeyPressEventArgs)
+  name.vb: EventHandler(Of DFKeyPressEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DotFeather.DFKeyPressEventArgs
+    name: DFKeyPressEventArgs
+    nameWithType: DFKeyPressEventArgs
+    fullName: DotFeather.DFKeyPressEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DotFeather.DFKeyPressEventArgs
+    name: DFKeyPressEventArgs
+    nameWithType: DFKeyPressEventArgs
+    fullName: DotFeather.DFKeyPressEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )

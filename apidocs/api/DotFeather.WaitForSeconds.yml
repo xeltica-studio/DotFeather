@@ -25,7 +25,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した秒数だけ待機するイールド命令です。\n"
+  summary: "\nA yield instruction that waits for a specified number of seconds.\n"
   example: []
   syntax:
     content: 'public class WaitForSeconds : YieldInstruction'
@@ -105,18 +105,15 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Coroutines/YieldInstructions/WaitForSeconds.cs
-    startLine: 20
+    startLine: 16
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した時間待機するイールド命令を生成します。\n"
-  example: []
   syntax:
     content: public WaitForSeconds(float time)
     parameters:
     - id: time
       type: System.Single
-      description: ''
     content.vb: Public Sub New(time As Single)
   overload: DotFeather.WaitForSeconds.#ctor*
   modifiers.csharp:

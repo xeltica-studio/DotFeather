@@ -5,9 +5,9 @@ items:
   id: CoroutineRunner
   parent: DotFeather
   children:
+  - DotFeather.CoroutineRunner.Clear
   - DotFeather.CoroutineRunner.Start(System.Collections.IEnumerator)
   - DotFeather.CoroutineRunner.Stop(DotFeather.Coroutine)
-  - DotFeather.CoroutineRunner.ToYieldInstruction(System.Object)
   langs:
   - csharp
   - vb
@@ -26,7 +26,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nコルーチンを管理する静的クラスです。\n"
+  summary: "\nA static coroutine manager class.\n"
   example: []
   syntax:
     content: public static class CoroutineRunner
@@ -70,7 +70,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nコルーチンを開始します。\n"
+  summary: "\nStart the specified coroutine.\n"
   example: []
   syntax:
     content: public static Coroutine Start(IEnumerator coroutine)
@@ -105,11 +105,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Stop
     path: ../DotFeather/Coroutines/CoroutineRunner.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nコルーチンを停止します。\n"
+  summary: "\nStop the specified coroutine.\n"
   example: []
   syntax:
     content: public static void Stop(Coroutine coroutine)
@@ -124,40 +124,34 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: DotFeather.CoroutineRunner.ToYieldInstruction(System.Object)
-  commentId: M:DotFeather.CoroutineRunner.ToYieldInstruction(System.Object)
-  id: ToYieldInstruction(System.Object)
+- uid: DotFeather.CoroutineRunner.Clear
+  commentId: M:DotFeather.CoroutineRunner.Clear
+  id: Clear
   parent: DotFeather.CoroutineRunner
   langs:
   - csharp
   - vb
-  name: ToYieldInstruction(Object)
-  nameWithType: CoroutineRunner.ToYieldInstruction(Object)
-  fullName: DotFeather.CoroutineRunner.ToYieldInstruction(System.Object)
+  name: Clear()
+  nameWithType: CoroutineRunner.Clear()
+  fullName: DotFeather.CoroutineRunner.Clear()
   type: Method
   source:
     remote:
       path: DotFeather/Coroutines/CoroutineRunner.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: ToYieldInstruction
+    id: Clear
     path: ../DotFeather/Coroutines/CoroutineRunner.cs
-    startLine: 63
+    startLine: 36
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n任意のオブジェクトをイールド命令に変換します。\n"
+  summary: "\nStop all running coroutines.\n"
   example: []
   syntax:
-    content: public static YieldInstruction ToYieldInstruction(object obj)
-    parameters:
-    - id: obj
-      type: System.Object
-    return:
-      type: DotFeather.YieldInstruction
-      description: イールド命令であればそのまま、<xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> であればコルーチン、その他であれば <xref href="DotFeather.WaitUntilNextFrame" data-throw-if-not-resolved="false"></xref> のインスタンスを返します。
-    content.vb: Public Shared Function ToYieldInstruction(obj As Object) As YieldInstruction
-  overload: DotFeather.CoroutineRunner.ToYieldInstruction*
+    content: public static void Clear()
+    content.vb: Public Shared Sub Clear
+  overload: DotFeather.CoroutineRunner.Clear*
   modifiers.csharp:
   - public
   - static
@@ -491,19 +485,8 @@ references:
   name: Stop
   nameWithType: CoroutineRunner.Stop
   fullName: DotFeather.CoroutineRunner.Stop
-- uid: DotFeather.WaitUntilNextFrame
-  commentId: T:DotFeather.WaitUntilNextFrame
-  name: WaitUntilNextFrame
-  nameWithType: WaitUntilNextFrame
-  fullName: DotFeather.WaitUntilNextFrame
-- uid: DotFeather.CoroutineRunner.ToYieldInstruction*
-  commentId: Overload:DotFeather.CoroutineRunner.ToYieldInstruction
-  name: ToYieldInstruction
-  nameWithType: CoroutineRunner.ToYieldInstruction
-  fullName: DotFeather.CoroutineRunner.ToYieldInstruction
-- uid: DotFeather.YieldInstruction
-  commentId: T:DotFeather.YieldInstruction
-  parent: DotFeather
-  name: YieldInstruction
-  nameWithType: YieldInstruction
-  fullName: DotFeather.YieldInstruction
+- uid: DotFeather.CoroutineRunner.Clear*
+  commentId: Overload:DotFeather.CoroutineRunner.Clear
+  name: Clear
+  nameWithType: CoroutineRunner.Clear
+  fullName: DotFeather.CoroutineRunner.Clear

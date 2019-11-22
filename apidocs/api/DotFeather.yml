@@ -6,30 +6,38 @@ items:
   children:
   - DotFeather.ALBuffer
   - DotFeather.ALSource
+  - DotFeather.AnimatingSprite
   - DotFeather.AudioPlayer
   - DotFeather.Container
   - DotFeather.Coroutine
   - DotFeather.CoroutineRunner
   - DotFeather.DFEventArgs
+  - DotFeather.DFFileDroppedEventArgs
   - DotFeather.DFKey
   - DotFeather.DFKeyboard
   - DotFeather.DFKeyCode
   - DotFeather.DFKeyEventArgs
+  - DotFeather.DFKeyPressEventArgs
   - DotFeather.DFMath
   - DotFeather.DFMouse
+  - DotFeather.Font
+  - DotFeather.FontStyle
   - DotFeather.GameBase
   - DotFeather.GLContext
   - DotFeather.Graphic
   - DotFeather.IAudioSource
   - DotFeather.IDrawable
-  - DotFeather.Input
   - DotFeather.ITile
   - DotFeather.MiscUtility
   - DotFeather.NineSliceSprite
   - DotFeather.OpenTKManagedHandleBase`1
   - DotFeather.RandomExtension
+  - DotFeather.Router
+  - DotFeather.RoutingGameBase`1
+  - DotFeather.Scene
   - DotFeather.SpaceConverter
   - DotFeather.Sprite
+  - DotFeather.StringExtension
   - DotFeather.TextDrawable
   - DotFeather.Texture2D
   - DotFeather.TextureDrawableBase
@@ -39,6 +47,7 @@ items:
   - DotFeather.Time
   - DotFeather.TypesConverterExtension
   - DotFeather.Vector
+  - DotFeather.VectorInt
   - DotFeather.VorbisAudioSource
   - DotFeather.WaitForSeconds
   - DotFeather.WaitUntil
@@ -126,6 +135,11 @@ references:
   name: RandomExtension
   nameWithType: RandomExtension
   fullName: DotFeather.RandomExtension
+- uid: DotFeather.StringExtension
+  commentId: T:DotFeather.StringExtension
+  name: StringExtension
+  nameWithType: StringExtension
+  fullName: DotFeather.StringExtension
 - uid: DotFeather.TypesConverterExtension
   commentId: T:DotFeather.TypesConverterExtension
   parent: DotFeather
@@ -138,12 +152,29 @@ references:
   name: GameBase
   nameWithType: GameBase
   fullName: DotFeather.GameBase
+- uid: DotFeather.AnimatingSprite
+  commentId: T:DotFeather.AnimatingSprite
+  name: AnimatingSprite
+  nameWithType: AnimatingSprite
+  fullName: DotFeather.AnimatingSprite
 - uid: DotFeather.Container
   commentId: T:DotFeather.Container
   parent: DotFeather
   name: Container
   nameWithType: Container
   fullName: DotFeather.Container
+- uid: DotFeather.Font
+  commentId: T:DotFeather.Font
+  parent: DotFeather
+  name: Font
+  nameWithType: Font
+  fullName: DotFeather.Font
+- uid: DotFeather.FontStyle
+  commentId: T:DotFeather.FontStyle
+  parent: DotFeather
+  name: FontStyle
+  nameWithType: FontStyle
+  fullName: DotFeather.FontStyle
 - uid: DotFeather.Graphic
   commentId: T:DotFeather.Graphic
   parent: DotFeather
@@ -230,7 +261,6 @@ references:
   fullName: DotFeather.MiscUtility
 - uid: DotFeather.OpenTKManagedHandleBase`1
   commentId: T:DotFeather.OpenTKManagedHandleBase`1
-  parent: DotFeather
   name: OpenTKManagedHandleBase<T>
   nameWithType: OpenTKManagedHandleBase<T>
   fullName: DotFeather.OpenTKManagedHandleBase<T>
@@ -267,6 +297,7 @@ references:
     fullName: )
 - uid: DotFeather.SpaceConverter
   commentId: T:DotFeather.SpaceConverter
+  parent: DotFeather
   name: SpaceConverter
   nameWithType: SpaceConverter
   fullName: DotFeather.SpaceConverter
@@ -275,6 +306,12 @@ references:
   name: TextureDrawer
   nameWithType: TextureDrawer
   fullName: DotFeather.TextureDrawer
+- uid: DotFeather.DFFileDroppedEventArgs
+  commentId: T:DotFeather.DFFileDroppedEventArgs
+  parent: DotFeather
+  name: DFFileDroppedEventArgs
+  nameWithType: DFFileDroppedEventArgs
+  fullName: DotFeather.DFFileDroppedEventArgs
 - uid: DotFeather.DFKey
   commentId: T:DotFeather.DFKey
   parent: DotFeather
@@ -283,7 +320,6 @@ references:
   fullName: DotFeather.DFKey
 - uid: DotFeather.DFKeyboard
   commentId: T:DotFeather.DFKeyboard
-  parent: DotFeather
   name: DFKeyboard
   nameWithType: DFKeyboard
   fullName: DotFeather.DFKeyboard
@@ -299,23 +335,76 @@ references:
   name: DFKeyEventArgs
   nameWithType: DFKeyEventArgs
   fullName: DotFeather.DFKeyEventArgs
+- uid: DotFeather.DFKeyPressEventArgs
+  commentId: T:DotFeather.DFKeyPressEventArgs
+  parent: DotFeather
+  name: DFKeyPressEventArgs
+  nameWithType: DFKeyPressEventArgs
+  fullName: DotFeather.DFKeyPressEventArgs
 - uid: DotFeather.DFMouse
   commentId: T:DotFeather.DFMouse
-  parent: DotFeather
   name: DFMouse
   nameWithType: DFMouse
   fullName: DotFeather.DFMouse
-- uid: DotFeather.Input
-  commentId: T:DotFeather.Input
-  name: Input
-  nameWithType: Input
-  fullName: DotFeather.Input
 - uid: DotFeather.Vector
   commentId: T:DotFeather.Vector
   parent: DotFeather
   name: Vector
   nameWithType: Vector
   fullName: DotFeather.Vector
+- uid: DotFeather.VectorInt
+  commentId: T:DotFeather.VectorInt
+  parent: DotFeather
+  name: VectorInt
+  nameWithType: VectorInt
+  fullName: DotFeather.VectorInt
+- uid: DotFeather.Router
+  commentId: T:DotFeather.Router
+  parent: DotFeather
+  name: Router
+  nameWithType: Router
+  fullName: DotFeather.Router
+- uid: DotFeather.RoutingGameBase`1
+  commentId: T:DotFeather.RoutingGameBase`1
+  name: RoutingGameBase<T>
+  nameWithType: RoutingGameBase<T>
+  fullName: DotFeather.RoutingGameBase<T>
+  nameWithType.vb: RoutingGameBase(Of T)
+  fullName.vb: DotFeather.RoutingGameBase(Of T)
+  name.vb: RoutingGameBase(Of T)
+  spec.csharp:
+  - uid: DotFeather.RoutingGameBase`1
+    name: RoutingGameBase
+    nameWithType: RoutingGameBase
+    fullName: DotFeather.RoutingGameBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DotFeather.RoutingGameBase`1
+    name: RoutingGameBase
+    nameWithType: RoutingGameBase
+    fullName: DotFeather.RoutingGameBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotFeather.Scene
+  commentId: T:DotFeather.Scene
+  name: Scene
+  nameWithType: Scene
+  fullName: DotFeather.Scene
 - uid: DotFeather.Time
   commentId: T:DotFeather.Time
   name: Time

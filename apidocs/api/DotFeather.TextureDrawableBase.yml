@@ -34,7 +34,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather.Texture2D\" data-throw-if-not-resolved=\"false\"></xref> を描画するオブジェクトの抽象クラスです。\n"
+  summary: "\nAn abstract class for objects that draw a <xref href=\"DotFeather.Texture2D\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: 'public abstract class TextureDrawableBase : IDrawable'
@@ -82,12 +82,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 12
+    startLine: 9
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n描画の優先順位を取得または設定します。数が小さいほど奥に描画されます。\n"
-  example: []
   syntax:
     content: public virtual int ZOrder { get; set; }
     parameters: []
@@ -123,12 +121,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 17
+    startLine: 11
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトの名前を取得または設定します。\n"
-  example: []
   syntax:
     content: public virtual string Name { get; set; }
     parameters: []
@@ -164,12 +160,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 22
+    startLine: 13
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトの座標を取得または設定します。\n"
-  example: []
   syntax:
     content: public virtual Vector Location { get; set; }
     parameters: []
@@ -205,12 +199,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 27
+    startLine: 15
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトの角度を取得または設定します。\n"
-  example: []
   syntax:
     content: public virtual float Angle { get; set; }
     parameters: []
@@ -246,12 +238,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 32
+    startLine: 17
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトのスケーリングを取得または設定します。\n"
-  example: []
   syntax:
     content: public virtual Vector Scale { get; set; }
     parameters: []
@@ -287,11 +277,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Width
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 37
+    startLine: 22
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトの幅を取得または設定します。\n"
+  summary: "\nGet or set width of this object.\n"
   example: []
   syntax:
     content: public virtual float Width { get; set; }
@@ -326,11 +316,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Height
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 43
+    startLine: 28
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトの高さを取得または設定します。\n"
+  summary: "\nGet or set height of this object.\n"
   example: []
   syntax:
     content: public virtual float Height { get; set; }
@@ -366,11 +356,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Color
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 49
+    startLine: 34
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトの高さを取得または設定します。\n"
+  summary: "\nGet or set color of this object.\n"
   example: []
   syntax:
     content: public virtual Color? Color { get; set; }
@@ -406,11 +396,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Texture
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 54
+    startLine: 39
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nテクスチャを取得します。\n"
+  summary: "\nGet a texture of this object.\n"
   example: []
   syntax:
     content: public virtual Texture2D Texture { get; protected set; }
@@ -447,11 +437,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 59
+    startLine: 44
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこのオブジェクトを破棄します。\n"
+  summary: "\nDispose this object.\n"
   example: []
   syntax:
     content: public virtual void Destroy()
@@ -483,11 +473,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 66
+    startLine: 51
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n描画します。\n"
+  summary: "\nDraw the texture.\n"
   example: []
   syntax:
     content: public virtual void Draw(GameBase game, Vector location)

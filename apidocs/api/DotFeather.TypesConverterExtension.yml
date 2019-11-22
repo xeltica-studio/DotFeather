@@ -5,7 +5,7 @@ items:
   id: TypesConverterExtension
   parent: DotFeather
   children:
-  - DotFeather.TypesConverterExtension.ToDF(OpenTK.Input.Key)
+  - DotFeather.TypesConverterExtension.ToDF(Key)
   - DotFeather.TypesConverterExtension.ToTK(DotFeather.DFKeyCode)
   langs:
   - csharp
@@ -25,7 +25,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather\" data-throw-if-not-resolved=\"false\"></xref> および <xref href=\"OpenTK\" data-throw-if-not-resolved=\"false\"></xref> 間における類似した型の相互変換をする、拡張メソッドを追加します。\n"
+  summary: "\n<xref href=\"DotFeather\" data-throw-if-not-resolved=\"false\"></xref> および <see cref=\"!:OpenTK\"></see> 間における類似した型の相互変換をする、拡張メソッドを追加します。\n"
   example: []
   syntax:
     content: public static class TypesConverterExtension
@@ -47,9 +47,9 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: DotFeather.TypesConverterExtension.ToDF(OpenTK.Input.Key)
-  commentId: M:DotFeather.TypesConverterExtension.ToDF(OpenTK.Input.Key)
-  id: ToDF(OpenTK.Input.Key)
+- uid: DotFeather.TypesConverterExtension.ToDF(Key)
+  commentId: M:DotFeather.TypesConverterExtension.ToDF(Key)
+  id: ToDF(Key)
   isExtensionMethod: true
   parent: DotFeather.TypesConverterExtension
   langs:
@@ -57,7 +57,7 @@ items:
   - vb
   name: ToDF(Key)
   nameWithType: TypesConverterExtension.ToDF(Key)
-  fullName: DotFeather.TypesConverterExtension.ToDF(OpenTK.Input.Key)
+  fullName: DotFeather.TypesConverterExtension.ToDF(Key)
   type: Method
   source:
     remote:
@@ -76,7 +76,7 @@ items:
     content: public static DFKeyCode ToDF(this Key key)
     parameters:
     - id: key
-      type: OpenTK.Input.Key
+      type: Key
     return:
       type: DotFeather.DFKeyCode
     content.vb: >-
@@ -113,7 +113,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"OpenTK.Input\" data-throw-if-not-resolved=\"false\"></xref> 版に変換します。\n"
+  summary: "\n<see cref=\"!:OpenTK.Input\"></see> 版に変換します。\n"
   example: []
   syntax:
     content: public static Key ToTK(this DFKeyCode key)
@@ -121,7 +121,7 @@ items:
     - id: key
       type: DotFeather.DFKeyCode
     return:
-      type: OpenTK.Input.Key
+      type: Key
     content.vb: >-
       <ExtensionAttribute>
 
@@ -139,12 +139,6 @@ references:
   name: DotFeather
   nameWithType: DotFeather
   fullName: DotFeather
-- uid: OpenTK
-  commentId: N:OpenTK
-  isExternal: true
-  name: OpenTK
-  nameWithType: OpenTK
-  fullName: OpenTK
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -442,25 +436,17 @@ references:
   name: ToDF
   nameWithType: TypesConverterExtension.ToDF
   fullName: DotFeather.TypesConverterExtension.ToDF
-- uid: OpenTK.Input.Key
-  commentId: T:OpenTK.Input.Key
-  parent: OpenTK.Input
+- uid: Key
   isExternal: true
   name: Key
   nameWithType: Key
-  fullName: OpenTK.Input.Key
+  fullName: Key
 - uid: DotFeather.DFKeyCode
   commentId: T:DotFeather.DFKeyCode
   parent: DotFeather
   name: DFKeyCode
   nameWithType: DFKeyCode
   fullName: DotFeather.DFKeyCode
-- uid: OpenTK.Input
-  commentId: N:OpenTK.Input
-  isExternal: true
-  name: OpenTK.Input
-  nameWithType: OpenTK.Input
-  fullName: OpenTK.Input
 - uid: DotFeather.TypesConverterExtension.ToTK*
   commentId: Overload:DotFeather.TypesConverterExtension.ToTK
   name: ToTK

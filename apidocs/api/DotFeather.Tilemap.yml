@@ -46,7 +46,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather.ITile\" data-throw-if-not-resolved=\"false\"></xref> オブジェクトを格子状にレンダリングする <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> オブジェクトです。\n"
+  summary: "\nA <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> object to render <xref href=\"DotFeather.ITile\" data-throw-if-not-resolved=\"false\"></xref> objects in a lattice.\n"
   example: []
   syntax:
     content: 'public class Tilemap : IDrawable'
@@ -89,12 +89,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 14
+    startLine: 12
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n"
-  example: []
   syntax:
     content: public int ZOrder { get; set; }
     parameters: []
@@ -128,12 +126,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 17
+    startLine: 14
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n"
-  example: []
   syntax:
     content: public string Name { get; set; }
     parameters: []
@@ -167,12 +163,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 20
+    startLine: 16
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n"
-  example: []
   syntax:
     content: public Vector Location { get; set; }
     parameters: []
@@ -206,12 +200,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 23
+    startLine: 18
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n"
-  example: []
   syntax:
     content: public float Angle { get; set; }
     parameters: []
@@ -245,12 +237,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 26
+    startLine: 20
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n"
-  example: []
   syntax:
     content: public Vector Scale { get; set; }
     parameters: []
@@ -284,12 +274,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: DefaultColor
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 29
+    startLine: 22
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n"
-  example: []
   syntax:
     content: public Color? DefaultColor { get; set; }
     parameters: []
@@ -321,18 +309,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TileSize
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 35
+    startLine: 27
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nタイルあたりのピクセス単位のサイズを取得または設定します。\n"
+  summary: "\nGet or set the size in pixels per tile.\n"
   example: []
   syntax:
     content: public Vector TileSize { get; set; }
     parameters: []
     return:
       type: DotFeather.Vector
-      description: ''
     content.vb: Public Property TileSize As Vector
   overload: DotFeather.Tilemap.TileSize*
   modifiers.csharp:
@@ -359,18 +346,18 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 41
+    startLine: 33
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n<xref href=\"DotFeather.Tilemap\" data-throw-if-not-resolved=\"false\"></xref> クラスの新しいインスタンスを初期化します。\n"
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.Tilemap\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
     content: public Tilemap(Vector tileSize)
     parameters:
     - id: tileSize
       type: DotFeather.Vector
-      description: タイル1枚あたりのサイズ。
+      description: Size per the tile.
     content.vb: Public Sub New(tileSize As Vector)
   overload: DotFeather.Tilemap.#ctor*
   modifiers.csharp:
@@ -395,11 +382,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 50
+    startLine: 42
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した位置にあるタイルを取得または設定します。\n"
+  summary: "\nGet or set the tile at the specified position.\n"
   example: []
   syntax:
     content: public ITile this[int x, int y] { get; set; }
@@ -439,11 +426,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 59
+    startLine: 51
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した位置にあるタイルを取得または設定します。\n"
+  summary: "\nGet or set the tile at the specified position.\n"
   example: []
   syntax:
     content: public ITile this[Vector point] { get; set; }
@@ -481,12 +468,10 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 67
+    startLine: 57
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n"
-  example: []
   syntax:
     content: public void Draw(GameBase game, Vector location)
     parameters:
@@ -520,11 +505,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 80
+    startLine: 70
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した位置にあるタイルを取得します。\n"
+  summary: "\nGet the tile at the specified position.\n"
   example: []
   syntax:
     content: public ITile GetTileAt(Vector point)
@@ -557,11 +542,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 84
+    startLine: 74
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した位置にあるタイルを取得します。\n"
+  summary: "\nGet the tile at the specified position.\n"
   example: []
   syntax:
     content: public ITile GetTileAt(int x, int y)
@@ -596,11 +581,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 89
+    startLine: 79
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した位置にあるタイルの色を取得します。\n"
+  summary: "\nGet color of the tile at the specified position.\n"
   example: []
   syntax:
     content: public Color? GetTileColorAt(Vector point)
@@ -633,11 +618,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 93
+    startLine: 83
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した位置にあるタイルの色を取得します。\n"
+  summary: "\nGet color of the tile at the specified position.\n"
   example: []
   syntax:
     content: public Color? GetTileColorAt(int x, int y)
@@ -672,11 +657,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 98
+    startLine: 88
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した位置にタイルを設置します。\n"
+  summary: "\nSet the tile at the specified position.\n"
   example: []
   syntax:
     content: public void SetTile(Vector point, ITile tile, Color? color = default(Color? ))
@@ -714,11 +699,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 103
+    startLine: 93
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した位置にタイルを設置します。\n"
+  summary: "\nSet the tile at the specified position.\n"
   example: []
   syntax:
     content: public void SetTile(int x, int y, ITile tile, Color? color = default(Color? ))
@@ -758,11 +743,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 114
+    startLine: 104
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nタイルを全て削除します。\n"
+  summary: "\nRemove all tiles.\n"
   example: []
   syntax:
     content: public void Clear()
@@ -790,11 +775,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 122
+    startLine: 112
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nタイルを線形描画します。\n"
+  summary: "\nDraw a line with specified tile.\n"
   example: []
   syntax:
     content: public void Line(int x1, int y1, int x2, int y2, ITile tile)
@@ -833,11 +818,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Fill
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 166
+    startLine: 156
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した矩形にタイルを並べます。\n"
+  summary: "\nFill the specified rectangle with the specified tile.\n"
   example: []
   syntax:
     content: public void Fill(int x1, int y1, int width, int height, ITile tile)
@@ -876,11 +861,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 176
+    startLine: 166
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nタイルを線形描画します。\n"
+  summary: "\nDraw a line with specified tile.\n"
   example: []
   syntax:
     content: public void Line(Vector start, Vector end, ITile tile)
@@ -915,11 +900,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Fill
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 182
+    startLine: 172
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n指定した矩形にタイルを並べます。\n"
+  summary: "\nFill the specified rectangle with the specified tile.\n"
   example: []
   syntax:
     content: public void Fill(Vector position, Vector size, ITile tile)
@@ -954,11 +939,11 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 188
+    startLine: 178
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nこの <xref href=\"DotFeather.Tilemap\" data-throw-if-not-resolved=\"false\"></xref> を破棄します。\n"
+  summary: "\nDestroy this <xref href=\"DotFeather.Tilemap\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public void Destroy()
@@ -971,18 +956,18 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: DotFeather.ITile
-  commentId: T:DotFeather.ITile
-  parent: DotFeather
-  name: ITile
-  nameWithType: ITile
-  fullName: DotFeather.ITile
 - uid: DotFeather.IDrawable
   commentId: T:DotFeather.IDrawable
   parent: DotFeather
   name: IDrawable
   nameWithType: IDrawable
   fullName: DotFeather.IDrawable
+- uid: DotFeather.ITile
+  commentId: T:DotFeather.ITile
+  parent: DotFeather
+  name: ITile
+  nameWithType: ITile
+  fullName: DotFeather.ITile
 - uid: DotFeather
   commentId: N:DotFeather
   name: DotFeather

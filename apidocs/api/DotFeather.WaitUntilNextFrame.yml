@@ -24,7 +24,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\n次回フレームまで待機するイールド命令です。\n"
+  summary: "\nA yield instruction to wait until the next frame.\n"
   example: []
   syntax:
     content: 'public class WaitUntilNextFrame : YieldInstruction'

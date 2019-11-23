@@ -13,7 +13,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Include="./Resources/font.ttf" />
+		<EmbeddedResource Include="Resources/font.ttf" />
 	</ItemGroup>
 
 	<ItemGroup>

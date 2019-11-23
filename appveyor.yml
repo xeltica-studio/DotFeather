@@ -1,4 +1,4 @@
-version: 2.0.1.{build}
+version: 2.0.2.{build}
 image: Visual Studio 2019
 skip_non_tags: true
 
@@ -42,7 +42,7 @@ deploy:
   draft: false
   prerelease: false
   description: |
-    ## 2.0.1
+    ## 2.0.2
 
     ### バグ修正
     - フォントが読み込めずエラーになるバグをおそらく修正

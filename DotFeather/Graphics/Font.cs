@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace DotFeather
 {
@@ -91,6 +92,10 @@ namespace DotFeather
 			hashCode = hashCode * -1521134295 + FontStyle.GetHashCode();
 			return hashCode;
 		}
-		private static readonly Stream defaultFont = typeof(Font).Assembly.GetManifestResourceStream("DotFeather.Resources.font.ttf");
+
+		private static readonly Stream defaultFont =
+			typeof(Font).Assembly.GetManifestResourceStream(
+				typeof(Font).Assembly.GetManifestResourceNames().First(n => n.Contains("font.ttf"))
+			);
 	}
 }

@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<ReleaseVersion>2.0.0</ReleaseVersion>
+		<ReleaseVersion>2.0.1</ReleaseVersion>
 		<Nullable>Enable</Nullable>
 		<NoWarn>CS1591</NoWarn>
 	</PropertyGroup>

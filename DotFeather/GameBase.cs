@@ -46,20 +46,40 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// Get or set width of this window.
+		/// Get or set virtual width of this window.
 		/// </summary>
 		/// <value>The width.</value>
 		public int Width
+		{
+			get => (int)(window.ClientSize.Width / (FollowsDpi ? Dpi : 1));
+			set => window.ClientSize = new Size((int)(value * (FollowsDpi ? Dpi : 1)), window.ClientSize.Height);
+		}
+
+		/// <summary>
+		/// Get or set virtual height of this window.
+		/// </summary>
+		/// <value>The height.</value>
+		public int Height
+		{
+			get => (int)(window.ClientSize.Height / (FollowsDpi ? Dpi : 1));
+			set => window.ClientSize = new Size(window.ClientSize.Width, (int)(value * (FollowsDpi ? Dpi : 1)));
+		}
+
+		/// <summary>
+		/// Get or set actual width of this window.
+		/// </summary>
+		/// <value>The width.</value>
+		public int ActualWidth
 		{
 			get => window.ClientSize.Width;
 			set => window.ClientSize = new Size(value, window.ClientSize.Height);
 		}
 
 		/// <summary>
-		/// Get or set height of this window.
+		/// Get or set actual height of this window.
 		/// </summary>
 		/// <value>The height.</value>
-		public int Height
+		public int ActualHeight
 		{
 			get => window.ClientSize.Height;
 			set => window.ClientSize = new Size(window.ClientSize.Width, value);
@@ -100,6 +120,13 @@ namespace DotFeather
 		/// Get DPI of the current display.
 		/// </summary>
 		public float Dpi => (float)window.ClientSize.Width / window.Size.Width;
+
+		/// <summary>
+		/// Get or set whether the game follows your display's DPI.
+		/// If true, the window will be scaled according to your display's DPI.
+		/// If you are creating video, this setting won't suitable.
+		/// </summary>
+		public bool FollowsDpi { get; set; }
 
 		/// <summary>
 		/// Get total number of frames since startup.
@@ -201,11 +228,17 @@ namespace DotFeather
 		/// <param name="height"></param>
 		/// <param name="title"></param>
 		/// <param name="refreshRate"></param>
-		/// <param name="isCaptureMode">See <see langword="true"/> to enable capture mode. When the capture mode is enabled, a captured folder is created in the current directory, and all frame sequential images are automatically created. Although the operation is very slow, it always behaves as if the refresh rate and FPS match. Please use it for the production of video works.にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。</param>
-		protected GameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false)
+		/// <param name="isCaptureMode">Set <see langword="true"/> to enable capture mode. When the capture mode is enabled, a captured folder is created in the current directory, and all frame sequential images are automatically created. Although the operation is very slow, it always behaves as if the refresh rate and FPS match. Please use it for the production of video works.にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。</param>
+		/// <param name="followsDpi">
+		/// Whether the game follows your display's DPI.
+		/// If true, the window will be scaled according to your display's DPI.
+		/// If you are creating video, this setting won't suitable.
+		/// </param>
+		protected GameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false, bool followsDpi = false)
 		{
 			RefreshRate = refreshRate;
 			IsCaptureMode = isCaptureMode;
+			FollowsDpi = followsDpi;
 
 			window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow)
 			{
@@ -273,7 +306,7 @@ namespace DotFeather
 			};
 
 			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
-				DFMouse.Position = new VectorInt((int)(e.Position.X / Dpi), (int)(e.Position.Y / Dpi));
+				DFMouse.Position = new VectorInt((int)(e.Position.X / (FollowsDpi ? Dpi : 1)), (int)(e.Position.Y / (FollowsDpi ? Dpi : 1)));
 
 			console = new TextDrawable("", Font.GetDefault(ConsoleSize), ForegroundColor);
 		}
@@ -404,7 +437,10 @@ namespace DotFeather
 
 			CalculateFps();
 
+			var s = Root.Scale;
+			Root.Scale = s * (FollowsDpi ? Dpi : 1);
 			Root.Draw(this, Vector.Zero);
+			Root.Scale = s;
 
 			console.Draw(this, Vector.Zero);
 

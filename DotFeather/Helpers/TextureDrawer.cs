@@ -15,8 +15,8 @@ namespace DotFeather
 		/// </summary>
 		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, System.Drawing.Color? color = null, float? width = null, float? height = null)
 		{
-			var hw = game.Width / 2;
-			var hh = game.Height / 2;
+			var hw = game.ActualWidth / 2;
+			var hh = game.ActualHeight / 2;
 
 			var w = width ?? texture.Size.X;
 			var h = height ?? texture.Size.Y;
@@ -28,7 +28,7 @@ namespace DotFeather
 			var right = left + w;
 			var bottom = top + h;
 
-			if (left > game.Width || top > game.Height || right < 0 || bottom < 0)
+			if (left > game.ActualWidth || top > game.ActualHeight || right < 0 || bottom < 0)
 			{
 				return;
 			}

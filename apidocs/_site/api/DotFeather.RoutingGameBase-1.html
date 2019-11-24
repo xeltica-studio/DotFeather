@@ -103,6 +103,12 @@
 			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Height">GameBase.Height</a>
 		</div>
 		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_ActualWidth">GameBase.ActualWidth</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_ActualHeight">GameBase.ActualHeight</a>
+		</div>
+		<div>
 			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_IsFocused">GameBase.IsFocused</a>
 		</div>
 		<div>
@@ -119,6 +125,9 @@
 		</div>
 		<div>
 			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_Dpi">GameBase.Dpi</a>
+		</div>
+		<div>
+			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_FollowsDpi">GameBase.FollowsDpi</a>
 		</div>
 		<div>
 			<a class="xref" href="DotFeather.GameBase.html#DotFeather_GameBase_TotalFrame">GameBase.TotalFrame</a>
@@ -257,18 +266,18 @@
 	</h3>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
-		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_RoutingGameBase_1__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20DotFeather.RoutingGameBase%601.%23ctor(System.Int32%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_RoutingGameBase_1__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20DotFeather.RoutingGameBase%601.%23ctor(System.Int32%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
 		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Router/RoutingGameBase.cs/#L7">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_RoutingGameBase_1__ctor_" data-uid="DotFeather.RoutingGameBase`1.#ctor*"></a>
-	<h4 id="DotFeather_RoutingGameBase_1__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_" data-uid="DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)">RoutingGameBase(Int32, Int32, String, Int32, Boolean)</h4>
+	<h4 id="DotFeather_RoutingGameBase_1__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_System_Boolean_" data-uid="DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)">RoutingGameBase(Int32, Int32, String, Int32, Boolean, Boolean)</h4>
 	<div class="markdown level1 summary"></div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
 	<div class="codewrapper">
-		<pre><code class="lang-csharp hljs">public RoutingGameBase(int width, int height, string title = &quot;&quot;, int refreshRate = 60, bool isCaptureMode = false)</code></pre>
+		<pre><code class="lang-csharp hljs">public RoutingGameBase(int width, int height, string title = &quot;&quot;, int refreshRate = 60, bool isCaptureMode = false, bool followsDpi = false)</code></pre>
 	</div>
 	<h5 class="parameters">&#24341;&#25968;</h5>
 	<table class="table table-bordered table-striped table-condensed">
@@ -303,6 +312,11 @@
 			<tr>
 				<td><span class="xref">System.Boolean</span></td>
 				<td><span class="parametername">isCaptureMode</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Boolean</span></td>
+				<td><span class="parametername">followsDpi</span></td>
 				<td></td>
 			</tr>
 		</tbody>

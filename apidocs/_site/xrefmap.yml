@@ -4099,12 +4099,12 @@ references:
   commentId: T:DotFeather.GameBase
   fullName: DotFeather.GameBase
   nameWithType: GameBase
-- uid: DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
-  name: GameBase(Int32, Int32, String, Int32, Boolean)
-  href: api/DotFeather.GameBase.html#DotFeather_GameBase__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_
-  commentId: M:DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
-  fullName: DotFeather.GameBase.GameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean)
-  nameWithType: GameBase.GameBase(Int32, Int32, String, Int32, Boolean)
+- uid: DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
+  name: GameBase(Int32, Int32, String, Int32, Boolean, Boolean)
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_System_Boolean_
+  commentId: M:DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
+  fullName: DotFeather.GameBase.GameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean, System.Boolean)
+  nameWithType: GameBase.GameBase(Int32, Int32, String, Int32, Boolean, Boolean)
 - uid: DotFeather.GameBase.#ctor*
   name: GameBase
   href: api/DotFeather.GameBase.html#DotFeather_GameBase__ctor_
@@ -4112,6 +4112,32 @@ references:
   isSpec: "True"
   fullName: DotFeather.GameBase.GameBase
   nameWithType: GameBase.GameBase
+- uid: DotFeather.GameBase.ActualHeight
+  name: ActualHeight
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_ActualHeight
+  commentId: P:DotFeather.GameBase.ActualHeight
+  fullName: DotFeather.GameBase.ActualHeight
+  nameWithType: GameBase.ActualHeight
+- uid: DotFeather.GameBase.ActualHeight*
+  name: ActualHeight
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_ActualHeight_
+  commentId: Overload:DotFeather.GameBase.ActualHeight
+  isSpec: "True"
+  fullName: DotFeather.GameBase.ActualHeight
+  nameWithType: GameBase.ActualHeight
+- uid: DotFeather.GameBase.ActualWidth
+  name: ActualWidth
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_ActualWidth
+  commentId: P:DotFeather.GameBase.ActualWidth
+  fullName: DotFeather.GameBase.ActualWidth
+  nameWithType: GameBase.ActualWidth
+- uid: DotFeather.GameBase.ActualWidth*
+  name: ActualWidth
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_ActualWidth_
+  commentId: Overload:DotFeather.GameBase.ActualWidth
+  isSpec: "True"
+  fullName: DotFeather.GameBase.ActualWidth
+  nameWithType: GameBase.ActualWidth
 - uid: DotFeather.GameBase.BackgroundColor
   name: BackgroundColor
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_BackgroundColor
@@ -4209,6 +4235,19 @@ references:
   commentId: E:DotFeather.GameBase.FileDrop
   fullName: DotFeather.GameBase.FileDrop
   nameWithType: GameBase.FileDrop
+- uid: DotFeather.GameBase.FollowsDpi
+  name: FollowsDpi
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_FollowsDpi
+  commentId: P:DotFeather.GameBase.FollowsDpi
+  fullName: DotFeather.GameBase.FollowsDpi
+  nameWithType: GameBase.FollowsDpi
+- uid: DotFeather.GameBase.FollowsDpi*
+  name: FollowsDpi
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_FollowsDpi_
+  commentId: Overload:DotFeather.GameBase.FollowsDpi
+  isSpec: "True"
+  fullName: DotFeather.GameBase.FollowsDpi
+  nameWithType: GameBase.FollowsDpi
 - uid: DotFeather.GameBase.ForegroundColor
   name: ForegroundColor
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_ForegroundColor
@@ -5608,14 +5647,14 @@ references:
   fullName.vb: DotFeather.RoutingGameBase(Of T)
   nameWithType: RoutingGameBase<T>
   nameWithType.vb: RoutingGameBase(Of T)
-- uid: DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
-  name: RoutingGameBase(Int32, Int32, String, Int32, Boolean)
-  href: api/DotFeather.RoutingGameBase-1.html#DotFeather_RoutingGameBase_1__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_
-  commentId: M:DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
-  fullName: DotFeather.RoutingGameBase<T>.RoutingGameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean)
-  fullName.vb: DotFeather.RoutingGameBase(Of T).RoutingGameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean)
-  nameWithType: RoutingGameBase<T>.RoutingGameBase(Int32, Int32, String, Int32, Boolean)
-  nameWithType.vb: RoutingGameBase(Of T).RoutingGameBase(Int32, Int32, String, Int32, Boolean)
+- uid: DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
+  name: RoutingGameBase(Int32, Int32, String, Int32, Boolean, Boolean)
+  href: api/DotFeather.RoutingGameBase-1.html#DotFeather_RoutingGameBase_1__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_System_Boolean_
+  commentId: M:DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
+  fullName: DotFeather.RoutingGameBase<T>.RoutingGameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean, System.Boolean)
+  fullName.vb: DotFeather.RoutingGameBase(Of T).RoutingGameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean, System.Boolean)
+  nameWithType: RoutingGameBase<T>.RoutingGameBase(Int32, Int32, String, Int32, Boolean, Boolean)
+  nameWithType.vb: RoutingGameBase(Of T).RoutingGameBase(Int32, Int32, String, Int32, Boolean, Boolean)
 - uid: DotFeather.RoutingGameBase`1.#ctor*
   name: RoutingGameBase
   href: api/DotFeather.RoutingGameBase-1.html#DotFeather_RoutingGameBase_1__ctor_

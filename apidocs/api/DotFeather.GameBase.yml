@@ -5,7 +5,9 @@ items:
   id: GameBase
   parent: DotFeather
   children:
-  - DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
+  - DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
+  - DotFeather.GameBase.ActualHeight
+  - DotFeather.GameBase.ActualWidth
   - DotFeather.GameBase.BackgroundColor
   - DotFeather.GameBase.Cls
   - DotFeather.GameBase.ConsoleCursor
@@ -14,6 +16,7 @@ items:
   - DotFeather.GameBase.Dpi
   - DotFeather.GameBase.Exit(System.Int32)
   - DotFeather.GameBase.FileDrop
+  - DotFeather.GameBase.FollowsDpi
   - DotFeather.GameBase.ForegroundColor
   - DotFeather.GameBase.Height
   - DotFeather.GameBase.IsCaptureMode
@@ -229,7 +232,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nGet or set width of this window.\n"
+  summary: "\nGet or set virtual width of this window.\n"
   example: []
   syntax:
     content: public int Width { get; set; }
@@ -267,7 +270,7 @@ items:
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nGet or set height of this window.\n"
+  summary: "\nGet or set virtual height of this window.\n"
   example: []
   syntax:
     content: public int Height { get; set; }
@@ -277,6 +280,82 @@ items:
       description: The height.
     content.vb: Public Property Height As Integer
   overload: DotFeather.GameBase.Height*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.ActualWidth
+  commentId: P:DotFeather.GameBase.ActualWidth
+  id: ActualWidth
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: ActualWidth
+  nameWithType: GameBase.ActualWidth
+  fullName: DotFeather.GameBase.ActualWidth
+  type: Property
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ActualWidth
+    path: ../DotFeather/GameBase.cs
+    startLine: 71
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set actual width of this window.\n"
+  example: []
+  syntax:
+    content: public int ActualWidth { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The width.
+    content.vb: Public Property ActualWidth As Integer
+  overload: DotFeather.GameBase.ActualWidth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.GameBase.ActualHeight
+  commentId: P:DotFeather.GameBase.ActualHeight
+  id: ActualHeight
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: ActualHeight
+  nameWithType: GameBase.ActualHeight
+  fullName: DotFeather.GameBase.ActualHeight
+  type: Property
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ActualHeight
+    path: ../DotFeather/GameBase.cs
+    startLine: 81
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set actual height of this window.\n"
+  example: []
+  syntax:
+    content: public int ActualHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The height.
+    content.vb: Public Property ActualHeight As Integer
+  overload: DotFeather.GameBase.ActualHeight*
   modifiers.csharp:
   - public
   - get
@@ -301,7 +380,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsFocused
     path: ../DotFeather/GameBase.cs
-    startLine: 71
+    startLine: 91
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -339,7 +418,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BackgroundColor
     path: ../DotFeather/GameBase.cs
-    startLine: 76
+    startLine: 96
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -376,7 +455,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RefreshRate
     path: ../DotFeather/GameBase.cs
-    startLine: 82
+    startLine: 102
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -414,7 +493,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Title
     path: ../DotFeather/GameBase.cs
-    startLine: 87
+    startLine: 107
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -451,7 +530,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Root
     path: ../DotFeather/GameBase.cs
-    startLine: 96
+    startLine: 116
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -488,7 +567,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dpi
     path: ../DotFeather/GameBase.cs
-    startLine: 101
+    startLine: 121
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -507,6 +586,43 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: DotFeather.GameBase.FollowsDpi
+  commentId: P:DotFeather.GameBase.FollowsDpi
+  id: FollowsDpi
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: FollowsDpi
+  nameWithType: GameBase.FollowsDpi
+  fullName: DotFeather.GameBase.FollowsDpi
+  type: Property
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: FollowsDpi
+    path: ../DotFeather/GameBase.cs
+    startLine: 128
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set whether the game follows your display&apos;s DPI.\nIf true, the window will be scaled according to your display&apos;s DPI.\nIf you are creating video, this setting won&apos;t suitable.\n"
+  example: []
+  syntax:
+    content: public bool FollowsDpi { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property FollowsDpi As Boolean
+  overload: DotFeather.GameBase.FollowsDpi*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: DotFeather.GameBase.TotalFrame
   commentId: P:DotFeather.GameBase.TotalFrame
   id: TotalFrame
@@ -525,7 +641,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TotalFrame
     path: ../DotFeather/GameBase.cs
-    startLine: 107
+    startLine: 134
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -563,7 +679,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsCaptureMode
     path: ../DotFeather/GameBase.cs
-    startLine: 112
+    startLine: 139
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -600,7 +716,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ForegroundColor
     path: ../DotFeather/GameBase.cs
-    startLine: 118
+    startLine: 145
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -638,7 +754,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ConsoleCursor
     path: ../DotFeather/GameBase.cs
-    startLine: 123
+    startLine: 150
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -675,7 +791,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ConsoleSize
     path: ../DotFeather/GameBase.cs
-    startLine: 129
+    startLine: 156
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -713,7 +829,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: WindowMode
     path: ../DotFeather/GameBase.cs
-    startLine: 134
+    startLine: 161
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -750,7 +866,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsFullScreen
     path: ../DotFeather/GameBase.cs
-    startLine: 163
+    startLine: 190
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -787,7 +903,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Print
     path: ../DotFeather/GameBase.cs
-    startLine: 169
+    startLine: 196
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -820,7 +936,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Cls
     path: ../DotFeather/GameBase.cs
-    startLine: 189
+    startLine: 216
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -832,16 +948,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
-  commentId: M:DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
-  id: '#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)'
+- uid: DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
+  commentId: M:DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
+  id: '#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)'
   parent: DotFeather.GameBase
   langs:
   - csharp
   - vb
-  name: GameBase(Int32, Int32, String, Int32, Boolean)
-  nameWithType: GameBase.GameBase(Int32, Int32, String, Int32, Boolean)
-  fullName: DotFeather.GameBase.GameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean)
+  name: GameBase(Int32, Int32, String, Int32, Boolean, Boolean)
+  nameWithType: GameBase.GameBase(Int32, Int32, String, Int32, Boolean, Boolean)
+  fullName: DotFeather.GameBase.GameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean, System.Boolean)
   type: Constructor
   source:
     remote:
@@ -850,14 +966,14 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/GameBase.cs
-    startLine: 204
+    startLine: 236
   assemblies:
   - DotFeather
   namespace: DotFeather
   summary: "\nInitialize a new instance of <xref href=\"DotFeather.GameBase\" data-throw-if-not-resolved=\"false\"></xref> class with specified parameters.\n"
   example: []
   syntax:
-    content: protected GameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false)
+    content: protected GameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false, bool followsDpi = false)
     parameters:
     - id: width
       type: System.Int32
@@ -873,8 +989,11 @@ items:
       description: ''
     - id: isCaptureMode
       type: System.Boolean
-      description: See <xref uid="langword_csharp_true" name="true" href=""></xref> to enable capture mode. When the capture mode is enabled, a captured folder is created in the current directory, and all frame sequential images are automatically created. Although the operation is very slow, it always behaves as if the refresh rate and FPS match. Please use it for the production of video works.にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。
-    content.vb: Protected Sub New(width As Integer, height As Integer, title As String = "", refreshRate As Integer = 60, isCaptureMode As Boolean = False)
+      description: Set <xref uid="langword_csharp_true" name="true" href=""></xref> to enable capture mode. When the capture mode is enabled, a captured folder is created in the current directory, and all frame sequential images are automatically created. Although the operation is very slow, it always behaves as if the refresh rate and FPS match. Please use it for the production of video works.にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。
+    - id: followsDpi
+      type: System.Boolean
+      description: "\nWhether the game follows your display&apos;s DPI.\nIf true, the window will be scaled according to your display&apos;s DPI.\nIf you are creating video, this setting won&apos;t suitable.\n"
+    content.vb: Protected Sub New(width As Integer, height As Integer, title As String = "", refreshRate As Integer = 60, isCaptureMode As Boolean = False, followsDpi As Boolean = False)
   overload: DotFeather.GameBase.#ctor*
   modifiers.csharp:
   - protected
@@ -898,7 +1017,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Randomize
     path: ../DotFeather/GameBase.cs
-    startLine: 284
+    startLine: 317
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -937,7 +1056,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Run
     path: ../DotFeather/GameBase.cs
-    startLine: 293
+    startLine: 326
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -972,7 +1091,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Exit
     path: ../DotFeather/GameBase.cs
-    startLine: 303
+    startLine: 336
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1008,7 +1127,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/GameBase.cs
-    startLine: 316
+    startLine: 349
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1050,7 +1169,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TakeScreenshot
     path: ../DotFeather/GameBase.cs
-    startLine: 324
+    startLine: 357
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1084,7 +1203,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: StartCoroutine
     path: ../DotFeather/GameBase.cs
-    startLine: 343
+    startLine: 376
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1121,7 +1240,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: StopCoroutine
     path: ../DotFeather/GameBase.cs
-    startLine: 348
+    startLine: 381
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1156,7 +1275,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/GameBase.cs
-    startLine: 353
+    startLine: 386
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1195,7 +1314,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnLoad
     path: ../DotFeather/GameBase.cs
-    startLine: 358
+    startLine: 391
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1234,7 +1353,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUnload
     path: ../DotFeather/GameBase.cs
-    startLine: 363
+    startLine: 396
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1273,7 +1392,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnFileDrop
     path: ../DotFeather/GameBase.cs
-    startLine: 368
+    startLine: 401
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1312,7 +1431,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnResize
     path: ../DotFeather/GameBase.cs
-    startLine: 373
+    startLine: 406
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1351,7 +1470,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyPress
     path: ../DotFeather/GameBase.cs
-    startLine: 378
+    startLine: 411
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1390,7 +1509,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyDown
     path: ../DotFeather/GameBase.cs
-    startLine: 383
+    startLine: 416
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1429,7 +1548,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyUp
     path: ../DotFeather/GameBase.cs
-    startLine: 388
+    startLine: 421
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1468,7 +1587,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Random
     path: ../DotFeather/GameBase.cs
-    startLine: 393
+    startLine: 426
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1505,7 +1624,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Load
     path: ../DotFeather/GameBase.cs
-    startLine: 464
+    startLine: 500
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1536,7 +1655,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Unload
     path: ../DotFeather/GameBase.cs
-    startLine: 465
+    startLine: 501
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1567,7 +1686,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: FileDrop
     path: ../DotFeather/GameBase.cs
-    startLine: 466
+    startLine: 502
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1598,7 +1717,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Resize
     path: ../DotFeather/GameBase.cs
-    startLine: 467
+    startLine: 503
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1629,7 +1748,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyDown
     path: ../DotFeather/GameBase.cs
-    startLine: 468
+    startLine: 504
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1660,7 +1779,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyPress
     path: ../DotFeather/GameBase.cs
-    startLine: 469
+    startLine: 505
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1691,7 +1810,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyUp
     path: ../DotFeather/GameBase.cs
-    startLine: 470
+    startLine: 506
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2048,6 +2167,16 @@ references:
   name: Height
   nameWithType: GameBase.Height
   fullName: DotFeather.GameBase.Height
+- uid: DotFeather.GameBase.ActualWidth*
+  commentId: Overload:DotFeather.GameBase.ActualWidth
+  name: ActualWidth
+  nameWithType: GameBase.ActualWidth
+  fullName: DotFeather.GameBase.ActualWidth
+- uid: DotFeather.GameBase.ActualHeight*
+  commentId: Overload:DotFeather.GameBase.ActualHeight
+  name: ActualHeight
+  nameWithType: GameBase.ActualHeight
+  fullName: DotFeather.GameBase.ActualHeight
 - uid: DotFeather.GameBase.IsFocused*
   commentId: Overload:DotFeather.GameBase.IsFocused
   name: IsFocused
@@ -2111,6 +2240,11 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
+- uid: DotFeather.GameBase.FollowsDpi*
+  commentId: Overload:DotFeather.GameBase.FollowsDpi
+  name: FollowsDpi
+  nameWithType: GameBase.FollowsDpi
+  fullName: DotFeather.GameBase.FollowsDpi
 - uid: DotFeather.GameBase.TotalFrame*
   commentId: Overload:DotFeather.GameBase.TotalFrame
   name: TotalFrame

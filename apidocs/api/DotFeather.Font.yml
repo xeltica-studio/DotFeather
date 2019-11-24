@@ -29,7 +29,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Font
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -70,7 +70,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Path
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -107,7 +107,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Id
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -144,7 +144,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Stream
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -181,7 +181,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Size
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 28
+    startLine: 29
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -218,7 +218,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: FontStyle
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 33
+    startLine: 34
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -255,7 +255,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetDefault
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 41
+    startLine: 42
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -299,7 +299,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 52
+    startLine: 53
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -341,7 +341,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 67
+    startLine: 68
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -386,7 +386,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Equals
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 75
+    startLine: 76
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -424,7 +424,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetHashCode
     path: ../DotFeather/Graphics/Font.cs
-    startLine: 84
+    startLine: 85
   assemblies:
   - DotFeather
   namespace: DotFeather

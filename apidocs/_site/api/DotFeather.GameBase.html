@@ -120,19 +120,19 @@
 	</h3>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
-		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.%23ctor(System.Int32%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.%23ctor(System.Int32%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L205">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L237">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase__ctor_" data-uid="DotFeather.GameBase.#ctor*"></a>
-	<h4 id="DotFeather_GameBase__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_" data-uid="DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)">GameBase(Int32, Int32, String, Int32, Boolean)</h4>
+	<h4 id="DotFeather_GameBase__ctor_System_Int32_System_Int32_System_String_System_Int32_System_Boolean_System_Boolean_" data-uid="DotFeather.GameBase.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)">GameBase(Int32, Int32, String, Int32, Boolean, Boolean)</h4>
 	<div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="DotFeather.GameBase.html">GameBase</a> class with specified parameters.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
 	<div class="codewrapper">
-		<pre><code class="lang-csharp hljs">protected GameBase(int width, int height, string title = &quot;&quot;, int refreshRate = 60, bool isCaptureMode = false)</code></pre>
+		<pre><code class="lang-csharp hljs">protected GameBase(int width, int height, string title = &quot;&quot;, int refreshRate = 60, bool isCaptureMode = false, bool followsDpi = false)</code></pre>
 	</div>
 	<h5 class="parameters">&#24341;&#25968;</h5>
 	<table class="table table-bordered table-striped table-condensed">
@@ -167,7 +167,15 @@
 			<tr>
 				<td><span class="xref">System.Boolean</span></td>
 				<td><span class="parametername">isCaptureMode</span></td>
-				<td><p>See <span class="xref">true</span> to enable capture mode. When the capture mode is enabled, a captured folder is created in the current directory, and all frame sequential images are automatically created. Although the operation is very slow, it always behaves as if the refresh rate and FPS match. Please use it for the production of video works.にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。</p>
+				<td><p>Set <span class="xref">true</span> to enable capture mode. When the capture mode is enabled, a captured folder is created in the current directory, and all frame sequential images are automatically created. Although the operation is very slow, it always behaves as if the refresh rate and FPS match. Please use it for the production of video works.にするとキャプチャーモードになります。キャプチャーモードにした場合、カレントディレクトリにcapturedフォルダが生成され、自動的に全フレームの連番画像が生成されます。非常に動作が遅くなりますが、常にリフレッシュレートとFPSが一致している状態として振る舞います。映像作品の制作に用いてください。</p>
+</td>
+			</tr>
+			<tr>
+				<td><span class="xref">System.Boolean</span></td>
+				<td><span class="parametername">followsDpi</span></td>
+				<td><p>Whether the game follows your display's DPI.
+If true, the window will be scaled according to your display's DPI.
+If you are creating video, this setting won't suitable.</p>
 </td>
 			</tr>
 		</tbody>
@@ -176,10 +184,74 @@
 	</h3>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_ActualHeight.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.ActualHeight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L82">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_GameBase_ActualHeight_" data-uid="DotFeather.GameBase.ActualHeight*"></a>
+	<h4 id="DotFeather_GameBase_ActualHeight" data-uid="DotFeather.GameBase.ActualHeight">ActualHeight</h4>
+	<div class="markdown level1 summary"><p>Get or set actual height of this window.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public int ActualHeight { get; set; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td><p>The height.</p>
+</td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_ActualWidth.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.ActualWidth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L72">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_GameBase_ActualWidth_" data-uid="DotFeather.GameBase.ActualWidth*"></a>
+	<h4 id="DotFeather_GameBase_ActualWidth" data-uid="DotFeather.GameBase.ActualWidth">ActualWidth</h4>
+	<div class="markdown level1 summary"><p>Get or set actual width of this window.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public int ActualWidth { get; set; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Int32</span></td>
+				<td><p>The width.</p>
+</td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_BackgroundColor.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.BackgroundColor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L77">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L97">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_BackgroundColor_" data-uid="DotFeather.GameBase.BackgroundColor*"></a>
 	<h4 id="DotFeather_GameBase_BackgroundColor" data-uid="DotFeather.GameBase.BackgroundColor">BackgroundColor</h4>
@@ -210,7 +282,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_ConsoleCursor.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.ConsoleCursor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L124">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L151">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_ConsoleCursor_" data-uid="DotFeather.GameBase.ConsoleCursor*"></a>
 	<h4 id="DotFeather_GameBase_ConsoleCursor" data-uid="DotFeather.GameBase.ConsoleCursor">ConsoleCursor</h4>
@@ -241,7 +313,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_ConsoleSize.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.ConsoleSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L130">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L157">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_ConsoleSize_" data-uid="DotFeather.GameBase.ConsoleSize*"></a>
 	<h4 id="DotFeather_GameBase_ConsoleSize" data-uid="DotFeather.GameBase.ConsoleSize">ConsoleSize</h4>
@@ -272,7 +344,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Dpi.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Dpi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L102">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L122">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Dpi_" data-uid="DotFeather.GameBase.Dpi*"></a>
 	<h4 id="DotFeather_GameBase_Dpi" data-uid="DotFeather.GameBase.Dpi">Dpi</h4>
@@ -300,10 +372,43 @@
 	</table>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_FollowsDpi.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.FollowsDpi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L129">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_GameBase_FollowsDpi_" data-uid="DotFeather.GameBase.FollowsDpi*"></a>
+	<h4 id="DotFeather_GameBase_FollowsDpi" data-uid="DotFeather.GameBase.FollowsDpi">FollowsDpi</h4>
+	<div class="markdown level1 summary"><p>Get or set whether the game follows your display's DPI.
+If true, the window will be scaled according to your display's DPI.
+If you are creating video, this setting won't suitable.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public bool FollowsDpi { get; set; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Boolean</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_ForegroundColor.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.ForegroundColor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L119">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L146">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_ForegroundColor_" data-uid="DotFeather.GameBase.ForegroundColor*"></a>
 	<h4 id="DotFeather_GameBase_ForegroundColor" data-uid="DotFeather.GameBase.ForegroundColor">ForegroundColor</h4>
@@ -338,7 +443,7 @@
 	</span>
 	<a id="DotFeather_GameBase_Height_" data-uid="DotFeather.GameBase.Height*"></a>
 	<h4 id="DotFeather_GameBase_Height" data-uid="DotFeather.GameBase.Height">Height</h4>
-	<div class="markdown level1 summary"><p>Get or set height of this window.</p>
+	<div class="markdown level1 summary"><p>Get or set virtual height of this window.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -366,7 +471,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_IsCaptureMode.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.IsCaptureMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L113">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L140">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_IsCaptureMode_" data-uid="DotFeather.GameBase.IsCaptureMode*"></a>
 	<h4 id="DotFeather_GameBase_IsCaptureMode" data-uid="DotFeather.GameBase.IsCaptureMode">IsCaptureMode</h4>
@@ -397,7 +502,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_IsFocused.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.IsFocused%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L72">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L92">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_IsFocused_" data-uid="DotFeather.GameBase.IsFocused*"></a>
 	<h4 id="DotFeather_GameBase_IsFocused" data-uid="DotFeather.GameBase.IsFocused">IsFocused</h4>
@@ -429,7 +534,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_IsFullScreen.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.IsFullScreen%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L164">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L191">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_IsFullScreen_" data-uid="DotFeather.GameBase.IsFullScreen*"></a>
 	<h4 id="DotFeather_GameBase_IsFullScreen" data-uid="DotFeather.GameBase.IsFullScreen">IsFullScreen</h4>
@@ -460,7 +565,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Random.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Random%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L394">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L427">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Random_" data-uid="DotFeather.GameBase.Random*"></a>
 	<h4 id="DotFeather_GameBase_Random" data-uid="DotFeather.GameBase.Random">Random</h4>
@@ -491,7 +596,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_RefreshRate.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.RefreshRate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L83">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L103">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_RefreshRate_" data-uid="DotFeather.GameBase.RefreshRate*"></a>
 	<h4 id="DotFeather_GameBase_RefreshRate" data-uid="DotFeather.GameBase.RefreshRate">RefreshRate</h4>
@@ -523,7 +628,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Root.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Root%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L97">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L117">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Root_" data-uid="DotFeather.GameBase.Root*"></a>
 	<h4 id="DotFeather_GameBase_Root" data-uid="DotFeather.GameBase.Root">Root</h4>
@@ -554,7 +659,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Title.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Title%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L88">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L108">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Title_" data-uid="DotFeather.GameBase.Title*"></a>
 	<h4 id="DotFeather_GameBase_Title" data-uid="DotFeather.GameBase.Title">Title</h4>
@@ -585,7 +690,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_TotalFrame.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.TotalFrame%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L108">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L135">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_TotalFrame_" data-uid="DotFeather.GameBase.TotalFrame*"></a>
 	<h4 id="DotFeather_GameBase_TotalFrame" data-uid="DotFeather.GameBase.TotalFrame">TotalFrame</h4>
@@ -651,7 +756,7 @@
 	</span>
 	<a id="DotFeather_GameBase_Width_" data-uid="DotFeather.GameBase.Width*"></a>
 	<h4 id="DotFeather_GameBase_Width" data-uid="DotFeather.GameBase.Width">Width</h4>
-	<div class="markdown level1 summary"><p>Get or set width of this window.</p>
+	<div class="markdown level1 summary"><p>Get or set virtual width of this window.</p>
 </div>
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
@@ -679,7 +784,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_WindowMode.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.WindowMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L135">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L162">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_WindowMode_" data-uid="DotFeather.GameBase.WindowMode*"></a>
 	<h4 id="DotFeather_GameBase_WindowMode" data-uid="DotFeather.GameBase.WindowMode">WindowMode</h4>
@@ -774,7 +879,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Cls.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Cls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L190">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L217">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Cls_" data-uid="DotFeather.GameBase.Cls*"></a>
 	<h4 id="DotFeather_GameBase_Cls" data-uid="DotFeather.GameBase.Cls">Cls()</h4>
@@ -789,7 +894,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Dispose.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L317">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L350">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Dispose_" data-uid="DotFeather.GameBase.Dispose*"></a>
 	<h4 id="DotFeather_GameBase_Dispose" data-uid="DotFeather.GameBase.Dispose">Dispose()</h4>
@@ -811,7 +916,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Exit_System_Int32_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Exit(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L304">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L337">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Exit_" data-uid="DotFeather.GameBase.Exit*"></a>
 	<h4 id="DotFeather_GameBase_Exit_System_Int32_" data-uid="DotFeather.GameBase.Exit(System.Int32)">Exit(Int32)</h4>
@@ -845,7 +950,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_OnFileDrop_System_Object_DotFeather_DFFileDroppedEventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.OnFileDrop(System.Object%2CDotFeather.DFFileDroppedEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L369">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L402">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_OnFileDrop_" data-uid="DotFeather.GameBase.OnFileDrop*"></a>
 	<h4 id="DotFeather_GameBase_OnFileDrop_System_Object_DotFeather_DFFileDroppedEventArgs_" data-uid="DotFeather.GameBase.OnFileDrop(System.Object,DotFeather.DFFileDroppedEventArgs)">OnFileDrop(Object, DFFileDroppedEventArgs)</h4>
@@ -883,7 +988,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_OnKeyDown_System_Object_DotFeather_DFKeyEventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.OnKeyDown(System.Object%2CDotFeather.DFKeyEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L384">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L417">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_OnKeyDown_" data-uid="DotFeather.GameBase.OnKeyDown*"></a>
 	<h4 id="DotFeather_GameBase_OnKeyDown_System_Object_DotFeather_DFKeyEventArgs_" data-uid="DotFeather.GameBase.OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)">OnKeyDown(Object, DFKeyEventArgs)</h4>
@@ -921,7 +1026,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_OnKeyPress_System_Object_DotFeather_DFKeyPressEventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.OnKeyPress(System.Object%2CDotFeather.DFKeyPressEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L379">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L412">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_OnKeyPress_" data-uid="DotFeather.GameBase.OnKeyPress*"></a>
 	<h4 id="DotFeather_GameBase_OnKeyPress_System_Object_DotFeather_DFKeyPressEventArgs_" data-uid="DotFeather.GameBase.OnKeyPress(System.Object,DotFeather.DFKeyPressEventArgs)">OnKeyPress(Object, DFKeyPressEventArgs)</h4>
@@ -959,7 +1064,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_OnKeyUp_System_Object_DotFeather_DFKeyEventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.OnKeyUp(System.Object%2CDotFeather.DFKeyEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L389">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L422">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_OnKeyUp_" data-uid="DotFeather.GameBase.OnKeyUp*"></a>
 	<h4 id="DotFeather_GameBase_OnKeyUp_System_Object_DotFeather_DFKeyEventArgs_" data-uid="DotFeather.GameBase.OnKeyUp(System.Object,DotFeather.DFKeyEventArgs)">OnKeyUp(Object, DFKeyEventArgs)</h4>
@@ -997,7 +1102,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_OnLoad_System_Object_System_EventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.OnLoad(System.Object%2CSystem.EventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L359">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L392">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_OnLoad_" data-uid="DotFeather.GameBase.OnLoad*"></a>
 	<h4 id="DotFeather_GameBase_OnLoad_System_Object_System_EventArgs_" data-uid="DotFeather.GameBase.OnLoad(System.Object,System.EventArgs)">OnLoad(Object, EventArgs)</h4>
@@ -1035,7 +1140,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_OnResize_System_Object_System_EventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.OnResize(System.Object%2CSystem.EventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L374">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L407">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_OnResize_" data-uid="DotFeather.GameBase.OnResize*"></a>
 	<h4 id="DotFeather_GameBase_OnResize_System_Object_System_EventArgs_" data-uid="DotFeather.GameBase.OnResize(System.Object,System.EventArgs)">OnResize(Object, EventArgs)</h4>
@@ -1073,7 +1178,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_OnUnload_System_Object_System_EventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.OnUnload(System.Object%2CSystem.EventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L364">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L397">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_OnUnload_" data-uid="DotFeather.GameBase.OnUnload*"></a>
 	<h4 id="DotFeather_GameBase_OnUnload_System_Object_System_EventArgs_" data-uid="DotFeather.GameBase.OnUnload(System.Object,System.EventArgs)">OnUnload(Object, EventArgs)</h4>
@@ -1111,7 +1216,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_OnUpdate_System_Object_DotFeather_DFEventArgs_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.OnUpdate(System.Object%2CDotFeather.DFEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L354">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L387">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_OnUpdate_" data-uid="DotFeather.GameBase.OnUpdate*"></a>
 	<h4 id="DotFeather_GameBase_OnUpdate_System_Object_DotFeather_DFEventArgs_" data-uid="DotFeather.GameBase.OnUpdate(System.Object,DotFeather.DFEventArgs)">OnUpdate(Object, DFEventArgs)</h4>
@@ -1149,7 +1254,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Print_System_Object_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Print(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L170">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L197">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Print_" data-uid="DotFeather.GameBase.Print*"></a>
 	<h4 id="DotFeather_GameBase_Print_System_Object_" data-uid="DotFeather.GameBase.Print(System.Object)">Print(Object)</h4>
@@ -1181,7 +1286,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Randomize_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Randomize(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L285">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L318">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Randomize_" data-uid="DotFeather.GameBase.Randomize*"></a>
 	<h4 id="DotFeather_GameBase_Randomize_System_Nullable_System_Int32__" data-uid="DotFeather.GameBase.Randomize(System.Nullable{System.Int32})">Randomize(Nullable&lt;Int32&gt;)</h4>
@@ -1215,7 +1320,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Run.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Run%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L294">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L327">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_Run_" data-uid="DotFeather.GameBase.Run*"></a>
 	<h4 id="DotFeather_GameBase_Run" data-uid="DotFeather.GameBase.Run">Run()</h4>
@@ -1247,7 +1352,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_StartCoroutine_System_Collections_IEnumerator_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.StartCoroutine(System.Collections.IEnumerator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L344">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L377">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_StartCoroutine_" data-uid="DotFeather.GameBase.StartCoroutine*"></a>
 	<h4 id="DotFeather_GameBase_StartCoroutine_System_Collections_IEnumerator_" data-uid="DotFeather.GameBase.StartCoroutine(System.Collections.IEnumerator)">StartCoroutine(IEnumerator)</h4>
@@ -1295,7 +1400,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_StopCoroutine_DotFeather_Coroutine_.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.StopCoroutine(DotFeather.Coroutine)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L349">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L382">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_StopCoroutine_" data-uid="DotFeather.GameBase.StopCoroutine*"></a>
 	<h4 id="DotFeather_GameBase_StopCoroutine_DotFeather_Coroutine_" data-uid="DotFeather.GameBase.StopCoroutine(DotFeather.Coroutine)">StopCoroutine(Coroutine)</h4>
@@ -1328,7 +1433,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_TakeScreenshot.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.TakeScreenshot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L325">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L358">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_GameBase_TakeScreenshot_" data-uid="DotFeather.GameBase.TakeScreenshot*"></a>
 	<h4 id="DotFeather_GameBase_TakeScreenshot" data-uid="DotFeather.GameBase.TakeScreenshot">TakeScreenshot()</h4>
@@ -1361,7 +1466,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_FileDrop.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.FileDrop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L467">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L503">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<h4 id="DotFeather_GameBase_FileDrop" data-uid="DotFeather.GameBase.FileDrop">FileDrop</h4>
 	<div class="markdown level1 summary"></div>
@@ -1390,7 +1495,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_KeyDown.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.KeyDown%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L469">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L505">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<h4 id="DotFeather_GameBase_KeyDown" data-uid="DotFeather.GameBase.KeyDown">KeyDown</h4>
 	<div class="markdown level1 summary"></div>
@@ -1419,7 +1524,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_KeyPress.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.KeyPress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L470">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L506">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<h4 id="DotFeather_GameBase_KeyPress" data-uid="DotFeather.GameBase.KeyPress">KeyPress</h4>
 	<div class="markdown level1 summary"></div>
@@ -1448,7 +1553,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_KeyUp.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.KeyUp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L471">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L507">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<h4 id="DotFeather_GameBase_KeyUp" data-uid="DotFeather.GameBase.KeyUp">KeyUp</h4>
 	<div class="markdown level1 summary"></div>
@@ -1477,7 +1582,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Load.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Load%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L465">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L501">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<h4 id="DotFeather_GameBase_Load" data-uid="DotFeather.GameBase.Load">Load</h4>
 	<div class="markdown level1 summary"></div>
@@ -1506,7 +1611,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Resize.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Resize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L468">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L504">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<h4 id="DotFeather_GameBase_Resize" data-uid="DotFeather.GameBase.Resize">Resize</h4>
 	<div class="markdown level1 summary"></div>
@@ -1535,7 +1640,7 @@ collector can reclaim the memory that the <a class="xref" href="DotFeather.GameB
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_GameBase_Unload.md&amp;value=---%0Auid%3A%20DotFeather.GameBase.Unload%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L466">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/GameBase.cs/#L502">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<h4 id="DotFeather_GameBase_Unload" data-uid="DotFeather.GameBase.Unload">Unload</h4>
 	<div class="markdown level1 summary"></div>

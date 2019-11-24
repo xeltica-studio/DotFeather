@@ -98,18 +98,18 @@ items:
   summary: "\nGet an array of textures to animate.\n"
   example: []
   syntax:
-    content: public Texture2D[] Textures { get; }
+    content: public Texture2D[] Textures { get; set; }
     parameters: []
     return:
       type: DotFeather.Texture2D[]
-    content.vb: Public ReadOnly Property Textures As Texture2D()
+    content.vb: Public Property Textures As Texture2D()
   overload: DotFeather.AnimatingSprite.Textures*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
 - uid: DotFeather.AnimatingSprite.IsAnimating
   commentId: P:DotFeather.AnimatingSprite.IsAnimating
   id: IsAnimating

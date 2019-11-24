@@ -5,7 +5,7 @@ items:
   id: RoutingGameBase`1
   parent: DotFeather
   children:
-  - DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
+  - DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
   - DotFeather.RoutingGameBase`1.OnLoad(System.Object,System.EventArgs)
   - DotFeather.RoutingGameBase`1.OnUpdate(System.Object,DotFeather.DFEventArgs)
   - DotFeather.RoutingGameBase`1.Update
@@ -46,12 +46,15 @@ items:
   - DotFeather.GameBase.Visible
   - DotFeather.GameBase.Width
   - DotFeather.GameBase.Height
+  - DotFeather.GameBase.ActualWidth
+  - DotFeather.GameBase.ActualHeight
   - DotFeather.GameBase.IsFocused
   - DotFeather.GameBase.BackgroundColor
   - DotFeather.GameBase.RefreshRate
   - DotFeather.GameBase.Title
   - DotFeather.GameBase.Root
   - DotFeather.GameBase.Dpi
+  - DotFeather.GameBase.FollowsDpi
   - DotFeather.GameBase.TotalFrame
   - DotFeather.GameBase.IsCaptureMode
   - DotFeather.GameBase.ForegroundColor
@@ -98,16 +101,16 @@ items:
   - Class
   fullName.vb: DotFeather.RoutingGameBase(Of T)
   name.vb: RoutingGameBase(Of T)
-- uid: DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
-  commentId: M:DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)
-  id: '#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean)'
+- uid: DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
+  commentId: M:DotFeather.RoutingGameBase`1.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)
+  id: '#ctor(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Boolean)'
   parent: DotFeather.RoutingGameBase`1
   langs:
   - csharp
   - vb
-  name: RoutingGameBase(Int32, Int32, String, Int32, Boolean)
-  nameWithType: RoutingGameBase<T>.RoutingGameBase(Int32, Int32, String, Int32, Boolean)
-  fullName: DotFeather.RoutingGameBase<T>.RoutingGameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean)
+  name: RoutingGameBase(Int32, Int32, String, Int32, Boolean, Boolean)
+  nameWithType: RoutingGameBase<T>.RoutingGameBase(Int32, Int32, String, Int32, Boolean, Boolean)
+  fullName: DotFeather.RoutingGameBase<T>.RoutingGameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean, System.Boolean)
   type: Constructor
   source:
     remote:
@@ -121,7 +124,7 @@ items:
   - DotFeather
   namespace: DotFeather
   syntax:
-    content: public RoutingGameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false)
+    content: public RoutingGameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false, bool followsDpi = false)
     parameters:
     - id: width
       type: System.Int32
@@ -133,14 +136,16 @@ items:
       type: System.Int32
     - id: isCaptureMode
       type: System.Boolean
-    content.vb: Public Sub New(width As Integer, height As Integer, title As String = "", refreshRate As Integer = 60, isCaptureMode As Boolean = False)
+    - id: followsDpi
+      type: System.Boolean
+    content.vb: Public Sub New(width As Integer, height As Integer, title As String = "", refreshRate As Integer = 60, isCaptureMode As Boolean = False, followsDpi As Boolean = False)
   overload: DotFeather.RoutingGameBase`1.#ctor*
-  nameWithType.vb: RoutingGameBase(Of T).RoutingGameBase(Int32, Int32, String, Int32, Boolean)
+  nameWithType.vb: RoutingGameBase(Of T).RoutingGameBase(Int32, Int32, String, Int32, Boolean, Boolean)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: DotFeather.RoutingGameBase(Of T).RoutingGameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean)
+  fullName.vb: DotFeather.RoutingGameBase(Of T).RoutingGameBase(System.Int32, System.Int32, System.String, System.Int32, System.Boolean, System.Boolean)
 - uid: DotFeather.RoutingGameBase`1.OnLoad(System.Object,System.EventArgs)
   commentId: M:DotFeather.RoutingGameBase`1.OnLoad(System.Object,System.EventArgs)
   id: OnLoad(System.Object,System.EventArgs)
@@ -310,6 +315,18 @@ references:
   name: Height
   nameWithType: GameBase.Height
   fullName: DotFeather.GameBase.Height
+- uid: DotFeather.GameBase.ActualWidth
+  commentId: P:DotFeather.GameBase.ActualWidth
+  parent: DotFeather.GameBase
+  name: ActualWidth
+  nameWithType: GameBase.ActualWidth
+  fullName: DotFeather.GameBase.ActualWidth
+- uid: DotFeather.GameBase.ActualHeight
+  commentId: P:DotFeather.GameBase.ActualHeight
+  parent: DotFeather.GameBase
+  name: ActualHeight
+  nameWithType: GameBase.ActualHeight
+  fullName: DotFeather.GameBase.ActualHeight
 - uid: DotFeather.GameBase.IsFocused
   commentId: P:DotFeather.GameBase.IsFocused
   parent: DotFeather.GameBase
@@ -346,6 +363,12 @@ references:
   name: Dpi
   nameWithType: GameBase.Dpi
   fullName: DotFeather.GameBase.Dpi
+- uid: DotFeather.GameBase.FollowsDpi
+  commentId: P:DotFeather.GameBase.FollowsDpi
+  parent: DotFeather.GameBase
+  name: FollowsDpi
+  nameWithType: GameBase.FollowsDpi
+  fullName: DotFeather.GameBase.FollowsDpi
 - uid: DotFeather.GameBase.TotalFrame
   commentId: P:DotFeather.GameBase.TotalFrame
   parent: DotFeather.GameBase

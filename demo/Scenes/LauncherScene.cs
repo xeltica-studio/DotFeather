@@ -20,6 +20,7 @@ namespace DotFeather.Demo
 			{
 				Location = new Vector(24 + titleText.Width + 8, 50),
 			};
+
 			Root.Add(sampleProgramText);
 
 			this.router = router;
@@ -33,9 +34,9 @@ namespace DotFeather.Demo
 
 		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
 		{
-			Title = $"DotFeather Example - {DemoOS.CurrentDirectory.Name.ToUpperInvariant()}";
-			listView.Width = (int)(game.Width / game.Dpi) - 32;
-			listView.Height = (int)(game.Height / game.Dpi) - 16 - (int)listView.Location.Y;
+			Title = $"DotFeather Demo - {DemoOS.CurrentDirectory.Name.ToUpperInvariant()}";
+			listView.Width = game.Width - 32;
+			listView.Height = game.Height - 16 - (int)listView.Location.Y;
 		}
 
 		public void ItemSelected(int i, ListViewItem item)
@@ -168,19 +169,17 @@ namespace DotFeather.Demo
 						{
 							for (var i = 0; i < Items.Count; i++)
 							{
-								var elHeight = itemHeight + padding + 16;
+								var elHeight = ItemHeight + padding + 16;
 								var ely = y + i * elHeight + padding + inner.Location.Y;
 								if (ely <= my && my <= ely + elHeight)
-								{
 									ItemSelected?.Invoke(i, Items[i]);
-								}
 							}
 						}
 					}
 				}
 
-				if (innerY < -(padding + (itemHeight + padding + 16) * Items.Count) + Height)
-					innerY = -(padding + (itemHeight + padding + 16) * Items.Count) + Height;
+				if (innerY < -(padding + (ItemHeight + padding + 16) * Items.Count) + Height)
+					innerY = -(padding + (ItemHeight + padding + 16) * Items.Count) + Height;
 
 				if (innerY > 0)
 					innerY = 0;
@@ -209,15 +208,15 @@ namespace DotFeather.Demo
 					if (item.Icon is Texture2D ico)
 					{
 						var icon = new Sprite(ico);
-						icon.Location = new Vector(padding, itemHeight);
-						icon.Width = icon.Height = itemHeight;
+						icon.Location = new Vector(padding, ItemHeight);
+						icon.Width = icon.Height = ItemHeight;
 						inner.Add(icon);
 					}
-					var text = new TextDrawable(item.Text, itemHeight, FontStyle.Normal, Color.White);
-					text.Location = new Vector(padding + itemHeight + padding, y);
+					var text = new TextDrawable(item.Text, ItemHeight, FontStyle.Normal, Color.White);
+					text.Location = new Vector(padding + ItemHeight + padding, y);
 					inner.Add(text);
 
-					y += itemHeight;
+					y += ItemHeight;
 
 					if (item.Description != null)
 					{

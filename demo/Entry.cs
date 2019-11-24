@@ -10,15 +10,9 @@ namespace DotFeather.Demo
 
 			// ゲームを初期化して実行します
 			// Initialize and run the game
-			using (var g = new RoutingGameBase<LauncherScene>(640, 480))
+			using (var g = new RoutingGameBase<LauncherScene>(640, 480, followsDpi: true))
 			{
 				g.WindowMode = WindowMode.Resizable;
-				g.Update += (s, e) =>
-				{
-					// DPI に合わせる
-					// Handle DPI
-					g.Root.Scale = Vector.One * g.Dpi;
-				};
 
 				g.Run();
 			}

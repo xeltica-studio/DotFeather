@@ -1,4 +1,4 @@
-version: 2.1.0.{build}
+version: 2.2.0.{build}
 image: Visual Studio 2019
 skip_non_tags: true
 
@@ -42,49 +42,25 @@ deploy:
     draft: false
     prerelease: false
     description: |
-      ## 2.1.0
-
-      ### HiDPiサポートモード
-      DotFeather はこれまで部分的に高解像度ディスプレイに対応していました。`GameBase.Dpi` プロパティを用いて、DPI比（一般的なモニター解像度との比）を取得できました。
-
-      しかしながら、画面上の座標とマウスポインターの座標が異なるなど、実際に高解像度ディスプレイ固有の問題がまだ多くありました。
-
-      ver 2.1.0 で、高解像度ディスプレイ上でゲームを起動したときに解像度を自動調整する **HiDPiサポートモード** を実装しました。
-
-      HiDPiサポートモードが有効なとき、DotFeather API における「ピクセル値」が、仮想ピクセルとして働きます。仮想ピクセルの1pxは、デバイスピクセルの1pxに `DotFeather.Dpi` プロパティの値を乗じたものです。
+      ## 2.2.0
 
       ### 新機能
-      - `GameBase.FollowsDpi` プロパティを追加。HiDPiサポートを有効化するかどうかを取得または設定できます
-      - `GameBase` クラスおよび `RoutingGameBase` クラスのコンストラクタに、 `followsDpi` 引数を追加
-      - `GameBase.ActualWidth` `GameBase.ActualHeight` プロパティを追加。画面のデバイスピクセル単位のサイズを取得できます
-      - `AnimatingSprite.Textures` プロパティに `set` アクセサーを追加しました
+      - `ISizedDrawable` インターフェイスを追加。幅および高さを持つ全てのオブジェクトはこのインターフェイスを実装します
+      - `IContainable` インターフェイスを追加。このインターフェイスを実装する描画可能オブジェクトをコンテナーに追加することで、子から親オブジェクトを取得したり、子の絶対座標を取得できます
 
       ### 仕様変更
-      - `GameBase.Width` `GameBase.Height` がデバイスの解像度に依存しない「仮想ピクセル」単位の値を表現するようになりました
-      - デフォルト値である `GameBase.FollowsDpi == false` のときにこれまでと挙動が少し変更されます
-        - `DFMouse.Position` がデバイス解像度を返します。これまでは仮想ピクセルを返していましたが、`GameBase.FollowsDpi == true` のときにこれまでと同じ挙動を起こします。
+      - いくつかのビルトイン描画可能オブジェクトが、新たに追加されたインターフェイスを実装しました
+      - いくつかの描画可能オブジェクトの `Destroy()` メソッドをオーバーライドできるようになりました
 
       ----
 
-      ### HiDPi support mode
-      DotFeather has previously partially supported high-resolution displays. Using the `GameBase.Dpi` property, you can get the DPI ratio (compared to general monitor resolution).
+      ### New features
+      - Added `ISizedDrawable` interface. All objects with width and height implement this interface
+      - Added `IContainable` interface. You can get the parent object from the child or get the absolute coordinates of the child by adding a drawable that implements this interface to the container
 
-      However, there were still many problems inherent to high-resolution displays, such as the difference between the coordinates on the screen and the mouse pointer.
-
-      From ver 2.1.0, **HiDPi support mode** comes! So, the engine automatically adjust the resolution when the game is started on a high-resolution display.
-
-      When HiDPi support mode is enabled, the “pixel value” in DotFeather API works as a virtual pixel. 1px of virtual pixel is 1px of device pixel multiplied by the value of the `DotFeather.Dpi` property.
-
-      ### New Features
-      - Added `GameBase.FollowsDpi` property to get or set whether to enable HiDPi support
-      - Added `followsDpi` argument to constructor of `GameBase` and `RoutingGameBase` classes
-      - Added `GameBase.ActualWidth` and `GameBase.ActualHeight` properties. You can get the size of the screen in device pixels
-      - Added `set` accessor to the `AnimatingSprite.Textures` property
-
-      ### Changes
-      - `GameBase.Width` and `GameBase.Height` properties now represents a value in "virtual pixels" that is independent of device resolution
-      - The default value of `GameBase.FollowsDpi == false` will slightly change the behavior
-        - `DFMouse.Position` returns the device resolution. Previously it returned virtual pixels, but when `GameBase.FollowsDpi == true` it behaves the same as before.
+      ## Changes
+       - Some built-in drawables have implemented newly added interfaces
+       - You can now override the `Destroy()` method of some drawable objects
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

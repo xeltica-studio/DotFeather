@@ -135,7 +135,7 @@ namespace DotFeather
 		/// <summary>
 		/// 描画を開始します。
 		/// </summary>
-		public void Draw(GameBase game, Vector location)
+		public virtual void Draw(GameBase game, Vector location)
 		{
 			if (IsTrimmable)
 			{
@@ -189,7 +189,7 @@ namespace DotFeather
 		/// <summary>
 		/// この <see cref="Container"/> を破棄します。
 		/// </summary>
-		public void Destroy() => Clear();
+		public virtual void Destroy() => Clear();
 
 		/// <summary>
 		/// 列挙子を取得します。

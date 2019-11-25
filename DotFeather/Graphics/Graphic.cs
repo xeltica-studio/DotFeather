@@ -215,6 +215,6 @@ namespace DotFeather
 		/// <summary>
 		/// Destroy this <see cref="Graphic"/>.
 		/// </summary>
-		public void Destroy() => Clear();
+		public virtual void Destroy() => Clear();
 	}
 }

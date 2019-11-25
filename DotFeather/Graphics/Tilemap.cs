@@ -192,7 +192,7 @@ namespace DotFeather
 		/// <summary>
 		/// Destroy this <see cref="Tilemap"/>.
 		/// </summary>
-		public void Destroy()
+		public virtual void Destroy()
 		{
 			foreach (var kv in tiles)
 			{

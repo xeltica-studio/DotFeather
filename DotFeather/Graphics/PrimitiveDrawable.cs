@@ -91,7 +91,7 @@ namespace DotFeather
 			GL.Disable(EnableCap.Blend);
 		}
 
-		public void Destroy() { }
+		public virtual void Destroy() { }
 
 		private void Vertex(Color col, Vector vec)
 		{

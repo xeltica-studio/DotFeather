@@ -5,7 +5,7 @@ namespace DotFeather
 	/// <summary>
 	/// An abstract class for objects that draw a <see cref="Texture2D"/>.
 	/// </summary>
-	public abstract class TextureDrawableBase : IDrawable
+	public abstract class TextureDrawableBase : IContainable, ISizedDrawable
 	{
 		public virtual int ZOrder { get; set; }
 
@@ -38,6 +38,31 @@ namespace DotFeather
 		/// Get a texture of this object.
 		/// </summary>
 		public virtual Texture2D Texture { get; protected set; }
+
+		float ISizedDrawable.Width
+		{
+			get => Width;
+			set => Width = (int)value;
+		}
+
+		float ISizedDrawable.Height
+		{
+			get => Height;
+			set => Height = (int)value;
+		}
+
+		public IContainable? Parent { get; internal set; }
+
+		IContainable? IContainable.Parent
+		{
+			get => Parent;
+			set => Parent = value;
+		}
+
+		/// <summary>
+		/// Get absolute location.
+		/// </summary>
+		public Vector AbsoluteLocation => Location + (Parent?.AbsoluteLocation ?? Vector.Zero);
 
 		/// <summary>
 		/// Dispose this object.

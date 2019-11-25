@@ -9,7 +9,7 @@ namespace DotFeather
 	/// <summary>
 	/// This is a graphic layer to draw shapes.
 	/// </summary>
-	public class Graphic : IDrawable
+	public class Graphic : IContainable
 	{
 		/// <summary>
 		/// Get the list of drawing objects that the current <see cref="Graphic"/> has.
@@ -26,6 +26,19 @@ namespace DotFeather
 		public int ZOrder { get; set; }
 
 		public string Name { get; set; } = "";
+
+		public IContainable? Parent { get; internal set; }
+
+		IContainable? IContainable.Parent
+		{
+			get => Parent;
+			set => Parent = value;
+		}
+
+		/// <summary>
+		/// Get absolute location.
+		/// </summary>
+		public Vector AbsoluteLocation => Location + (Parent?.AbsoluteLocation ?? Vector.Zero);
 
 		public void Draw(GameBase game, Vector location)
 		{

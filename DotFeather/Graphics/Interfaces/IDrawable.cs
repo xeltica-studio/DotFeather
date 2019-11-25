@@ -42,5 +42,4 @@ namespace DotFeather
 		/// </summary>
 		void Destroy();
 	}
-
 }

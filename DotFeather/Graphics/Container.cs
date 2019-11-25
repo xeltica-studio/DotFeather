@@ -9,7 +9,7 @@ namespace DotFeather
 	/// <summary>
 	/// 他の <see cref="IDrawable"/> オブジェクトを格納し、相対位置に描画するオブジェクトです。
 	/// </summary>
-	public class Container : IDrawable, IUpdatable, IList<IDrawable>
+	public class Container : ISizedDrawable, IContainable, IUpdatable, IList<IDrawable>
 	{
 		/// <summary>
 		/// この <see cref="T:DotFeather.Drawable.IDrawable"/> の描画優先順位を取得または設定します。数値が低いほど奥に描画されます。
@@ -51,6 +51,41 @@ namespace DotFeather
 		/// </summary>
 		public bool IsTrimmable { get; set; }
 
+		float ISizedDrawable.Width
+		{
+			get => Width;
+			set => Width = (int)value;
+		}
+
+		float ISizedDrawable.Height
+		{
+			get => Height;
+			set => Height = (int)value;
+		}
+
+		public IContainable? Parent { get; internal set; }
+
+		IContainable? IContainable.Parent
+		{
+			get => Parent;
+			set => Parent = value;
+		}
+
+		/// <summary>
+		/// 列挙子を取得します。
+		/// </summary>
+		IEnumerator IEnumerable.GetEnumerator() => Children.GetEnumerator();
+
+		/// <summary>
+		/// 要素数を取得します。
+		/// </summary>
+		public int Count => Children.Count;
+
+		/// <summary>
+		/// Get absolute location.
+		/// </summary>
+		public Vector AbsoluteLocation => Location + (Parent?.AbsoluteLocation ?? Vector.Zero);
+
 		/// <summary>
 		/// このコンテナーの子要素にアクセスします。
 		/// </summary>
@@ -78,6 +113,7 @@ namespace DotFeather
 		public void Add(IDrawable child)
 		{
 			countMap[child] = count++;
+			if (child is IContainable c) c.Parent = this;
 			Children.Add(child);
 			Sort();
 		}
@@ -89,6 +125,7 @@ namespace DotFeather
 		/// <param name="item">子要素。</param>
 		public void Insert(int index, IDrawable item)
 		{
+			if (item is IContainable c) c.Parent = this;
 			Children.Insert(index, item);
 		}
 
@@ -204,23 +241,12 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// 列挙子を取得します。
-		/// </summary>
-		IEnumerator IEnumerable.GetEnumerator() => Children.GetEnumerator();
-
-		/// <summary>
-		/// 要素数を取得します。
-		/// </summary>
-		public int Count => Children.Count;
-
-		/// <summary>
 		/// 読み取り専用かどうかを示す値を取得します。
 		/// </summary>
 		public bool IsReadOnly => false;
 		#endregion
 
 		private List<IDrawable> Children { get; } = new List<IDrawable>(10000);
-
 		private Dictionary<IDrawable, int> countMap = new Dictionary<IDrawable, int>();
 
 		private int count = 0;

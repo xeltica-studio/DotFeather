@@ -11,7 +11,7 @@ namespace DotFeather
 	/// <summary>
 	/// A <see cref="IDrawable"/> object to draw 9-slice sprite.
 	/// </summary>
-	public class NineSliceSprite : IDrawable
+	public class NineSliceSprite : IContainable, ISizedDrawable
 	{
 		/// <summary>
 		///　Get 9 textures.
@@ -39,6 +39,31 @@ namespace DotFeather
 		/// Get or set height.
 		/// </summary>
 		public int Height { get; set; }
+
+		/// <summary>
+		/// Get absolute location.
+		/// </summary>
+		public Vector AbsoluteLocation => Location + (Parent?.AbsoluteLocation ?? Vector.Zero);
+
+		float ISizedDrawable.Width
+		{
+			get => Width;
+			set => Width = (int)value;
+		}
+
+		float ISizedDrawable.Height
+		{
+			get => Height;
+			set => Height = (int)value;
+		}
+
+		public IContainable? Parent { get; internal set; }
+
+		IContainable? IContainable.Parent
+		{
+			get => Parent;
+			set => Parent = value;
+		}
 
 		/// <summary>
 		/// Initialize a new instance of <see cref="NineSliceSprite"/> class.

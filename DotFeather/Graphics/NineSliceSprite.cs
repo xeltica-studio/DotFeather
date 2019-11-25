@@ -57,6 +57,9 @@ namespace DotFeather
 			set => Height = (int)value;
 		}
 
+		/// <summary>
+		/// Get a parent of this drawable.
+		/// </summary>
 		public IContainable? Parent { get; internal set; }
 
 		IContainable? IContainable.Parent

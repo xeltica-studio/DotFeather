@@ -201,6 +201,12 @@ namespace DotFeather
 			tiles.Clear();
 		}
 
+		public IEnumerator<(int x, int y, ITile tile, Color? color)> GetEnumerator()
+		{
+			foreach (var t in tiles)
+				yield return (t.Key.x, t.Key.y, t.Value.tile, t.Value.color);
+		}
+
 		private Dictionary<(int x, int y), (ITile tile, Color? color)> tiles;
 	}
 }

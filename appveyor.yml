@@ -1,4 +1,4 @@
-version: 2.2.0.{build}
+version: 2.3.0.{build}
 image: Visual Studio 2019
 skip_non_tags: true
 
@@ -42,25 +42,15 @@ deploy:
     draft: false
     prerelease: false
     description: |
-      ## 2.2.0
+      ## 2.3.0
 
       ### 新機能
-      - `ISizedDrawable` インターフェイスを追加。幅および高さを持つ全てのオブジェクトはこのインターフェイスを実装します
-      - `IContainable` インターフェイスを追加。このインターフェイスを実装する描画可能オブジェクトをコンテナーに追加することで、子から親オブジェクトを取得したり、子の絶対座標を取得できます
-
-      ### 仕様変更
-      - いくつかのビルトイン描画可能オブジェクトが、新たに追加されたインターフェイスを実装しました
-      - いくつかの描画可能オブジェクトの `Destroy()` メソッドをオーバーライドできるようになりました
+      - `Tilemap.GetEnumerator()` メソッドを追加し、イテレーターを取得できるようにしました
 
       ----
 
       ### New features
-      - Added `ISizedDrawable` interface. All objects with width and height implement this interface
-      - Added `IContainable` interface. You can get the parent object from the child or get the absolute coordinates of the child by adding a drawable that implements this interface to the container
-
-      ## Changes
-       - Some built-in drawables have implemented newly added interfaces
-       - You can now override the `Destroy()` method of some drawable objects
+      - Added a `Tilemap.GetEnumerator()` method to get an iterator
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

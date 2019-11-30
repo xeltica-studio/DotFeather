@@ -6,13 +6,16 @@ items:
   parent: DotFeather
   children:
   - DotFeather.Tilemap.#ctor(DotFeather.Vector)
+  - DotFeather.Tilemap.AbsoluteLocation
   - DotFeather.Tilemap.Angle
   - DotFeather.Tilemap.Clear
   - DotFeather.Tilemap.DefaultColor
   - DotFeather.Tilemap.Destroy
+  - DotFeather.Tilemap.DotFeather#IContainable#Parent
   - DotFeather.Tilemap.Draw(DotFeather.GameBase,DotFeather.Vector)
   - DotFeather.Tilemap.Fill(DotFeather.Vector,DotFeather.Vector,DotFeather.ITile)
   - DotFeather.Tilemap.Fill(System.Int32,System.Int32,System.Int32,System.Int32,DotFeather.ITile)
+  - DotFeather.Tilemap.GetEnumerator
   - DotFeather.Tilemap.GetTileAt(DotFeather.Vector)
   - DotFeather.Tilemap.GetTileAt(System.Int32,System.Int32)
   - DotFeather.Tilemap.GetTileColorAt(DotFeather.Vector)
@@ -23,6 +26,7 @@ items:
   - DotFeather.Tilemap.Line(System.Int32,System.Int32,System.Int32,System.Int32,DotFeather.ITile)
   - DotFeather.Tilemap.Location
   - DotFeather.Tilemap.Name
+  - DotFeather.Tilemap.Parent
   - DotFeather.Tilemap.Scale
   - DotFeather.Tilemap.SetTile(DotFeather.Vector,DotFeather.ITile,System.Nullable{System.Drawing.Color})
   - DotFeather.Tilemap.SetTile(System.Int32,System.Int32,DotFeather.ITile,System.Nullable{System.Drawing.Color})
@@ -49,13 +53,14 @@ items:
   summary: "\nA <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> object to render <xref href=\"DotFeather.ITile\" data-throw-if-not-resolved=\"false\"></xref> objects in a lattice.\n"
   example: []
   syntax:
-    content: 'public class Tilemap : IDrawable'
+    content: 'public class Tilemap : IContainable, IDrawable'
     content.vb: >-
       Public Class Tilemap
-          Implements IDrawable
+          Implements IContainable, IDrawable
   inheritance:
   - System.Object
   implements:
+  - DotFeather.IContainable
   - DotFeather.IDrawable
   inheritedMembers:
   - System.Object.Equals(System.Object)
@@ -291,6 +296,119 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: DotFeather.Tilemap.Parent
+  commentId: P:DotFeather.Tilemap.Parent
+  id: Parent
+  parent: DotFeather.Tilemap
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: Tilemap.Parent
+  fullName: DotFeather.Tilemap.Parent
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/Tilemap.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Parent
+    path: ../DotFeather/Graphics/Tilemap.cs
+    startLine: 27
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet a parent of this drawable.\n"
+  example: []
+  syntax:
+    content: public IContainable Parent { get; }
+    parameters: []
+    return:
+      type: DotFeather.IContainable
+    content.vb: Public ReadOnly Property Parent As IContainable
+  overload: DotFeather.Tilemap.Parent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotFeather.Tilemap.DotFeather#IContainable#Parent
+  commentId: P:DotFeather.Tilemap.DotFeather#IContainable#Parent
+  id: DotFeather#IContainable#Parent
+  isEii: true
+  parent: DotFeather.Tilemap
+  langs:
+  - csharp
+  - vb
+  name: IContainable.Parent
+  nameWithType: Tilemap.IContainable.Parent
+  fullName: DotFeather.Tilemap.DotFeather.IContainable.Parent
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/Tilemap.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: DotFeather.IContainable.Parent
+    path: ../DotFeather/Graphics/Tilemap.cs
+    startLine: 29
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: IContainable IContainable.Parent { get; set; }
+    parameters: []
+    return:
+      type: DotFeather.IContainable
+    content.vb: ReadOnly WriteOnly Property DotFeather.IContainable.Parent As IContainable Implements IContainable.Parent
+  overload: DotFeather.Tilemap.DotFeather#IContainable#Parent*
+  implements:
+  - DotFeather.IContainable.Parent
+  nameWithType.vb: Tilemap.DotFeather.IContainable.Parent
+  modifiers.csharp:
+  - get
+  - set
+  name.vb: DotFeather.IContainable.Parent
+- uid: DotFeather.Tilemap.AbsoluteLocation
+  commentId: P:DotFeather.Tilemap.AbsoluteLocation
+  id: AbsoluteLocation
+  parent: DotFeather.Tilemap
+  langs:
+  - csharp
+  - vb
+  name: AbsoluteLocation
+  nameWithType: Tilemap.AbsoluteLocation
+  fullName: DotFeather.Tilemap.AbsoluteLocation
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/Tilemap.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: AbsoluteLocation
+    path: ../DotFeather/Graphics/Tilemap.cs
+    startLine: 38
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet absolute location.\n"
+  example: []
+  syntax:
+    content: public Vector AbsoluteLocation { get; }
+    parameters: []
+    return:
+      type: DotFeather.Vector
+    content.vb: Public ReadOnly Property AbsoluteLocation As Vector
+  overload: DotFeather.Tilemap.AbsoluteLocation*
+  implements:
+  - DotFeather.IContainable.AbsoluteLocation
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: DotFeather.Tilemap.TileSize
   commentId: P:DotFeather.Tilemap.TileSize
   id: TileSize
@@ -309,7 +427,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TileSize
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 27
+    startLine: 43
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -346,7 +464,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 33
+    startLine: 49
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -382,7 +500,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 42
+    startLine: 58
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -426,7 +544,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 51
+    startLine: 67
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -468,7 +586,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 57
+    startLine: 73
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -505,7 +623,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 70
+    startLine: 86
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -542,7 +660,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 74
+    startLine: 90
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -581,7 +699,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 79
+    startLine: 95
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -618,7 +736,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 83
+    startLine: 99
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -657,7 +775,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 88
+    startLine: 104
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -699,7 +817,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 93
+    startLine: 109
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -743,7 +861,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 104
+    startLine: 120
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -775,7 +893,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 112
+    startLine: 128
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -818,7 +936,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Fill
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 156
+    startLine: 172
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -861,7 +979,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 166
+    startLine: 182
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -900,7 +1018,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Fill
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 172
+    startLine: 188
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -939,18 +1057,52 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 178
+    startLine: 194
   assemblies:
   - DotFeather
   namespace: DotFeather
   summary: "\nDestroy this <xref href=\"DotFeather.Tilemap\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public void Destroy()
-    content.vb: Public Sub Destroy
+    content: public virtual void Destroy()
+    content.vb: Public Overridable Sub Destroy
   overload: DotFeather.Tilemap.Destroy*
   implements:
   - DotFeather.IDrawable.Destroy
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: DotFeather.Tilemap.GetEnumerator
+  commentId: M:DotFeather.Tilemap.GetEnumerator
+  id: GetEnumerator
+  parent: DotFeather.Tilemap
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: Tilemap.GetEnumerator()
+  fullName: DotFeather.Tilemap.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Graphics/Tilemap.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: GetEnumerator
+    path: ../DotFeather/Graphics/Tilemap.cs
+    startLine: 203
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public IEnumerator<(int x, int y, ITile tile, Color? color)> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{System.ValueTuple{System.Int32,System.Int32,DotFeather.ITile,System.Nullable{System.Drawing.Color}}}
+    content.vb: Public Function GetEnumerator As IEnumerator(Of(x As Integer, y As Integer, tile As ITile, color As Color?))
+  overload: DotFeather.Tilemap.GetEnumerator*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -980,6 +1132,12 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: DotFeather.IContainable
+  commentId: T:DotFeather.IContainable
+  parent: DotFeather
+  name: IContainable
+  nameWithType: IContainable
+  fullName: DotFeather.IContainable
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -1435,6 +1593,35 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: DotFeather.Tilemap.Parent*
+  commentId: Overload:DotFeather.Tilemap.Parent
+  name: Parent
+  nameWithType: Tilemap.Parent
+  fullName: DotFeather.Tilemap.Parent
+- uid: DotFeather.Tilemap.DotFeather#IContainable#Parent*
+  commentId: Overload:DotFeather.Tilemap.DotFeather#IContainable#Parent
+  name: IContainable.Parent
+  nameWithType: Tilemap.IContainable.Parent
+  fullName: DotFeather.Tilemap.DotFeather.IContainable.Parent
+  nameWithType.vb: Tilemap.DotFeather.IContainable.Parent
+  name.vb: DotFeather.IContainable.Parent
+- uid: DotFeather.IContainable.Parent
+  commentId: P:DotFeather.IContainable.Parent
+  parent: DotFeather.IContainable
+  name: Parent
+  nameWithType: IContainable.Parent
+  fullName: DotFeather.IContainable.Parent
+- uid: DotFeather.Tilemap.AbsoluteLocation*
+  commentId: Overload:DotFeather.Tilemap.AbsoluteLocation
+  name: AbsoluteLocation
+  nameWithType: Tilemap.AbsoluteLocation
+  fullName: DotFeather.Tilemap.AbsoluteLocation
+- uid: DotFeather.IContainable.AbsoluteLocation
+  commentId: P:DotFeather.IContainable.AbsoluteLocation
+  parent: DotFeather.IContainable
+  name: AbsoluteLocation
+  nameWithType: IContainable.AbsoluteLocation
+  fullName: DotFeather.IContainable.AbsoluteLocation
 - uid: DotFeather.Tilemap.TileSize*
   commentId: Overload:DotFeather.Tilemap.TileSize
   name: TileSize
@@ -1580,3 +1767,187 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: DotFeather.Tilemap.GetEnumerator*
+  commentId: Overload:DotFeather.Tilemap.GetEnumerator
+  name: GetEnumerator
+  nameWithType: Tilemap.GetEnumerator
+  fullName: DotFeather.Tilemap.GetEnumerator
+- uid: System.Collections.Generic.IEnumerator{System.ValueTuple{System.Int32,System.Int32,DotFeather.ITile,System.Nullable{System.Drawing.Color}}}
+  commentId: T:System.Collections.Generic.IEnumerator{System.ValueTuple{System.Int32,System.Int32,DotFeather.ITile,System.Nullable{System.Drawing.Color}}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  name: IEnumerator<ValueTuple<Int32, Int32, ITile, Nullable<Color>>>
+  nameWithType: IEnumerator<ValueTuple<Int32, Int32, ITile, Nullable<Color>>>
+  fullName: System.Collections.Generic.IEnumerator<System.ValueTuple<System.Int32, System.Int32, DotFeather.ITile, System.Nullable<System.Drawing.Color>>>
+  nameWithType.vb: IEnumerator(Of ValueTuple(Of Int32, Int32, ITile, Nullable(Of Color)))
+  fullName.vb: System.Collections.Generic.IEnumerator(Of System.ValueTuple(Of System.Int32, System.Int32, DotFeather.ITile, System.Nullable(Of System.Drawing.Color)))
+  name.vb: IEnumerator(Of ValueTuple(Of Int32, Int32, ITile, Nullable(Of Color)))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.ValueTuple`4
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DotFeather.ITile
+    name: ITile
+    nameWithType: ITile
+    fullName: DotFeather.ITile
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Drawing.Color
+    name: Color
+    nameWithType: Color
+    fullName: System.Drawing.Color
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.ValueTuple`4
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DotFeather.ITile
+    name: ITile
+    nameWithType: ITile
+    fullName: DotFeather.ITile
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Drawing.Color
+    name: Color
+    nameWithType: Color
+    fullName: System.Drawing.Color
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

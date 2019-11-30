@@ -14,6 +14,8 @@
     name: Container
   - uid: DotFeather.Coroutine
     name: Coroutine
+  - uid: DotFeather.CoroutineExtension
+    name: CoroutineExtension
   - uid: DotFeather.CoroutineRunner
     name: CoroutineRunner
   - uid: DotFeather.DFEventArgs
@@ -46,8 +48,12 @@
     name: Graphic
   - uid: DotFeather.IAudioSource
     name: IAudioSource
+  - uid: DotFeather.IContainable
+    name: IContainable
   - uid: DotFeather.IDrawable
     name: IDrawable
+  - uid: DotFeather.ISizedDrawable
+    name: ISizedDrawable
   - uid: DotFeather.ITile
     name: ITile
   - uid: DotFeather.MiscUtility
@@ -96,6 +102,8 @@
     name: VorbisAudioSource
   - uid: DotFeather.WaitForSeconds
     name: WaitForSeconds
+  - uid: DotFeather.WaitForTask
+    name: WaitForTask
   - uid: DotFeather.WaitUntil
     name: WaitUntil
   - uid: DotFeather.WaitUntilNextFrame

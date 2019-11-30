@@ -107,6 +107,8 @@ DotFeather has some builtin yield instructions, and some objects are also specia
 |`WaitUntil(Func<bool> conditions);`|Wait until the condition is met.|
 |`WaitWhile(Func<bool> conditions);`|It's an opposite of WaitUntil. Wait while the condition is met.|
 |`WaitUntilNextFrame();`|Wait until the next frame is started.|
+|`WaitForTask`|Wait until the specified task finishes executing.|
+|`Task` and `ValueTask`|Wait for the task to complete.|
 |`Coroutine`|Wait until the coroutine is finished.|
 |`IEnumerator`|Run as a coroutine, and wail until the coroutine is finished.|
 |Other Object-inherited types and `null`|Work as a `WaitUntilNextFrame`.|

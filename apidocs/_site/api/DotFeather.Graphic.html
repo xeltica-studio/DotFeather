@@ -83,6 +83,7 @@
 	</div>
 	<div classs="implements">
 		<h5>&#23455;&#35013;</h5>
+		<div><a class="xref" href="DotFeather.IContainable.html">IContainable</a></div>
 		<div><a class="xref" href="DotFeather.IDrawable.html">IDrawable</a></div>
 	</div>
 	<div class="inheritedMembers">
@@ -113,10 +114,41 @@
 	<h6><strong>&#12450;&#12475;&#12531;&#12502;&#12522;</strong>: DotFeather.dll</h6>
 	<h5 id="DotFeather_Graphic_syntax">&#27083;&#25991;</h5>
 	<div class="codewrapper">
-		<pre><code class="lang-csharp hljs">public class Graphic : IDrawable</code></pre>
+		<pre><code class="lang-csharp hljs">public class Graphic : IContainable, IDrawable</code></pre>
 	</div>
 	<h3 id="properties">&#12503;&#12525;&#12497;&#12486;&#12451;
 	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_AbsoluteLocation.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.AbsoluteLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L44">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Graphic_AbsoluteLocation_" data-uid="DotFeather.Graphic.AbsoluteLocation*"></a>
+	<h4 id="DotFeather_Graphic_AbsoluteLocation" data-uid="DotFeather.Graphic.AbsoluteLocation">AbsoluteLocation</h4>
+	<div class="markdown level1 summary"><p>Get absolute location.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public Vector AbsoluteLocation { get; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Angle.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Angle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
@@ -241,6 +273,37 @@
 	</table>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Parent.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L33">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Graphic_Parent_" data-uid="DotFeather.Graphic.Parent*"></a>
+	<h4 id="DotFeather_Graphic_Parent" data-uid="DotFeather.Graphic.Parent">Parent</h4>
+	<div class="markdown level1 summary"><p>Get a parent of this drawable.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public IContainable Parent { get; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.IContainable.html">IContainable</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Scale.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Scale%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
@@ -306,7 +369,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Clear.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L192">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L208">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Clear_" data-uid="DotFeather.Graphic.Clear*"></a>
 	<h4 id="DotFeather_Graphic_Clear" data-uid="DotFeather.Graphic.Clear">Clear()</h4>
@@ -337,7 +400,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Destroy.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L202">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L218">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Destroy_" data-uid="DotFeather.Graphic.Destroy*"></a>
 	<h4 id="DotFeather_Graphic_Destroy" data-uid="DotFeather.Graphic.Destroy">Destroy()</h4>
@@ -346,14 +409,14 @@
 	<div class="markdown level1 conceptual"></div>
 	<h5 class="decalaration">&#23459;&#35328;</h5>
 	<div class="codewrapper">
-		<pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+		<pre><code class="lang-csharp hljs">public virtual void Destroy()</code></pre>
 	</div>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Draw_DotFeather_GameBase_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Draw(DotFeather.GameBase%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L30">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L46">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Draw_" data-uid="DotFeather.Graphic.Draw*"></a>
 	<h4 id="DotFeather_Graphic_Draw_DotFeather_GameBase_DotFeather_Vector_" data-uid="DotFeather.Graphic.Draw(DotFeather.GameBase,DotFeather.Vector)">Draw(GameBase, Vector)</h4>
@@ -390,7 +453,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Ellipse_DotFeather_VectorInt_DotFeather_VectorInt_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Ellipse(DotFeather.VectorInt%2CDotFeather.VectorInt%2CSystem.Drawing.Color%2CSystem.Int32%2CSystem.Nullable%7BSystem.Drawing.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L169">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L185">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Ellipse_" data-uid="DotFeather.Graphic.Ellipse*"></a>
 	<h4 id="DotFeather_Graphic_Ellipse_DotFeather_VectorInt_DotFeather_VectorInt_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__" data-uid="DotFeather.Graphic.Ellipse(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">Ellipse(VectorInt, VectorInt, Color, Int32, Nullable&lt;Color&gt;)</h4>
@@ -458,7 +521,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Ellipse_System_Int32_System_Int32_System_Int32_System_Int32_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Ellipse(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Drawing.Color%2CSystem.Int32%2CSystem.Nullable%7BSystem.Drawing.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L138">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L154">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Ellipse_" data-uid="DotFeather.Graphic.Ellipse*"></a>
 	<h4 id="DotFeather_Graphic_Ellipse_System_Int32_System_Int32_System_Int32_System_Int32_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__" data-uid="DotFeather.Graphic.Ellipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">Ellipse(Int32, Int32, Int32, Int32, Color, Int32, Nullable&lt;Color&gt;)</h4>
@@ -536,7 +599,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Line_DotFeather_VectorInt_DotFeather_VectorInt_System_Drawing_Color_.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Line(DotFeather.VectorInt%2CDotFeather.VectorInt%2CSystem.Drawing.Color)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L63">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L79">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Line_" data-uid="DotFeather.Graphic.Line*"></a>
 	<h4 id="DotFeather_Graphic_Line_DotFeather_VectorInt_DotFeather_VectorInt_System_Drawing_Color_" data-uid="DotFeather.Graphic.Line(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color)">Line(VectorInt, VectorInt, Color)</h4>
@@ -597,7 +660,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Line_System_Int32_System_Int32_System_Int32_System_Int32_System_Drawing_Color_.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Line(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Drawing.Color)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L77">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L93">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Line_" data-uid="DotFeather.Graphic.Line*"></a>
 	<h4 id="DotFeather_Graphic_Line_System_Int32_System_Int32_System_Int32_System_Int32_System_Drawing_Color_" data-uid="DotFeather.Graphic.Line(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color)">Line(Int32, Int32, Int32, Int32, Color)</h4>
@@ -670,7 +733,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Pixel_DotFeather_VectorInt_System_Drawing_Color_.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Pixel(DotFeather.VectorInt%2CSystem.Drawing.Color)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L43">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L59">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Pixel_" data-uid="DotFeather.Graphic.Pixel*"></a>
 	<h4 id="DotFeather_Graphic_Pixel_DotFeather_VectorInt_System_Drawing_Color_" data-uid="DotFeather.Graphic.Pixel(DotFeather.VectorInt,System.Drawing.Color)">Pixel(VectorInt, Color)</h4>
@@ -723,7 +786,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Pixel_System_Int32_System_Int32_System_Drawing_Color_.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Pixel(System.Int32%2CSystem.Int32%2CSystem.Drawing.Color)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L52">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L68">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Pixel_" data-uid="DotFeather.Graphic.Pixel*"></a>
 	<h4 id="DotFeather_Graphic_Pixel_System_Int32_System_Int32_System_Drawing_Color_" data-uid="DotFeather.Graphic.Pixel(System.Int32,System.Int32,System.Drawing.Color)">Pixel(Int32, Int32, Color)</h4>
@@ -781,7 +844,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Rect_DotFeather_VectorInt_DotFeather_VectorInt_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Rect(DotFeather.VectorInt%2CDotFeather.VectorInt%2CSystem.Drawing.Color%2CSystem.Int32%2CSystem.Nullable%7BSystem.Drawing.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L90">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L106">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Rect_" data-uid="DotFeather.Graphic.Rect*"></a>
 	<h4 id="DotFeather_Graphic_Rect_DotFeather_VectorInt_DotFeather_VectorInt_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__" data-uid="DotFeather.Graphic.Rect(DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">Rect(VectorInt, VectorInt, Color, Int32, Nullable&lt;Color&gt;)</h4>
@@ -854,7 +917,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Rect_System_Int32_System_Int32_System_Int32_System_Int32_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Rect(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Drawing.Color%2CSystem.Int32%2CSystem.Nullable%7BSystem.Drawing.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L105">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L121">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Rect_" data-uid="DotFeather.Graphic.Rect*"></a>
 	<h4 id="DotFeather_Graphic_Rect_System_Int32_System_Int32_System_Int32_System_Int32_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__" data-uid="DotFeather.Graphic.Rect(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">Rect(Int32, Int32, Int32, Int32, Color, Int32, Nullable&lt;Color&gt;)</h4>
@@ -939,7 +1002,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Texture_System_Int32_System_Int32_DotFeather_Texture2D_.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Texture(System.Int32%2CSystem.Int32%2CDotFeather.Texture2D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L180">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L196">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Texture_" data-uid="DotFeather.Graphic.Texture*"></a>
 	<h4 id="DotFeather_Graphic_Texture_System_Int32_System_Int32_DotFeather_Texture2D_" data-uid="DotFeather.Graphic.Texture(System.Int32,System.Int32,DotFeather.Texture2D)">Texture(Int32, Int32, Texture2D)</h4>
@@ -1000,7 +1063,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Triangle_DotFeather_VectorInt_DotFeather_VectorInt_DotFeather_VectorInt_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Triangle(DotFeather.VectorInt%2CDotFeather.VectorInt%2CDotFeather.VectorInt%2CSystem.Drawing.Color%2CSystem.Int32%2CSystem.Nullable%7BSystem.Drawing.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L130">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L146">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Triangle_" data-uid="DotFeather.Graphic.Triangle*"></a>
 	<h4 id="DotFeather_Graphic_Triangle_DotFeather_VectorInt_DotFeather_VectorInt_DotFeather_VectorInt_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__" data-uid="DotFeather.Graphic.Triangle(DotFeather.VectorInt,DotFeather.VectorInt,DotFeather.VectorInt,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">Triangle(VectorInt, VectorInt, VectorInt, Color, Int32, Nullable&lt;Color&gt;)</h4>
@@ -1073,7 +1136,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_Triangle_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.Triangle(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Drawing.Color%2CSystem.Int32%2CSystem.Nullable%7BSystem.Drawing.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L118">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L134">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_Graphic_Triangle_" data-uid="DotFeather.Graphic.Triangle*"></a>
 	<h4 id="DotFeather_Graphic_Triangle_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Drawing_Color_System_Int32_System_Nullable_System_Drawing_Color__" data-uid="DotFeather.Graphic.Triangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">Triangle(Int32, Int32, Int32, Int32, Int32, Int32, Color, Int32, Nullable&lt;Color&gt;)</h4>
@@ -1156,7 +1219,42 @@
 			</tr>
 		</tbody>
 	</table>
+	<h3 id="eii">&#26126;&#31034;&#30340;&#12394;&#12452;&#12531;&#12479;&#12540;&#12501;&#12455;&#12452;&#12473;&#23455;&#35013;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_Graphic_DotFeather_IContainable_Parent.md&amp;value=---%0Auid%3A%20DotFeather.Graphic.DotFeather%23IContainable%23Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/Graphic.cs/#L35">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_Graphic_DotFeather_IContainable_Parent_" data-uid="DotFeather.Graphic.DotFeather#IContainable#Parent*"></a>
+	<h4 id="DotFeather_Graphic_DotFeather_IContainable_Parent" data-uid="DotFeather.Graphic.DotFeather#IContainable#Parent">IContainable.Parent</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">IContainable IContainable.Parent { get; set; }</code></pre>
+	</div>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.IContainable.html">IContainable</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
 	<h3 id="implements">&#23455;&#35013;</h3>
+	<div>
+			<a class="xref" href="DotFeather.IContainable.html">IContainable</a>
+	</div>
 	<div>
 			<a class="xref" href="DotFeather.IDrawable.html">IDrawable</a>
 	</div>

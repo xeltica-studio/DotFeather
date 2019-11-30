@@ -6,15 +6,20 @@ items:
   parent: DotFeather
   children:
   - DotFeather.NineSliceSprite.#ctor(DotFeather.Texture2D[])
+  - DotFeather.NineSliceSprite.AbsoluteLocation
   - DotFeather.NineSliceSprite.Angle
   - DotFeather.NineSliceSprite.Color
   - DotFeather.NineSliceSprite.Destroy
+  - DotFeather.NineSliceSprite.DotFeather#IContainable#Parent
+  - DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Height
+  - DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Width
   - DotFeather.NineSliceSprite.Draw(DotFeather.GameBase,DotFeather.Vector)
   - DotFeather.NineSliceSprite.Height
   - DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)
   - DotFeather.NineSliceSprite.LoadFrom(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
   - DotFeather.NineSliceSprite.Location
   - DotFeather.NineSliceSprite.Name
+  - DotFeather.NineSliceSprite.Parent
   - DotFeather.NineSliceSprite.Scale
   - DotFeather.NineSliceSprite.Textures
   - DotFeather.NineSliceSprite.Width
@@ -40,13 +45,15 @@ items:
   summary: "\nA <xref href=\"DotFeather.IDrawable\" data-throw-if-not-resolved=\"false\"></xref> object to draw 9-slice sprite.\n"
   example: []
   syntax:
-    content: 'public class NineSliceSprite : IDrawable'
+    content: 'public class NineSliceSprite : IContainable, ISizedDrawable, IDrawable'
     content.vb: >-
       Public Class NineSliceSprite
-          Implements IDrawable
+          Implements IContainable, ISizedDrawable, IDrawable
   inheritance:
   - System.Object
   implements:
+  - DotFeather.IContainable
+  - DotFeather.ISizedDrawable
   - DotFeather.IDrawable
   inheritedMembers:
   - System.Object.Equals(System.Object)
@@ -393,6 +400,193 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: DotFeather.NineSliceSprite.AbsoluteLocation
+  commentId: P:DotFeather.NineSliceSprite.AbsoluteLocation
+  id: AbsoluteLocation
+  parent: DotFeather.NineSliceSprite
+  langs:
+  - csharp
+  - vb
+  name: AbsoluteLocation
+  nameWithType: NineSliceSprite.AbsoluteLocation
+  fullName: DotFeather.NineSliceSprite.AbsoluteLocation
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/NineSliceSprite.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: AbsoluteLocation
+    path: ../DotFeather/Graphics/NineSliceSprite.cs
+    startLine: 45
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet absolute location.\n"
+  example: []
+  syntax:
+    content: public Vector AbsoluteLocation { get; }
+    parameters: []
+    return:
+      type: DotFeather.Vector
+    content.vb: Public ReadOnly Property AbsoluteLocation As Vector
+  overload: DotFeather.NineSliceSprite.AbsoluteLocation*
+  implements:
+  - DotFeather.IContainable.AbsoluteLocation
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Width
+  commentId: P:DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Width
+  id: DotFeather#ISizedDrawable#Width
+  isEii: true
+  parent: DotFeather.NineSliceSprite
+  langs:
+  - csharp
+  - vb
+  name: ISizedDrawable.Width
+  nameWithType: NineSliceSprite.ISizedDrawable.Width
+  fullName: DotFeather.NineSliceSprite.DotFeather.ISizedDrawable.Width
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/NineSliceSprite.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: DotFeather.ISizedDrawable.Width
+    path: ../DotFeather/Graphics/NineSliceSprite.cs
+    startLine: 47
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: float ISizedDrawable.Width { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: ReadOnly WriteOnly Property DotFeather.ISizedDrawable.Width As Single Implements ISizedDrawable.Width
+  overload: DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Width*
+  implements:
+  - DotFeather.ISizedDrawable.Width
+  nameWithType.vb: NineSliceSprite.DotFeather.ISizedDrawable.Width
+  modifiers.csharp:
+  - get
+  - set
+  name.vb: DotFeather.ISizedDrawable.Width
+- uid: DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Height
+  commentId: P:DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Height
+  id: DotFeather#ISizedDrawable#Height
+  isEii: true
+  parent: DotFeather.NineSliceSprite
+  langs:
+  - csharp
+  - vb
+  name: ISizedDrawable.Height
+  nameWithType: NineSliceSprite.ISizedDrawable.Height
+  fullName: DotFeather.NineSliceSprite.DotFeather.ISizedDrawable.Height
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/NineSliceSprite.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: DotFeather.ISizedDrawable.Height
+    path: ../DotFeather/Graphics/NineSliceSprite.cs
+    startLine: 53
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: float ISizedDrawable.Height { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: ReadOnly WriteOnly Property DotFeather.ISizedDrawable.Height As Single Implements ISizedDrawable.Height
+  overload: DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Height*
+  implements:
+  - DotFeather.ISizedDrawable.Height
+  nameWithType.vb: NineSliceSprite.DotFeather.ISizedDrawable.Height
+  modifiers.csharp:
+  - get
+  - set
+  name.vb: DotFeather.ISizedDrawable.Height
+- uid: DotFeather.NineSliceSprite.Parent
+  commentId: P:DotFeather.NineSliceSprite.Parent
+  id: Parent
+  parent: DotFeather.NineSliceSprite
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: NineSliceSprite.Parent
+  fullName: DotFeather.NineSliceSprite.Parent
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/NineSliceSprite.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Parent
+    path: ../DotFeather/Graphics/NineSliceSprite.cs
+    startLine: 62
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet a parent of this drawable.\n"
+  example: []
+  syntax:
+    content: public IContainable Parent { get; }
+    parameters: []
+    return:
+      type: DotFeather.IContainable
+    content.vb: Public ReadOnly Property Parent As IContainable
+  overload: DotFeather.NineSliceSprite.Parent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotFeather.NineSliceSprite.DotFeather#IContainable#Parent
+  commentId: P:DotFeather.NineSliceSprite.DotFeather#IContainable#Parent
+  id: DotFeather#IContainable#Parent
+  isEii: true
+  parent: DotFeather.NineSliceSprite
+  langs:
+  - csharp
+  - vb
+  name: IContainable.Parent
+  nameWithType: NineSliceSprite.IContainable.Parent
+  fullName: DotFeather.NineSliceSprite.DotFeather.IContainable.Parent
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/NineSliceSprite.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: DotFeather.IContainable.Parent
+    path: ../DotFeather/Graphics/NineSliceSprite.cs
+    startLine: 64
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: IContainable IContainable.Parent { get; set; }
+    parameters: []
+    return:
+      type: DotFeather.IContainable
+    content.vb: ReadOnly WriteOnly Property DotFeather.IContainable.Parent As IContainable Implements IContainable.Parent
+  overload: DotFeather.NineSliceSprite.DotFeather#IContainable#Parent*
+  implements:
+  - DotFeather.IContainable.Parent
+  nameWithType.vb: NineSliceSprite.DotFeather.IContainable.Parent
+  modifiers.csharp:
+  - get
+  - set
+  name.vb: DotFeather.IContainable.Parent
 - uid: DotFeather.NineSliceSprite.#ctor(DotFeather.Texture2D[])
   commentId: M:DotFeather.NineSliceSprite.#ctor(DotFeather.Texture2D[])
   id: '#ctor(DotFeather.Texture2D[])'
@@ -411,7 +605,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 45
+    startLine: 73
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -449,7 +643,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 63
+    startLine: 91
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -502,7 +696,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LoadFrom
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 74
+    startLine: 102
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -555,7 +749,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 79
+    startLine: 107
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -589,7 +783,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/NineSliceSprite.cs
-    startLine: 91
+    startLine: 119
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -629,6 +823,18 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: DotFeather.IContainable
+  commentId: T:DotFeather.IContainable
+  parent: DotFeather
+  name: IContainable
+  nameWithType: IContainable
+  fullName: DotFeather.IContainable
+- uid: DotFeather.ISizedDrawable
+  commentId: T:DotFeather.ISizedDrawable
+  parent: DotFeather
+  name: ISizedDrawable
+  nameWithType: ISizedDrawable
+  fullName: DotFeather.ISizedDrawable
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -1123,6 +1329,61 @@ references:
   name: Height
   nameWithType: NineSliceSprite.Height
   fullName: DotFeather.NineSliceSprite.Height
+- uid: DotFeather.NineSliceSprite.AbsoluteLocation*
+  commentId: Overload:DotFeather.NineSliceSprite.AbsoluteLocation
+  name: AbsoluteLocation
+  nameWithType: NineSliceSprite.AbsoluteLocation
+  fullName: DotFeather.NineSliceSprite.AbsoluteLocation
+- uid: DotFeather.IContainable.AbsoluteLocation
+  commentId: P:DotFeather.IContainable.AbsoluteLocation
+  parent: DotFeather.IContainable
+  name: AbsoluteLocation
+  nameWithType: IContainable.AbsoluteLocation
+  fullName: DotFeather.IContainable.AbsoluteLocation
+- uid: DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Width*
+  commentId: Overload:DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Width
+  name: ISizedDrawable.Width
+  nameWithType: NineSliceSprite.ISizedDrawable.Width
+  fullName: DotFeather.NineSliceSprite.DotFeather.ISizedDrawable.Width
+  nameWithType.vb: NineSliceSprite.DotFeather.ISizedDrawable.Width
+  name.vb: DotFeather.ISizedDrawable.Width
+- uid: DotFeather.ISizedDrawable.Width
+  commentId: P:DotFeather.ISizedDrawable.Width
+  parent: DotFeather.ISizedDrawable
+  name: Width
+  nameWithType: ISizedDrawable.Width
+  fullName: DotFeather.ISizedDrawable.Width
+- uid: DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Height*
+  commentId: Overload:DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Height
+  name: ISizedDrawable.Height
+  nameWithType: NineSliceSprite.ISizedDrawable.Height
+  fullName: DotFeather.NineSliceSprite.DotFeather.ISizedDrawable.Height
+  nameWithType.vb: NineSliceSprite.DotFeather.ISizedDrawable.Height
+  name.vb: DotFeather.ISizedDrawable.Height
+- uid: DotFeather.ISizedDrawable.Height
+  commentId: P:DotFeather.ISizedDrawable.Height
+  parent: DotFeather.ISizedDrawable
+  name: Height
+  nameWithType: ISizedDrawable.Height
+  fullName: DotFeather.ISizedDrawable.Height
+- uid: DotFeather.NineSliceSprite.Parent*
+  commentId: Overload:DotFeather.NineSliceSprite.Parent
+  name: Parent
+  nameWithType: NineSliceSprite.Parent
+  fullName: DotFeather.NineSliceSprite.Parent
+- uid: DotFeather.NineSliceSprite.DotFeather#IContainable#Parent*
+  commentId: Overload:DotFeather.NineSliceSprite.DotFeather#IContainable#Parent
+  name: IContainable.Parent
+  nameWithType: NineSliceSprite.IContainable.Parent
+  fullName: DotFeather.NineSliceSprite.DotFeather.IContainable.Parent
+  nameWithType.vb: NineSliceSprite.DotFeather.IContainable.Parent
+  name.vb: DotFeather.IContainable.Parent
+- uid: DotFeather.IContainable.Parent
+  commentId: P:DotFeather.IContainable.Parent
+  parent: DotFeather.IContainable
+  name: Parent
+  nameWithType: IContainable.Parent
+  fullName: DotFeather.IContainable.Parent
 - uid: DotFeather.NineSliceSprite
   commentId: T:DotFeather.NineSliceSprite
   parent: DotFeather

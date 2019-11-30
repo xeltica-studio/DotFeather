@@ -83,6 +83,8 @@
 	</div>
 	<div classs="implements">
 		<h5>&#23455;&#35013;</h5>
+		<div><a class="xref" href="DotFeather.IContainable.html">IContainable</a></div>
+		<div><a class="xref" href="DotFeather.ISizedDrawable.html">ISizedDrawable</a></div>
 		<div><a class="xref" href="DotFeather.IDrawable.html">IDrawable</a></div>
 	</div>
 	<div class="inheritedMembers">
@@ -113,7 +115,7 @@
 	<h6><strong>&#12450;&#12475;&#12531;&#12502;&#12522;</strong>: DotFeather.dll</h6>
 	<h5 id="DotFeather_NineSliceSprite_syntax">&#27083;&#25991;</h5>
 	<div class="codewrapper">
-		<pre><code class="lang-csharp hljs">public class NineSliceSprite : IDrawable</code></pre>
+		<pre><code class="lang-csharp hljs">public class NineSliceSprite : IContainable, ISizedDrawable, IDrawable</code></pre>
 	</div>
 	<h3 id="constructors">&#12467;&#12531;&#12473;&#12488;&#12521;&#12463;&#12479;
 	</h3>
@@ -122,7 +124,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite__ctor_DotFeather_Texture2D___.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.%23ctor(DotFeather.Texture2D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L46">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L74">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_NineSliceSprite__ctor_" data-uid="DotFeather.NineSliceSprite.#ctor*"></a>
 	<h4 id="DotFeather_NineSliceSprite__ctor_DotFeather_Texture2D___" data-uid="DotFeather.NineSliceSprite.#ctor(DotFeather.Texture2D[])">NineSliceSprite(Texture2D[])</h4>
@@ -152,6 +154,37 @@
 	</table>
 	<h3 id="properties">&#12503;&#12525;&#12497;&#12486;&#12451;
 	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_AbsoluteLocation.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.AbsoluteLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L46">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_NineSliceSprite_AbsoluteLocation_" data-uid="DotFeather.NineSliceSprite.AbsoluteLocation*"></a>
+	<h4 id="DotFeather_NineSliceSprite_AbsoluteLocation" data-uid="DotFeather.NineSliceSprite.AbsoluteLocation">AbsoluteLocation</h4>
+	<div class="markdown level1 summary"><p>Get absolute location.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public Vector AbsoluteLocation { get; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.Vector.html">Vector</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_Angle.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.Angle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
@@ -305,6 +338,37 @@
 	</table>
 	<span class="small pull-right mobile-hide">
 		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_Parent.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L63">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_NineSliceSprite_Parent_" data-uid="DotFeather.NineSliceSprite.Parent*"></a>
+	<h4 id="DotFeather_NineSliceSprite_Parent" data-uid="DotFeather.NineSliceSprite.Parent">Parent</h4>
+	<div class="markdown level1 summary"><p>Get a parent of this drawable.</p>
+</div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">public IContainable Parent { get; }</code></pre>
+	</div>
+	<h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#12398;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.IContainable.html">IContainable</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_Scale.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.Scale%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
@@ -432,7 +496,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_Destroy.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L80">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L108">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_NineSliceSprite_Destroy_" data-uid="DotFeather.NineSliceSprite.Destroy*"></a>
 	<h4 id="DotFeather_NineSliceSprite_Destroy" data-uid="DotFeather.NineSliceSprite.Destroy">Destroy()</h4>
@@ -448,7 +512,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_Draw_DotFeather_GameBase_DotFeather_Vector_.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.Draw(DotFeather.GameBase%2CDotFeather.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L92">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L120">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_NineSliceSprite_Draw_" data-uid="DotFeather.NineSliceSprite.Draw*"></a>
 	<h4 id="DotFeather_NineSliceSprite_Draw_DotFeather_GameBase_DotFeather_Vector_" data-uid="DotFeather.NineSliceSprite.Draw(DotFeather.GameBase,DotFeather.Vector)">Draw(GameBase, Vector)</h4>
@@ -486,7 +550,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_LoadFrom_System_IO_Stream_System_Int32_System_Int32_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L75">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L103">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_NineSliceSprite_LoadFrom_" data-uid="DotFeather.NineSliceSprite.LoadFrom*"></a>
 	<h4 id="DotFeather_NineSliceSprite_LoadFrom_System_IO_Stream_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="DotFeather.NineSliceSprite.LoadFrom(System.IO.Stream,System.Int32,System.Int32,System.Int32,System.Int32)">LoadFrom(Stream, Int32, Int32, Int32, Int32)</h4>
@@ -560,7 +624,7 @@
 		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_LoadFrom_System_String_System_Int32_System_Int32_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.LoadFrom(System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
 	</span>
 	<span class="small pull-right mobile-hide">
-		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L64">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L92">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
 	</span>
 	<a id="DotFeather_NineSliceSprite_LoadFrom_" data-uid="DotFeather.NineSliceSprite.LoadFrom*"></a>
 	<h4 id="DotFeather_NineSliceSprite_LoadFrom_System_String_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="DotFeather.NineSliceSprite.LoadFrom(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">LoadFrom(String, Int32, Int32, Int32, Int32)</h4>
@@ -629,7 +693,105 @@
 			</tr>
 		</tbody>
 	</table>
+	<h3 id="eii">&#26126;&#31034;&#30340;&#12394;&#12452;&#12531;&#12479;&#12540;&#12501;&#12455;&#12452;&#12473;&#23455;&#35013;
+	</h3>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_DotFeather_IContainable_Parent.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.DotFeather%23IContainable%23Parent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L65">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_NineSliceSprite_DotFeather_IContainable_Parent_" data-uid="DotFeather.NineSliceSprite.DotFeather#IContainable#Parent*"></a>
+	<h4 id="DotFeather_NineSliceSprite_DotFeather_IContainable_Parent" data-uid="DotFeather.NineSliceSprite.DotFeather#IContainable#Parent">IContainable.Parent</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">IContainable IContainable.Parent { get; set; }</code></pre>
+	</div>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="xref" href="DotFeather.IContainable.html">IContainable</a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_DotFeather_ISizedDrawable_Height.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.DotFeather%23ISizedDrawable%23Height%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L54">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_NineSliceSprite_DotFeather_ISizedDrawable_Height_" data-uid="DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Height*"></a>
+	<h4 id="DotFeather_NineSliceSprite_DotFeather_ISizedDrawable_Height" data-uid="DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Height">ISizedDrawable.Height</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">float ISizedDrawable.Height { get; set; }</code></pre>
+	</div>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Single</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<span class="small pull-right mobile-hide">
+		<span class="divider">|</span>
+		<a href="https://github.com/xeltica/dotfeather/new/master/apiSpec/new?filename=DotFeather_NineSliceSprite_DotFeather_ISizedDrawable_Width.md&amp;value=---%0Auid%3A%20DotFeather.NineSliceSprite.DotFeather%23ISizedDrawable%23Width%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25991;&#26360;&#12434;&#12418;&#12387;&#12392;&#33391;&#12367;&#12377;&#12427;</a>
+	</span>
+	<span class="small pull-right mobile-hide">
+		<a href="https://github.com/xeltica/dotfeather/blob/master/DotFeather/Graphics/NineSliceSprite.cs/#L48">&#12477;&#12540;&#12473;&#12434;&#35501;&#12416;</a>
+	</span>
+	<a id="DotFeather_NineSliceSprite_DotFeather_ISizedDrawable_Width_" data-uid="DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Width*"></a>
+	<h4 id="DotFeather_NineSliceSprite_DotFeather_ISizedDrawable_Width" data-uid="DotFeather.NineSliceSprite.DotFeather#ISizedDrawable#Width">ISizedDrawable.Width</h4>
+	<div class="markdown level1 summary"></div>
+	<div class="markdown level1 conceptual"></div>
+	<h5 class="decalaration">&#23459;&#35328;</h5>
+	<div class="codewrapper">
+		<pre><code class="lang-csharp hljs">float ISizedDrawable.Width { get; set; }</code></pre>
+	</div>
+	<h5 class="returns">&#36820;&#21364;&#20516;</h5>
+	<table class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>&#22411;</th>
+				<th>&#27010;&#35201;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="xref">System.Single</span></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
 	<h3 id="implements">&#23455;&#35013;</h3>
+	<div>
+			<a class="xref" href="DotFeather.IContainable.html">IContainable</a>
+	</div>
+	<div>
+			<a class="xref" href="DotFeather.ISizedDrawable.html">ISizedDrawable</a>
+	</div>
 	<div>
 			<a class="xref" href="DotFeather.IDrawable.html">IDrawable</a>
 	</div>

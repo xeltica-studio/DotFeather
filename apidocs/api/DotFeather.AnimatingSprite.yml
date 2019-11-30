@@ -34,16 +34,18 @@ items:
   summary: "\nA sprite with texture-animation feature.\n"
   example: []
   syntax:
-    content: 'public class AnimatingSprite : Sprite, IDrawable, IUpdatable'
+    content: 'public class AnimatingSprite : Sprite, IContainable, ISizedDrawable, IDrawable, IUpdatable'
     content.vb: >-
       Public Class AnimatingSprite
           Inherits Sprite
-          Implements IDrawable, IUpdatable
+          Implements IContainable, ISizedDrawable, IDrawable, IUpdatable
   inheritance:
   - System.Object
   - DotFeather.TextureDrawableBase
   - DotFeather.Sprite
   implements:
+  - DotFeather.IContainable
+  - DotFeather.ISizedDrawable
   - DotFeather.IDrawable
   - IUpdatable
   inheritedMembers:
@@ -59,6 +61,11 @@ items:
   - DotFeather.TextureDrawableBase.Width
   - DotFeather.TextureDrawableBase.Height
   - DotFeather.TextureDrawableBase.Color
+  - DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Width
+  - DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Height
+  - DotFeather.TextureDrawableBase.Parent
+  - DotFeather.TextureDrawableBase.DotFeather#IContainable#Parent
+  - DotFeather.TextureDrawableBase.AbsoluteLocation
   - DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase,DotFeather.Vector)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -390,6 +397,18 @@ references:
   name: Sprite
   nameWithType: Sprite
   fullName: DotFeather.Sprite
+- uid: DotFeather.IContainable
+  commentId: T:DotFeather.IContainable
+  parent: DotFeather
+  name: IContainable
+  nameWithType: IContainable
+  fullName: DotFeather.IContainable
+- uid: DotFeather.ISizedDrawable
+  commentId: T:DotFeather.ISizedDrawable
+  parent: DotFeather
+  name: ISizedDrawable
+  nameWithType: ISizedDrawable
+  fullName: DotFeather.ISizedDrawable
 - uid: DotFeather.IDrawable
   commentId: T:DotFeather.IDrawable
   parent: DotFeather
@@ -561,6 +580,42 @@ references:
   name: Color
   nameWithType: TextureDrawableBase.Color
   fullName: DotFeather.TextureDrawableBase.Color
+- uid: DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Width
+  commentId: P:DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Width
+  parent: DotFeather.TextureDrawableBase
+  name: ISizedDrawable.Width
+  nameWithType: TextureDrawableBase.ISizedDrawable.Width
+  fullName: DotFeather.TextureDrawableBase.DotFeather.ISizedDrawable.Width
+  nameWithType.vb: TextureDrawableBase.DotFeather.ISizedDrawable.Width
+  name.vb: DotFeather.ISizedDrawable.Width
+- uid: DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Height
+  commentId: P:DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Height
+  parent: DotFeather.TextureDrawableBase
+  name: ISizedDrawable.Height
+  nameWithType: TextureDrawableBase.ISizedDrawable.Height
+  fullName: DotFeather.TextureDrawableBase.DotFeather.ISizedDrawable.Height
+  nameWithType.vb: TextureDrawableBase.DotFeather.ISizedDrawable.Height
+  name.vb: DotFeather.ISizedDrawable.Height
+- uid: DotFeather.TextureDrawableBase.Parent
+  commentId: P:DotFeather.TextureDrawableBase.Parent
+  parent: DotFeather.TextureDrawableBase
+  name: Parent
+  nameWithType: TextureDrawableBase.Parent
+  fullName: DotFeather.TextureDrawableBase.Parent
+- uid: DotFeather.TextureDrawableBase.DotFeather#IContainable#Parent
+  commentId: P:DotFeather.TextureDrawableBase.DotFeather#IContainable#Parent
+  parent: DotFeather.TextureDrawableBase
+  name: IContainable.Parent
+  nameWithType: TextureDrawableBase.IContainable.Parent
+  fullName: DotFeather.TextureDrawableBase.DotFeather.IContainable.Parent
+  nameWithType.vb: TextureDrawableBase.DotFeather.IContainable.Parent
+  name.vb: DotFeather.IContainable.Parent
+- uid: DotFeather.TextureDrawableBase.AbsoluteLocation
+  commentId: P:DotFeather.TextureDrawableBase.AbsoluteLocation
+  parent: DotFeather.TextureDrawableBase
+  name: AbsoluteLocation
+  nameWithType: TextureDrawableBase.AbsoluteLocation
+  fullName: DotFeather.TextureDrawableBase.AbsoluteLocation
 - uid: DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase,DotFeather.Vector)
   commentId: M:DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase,DotFeather.Vector)
   parent: DotFeather.TextureDrawableBase

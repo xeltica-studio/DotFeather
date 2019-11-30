@@ -1,36 +1,33 @@
 ### YamlMime:ManagedReference
 items:
-- uid: DotFeather.CoroutineRunner
-  commentId: T:DotFeather.CoroutineRunner
-  id: CoroutineRunner
+- uid: DotFeather.CoroutineExtension
+  commentId: T:DotFeather.CoroutineExtension
+  id: CoroutineExtension
   parent: DotFeather
   children:
-  - DotFeather.CoroutineRunner.Clear
-  - DotFeather.CoroutineRunner.Start(System.Collections.IEnumerator)
-  - DotFeather.CoroutineRunner.Stop(DotFeather.Coroutine)
+  - DotFeather.CoroutineExtension.ToYieldInstruction(System.Threading.Tasks.Task)
+  - DotFeather.CoroutineExtension.ToYieldInstruction(System.Threading.Tasks.ValueTask)
   langs:
   - csharp
   - vb
-  name: CoroutineRunner
-  nameWithType: CoroutineRunner
-  fullName: DotFeather.CoroutineRunner
+  name: CoroutineExtension
+  nameWithType: CoroutineExtension
+  fullName: DotFeather.CoroutineExtension
   type: Class
   source:
     remote:
-      path: DotFeather/Coroutines/CoroutineRunner.cs
+      path: DotFeather/Extensions/CoroutineExtension.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: CoroutineRunner
-    path: ../DotFeather/Coroutines/CoroutineRunner.cs
-    startLine: 11
+    id: CoroutineExtension
+    path: ../DotFeather/Extensions/CoroutineExtension.cs
+    startLine: 4
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nA static coroutine manager class.\n"
-  example: []
   syntax:
-    content: public static class CoroutineRunner
-    content.vb: Public Module CoroutineRunner
+    content: public static class CoroutineExtension
+    content.vb: Public Module CoroutineExtension
   inheritance:
   - System.Object
   inheritedMembers:
@@ -48,110 +45,82 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: DotFeather.CoroutineRunner.Start(System.Collections.IEnumerator)
-  commentId: M:DotFeather.CoroutineRunner.Start(System.Collections.IEnumerator)
-  id: Start(System.Collections.IEnumerator)
-  parent: DotFeather.CoroutineRunner
+- uid: DotFeather.CoroutineExtension.ToYieldInstruction(System.Threading.Tasks.Task)
+  commentId: M:DotFeather.CoroutineExtension.ToYieldInstruction(System.Threading.Tasks.Task)
+  id: ToYieldInstruction(System.Threading.Tasks.Task)
+  isExtensionMethod: true
+  parent: DotFeather.CoroutineExtension
   langs:
   - csharp
   - vb
-  name: Start(IEnumerator)
-  nameWithType: CoroutineRunner.Start(IEnumerator)
-  fullName: DotFeather.CoroutineRunner.Start(System.Collections.IEnumerator)
+  name: ToYieldInstruction(Task)
+  nameWithType: CoroutineExtension.ToYieldInstruction(Task)
+  fullName: DotFeather.CoroutineExtension.ToYieldInstruction(System.Threading.Tasks.Task)
   type: Method
   source:
     remote:
-      path: DotFeather/Coroutines/CoroutineRunner.cs
+      path: DotFeather/Extensions/CoroutineExtension.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: Start
-    path: ../DotFeather/Coroutines/CoroutineRunner.cs
-    startLine: 16
+    id: ToYieldInstruction
+    path: ../DotFeather/Extensions/CoroutineExtension.cs
+    startLine: 6
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nStart the specified coroutine.\n"
-  example: []
   syntax:
-    content: public static Coroutine Start(IEnumerator coroutine)
+    content: public static WaitForTask ToYieldInstruction(this Task t)
     parameters:
-    - id: coroutine
-      type: System.Collections.IEnumerator
+    - id: t
+      type: System.Threading.Tasks.Task
     return:
-      type: DotFeather.Coroutine
-    content.vb: Public Shared Function Start(coroutine As IEnumerator) As Coroutine
-  overload: DotFeather.CoroutineRunner.Start*
+      type: DotFeather.WaitForTask
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToYieldInstruction(t As Task) As WaitForTask
+  overload: DotFeather.CoroutineExtension.ToYieldInstruction*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: DotFeather.CoroutineRunner.Stop(DotFeather.Coroutine)
-  commentId: M:DotFeather.CoroutineRunner.Stop(DotFeather.Coroutine)
-  id: Stop(DotFeather.Coroutine)
-  parent: DotFeather.CoroutineRunner
+- uid: DotFeather.CoroutineExtension.ToYieldInstruction(System.Threading.Tasks.ValueTask)
+  commentId: M:DotFeather.CoroutineExtension.ToYieldInstruction(System.Threading.Tasks.ValueTask)
+  id: ToYieldInstruction(System.Threading.Tasks.ValueTask)
+  isExtensionMethod: true
+  parent: DotFeather.CoroutineExtension
   langs:
   - csharp
   - vb
-  name: Stop(Coroutine)
-  nameWithType: CoroutineRunner.Stop(Coroutine)
-  fullName: DotFeather.CoroutineRunner.Stop(DotFeather.Coroutine)
+  name: ToYieldInstruction(ValueTask)
+  nameWithType: CoroutineExtension.ToYieldInstruction(ValueTask)
+  fullName: DotFeather.CoroutineExtension.ToYieldInstruction(System.Threading.Tasks.ValueTask)
   type: Method
   source:
     remote:
-      path: DotFeather/Coroutines/CoroutineRunner.cs
+      path: DotFeather/Extensions/CoroutineExtension.cs
       branch: master
       repo: https://github.com/xeltica/dotfeather
-    id: Stop
-    path: ../DotFeather/Coroutines/CoroutineRunner.cs
-    startLine: 28
+    id: ToYieldInstruction
+    path: ../DotFeather/Extensions/CoroutineExtension.cs
+    startLine: 8
   assemblies:
   - DotFeather
   namespace: DotFeather
-  summary: "\nStop the specified coroutine.\n"
-  example: []
   syntax:
-    content: public static void Stop(Coroutine coroutine)
+    content: public static WaitForTask ToYieldInstruction(this ValueTask t)
     parameters:
-    - id: coroutine
-      type: DotFeather.Coroutine
-    content.vb: Public Shared Sub Stop(coroutine As Coroutine)
-  overload: DotFeather.CoroutineRunner.Stop*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: DotFeather.CoroutineRunner.Clear
-  commentId: M:DotFeather.CoroutineRunner.Clear
-  id: Clear
-  parent: DotFeather.CoroutineRunner
-  langs:
-  - csharp
-  - vb
-  name: Clear()
-  nameWithType: CoroutineRunner.Clear()
-  fullName: DotFeather.CoroutineRunner.Clear()
-  type: Method
-  source:
-    remote:
-      path: DotFeather/Coroutines/CoroutineRunner.cs
-      branch: master
-      repo: https://github.com/xeltica/dotfeather
-    id: Clear
-    path: ../DotFeather/Coroutines/CoroutineRunner.cs
-    startLine: 37
-  assemblies:
-  - DotFeather
-  namespace: DotFeather
-  summary: "\nStop all running coroutines.\n"
-  example: []
-  syntax:
-    content: public static void Clear()
-    content.vb: Public Shared Sub Clear
-  overload: DotFeather.CoroutineRunner.Clear*
+    - id: t
+      type: System.Threading.Tasks.ValueTask
+    return:
+      type: DotFeather.WaitForTask
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToYieldInstruction(t As ValueTask) As WaitForTask
+  overload: DotFeather.CoroutineExtension.ToYieldInstruction*
   modifiers.csharp:
   - public
   - static
@@ -456,37 +425,34 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: DotFeather.CoroutineRunner.Start*
-  commentId: Overload:DotFeather.CoroutineRunner.Start
-  name: Start
-  nameWithType: CoroutineRunner.Start
-  fullName: DotFeather.CoroutineRunner.Start
-- uid: System.Collections.IEnumerator
-  commentId: T:System.Collections.IEnumerator
-  parent: System.Collections
+- uid: DotFeather.CoroutineExtension.ToYieldInstruction*
+  commentId: Overload:DotFeather.CoroutineExtension.ToYieldInstruction
+  name: ToYieldInstruction
+  nameWithType: CoroutineExtension.ToYieldInstruction
+  fullName: DotFeather.CoroutineExtension.ToYieldInstruction
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
   isExternal: true
-  name: IEnumerator
-  nameWithType: IEnumerator
-  fullName: System.Collections.IEnumerator
-- uid: DotFeather.Coroutine
-  commentId: T:DotFeather.Coroutine
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: DotFeather.WaitForTask
+  commentId: T:DotFeather.WaitForTask
   parent: DotFeather
-  name: Coroutine
-  nameWithType: Coroutine
-  fullName: DotFeather.Coroutine
-- uid: System.Collections
-  commentId: N:System.Collections
+  name: WaitForTask
+  nameWithType: WaitForTask
+  fullName: DotFeather.WaitForTask
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
   isExternal: true
-  name: System.Collections
-  nameWithType: System.Collections
-  fullName: System.Collections
-- uid: DotFeather.CoroutineRunner.Stop*
-  commentId: Overload:DotFeather.CoroutineRunner.Stop
-  name: Stop
-  nameWithType: CoroutineRunner.Stop
-  fullName: DotFeather.CoroutineRunner.Stop
-- uid: DotFeather.CoroutineRunner.Clear*
-  commentId: Overload:DotFeather.CoroutineRunner.Clear
-  name: Clear
-  nameWithType: CoroutineRunner.Clear
-  fullName: DotFeather.CoroutineRunner.Clear
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: System.Threading.Tasks.ValueTask
+  commentId: T:System.Threading.Tasks.ValueTask
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: ValueTask
+  nameWithType: ValueTask
+  fullName: System.Threading.Tasks.ValueTask

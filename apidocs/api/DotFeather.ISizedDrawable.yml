@@ -1,0 +1,253 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotFeather.ISizedDrawable
+  commentId: T:DotFeather.ISizedDrawable
+  id: ISizedDrawable
+  parent: DotFeather
+  children:
+  - DotFeather.ISizedDrawable.Height
+  - DotFeather.ISizedDrawable.Width
+  langs:
+  - csharp
+  - vb
+  name: ISizedDrawable
+  nameWithType: ISizedDrawable
+  fullName: DotFeather.ISizedDrawable
+  type: Interface
+  source:
+    remote:
+      path: DotFeather/Graphics/Interfaces/ISizedDrawable.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: ISizedDrawable
+    path: ../DotFeather/Graphics/Interfaces/ISizedDrawable.cs
+    startLine: 2
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: 'public interface ISizedDrawable : IDrawable'
+    content.vb: >-
+      Public Interface ISizedDrawable
+          Inherits IDrawable
+  inheritedMembers:
+  - DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+  - DotFeather.IDrawable.ZOrder
+  - DotFeather.IDrawable.Name
+  - DotFeather.IDrawable.Location
+  - DotFeather.IDrawable.Angle
+  - DotFeather.IDrawable.Scale
+  - DotFeather.IDrawable.Destroy
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DotFeather.ISizedDrawable.Width
+  commentId: P:DotFeather.ISizedDrawable.Width
+  id: Width
+  parent: DotFeather.ISizedDrawable
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: ISizedDrawable.Width
+  fullName: DotFeather.ISizedDrawable.Width
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/Interfaces/ISizedDrawable.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Width
+    path: ../DotFeather/Graphics/Interfaces/ISizedDrawable.cs
+    startLine: 4
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: float Width { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Property Width As Single
+  overload: DotFeather.ISizedDrawable.Width*
+  modifiers.csharp:
+  - get
+  - set
+- uid: DotFeather.ISizedDrawable.Height
+  commentId: P:DotFeather.ISizedDrawable.Height
+  id: Height
+  parent: DotFeather.ISizedDrawable
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: ISizedDrawable.Height
+  fullName: DotFeather.ISizedDrawable.Height
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/Interfaces/ISizedDrawable.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Height
+    path: ../DotFeather/Graphics/Interfaces/ISizedDrawable.cs
+    startLine: 5
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: float Height { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Property Height As Single
+  overload: DotFeather.ISizedDrawable.Height*
+  modifiers.csharp:
+  - get
+  - set
+references:
+- uid: DotFeather
+  commentId: N:DotFeather
+  name: DotFeather
+  nameWithType: DotFeather
+  fullName: DotFeather
+- uid: DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+  commentId: M:DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+  parent: DotFeather.IDrawable
+  name: Draw(GameBase, Vector)
+  nameWithType: IDrawable.Draw(GameBase, Vector)
+  fullName: DotFeather.IDrawable.Draw(DotFeather.GameBase, DotFeather.Vector)
+  spec.csharp:
+  - uid: DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+    name: Draw
+    nameWithType: IDrawable.Draw
+    fullName: DotFeather.IDrawable.Draw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DotFeather.GameBase
+    name: GameBase
+    nameWithType: GameBase
+    fullName: DotFeather.GameBase
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DotFeather.Vector
+    name: Vector
+    nameWithType: Vector
+    fullName: DotFeather.Vector
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotFeather.IDrawable.Draw(DotFeather.GameBase,DotFeather.Vector)
+    name: Draw
+    nameWithType: IDrawable.Draw
+    fullName: DotFeather.IDrawable.Draw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DotFeather.GameBase
+    name: GameBase
+    nameWithType: GameBase
+    fullName: DotFeather.GameBase
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DotFeather.Vector
+    name: Vector
+    nameWithType: Vector
+    fullName: DotFeather.Vector
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotFeather.IDrawable.ZOrder
+  commentId: P:DotFeather.IDrawable.ZOrder
+  parent: DotFeather.IDrawable
+  name: ZOrder
+  nameWithType: IDrawable.ZOrder
+  fullName: DotFeather.IDrawable.ZOrder
+- uid: DotFeather.IDrawable.Name
+  commentId: P:DotFeather.IDrawable.Name
+  parent: DotFeather.IDrawable
+  name: Name
+  nameWithType: IDrawable.Name
+  fullName: DotFeather.IDrawable.Name
+- uid: DotFeather.IDrawable.Location
+  commentId: P:DotFeather.IDrawable.Location
+  parent: DotFeather.IDrawable
+  name: Location
+  nameWithType: IDrawable.Location
+  fullName: DotFeather.IDrawable.Location
+- uid: DotFeather.IDrawable.Angle
+  commentId: P:DotFeather.IDrawable.Angle
+  parent: DotFeather.IDrawable
+  name: Angle
+  nameWithType: IDrawable.Angle
+  fullName: DotFeather.IDrawable.Angle
+- uid: DotFeather.IDrawable.Scale
+  commentId: P:DotFeather.IDrawable.Scale
+  parent: DotFeather.IDrawable
+  name: Scale
+  nameWithType: IDrawable.Scale
+  fullName: DotFeather.IDrawable.Scale
+- uid: DotFeather.IDrawable.Destroy
+  commentId: M:DotFeather.IDrawable.Destroy
+  parent: DotFeather.IDrawable
+  name: Destroy()
+  nameWithType: IDrawable.Destroy()
+  fullName: DotFeather.IDrawable.Destroy()
+  spec.csharp:
+  - uid: DotFeather.IDrawable.Destroy
+    name: Destroy
+    nameWithType: IDrawable.Destroy
+    fullName: DotFeather.IDrawable.Destroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotFeather.IDrawable.Destroy
+    name: Destroy
+    nameWithType: IDrawable.Destroy
+    fullName: DotFeather.IDrawable.Destroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotFeather.IDrawable
+  commentId: T:DotFeather.IDrawable
+  parent: DotFeather
+  name: IDrawable
+  nameWithType: IDrawable
+  fullName: DotFeather.IDrawable
+- uid: DotFeather.ISizedDrawable.Width*
+  commentId: Overload:DotFeather.ISizedDrawable.Width
+  name: Width
+  nameWithType: ISizedDrawable.Width
+  fullName: DotFeather.ISizedDrawable.Width
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotFeather.ISizedDrawable.Height*
+  commentId: Overload:DotFeather.ISizedDrawable.Height
+  name: Height
+  nameWithType: ISizedDrawable.Height
+  fullName: DotFeather.ISizedDrawable.Height

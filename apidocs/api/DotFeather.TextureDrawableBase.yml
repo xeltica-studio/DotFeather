@@ -5,13 +5,18 @@ items:
   id: TextureDrawableBase
   parent: DotFeather
   children:
+  - DotFeather.TextureDrawableBase.AbsoluteLocation
   - DotFeather.TextureDrawableBase.Angle
   - DotFeather.TextureDrawableBase.Color
   - DotFeather.TextureDrawableBase.Destroy
+  - DotFeather.TextureDrawableBase.DotFeather#IContainable#Parent
+  - DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Height
+  - DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Width
   - DotFeather.TextureDrawableBase.Draw(DotFeather.GameBase,DotFeather.Vector)
   - DotFeather.TextureDrawableBase.Height
   - DotFeather.TextureDrawableBase.Location
   - DotFeather.TextureDrawableBase.Name
+  - DotFeather.TextureDrawableBase.Parent
   - DotFeather.TextureDrawableBase.Scale
   - DotFeather.TextureDrawableBase.Texture
   - DotFeather.TextureDrawableBase.Width
@@ -37,16 +42,18 @@ items:
   summary: "\nAn abstract class for objects that draw a <xref href=\"DotFeather.Texture2D\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: 'public abstract class TextureDrawableBase : IDrawable'
+    content: 'public abstract class TextureDrawableBase : IContainable, ISizedDrawable, IDrawable'
     content.vb: >-
       Public MustInherit Class TextureDrawableBase
-          Implements IDrawable
+          Implements IContainable, ISizedDrawable, IDrawable
   inheritance:
   - System.Object
   derivedClasses:
   - DotFeather.Sprite
   - DotFeather.TextDrawable
   implements:
+  - DotFeather.IContainable
+  - DotFeather.ISizedDrawable
   - DotFeather.IDrawable
   inheritedMembers:
   - System.Object.Equals(System.Object)
@@ -419,6 +426,193 @@ items:
   - Overridable
   - Get
   - Protected Set
+- uid: DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Width
+  commentId: P:DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Width
+  id: DotFeather#ISizedDrawable#Width
+  isEii: true
+  parent: DotFeather.TextureDrawableBase
+  langs:
+  - csharp
+  - vb
+  name: ISizedDrawable.Width
+  nameWithType: TextureDrawableBase.ISizedDrawable.Width
+  fullName: DotFeather.TextureDrawableBase.DotFeather.ISizedDrawable.Width
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/TextureDrawableBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: DotFeather.ISizedDrawable.Width
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
+    startLine: 41
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: float ISizedDrawable.Width { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: ReadOnly WriteOnly Property DotFeather.ISizedDrawable.Width As Single Implements ISizedDrawable.Width
+  overload: DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Width*
+  implements:
+  - DotFeather.ISizedDrawable.Width
+  nameWithType.vb: TextureDrawableBase.DotFeather.ISizedDrawable.Width
+  modifiers.csharp:
+  - get
+  - set
+  name.vb: DotFeather.ISizedDrawable.Width
+- uid: DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Height
+  commentId: P:DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Height
+  id: DotFeather#ISizedDrawable#Height
+  isEii: true
+  parent: DotFeather.TextureDrawableBase
+  langs:
+  - csharp
+  - vb
+  name: ISizedDrawable.Height
+  nameWithType: TextureDrawableBase.ISizedDrawable.Height
+  fullName: DotFeather.TextureDrawableBase.DotFeather.ISizedDrawable.Height
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/TextureDrawableBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: DotFeather.ISizedDrawable.Height
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
+    startLine: 47
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: float ISizedDrawable.Height { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: ReadOnly WriteOnly Property DotFeather.ISizedDrawable.Height As Single Implements ISizedDrawable.Height
+  overload: DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Height*
+  implements:
+  - DotFeather.ISizedDrawable.Height
+  nameWithType.vb: TextureDrawableBase.DotFeather.ISizedDrawable.Height
+  modifiers.csharp:
+  - get
+  - set
+  name.vb: DotFeather.ISizedDrawable.Height
+- uid: DotFeather.TextureDrawableBase.Parent
+  commentId: P:DotFeather.TextureDrawableBase.Parent
+  id: Parent
+  parent: DotFeather.TextureDrawableBase
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: TextureDrawableBase.Parent
+  fullName: DotFeather.TextureDrawableBase.Parent
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/TextureDrawableBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Parent
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
+    startLine: 56
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet a parent of this drawable.\n"
+  example: []
+  syntax:
+    content: public IContainable Parent { get; }
+    parameters: []
+    return:
+      type: DotFeather.IContainable
+    content.vb: Public ReadOnly Property Parent As IContainable
+  overload: DotFeather.TextureDrawableBase.Parent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotFeather.TextureDrawableBase.DotFeather#IContainable#Parent
+  commentId: P:DotFeather.TextureDrawableBase.DotFeather#IContainable#Parent
+  id: DotFeather#IContainable#Parent
+  isEii: true
+  parent: DotFeather.TextureDrawableBase
+  langs:
+  - csharp
+  - vb
+  name: IContainable.Parent
+  nameWithType: TextureDrawableBase.IContainable.Parent
+  fullName: DotFeather.TextureDrawableBase.DotFeather.IContainable.Parent
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/TextureDrawableBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: DotFeather.IContainable.Parent
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
+    startLine: 58
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: IContainable IContainable.Parent { get; set; }
+    parameters: []
+    return:
+      type: DotFeather.IContainable
+    content.vb: ReadOnly WriteOnly Property DotFeather.IContainable.Parent As IContainable Implements IContainable.Parent
+  overload: DotFeather.TextureDrawableBase.DotFeather#IContainable#Parent*
+  implements:
+  - DotFeather.IContainable.Parent
+  nameWithType.vb: TextureDrawableBase.DotFeather.IContainable.Parent
+  modifiers.csharp:
+  - get
+  - set
+  name.vb: DotFeather.IContainable.Parent
+- uid: DotFeather.TextureDrawableBase.AbsoluteLocation
+  commentId: P:DotFeather.TextureDrawableBase.AbsoluteLocation
+  id: AbsoluteLocation
+  parent: DotFeather.TextureDrawableBase
+  langs:
+  - csharp
+  - vb
+  name: AbsoluteLocation
+  nameWithType: TextureDrawableBase.AbsoluteLocation
+  fullName: DotFeather.TextureDrawableBase.AbsoluteLocation
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/TextureDrawableBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: AbsoluteLocation
+    path: ../DotFeather/Graphics/TextureDrawableBase.cs
+    startLine: 67
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet absolute location.\n"
+  example: []
+  syntax:
+    content: public Vector AbsoluteLocation { get; }
+    parameters: []
+    return:
+      type: DotFeather.Vector
+    content.vb: Public ReadOnly Property AbsoluteLocation As Vector
+  overload: DotFeather.TextureDrawableBase.AbsoluteLocation*
+  implements:
+  - DotFeather.IContainable.AbsoluteLocation
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: DotFeather.TextureDrawableBase.Destroy
   commentId: M:DotFeather.TextureDrawableBase.Destroy
   id: Destroy
@@ -437,7 +631,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 44
+    startLine: 72
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -473,7 +667,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/TextureDrawableBase.cs
-    startLine: 51
+    startLine: 79
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -515,6 +709,18 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: DotFeather.IContainable
+  commentId: T:DotFeather.IContainable
+  parent: DotFeather
+  name: IContainable
+  nameWithType: IContainable
+  fullName: DotFeather.IContainable
+- uid: DotFeather.ISizedDrawable
+  commentId: T:DotFeather.ISizedDrawable
+  parent: DotFeather
+  name: ISizedDrawable
+  nameWithType: ISizedDrawable
+  fullName: DotFeather.ISizedDrawable
 - uid: DotFeather.IDrawable
   commentId: T:DotFeather.IDrawable
   parent: DotFeather
@@ -991,6 +1197,61 @@ references:
   name: Texture
   nameWithType: TextureDrawableBase.Texture
   fullName: DotFeather.TextureDrawableBase.Texture
+- uid: DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Width*
+  commentId: Overload:DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Width
+  name: ISizedDrawable.Width
+  nameWithType: TextureDrawableBase.ISizedDrawable.Width
+  fullName: DotFeather.TextureDrawableBase.DotFeather.ISizedDrawable.Width
+  nameWithType.vb: TextureDrawableBase.DotFeather.ISizedDrawable.Width
+  name.vb: DotFeather.ISizedDrawable.Width
+- uid: DotFeather.ISizedDrawable.Width
+  commentId: P:DotFeather.ISizedDrawable.Width
+  parent: DotFeather.ISizedDrawable
+  name: Width
+  nameWithType: ISizedDrawable.Width
+  fullName: DotFeather.ISizedDrawable.Width
+- uid: DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Height*
+  commentId: Overload:DotFeather.TextureDrawableBase.DotFeather#ISizedDrawable#Height
+  name: ISizedDrawable.Height
+  nameWithType: TextureDrawableBase.ISizedDrawable.Height
+  fullName: DotFeather.TextureDrawableBase.DotFeather.ISizedDrawable.Height
+  nameWithType.vb: TextureDrawableBase.DotFeather.ISizedDrawable.Height
+  name.vb: DotFeather.ISizedDrawable.Height
+- uid: DotFeather.ISizedDrawable.Height
+  commentId: P:DotFeather.ISizedDrawable.Height
+  parent: DotFeather.ISizedDrawable
+  name: Height
+  nameWithType: ISizedDrawable.Height
+  fullName: DotFeather.ISizedDrawable.Height
+- uid: DotFeather.TextureDrawableBase.Parent*
+  commentId: Overload:DotFeather.TextureDrawableBase.Parent
+  name: Parent
+  nameWithType: TextureDrawableBase.Parent
+  fullName: DotFeather.TextureDrawableBase.Parent
+- uid: DotFeather.TextureDrawableBase.DotFeather#IContainable#Parent*
+  commentId: Overload:DotFeather.TextureDrawableBase.DotFeather#IContainable#Parent
+  name: IContainable.Parent
+  nameWithType: TextureDrawableBase.IContainable.Parent
+  fullName: DotFeather.TextureDrawableBase.DotFeather.IContainable.Parent
+  nameWithType.vb: TextureDrawableBase.DotFeather.IContainable.Parent
+  name.vb: DotFeather.IContainable.Parent
+- uid: DotFeather.IContainable.Parent
+  commentId: P:DotFeather.IContainable.Parent
+  parent: DotFeather.IContainable
+  name: Parent
+  nameWithType: IContainable.Parent
+  fullName: DotFeather.IContainable.Parent
+- uid: DotFeather.TextureDrawableBase.AbsoluteLocation*
+  commentId: Overload:DotFeather.TextureDrawableBase.AbsoluteLocation
+  name: AbsoluteLocation
+  nameWithType: TextureDrawableBase.AbsoluteLocation
+  fullName: DotFeather.TextureDrawableBase.AbsoluteLocation
+- uid: DotFeather.IContainable.AbsoluteLocation
+  commentId: P:DotFeather.IContainable.AbsoluteLocation
+  parent: DotFeather.IContainable
+  name: AbsoluteLocation
+  nameWithType: IContainable.AbsoluteLocation
+  fullName: DotFeather.IContainable.AbsoluteLocation
 - uid: DotFeather.TextureDrawableBase.Destroy*
   commentId: Overload:DotFeather.TextureDrawableBase.Destroy
   name: Destroy

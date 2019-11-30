@@ -34,6 +34,7 @@ items:
   derivedClasses:
   - DotFeather.Coroutine
   - DotFeather.WaitForSeconds
+  - DotFeather.WaitForTask
   - DotFeather.WaitUntil
   - DotFeather.WaitUntilNextFrame
   - DotFeather.WaitWhile

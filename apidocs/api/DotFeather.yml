@@ -10,6 +10,7 @@ items:
   - DotFeather.AudioPlayer
   - DotFeather.Container
   - DotFeather.Coroutine
+  - DotFeather.CoroutineExtension
   - DotFeather.CoroutineRunner
   - DotFeather.DFEventArgs
   - DotFeather.DFFileDroppedEventArgs
@@ -26,7 +27,9 @@ items:
   - DotFeather.GLContext
   - DotFeather.Graphic
   - DotFeather.IAudioSource
+  - DotFeather.IContainable
   - DotFeather.IDrawable
+  - DotFeather.ISizedDrawable
   - DotFeather.ITile
   - DotFeather.MiscUtility
   - DotFeather.NineSliceSprite
@@ -50,6 +53,7 @@ items:
   - DotFeather.VectorInt
   - DotFeather.VorbisAudioSource
   - DotFeather.WaitForSeconds
+  - DotFeather.WaitForTask
   - DotFeather.WaitUntil
   - DotFeather.WaitUntilNextFrame
   - DotFeather.WaitWhile
@@ -103,6 +107,12 @@ references:
   name: WaitForSeconds
   nameWithType: WaitForSeconds
   fullName: DotFeather.WaitForSeconds
+- uid: DotFeather.WaitForTask
+  commentId: T:DotFeather.WaitForTask
+  parent: DotFeather
+  name: WaitForTask
+  nameWithType: WaitForTask
+  fullName: DotFeather.WaitForTask
 - uid: DotFeather.WaitUntil
   commentId: T:DotFeather.WaitUntil
   name: WaitUntil
@@ -130,6 +140,11 @@ references:
   name: DFEventArgs
   nameWithType: DFEventArgs
   fullName: DotFeather.DFEventArgs
+- uid: DotFeather.CoroutineExtension
+  commentId: T:DotFeather.CoroutineExtension
+  name: CoroutineExtension
+  nameWithType: CoroutineExtension
+  fullName: DotFeather.CoroutineExtension
 - uid: DotFeather.RandomExtension
   commentId: T:DotFeather.RandomExtension
   name: RandomExtension
@@ -181,12 +196,24 @@ references:
   name: Graphic
   nameWithType: Graphic
   fullName: DotFeather.Graphic
+- uid: DotFeather.IContainable
+  commentId: T:DotFeather.IContainable
+  parent: DotFeather
+  name: IContainable
+  nameWithType: IContainable
+  fullName: DotFeather.IContainable
 - uid: DotFeather.IDrawable
   commentId: T:DotFeather.IDrawable
   parent: DotFeather
   name: IDrawable
   nameWithType: IDrawable
   fullName: DotFeather.IDrawable
+- uid: DotFeather.ISizedDrawable
+  commentId: T:DotFeather.ISizedDrawable
+  parent: DotFeather
+  name: ISizedDrawable
+  nameWithType: ISizedDrawable
+  fullName: DotFeather.ISizedDrawable
 - uid: DotFeather.NineSliceSprite
   commentId: T:DotFeather.NineSliceSprite
   parent: DotFeather

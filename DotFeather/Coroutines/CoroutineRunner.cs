@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DotFeather
 {
@@ -81,6 +82,10 @@ namespace DotFeather
 					return y;
 				case IEnumerator ie:
 					return CoroutineRunner.Start(ie);
+				case Task t:
+					return t.ToYieldInstruction();
+				case ValueTask t:
+					return t.ToYieldInstruction();
 				default:
 					return new WaitUntilNextFrame();
 			}

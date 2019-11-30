@@ -5,6 +5,7 @@
 		<TargetFramework>netcoreapp3.0</TargetFramework>
 		<LangVersion>Latest</LangVersion>
 		<Nullable>Enable</Nullable>
+		<ReleaseVersion>0.7.0</ReleaseVersion>
 	</PropertyGroup>
 
 	<ItemGroup>

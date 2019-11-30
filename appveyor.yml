@@ -1,4 +1,4 @@
-version: 2.4.0.{build}
+version: 2.4.1.{build}
 image: Visual Studio 2019
 skip_non_tags: true
 
@@ -42,15 +42,15 @@ deploy:
     draft: false
     prerelease: false
     description: |
-      ## 2.4.0
+      ## 2.4.1
 
-      ### 新機能
-      - `Task` および `ValueTask` 型のオブジェクトをイールド命令として扱えるようになりました。コルーチン内でタスクを待機できます
+      ### バグ修正
+      - タイルのアニメーションがおかしい問題を修正
 
       ----
 
       ### New features
-      - Now objects of type `Task` and` ValueTask` are usable as yield instructions to wait for tasks in a coroutine
+      - Fix a wrong behavior of tiles' animation
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

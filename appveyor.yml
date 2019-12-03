@@ -42,10 +42,10 @@ deploy:
     draft: false
     prerelease: false
     description: |
-      ## 2.4.1
+      ## 2.5.0
 
-      ### バグ修正
-      - タイルのアニメーションがおかしい問題を修正
+      ### 新機能
+      - `Tilemap.CurrentDrawingPosition`追加しました。
 
       ----
 

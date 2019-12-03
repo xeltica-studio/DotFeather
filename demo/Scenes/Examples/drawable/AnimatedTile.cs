@@ -26,7 +26,7 @@ namespace DotFeather.Demo
 
 		public override void OnDestroy(Router router)
 		{
-			foreach (var qbox in qboxes) qbox.Dispose();
+			foreach (var qbox in qboxes!) qbox.Dispose();
 			base.OnDestroy(router);
 		}
 

@@ -1,15 +1,17 @@
 using System;
-using System.Drawing.Imaging;
-using System.Drawing;
 
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 using System.Collections;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
+using SixLabors.ImageSharp;
+using Color = System.Drawing.Color;
+using Size = System.Drawing.Size;
+using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.PixelFormats;
 
 namespace DotFeather
 {
@@ -355,20 +357,20 @@ namespace DotFeather
 		/// <summary>
 		/// Take a screenshot of the current screen.
 		/// </summary>
-		public Bitmap TakeScreenshot()
+		public Image TakeScreenshot()
 		{
 			if (GraphicsContext.CurrentContext == null)
 				throw new GraphicsContextMissingException();
-			int w = Width;
-			int h = Height;
-			Bitmap bmp = new Bitmap(w, h);
-			System.Drawing.Imaging.BitmapData data =
-				bmp.LockBits(new Rectangle(0, 0, w, h), System.Drawing.Imaging.ImageLockMode.WriteOnly, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
-			GL.ReadPixels(0, 0, w, h, OpenTK.Graphics.OpenGL.PixelFormat.Bgr, PixelType.UnsignedByte, data.Scan0);
-			bmp.UnlockBits(data);
 
-			bmp.RotateFlip(RotateFlipType.RotateNoneFlipY);
-			return bmp;
+			var arr = new byte[ActualWidth * ActualHeight * 4];
+
+			GL.ReadPixels<byte>(0, 0, ActualWidth, ActualHeight, OpenTK.Graphics.OpenGL.PixelFormat.Rgba, PixelType.UnsignedByte, arr);
+
+			var img = Image.LoadPixelData<Rgba32>(arr, ActualWidth, ActualHeight);
+
+			img.Mutate(i => i.Flip(FlipMode.Vertical));
+
+			return img;
 		}
 
 		/// <summary>
@@ -454,9 +456,9 @@ namespace DotFeather
 				if (!File.Exists(path))
 				{
 					GL.Flush();
-					var bmp = TakeScreenshot();
-					bmp.Save(path, ImageFormat.Png);
-					bmp.Dispose();
+					using var bmp = TakeScreenshot();
+					using var stream = File.OpenWrite(path);
+					bmp.SaveAsPng(stream);
 				}
 			}
 			TotalFrame++;

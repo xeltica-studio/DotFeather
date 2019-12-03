@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DotFeather.Demo
 {
 	[DemoScene("/drawable/graphic")]
@@ -5,7 +7,7 @@ namespace DotFeather.Demo
 	[Description("ja", "グラフィック面を作成し図形描画を行います")]
 	public class GraphicExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
 		{
 			game.Print("Press ESC to return");
 			Root.Add(g);
@@ -13,7 +15,7 @@ namespace DotFeather.Demo
 
 		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
 		{
-			VectorInt Rnd() => Random.NextVectorInt(game.Width, game.Height) / (int)game.Dpi;
+			VectorInt Rnd() => Random.NextVectorInt(game.Width, game.Height);
 			time += e.DeltaTime;
 			if (time > 0.125f)
 			{

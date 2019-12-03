@@ -11,7 +11,7 @@ namespace DotFeather.Demo
 		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
 		{
 			qboxes = Texture2D.LoadAndSplitFrom("qbox.png", 8, 1, VectorInt.One * 16);
-			var tile = new Tile(qboxes, 0.125);
+			var tile = new Tile(qboxes, 0.125f);
 			var map = new Tilemap(Vector.One * 16);
 			Root.Add(map);
 			map[8, 12] = tile;

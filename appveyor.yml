@@ -45,12 +45,20 @@ deploy:
       ## 2.5.0
 
       ### 新機能
-      - `Tilemap.CurrentDrawingPosition`追加しました。
+      - `Tilemap.CurrentDrawingPosition` プロパティを追加しました。
+      
+      ### 破壊的変更
+      - `GameBase.TakeScreenshot()` メソッド を書き直し、GDI+ に依存するコードを削除しました。
+        - 2.0 に入る予定の変更だったものの、実装が遅れてしまいました。
 
       ----
 
       ### New features
-      - Fix a wrong behavior of tiles' animation
+      - Add `Tilemap.CurrentDrawingPosition` property.
+      
+      ### BREAKING CHANGES
+      - Rewrote `GameBase.TakeScreenshot()` method and delete code depending GDI+.
+        - This change would be released at 2.0, but the implementation has been delayed.
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

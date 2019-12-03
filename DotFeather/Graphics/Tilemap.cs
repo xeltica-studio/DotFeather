@@ -26,7 +26,7 @@ namespace DotFeather
 		/// Get current drawing position. <c>null</c> when not in ITile.Draw()
 		/// </summary>
 		/// <value></value>
-		public VectorInt? CurrentDrawingPosition { get; set; }
+		public VectorInt? CurrentDrawingPosition { get; private set; }
 
 		/// <summary>
 		/// Get a parent of this drawable.

@@ -23,6 +23,12 @@ namespace DotFeather
 		public Color? DefaultColor { get; set; }
 
 		/// <summary>
+		/// Get current drawing position. <c>null</c> when not in ITile.Draw()
+		/// </summary>
+		/// <value></value>
+		public VectorInt? CurrentDrawingPosition { get; set; }
+
+		/// <summary>
 		/// Get a parent of this drawable.
 		/// </summary>
 		public IContainable? Parent { get; internal set; }
@@ -77,8 +83,10 @@ namespace DotFeather
 			{
 				var (x, y) = kv.Key;
 				var loc = new Vector(x, y) * TileSize * Scale;
+				CurrentDrawingPosition = new VectorInt(x, y);
 				kv.Value.tile.Draw(game, this, Location + location + loc, kv.Value.color);
 			}
+			CurrentDrawingPosition = null;
 		}
 
 		/// <summary>

@@ -72,6 +72,7 @@ You want to donate for me? Thank you very much! Please see [this page](//xeltica
 
 [![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=for-the-badge)](LICENSE)
 
+DotFeather depends on several third-party software. See these licenses: [THIRD_PARTIES.md](THIRD_PARTIES.md)
 
 [ci]: https://ci.appveyor.com/project/Xeltica/dotfeather
 [issues]: //github.com/xeltica/dotfeather/issues

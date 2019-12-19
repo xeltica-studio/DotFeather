@@ -12,7 +12,7 @@ DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET St
 
 - Windows
 - macOS
-- GNU/Linux Support
+- GNU/Linux
 
 ## To Build
 

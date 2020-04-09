@@ -33,7 +33,7 @@ deploy:
     api_key:
       # Use encrypt tool
       # https://ci.appveyor.com/tools/encrypt
-      secure: nknIyuf45/JACWB2OAWD32oU6HlW4AkkiI974KwKPPkMh3dRHJXsVQVbN/iIUjg/
+      secure: 0p+A7xhW2Qex9C3sIr4LXPFBNUCxVd1NPvnKH0Yy6uETIpnSAa5q/DkQtOH9Sy9q
     artifact: /.*\.nupkg/
     on:
       appveyor_repo_tag: true

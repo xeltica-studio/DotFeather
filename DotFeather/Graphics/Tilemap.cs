@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using static DotFeather.MiscUtility;
 
 namespace DotFeather
@@ -79,7 +80,17 @@ namespace DotFeather
 
 		public void Draw(GameBase game, Vector location)
 		{
-			foreach (var kv in tiles)
+			// カリング
+			bool filter(KeyValuePair<(int, int), (ITile, Color?)> kv)
+			{
+				var (x, y) = kv.Key;
+				var (left, top) = Location + location + new Vector(x, y) * TileSize * Scale;
+				var right = left + TileSize.X * Scale.X;
+				var bottom = top + TileSize.Y * Scale.Y;
+				return left <= game.ActualWidth && top <= game.ActualHeight && right >= 0 && bottom >= 0;
+			}
+
+			foreach (var kv in tiles.Where(filter))
 			{
 				var (x, y) = kv.Key;
 				var loc = new Vector(x, y) * TileSize * Scale;

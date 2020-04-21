@@ -24,6 +24,6 @@ namespace DotFeather
 
 		public event EventHandler<DFEventArgs>? Update;
 
-		private Router router;
+		private readonly Router router;
 	}
 }

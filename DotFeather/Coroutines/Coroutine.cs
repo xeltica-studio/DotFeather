@@ -70,6 +70,6 @@ namespace DotFeather
 			return coroutine.MoveNext();
 		}
 
-		IEnumerator coroutine;
+		readonly IEnumerator coroutine;
 	}
 }

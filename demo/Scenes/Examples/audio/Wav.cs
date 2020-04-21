@@ -25,7 +25,7 @@ namespace DotFeather.Demo
 				router.ChangeScene<LauncherScene>();
 		}
 
-		AudioPlayer player = new AudioPlayer();
-		WaveAudioSource sfx = new WaveAudioSource("sfx.wav");
+		readonly AudioPlayer player = new AudioPlayer();
+		readonly WaveAudioSource sfx = new WaveAudioSource("sfx.wav");
 	}
 }

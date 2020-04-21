@@ -188,7 +188,7 @@ namespace DotFeather
 			return new SF.Font(family, f.Size, (SF.FontStyle)f.FontStyle);
 		}
 
-		private static Dictionary<object, SF.FontFamily> fontCache = new Dictionary<object, SF.FontFamily>();
+		private static readonly Dictionary<object, SF.FontFamily> fontCache = new Dictionary<object, SF.FontFamily>();
 
 		private string text;
 		private Font font;

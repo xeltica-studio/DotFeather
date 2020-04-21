@@ -250,7 +250,7 @@ namespace DotFeather
 		#endregion
 
 		private List<IDrawable> Children { get; } = new List<IDrawable>(10000);
-		private Dictionary<IDrawable, int> countMap = new Dictionary<IDrawable, int>();
+		private readonly Dictionary<IDrawable, int> countMap = new Dictionary<IDrawable, int>();
 
 		private int count = 0;
 	}

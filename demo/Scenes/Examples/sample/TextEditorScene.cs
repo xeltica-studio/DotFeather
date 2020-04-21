@@ -31,8 +31,8 @@ namespace DotFeather.Demo
 				router.ChangeScene<LauncherScene>();
 		}
 
-		private StringBuilder buf = new StringBuilder();
-		private TextDrawable editorView = new TextDrawable("", Font.GetDefault(16), Color.White)
+		private readonly StringBuilder buf = new StringBuilder();
+		private readonly TextDrawable editorView = new TextDrawable("", Font.GetDefault(16), Color.White)
 		{
 			Location = new Vector(8, 64),
 		};

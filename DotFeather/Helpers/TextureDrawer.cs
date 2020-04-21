@@ -13,7 +13,7 @@ namespace DotFeather
 		/// <summary>
 		/// テクスチャを描画します。
 		/// </summary>
-		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, System.Drawing.Color? color = null, float? width = null, float? height = null)
+		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, Color? color = null, float? width = null, float? height = null)
 		{
 			var hw = game.ActualWidth / 2;
 			var hh = game.ActualHeight / 2;

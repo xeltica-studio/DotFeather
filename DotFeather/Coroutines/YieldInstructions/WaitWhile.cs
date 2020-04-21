@@ -11,6 +11,6 @@ namespace DotFeather
 
 		public WaitWhile(Func<bool> condition) => this.condition = condition;
 
-		private Func<bool> condition;
+		private readonly Func<bool> condition;
 	}
 }

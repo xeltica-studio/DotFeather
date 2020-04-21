@@ -78,64 +78,62 @@ namespace DotFeather
 			if (stream == null)
 				throw new ArgumentNullException(nameof(stream));
 
-			using (BinaryReader reader = new BinaryReader(stream))
+			using var reader = new BinaryReader(stream);
+			// RIFF header
+			string riff = new string(reader.ReadChars(4));
+			if (riff != "RIFF")
+				throw new NotSupportedException("Specified stream is not a wave file.");
+
+			int riffChunkSize = reader.ReadInt32();
+
+			string format = new string(reader.ReadChars(4));
+			if (format != "WAVE")
+				throw new NotSupportedException("Specified stream is not a wave file.");
+
+			// WAVE header
+			string fmt = "";
+			var size = 0;
+			while (true)
 			{
-				// RIFF header
-				string riff = new string(reader.ReadChars(4));
-				if (riff != "RIFF")
-					throw new NotSupportedException("Specified stream is not a wave file.");
-
-				int riffChunkSize = reader.ReadInt32();
-
-				string format = new string(reader.ReadChars(4));
-				if (format != "WAVE")
-					throw new NotSupportedException("Specified stream is not a wave file.");
-
-				// WAVE header
-				string fmt = "";
-				var size = 0;
-				while (true)
-				{
-					fmt = new string(reader.ReadChars(4));
-					size = reader.ReadInt32();
-					if (fmt == "fmt ")
-						break;
-					reader.ReadBytes(size);
-				}
-
-				    reader.ReadInt16();
-				int fileChannels = reader.ReadInt16();
-				int sampleRate = reader.ReadInt32();
-				reader.ReadInt32();
-				reader.ReadInt16();
-				int bitsPerSample = reader.ReadInt16();
-
-				// 拡張とかあったりなかったりするらしい
-				if (size - 16 > 0)
-					reader.ReadBytes(size - 16);
-
-				if (bitsPerSample != 8 && bitsPerSample != 16)
-					throw new NotSupportedException("DotFeather only supports 8bit or 16bit per sample.");
-
-				if (fileChannels < 1 || 2 < fileChannels)
-					throw new NotSupportedException("DotFeather only supports 1ch or 2ch audio.");
-
-				string data = "";
-				while (true)
-				{
-					data = new string(reader.ReadChars(4));
-					size = reader.ReadInt32();
-					if (data == "data")
-						break;
-					reader.ReadBytes(size);
-				}
-
-				channels = fileChannels;
-				bits = bitsPerSample;
-				rate = sampleRate;
-
-				return reader.ReadBytes(size);
+				fmt = new string(reader.ReadChars(4));
+				size = reader.ReadInt32();
+				if (fmt == "fmt ")
+					break;
+				reader.ReadBytes(size);
 			}
+
+			reader.ReadInt16();
+			int fileChannels = reader.ReadInt16();
+			int sampleRate = reader.ReadInt32();
+			reader.ReadInt32();
+			reader.ReadInt16();
+			int bitsPerSample = reader.ReadInt16();
+
+			// 拡張とかあったりなかったりするらしい
+			if (size - 16 > 0)
+				reader.ReadBytes(size - 16);
+
+			if (bitsPerSample != 8 && bitsPerSample != 16)
+				throw new NotSupportedException("DotFeather only supports 8bit or 16bit per sample.");
+
+			if (fileChannels < 1 || 2 < fileChannels)
+				throw new NotSupportedException("DotFeather only supports 1ch or 2ch audio.");
+
+			string data = "";
+			while (true)
+			{
+				data = new string(reader.ReadChars(4));
+				size = reader.ReadInt32();
+				if (data == "data")
+					break;
+				reader.ReadBytes(size);
+			}
+
+			channels = fileChannels;
+			bits = bitsPerSample;
+			rate = sampleRate;
+
+			return reader.ReadBytes(size);
 		}
 
 		private readonly byte[] store;

@@ -4,7 +4,7 @@ namespace DotFeather
 	/// <summary>
 	/// Two dimensional vector.
 	/// </summary>
-	public struct VectorInt: IEquatable<VectorInt>
+	public struct VectorInt : IEquatable<VectorInt>
 	{
 		/// <summary>
 		/// Get or set X coordinate of this vector.
@@ -76,7 +76,7 @@ namespace DotFeather
 		/// </summary>
 		public override bool Equals(object obj)
 		{
-			return obj is VectorInt && Equals((VectorInt)obj);
+			return obj is VectorInt vec && Equals(vec);
 		}
 
 		/// <summary>

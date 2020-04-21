@@ -9,7 +9,7 @@ namespace DotFeather
 		{
 			get
 			{
-				startTime = startTime ?? Time.Now;
+				startTime ??= Time.Now;
 				return Time.Now - startTime.Value < targetTime;
 			}
 		}
@@ -20,6 +20,6 @@ namespace DotFeather
 		}
 
 		private double? startTime;
-		private double targetTime;
+		private readonly double targetTime;
 	}
 }

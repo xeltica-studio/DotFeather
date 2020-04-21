@@ -80,7 +80,7 @@ namespace DotFeather.Demo
 			listView.EndUpdating();
 		}
 
-		private ListView listView = new ListView();
+		private readonly ListView listView = new ListView();
 
 		private Router? router;
 
@@ -115,8 +115,10 @@ namespace DotFeather.Demo
 					Items = new ObservableCollection<ListViewItem>(items);
 				Items.CollectionChanged += (_, __) => UpdateList();
 				var t = Texture2D.CreateSolid(Color.FromArgb(24, 24, 24), 1, 1);
-				backdrop = new Sprite(t);
-				backdrop.ZOrder = -4;
+				backdrop = new Sprite(t)
+				{
+					ZOrder = -4
+				};
 				inner = new Container();
 				Add(backdrop);
 				Add(inner);
@@ -207,13 +209,19 @@ namespace DotFeather.Demo
 				{
 					if (item.Icon is Texture2D ico)
 					{
-						var icon = new Sprite(ico);
-						icon.Location = new Vector(padding, ItemHeight);
-						icon.Width = icon.Height = ItemHeight;
+						var icon = new Sprite(ico)
+						{
+							Location = new Vector(padding, ItemHeight),
+							Width = ItemHeight,
+							Height = ItemHeight
+						};
+
 						inner.Add(icon);
 					}
-					var text = new TextDrawable(item.Text, ItemHeight, FontStyle.Normal, Color.White);
-					text.Location = new Vector(padding + ItemHeight + padding, y);
+					var text = new TextDrawable(item.Text, ItemHeight, FontStyle.Normal, Color.White)
+					{
+						Location = new Vector(padding + ItemHeight + padding, y)
+					};
 					inner.Add(text);
 
 					y += ItemHeight;
@@ -221,8 +229,10 @@ namespace DotFeather.Demo
 					if (item.Description != null)
 					{
 						y += 4;
-						var desc = new TextDrawable(item.Description, 12, FontStyle.Normal, Color.LightGray);
-						desc.Location = new Vector(text.Location.X, y);
+						var desc = new TextDrawable(item.Description, 12, FontStyle.Normal, Color.LightGray)
+						{
+							Location = new Vector(text.Location.X, y)
+						};
 						inner.Add(desc);
 						y += 12;
 					}
@@ -233,22 +243,15 @@ namespace DotFeather.Demo
 					y += padding;
 				}
 			}
-
 			public event ItemSelectedEventHandler? ItemSelected;
 
-			private int itemHeight = 24;
-
 			private int padding = 8;
-
 			private Vector? landingPoint;
-
 			private int landingScrollY;
-
-			private Sprite backdrop;
-
-			private Container inner;
-
 			private bool isUpdating = false;
+			private readonly Sprite backdrop;
+			private readonly int itemHeight = 24;
+			private readonly Container inner;
 
 			public delegate void ItemSelectedEventHandler(int index, ListViewItem item);
 		}

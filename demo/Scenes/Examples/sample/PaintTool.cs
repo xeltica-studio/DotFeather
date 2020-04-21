@@ -32,7 +32,7 @@ namespace DotFeather.Demo
 			prevMouse = mouse;
 		}
 
-		private Graphic g = new Graphic();
+		private readonly Graphic g = new Graphic();
 		private VectorInt prevMouse;
 	}
 }

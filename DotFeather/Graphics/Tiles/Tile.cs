@@ -24,7 +24,7 @@ namespace DotFeather
 		/// </summary>
 		public double Interval { get; private set; }
 
-		private bool textureIsInternal;
+		private readonly bool textureIsInternal;
 
 		/// <summary>
 		/// テクスチャを指定して、<see cref="Tile"/> クラスの新しいインスタンスを初期化します。

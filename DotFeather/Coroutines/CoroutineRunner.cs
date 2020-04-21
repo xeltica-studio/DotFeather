@@ -76,19 +76,14 @@ namespace DotFeather
 
 		private static YieldInstruction ToYieldInstruction(object obj)
 		{
-			switch (obj)
+			return obj switch
 			{
-				case YieldInstruction y:
-					return y;
-				case IEnumerator ie:
-					return CoroutineRunner.Start(ie);
-				case Task t:
-					return t.ToYieldInstruction();
-				case ValueTask t:
-					return t.ToYieldInstruction();
-				default:
-					return new WaitUntilNextFrame();
-			}
+				YieldInstruction y => y,
+				IEnumerator ie => Start(ie),
+				Task t => t.ToYieldInstruction(),
+				ValueTask t => t.ToYieldInstruction(),
+				_ => new WaitUntilNextFrame(),
+			};
 		}
 
 		private static readonly Dictionary<Coroutine, object?> coroutines = new Dictionary<Coroutine, object?>();

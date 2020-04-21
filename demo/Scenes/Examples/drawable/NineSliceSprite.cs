@@ -34,10 +34,10 @@ namespace DotFeather.Demo
 			sprite.Height = nineslice.Height = (int)(64 + 256 * Math.Abs(Math.Sin(Time.Now * 2)));
 		}
 
-		private Sprite sprite = Sprite.LoadFrom("./rect.png");
-		private NineSliceSprite nineslice = NineSliceSprite.LoadFrom("./rect.png", 16, 16, 16, 16);
-		private TextDrawable t1 = new TextDrawable("Sprite", Font.GetDefault(18), Color.Lime);
-		private TextDrawable t2 = new TextDrawable("9-slice Sprite", Font.GetDefault(18), Color.Lime);
+		private readonly Sprite sprite = Sprite.LoadFrom("./rect.png");
+		private readonly NineSliceSprite nineslice = NineSliceSprite.LoadFrom("./rect.png", 16, 16, 16, 16);
+		private readonly TextDrawable t1 = new TextDrawable("Sprite", Font.GetDefault(18), Color.Lime);
+		private readonly TextDrawable t2 = new TextDrawable("9-slice Sprite", Font.GetDefault(18), Color.Lime);
 	}
 
 }

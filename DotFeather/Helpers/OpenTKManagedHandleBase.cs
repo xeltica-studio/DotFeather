@@ -30,14 +30,6 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// <see cref="OpenTKManagedHandleBase{T}"/> クラスの新しいインスタンスを初期化します。
-		/// </summary>
-		private OpenTKManagedHandleBase(T handle)
-		{
-			Handle = handle;
-		}
-
-		/// <summary>
 		/// この <see cref="OpenTKManagedHandleBase{T}"/> を破棄します。
 		/// </summary>
 		public void Dispose()

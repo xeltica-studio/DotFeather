@@ -226,6 +226,6 @@ namespace DotFeather
 				yield return (t.Key.x, t.Key.y, t.Value.tile, t.Value.color);
 		}
 
-		private Dictionary<(int x, int y), (ITile tile, Color? color)> tiles;
+		private readonly Dictionary<(int x, int y), (ITile tile, Color? color)> tiles;
 	}
 }

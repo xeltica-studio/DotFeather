@@ -36,7 +36,7 @@ namespace DotFeather.Demo
 
 			// 0 除算エラーを引き起こす
 			// This causes a division-by-zero exception
-			var c = a / b;
+			_ = a / b;
 		}
 	}
 

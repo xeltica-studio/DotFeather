@@ -53,8 +53,8 @@ Absolute: {(VectorInt)text.AbsoluteLocation}";
 				router.ChangeScene<LauncherScene>();
 		}
 
-		private Container container = new Container();
-		private TextDrawable text = new TextDrawable("", Font.GetDefault(16), Color.White);
+		private readonly Container container = new Container();
+		private readonly TextDrawable text = new TextDrawable("", Font.GetDefault(16), Color.White);
 		private int way = 1;
 	}
 }

@@ -89,7 +89,7 @@ namespace DotFeather
 		/// <param name="loop">Sample number of loop point. To disable loop, specify<c>null</c>.</param>
 		public void Play(IAudioSource source, int? loop = default)
 		{
-			#pragma warning disable CS4014
+#pragma warning disable CS4014
 			PlayAsync(source, loop);
 		}
 
@@ -138,8 +138,8 @@ namespace DotFeather
 				throw new ArgumentException("PlayOneShot requires AudioSource which has determined length.");
 			var buffer = new short[samples];
 			FillBuffer(buffer, buf, default);
-			using(var alSrc = new ALSource())
-			using(var alBuf = new ALBuffer())
+			using (var alSrc = new ALSource())
+			using (var alBuf = new ALBuffer())
 			{
 				AL.BufferData(alBuf, ALFormat.Stereo16, buffer, buffer.Length, source.SampleRate);
 				AL.BindBufferToSource(alSrc, alBuf);
@@ -181,13 +181,12 @@ namespace DotFeather
 				AL.SourceQueueBuffer(alSrc, alBuffers[0]);
 				AL.SourceQueueBuffer(alSrc, alBuffers[1]);
 				AL.SourcePlay(alSrc);
-				var t = Environment.TickCount;
 				IsPlaying = true;
 				var prevOffset = 0;
 				var sampleCount = 1;
 				while (!ct.IsCancellationRequested)
 				{
-					int processedCount, queuedCount;
+					int processedCount;
 
 					AL.Source(alSrc, ALSourcef.Pitch, Pitch);
 					do
@@ -219,7 +218,7 @@ namespace DotFeather
 						processedCount--;
 					}
 
-					AL.GetSource(alSrc, ALGetSourcei.BuffersQueued, out queuedCount);
+					AL.GetSource(alSrc, ALGetSourcei.BuffersQueued, out int queuedCount);
 					if (queuedCount > 0)
 					{
 						AL.GetSource(alSrc, ALGetSourcei.SourceState, out var state);
@@ -230,21 +229,8 @@ namespace DotFeather
 						break;
 					await Task.Delay(10).ConfigureAwait(false);
 				}
-				 IsPlaying = false;
+				IsPlaying = false;
 			};
-		}
-
-		private ALFormat GetALFormat(IAudioSource source)
-		{
-			switch (source.Channels)
-			{
-				case 1:
-					return ALFormat.Mono16;
-				case 2:
-					return ALFormat.Stereo16;
-				default:
-					throw new ArgumentException(nameof(source));
-			}
 		}
 
 		private bool FillBuffer(short[] buffer, IEnumerator<(short l, short r)> enumerator, CancellationToken ct)
@@ -262,7 +248,7 @@ namespace DotFeather
 		}
 
 		private float gain;
-		private AudioContext context;
+		private readonly AudioContext context;
 		private CancellationTokenSource? cts;
 	}
 }

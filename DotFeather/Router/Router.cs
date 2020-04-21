@@ -98,6 +98,6 @@ namespace DotFeather
 		}
 
 		private Scene? current;
-		private Dictionary<string, Func<Scene>> dic = new Dictionary<string, Func<Scene>>();
+		private readonly Dictionary<string, Func<Scene>> dic = new Dictionary<string, Func<Scene>>();
 	}
 }

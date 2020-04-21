@@ -28,8 +28,8 @@ PRESS ESC TO RETURN");
 			audio.Dispose();
 		}
 
-		private AudioPlayer audio = new AudioPlayer();
-		private IAudioSource bgm = new VorbisAudioSource("kagerou.ogg");
+		private readonly AudioPlayer audio = new AudioPlayer();
+		private readonly IAudioSource bgm = new VorbisAudioSource("kagerou.ogg");
 	}
 
 }

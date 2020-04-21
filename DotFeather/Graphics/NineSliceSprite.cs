@@ -148,6 +148,6 @@ namespace DotFeather
 			internalTexture = Textures;
 		}
 
-		private Texture2D[]? internalTexture;
+		private readonly Texture2D[]? internalTexture;
 	}
 }

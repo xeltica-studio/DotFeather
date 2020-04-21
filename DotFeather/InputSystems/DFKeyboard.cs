@@ -301,275 +301,142 @@ namespace DotFeather
 		/// </summary>
 		public static DFKey KeyOf(DFKeyCode code)
 		{
-			switch (code)
+			return code switch
 			{
-				case DFKeyCode.Unknown:
-					return Unknown;
-				case DFKeyCode.ShiftLeft:
-					return ShiftLeft;
-				case DFKeyCode.ShiftRight:
-					return ShiftRight;
-				case DFKeyCode.ControlLeft:
-					return ControlLeft;
-				case DFKeyCode.ControlRight:
-					return ControlRight;
-				case DFKeyCode.AltLeft:
-					return AltLeft;
-				case DFKeyCode.AltRight:
-					return AltRight;
-				case DFKeyCode.WinLeft:
-					return WinLeft;
-				case DFKeyCode.WinRight:
-					return WinRight;
-				case DFKeyCode.Menu:
-					return Menu;
-				case DFKeyCode.F1:
-					return F1;
-				case DFKeyCode.F2:
-					return F2;
-				case DFKeyCode.F3:
-					return F3;
-				case DFKeyCode.F4:
-					return F4;
-				case DFKeyCode.F5:
-					return F5;
-				case DFKeyCode.F6:
-					return F6;
-				case DFKeyCode.F7:
-					return F7;
-				case DFKeyCode.F8:
-					return F8;
-				case DFKeyCode.F9:
-					return F9;
-				case DFKeyCode.F10:
-					return F10;
-				case DFKeyCode.F11:
-					return F11;
-				case DFKeyCode.F12:
-					return F12;
-				case DFKeyCode.F13:
-					return F13;
-				case DFKeyCode.F14:
-					return F14;
-				case DFKeyCode.F15:
-					return F15;
-				case DFKeyCode.F16:
-					return F16;
-				case DFKeyCode.F17:
-					return F17;
-				case DFKeyCode.F18:
-					return F18;
-				case DFKeyCode.F19:
-					return F19;
-				case DFKeyCode.F20:
-					return F20;
-				case DFKeyCode.F21:
-					return F21;
-				case DFKeyCode.F22:
-					return F22;
-				case DFKeyCode.F23:
-					return F23;
-				case DFKeyCode.F24:
-					return F24;
-				case DFKeyCode.F25:
-					return F25;
-				case DFKeyCode.F26:
-					return F26;
-				case DFKeyCode.F27:
-					return F27;
-				case DFKeyCode.F28:
-					return F28;
-				case DFKeyCode.F29:
-					return F29;
-				case DFKeyCode.F30:
-					return F30;
-				case DFKeyCode.F31:
-					return F31;
-				case DFKeyCode.F32:
-					return F32;
-				case DFKeyCode.F33:
-					return F33;
-				case DFKeyCode.F34:
-					return F34;
-				case DFKeyCode.F35:
-					return F35;
-				case DFKeyCode.Up:
-					return Up;
-				case DFKeyCode.Down:
-					return Down;
-				case DFKeyCode.Left:
-					return Left;
-				case DFKeyCode.Right:
-					return Right;
-				case DFKeyCode.Enter:
-					return Enter;
-				case DFKeyCode.Escape:
-					return Escape;
-				case DFKeyCode.Space:
-					return Space;
-				case DFKeyCode.Tab:
-					return Tab;
-				case DFKeyCode.BackSpace:
-					return BackSpace;
-				case DFKeyCode.Insert:
-					return Insert;
-				case DFKeyCode.Delete:
-					return Delete;
-				case DFKeyCode.PageUp:
-					return PageUp;
-				case DFKeyCode.PageDown:
-					return PageDown;
-				case DFKeyCode.Home:
-					return Home;
-				case DFKeyCode.End:
-					return End;
-				case DFKeyCode.CapsLock:
-					return CapsLock;
-				case DFKeyCode.ScrollLock:
-					return ScrollLock;
-				case DFKeyCode.PrintScreen:
-					return PrintScreen;
-				case DFKeyCode.Pause:
-					return Pause;
-				case DFKeyCode.NumLock:
-					return NumLock;
-				case DFKeyCode.Clear:
-					return Clear;
-				case DFKeyCode.Sleep:
-					return Sleep;
-				case DFKeyCode.Keypad0:
-					return Keypad0;
-				case DFKeyCode.Keypad1:
-					return Keypad1;
-				case DFKeyCode.Keypad2:
-					return Keypad2;
-				case DFKeyCode.Keypad3:
-					return Keypad3;
-				case DFKeyCode.Keypad4:
-					return Keypad4;
-				case DFKeyCode.Keypad5:
-					return Keypad5;
-				case DFKeyCode.Keypad6:
-					return Keypad6;
-				case DFKeyCode.Keypad7:
-					return Keypad7;
-				case DFKeyCode.Keypad8:
-					return Keypad8;
-				case DFKeyCode.Keypad9:
-					return Keypad9;
-				case DFKeyCode.KeypadDivide:
-					return KeypadDivide;
-				case DFKeyCode.KeypadMultiply:
-					return KeypadMultiply;
-				case DFKeyCode.KeypadPlus:
-					return KeypadPlus;
-				case DFKeyCode.KeypadMinus:
-					return KeypadMinus;
-				case DFKeyCode.KeypadPeriod:
-					return KeypadPeriod;
-				case DFKeyCode.KeypadEnter:
-					return KeypadEnter;
-				case DFKeyCode.A:
-					return A;
-				case DFKeyCode.B:
-					return B;
-				case DFKeyCode.C:
-					return C;
-				case DFKeyCode.D:
-					return D;
-				case DFKeyCode.E:
-					return E;
-				case DFKeyCode.F:
-					return F;
-				case DFKeyCode.G:
-					return G;
-				case DFKeyCode.H:
-					return H;
-				case DFKeyCode.I:
-					return I;
-				case DFKeyCode.J:
-					return J;
-				case DFKeyCode.K:
-					return K;
-				case DFKeyCode.L:
-					return L;
-				case DFKeyCode.M:
-					return M;
-				case DFKeyCode.N:
-					return N;
-				case DFKeyCode.O:
-					return O;
-				case DFKeyCode.P:
-					return P;
-				case DFKeyCode.Q:
-					return Q;
-				case DFKeyCode.R:
-					return R;
-				case DFKeyCode.S:
-					return S;
-				case DFKeyCode.T:
-					return T;
-				case DFKeyCode.U:
-					return U;
-				case DFKeyCode.V:
-					return V;
-				case DFKeyCode.W:
-					return W;
-				case DFKeyCode.X:
-					return X;
-				case DFKeyCode.Y:
-					return Y;
-				case DFKeyCode.Z:
-					return Z;
-				case DFKeyCode.Number0:
-					return Number0;
-				case DFKeyCode.Number1:
-					return Number1;
-				case DFKeyCode.Number2:
-					return Number2;
-				case DFKeyCode.Number3:
-					return Number3;
-				case DFKeyCode.Number4:
-					return Number4;
-				case DFKeyCode.Number5:
-					return Number5;
-				case DFKeyCode.Number6:
-					return Number6;
-				case DFKeyCode.Number7:
-					return Number7;
-				case DFKeyCode.Number8:
-					return Number8;
-				case DFKeyCode.Number9:
-					return Number9;
-				case DFKeyCode.Tilde:
-					return Tilde;
-				case DFKeyCode.Minus:
-					return Minus;
-				case DFKeyCode.Plus:
-					return Plus;
-				case DFKeyCode.BracketLeft:
-					return BracketLeft;
-				case DFKeyCode.BracketRight:
-					return BracketRight;
-				case DFKeyCode.Semicolon:
-					return Semicolon;
-				case DFKeyCode.Quote:
-					return Quote;
-				case DFKeyCode.Comma:
-					return Comma;
-				case DFKeyCode.Period:
-					return Period;
-				case DFKeyCode.Slash:
-					return Slash;
-				case DFKeyCode.BackSlash:
-					return BackSlash;
-				case DFKeyCode.NonUSBackSlash:
-					return NonUSBackSlash;
-				case DFKeyCode.LastKey:
-					return LastKey;
-				default:
-					throw new ArgumentOutOfRangeException(nameof(code));
-			}
+				DFKeyCode.Unknown => Unknown,
+				DFKeyCode.ShiftLeft => ShiftLeft,
+				DFKeyCode.ShiftRight => ShiftRight,
+				DFKeyCode.ControlLeft => ControlLeft,
+				DFKeyCode.ControlRight => ControlRight,
+				DFKeyCode.AltLeft => AltLeft,
+				DFKeyCode.AltRight => AltRight,
+				DFKeyCode.WinLeft => WinLeft,
+				DFKeyCode.WinRight => WinRight,
+				DFKeyCode.Menu => Menu,
+				DFKeyCode.F1 => F1,
+				DFKeyCode.F2 => F2,
+				DFKeyCode.F3 => F3,
+				DFKeyCode.F4 => F4,
+				DFKeyCode.F5 => F5,
+				DFKeyCode.F6 => F6,
+				DFKeyCode.F7 => F7,
+				DFKeyCode.F8 => F8,
+				DFKeyCode.F9 => F9,
+				DFKeyCode.F10 => F10,
+				DFKeyCode.F11 => F11,
+				DFKeyCode.F12 => F12,
+				DFKeyCode.F13 => F13,
+				DFKeyCode.F14 => F14,
+				DFKeyCode.F15 => F15,
+				DFKeyCode.F16 => F16,
+				DFKeyCode.F17 => F17,
+				DFKeyCode.F18 => F18,
+				DFKeyCode.F19 => F19,
+				DFKeyCode.F20 => F20,
+				DFKeyCode.F21 => F21,
+				DFKeyCode.F22 => F22,
+				DFKeyCode.F23 => F23,
+				DFKeyCode.F24 => F24,
+				DFKeyCode.F25 => F25,
+				DFKeyCode.F26 => F26,
+				DFKeyCode.F27 => F27,
+				DFKeyCode.F28 => F28,
+				DFKeyCode.F29 => F29,
+				DFKeyCode.F30 => F30,
+				DFKeyCode.F31 => F31,
+				DFKeyCode.F32 => F32,
+				DFKeyCode.F33 => F33,
+				DFKeyCode.F34 => F34,
+				DFKeyCode.F35 => F35,
+				DFKeyCode.Up => Up,
+				DFKeyCode.Down => Down,
+				DFKeyCode.Left => Left,
+				DFKeyCode.Right => Right,
+				DFKeyCode.Enter => Enter,
+				DFKeyCode.Escape => Escape,
+				DFKeyCode.Space => Space,
+				DFKeyCode.Tab => Tab,
+				DFKeyCode.BackSpace => BackSpace,
+				DFKeyCode.Insert => Insert,
+				DFKeyCode.Delete => Delete,
+				DFKeyCode.PageUp => PageUp,
+				DFKeyCode.PageDown => PageDown,
+				DFKeyCode.Home => Home,
+				DFKeyCode.End => End,
+				DFKeyCode.CapsLock => CapsLock,
+				DFKeyCode.ScrollLock => ScrollLock,
+				DFKeyCode.PrintScreen => PrintScreen,
+				DFKeyCode.Pause => Pause,
+				DFKeyCode.NumLock => NumLock,
+				DFKeyCode.Clear => Clear,
+				DFKeyCode.Sleep => Sleep,
+				DFKeyCode.Keypad0 => Keypad0,
+				DFKeyCode.Keypad1 => Keypad1,
+				DFKeyCode.Keypad2 => Keypad2,
+				DFKeyCode.Keypad3 => Keypad3,
+				DFKeyCode.Keypad4 => Keypad4,
+				DFKeyCode.Keypad5 => Keypad5,
+				DFKeyCode.Keypad6 => Keypad6,
+				DFKeyCode.Keypad7 => Keypad7,
+				DFKeyCode.Keypad8 => Keypad8,
+				DFKeyCode.Keypad9 => Keypad9,
+				DFKeyCode.KeypadDivide => KeypadDivide,
+				DFKeyCode.KeypadMultiply => KeypadMultiply,
+				DFKeyCode.KeypadPlus => KeypadPlus,
+				DFKeyCode.KeypadMinus => KeypadMinus,
+				DFKeyCode.KeypadPeriod => KeypadPeriod,
+				DFKeyCode.KeypadEnter => KeypadEnter,
+				DFKeyCode.A => A,
+				DFKeyCode.B => B,
+				DFKeyCode.C => C,
+				DFKeyCode.D => D,
+				DFKeyCode.E => E,
+				DFKeyCode.F => F,
+				DFKeyCode.G => G,
+				DFKeyCode.H => H,
+				DFKeyCode.I => I,
+				DFKeyCode.J => J,
+				DFKeyCode.K => K,
+				DFKeyCode.L => L,
+				DFKeyCode.M => M,
+				DFKeyCode.N => N,
+				DFKeyCode.O => O,
+				DFKeyCode.P => P,
+				DFKeyCode.Q => Q,
+				DFKeyCode.R => R,
+				DFKeyCode.S => S,
+				DFKeyCode.T => T,
+				DFKeyCode.U => U,
+				DFKeyCode.V => V,
+				DFKeyCode.W => W,
+				DFKeyCode.X => X,
+				DFKeyCode.Y => Y,
+				DFKeyCode.Z => Z,
+				DFKeyCode.Number0 => Number0,
+				DFKeyCode.Number1 => Number1,
+				DFKeyCode.Number2 => Number2,
+				DFKeyCode.Number3 => Number3,
+				DFKeyCode.Number4 => Number4,
+				DFKeyCode.Number5 => Number5,
+				DFKeyCode.Number6 => Number6,
+				DFKeyCode.Number7 => Number7,
+				DFKeyCode.Number8 => Number8,
+				DFKeyCode.Number9 => Number9,
+				DFKeyCode.Tilde => Tilde,
+				DFKeyCode.Minus => Minus,
+				DFKeyCode.Plus => Plus,
+				DFKeyCode.BracketLeft => BracketLeft,
+				DFKeyCode.BracketRight => BracketRight,
+				DFKeyCode.Semicolon => Semicolon,
+				DFKeyCode.Quote => Quote,
+				DFKeyCode.Comma => Comma,
+				DFKeyCode.Period => Period,
+				DFKeyCode.Slash => Slash,
+				DFKeyCode.BackSlash => BackSlash,
+				DFKeyCode.NonUSBackSlash => NonUSBackSlash,
+				DFKeyCode.LastKey => LastKey,
+				_ => throw new ArgumentOutOfRangeException(nameof(code)),
+			};
 		}
 
 		/// <summary>
@@ -615,6 +482,6 @@ namespace DotFeather
 		internal static readonly Queue<char> keychars = new Queue<char>();
 
 		private static readonly DFKeyCode[] allCodes = (Enum.GetValues(typeof(DFKeyCode)) as DFKeyCode[]).Distinct().ToArray();
-		private static bool[] prevState = new bool[(int)DFKeyCode.LastKey + 1];
+		private static readonly bool[] prevState = new bool[(int)DFKeyCode.LastKey + 1];
 	}
 }

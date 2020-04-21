@@ -42,7 +42,7 @@ namespace DotFeather
 		{
 			var buf = new float[2];
 			reader.DecodedPosition = 0;
-			short ToShort(float data) => (short)(data * short.MaxValue);
+			static short ToShort(float data) => (short)(data * short.MaxValue);
 			do
 			{
 				while (reader.ReadSamples(buf, 0, Channels) > 0)

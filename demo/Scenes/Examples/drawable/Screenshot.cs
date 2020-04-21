@@ -84,10 +84,7 @@ namespace DotFeather.Demo
 			}
 		}
 
-
-
-		private float time;
-		private Graphic g = new Graphic();
+		private readonly Graphic g = new Graphic();
 		private Texture2D tex;
 		private Sprite? sprite;
 	}

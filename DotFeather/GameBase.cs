@@ -12,6 +12,7 @@ using Color = System.Drawing.Color;
 using Size = System.Drawing.Size;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.PixelFormats;
+using System.Threading;
 
 namespace DotFeather
 {
@@ -238,6 +239,9 @@ namespace DotFeather
 		/// </param>
 		protected GameBase(int width, int height, string title = "", int refreshRate = 60, bool isCaptureMode = false, bool followsDpi = false)
 		{
+			ctx = new DFSynchronizationContext();
+			SynchronizationContext.SetSynchronizationContext(ctx);
+
 			RefreshRate = refreshRate;
 			IsCaptureMode = isCaptureMode;
 			FollowsDpi = followsDpi;
@@ -448,6 +452,8 @@ namespace DotFeather
 
 			Update(sender);
 
+			ctx.Update();
+
 			window.ProcessEvents();
 
 			if (IsCaptureMode)
@@ -514,5 +520,6 @@ namespace DotFeather
 		private readonly List<string> consoleBuffer = new List<string>();
 		private readonly TextDrawable console;
 		private readonly GameWindow window;
+		private readonly DFSynchronizationContext ctx;
 	}
 }

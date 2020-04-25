@@ -54,3 +54,14 @@ DotFeather では、 AppVeyor を用いてデプロイの自動化を行って�
 7. そのコミットにバージョン名のタグをつける
 8. push する
 9. :pray:
+
+## デプロイに問題が起きた場合
+
+### docfx build にエラーが発生したら
+
+```
+cd ./api/docs
+rm -rf obj
+```
+
+をしてみよう

@@ -8,6 +8,8 @@
     name: ALSource
   - uid: DotFeather.AnimatingSprite
     name: AnimatingSprite
+  - uid: DotFeather.AudioGeneratorDelegate
+    name: AudioGeneratorDelegate
   - uid: DotFeather.AudioPlayer
     name: AudioPlayer
   - uid: DotFeather.Container
@@ -18,6 +20,8 @@
     name: CoroutineExtension
   - uid: DotFeather.CoroutineRunner
     name: CoroutineRunner
+  - uid: DotFeather.DelegateAudioSource
+    name: DelegateAudioSource
   - uid: DotFeather.DFEventArgs
     name: DFEventArgs
   - uid: DotFeather.DFFileDroppedEventArgs
@@ -36,6 +40,8 @@
     name: DFMath
   - uid: DotFeather.DFMouse
     name: DFMouse
+  - uid: DotFeather.DFSynchronizationContext
+    name: DFSynchronizationContext
   - uid: DotFeather.Font
     name: Font
   - uid: DotFeather.FontStyle

@@ -66,7 +66,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GameBase
     path: ../DotFeather/GameBase.cs
-    startLine: 18
+    startLine: 21
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -117,7 +117,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: X
     path: ../DotFeather/GameBase.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -154,7 +154,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Y
     path: ../DotFeather/GameBase.cs
-    startLine: 32
+    startLine: 35
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -191,7 +191,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Visible
     path: ../DotFeather/GameBase.cs
-    startLine: 41
+    startLine: 44
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -228,7 +228,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Width
     path: ../DotFeather/GameBase.cs
-    startLine: 51
+    startLine: 54
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -266,7 +266,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Height
     path: ../DotFeather/GameBase.cs
-    startLine: 61
+    startLine: 64
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -304,7 +304,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ActualWidth
     path: ../DotFeather/GameBase.cs
-    startLine: 71
+    startLine: 74
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -342,7 +342,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ActualHeight
     path: ../DotFeather/GameBase.cs
-    startLine: 81
+    startLine: 84
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -380,7 +380,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsFocused
     path: ../DotFeather/GameBase.cs
-    startLine: 91
+    startLine: 94
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -418,7 +418,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BackgroundColor
     path: ../DotFeather/GameBase.cs
-    startLine: 96
+    startLine: 99
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -455,7 +455,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RefreshRate
     path: ../DotFeather/GameBase.cs
-    startLine: 102
+    startLine: 105
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -493,7 +493,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Title
     path: ../DotFeather/GameBase.cs
-    startLine: 107
+    startLine: 110
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -530,7 +530,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Root
     path: ../DotFeather/GameBase.cs
-    startLine: 116
+    startLine: 119
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -567,7 +567,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dpi
     path: ../DotFeather/GameBase.cs
-    startLine: 121
+    startLine: 124
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -604,7 +604,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: FollowsDpi
     path: ../DotFeather/GameBase.cs
-    startLine: 128
+    startLine: 131
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -641,7 +641,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TotalFrame
     path: ../DotFeather/GameBase.cs
-    startLine: 134
+    startLine: 137
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -679,7 +679,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsCaptureMode
     path: ../DotFeather/GameBase.cs
-    startLine: 139
+    startLine: 142
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -716,7 +716,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ForegroundColor
     path: ../DotFeather/GameBase.cs
-    startLine: 145
+    startLine: 148
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -754,7 +754,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ConsoleCursor
     path: ../DotFeather/GameBase.cs
-    startLine: 150
+    startLine: 153
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -791,7 +791,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ConsoleSize
     path: ../DotFeather/GameBase.cs
-    startLine: 156
+    startLine: 159
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -829,7 +829,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: WindowMode
     path: ../DotFeather/GameBase.cs
-    startLine: 161
+    startLine: 164
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -866,7 +866,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsFullScreen
     path: ../DotFeather/GameBase.cs
-    startLine: 190
+    startLine: 193
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -903,7 +903,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Print
     path: ../DotFeather/GameBase.cs
-    startLine: 196
+    startLine: 199
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -936,7 +936,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Cls
     path: ../DotFeather/GameBase.cs
-    startLine: 216
+    startLine: 219
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -966,7 +966,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/GameBase.cs
-    startLine: 236
+    startLine: 239
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1017,7 +1017,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Randomize
     path: ../DotFeather/GameBase.cs
-    startLine: 317
+    startLine: 323
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1056,7 +1056,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Run
     path: ../DotFeather/GameBase.cs
-    startLine: 326
+    startLine: 332
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1091,7 +1091,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Exit
     path: ../DotFeather/GameBase.cs
-    startLine: 336
+    startLine: 342
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1127,7 +1127,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Dispose
     path: ../DotFeather/GameBase.cs
-    startLine: 349
+    startLine: 355
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1169,17 +1169,17 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TakeScreenshot
     path: ../DotFeather/GameBase.cs
-    startLine: 357
+    startLine: 363
   assemblies:
   - DotFeather
   namespace: DotFeather
   summary: "\nTake a screenshot of the current screen.\n"
   example: []
   syntax:
-    content: public Bitmap TakeScreenshot()
+    content: public Image TakeScreenshot()
     return:
-      type: Bitmap
-    content.vb: Public Function TakeScreenshot As Bitmap
+      type: Image
+    content.vb: Public Function TakeScreenshot As Image
   overload: DotFeather.GameBase.TakeScreenshot*
   modifiers.csharp:
   - public
@@ -1203,7 +1203,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: StartCoroutine
     path: ../DotFeather/GameBase.cs
-    startLine: 376
+    startLine: 382
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1240,7 +1240,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: StopCoroutine
     path: ../DotFeather/GameBase.cs
-    startLine: 381
+    startLine: 387
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1275,7 +1275,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/GameBase.cs
-    startLine: 386
+    startLine: 392
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1314,7 +1314,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnLoad
     path: ../DotFeather/GameBase.cs
-    startLine: 391
+    startLine: 397
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1353,7 +1353,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUnload
     path: ../DotFeather/GameBase.cs
-    startLine: 396
+    startLine: 402
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1392,7 +1392,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnFileDrop
     path: ../DotFeather/GameBase.cs
-    startLine: 401
+    startLine: 407
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1431,7 +1431,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnResize
     path: ../DotFeather/GameBase.cs
-    startLine: 406
+    startLine: 412
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1470,7 +1470,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyPress
     path: ../DotFeather/GameBase.cs
-    startLine: 411
+    startLine: 417
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1509,7 +1509,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyDown
     path: ../DotFeather/GameBase.cs
-    startLine: 416
+    startLine: 422
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1548,7 +1548,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyUp
     path: ../DotFeather/GameBase.cs
-    startLine: 421
+    startLine: 427
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1587,7 +1587,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Random
     path: ../DotFeather/GameBase.cs
-    startLine: 426
+    startLine: 432
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1624,7 +1624,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Load
     path: ../DotFeather/GameBase.cs
-    startLine: 500
+    startLine: 508
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1655,7 +1655,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Unload
     path: ../DotFeather/GameBase.cs
-    startLine: 501
+    startLine: 509
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1686,7 +1686,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: FileDrop
     path: ../DotFeather/GameBase.cs
-    startLine: 502
+    startLine: 510
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1717,7 +1717,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Resize
     path: ../DotFeather/GameBase.cs
-    startLine: 503
+    startLine: 511
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1748,7 +1748,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyDown
     path: ../DotFeather/GameBase.cs
-    startLine: 504
+    startLine: 512
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1779,7 +1779,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyPress
     path: ../DotFeather/GameBase.cs
-    startLine: 505
+    startLine: 513
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1810,7 +1810,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyUp
     path: ../DotFeather/GameBase.cs
-    startLine: 506
+    startLine: 514
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2494,12 +2494,11 @@ references:
   name: TakeScreenshot
   nameWithType: GameBase.TakeScreenshot
   fullName: DotFeather.GameBase.TakeScreenshot
-- uid: Bitmap
-  commentId: '!:Bitmap'
+- uid: Image
   isExternal: true
-  name: Bitmap
-  nameWithType: Bitmap
-  fullName: Bitmap
+  name: Image
+  nameWithType: Image
+  fullName: Image
 - uid: DotFeather.GameBase.StartCoroutine*
   commentId: Overload:DotFeather.GameBase.StartCoroutine
   name: StartCoroutine

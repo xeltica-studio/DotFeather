@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotFeather.AudioGeneratorDelegate
+  commentId: T:DotFeather.AudioGeneratorDelegate
+  id: AudioGeneratorDelegate
+  parent: DotFeather
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AudioGeneratorDelegate
+  nameWithType: AudioGeneratorDelegate
+  fullName: DotFeather.AudioGeneratorDelegate
+  type: Delegate
+  source:
+    remote:
+      path: DotFeather/Audio/DelegateAudioSource.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: AudioGeneratorDelegate
+    path: ../DotFeather/Audio/DelegateAudioSource.cs
+    startLine: 53
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public delegate (short left, short right)? AudioGeneratorDelegate(int sampleCount, int? loopStart);
+    parameters:
+    - id: sampleCount
+      type: System.Int32
+    - id: loopStart
+      type: System.Nullable{System.Int32}
+    return:
+      type: System.Nullable{System.ValueTuple{System.Int16,System.Int16}}
+    content.vb: Public Delegate Function AudioGeneratorDelegate(sampleCount As Integer, loopStart As Integer?) As(left As Short, right As Short)?
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: DotFeather
+  commentId: N:DotFeather
+  name: DotFeather
+  nameWithType: DotFeather
+  fullName: DotFeather
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.ValueTuple{System.Int16,System.Int16}}
+  commentId: T:System.Nullable{System.ValueTuple{System.Int16,System.Int16}}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<ValueTuple<Int16, Int16>>
+  nameWithType: Nullable<ValueTuple<Int16, Int16>>
+  fullName: System.Nullable<System.ValueTuple<System.Int16, System.Int16>>
+  nameWithType.vb: Nullable(Of ValueTuple(Of Int16, Int16))
+  fullName.vb: System.Nullable(Of System.ValueTuple(Of System.Int16, System.Int16))
+  name.vb: Nullable(Of ValueTuple(Of Int16, Int16))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

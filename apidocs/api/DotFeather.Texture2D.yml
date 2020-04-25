@@ -1045,7 +1045,6 @@ references:
   nameWithType: System.IO
   fullName: System.IO
 - uid: Image
-  commentId: '!:Image'
   isExternal: true
   name: Image
   nameWithType: Image

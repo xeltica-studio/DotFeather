@@ -184,6 +184,12 @@ references:
   isSpec: "True"
   fullName: DotFeather.AnimatingSprite.Textures
   nameWithType: AnimatingSprite.Textures
+- uid: DotFeather.AudioGeneratorDelegate
+  name: AudioGeneratorDelegate
+  href: api/DotFeather.AudioGeneratorDelegate.html
+  commentId: T:DotFeather.AudioGeneratorDelegate
+  fullName: DotFeather.AudioGeneratorDelegate
+  nameWithType: AudioGeneratorDelegate
 - uid: DotFeather.AudioPlayer
   name: AudioPlayer
   href: api/DotFeather.AudioPlayer.html
@@ -943,6 +949,93 @@ references:
   isSpec: "True"
   fullName: DotFeather.CoroutineRunner.Stop
   nameWithType: CoroutineRunner.Stop
+- uid: DotFeather.DelegateAudioSource
+  name: DelegateAudioSource
+  href: api/DotFeather.DelegateAudioSource.html
+  commentId: T:DotFeather.DelegateAudioSource
+  fullName: DotFeather.DelegateAudioSource
+  nameWithType: DelegateAudioSource
+- uid: DotFeather.DelegateAudioSource.#ctor(DotFeather.AudioGeneratorDelegate)
+  name: DelegateAudioSource(AudioGeneratorDelegate)
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource__ctor_DotFeather_AudioGeneratorDelegate_
+  commentId: M:DotFeather.DelegateAudioSource.#ctor(DotFeather.AudioGeneratorDelegate)
+  fullName: DotFeather.DelegateAudioSource.DelegateAudioSource(DotFeather.AudioGeneratorDelegate)
+  nameWithType: DelegateAudioSource.DelegateAudioSource(AudioGeneratorDelegate)
+- uid: DotFeather.DelegateAudioSource.#ctor*
+  name: DelegateAudioSource
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource__ctor_
+  commentId: Overload:DotFeather.DelegateAudioSource.#ctor
+  isSpec: "True"
+  fullName: DotFeather.DelegateAudioSource.DelegateAudioSource
+  nameWithType: DelegateAudioSource.DelegateAudioSource
+- uid: DotFeather.DelegateAudioSource.Bits
+  name: Bits
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_Bits
+  commentId: P:DotFeather.DelegateAudioSource.Bits
+  fullName: DotFeather.DelegateAudioSource.Bits
+  nameWithType: DelegateAudioSource.Bits
+- uid: DotFeather.DelegateAudioSource.Bits*
+  name: Bits
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_Bits_
+  commentId: Overload:DotFeather.DelegateAudioSource.Bits
+  isSpec: "True"
+  fullName: DotFeather.DelegateAudioSource.Bits
+  nameWithType: DelegateAudioSource.Bits
+- uid: DotFeather.DelegateAudioSource.Channels
+  name: Channels
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_Channels
+  commentId: P:DotFeather.DelegateAudioSource.Channels
+  fullName: DotFeather.DelegateAudioSource.Channels
+  nameWithType: DelegateAudioSource.Channels
+- uid: DotFeather.DelegateAudioSource.Channels*
+  name: Channels
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_Channels_
+  commentId: Overload:DotFeather.DelegateAudioSource.Channels
+  isSpec: "True"
+  fullName: DotFeather.DelegateAudioSource.Channels
+  nameWithType: DelegateAudioSource.Channels
+- uid: DotFeather.DelegateAudioSource.EnumerateSamples(System.Nullable{System.Int32})
+  name: EnumerateSamples(Nullable<Int32>)
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_EnumerateSamples_System_Nullable_System_Int32__
+  commentId: M:DotFeather.DelegateAudioSource.EnumerateSamples(System.Nullable{System.Int32})
+  name.vb: EnumerateSamples(Nullable(Of Int32))
+  fullName: DotFeather.DelegateAudioSource.EnumerateSamples(System.Nullable<System.Int32>)
+  fullName.vb: DotFeather.DelegateAudioSource.EnumerateSamples(System.Nullable(Of System.Int32))
+  nameWithType: DelegateAudioSource.EnumerateSamples(Nullable<Int32>)
+  nameWithType.vb: DelegateAudioSource.EnumerateSamples(Nullable(Of Int32))
+- uid: DotFeather.DelegateAudioSource.EnumerateSamples*
+  name: EnumerateSamples
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_EnumerateSamples_
+  commentId: Overload:DotFeather.DelegateAudioSource.EnumerateSamples
+  isSpec: "True"
+  fullName: DotFeather.DelegateAudioSource.EnumerateSamples
+  nameWithType: DelegateAudioSource.EnumerateSamples
+- uid: DotFeather.DelegateAudioSource.SampleRate
+  name: SampleRate
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_SampleRate
+  commentId: P:DotFeather.DelegateAudioSource.SampleRate
+  fullName: DotFeather.DelegateAudioSource.SampleRate
+  nameWithType: DelegateAudioSource.SampleRate
+- uid: DotFeather.DelegateAudioSource.SampleRate*
+  name: SampleRate
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_SampleRate_
+  commentId: Overload:DotFeather.DelegateAudioSource.SampleRate
+  isSpec: "True"
+  fullName: DotFeather.DelegateAudioSource.SampleRate
+  nameWithType: DelegateAudioSource.SampleRate
+- uid: DotFeather.DelegateAudioSource.Samples
+  name: Samples
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_Samples
+  commentId: P:DotFeather.DelegateAudioSource.Samples
+  fullName: DotFeather.DelegateAudioSource.Samples
+  nameWithType: DelegateAudioSource.Samples
+- uid: DotFeather.DelegateAudioSource.Samples*
+  name: Samples
+  href: api/DotFeather.DelegateAudioSource.html#DotFeather_DelegateAudioSource_Samples_
+  commentId: Overload:DotFeather.DelegateAudioSource.Samples
+  isSpec: "True"
+  fullName: DotFeather.DelegateAudioSource.Samples
+  nameWithType: DelegateAudioSource.Samples
 - uid: DotFeather.DFEventArgs
   name: DFEventArgs
   href: api/DotFeather.DFEventArgs.html
@@ -4036,6 +4129,38 @@ references:
   isSpec: "True"
   fullName: DotFeather.DFMouse.Scroll
   nameWithType: DFMouse.Scroll
+- uid: DotFeather.DFSynchronizationContext
+  name: DFSynchronizationContext
+  href: api/DotFeather.DFSynchronizationContext.html
+  commentId: T:DotFeather.DFSynchronizationContext
+  fullName: DotFeather.DFSynchronizationContext
+  nameWithType: DFSynchronizationContext
+- uid: DotFeather.DFSynchronizationContext.Post(System.Threading.SendOrPostCallback,System.Object)
+  name: Post(SendOrPostCallback, Object)
+  href: api/DotFeather.DFSynchronizationContext.html#DotFeather_DFSynchronizationContext_Post_System_Threading_SendOrPostCallback_System_Object_
+  commentId: M:DotFeather.DFSynchronizationContext.Post(System.Threading.SendOrPostCallback,System.Object)
+  fullName: DotFeather.DFSynchronizationContext.Post(System.Threading.SendOrPostCallback, System.Object)
+  nameWithType: DFSynchronizationContext.Post(SendOrPostCallback, Object)
+- uid: DotFeather.DFSynchronizationContext.Post*
+  name: Post
+  href: api/DotFeather.DFSynchronizationContext.html#DotFeather_DFSynchronizationContext_Post_
+  commentId: Overload:DotFeather.DFSynchronizationContext.Post
+  isSpec: "True"
+  fullName: DotFeather.DFSynchronizationContext.Post
+  nameWithType: DFSynchronizationContext.Post
+- uid: DotFeather.DFSynchronizationContext.Update
+  name: Update()
+  href: api/DotFeather.DFSynchronizationContext.html#DotFeather_DFSynchronizationContext_Update
+  commentId: M:DotFeather.DFSynchronizationContext.Update
+  fullName: DotFeather.DFSynchronizationContext.Update()
+  nameWithType: DFSynchronizationContext.Update()
+- uid: DotFeather.DFSynchronizationContext.Update*
+  name: Update
+  href: api/DotFeather.DFSynchronizationContext.html#DotFeather_DFSynchronizationContext_Update_
+  commentId: Overload:DotFeather.DFSynchronizationContext.Update
+  isSpec: "True"
+  fullName: DotFeather.DFSynchronizationContext.Update
+  nameWithType: DFSynchronizationContext.Update
 - uid: DotFeather.Font
   name: Font
   href: api/DotFeather.Font.html
@@ -6937,6 +7062,19 @@ references:
   isSpec: "True"
   fullName: DotFeather.Tilemap.Clear
   nameWithType: Tilemap.Clear
+- uid: DotFeather.Tilemap.CurrentDrawingPosition
+  name: CurrentDrawingPosition
+  href: api/DotFeather.Tilemap.html#DotFeather_Tilemap_CurrentDrawingPosition
+  commentId: P:DotFeather.Tilemap.CurrentDrawingPosition
+  fullName: DotFeather.Tilemap.CurrentDrawingPosition
+  nameWithType: Tilemap.CurrentDrawingPosition
+- uid: DotFeather.Tilemap.CurrentDrawingPosition*
+  name: CurrentDrawingPosition
+  href: api/DotFeather.Tilemap.html#DotFeather_Tilemap_CurrentDrawingPosition_
+  commentId: Overload:DotFeather.Tilemap.CurrentDrawingPosition
+  isSpec: "True"
+  fullName: DotFeather.Tilemap.CurrentDrawingPosition
+  nameWithType: Tilemap.CurrentDrawingPosition
 - uid: DotFeather.Tilemap.DefaultColor
   name: DefaultColor
   href: api/DotFeather.Tilemap.html#DotFeather_Tilemap_DefaultColor

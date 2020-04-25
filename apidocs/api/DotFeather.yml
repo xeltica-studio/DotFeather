@@ -7,11 +7,13 @@ items:
   - DotFeather.ALBuffer
   - DotFeather.ALSource
   - DotFeather.AnimatingSprite
+  - DotFeather.AudioGeneratorDelegate
   - DotFeather.AudioPlayer
   - DotFeather.Container
   - DotFeather.Coroutine
   - DotFeather.CoroutineExtension
   - DotFeather.CoroutineRunner
+  - DotFeather.DelegateAudioSource
   - DotFeather.DFEventArgs
   - DotFeather.DFFileDroppedEventArgs
   - DotFeather.DFKey
@@ -21,6 +23,7 @@ items:
   - DotFeather.DFKeyPressEventArgs
   - DotFeather.DFMath
   - DotFeather.DFMouse
+  - DotFeather.DFSynchronizationContext
   - DotFeather.Font
   - DotFeather.FontStyle
   - DotFeather.GameBase
@@ -75,6 +78,17 @@ references:
   name: AudioPlayer
   nameWithType: AudioPlayer
   fullName: DotFeather.AudioPlayer
+- uid: DotFeather.DelegateAudioSource
+  commentId: T:DotFeather.DelegateAudioSource
+  name: DelegateAudioSource
+  nameWithType: DelegateAudioSource
+  fullName: DotFeather.DelegateAudioSource
+- uid: DotFeather.AudioGeneratorDelegate
+  commentId: T:DotFeather.AudioGeneratorDelegate
+  parent: DotFeather
+  name: AudioGeneratorDelegate
+  nameWithType: AudioGeneratorDelegate
+  fullName: DotFeather.AudioGeneratorDelegate
 - uid: DotFeather.IAudioSource
   commentId: T:DotFeather.IAudioSource
   parent: DotFeather
@@ -140,6 +154,11 @@ references:
   name: DFEventArgs
   nameWithType: DFEventArgs
   fullName: DotFeather.DFEventArgs
+- uid: DotFeather.DFSynchronizationContext
+  commentId: T:DotFeather.DFSynchronizationContext
+  name: DFSynchronizationContext
+  nameWithType: DFSynchronizationContext
+  fullName: DotFeather.DFSynchronizationContext
 - uid: DotFeather.CoroutineExtension
   commentId: T:DotFeather.CoroutineExtension
   name: CoroutineExtension

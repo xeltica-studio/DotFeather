@@ -9,6 +9,7 @@ items:
   - DotFeather.Tilemap.AbsoluteLocation
   - DotFeather.Tilemap.Angle
   - DotFeather.Tilemap.Clear
+  - DotFeather.Tilemap.CurrentDrawingPosition
   - DotFeather.Tilemap.DefaultColor
   - DotFeather.Tilemap.Destroy
   - DotFeather.Tilemap.DotFeather#IContainable#Parent
@@ -46,7 +47,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Tilemap
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -94,7 +95,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ZOrder
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -131,7 +132,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Name
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -168,7 +169,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Location
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -205,7 +206,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -242,7 +243,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Scale
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -279,7 +280,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: DefaultColor
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -296,6 +297,44 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: DotFeather.Tilemap.CurrentDrawingPosition
+  commentId: P:DotFeather.Tilemap.CurrentDrawingPosition
+  id: CurrentDrawingPosition
+  parent: DotFeather.Tilemap
+  langs:
+  - csharp
+  - vb
+  name: CurrentDrawingPosition
+  nameWithType: Tilemap.CurrentDrawingPosition
+  fullName: DotFeather.Tilemap.CurrentDrawingPosition
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Graphics/Tilemap.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: CurrentDrawingPosition
+    path: ../DotFeather/Graphics/Tilemap.cs
+    startLine: 29
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet current drawing position. <code>null</code> when not in ITile.Draw()\n"
+  example: []
+  syntax:
+    content: public VectorInt? CurrentDrawingPosition { get; }
+    parameters: []
+    return:
+      type: System.Nullable{DotFeather.VectorInt}
+      description: ''
+    content.vb: Public ReadOnly Property CurrentDrawingPosition As VectorInt?
+  overload: DotFeather.Tilemap.CurrentDrawingPosition*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: DotFeather.Tilemap.Parent
   commentId: P:DotFeather.Tilemap.Parent
   id: Parent
@@ -314,7 +353,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Parent
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 27
+    startLine: 34
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -352,7 +391,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: DotFeather.IContainable.Parent
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 29
+    startLine: 36
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -388,7 +427,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AbsoluteLocation
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 38
+    startLine: 45
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -427,7 +466,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: TileSize
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 43
+    startLine: 50
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -464,7 +503,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: .ctor
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 49
+    startLine: 56
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -500,7 +539,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 58
+    startLine: 65
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -544,7 +583,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: this[]
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 67
+    startLine: 74
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -586,7 +625,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 73
+    startLine: 80
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -623,7 +662,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 86
+    startLine: 105
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -660,7 +699,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 90
+    startLine: 109
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -699,7 +738,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 95
+    startLine: 114
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -736,7 +775,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetTileColorAt
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 99
+    startLine: 118
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -775,7 +814,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 104
+    startLine: 123
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -817,7 +856,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: SetTile
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 109
+    startLine: 128
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -861,7 +900,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 120
+    startLine: 139
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -893,7 +932,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 128
+    startLine: 147
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -936,7 +975,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Fill
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 172
+    startLine: 191
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -979,7 +1018,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Line
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 182
+    startLine: 201
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1018,7 +1057,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Fill
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 188
+    startLine: 207
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1057,7 +1096,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 194
+    startLine: 213
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1093,7 +1132,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 203
+    startLine: 222
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1590,6 +1629,53 @@ references:
   - name: T
     nameWithType: T
     fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotFeather.Tilemap.CurrentDrawingPosition*
+  commentId: Overload:DotFeather.Tilemap.CurrentDrawingPosition
+  name: CurrentDrawingPosition
+  nameWithType: Tilemap.CurrentDrawingPosition
+  fullName: DotFeather.Tilemap.CurrentDrawingPosition
+- uid: System.Nullable{DotFeather.VectorInt}
+  commentId: T:System.Nullable{DotFeather.VectorInt}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<VectorInt>
+  nameWithType: Nullable<VectorInt>
+  fullName: System.Nullable<DotFeather.VectorInt>
+  nameWithType.vb: Nullable(Of VectorInt)
+  fullName.vb: System.Nullable(Of DotFeather.VectorInt)
+  name.vb: Nullable(Of VectorInt)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DotFeather.VectorInt
+    name: VectorInt
+    nameWithType: VectorInt
+    fullName: DotFeather.VectorInt
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DotFeather.VectorInt
+    name: VectorInt
+    nameWithType: VectorInt
+    fullName: DotFeather.VectorInt
   - name: )
     nameWithType: )
     fullName: )

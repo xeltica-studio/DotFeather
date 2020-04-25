@@ -5282,7 +5282,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetString
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 577
+    startLine: 444
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5318,7 +5318,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetChar
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 590
+    startLine: 457
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5354,7 +5354,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: HasChar
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 596
+    startLine: 463
   assemblies:
   - DotFeather
   namespace: DotFeather

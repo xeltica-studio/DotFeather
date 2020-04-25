@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "/Users/xeltica/Repos/dotfeather/apidocs",
+  "source_base_path": "/Users/xeltica/Repos/xeltica/dotfeather/apidocs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -34,6 +34,18 @@
         ".html": {
           "relative_path": "api/DotFeather.AnimatingSprite.html",
           "hash": "bcAGWLJVpAdYr4/iCB/omQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotFeather.AudioGeneratorDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotFeather.AudioGeneratorDelegate.html",
+          "hash": "4hss14men6NPEtejDEl+JQ=="
         }
       },
       "is_incremental": false,
@@ -177,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.DFKeyboard.html",
-          "hash": "zAF8wSYfVs7GCWor6oV4nw=="
+          "hash": "bSgOxfQeGzw0toP/2+GqiQ=="
         }
       },
       "is_incremental": false,
@@ -202,6 +214,30 @@
         ".html": {
           "relative_path": "api/DotFeather.DFMouse.html",
           "hash": "HV5oPo6Ven531j8XutoNug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotFeather.DFSynchronizationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotFeather.DFSynchronizationContext.html",
+          "hash": "eQ1v00iV3zkUWoY3063b3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotFeather.DelegateAudioSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotFeather.DelegateAudioSource.html",
+          "hash": "f9lDtnW9F61mojxoldI9zQ=="
         }
       },
       "is_incremental": false,
@@ -249,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.GameBase.html",
-          "hash": "RgSinDIQPA0rKgkJeAiOyw=="
+          "hash": "6AWPQfnFu+IxAnaPI4L91A=="
         }
       },
       "is_incremental": false,
@@ -357,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.OpenTKManagedHandleBase-1.html",
-          "hash": "bla/ywKC/N7J6ol/hy9wBg=="
+          "hash": "c7TyL+juCJ3JoEtRUuqHJg=="
         }
       },
       "is_incremental": false,
@@ -501,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Tile.html",
-          "hash": "aE/ZXsDj0pLRC4HS2pKg8Q=="
+          "hash": "JSC7fIEuPQxSpEClY534Kg=="
         }
       },
       "is_incremental": false,
@@ -513,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Tilemap.html",
-          "hash": "pc4ZWDQudc/uZs2KJjZtZw=="
+          "hash": "PUcXSbO3at5uf/wXsfeLTA=="
         }
       },
       "is_incremental": false,
@@ -681,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.html",
-          "hash": "jq3dDFRIx+Ybsa6/SxeNZg=="
+          "hash": "3jKNYFZOFtuYKQSc8ll9fw=="
         }
       },
       "is_incremental": false,
@@ -705,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "EmR4YS0SBX/zgzUI3smFcw=="
+          "hash": "pFAYtKYPebZVswQMzzkB2A=="
         }
       },
       "is_incremental": false,
@@ -720,7 +756,7 @@
           "hash": "XEMutSMOfjWrquvmuupiqw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -739,37 +775,39 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 60,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 2
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 57,
-          "skipped_file_count": 41
         }
       }
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

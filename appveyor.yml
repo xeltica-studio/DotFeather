@@ -42,15 +42,23 @@ deploy:
     draft: false
     prerelease: false
     description: |
-      ## 2.6.0
+      ## 2.7.0
+
+      ### 新機能
+      - コールバック関数を用いて波形を生成し再生できる DelegateAudioSource を追加しました
 
       ### 改善
-      - Tilemap にて、ウィンドウ外のタイルを描画しないようになりました。
+      - `async` `await` パターンによる非同期処理の中で、DotFeatherによるテクスチャ生成・テキスト描画を行ってもクラッシュしないようになりました
+        - DotFeather を使用した場合、Task クラスによる非同期処理が既定で、全てシングルスレッド内で行われるようになりました
 
       ----
 
+      ### New Feature
+      - Added DelegateAudioSource, which can generate and play waveform using callback function
+
       ### Improvements
-      - Tilemaps no longer draw tiles outside the window.
+      - It no longer crashes when using DotFeather's texture generation and text drawing during asynchronous processing by `async` `await` pattern
+        - By using DotFeather, asynchronous processing by Task class is now done by default in single thread
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

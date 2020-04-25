@@ -6,7 +6,7 @@ Audio data which DotFeather can handle is called **Audio Source**.
 
 Audio Source is a class implemented `IAudioSource`.
 
-DotFeather has 2 built-in AudioSources, and you can [create original AudioSource](plugin/audiosource.md) to support any files.
+DotFeather has some built-in AudioSources supports Microsoft WAV and Ogg Vorbis format, and [DelegateAudioSource](audio/delegate.md) to create waveform programmably with callback function. You can also [create original AudioSource](plugin/audiosource.md) to support any files.
 
 `AudioPlayer` class can play Audio Sources.
 

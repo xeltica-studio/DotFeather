@@ -74,6 +74,8 @@ dotnet build
 
 [![License](https://img.shields.io/github/license/xeltica/dotfeather.svg?style=for-the-badge)](LICENSE)
 
+DotFeather はいくつかのサードパーティソフトウェアに依存しています。ライセンスをご確認ください [THIRD_PARTIES.md](THIRD_PARTIES.md)
+
 [ci]: https://ci.appveyor.com/project/Xeltica/dotfeather
 [issues]: //github.com/xeltica/dotfeather/issues
 [pulls]: //github.com/xeltica/dotfeather/pulls

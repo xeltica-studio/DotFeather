@@ -122,6 +122,21 @@ namespace DotFeather
 		}
 
 		/// <summary>
+		/// このコンテナに子要素を複数追加します。
+		/// </summary>
+		/// <param name="children">子要素。</param>
+		public void AddRange(IEnumerable<IDrawable> children)
+		{
+			foreach (var child in children)
+			{
+				countMap[child] = count++;
+				if (child is IContainable c) c.Parent = this;
+				Children.Add(child);
+			}
+			Sort();
+		}
+
+		/// <summary>
 		/// このコンテナに子要素を挿入します。
 		/// </summary>
 		/// <param name="index">挿入先の位置。</param>

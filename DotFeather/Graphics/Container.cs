@@ -103,11 +103,7 @@ namespace DotFeather
 		/// <summary>
 		/// コンテナをソートします。
 		/// </summary>
-		public void Sort() =>
-			Children.Sort((d1, d2) =>
-				d1.ZOrder < d2.ZOrder ? 1 : d1.ZOrder > d2.ZOrder ? -1 :
-				countMap[d1] < countMap[d2] ? 1 : -1
-			);
+		public void Sort() => Children.Sort((d1, d2) => d1.ZOrder != d2.ZOrder ? d1.ZOrder - d2.ZOrder : countMap[d1] - countMap[d2]);
 
 		/// <summary>
 		/// このコンテナに子要素を追加します。
@@ -172,9 +168,9 @@ namespace DotFeather
 				GL.Scissor(left.X, left.Y, size.X, size.Y);
 			}
 
-			for (var i = this.Count - 1; i >= 0; i--)
+			for (var i = 0; i < Count; i++)
 			{
-				if (this.Count - 1 < i)
+				if (Count - 1 < i)
 					continue;
 				// 位置を調整
 				var baseLoc = this[i].Location;

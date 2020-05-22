@@ -15,9 +15,6 @@ namespace DotFeather
 		/// </summary>
 		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, Color? color = null, float? width = null, float? height = null)
 		{
-			var hw = game.ActualWidth / 2;
-			var hh = game.ActualHeight / 2;
-
 			var w = width ?? texture.Size.X;
 			var h = height ?? texture.Size.Y;
 
@@ -29,37 +26,39 @@ namespace DotFeather
 			var bottom = top + h;
 
 			if (left > game.ActualWidth || top > game.ActualHeight || right < 0 || bottom < 0)
-			{
 				return;
-			}
 
-			var verts = new[]
+			var hw = game.ActualWidth / 2;
+			var hh = game.ActualHeight / 2;
+
+			var v0 = (left, top).ToViewportPoint(hw, hh);
+			var v1 = (right, top).ToViewportPoint(hw, hh);
+			var v2 = (left, bottom).ToViewportPoint(hw, hh);
+			var v3 = (right, bottom).ToViewportPoint(hw, hh);
+
+			if (!DFKeyboard.Semicolon)
 			{
-				(left, top).ToViewportPoint(hw, hh),
-				(right, top).ToViewportPoint(hw, hh),
-				(left, bottom).ToViewportPoint(hw, hh),
-				(right, bottom).ToViewportPoint(hw, hh)
-			};
 
-			GL.Enable(EnableCap.Blend);
-			GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
-			GL.BlendEquation(BlendEquationMode.FuncAdd);
-			GL.Enable(EnableCap.Texture2D);
-			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
+				GL.Enable(EnableCap.Blend);
+				GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
+				GL.BlendEquation(BlendEquationMode.FuncAdd);
+				GL.Enable(EnableCap.Texture2D);
+				GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
 
-			using (new GLContext(PrimitiveType.Quads))
-			{
-				Vertex(1, 1, verts[3], color);
-				Vertex(0, 1, verts[2], color);
-				Vertex(0, 0, verts[0], color);
-				Vertex(1, 0, verts[1], color);
+				using (new GLContext(PrimitiveType.Quads))
+				{
+					Vertex(1, 1, v3, color);
+					Vertex(0, 1, v2, color);
+					Vertex(0, 0, v0, color);
+					Vertex(1, 0, v1, color);
+				}
+
+				GL.Disable(EnableCap.Texture2D);
+				GL.Disable(EnableCap.Blend);
 			}
-
-			GL.Disable(EnableCap.Texture2D);
-			GL.Disable(EnableCap.Blend);
 		}
 
-		private static void Vertex(double tcx, double tcy, (float x, float y) vx, System.Drawing.Color? color)
+		private static void Vertex(double tcx, double tcy, (float x, float y) vx, Color? color)
 		{
 			var col = color ?? Color.White;
 

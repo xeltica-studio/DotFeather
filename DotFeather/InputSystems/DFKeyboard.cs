@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using OpenTK.Input;
 
 
@@ -465,7 +466,7 @@ namespace DotFeather
 
 		internal static void Update()
 		{
-			foreach (var code in allCodes)
+			Parallel.ForEach(allCodes, code =>
 			{
 				var isPressed = Keyboard.GetState()[code.ToTK()];
 				var prevIsPressed = prevState[(int)code];
@@ -476,7 +477,7 @@ namespace DotFeather
 				key.ElapsedFrameCount = isPressed ? key.ElapsedFrameCount + 1 : 0;
 				key.ElapsedTime = isPressed ? key.ElapsedTime + Time.DeltaTime : 0;
 				prevState[(int)code] = isPressed;
-			}
+			});
 		}
 
 		internal static readonly Queue<char> keychars = new Queue<char>();

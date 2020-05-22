@@ -434,25 +434,33 @@ namespace DotFeather
 
 		private void OnRenderFrame(object sender, FrameEventArgs e)
 		{
+			// 画面の初期化
 			GL.ClearColor(BackgroundColor);
 			GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
+			// キャプチャーモードであれば、デルタタイムは均一に
 			var deltaTime = IsCaptureMode ? 1f / RefreshRate : (float)e.Time;
 			Time.Now += deltaTime;
 			Time.DeltaTime = deltaTime;
 
 			CalculateFps();
 
+			DFKeyboard.Update();
+			DFMouse.Update();
+			Root.OnUpdate(this);
+			CoroutineRunner.Update();
+			UpdateConsole();
+			ctx.Update();
+
+			OnUpdate(sender, new DFEventArgs { DeltaTime = (float)Time.DeltaTime });
+
+			// Drawable をレンダリング
 			var s = Root.Scale;
 			Root.Scale = s * (FollowsDpi ? Dpi : 1);
 			Root.Draw(this, Vector.Zero);
 			Root.Scale = s;
 
 			console.Draw(this, Vector.Zero);
-
-			Update(sender);
-
-			ctx.Update();
 
 			window.ProcessEvents();
 
@@ -469,16 +477,6 @@ namespace DotFeather
 			}
 			TotalFrame++;
 			window.SwapBuffers();
-		}
-
-		private void Update(object sender)
-		{
-			DFKeyboard.Update();
-			DFMouse.Update();
-			CoroutineRunner.Update();
-			UpdateConsole();
-			Root.OnUpdate(this);
-			OnUpdate(sender, new DFEventArgs { DeltaTime = (float)Time.DeltaTime });
 		}
 
 		private void UpdateConsole()
@@ -498,11 +496,11 @@ namespace DotFeather
 		private void CalculateFps()
 		{
 			frameCount++;
-			if (prevSecond != DateTime.Now.Second)
+			if (Environment.TickCount - prevSecond > 1000)
 			{
 				Time.Fps = frameCount;
 				frameCount = 0;
-				prevSecond = DateTime.Now.Second;
+				prevSecond = Environment.TickCount;
 			}
 		}
 

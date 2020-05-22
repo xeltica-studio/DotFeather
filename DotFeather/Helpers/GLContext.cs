@@ -3,9 +3,9 @@ using OpenTK.Graphics.OpenGL;
 namespace DotFeather
 {
 	/// <summary>
-	/// <see cref="GL.Begin(PrimitiveType)"/> および <see cref="GL.End()"/> を <c>using</c> 句で扱えるようにしたクラスです。このクラスは継承できません。
+	/// <see cref="GL.Begin(PrimitiveType)"/> および <see cref="GL.End()"/> を <c>using</c> 句で扱えるようにした構造体です。
 	/// </summary>
-	public sealed class GLContext : IDisposable
+	public struct GLContext : IDisposable
 	{
 		/// <summary>
 		/// <see cref="GLContext"/> クラスの新しいインスタンスを初期化します。
@@ -14,6 +14,7 @@ namespace DotFeather
 		public GLContext(PrimitiveType p)
 		{
 			GL.Begin(p);
+			disposedValue = false;
 		}
 
 		/// <summary>

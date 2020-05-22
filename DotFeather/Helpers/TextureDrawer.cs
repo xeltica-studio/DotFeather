@@ -1,7 +1,7 @@
 #pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 using System;
 using System.Drawing;
-using OpenTK.Graphics.OpenGL;
+using OpenToolkit.Graphics.OpenGL;
 
 namespace DotFeather
 {
@@ -13,7 +13,7 @@ namespace DotFeather
 		/// <summary>
 		/// テクスチャを描画します。
 		/// </summary>
-		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float angle, Color? color = null, float? width = null, float? height = null)
+		public static void Draw(GameBase game, Texture2D texture, Vector location, Vector scale, float _, Color? color = null, float? width = null, float? height = null)
 		{
 			var w = width ?? texture.Size.X;
 			var h = height ?? texture.Size.Y;

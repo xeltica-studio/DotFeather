@@ -4,9 +4,9 @@
 [![Nuget](https://img.shields.io/nuget/v/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
 [![Discord](https://img.shields.io/discord/572071627991416851?label=discord&style=for-the-badge)](https://discord.gg/e2TCF4m)
 
-DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET Standard 2.1.
+DotFeather is a lightweight cross-platform generic 2D game engine for C#/.NET Core 3.1.
 
-[日本語](README-ja.md) ・ English
+[???](README-ja.md) ? English
 
 ## Supported Platform
 

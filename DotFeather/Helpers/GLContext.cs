@@ -1,5 +1,5 @@
 using System;
-using OpenTK.Graphics.OpenGL;
+using OpenToolkit.Graphics.OpenGL;
 namespace DotFeather
 {
 	/// <summary>

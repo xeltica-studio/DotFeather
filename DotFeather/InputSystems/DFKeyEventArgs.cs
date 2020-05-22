@@ -1,4 +1,5 @@
 using System;
+using OpenToolkit.Windowing.Common;
 
 namespace DotFeather
 {
@@ -27,7 +28,7 @@ namespace DotFeather
 		/// </summary>
 		public bool ShiftPressed { get; }
 
-		internal DFKeyEventArgs(OpenTK.Input.KeyboardKeyEventArgs e)
+		internal DFKeyEventArgs(KeyboardKeyEventArgs e)
 		{
 			Key = e.Key.ToDF();
 			AltPressed = e.Alt;

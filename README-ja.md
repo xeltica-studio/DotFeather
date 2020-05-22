@@ -5,7 +5,7 @@
 [![Nuget](https://img.shields.io/nuget/vpre/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
 [![Discord](https://img.shields.io/discord/572071627991416851?label=discord&style=for-the-badge)](https://discord.gg/e2TCF4m)
 
-DotFeather (ドットフェザー)は、 C# と .NET Standard 2.1 のための、軽量で汎用的な2Dゲームエンジンです。
+DotFeather (ドットフェザー)は、 C# と .NET Core 3.1 のための、軽量で汎用的な2Dゲームエンジンです。
 
 [English](README.md) ・ 日本語
 

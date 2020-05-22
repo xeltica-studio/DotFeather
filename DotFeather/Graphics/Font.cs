@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -86,8 +87,10 @@ namespace DotFeather
 		public override int GetHashCode()
 		{
 			var hashCode = -23843572;
-			hashCode = hashCode * -1521134295 + EqualityComparer<string?>.Default.GetHashCode(Path);
-			hashCode = hashCode * -1521134295 + EqualityComparer<Stream?>.Default.GetHashCode(Stream);
+			if (Path != null)
+				hashCode = hashCode * -1521134295 + EqualityComparer<string?>.Default.GetHashCode(Path);
+			if (Stream != null)
+				hashCode = hashCode * -1521134295 + EqualityComparer<Stream?>.Default.GetHashCode(Stream);
 			hashCode = hashCode * -1521134295 + Size.GetHashCode();
 			hashCode = hashCode * -1521134295 + FontStyle.GetHashCode();
 			return hashCode;
@@ -96,6 +99,6 @@ namespace DotFeather
 		private static readonly Stream defaultFont =
 			typeof(Font).Assembly.GetManifestResourceStream(
 				typeof(Font).Assembly.GetManifestResourceNames().First(n => n.Contains("font.ttf"))
-			);
+			) ?? throw new InvalidOperationException("bug: the default font file is not found");
 	}
 }

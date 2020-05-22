@@ -4,9 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using OpenTK;
-using OpenTK.Audio;
-using OpenTK.Audio.OpenAL;
+using OpenToolkit.Audio;
+using OpenToolkit.Audio.OpenAL;
 
 namespace DotFeather
 {

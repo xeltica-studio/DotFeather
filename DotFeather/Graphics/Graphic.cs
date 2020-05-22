@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using OpenTK.Graphics.OpenGL;
+using OpenToolkit.Graphics.OpenGL;
 using static DotFeather.MiscUtility;
 
 namespace DotFeather

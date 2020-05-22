@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OpenTK.Input;
+using OpenToolkit.Input;
 
 
 namespace DotFeather
@@ -466,9 +466,12 @@ namespace DotFeather
 
 		internal static void Update()
 		{
+			var window = GameBase.Current?.window;
+			if (window == null) return;
+
 			Parallel.ForEach(allCodes, code =>
 			{
-				var isPressed = Keyboard.GetState()[code.ToTK()];
+				var isPressed = window.IsKeyPressed(code.ToTK());
 				var prevIsPressed = prevState[(int)code];
 				var key = KeyOf(code);
 				key.IsPressed = isPressed;

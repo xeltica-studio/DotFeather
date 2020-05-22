@@ -1,5 +1,5 @@
-using OpenTK.Input;
-
+using OpenToolkit.Input;
+using OpenToolkit.Windowing.Common.Input;
 
 namespace DotFeather
 {
@@ -65,25 +65,22 @@ namespace DotFeather
 		/// <value></value>
 		public static Vector Scroll { get; private set; }
 
-		internal static void Update()
+		internal static void Update(Vector scroll)
 		{
-			// previous values
-			bool pl = IsLeft, pr = IsRight, pm = IsMiddle;
+			var game = GameBase.Current?.window;
+			if (game == null) return;
 
-			IsLeft = Mouse.GetState().LeftButton == ButtonState.Pressed;
-			IsRight = Mouse.GetState().RightButton == ButtonState.Pressed;
-			IsMiddle = Mouse.GetState().MiddleButton == ButtonState.Pressed;
+			IsLeft = game.IsMouseButtonDown(MouseButton.Left);
+			IsRight = game.IsMouseButtonDown(MouseButton.Right);
+			IsMiddle = game.IsMouseButtonDown(MouseButton.Middle);
 
-			IsLeftDown = IsLeft && !pl;
-			IsRightDown = IsRight && !pr;
-			IsMiddleDown = IsMiddle && !pm;
+			IsLeftDown = game.IsMouseButtonPressed(MouseButton.Left);
+			IsRightDown = game.IsMouseButtonPressed(MouseButton.Right);
+			IsMiddleDown = game.IsMouseButtonPressed(MouseButton.Middle);
 
-			IsLeftUp = !IsLeft && pl;
-			IsRightUp = !IsRight && pr;
-			IsMiddleUp = !IsMiddle && pm;
-
-			var scr = Mouse.GetCursorState().Scroll;
-			var scroll = new Vector(scr.X, scr.Y);
+			IsLeftUp = game.IsMouseButtonReleased(MouseButton.Left);
+			IsRightUp = game.IsMouseButtonReleased(MouseButton.Right);
+			IsMiddleUp = game.IsMouseButtonReleased(MouseButton.Middle);
 
 			Scroll = scroll - prevScroll;
 			prevScroll = scroll;

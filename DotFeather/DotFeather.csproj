@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>netstandard2.1</TargetFramework>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<ReleaseVersion>2.7.0</ReleaseVersion>
+		<ReleaseVersion>3.0.0</ReleaseVersion>
 		<Nullable>Enable</Nullable>
 		<NoWarn>CS1591</NoWarn>
 	</PropertyGroup>
@@ -18,7 +18,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="NVorbis" Version="0.8.6" />
-		<PackageReference Include="OpenTK.NetStandard" Version="1.0.7-prerelease" />
+		<PackageReference Include="OpenTK" Version="4.0.0-pre9.1" />
 		<PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />
 	</ItemGroup>
 </Project>

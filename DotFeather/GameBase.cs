@@ -1,18 +1,18 @@
 using System;
 
-using OpenTK;
-using OpenTK.Graphics;
-using OpenTK.Graphics.OpenGL;
 using System.Collections;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using SixLabors.ImageSharp;
 using Color = System.Drawing.Color;
-using Size = System.Drawing.Size;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.PixelFormats;
 using System.Threading;
+using OpenToolkit.Windowing.Desktop;
+using OpenToolkit.Windowing.Common;
+using OpenToolkit.Mathematics;
+using OpenToolkit.Graphics.OpenGL4;
 
 namespace DotFeather
 {
@@ -21,13 +21,14 @@ namespace DotFeather
 	/// </summary>
 	public abstract class GameBase : IDisposable
 	{
+		public static GameBase? Current { get; private set; }
 		/// <summary>
 		/// Get or set X coordinate of this window.
 		/// </summary>
 		public int X
 		{
-			get => window.X;
-			set => window.X = value;
+			get => window.Location.X;
+			set => window.Location = new Vector2i(value, Y);
 		}
 
 		/// <summary>
@@ -35,8 +36,8 @@ namespace DotFeather
 		/// </summary>
 		public int Y
 		{
-			get => window.Y;
-			set => window.Y = value;
+			get => window.Location.Y;
+			set => window.Location = new Vector2i(X, value);
 		}
 
 		/// <summary>
@@ -44,8 +45,8 @@ namespace DotFeather
 		/// </summary>
 		public bool Visible
 		{
-			get => window.Visible;
-			set => window.Visible = value;
+			get => window.IsVisible;
+			set => window.IsVisible = value;
 		}
 
 		/// <summary>
@@ -54,8 +55,8 @@ namespace DotFeather
 		/// <value>The width.</value>
 		public int Width
 		{
-			get => (int)(window.ClientSize.Width / (FollowsDpi ? Dpi : 1));
-			set => window.ClientSize = new Size((int)(value * (FollowsDpi ? Dpi : 1)), window.ClientSize.Height);
+			get => (int)(window.ClientSize.X / (FollowsDpi ? Dpi : 1));
+			set => window.ClientRectangle = new Box2i(0, 0, (int)(value * (FollowsDpi ? Dpi : 1)), ActualHeight);
 		}
 
 		/// <summary>
@@ -64,8 +65,8 @@ namespace DotFeather
 		/// <value>The height.</value>
 		public int Height
 		{
-			get => (int)(window.ClientSize.Height / (FollowsDpi ? Dpi : 1));
-			set => window.ClientSize = new Size(window.ClientSize.Width, (int)(value * (FollowsDpi ? Dpi : 1)));
+			get => (int)(window.ClientSize.Y / (FollowsDpi ? Dpi : 1));
+			set => window.ClientRectangle = new Box2i(0, 0, ActualWidth, (int)(value * (FollowsDpi ? Dpi : 1)));
 		}
 
 		/// <summary>
@@ -74,8 +75,8 @@ namespace DotFeather
 		/// <value>The width.</value>
 		public int ActualWidth
 		{
-			get => window.ClientSize.Width;
-			set => window.ClientSize = new Size(value, window.ClientSize.Height);
+			get => window.ClientSize.X;
+			set => window.ClientRectangle = new Box2i(0, 0, value, ActualHeight);
 		}
 
 		/// <summary>
@@ -84,15 +85,15 @@ namespace DotFeather
 		/// <value>The height.</value>
 		public int ActualHeight
 		{
-			get => window.ClientSize.Height;
-			set => window.ClientSize = new Size(window.ClientSize.Width, value);
+			get => window.ClientSize.Y;
+			set => window.ClientRectangle = new Box2i(0, 0, ActualWidth, value);
 		}
 
 		/// <summary>
 		/// Get whether this window is focused.
 		/// </summary>
 		/// <value>The height.</value>
-		public bool IsFocused => window.Focused;
+		public bool IsFocused => window.IsFocused;
 
 		/// <summary>
 		/// Get or set background color of this window.
@@ -122,7 +123,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get DPI of the current display.
 		/// </summary>
-		public float Dpi => (float)window.ClientSize.Width / window.Size.Width;
+		public float Dpi => (float)window.ClientSize.X / window.Size.X;
 
 		/// <summary>
 		/// Get or set whether the game follows your display's DPI.
@@ -246,75 +247,86 @@ namespace DotFeather
 			IsCaptureMode = isCaptureMode;
 			FollowsDpi = followsDpi;
 
-			window = new GameWindow(width, height, GraphicsMode.Default, title ?? "DotFeather Window", GameWindowFlags.FixedWindow)
-			{
-				VSync = VSyncMode.Adaptive,
-				TargetRenderFrequency = refreshRate,
-				TargetUpdateFrequency = refreshRate,
-			};
+			var gws = GameWindowSettings.Default;
+			gws.RenderFrequency = refreshRate;
+			gws.UpdateFrequency = refreshRate;
+
+			var nws = NativeWindowSettings.Default;
+			nws.Size = new Vector2i(width, height);
+			nws.Title = title ?? "DotFeather Window";
+			nws.WindowBorder = WindowBorder.Fixed;
+			nws.APIVersion = new Version(4, 0);
+
+			window = new GameWindow(gws, nws);
 
 			if (IsCaptureMode && !Directory.Exists("./shot"))
 			{
 				Directory.CreateDirectory("shot");
 			}
 
-			window.Load += (s, e) =>
+			window.Load += () =>
 			{
 				GL.ClearColor(Color.Black);
 				GL.LineWidth(1);
 				GL.Disable(EnableCap.DepthTest);
-				Load?.Invoke(s, e);
-				OnLoad(s, e);
+				Load?.Invoke(this, new EventArgs());
+				OnLoad(this, new EventArgs());
 			};
 
-			window.Resize += (s, e) =>
+			window.Resize += (e) =>
 			{
-				GL.Viewport(window.ClientRectangle);
-				Resize?.Invoke(s, e);
-				OnResize(s, e);
+				var r = window.ClientSize;
+				GL.Viewport(0, 0, r.X, r.Y);
+				Resize?.Invoke(this, new EventArgs());
+				OnResize(this, new EventArgs());
 			};
 
-			window.FileDrop += (s, e) =>
+			window.FileDrop += (e) =>
 			{
-				var a = new DFFileDroppedEventArgs(e.FileName);
-				FileDrop?.Invoke(s, a);
-				OnFileDrop(s, a);
+				var args = new DFFileDroppedEventArgs(e.FileNames);
+				FileDrop?.Invoke(this, args);
+				OnFileDrop(this, args);
 			};
 
 			window.RenderFrame += OnRenderFrame;
 
-			window.Unload += (s, e) =>
+			window.Unload += () =>
 			{
-				Unload?.Invoke(s, e);
-				OnUnload(s, e);
+				Unload?.Invoke(this, new EventArgs());
+				OnUnload(this, new EventArgs());
 			};
 
-			window.KeyPress += (s, e) =>
+			window.TextInput += (e) =>
 			{
-				DFKeyboard.keychars.Enqueue(e.KeyChar);
-
-				KeyPress?.Invoke(s, new DFKeyPressEventArgs(e.KeyChar));
-
-				OnKeyPress(s, new DFKeyPressEventArgs(e.KeyChar));
+				foreach (var c in e.AsString.ToCharArray())
+				{
+					DFKeyboard.keychars.Enqueue(c);
+					KeyPress?.Invoke(this, new DFKeyPressEventArgs(c));
+					OnKeyPress(this, new DFKeyPressEventArgs(c));
+				}
 			};
 
-			window.KeyDown += (s, e) =>
+			window.KeyDown += (e) =>
 			{
-				KeyDown?.Invoke(s, new DFKeyEventArgs(e));
+				KeyDown?.Invoke(this, new DFKeyEventArgs(e));
 
-				OnKeyDown(s, new DFKeyEventArgs(e));
+				OnKeyDown(this, new DFKeyEventArgs(e));
 			};
 
-			window.KeyUp += (s, e) =>
+			window.KeyUp += (e) =>
 			{
-				KeyUp?.Invoke(s, new DFKeyEventArgs(e));
-				OnKeyUp(s, new DFKeyEventArgs(e));
+				KeyUp?.Invoke(this, new DFKeyEventArgs(e));
+				OnKeyUp(this, new DFKeyEventArgs(e));
 			};
 
-			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
+			window.MouseMove += (e) =>
 				DFMouse.Position = new VectorInt((int)(e.Position.X / (FollowsDpi ? Dpi : 1)), (int)(e.Position.Y / (FollowsDpi ? Dpi : 1)));
 
+			window.MouseWheel += (e) => mouseScroll = new Vector(e.OffsetX, e.OffsetY);
+
 			console = new TextDrawable("", Font.GetDefault(ConsoleSize), ForegroundColor);
+
+			Current = this;
 		}
 
 		/// <summary>
@@ -332,7 +344,7 @@ namespace DotFeather
 		/// <returns>Status code.</returns>
 		public int Run()
 		{
-			window.Run(RefreshRate);
+			window.Run();
 			return statusCode ?? 0;
 		}
 
@@ -363,12 +375,9 @@ namespace DotFeather
 		/// </summary>
 		public Image TakeScreenshot()
 		{
-			if (GraphicsContext.CurrentContext == null)
-				throw new GraphicsContextMissingException();
-
 			var arr = new byte[ActualWidth * ActualHeight * 4];
 
-			GL.ReadPixels<byte>(0, 0, ActualWidth, ActualHeight, OpenTK.Graphics.OpenGL.PixelFormat.Rgba, PixelType.UnsignedByte, arr);
+			// GL.ReadPixels<byte>(0, 0, ActualWidth, ActualHeight, PixelFormat.Rgba, PixelType.UnsignedByte, arr);
 
 			var img = Image.LoadPixelData<Rgba32>(arr, ActualWidth, ActualHeight);
 
@@ -432,7 +441,7 @@ namespace DotFeather
 		/// </summary>
 		protected Random Random { get; private set; } = new Random();
 
-		private void OnRenderFrame(object sender, FrameEventArgs e)
+		private void OnRenderFrame(FrameEventArgs e)
 		{
 			// 画面の初期化
 			GL.ClearColor(BackgroundColor);
@@ -446,13 +455,13 @@ namespace DotFeather
 			CalculateFps();
 
 			DFKeyboard.Update();
-			DFMouse.Update();
+			DFMouse.Update(mouseScroll);
 			Root.OnUpdate(this);
 			CoroutineRunner.Update();
 			UpdateConsole();
 			ctx.Update();
 
-			OnUpdate(sender, new DFEventArgs { DeltaTime = (float)Time.DeltaTime });
+			OnUpdate(this, new DFEventArgs { DeltaTime = (float)Time.DeltaTime });
 
 			// Drawable をレンダリング
 			var s = Root.Scale;
@@ -517,7 +526,9 @@ namespace DotFeather
 		private int prevSecond;
 		private readonly List<string> consoleBuffer = new List<string>();
 		private readonly TextDrawable console;
-		private readonly GameWindow window;
 		private readonly DFSynchronizationContext ctx;
+		private Vector mouseScroll;
+
+		internal readonly GameWindow window;
 	}
 }

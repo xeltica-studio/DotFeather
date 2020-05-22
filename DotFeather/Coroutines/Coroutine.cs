@@ -63,7 +63,7 @@ namespace DotFeather
 			return this;
 		}
 
-		internal object Current => coroutine.Current;
+		internal object? Current => coroutine.Current;
 
 		internal bool MoveNext()
 		{

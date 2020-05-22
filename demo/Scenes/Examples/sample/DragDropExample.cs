@@ -26,8 +26,8 @@ namespace DotFeather.Demo
 
 		private void FileDrop(object sender, DFFileDroppedEventArgs e)
 		{
-			Title = e.Path;
-			game?.Print($"Dropped file is {e.Path}");
+			Title = $"Dropped {e.Pathes.Length} file{(e.Pathes.Length > 1 ? "s" : "")}";
+			game?.Print($"Dropped file: \n{string.Join("\n", e.Pathes)}\n");
 		}
 
 		private GameBase? game;

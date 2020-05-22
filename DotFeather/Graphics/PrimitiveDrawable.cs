@@ -1,8 +1,7 @@
 using System;
-using OpenTK;
 using System.Linq;
-using OpenTK.Graphics.OpenGL;
 using System.Drawing;
+using OpenToolkit.Graphics.OpenGL;
 
 namespace DotFeather
 {

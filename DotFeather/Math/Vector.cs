@@ -73,7 +73,7 @@ namespace DotFeather
 		/// <summary>
 		/// Compare this object.
 		/// </summary>
-		public override bool Equals(object obj)
+		public override bool Equals(object? obj)
 		{
 			return obj is Vector vector && Equals(vector);
 		}

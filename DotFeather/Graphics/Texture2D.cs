@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using SD = System.Drawing;
-using OpenTK.Graphics.OpenGL;
+using OpenToolkit.Graphics.OpenGL;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Advanced;
@@ -78,11 +78,11 @@ namespace DotFeather
 			var height = bmp.GetLength(1);
 			var arr = new byte[width * height * 4];
 			for (int y = 0, i = 0; y < height; y++)
-			for (var x = 0; x < width; x++)
-			{
-				for (var j = 0; j < 4; j++)
-					arr[i++] = bmp[x, y, j];
-			}
+				for (var x = 0; x < width; x++)
+				{
+					for (var j = 0; j < 4; j++)
+						arr[i++] = bmp[x, y, j];
+				}
 			return Create(arr, width, height);
 		}
 
@@ -96,7 +96,7 @@ namespace DotFeather
 
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
-			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, width, height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Rgba, PixelType.UnsignedByte, bmp);
+			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, width, height, 0, PixelFormat.Rgba, PixelType.UnsignedByte, bmp);
 			return new Texture2D(texture, new VectorInt(width, height));
 		}
 
@@ -109,13 +109,13 @@ namespace DotFeather
 			var arr = new byte[sizeX, sizeY, 4];
 
 			for (var y = 0; y < sizeY; y++)
-			for (var x = 0; x < sizeX; x++)
-			{
-				arr[x, y, 0] = color.R;
-				arr[x, y, 1] = color.G;
-				arr[x, y, 2] = color.B;
-				arr[x, y, 3] = color.A;
-			}
+				for (var x = 0; x < sizeX; x++)
+				{
+					arr[x, y, 0] = color.R;
+					arr[x, y, 1] = color.G;
+					arr[x, y, 2] = color.B;
+					arr[x, y, 3] = color.A;
+				}
 			return Create(arr);
 		}
 

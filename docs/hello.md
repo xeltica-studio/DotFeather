@@ -1,6 +1,6 @@
 # Hello!
 
-Well, let's draw text! Write the following line in the `OnStart()` method:
+Well, let's draw text! Write the following line in the `OnLoad()` method:
 
 ```cs
 Print("Hello, world!");

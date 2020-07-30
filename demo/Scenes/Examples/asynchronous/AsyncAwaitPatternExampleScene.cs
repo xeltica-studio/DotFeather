@@ -19,6 +19,10 @@ namespace DotFeather.Demo
 			{
 				for (var x = 0; x < 16; x++)
 				{
+					if (cts.IsCancellationRequested)
+					{
+						break;
+					}
 					bitmap[x, y, 0] = (byte)(y * 16);
 					bitmap[x, y, 1] = (byte)(x * 16);
 					bitmap[x, y, 2] = (byte)(x * 16);

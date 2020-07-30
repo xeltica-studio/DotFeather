@@ -377,6 +377,11 @@ namespace DotFeather
 			return img;
 		}
 
+		public void NextFrame(Action task)
+		{
+			nextFrameQueue.Add(task);
+		}
+
 		/// <summary>
 		/// Start the coroutine.
 		/// </summary>
@@ -444,15 +449,17 @@ namespace DotFeather
 			Time.DeltaTime = deltaTime;
 
 			CalculateFps();
-
 			DFKeyboard.Update();
 			DFMouse.Update();
-			Root.OnUpdate(this);
-			CoroutineRunner.Update();
-			UpdateConsole();
 			ctx.Update();
 
+			RunNextFrameTasks();
+
 			OnUpdate(sender, new DFEventArgs { DeltaTime = (float)Time.DeltaTime });
+			Root.OnUpdate(this);
+			CoroutineRunner.Update();
+
+			UpdateConsole();
 
 			// Drawable をレンダリング
 			var s = Root.Scale;
@@ -477,6 +484,15 @@ namespace DotFeather
 			}
 			TotalFrame++;
 			window.SwapBuffers();
+		}
+
+		private void RunNextFrameTasks()
+		{
+			nextFrameQueue.ToList().ForEach(task =>
+			{
+				task();
+				nextFrameQueue.Remove(task);
+			});
 		}
 
 		private void UpdateConsole()
@@ -519,5 +535,6 @@ namespace DotFeather
 		private readonly TextDrawable console;
 		private readonly GameWindow window;
 		private readonly DFSynchronizationContext ctx;
+		private readonly List<Action> nextFrameQueue = new List<Action>();
 	}
 }

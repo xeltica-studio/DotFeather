@@ -7,6 +7,7 @@ items:
   children:
   - DotFeather.Container.AbsoluteLocation
   - DotFeather.Container.Add(DotFeather.IDrawable)
+  - DotFeather.Container.AddRange(System.Collections.Generic.IEnumerable{DotFeather.IDrawable})
   - DotFeather.Container.Angle
   - DotFeather.Container.Clear
   - DotFeather.Container.Contains(DotFeather.IDrawable)
@@ -748,7 +749,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Add
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 115
+    startLine: 111
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -768,6 +769,45 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: DotFeather.Container.AddRange(System.Collections.Generic.IEnumerable{DotFeather.IDrawable})
+  commentId: M:DotFeather.Container.AddRange(System.Collections.Generic.IEnumerable{DotFeather.IDrawable})
+  id: AddRange(System.Collections.Generic.IEnumerable{DotFeather.IDrawable})
+  parent: DotFeather.Container
+  langs:
+  - csharp
+  - vb
+  name: AddRange(IEnumerable<IDrawable>)
+  nameWithType: Container.AddRange(IEnumerable<IDrawable>)
+  fullName: DotFeather.Container.AddRange(System.Collections.Generic.IEnumerable<DotFeather.IDrawable>)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Graphics/Container.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: AddRange
+    path: ../DotFeather/Graphics/Container.cs
+    startLine: 123
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nこのコンテナに子要素を複数追加します。\n"
+  example: []
+  syntax:
+    content: public void AddRange(IEnumerable<IDrawable> children)
+    parameters:
+    - id: children
+      type: System.Collections.Generic.IEnumerable{DotFeather.IDrawable}
+      description: 子要素。
+    content.vb: Public Sub AddRange(children As IEnumerable(Of IDrawable))
+  overload: DotFeather.Container.AddRange*
+  nameWithType.vb: Container.AddRange(IEnumerable(Of IDrawable))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotFeather.Container.AddRange(System.Collections.Generic.IEnumerable(Of DotFeather.IDrawable))
+  name.vb: AddRange(IEnumerable(Of IDrawable))
 - uid: DotFeather.Container.Insert(System.Int32,DotFeather.IDrawable)
   commentId: M:DotFeather.Container.Insert(System.Int32,DotFeather.IDrawable)
   id: Insert(System.Int32,DotFeather.IDrawable)
@@ -786,7 +826,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Insert
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 128
+    startLine: 139
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -827,7 +867,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 137
+    startLine: 148
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -868,7 +908,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 183
+    startLine: 194
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -905,7 +945,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 191
+    startLine: 202
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -941,7 +981,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 196
+    startLine: 207
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -977,7 +1017,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IndexOf
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 202
+    startLine: 213
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1016,7 +1056,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RemoveAt
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 207
+    startLine: 218
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1053,7 +1093,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 217
+    startLine: 228
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1087,7 +1127,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Contains
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 227
+    startLine: 238
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1126,7 +1166,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CopyTo
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 232
+    startLine: 243
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1168,7 +1208,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Remove
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 237
+    startLine: 248
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1207,7 +1247,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsReadOnly
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 248
+    startLine: 259
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2221,6 +2261,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: DotFeather.Container.AddRange*
+  commentId: Overload:DotFeather.Container.AddRange
+  name: AddRange
+  nameWithType: Container.AddRange
+  fullName: DotFeather.Container.AddRange
 - uid: DotFeather.Container.Insert*
   commentId: Overload:DotFeather.Container.Insert
   name: Insert

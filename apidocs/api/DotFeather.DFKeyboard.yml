@@ -159,7 +159,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: DFKeyboard
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -203,7 +203,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Unknown
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -240,7 +240,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ShiftLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -277,7 +277,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ShiftRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -314,7 +314,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ControlLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -351,7 +351,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ControlRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -388,7 +388,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AltLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -425,7 +425,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AltRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -462,7 +462,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: WinLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 28
+    startLine: 29
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -499,7 +499,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: WinRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -536,7 +536,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Menu
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 32
+    startLine: 33
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -573,7 +573,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -610,7 +610,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 36
+    startLine: 37
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -647,7 +647,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 38
+    startLine: 39
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -684,7 +684,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -721,7 +721,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 42
+    startLine: 43
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -758,7 +758,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -795,7 +795,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 46
+    startLine: 47
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -832,7 +832,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 48
+    startLine: 49
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -869,7 +869,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 50
+    startLine: 51
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -906,7 +906,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F10
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 52
+    startLine: 53
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -943,7 +943,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F11
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 54
+    startLine: 55
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -980,7 +980,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F12
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 56
+    startLine: 57
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1017,7 +1017,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F13
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 58
+    startLine: 59
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1054,7 +1054,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F14
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1091,7 +1091,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F15
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 62
+    startLine: 63
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1128,7 +1128,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F16
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1165,7 +1165,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F17
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 66
+    startLine: 67
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1202,7 +1202,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F18
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 68
+    startLine: 69
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1239,7 +1239,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F19
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 70
+    startLine: 71
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1276,7 +1276,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F20
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 72
+    startLine: 73
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1313,7 +1313,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F21
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 74
+    startLine: 75
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1350,7 +1350,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F22
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 76
+    startLine: 77
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1387,7 +1387,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F23
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 78
+    startLine: 79
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1424,7 +1424,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F24
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 80
+    startLine: 81
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1461,7 +1461,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F25
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 82
+    startLine: 83
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1498,7 +1498,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F26
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 84
+    startLine: 85
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1535,7 +1535,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F27
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 86
+    startLine: 87
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1572,7 +1572,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F28
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 88
+    startLine: 89
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1609,7 +1609,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F29
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 90
+    startLine: 91
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1646,7 +1646,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F30
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 92
+    startLine: 93
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1683,7 +1683,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F31
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 94
+    startLine: 95
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1720,7 +1720,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F32
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 96
+    startLine: 97
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1757,7 +1757,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F33
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 98
+    startLine: 99
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1794,7 +1794,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F34
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 100
+    startLine: 101
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1831,7 +1831,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F35
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 102
+    startLine: 103
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1868,7 +1868,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Up
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 104
+    startLine: 105
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1905,7 +1905,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Down
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 106
+    startLine: 107
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1942,7 +1942,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Left
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 108
+    startLine: 109
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1979,7 +1979,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Right
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 110
+    startLine: 111
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2016,7 +2016,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Enter
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 112
+    startLine: 113
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2053,7 +2053,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Escape
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 114
+    startLine: 115
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2090,7 +2090,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Space
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 116
+    startLine: 117
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2127,7 +2127,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Tab
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 118
+    startLine: 119
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2164,7 +2164,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BackSpace
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 120
+    startLine: 121
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2201,7 +2201,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Insert
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 122
+    startLine: 123
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2238,7 +2238,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Delete
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 124
+    startLine: 125
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2275,7 +2275,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: PageUp
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 126
+    startLine: 127
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2312,7 +2312,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: PageDown
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 128
+    startLine: 129
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2349,7 +2349,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Home
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 130
+    startLine: 131
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2386,7 +2386,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: End
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 132
+    startLine: 133
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2423,7 +2423,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CapsLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 134
+    startLine: 135
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2460,7 +2460,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ScrollLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 136
+    startLine: 137
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2497,7 +2497,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: PrintScreen
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 138
+    startLine: 139
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2534,7 +2534,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Pause
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 140
+    startLine: 141
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2571,7 +2571,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: NumLock
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 142
+    startLine: 143
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2608,7 +2608,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 144
+    startLine: 145
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2645,7 +2645,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Sleep
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 146
+    startLine: 147
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2682,7 +2682,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad0
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 148
+    startLine: 149
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2719,7 +2719,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 150
+    startLine: 151
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2756,7 +2756,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 152
+    startLine: 153
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2793,7 +2793,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 154
+    startLine: 155
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2830,7 +2830,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 156
+    startLine: 157
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2867,7 +2867,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 158
+    startLine: 159
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2904,7 +2904,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 160
+    startLine: 161
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2941,7 +2941,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 162
+    startLine: 163
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2978,7 +2978,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 164
+    startLine: 165
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3015,7 +3015,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Keypad9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 166
+    startLine: 167
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3052,7 +3052,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadDivide
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 168
+    startLine: 169
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3089,7 +3089,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadMultiply
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 170
+    startLine: 171
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3126,7 +3126,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadMinus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 172
+    startLine: 173
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3163,7 +3163,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadPlus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 174
+    startLine: 175
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3200,7 +3200,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadPeriod
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 176
+    startLine: 177
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3237,7 +3237,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeypadEnter
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 178
+    startLine: 179
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3274,7 +3274,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: A
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 180
+    startLine: 181
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3311,7 +3311,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: B
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 182
+    startLine: 183
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3348,7 +3348,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: C
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 184
+    startLine: 185
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3385,7 +3385,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: D
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 186
+    startLine: 187
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3422,7 +3422,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: E
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 188
+    startLine: 189
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3459,7 +3459,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: F
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 190
+    startLine: 191
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3496,7 +3496,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: G
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 192
+    startLine: 193
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3533,7 +3533,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: H
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 194
+    startLine: 195
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3570,7 +3570,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: I
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 196
+    startLine: 197
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3607,7 +3607,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: J
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 198
+    startLine: 199
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3644,7 +3644,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: K
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 200
+    startLine: 201
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3681,7 +3681,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: L
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 202
+    startLine: 203
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3718,7 +3718,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: M
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 204
+    startLine: 205
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3755,7 +3755,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: N
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 206
+    startLine: 207
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3792,7 +3792,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: O
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 208
+    startLine: 209
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3829,7 +3829,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: P
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 210
+    startLine: 211
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3866,7 +3866,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Q
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 212
+    startLine: 213
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3903,7 +3903,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: R
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 214
+    startLine: 215
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3940,7 +3940,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: S
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 216
+    startLine: 217
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -3977,7 +3977,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: T
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 218
+    startLine: 219
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4014,7 +4014,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: U
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 220
+    startLine: 221
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4051,7 +4051,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: V
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 222
+    startLine: 223
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4088,7 +4088,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: W
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 224
+    startLine: 225
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4125,7 +4125,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: X
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 226
+    startLine: 227
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4162,7 +4162,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Y
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 228
+    startLine: 229
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4199,7 +4199,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Z
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 230
+    startLine: 231
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4236,7 +4236,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number0
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 232
+    startLine: 233
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4273,7 +4273,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number1
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 234
+    startLine: 235
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4310,7 +4310,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number2
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 236
+    startLine: 237
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4347,7 +4347,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number3
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 238
+    startLine: 239
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4384,7 +4384,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number4
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 240
+    startLine: 241
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4421,7 +4421,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number5
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 242
+    startLine: 243
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4458,7 +4458,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number6
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 244
+    startLine: 245
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4495,7 +4495,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number7
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 246
+    startLine: 247
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4532,7 +4532,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number8
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 248
+    startLine: 249
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4569,7 +4569,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Number9
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 250
+    startLine: 251
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4606,7 +4606,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Tilde
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 252
+    startLine: 253
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4643,7 +4643,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Minus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 254
+    startLine: 255
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4680,7 +4680,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Plus
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 256
+    startLine: 257
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4717,7 +4717,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BracketLeft
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 258
+    startLine: 259
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4754,7 +4754,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BracketRight
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 260
+    startLine: 261
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4791,7 +4791,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Semicolon
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 262
+    startLine: 263
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4828,7 +4828,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Quote
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 264
+    startLine: 265
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4865,7 +4865,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Comma
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 266
+    startLine: 267
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4902,7 +4902,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Period
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 268
+    startLine: 269
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4939,7 +4939,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Slash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 270
+    startLine: 271
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -4976,7 +4976,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: BackSlash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 272
+    startLine: 273
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5013,7 +5013,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: NonUSBackSlash
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 274
+    startLine: 275
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5050,7 +5050,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: LastKey
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 276
+    startLine: 277
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5087,7 +5087,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AllKeyCodes
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 281
+    startLine: 282
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5126,7 +5126,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AllPressedKeys
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 286
+    startLine: 287
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5165,7 +5165,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AllDownKeys
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 291
+    startLine: 292
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5204,7 +5204,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AllUpKeys
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 296
+    startLine: 297
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5243,7 +5243,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyOf
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 301
+    startLine: 302
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5282,7 +5282,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetString
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 444
+    startLine: 445
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5318,7 +5318,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetChar
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 457
+    startLine: 458
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -5354,7 +5354,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: HasChar
     path: ../DotFeather/InputSystems/DFKeyboard.cs
-    startLine: 463
+    startLine: 464
   assemblies:
   - DotFeather
   namespace: DotFeather

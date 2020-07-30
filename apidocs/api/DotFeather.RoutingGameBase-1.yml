@@ -69,6 +69,7 @@ items:
   - DotFeather.GameBase.Exit(System.Int32)
   - DotFeather.GameBase.Dispose
   - DotFeather.GameBase.TakeScreenshot
+  - DotFeather.GameBase.NextFrame(System.Action)
   - DotFeather.GameBase.StartCoroutine(System.Collections.IEnumerator)
   - DotFeather.GameBase.StopCoroutine(DotFeather.Coroutine)
   - DotFeather.GameBase.OnUnload(System.Object,System.EventArgs)
@@ -662,6 +663,45 @@ references:
   - name: (
     nameWithType: (
     fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotFeather.GameBase.NextFrame(System.Action)
+  commentId: M:DotFeather.GameBase.NextFrame(System.Action)
+  parent: DotFeather.GameBase
+  isExternal: true
+  name: NextFrame(Action)
+  nameWithType: GameBase.NextFrame(Action)
+  fullName: DotFeather.GameBase.NextFrame(System.Action)
+  spec.csharp:
+  - uid: DotFeather.GameBase.NextFrame(System.Action)
+    name: NextFrame
+    nameWithType: GameBase.NextFrame
+    fullName: DotFeather.GameBase.NextFrame
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotFeather.GameBase.NextFrame(System.Action)
+    name: NextFrame
+    nameWithType: GameBase.NextFrame
+    fullName: DotFeather.GameBase.NextFrame
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )

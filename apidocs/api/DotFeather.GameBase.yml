@@ -26,6 +26,7 @@ items:
   - DotFeather.GameBase.KeyPress
   - DotFeather.GameBase.KeyUp
   - DotFeather.GameBase.Load
+  - DotFeather.GameBase.NextFrame(System.Action)
   - DotFeather.GameBase.OnFileDrop(System.Object,DotFeather.DFFileDroppedEventArgs)
   - DotFeather.GameBase.OnKeyDown(System.Object,DotFeather.DFKeyEventArgs)
   - DotFeather.GameBase.OnKeyPress(System.Object,DotFeather.DFKeyPressEventArgs)
@@ -1185,6 +1186,39 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: DotFeather.GameBase.NextFrame(System.Action)
+  commentId: M:DotFeather.GameBase.NextFrame(System.Action)
+  id: NextFrame(System.Action)
+  parent: DotFeather.GameBase
+  langs:
+  - csharp
+  - vb
+  name: NextFrame(Action)
+  nameWithType: GameBase.NextFrame(Action)
+  fullName: DotFeather.GameBase.NextFrame(System.Action)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/GameBase.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: NextFrame
+    path: ../DotFeather/GameBase.cs
+    startLine: 379
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  syntax:
+    content: public void NextFrame(Action task)
+    parameters:
+    - id: task
+      type: System.Action
+    content.vb: Public Sub NextFrame(task As Action)
+  overload: DotFeather.GameBase.NextFrame*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: DotFeather.GameBase.StartCoroutine(System.Collections.IEnumerator)
   commentId: M:DotFeather.GameBase.StartCoroutine(System.Collections.IEnumerator)
   id: StartCoroutine(System.Collections.IEnumerator)
@@ -1203,7 +1237,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: StartCoroutine
     path: ../DotFeather/GameBase.cs
-    startLine: 382
+    startLine: 387
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1240,7 +1274,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: StopCoroutine
     path: ../DotFeather/GameBase.cs
-    startLine: 387
+    startLine: 392
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1275,7 +1309,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/GameBase.cs
-    startLine: 392
+    startLine: 397
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1314,7 +1348,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnLoad
     path: ../DotFeather/GameBase.cs
-    startLine: 397
+    startLine: 402
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1353,7 +1387,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUnload
     path: ../DotFeather/GameBase.cs
-    startLine: 402
+    startLine: 407
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1392,7 +1426,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnFileDrop
     path: ../DotFeather/GameBase.cs
-    startLine: 407
+    startLine: 412
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1431,7 +1465,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnResize
     path: ../DotFeather/GameBase.cs
-    startLine: 412
+    startLine: 417
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1470,7 +1504,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyPress
     path: ../DotFeather/GameBase.cs
-    startLine: 417
+    startLine: 422
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1509,7 +1543,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyDown
     path: ../DotFeather/GameBase.cs
-    startLine: 422
+    startLine: 427
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1548,7 +1582,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnKeyUp
     path: ../DotFeather/GameBase.cs
-    startLine: 427
+    startLine: 432
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1587,7 +1621,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Random
     path: ../DotFeather/GameBase.cs
-    startLine: 432
+    startLine: 437
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1624,7 +1658,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Load
     path: ../DotFeather/GameBase.cs
-    startLine: 508
+    startLine: 522
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1655,7 +1689,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Unload
     path: ../DotFeather/GameBase.cs
-    startLine: 509
+    startLine: 523
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1686,7 +1720,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: FileDrop
     path: ../DotFeather/GameBase.cs
-    startLine: 510
+    startLine: 524
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1717,7 +1751,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Resize
     path: ../DotFeather/GameBase.cs
-    startLine: 511
+    startLine: 525
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1748,7 +1782,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyDown
     path: ../DotFeather/GameBase.cs
-    startLine: 512
+    startLine: 526
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1779,7 +1813,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyPress
     path: ../DotFeather/GameBase.cs
-    startLine: 513
+    startLine: 527
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1810,7 +1844,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: KeyUp
     path: ../DotFeather/GameBase.cs
-    startLine: 514
+    startLine: 528
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -2499,6 +2533,18 @@ references:
   name: Image
   nameWithType: Image
   fullName: Image
+- uid: DotFeather.GameBase.NextFrame*
+  commentId: Overload:DotFeather.GameBase.NextFrame
+  name: NextFrame
+  nameWithType: GameBase.NextFrame
+  fullName: DotFeather.GameBase.NextFrame
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
 - uid: DotFeather.GameBase.StartCoroutine*
   commentId: Overload:DotFeather.GameBase.StartCoroutine
   name: StartCoroutine

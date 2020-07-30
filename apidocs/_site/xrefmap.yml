@@ -403,6 +403,22 @@ references:
   isSpec: "True"
   fullName: DotFeather.Container.Add
   nameWithType: Container.Add
+- uid: DotFeather.Container.AddRange(System.Collections.Generic.IEnumerable{DotFeather.IDrawable})
+  name: AddRange(IEnumerable<IDrawable>)
+  href: api/DotFeather.Container.html#DotFeather_Container_AddRange_System_Collections_Generic_IEnumerable_DotFeather_IDrawable__
+  commentId: M:DotFeather.Container.AddRange(System.Collections.Generic.IEnumerable{DotFeather.IDrawable})
+  name.vb: AddRange(IEnumerable(Of IDrawable))
+  fullName: DotFeather.Container.AddRange(System.Collections.Generic.IEnumerable<DotFeather.IDrawable>)
+  fullName.vb: DotFeather.Container.AddRange(System.Collections.Generic.IEnumerable(Of DotFeather.IDrawable))
+  nameWithType: Container.AddRange(IEnumerable<IDrawable>)
+  nameWithType.vb: Container.AddRange(IEnumerable(Of IDrawable))
+- uid: DotFeather.Container.AddRange*
+  name: AddRange
+  href: api/DotFeather.Container.html#DotFeather_Container_AddRange_
+  commentId: Overload:DotFeather.Container.AddRange
+  isSpec: "True"
+  fullName: DotFeather.Container.AddRange
+  nameWithType: Container.AddRange
 - uid: DotFeather.Container.Angle
   name: Angle
   href: api/DotFeather.Container.html#DotFeather_Container_Angle
@@ -4564,6 +4580,19 @@ references:
   commentId: E:DotFeather.GameBase.Load
   fullName: DotFeather.GameBase.Load
   nameWithType: GameBase.Load
+- uid: DotFeather.GameBase.NextFrame(System.Action)
+  name: NextFrame(Action)
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_NextFrame_System_Action_
+  commentId: M:DotFeather.GameBase.NextFrame(System.Action)
+  fullName: DotFeather.GameBase.NextFrame(System.Action)
+  nameWithType: GameBase.NextFrame(Action)
+- uid: DotFeather.GameBase.NextFrame*
+  name: NextFrame
+  href: api/DotFeather.GameBase.html#DotFeather_GameBase_NextFrame_
+  commentId: Overload:DotFeather.GameBase.NextFrame
+  isSpec: "True"
+  fullName: DotFeather.GameBase.NextFrame
+  nameWithType: GameBase.NextFrame
 - uid: DotFeather.GameBase.OnFileDrop(System.Object,DotFeather.DFFileDroppedEventArgs)
   name: OnFileDrop(Object, DFFileDroppedEventArgs)
   href: api/DotFeather.GameBase.html#DotFeather_GameBase_OnFileDrop_System_Object_DotFeather_DFFileDroppedEventArgs_

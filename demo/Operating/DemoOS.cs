@@ -9,7 +9,7 @@ namespace DotFeather.Demo
 		/// <summary>
 		/// Get or set the version of DemoOS.
 		/// </summary>
-		public const string VERSION = "1.1";
+		public const string VERSION = "2.8.0";
 
 		/// <summary>
 		/// Get or set current path.

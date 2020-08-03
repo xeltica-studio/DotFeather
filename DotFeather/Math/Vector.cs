@@ -71,6 +71,16 @@ namespace DotFeather
 		);
 
 		/// <summary>
+		/// Calculate a dot product.
+		/// </summary>
+		public static float Dot(Vector v1, Vector v2) => v1.X * v1.Y + v2.X * v2.Y;
+
+		/// <summary>
+		/// Calculate a dot product.
+		/// </summary>
+		public float Dot(Vector v) => Dot(this, v);
+
+		/// <summary>
 		/// Compare this object.
 		/// </summary>
 		public override bool Equals(object obj)

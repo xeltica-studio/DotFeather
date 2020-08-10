@@ -17,7 +17,7 @@ namespace DotFeather.Demo
 			time += e.DeltaTime;
 			if (time > 0.125f)
 			{
-				var t = new TextDrawable($"Test {count++}", Font.GetDefault(Random.Next(8, 48)), Random.NextColor())
+				var t = new TextDrawable($"Test {count++}", DFFont.GetDefault(Random.Next(8, 48)), Random.NextColor())
 				{
 					Location = Random.NextVector(game.Width, game.Height) / (int)game.Dpi
 				};

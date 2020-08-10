@@ -35,7 +35,7 @@ namespace DotFeather
 		/// Get or set a font to draw.
 		/// </summary>
 		/// <value></value>
-		public Font Font
+		public DFFont Font
 		{
 			get => font;
 			set
@@ -105,7 +105,7 @@ namespace DotFeather
 		/// <summary>
 		/// Initialize a new instance of <see cref="TextDrawable"/>.
 		/// </summary>
-		public TextDrawable(string text, Font font, SD.Color? color = default)
+		public TextDrawable(string text, DFFont font, SD.Color? color = default)
 		{
 			this.text = text;
 			this.font = font;
@@ -116,10 +116,10 @@ namespace DotFeather
 		/// <summary>
 		/// Initialize a new instance of <see cref="TextDrawable"/>.
 		/// </summary>
-		public TextDrawable(string text, float fontSize = 16, FontStyle fontStyle = FontStyle.Normal, SD.Color? color = default)
+		public TextDrawable(string text, float fontSize = 16, DFFontStyle fontStyle = DFFontStyle.Normal, SD.Color? color = default)
 		{
 			this.text = text;
-			this.font = Font.GetDefault(fontSize, fontStyle);
+			this.font = DFFont.GetDefault(fontSize, fontStyle);
 			this.color = color;
 			this.UpdateTexture();
 		}
@@ -160,7 +160,7 @@ namespace DotFeather
 			Texture.Dispose();
 		}
 
-		private SF.Font ResolveFont(Font f)
+		private SF.Font ResolveFont(DFFont f)
 		{
 			SF.FontFamily family;
 			if (fontCache.ContainsKey(f.Id))
@@ -191,7 +191,7 @@ namespace DotFeather
 		private static readonly Dictionary<object, SF.FontFamily> fontCache = new Dictionary<object, SF.FontFamily>();
 
 		private string text;
-		private Font font;
+		private DFFont font;
 		private SD.Color? color;
 		private SD.Color? borderColor;
 		private int borderThickness = 1;

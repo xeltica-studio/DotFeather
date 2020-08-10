@@ -8,7 +8,7 @@ namespace DotFeather.Demo
 	{
 		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
 		{
-			var text = new TextDrawable("test", Font.GetDefault(18, FontStyle.Bold))
+			var text = new TextDrawable("test", DFFont.GetDefault(18, DFFontStyle.Bold))
 			{
 				Color = Color.White,
 				BorderColor = Color.Yellow,

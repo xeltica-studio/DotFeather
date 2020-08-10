@@ -7,7 +7,7 @@ namespace DotFeather
 	/// <summary>
 	/// Depresents font-family, size, and font style.
 	/// </summary>
-	public class Font
+	public class DFFont
 	{
 		/// <summary>
 		/// Get a path to this font, or font-family name.
@@ -32,7 +32,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get a style of this font.
 		/// </summary>
-		public FontStyle FontStyle { get; private set; }
+		public DFFontStyle FontStyle { get; private set; }
 
 		/// <summary>
 		/// Get a default font.
@@ -40,18 +40,18 @@ namespace DotFeather
 		/// <param name="size">Font size.</param>
 		/// <param name="style">Font style.</param>
 		/// <returns>Generated defualt font.</returns>
-		public static Font GetDefault(float size = 16, FontStyle style = FontStyle.Normal)
+		public static DFFont GetDefault(float size = 16, DFFontStyle style = DFFontStyle.Normal)
 		{
-			return new Font(defaultFont, "__DOTFEATHER_SYSTEM_EMBEDDED_FONT_MPLUS__", size, style);
+			return new DFFont(defaultFont, "__DOTFEATHER_SYSTEM_EMBEDDED_FONT_MPLUS__", size, style);
 		}
 
 		/// <summary>
-		/// Initialize a new instance of <see cref="Font"/> class.
+		/// Initialize a new instance of <see cref="DFFont"/> class.
 		/// </summary>
 		/// <param name="path">relative path to the font, or font-family name of system fonts.</param>
 		/// <param name="size">font size by pixel unit.</param>
 		/// <param name="style">font style.</param>
-		public Font(string path, float size = 16, FontStyle style = FontStyle.Normal)
+		public DFFont(string path, float size = 16, DFFontStyle style = DFFontStyle.Normal)
 		{
 			Path = path;
 			Id = path;
@@ -60,13 +60,13 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// Initialize a new instance of <see cref="Font"/> class.
+		/// Initialize a new instance of <see cref="DFFont"/> class.
 		/// </summary>
 		/// <param name="stream">Stream of the font.</param>
 		/// <param name="id">An ID to cache this font data.</param>
 		/// <param name="size">font size by pixel unit.</param>
 		/// <param name="style">font style.</param>
-		public Font(Stream stream, string id, float size = 16, FontStyle style = FontStyle.Normal)
+		public DFFont(Stream stream, string id, float size = 16, DFFontStyle style = DFFontStyle.Normal)
 		{
 			Id = id;
 			Stream = stream;
@@ -76,7 +76,7 @@ namespace DotFeather
 
 		public override bool Equals(object? obj)
 		{
-			return obj is Font font &&
+			return obj is DFFont font &&
 					Path == font.Path &&
 					EqualityComparer<Stream?>.Default.Equals(Stream, font.Stream) &&
 					Size == font.Size &&
@@ -94,8 +94,8 @@ namespace DotFeather
 		}
 
 		private static readonly Stream defaultFont =
-			typeof(Font).Assembly.GetManifestResourceStream(
-				typeof(Font).Assembly.GetManifestResourceNames().First(n => n.Contains("font.ttf"))
+			typeof(DFFont).Assembly.GetManifestResourceStream(
+				typeof(DFFont).Assembly.GetManifestResourceNames().First(n => n.Contains("font.ttf"))
 			);
 	}
 }

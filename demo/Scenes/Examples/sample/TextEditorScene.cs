@@ -32,7 +32,7 @@ namespace DotFeather.Demo
 		}
 
 		private readonly StringBuilder buf = new StringBuilder();
-		private readonly TextDrawable editorView = new TextDrawable("", Font.GetDefault(16), Color.White)
+		private readonly TextDrawable editorView = new TextDrawable("", DFFont.GetDefault(16), Color.White)
 		{
 			Location = new Vector(8, 64),
 		};

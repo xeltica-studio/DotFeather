@@ -314,7 +314,7 @@ namespace DotFeather
 			window.MouseMove += (object sender, OpenTK.Input.MouseMoveEventArgs e) =>
 				DFMouse.Position = new VectorInt((int)(e.Position.X / (FollowsDpi ? Dpi : 1)), (int)(e.Position.Y / (FollowsDpi ? Dpi : 1)));
 
-			console = new TextDrawable("", Font.GetDefault(ConsoleSize), ForegroundColor);
+			console = new TextDrawable("", DFFont.GetDefault(ConsoleSize), ForegroundColor);
 		}
 
 		/// <summary>
@@ -499,7 +499,7 @@ namespace DotFeather
 		{
 			var f = console.Font;
 			if (f.Size != ConsoleSize * Dpi)
-				console.Font = Font.GetDefault(ConsoleSize * Dpi);
+				console.Font = DFFont.GetDefault(ConsoleSize * Dpi);
 
 			var maxLine = Height / ConsoleSize;
 

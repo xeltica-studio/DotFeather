@@ -36,8 +36,8 @@ namespace DotFeather.Demo
 
 		private readonly Sprite sprite = Sprite.LoadFrom("./rect.png");
 		private readonly NineSliceSprite nineslice = NineSliceSprite.LoadFrom("./rect.png", 16, 16, 16, 16);
-		private readonly TextDrawable t1 = new TextDrawable("Sprite", Font.GetDefault(18), Color.Lime);
-		private readonly TextDrawable t2 = new TextDrawable("9-slice Sprite", Font.GetDefault(18), Color.Lime);
+		private readonly TextDrawable t1 = new TextDrawable("Sprite", DFFont.GetDefault(18), Color.Lime);
+		private readonly TextDrawable t2 = new TextDrawable("9-slice Sprite", DFFont.GetDefault(18), Color.Lime);
 	}
 
 }

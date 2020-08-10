@@ -111,6 +111,7 @@ namespace DotFeather
 		/// <param name="child">子要素。</param>
 		public void Add(IDrawable child)
 		{
+			if (Contains(child)) return;
 			countMap[child] = count++;
 			if (child is IContainable c) c.Parent = this;
 			Children.Add(child);
@@ -125,6 +126,7 @@ namespace DotFeather
 		{
 			foreach (var child in children)
 			{
+				if (Contains(child)) continue;
 				countMap[child] = count++;
 				if (child is IContainable c) c.Parent = this;
 				Children.Add(child);
@@ -139,6 +141,7 @@ namespace DotFeather
 		/// <param name="item">子要素。</param>
 		public void Insert(int index, IDrawable item)
 		{
+			if (Contains(item)) return;
 			if (item is IContainable c) c.Parent = this;
 			Children.Insert(index, item);
 		}
@@ -218,6 +221,7 @@ namespace DotFeather
 		/// </summary>
 		public void RemoveAt(int index)
 		{
+			if (Children.Count <= index) return;
 			countMap.Remove(Children[index]);
 			Children.RemoveAt(index);
 			Sort();
@@ -248,6 +252,7 @@ namespace DotFeather
 		/// </summary>
 		public bool Remove(IDrawable item)
 		{
+			if (!Children.Contains(item)) return false;
 			var res = Children.Remove(item);
 			countMap.Remove(item);
 			Sort();

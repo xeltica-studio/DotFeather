@@ -10,13 +10,13 @@ namespace DotFeather.Demo
 		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
 		{
 			BackgroundColor = Color.FromArgb(255, 32, 32, 32);
-			var titleText = new TextDrawable("DotFeather", 56, FontStyle.Normal, Color.White)
+			var titleText = new TextDrawable("DotFeather", 56, DFFontStyle.Normal, Color.White)
 			{
 				Location = new Vector(24, 24),
 			};
 			Root.Add(titleText);
 
-			var sampleProgramText = new TextDrawable($"Demo {DemoOS.VERSION}", 24, FontStyle.Normal, Color.White)
+			var sampleProgramText = new TextDrawable($"Demo {DemoOS.VERSION}", 24, DFFontStyle.Normal, Color.White)
 			{
 				Location = new Vector(24 + titleText.Width + 8, 50),
 			};
@@ -218,7 +218,7 @@ namespace DotFeather.Demo
 
 						inner.Add(icon);
 					}
-					var text = new TextDrawable(item.Text, ItemHeight, FontStyle.Normal, Color.White)
+					var text = new TextDrawable(item.Text, ItemHeight, DFFontStyle.Normal, Color.White)
 					{
 						Location = new Vector(padding + ItemHeight + padding, y)
 					};
@@ -229,7 +229,7 @@ namespace DotFeather.Demo
 					if (item.Description != null)
 					{
 						y += 4;
-						var desc = new TextDrawable(item.Description, 12, FontStyle.Normal, Color.LightGray)
+						var desc = new TextDrawable(item.Description, 12, DFFontStyle.Normal, Color.LightGray)
 						{
 							Location = new Vector(text.Location.X, y)
 						};

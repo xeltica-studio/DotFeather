@@ -54,7 +54,7 @@ Absolute: {(VectorInt)text.AbsoluteLocation}";
 		}
 
 		private readonly Container container = new Container();
-		private readonly TextDrawable text = new TextDrawable("", Font.GetDefault(16), Color.White);
+		private readonly TextDrawable text = new TextDrawable("", DFFont.GetDefault(16), Color.White);
 		private int way = 1;
 	}
 }

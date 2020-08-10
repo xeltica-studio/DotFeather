@@ -213,10 +213,6 @@ namespace DotFeather
 		/// </summary>
 		public virtual void Destroy()
 		{
-			foreach (var kv in tiles)
-			{
-				kv.Value.tile.Destroy();
-			}
 			tiles.Clear();
 		}
 

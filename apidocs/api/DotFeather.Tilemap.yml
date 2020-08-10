@@ -1132,7 +1132,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Graphics/Tilemap.cs
-    startLine: 222
+    startLine: 218
   assemblies:
   - DotFeather
   namespace: DotFeather

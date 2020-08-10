@@ -71,6 +71,10 @@
     name.vb: OpenTKManagedHandleBase(Of T)
   - uid: DotFeather.RandomExtension
     name: RandomExtension
+  - uid: DotFeather.Rect
+    name: Rect
+  - uid: DotFeather.RectInt
+    name: RectInt
   - uid: DotFeather.Router
     name: Router
   - uid: DotFeather.RoutingGameBase`1

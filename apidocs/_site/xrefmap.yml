@@ -5977,6 +5977,264 @@ references:
   isSpec: "True"
   fullName: DotFeather.RandomExtension.NextVectorInt
   nameWithType: RandomExtension.NextVectorInt
+- uid: DotFeather.Rect
+  name: Rect
+  href: api/DotFeather.Rect.html
+  commentId: T:DotFeather.Rect
+  fullName: DotFeather.Rect
+  nameWithType: Rect
+- uid: DotFeather.Rect.#ctor(DotFeather.Vector,DotFeather.Vector)
+  name: Rect(Vector, Vector)
+  href: api/DotFeather.Rect.html#DotFeather_Rect__ctor_DotFeather_Vector_DotFeather_Vector_
+  commentId: M:DotFeather.Rect.#ctor(DotFeather.Vector,DotFeather.Vector)
+  fullName: DotFeather.Rect.Rect(DotFeather.Vector, DotFeather.Vector)
+  nameWithType: Rect.Rect(Vector, Vector)
+- uid: DotFeather.Rect.#ctor(System.Single,System.Single,System.Single,System.Single)
+  name: Rect(Single, Single, Single, Single)
+  href: api/DotFeather.Rect.html#DotFeather_Rect__ctor_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:DotFeather.Rect.#ctor(System.Single,System.Single,System.Single,System.Single)
+  fullName: DotFeather.Rect.Rect(System.Single, System.Single, System.Single, System.Single)
+  nameWithType: Rect.Rect(Single, Single, Single, Single)
+- uid: DotFeather.Rect.#ctor*
+  name: Rect
+  href: api/DotFeather.Rect.html#DotFeather_Rect__ctor_
+  commentId: Overload:DotFeather.Rect.#ctor
+  isSpec: "True"
+  fullName: DotFeather.Rect.Rect
+  nameWithType: Rect.Rect
+- uid: DotFeather.Rect.Bottom
+  name: Bottom
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Bottom
+  commentId: P:DotFeather.Rect.Bottom
+  fullName: DotFeather.Rect.Bottom
+  nameWithType: Rect.Bottom
+- uid: DotFeather.Rect.Bottom*
+  name: Bottom
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Bottom_
+  commentId: Overload:DotFeather.Rect.Bottom
+  isSpec: "True"
+  fullName: DotFeather.Rect.Bottom
+  nameWithType: Rect.Bottom
+- uid: DotFeather.Rect.Height
+  name: Height
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Height
+  commentId: P:DotFeather.Rect.Height
+  fullName: DotFeather.Rect.Height
+  nameWithType: Rect.Height
+- uid: DotFeather.Rect.Height*
+  name: Height
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Height_
+  commentId: Overload:DotFeather.Rect.Height
+  isSpec: "True"
+  fullName: DotFeather.Rect.Height
+  nameWithType: Rect.Height
+- uid: DotFeather.Rect.Left
+  name: Left
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Left
+  commentId: P:DotFeather.Rect.Left
+  fullName: DotFeather.Rect.Left
+  nameWithType: Rect.Left
+- uid: DotFeather.Rect.Left*
+  name: Left
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Left_
+  commentId: Overload:DotFeather.Rect.Left
+  isSpec: "True"
+  fullName: DotFeather.Rect.Left
+  nameWithType: Rect.Left
+- uid: DotFeather.Rect.Location
+  name: Location
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Location
+  commentId: P:DotFeather.Rect.Location
+  fullName: DotFeather.Rect.Location
+  nameWithType: Rect.Location
+- uid: DotFeather.Rect.Location*
+  name: Location
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Location_
+  commentId: Overload:DotFeather.Rect.Location
+  isSpec: "True"
+  fullName: DotFeather.Rect.Location
+  nameWithType: Rect.Location
+- uid: DotFeather.Rect.Right
+  name: Right
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Right
+  commentId: P:DotFeather.Rect.Right
+  fullName: DotFeather.Rect.Right
+  nameWithType: Rect.Right
+- uid: DotFeather.Rect.Right*
+  name: Right
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Right_
+  commentId: Overload:DotFeather.Rect.Right
+  isSpec: "True"
+  fullName: DotFeather.Rect.Right
+  nameWithType: Rect.Right
+- uid: DotFeather.Rect.Size
+  name: Size
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Size
+  commentId: P:DotFeather.Rect.Size
+  fullName: DotFeather.Rect.Size
+  nameWithType: Rect.Size
+- uid: DotFeather.Rect.Size*
+  name: Size
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Size_
+  commentId: Overload:DotFeather.Rect.Size
+  isSpec: "True"
+  fullName: DotFeather.Rect.Size
+  nameWithType: Rect.Size
+- uid: DotFeather.Rect.Top
+  name: Top
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Top
+  commentId: P:DotFeather.Rect.Top
+  fullName: DotFeather.Rect.Top
+  nameWithType: Rect.Top
+- uid: DotFeather.Rect.Top*
+  name: Top
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Top_
+  commentId: Overload:DotFeather.Rect.Top
+  isSpec: "True"
+  fullName: DotFeather.Rect.Top
+  nameWithType: Rect.Top
+- uid: DotFeather.Rect.Width
+  name: Width
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Width
+  commentId: P:DotFeather.Rect.Width
+  fullName: DotFeather.Rect.Width
+  nameWithType: Rect.Width
+- uid: DotFeather.Rect.Width*
+  name: Width
+  href: api/DotFeather.Rect.html#DotFeather_Rect_Width_
+  commentId: Overload:DotFeather.Rect.Width
+  isSpec: "True"
+  fullName: DotFeather.Rect.Width
+  nameWithType: Rect.Width
+- uid: DotFeather.RectInt
+  name: RectInt
+  href: api/DotFeather.RectInt.html
+  commentId: T:DotFeather.RectInt
+  fullName: DotFeather.RectInt
+  nameWithType: RectInt
+- uid: DotFeather.RectInt.#ctor(DotFeather.VectorInt,DotFeather.VectorInt)
+  name: RectInt(VectorInt, VectorInt)
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt__ctor_DotFeather_VectorInt_DotFeather_VectorInt_
+  commentId: M:DotFeather.RectInt.#ctor(DotFeather.VectorInt,DotFeather.VectorInt)
+  fullName: DotFeather.RectInt.RectInt(DotFeather.VectorInt, DotFeather.VectorInt)
+  nameWithType: RectInt.RectInt(VectorInt, VectorInt)
+- uid: DotFeather.RectInt.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: RectInt(Int32, Int32, Int32, Int32)
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt__ctor_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:DotFeather.RectInt.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: DotFeather.RectInt.RectInt(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: RectInt.RectInt(Int32, Int32, Int32, Int32)
+- uid: DotFeather.RectInt.#ctor*
+  name: RectInt
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt__ctor_
+  commentId: Overload:DotFeather.RectInt.#ctor
+  isSpec: "True"
+  fullName: DotFeather.RectInt.RectInt
+  nameWithType: RectInt.RectInt
+- uid: DotFeather.RectInt.Bottom
+  name: Bottom
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Bottom
+  commentId: P:DotFeather.RectInt.Bottom
+  fullName: DotFeather.RectInt.Bottom
+  nameWithType: RectInt.Bottom
+- uid: DotFeather.RectInt.Bottom*
+  name: Bottom
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Bottom_
+  commentId: Overload:DotFeather.RectInt.Bottom
+  isSpec: "True"
+  fullName: DotFeather.RectInt.Bottom
+  nameWithType: RectInt.Bottom
+- uid: DotFeather.RectInt.Height
+  name: Height
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Height
+  commentId: P:DotFeather.RectInt.Height
+  fullName: DotFeather.RectInt.Height
+  nameWithType: RectInt.Height
+- uid: DotFeather.RectInt.Height*
+  name: Height
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Height_
+  commentId: Overload:DotFeather.RectInt.Height
+  isSpec: "True"
+  fullName: DotFeather.RectInt.Height
+  nameWithType: RectInt.Height
+- uid: DotFeather.RectInt.Left
+  name: Left
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Left
+  commentId: P:DotFeather.RectInt.Left
+  fullName: DotFeather.RectInt.Left
+  nameWithType: RectInt.Left
+- uid: DotFeather.RectInt.Left*
+  name: Left
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Left_
+  commentId: Overload:DotFeather.RectInt.Left
+  isSpec: "True"
+  fullName: DotFeather.RectInt.Left
+  nameWithType: RectInt.Left
+- uid: DotFeather.RectInt.Location
+  name: Location
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Location
+  commentId: P:DotFeather.RectInt.Location
+  fullName: DotFeather.RectInt.Location
+  nameWithType: RectInt.Location
+- uid: DotFeather.RectInt.Location*
+  name: Location
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Location_
+  commentId: Overload:DotFeather.RectInt.Location
+  isSpec: "True"
+  fullName: DotFeather.RectInt.Location
+  nameWithType: RectInt.Location
+- uid: DotFeather.RectInt.Right
+  name: Right
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Right
+  commentId: P:DotFeather.RectInt.Right
+  fullName: DotFeather.RectInt.Right
+  nameWithType: RectInt.Right
+- uid: DotFeather.RectInt.Right*
+  name: Right
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Right_
+  commentId: Overload:DotFeather.RectInt.Right
+  isSpec: "True"
+  fullName: DotFeather.RectInt.Right
+  nameWithType: RectInt.Right
+- uid: DotFeather.RectInt.Size
+  name: Size
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Size
+  commentId: P:DotFeather.RectInt.Size
+  fullName: DotFeather.RectInt.Size
+  nameWithType: RectInt.Size
+- uid: DotFeather.RectInt.Size*
+  name: Size
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Size_
+  commentId: Overload:DotFeather.RectInt.Size
+  isSpec: "True"
+  fullName: DotFeather.RectInt.Size
+  nameWithType: RectInt.Size
+- uid: DotFeather.RectInt.Top
+  name: Top
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Top
+  commentId: P:DotFeather.RectInt.Top
+  fullName: DotFeather.RectInt.Top
+  nameWithType: RectInt.Top
+- uid: DotFeather.RectInt.Top*
+  name: Top
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Top_
+  commentId: Overload:DotFeather.RectInt.Top
+  isSpec: "True"
+  fullName: DotFeather.RectInt.Top
+  nameWithType: RectInt.Top
+- uid: DotFeather.RectInt.Width
+  name: Width
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Width
+  commentId: P:DotFeather.RectInt.Width
+  fullName: DotFeather.RectInt.Width
+  nameWithType: RectInt.Width
+- uid: DotFeather.RectInt.Width*
+  name: Width
+  href: api/DotFeather.RectInt.html#DotFeather_RectInt_Width_
+  commentId: Overload:DotFeather.RectInt.Width
+  isSpec: "True"
+  fullName: DotFeather.RectInt.Width
+  nameWithType: RectInt.Width
 - uid: DotFeather.Router
   name: Router
   href: api/DotFeather.Router.html
@@ -7533,6 +7791,25 @@ references:
   isSpec: "True"
   fullName: DotFeather.Vector.Distance
   nameWithType: Vector.Distance
+- uid: DotFeather.Vector.Dot(DotFeather.Vector)
+  name: Dot(Vector)
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Dot_DotFeather_Vector_
+  commentId: M:DotFeather.Vector.Dot(DotFeather.Vector)
+  fullName: DotFeather.Vector.Dot(DotFeather.Vector)
+  nameWithType: Vector.Dot(Vector)
+- uid: DotFeather.Vector.Dot(DotFeather.Vector,DotFeather.Vector)
+  name: Dot(Vector, Vector)
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Dot_DotFeather_Vector_DotFeather_Vector_
+  commentId: M:DotFeather.Vector.Dot(DotFeather.Vector,DotFeather.Vector)
+  fullName: DotFeather.Vector.Dot(DotFeather.Vector, DotFeather.Vector)
+  nameWithType: Vector.Dot(Vector, Vector)
+- uid: DotFeather.Vector.Dot*
+  name: Dot
+  href: api/DotFeather.Vector.html#DotFeather_Vector_Dot_
+  commentId: Overload:DotFeather.Vector.Dot
+  isSpec: "True"
+  fullName: DotFeather.Vector.Dot
+  nameWithType: Vector.Dot
 - uid: DotFeather.Vector.Down
   name: Down
   href: api/DotFeather.Vector.html#DotFeather_Vector_Down
@@ -7867,6 +8144,25 @@ references:
   isSpec: "True"
   fullName: DotFeather.VectorInt.Distance
   nameWithType: VectorInt.Distance
+- uid: DotFeather.VectorInt.Dot(DotFeather.VectorInt)
+  name: Dot(VectorInt)
+  href: api/DotFeather.VectorInt.html#DotFeather_VectorInt_Dot_DotFeather_VectorInt_
+  commentId: M:DotFeather.VectorInt.Dot(DotFeather.VectorInt)
+  fullName: DotFeather.VectorInt.Dot(DotFeather.VectorInt)
+  nameWithType: VectorInt.Dot(VectorInt)
+- uid: DotFeather.VectorInt.Dot(DotFeather.VectorInt,DotFeather.VectorInt)
+  name: Dot(VectorInt, VectorInt)
+  href: api/DotFeather.VectorInt.html#DotFeather_VectorInt_Dot_DotFeather_VectorInt_DotFeather_VectorInt_
+  commentId: M:DotFeather.VectorInt.Dot(DotFeather.VectorInt,DotFeather.VectorInt)
+  fullName: DotFeather.VectorInt.Dot(DotFeather.VectorInt, DotFeather.VectorInt)
+  nameWithType: VectorInt.Dot(VectorInt, VectorInt)
+- uid: DotFeather.VectorInt.Dot*
+  name: Dot
+  href: api/DotFeather.VectorInt.html#DotFeather_VectorInt_Dot_
+  commentId: Overload:DotFeather.VectorInt.Dot
+  isSpec: "True"
+  fullName: DotFeather.VectorInt.Dot
+  nameWithType: VectorInt.Dot
 - uid: DotFeather.VectorInt.Down
   name: Down
   href: api/DotFeather.VectorInt.html#DotFeather_VectorInt_Down

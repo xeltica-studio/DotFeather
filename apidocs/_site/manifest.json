@@ -12,7 +12,7 @@
           "hash": "AiPknIId4MdhtiaRcbkxkQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -24,7 +24,7 @@
           "hash": "8mxjqps+izxLGS+3tp9XCQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "4hss14men6NPEtejDEl+JQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -60,7 +60,7 @@
           "hash": "97xGFSQteXbl5ApKJ6e5Fw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Container.html",
-          "hash": "tkQoZt4Y5f8fZFw71Z4tbg=="
+          "hash": "qhL9EGgTGzqt7AcCvVOPkw=="
         }
       },
       "is_incremental": false,
@@ -84,7 +84,7 @@
           "hash": "EXA9DW63yrZbBVrsnM8RoQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "TWCAyhijYyE0Y8npH3T3vg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "JZoMH4XmTlheV84ID2fP7A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "DJ/6ty+hxEDsjI5fSmH9xw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -132,7 +132,7 @@
           "hash": "XjnskJQaTKNDmQErHReEwQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -144,7 +144,7 @@
           "hash": "QxaTcWqqmMlRjngQuXqMmg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -156,7 +156,7 @@
           "hash": "nAsOTyVUbp2a6jnKpevW3Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -168,7 +168,7 @@
           "hash": "38DCVeNqDvTQ+/6oTGKcaw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -180,7 +180,7 @@
           "hash": "iW2toczdgV8Tn6csWQPgnQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -204,7 +204,7 @@
           "hash": "7XoELUGW8Yuq3ijasxZmAw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -216,7 +216,7 @@
           "hash": "HV5oPo6Ven531j8XutoNug=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -228,7 +228,7 @@
           "hash": "eQ1v00iV3zkUWoY3063b3Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -240,7 +240,7 @@
           "hash": "f9lDtnW9F61mojxoldI9zQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -252,7 +252,7 @@
           "hash": "ffO7H5oFcM5TiFiZQj/Iog=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -264,7 +264,7 @@
           "hash": "Q41P9fjbnIf/nXQH6TQw5g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -312,7 +312,7 @@
           "hash": "JyCpZo194Mkq+GI23G1miA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -372,7 +372,7 @@
           "hash": "99EfoFPzj+9ZqgFNvKsVnQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -396,7 +396,7 @@
           "hash": "c7TyL+juCJ3JoEtRUuqHJg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -408,7 +408,31 @@
           "hash": "JUDYJGLMi6wMELlsqxSF5Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotFeather.Rect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotFeather.Rect.html",
+          "hash": "rGOPNjxclVzvG0v5XSGwIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotFeather.RectInt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotFeather.RectInt.html",
+          "hash": "Oi3fHfuG/9QVk6pY74MWvQ=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -456,7 +480,7 @@
           "hash": "x7nMRajHv2t1TU3n8WE8kA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -480,7 +504,7 @@
           "hash": "dteSudVDopYa0ANWWH0zgg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -504,7 +528,7 @@
           "hash": "MpumP2FaCvgW88IPxn4pCw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -549,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Tilemap.html",
-          "hash": "PUcXSbO3at5uf/wXsfeLTA=="
+          "hash": "SWvP4WnMVObPNMYa2uoH4Q=="
         }
       },
       "is_incremental": false,
@@ -564,7 +588,7 @@
           "hash": "Z5WaIr0UST8nrX6ZmbLqbQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -576,7 +600,7 @@
           "hash": "77AgfFoHUul+lYJAxxfWrg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -585,10 +609,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.Vector.html",
-          "hash": "DhK0FM715NkmASH1OInb1g=="
+          "hash": "s4lEJHl7bInQalc/4YQvBA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -597,10 +621,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.VectorInt.html",
-          "hash": "FYZt2GC3XBJkvE33jDPXAQ=="
+          "hash": "7il9xakbFMulOqBnY1E6og=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -612,7 +636,7 @@
           "hash": "Q9Pfs4FTsiJwPhB+kCDhaQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -624,7 +648,7 @@
           "hash": "skV/CxsX97HmgGs7vgavtg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -636,7 +660,7 @@
           "hash": "ANWeN8LK0RoQP1WsDgm5Ug=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -648,7 +672,7 @@
           "hash": "OtimtJlYG9eVu5aRjjd1Jw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -660,7 +684,7 @@
           "hash": "lgH0QSVGOWbljWruje6lmg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -672,7 +696,7 @@
           "hash": "7e4xuYIKaIKZNwV6Sr4u3Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -684,7 +708,7 @@
           "hash": "izHOQT512qPd6xoTzW6sXQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -696,7 +720,7 @@
           "hash": "1sOqrPNuOdIJnV1L4389cg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -708,7 +732,7 @@
           "hash": "wWdQnVUqJMwOfgBlXUyHYg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -717,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotFeather.html",
-          "hash": "lUpDJUxmh+G7QZSzpjc7Wg=="
+          "hash": "/TTvxGMZtu6PVxUkEAHpvQ=="
         }
       },
       "is_incremental": false,
@@ -732,7 +756,7 @@
           "hash": "kj1G2Kgb73z2nW+UvdBmhg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -741,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "pFAYtKYPebZVswQMzzkB2A=="
+          "hash": "L2xUYoaaRMxy2nt2ZfuCvA=="
         }
       },
       "is_incremental": false,
@@ -781,17 +805,10 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 60,
+          "total_file_count": 62,
           "skipped_file_count": 55
         },
         "ConceptualDocumentProcessor": {
@@ -799,6 +816,13 @@
           "incrementalPhase": "build",
           "total_file_count": 2,
           "skipped_file_count": 2
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         }
       }
     },

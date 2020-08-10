@@ -787,7 +787,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: AddRange
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 123
+    startLine: 124
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -826,7 +826,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Insert
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 139
+    startLine: 141
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -867,7 +867,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Draw
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 148
+    startLine: 151
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -908,7 +908,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: OnUpdate
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 194
+    startLine: 197
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -945,7 +945,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Destroy
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 202
+    startLine: 205
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -981,7 +981,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetEnumerator
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 207
+    startLine: 210
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1017,7 +1017,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IndexOf
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 213
+    startLine: 216
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1056,7 +1056,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: RemoveAt
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 218
+    startLine: 221
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1093,7 +1093,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Clear
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 228
+    startLine: 232
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1127,7 +1127,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Contains
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 238
+    startLine: 242
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1166,7 +1166,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: CopyTo
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 243
+    startLine: 247
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1208,7 +1208,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Remove
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 248
+    startLine: 252
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1247,7 +1247,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: IsReadOnly
     path: ../DotFeather/Graphics/Container.cs
-    startLine: 259
+    startLine: 264
   assemblies:
   - DotFeather
   namespace: DotFeather

@@ -1,0 +1,764 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotFeather.RectInt
+  commentId: T:DotFeather.RectInt
+  id: RectInt
+  parent: DotFeather
+  children:
+  - DotFeather.RectInt.#ctor(DotFeather.VectorInt,DotFeather.VectorInt)
+  - DotFeather.RectInt.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  - DotFeather.RectInt.Bottom
+  - DotFeather.RectInt.Height
+  - DotFeather.RectInt.Left
+  - DotFeather.RectInt.Location
+  - DotFeather.RectInt.Right
+  - DotFeather.RectInt.Size
+  - DotFeather.RectInt.Top
+  - DotFeather.RectInt.Width
+  langs:
+  - csharp
+  - vb
+  name: RectInt
+  nameWithType: RectInt
+  fullName: DotFeather.RectInt
+  type: Struct
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: RectInt
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 5
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nRectangle structure.\n"
+  example: []
+  syntax:
+    content: public struct RectInt
+    content.vb: Public Structure RectInt
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: DotFeather.RectInt.Location
+  commentId: P:DotFeather.RectInt.Location
+  id: Location
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: RectInt.Location
+  fullName: DotFeather.RectInt.Location
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Location
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 10
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set the location of this rect.\n"
+  example: []
+  syntax:
+    content: public VectorInt Location { get; set; }
+    parameters: []
+    return:
+      type: DotFeather.VectorInt
+    content.vb: Public Property Location As VectorInt
+  overload: DotFeather.RectInt.Location*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.RectInt.Size
+  commentId: P:DotFeather.RectInt.Size
+  id: Size
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: RectInt.Size
+  fullName: DotFeather.RectInt.Size
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Size
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 15
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set the size of this rect.\n"
+  example: []
+  syntax:
+    content: public VectorInt Size { get; set; }
+    parameters: []
+    return:
+      type: DotFeather.VectorInt
+    content.vb: Public Property Size As VectorInt
+  overload: DotFeather.RectInt.Size*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.RectInt.Left
+  commentId: P:DotFeather.RectInt.Left
+  id: Left
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: RectInt.Left
+  fullName: DotFeather.RectInt.Left
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Left
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 20
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set the left position of this rect.\n"
+  example: []
+  syntax:
+    content: public int Left { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Left As Integer
+  overload: DotFeather.RectInt.Left*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.RectInt.Top
+  commentId: P:DotFeather.RectInt.Top
+  id: Top
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: Top
+  nameWithType: RectInt.Top
+  fullName: DotFeather.RectInt.Top
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Top
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 29
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set the top position of this rect.\n"
+  example: []
+  syntax:
+    content: public int Top { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Top As Integer
+  overload: DotFeather.RectInt.Top*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.RectInt.Right
+  commentId: P:DotFeather.RectInt.Right
+  id: Right
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: RectInt.Right
+  fullName: DotFeather.RectInt.Right
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Right
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 38
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set the right position of this rect.\n"
+  example: []
+  syntax:
+    content: public int Right { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Right As Integer
+  overload: DotFeather.RectInt.Right*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.RectInt.Bottom
+  commentId: P:DotFeather.RectInt.Bottom
+  id: Bottom
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: Bottom
+  nameWithType: RectInt.Bottom
+  fullName: DotFeather.RectInt.Bottom
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Bottom
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 47
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set the bottom position of this rect.\n"
+  example: []
+  syntax:
+    content: public int Bottom { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Bottom As Integer
+  overload: DotFeather.RectInt.Bottom*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.RectInt.Width
+  commentId: P:DotFeather.RectInt.Width
+  id: Width
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: RectInt.Width
+  fullName: DotFeather.RectInt.Width
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Width
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 56
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set width of this rect.\n"
+  example: []
+  syntax:
+    content: public int Width { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Width As Integer
+  overload: DotFeather.RectInt.Width*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.RectInt.Height
+  commentId: P:DotFeather.RectInt.Height
+  id: Height
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: RectInt.Height
+  fullName: DotFeather.RectInt.Height
+  type: Property
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Height
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 65
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nGet or set height of this rect.\n"
+  example: []
+  syntax:
+    content: public int Height { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Height As Integer
+  overload: DotFeather.RectInt.Height*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: DotFeather.RectInt.#ctor(DotFeather.VectorInt,DotFeather.VectorInt)
+  commentId: M:DotFeather.RectInt.#ctor(DotFeather.VectorInt,DotFeather.VectorInt)
+  id: '#ctor(DotFeather.VectorInt,DotFeather.VectorInt)'
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: RectInt(VectorInt, VectorInt)
+  nameWithType: RectInt.RectInt(VectorInt, VectorInt)
+  fullName: DotFeather.RectInt.RectInt(DotFeather.VectorInt, DotFeather.VectorInt)
+  type: Constructor
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: .ctor
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 74
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.RectInt\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public RectInt(VectorInt location, VectorInt size)
+    parameters:
+    - id: location
+      type: DotFeather.VectorInt
+    - id: size
+      type: DotFeather.VectorInt
+    content.vb: Public Sub New(location As VectorInt, size As VectorInt)
+  overload: DotFeather.RectInt.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotFeather.RectInt.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:DotFeather.RectInt.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: DotFeather.RectInt
+  langs:
+  - csharp
+  - vb
+  name: RectInt(Int32, Int32, Int32, Int32)
+  nameWithType: RectInt.RectInt(Int32, Int32, Int32, Int32)
+  fullName: DotFeather.RectInt.RectInt(System.Int32, System.Int32, System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: DotFeather/Math/RectInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: .ctor
+    path: ../DotFeather/Math/RectInt.cs
+    startLine: 83
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nInitialize a new instance of <xref href=\"DotFeather.RectInt\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public RectInt(int left, int top, int width, int height)
+    parameters:
+    - id: left
+      type: System.Int32
+    - id: top
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(left As Integer, top As Integer, width As Integer, height As Integer)
+  overload: DotFeather.RectInt.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: DotFeather
+  commentId: N:DotFeather
+  name: DotFeather
+  nameWithType: DotFeather
+  fullName: DotFeather
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotFeather.RectInt.Location*
+  commentId: Overload:DotFeather.RectInt.Location
+  name: Location
+  nameWithType: RectInt.Location
+  fullName: DotFeather.RectInt.Location
+- uid: DotFeather.VectorInt
+  commentId: T:DotFeather.VectorInt
+  parent: DotFeather
+  name: VectorInt
+  nameWithType: VectorInt
+  fullName: DotFeather.VectorInt
+- uid: DotFeather.RectInt.Size*
+  commentId: Overload:DotFeather.RectInt.Size
+  name: Size
+  nameWithType: RectInt.Size
+  fullName: DotFeather.RectInt.Size
+- uid: DotFeather.RectInt.Left*
+  commentId: Overload:DotFeather.RectInt.Left
+  name: Left
+  nameWithType: RectInt.Left
+  fullName: DotFeather.RectInt.Left
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: DotFeather.RectInt.Top*
+  commentId: Overload:DotFeather.RectInt.Top
+  name: Top
+  nameWithType: RectInt.Top
+  fullName: DotFeather.RectInt.Top
+- uid: DotFeather.RectInt.Right*
+  commentId: Overload:DotFeather.RectInt.Right
+  name: Right
+  nameWithType: RectInt.Right
+  fullName: DotFeather.RectInt.Right
+- uid: DotFeather.RectInt.Bottom*
+  commentId: Overload:DotFeather.RectInt.Bottom
+  name: Bottom
+  nameWithType: RectInt.Bottom
+  fullName: DotFeather.RectInt.Bottom
+- uid: DotFeather.RectInt.Width*
+  commentId: Overload:DotFeather.RectInt.Width
+  name: Width
+  nameWithType: RectInt.Width
+  fullName: DotFeather.RectInt.Width
+- uid: DotFeather.RectInt.Height*
+  commentId: Overload:DotFeather.RectInt.Height
+  name: Height
+  nameWithType: RectInt.Height
+  fullName: DotFeather.RectInt.Height
+- uid: DotFeather.RectInt
+  commentId: T:DotFeather.RectInt
+  name: RectInt
+  nameWithType: RectInt
+  fullName: DotFeather.RectInt
+- uid: DotFeather.RectInt.#ctor*
+  commentId: Overload:DotFeather.RectInt.#ctor
+  name: RectInt
+  nameWithType: RectInt.RectInt
+  fullName: DotFeather.RectInt.RectInt

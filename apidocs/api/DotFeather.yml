@@ -38,6 +38,8 @@ items:
   - DotFeather.NineSliceSprite
   - DotFeather.OpenTKManagedHandleBase`1
   - DotFeather.RandomExtension
+  - DotFeather.Rect
+  - DotFeather.RectInt
   - DotFeather.Router
   - DotFeather.RoutingGameBase`1
   - DotFeather.Scene
@@ -392,6 +394,16 @@ references:
   name: DFMouse
   nameWithType: DFMouse
   fullName: DotFeather.DFMouse
+- uid: DotFeather.Rect
+  commentId: T:DotFeather.Rect
+  name: Rect
+  nameWithType: Rect
+  fullName: DotFeather.Rect
+- uid: DotFeather.RectInt
+  commentId: T:DotFeather.RectInt
+  name: RectInt
+  nameWithType: RectInt
+  fullName: DotFeather.RectInt
 - uid: DotFeather.Vector
   commentId: T:DotFeather.Vector
   parent: DotFeather

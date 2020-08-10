@@ -12,6 +12,8 @@ items:
   - DotFeather.VectorInt.Deconstruct(System.Int32@,System.Int32@)
   - DotFeather.VectorInt.Distance(DotFeather.VectorInt)
   - DotFeather.VectorInt.Distance(DotFeather.VectorInt,DotFeather.VectorInt)
+  - DotFeather.VectorInt.Dot(DotFeather.VectorInt)
+  - DotFeather.VectorInt.Dot(DotFeather.VectorInt,DotFeather.VectorInt)
   - DotFeather.VectorInt.Down
   - DotFeather.VectorInt.Equals(DotFeather.VectorInt)
   - DotFeather.VectorInt.Equals(System.Object)
@@ -732,6 +734,84 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: DotFeather.VectorInt.Dot(DotFeather.VectorInt,DotFeather.VectorInt)
+  commentId: M:DotFeather.VectorInt.Dot(DotFeather.VectorInt,DotFeather.VectorInt)
+  id: Dot(DotFeather.VectorInt,DotFeather.VectorInt)
+  parent: DotFeather.VectorInt
+  langs:
+  - csharp
+  - vb
+  name: Dot(VectorInt, VectorInt)
+  nameWithType: VectorInt.Dot(VectorInt, VectorInt)
+  fullName: DotFeather.VectorInt.Dot(DotFeather.VectorInt, DotFeather.VectorInt)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Math/VectorInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Dot
+    path: ../DotFeather/Math/VectorInt.cs
+    startLine: 76
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nCalculate a dot product.\n"
+  example: []
+  syntax:
+    content: public static int Dot(VectorInt v1, VectorInt v2)
+    parameters:
+    - id: v1
+      type: DotFeather.VectorInt
+    - id: v2
+      type: DotFeather.VectorInt
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Dot(v1 As VectorInt, v2 As VectorInt) As Integer
+  overload: DotFeather.VectorInt.Dot*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotFeather.VectorInt.Dot(DotFeather.VectorInt)
+  commentId: M:DotFeather.VectorInt.Dot(DotFeather.VectorInt)
+  id: Dot(DotFeather.VectorInt)
+  parent: DotFeather.VectorInt
+  langs:
+  - csharp
+  - vb
+  name: Dot(VectorInt)
+  nameWithType: VectorInt.Dot(VectorInt)
+  fullName: DotFeather.VectorInt.Dot(DotFeather.VectorInt)
+  type: Method
+  source:
+    remote:
+      path: DotFeather/Math/VectorInt.cs
+      branch: master
+      repo: https://github.com/xeltica/dotfeather
+    id: Dot
+    path: ../DotFeather/Math/VectorInt.cs
+    startLine: 81
+  assemblies:
+  - DotFeather
+  namespace: DotFeather
+  summary: "\nCalculate a dot product.\n"
+  example: []
+  syntax:
+    content: public int Dot(VectorInt v)
+    parameters:
+    - id: v
+      type: DotFeather.VectorInt
+    return:
+      type: System.Int32
+    content.vb: Public Function Dot(v As VectorInt) As Integer
+  overload: DotFeather.VectorInt.Dot*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: DotFeather.VectorInt.Equals(System.Object)
   commentId: M:DotFeather.VectorInt.Equals(System.Object)
   id: Equals(System.Object)
@@ -750,7 +830,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Equals
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 76
+    startLine: 86
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -790,7 +870,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Equals
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 84
+    startLine: 94
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -829,7 +909,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: GetHashCode
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 93
+    startLine: 103
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -866,7 +946,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 104
+    startLine: 114
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -900,7 +980,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Angle
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 110
+    startLine: 120
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -937,7 +1017,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Distance
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 115
+    startLine: 125
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -974,7 +1054,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Deconstruct
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 120
+    startLine: 130
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1014,7 +1094,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: ToString
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 125
+    startLine: 135
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1051,7 +1131,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Zero
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 130
+    startLine: 140
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1088,7 +1168,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: One
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 135
+    startLine: 145
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1125,7 +1205,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Left
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 140
+    startLine: 150
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1162,7 +1242,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Up
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 145
+    startLine: 155
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1199,7 +1279,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Right
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 150
+    startLine: 160
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1236,7 +1316,7 @@ items:
       repo: https://github.com/xeltica/dotfeather
     id: Down
     path: ../DotFeather/Math/VectorInt.cs
-    startLine: 155
+    startLine: 165
   assemblies:
   - DotFeather
   namespace: DotFeather
@@ -1611,6 +1691,11 @@ references:
   name: Distance
   nameWithType: VectorInt.Distance
   fullName: DotFeather.VectorInt.Distance
+- uid: DotFeather.VectorInt.Dot*
+  commentId: Overload:DotFeather.VectorInt.Dot
+  name: Dot
+  nameWithType: VectorInt.Dot
+  fullName: DotFeather.VectorInt.Dot
 - uid: System.ValueType.Equals(System.Object)
   commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType

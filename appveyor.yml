@@ -1,4 +1,4 @@
-version: 2.9.0.{build}
+version: 2.9.1.{build}
 image: Visual Studio 2019
 skip_non_tags: true
 
@@ -42,25 +42,15 @@ deploy:
     draft: false
     prerelease: false
     description: |
-      ## 2.9.0
-
-      ### 新機能
-      - `Vector.Dot` および `VectorInt.Dot` メソッドを追加し、2 ベクトルの内積を求められるように
-      - `Rect` および `RectInt` 構造体を追加
+      ## 2.9.1
 
       ### バグ修正
-      - タイルマップを破棄するとタイルのリソースも破棄される不具合を修正
-      - `Container` に同じインスタンスを多重に追加しようとすると、ハンドルされていない例外をスローする不具合を修正
+      - `Container.Clear` メソッドが子要素を破棄する不具合を修正
 
       ----
 
-      ### New Features
-      - Added `Vector.Dot` and `VectorInt.Dot` methods to calculate a dot product of two vectors
-      - Added `Rect` and `RectInt` structures
-
       ### Bug fixes
-      - Fixed a bug that tiles are also destroyed when the tilemap is destroyed
-      - Fixed a bug that throws an unhandled exception when trying to add the multiple references of the same instance to `Container`.
+      - Fixed a bug that the `Container.Clear` method destroys its children
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

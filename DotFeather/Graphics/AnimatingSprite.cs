@@ -87,9 +87,7 @@ namespace DotFeather
 		}
 
 		private int currentIndex;
-
 		private int loopCount;
-
 		private int count;
 	}
 }

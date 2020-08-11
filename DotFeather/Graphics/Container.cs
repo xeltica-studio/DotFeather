@@ -232,7 +232,6 @@ namespace DotFeather
 		/// </summary>
 		public void Clear()
 		{
-			Children.ForEach(child => child.Destroy());
 			countMap.Clear();
 			Children.Clear();
 		}

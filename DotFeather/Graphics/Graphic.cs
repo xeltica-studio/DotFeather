@@ -207,7 +207,6 @@ namespace DotFeather
 		/// </summary>
 		public Graphic Clear()
 		{
-			Drawables.ForEach(d => d.Destroy());
 			Drawables.Clear();
 			return this;
 		}

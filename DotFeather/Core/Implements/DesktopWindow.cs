@@ -25,8 +25,8 @@ namespace DotFeather.Internal
 
 		public VectorInt Size
 		{
-			get => (VectorInt)(new Vector(window.Size.Width, window.Size.Height) / (FollowsDpi ? Dpi : 1));
-			set => window.ClientSize = new Size((int)(value.X * (FollowsDpi ? Dpi : 1)), (int)(value.Y * (FollowsDpi ? Dpi : 1)));
+			get => (VectorInt)((Vector)ActualSize / (FollowsDpi ? Dpi : 1));
+			set => ActualSize = (VectorInt)((Vector)value * (FollowsDpi ? Dpi : 1));
 		}
 
 		public VectorInt ActualSize
@@ -142,7 +142,6 @@ namespace DotFeather.Internal
 			window.UpdateFrame += OnUpdateFrame;
 			window.Unload += OnUnload;
 
-
 			window.KeyPress += (s, e) =>
 			{
 				DFKeyboard.keychars.Enqueue(e.KeyChar);
@@ -243,14 +242,17 @@ namespace DotFeather.Internal
 			Time.Now += deltaTime;
 			Time.DeltaTime = deltaTime;
 
+
 			CalculateFps();
 			DFKeyboard.Update();
 			DFMouse.Update();
-
+			PreUpdate?.Invoke();
 			Update?.Invoke();
 
 			DotFeather.Root.OnUpdate();
 			CoroutineRunner.Update();
+
+			PostUpdate?.Invoke();
 
 			TotalFrame++;
 		}

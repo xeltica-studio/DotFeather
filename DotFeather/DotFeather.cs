@@ -8,6 +8,7 @@ namespace DotFeather
 	{
 		public static IWindow Window { get; }
 		public static IConsole Console { get; }
+		public static Container Root { get; } = new Container();
 
 		public static int Run()
 		{

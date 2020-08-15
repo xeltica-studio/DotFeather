@@ -10,7 +10,7 @@ namespace DotFeather
 		/// <summary>
 		/// この <see cref="ITile"/> をレンダリングします。
 		/// </summary>
-		void Draw(GameBase game, Tilemap map, Vector location, Color? color);
+		void Draw(Tilemap map, Vector location, Color? color);
 
 		/// <summary>
 		/// この <see cref="ITile"/> を破棄します。

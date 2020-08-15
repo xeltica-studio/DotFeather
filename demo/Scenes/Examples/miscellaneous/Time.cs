@@ -5,16 +5,16 @@ namespace DotFeather.Demo
 	[Description("ja", "時間情報を表示します")]
 	public class TimeExampleScene : Scene
 	{
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
-			game.Cls();
-			game.Print($"Time: {Time.Now}");
-			game.Print($"DeltaTime: {Time.DeltaTime}");
-			game.Print($"Fps: {Time.Fps}");
-			game.Print("Press [ESC] to return");
+			Cls();
+			Print($"Time: {Time.Now}");
+			Print($"DeltaTime: {Time.DeltaTime}");
+			Print($"Fps: {Time.Fps}");
+			Print("Press [ESC] to return");
 
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 	}
 }

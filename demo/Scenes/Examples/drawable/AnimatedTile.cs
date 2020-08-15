@@ -8,26 +8,26 @@ namespace DotFeather.Demo
 	[Description("ja", "アニメーションするタイルの例")]
 	public class AnimatedTileExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
 			qboxes = Texture2D.LoadAndSplitFrom("qbox.png", 8, 1, VectorInt.One * 16);
 			var tile = new Tile(qboxes, 0.125f);
 			var map = new Tilemap(Vector.One * 16);
 			Root.Add(map);
 			map[8, 12] = tile;
-			game.Print("Press ESC to return");
+			Print("Press ESC to return");
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		public override void OnDestroy(Router router)
+		public override void OnDestroy()
 		{
 			foreach (var qbox in qboxes!) qbox.Dispose();
-			base.OnDestroy(router);
+			base.OnDestroy();
 		}
 
 		Texture2D[]? qboxes;

@@ -9,26 +9,26 @@ namespace DotFeather.Demo
 	[Description("ja", "コルーチン内でタスクを待機します。")]
 	public class WorkWithTasks : Scene
 	{
-		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
-			game.Print("Start Coroutines");
-			game.StartCoroutine(Coroutine(game));
+			Print("Start Coroutines");
+			CoroutineRunner.Start(Coroutine());
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		IEnumerator Coroutine(GameBase game)
+		IEnumerator Coroutine()
 		{
-			game.Print("Waiting 5 seconds...");
+			Print("Waiting 5 seconds...");
 			yield return Task.Delay(5000);
-			game.Print("Complete! Next, waiting for the ValueTask instance.");
+			Print("Complete! Next, waiting for the ValueTask instance.");
 			yield return Work();
-			game.Print("Complete!");
-			game.Print("Press ESC to return");
+			Print("Complete!");
+			Print("Press ESC to return");
 		}
 
 		async ValueTask Work()

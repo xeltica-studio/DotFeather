@@ -11,26 +11,25 @@ namespace DotFeather.Demo
 	[Description("ja", "次のフレームに処理の実行を予約する例")]
 	public class NextFrameExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
-			game.Print("Via OnStart() method. Frame:" + game.TotalFrame);
-			game.NextFrame(() =>
+			Print("Via OnStart() method. Frame:" + Window.TotalFrame);
+			DotFeather.NextFrame(() =>
 			{
-				game.Print("Via NextFrame. Frame:" + game.TotalFrame);
-				game.NextFrame(() =>
+				Print("Via NextFrame. Frame:" + Window.TotalFrame);
+				DotFeather.NextFrame(() =>
 				{
-					game.Print("Via nested NextFrame. Frame:" + game.TotalFrame);
-					game.Print("Press ESC key to return");
-
+					Print("Via nested NextFrame. Frame:" + Window.TotalFrame);
+					Print("Press ESC key to return");
 				});
 			});
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
 			{
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 			}
 		}
 	}

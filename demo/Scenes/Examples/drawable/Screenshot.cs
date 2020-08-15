@@ -9,13 +9,13 @@ namespace DotFeather.Demo
 	[Description("ja", "スクリーンショットを撮影し利用する例")]
 	public class ScreenshotExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
 			Root.Add(g);
-			game.StartCoroutine(Main(game));
+			CoroutineRunner.Start(Main());
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (sprite != null)
 			{
@@ -23,28 +23,27 @@ namespace DotFeather.Demo
 				sprite.Scale += Vector.One * (DFMouse.Scroll.Y / 10);
 			}
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		public override void OnDestroy(Router router)
+		public override void OnDestroy()
 		{
 			tex.Dispose();
 		}
 
-		IEnumerator Main(GameBase game)
+		IEnumerator Main()
 		{
-			game.Print("Rendering...");
+			Print("Rendering...");
 			yield return new WaitForSeconds(1);
-			yield return DrawAll(game);
+			yield return DrawAll();
 
-			game.Print("Taking a screenshot");
+			Print("Taking a screenshot");
 			yield return null;
-			using var img = game.TakeScreenshot();
-			tex = Texture2D.LoadFrom(img);
+			tex = Window.TakeScreenshot();
 			g.Clear();
 			Root.Remove(g);
 
-			game.Print("Generate a sprite from the screenshot");
+			Print("Generate a sprite from the screenshot");
 			yield return new WaitForSeconds(1);
 
 			sprite = new Sprite(tex)
@@ -53,12 +52,12 @@ namespace DotFeather.Demo
 			};
 			Root.Add(sprite);
 
-			game.Print("Press ESC to return");
+			Print("Press ESC to return");
 		}
 
-		IEnumerator DrawAll(GameBase game)
+		IEnumerator DrawAll()
 		{
-			VectorInt Rnd() => Random.NextVectorInt(game.Width, game.Height);
+			VectorInt Rnd() => Random.NextVectorInt(Window.Width, Window.Height);
 
 			for (var i = 0; i < 120; i++)
 			{

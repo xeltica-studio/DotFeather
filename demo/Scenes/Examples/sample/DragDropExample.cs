@@ -5,31 +5,28 @@ namespace DotFeather.Demo
 	[Description("ja", "ドラッグアンドドロップの例")]
 	public class Sample4ExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
-			game.FileDrop += FileDrop!;
-			this.game = game;
-			game?.Print("Drop some files");
-			game?.Print("Press [ESC] to return");
+			Window.FileDropped += FileDrop!;
+			Print("Drop some files");
+			Print("Press [ESC] to return");
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		public override void OnDestroy(Router router)
+		public override void OnDestroy()
 		{
-			router.Game.FileDrop -= FileDrop!;
+			Window.FileDropped -= FileDrop!;
 		}
 
-		private void FileDrop(object sender, DFFileDroppedEventArgs e)
+		private void FileDrop(DFFileDroppedEventArgs e)
 		{
 			Title = e.Path;
-			game?.Print($"Dropped file is {e.Path}");
+			Print($"Dropped file is {e.Path}");
 		}
-
-		private GameBase? game;
 	}
 }

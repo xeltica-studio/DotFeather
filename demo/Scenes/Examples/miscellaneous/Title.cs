@@ -7,35 +7,35 @@ namespace DotFeather.Demo
 	[Description("ja", "タイトルを切り替えます")]
 	public class TitleExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
-			CoroutineRunner.Start(Main(game));
+			CoroutineRunner.Start(Main());
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		IEnumerator Main(GameBase game)
+		IEnumerator Main()
 		{
-			yield return SetTitle("Cupcake", game);
-			yield return SetTitle("Donut", game);
-			yield return SetTitle("Eclair", game);
-			yield return SetTitle("Froyo", game);
-			yield return SetTitle("Gingerbread", game);
-			yield return SetTitle("Honeycomb", game);
-			yield return SetTitle("Ice Cream Sandwich", game);
-			yield return SetTitle("Jelly Bean", game);
-			game.Print("Press [ESC] to return");
+			yield return SetTitle("Cupcake");
+			yield return SetTitle("Donut");
+			yield return SetTitle("Eclair");
+			yield return SetTitle("Froyo");
+			yield return SetTitle("Gingerbread");
+			yield return SetTitle("Honeycomb");
+			yield return SetTitle("Ice Cream Sandwich");
+			yield return SetTitle("Jelly Bean");
+			Print("Press [ESC] to return");
 		}
 
-		IEnumerator SetTitle(string title, GameBase game)
+		IEnumerator SetTitle(string title)
 		{
 			yield return new WaitForSeconds(1);
 			Title = title;
-			game.Print($"Changed title to '{title}'\n");
+			Print($"Changed title to '{title}'\n");
 		}
 	}
 }

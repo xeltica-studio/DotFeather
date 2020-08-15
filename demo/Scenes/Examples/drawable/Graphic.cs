@@ -7,16 +7,16 @@ namespace DotFeather.Demo
 	[Description("ja", "グラフィック面を作成し図形描画を行います")]
 	public class GraphicExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
-			game.Print("Press ESC to return");
+			Print("Press ESC to return");
 			Root.Add(g);
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
-			VectorInt Rnd() => Random.NextVectorInt(game.Width, game.Height);
-			time += e.DeltaTime;
+			VectorInt Rnd() => Random.NextVectorInt(Window.Width, Window.Height);
+			time += Time.DeltaTime;
 			if (time > 0.125f)
 			{
 				switch (Random.Next(5))
@@ -40,7 +40,7 @@ namespace DotFeather.Demo
 				time = 0;
 			}
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
 		private float time;

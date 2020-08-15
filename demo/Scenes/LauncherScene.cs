@@ -7,7 +7,7 @@ namespace DotFeather.Demo
 {
 	public class LauncherScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
 			BackgroundColor = Color.FromArgb(255, 32, 32, 32);
 			var titleText = new TextDrawable("DotFeather", 56, DFFontStyle.Normal, Color.White)
@@ -23,8 +23,6 @@ namespace DotFeather.Demo
 
 			Root.Add(sampleProgramText);
 
-			this.router = router;
-
 			Root.Add(listView);
 			listView.ItemSelected += ItemSelected;
 			listView.Location = new Vector(16, titleText.Location.Y + titleText.Height + 16);
@@ -32,11 +30,11 @@ namespace DotFeather.Demo
 			ChangeDirectory(DemoOS.CurrentDirectory);
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			Title = $"DotFeather Demo - {DemoOS.CurrentDirectory.Name.ToUpperInvariant()}";
-			listView.Width = game.Width - 32;
-			listView.Height = game.Height - 16 - (int)listView.Location.Y;
+			listView.Width = Window.Width - 32;
+			listView.Height = Window.Height - 16 - (int)listView.Location.Y;
 		}
 
 		public void ItemSelected(int i, ListViewItem item)
@@ -55,7 +53,7 @@ namespace DotFeather.Demo
 						ChangeDirectory(f);
 						break;
 					case SceneFile f:
-						router?.ChangeScene(f.Scene);
+						Router.ChangeScene(f.Scene);
 						break;
 				}
 			}
@@ -81,8 +79,6 @@ namespace DotFeather.Demo
 		}
 
 		private readonly ListView listView = new ListView();
-
-		private Router? router;
 
 		public class ListView : Container
 		{
@@ -135,9 +131,9 @@ namespace DotFeather.Demo
 				}
 			}
 
-			public override void OnUpdate(GameBase game)
+			public override void OnUpdate()
 			{
-				base.OnUpdate(game);
+				base.OnUpdate();
 
 				backdrop.Width = Width;
 				backdrop.Height = Height;

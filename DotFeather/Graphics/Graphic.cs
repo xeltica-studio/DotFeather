@@ -43,13 +43,13 @@ namespace DotFeather
 		/// </summary>
 		public Vector AbsoluteLocation => Location + (Parent?.AbsoluteLocation ?? Vector.Zero);
 
-		public void Draw(GameBase game, Vector location)
+		public void Draw(Vector location)
 		{
 			// Drawables を用いて毎フレーム描画を行う
 			for (var i = 0; i < Drawables.Count; i++)
 			{
 				Drawables[i].Scale = Scale;
-				Drawables[i].Draw(game, Location + location);
+				Drawables[i].Draw(Location + location);
 			}
 		}
 

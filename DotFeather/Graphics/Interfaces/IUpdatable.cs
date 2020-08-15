@@ -8,5 +8,5 @@ public interface IUpdatable
 	/// <summary>
 	/// Called when the frame has been updated.
 	/// </summary>
-	void OnUpdate(GameBase game);
+	void OnUpdate();
 }

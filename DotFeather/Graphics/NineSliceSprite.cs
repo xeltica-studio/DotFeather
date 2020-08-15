@@ -117,19 +117,19 @@ namespace DotFeather
 		/// <summary>
 		/// Draw the object.
 		/// </summary>
-		public void Draw(GameBase game, Vector location)
+		public void Draw(Vector location)
 		{
 			var xSpan = this.Width - WidthOf(0) - WidthOf(2);
 			var ySpan = this.Height - HeightOf(0) - HeightOf(6);
-			TextureDrawer.Draw(game, Textures[0], location + Location, Scale, Angle, Color);
-			TextureDrawer.Draw(game, Textures[1], location + Location + (Vector.Right * WidthOf(0)) * Scale, Scale, Angle, Color, xSpan);
-			TextureDrawer.Draw(game, Textures[2], location + Location + (Vector.Right * (WidthOf(0) + xSpan)) * Scale, Scale, Angle, Color);
-			TextureDrawer.Draw(game, Textures[3], location + Location + (new Vector(0, HeightOf(0))) * Scale, Scale, Angle, Color, null, ySpan);
-			TextureDrawer.Draw(game, Textures[4], location + Location + (new Vector(WidthOf(0), HeightOf(0))) * Scale, Scale, Angle, Color, xSpan, ySpan);
-			TextureDrawer.Draw(game, Textures[5], location + Location + (new Vector(WidthOf(0) + xSpan, HeightOf(0))) * Scale, Scale, Angle, Color, null, ySpan);
-			TextureDrawer.Draw(game, Textures[6], location + Location + (new Vector(0, HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, null);
-			TextureDrawer.Draw(game, Textures[7], location + Location + (new Vector(WidthOf(0), HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, xSpan);
-			TextureDrawer.Draw(game, Textures[8], location + Location + (new Vector(WidthOf(0) + xSpan, HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, null);
+			TextureDrawer.Draw(Textures[0], location + Location, Scale, Angle, Color);
+			TextureDrawer.Draw(Textures[1], location + Location + (Vector.Right * WidthOf(0)) * Scale, Scale, Angle, Color, xSpan);
+			TextureDrawer.Draw(Textures[2], location + Location + (Vector.Right * (WidthOf(0) + xSpan)) * Scale, Scale, Angle, Color);
+			TextureDrawer.Draw(Textures[3], location + Location + (new Vector(0, HeightOf(0))) * Scale, Scale, Angle, Color, null, ySpan);
+			TextureDrawer.Draw(Textures[4], location + Location + (new Vector(WidthOf(0), HeightOf(0))) * Scale, Scale, Angle, Color, xSpan, ySpan);
+			TextureDrawer.Draw(Textures[5], location + Location + (new Vector(WidthOf(0) + xSpan, HeightOf(0))) * Scale, Scale, Angle, Color, null, ySpan);
+			TextureDrawer.Draw(Textures[6], location + Location + (new Vector(0, HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, null);
+			TextureDrawer.Draw(Textures[7], location + Location + (new Vector(WidthOf(0), HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, xSpan);
+			TextureDrawer.Draw(Textures[8], location + Location + (new Vector(WidthOf(0) + xSpan, HeightOf(0) + ySpan)) * Scale, Scale, Angle, Color, null);
 		}
 
 		private int WidthOf(int index) => Textures[index].Size.X;

@@ -5,7 +5,7 @@ namespace DotFeather
 	/// <summary>
 	/// Keyboard pressed event argument.
 	/// </summary>
-	public class DFKeyPressEventArgs : EventArgs
+	public struct DFKeyPressEventArgs
 	{
 		public char KeyChar { get; }
 

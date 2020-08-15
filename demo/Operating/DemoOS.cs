@@ -40,7 +40,7 @@ namespace DotFeather.Demo
 				if (path.IndexOf('/') < 0) path = "/" + path;
 				var a = path.LastIndexOf('/');
 				var folderPath = path.Remove(a);
-				var fileName = path.Substring(a + 1);
+				var fileName = path[(a + 1)..];
 				var folder = CreateOrGetFolder(folderPath);
 
 				var file = new SceneFile(fileName, type, folder);

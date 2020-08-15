@@ -1,11 +1,12 @@
 using System;
+using OpenTK.Input;
 
 namespace DotFeather
 {
 	/// <summary>
 	/// Keyboard event argument.
 	/// </summary>
-	public class DFKeyEventArgs : EventArgs
+	public struct DFKeyEventArgs
 	{
 		/// <summary>
 		/// Get a pressed key.
@@ -27,7 +28,7 @@ namespace DotFeather
 		/// </summary>
 		public bool ShiftPressed { get; }
 
-		internal DFKeyEventArgs(OpenTK.Input.KeyboardKeyEventArgs e)
+		internal DFKeyEventArgs(KeyboardKeyEventArgs e)
 		{
 			Key = e.Key.ToDF();
 			AltPressed = e.Alt;

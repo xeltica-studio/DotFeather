@@ -10,20 +10,20 @@ namespace DotFeather
 		/// <summary>
 		/// Get or set a current position of this console.
 		/// </summary>
-		VectorInt ConsoleCursor { get; set; }
+		VectorInt Cursor { get; set; }
 
 		/// <summary>
 		/// Get or set font size to render this console.
 		/// </summary>
-		int ConsoleSize { get; set; }
+		int FontSize { get; set; }
 
 		/// <summary>
 		/// Get or set a font path to render this console.
 		/// </summary>
 		/// <value>Path to the font. If <c>null</c>, default font is used.</value>
-		string? ConsoleFontPath { get; set; }
+		string? FontPath { get; set; }
 
-		Color ForegroundColor { get; set; }
+		Color TextColor { get; set; }
 
 		/// <summary>
 		/// Print a provided object to the current position of this console.

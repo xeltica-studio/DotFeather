@@ -54,8 +54,8 @@ namespace DotFeather
 		/// </summary>
 		public VectorInt ConsoleCursor
 		{
-			get => DotFeather.Console.ConsoleCursor;
-			set => DotFeather.Console.ConsoleCursor = value;
+			get => DotFeather.Console.Cursor;
+			set => DotFeather.Console.Cursor = value;
 		}
 
 		/// <summary>

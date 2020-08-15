@@ -1,17 +1,23 @@
 using System;
+using System.Linq;
 
 namespace DotFeather
 {
 	/// <summary>
 	/// Arguments for file-dropped-event.
 	/// </summary>
-	public class DFFileDroppedEventArgs : EventArgs
+	public struct DFFileDroppedEventArgs
 	{
+		/// <summary>
+		/// Get pathes of dropped files.
+		/// </summary>
+		public string[] Pathes { get; set; }
+
 		/// <summary>
 		/// Get path of a dropped file.
 		/// </summary>
-		public string Path { get; set; }
+		public string Path => Pathes.First();
 
-		public DFFileDroppedEventArgs(string path) => Path = path;
+		public DFFileDroppedEventArgs(string[] pathes) => Pathes = pathes;
 	}
 }

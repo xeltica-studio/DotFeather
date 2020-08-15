@@ -488,6 +488,7 @@ namespace DotFeather
 
 		private void RunNextFrameTasks()
 		{
+			if (nextFrameQueue.Count == 0) return;
 			nextFrameQueue.ToList().ForEach(task =>
 			{
 				task();

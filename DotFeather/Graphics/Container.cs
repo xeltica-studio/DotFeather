@@ -149,7 +149,7 @@ namespace DotFeather
 		/// <summary>
 		/// 描画を開始します。
 		/// </summary>
-		public virtual void Draw(GameBase game, Vector location)
+		public virtual void Draw(Vector location)
 		{
 			if (IsTrimmable)
 			{
@@ -160,13 +160,13 @@ namespace DotFeather
 				if (left.X < 0) left.X = 0;
 				if (left.Y < 0) left.Y = 0;
 
-				if (left.X + size.X > game.ActualWidth)
-					size.X = left.X + size.X - game.ActualWidth;
+				if (left.X + size.X > DotFeather.Window.ActualWidth)
+					size.X = left.X + size.X - DotFeather.Window.ActualWidth;
 
-				if (left.Y + size.Y > game.ActualHeight)
-					size.Y = left.Y + size.Y - game.ActualHeight;
+				if (left.Y + size.Y > DotFeather.Window.ActualHeight)
+					size.Y = left.Y + size.Y - DotFeather.Window.ActualHeight;
 
-				left.Y = game.ActualHeight - left.Y - size.Y;
+				left.Y = DotFeather.Window.ActualHeight - left.Y - size.Y;
 
 				GL.Scissor(left.X, left.Y, size.X, size.Y);
 			}
@@ -181,7 +181,7 @@ namespace DotFeather
 				this[i].Scale *= Scale;
 				this[i].Location *= Scale;
 
-				this[i].Draw(game, Location + location);
+				this[i].Draw(Location + location);
 
 				// 戻す
 				this[i].Scale = baseScale;
@@ -190,14 +190,14 @@ namespace DotFeather
 
 			if (IsTrimmable)
 			{
-				GL.Scissor(0, 0, game.ActualWidth, game.ActualHeight);
+				GL.Scissor(0, 0, DotFeather.Window.ActualWidth, DotFeather.Window.ActualHeight);
 				GL.Disable(EnableCap.ScissorTest);
 			}
 		}
 
-		public virtual void OnUpdate(GameBase game)
+		public virtual void OnUpdate()
 		{
-			this.OfType<IUpdatable>().ToList().ForEach(u => u.OnUpdate(game));
+			this.OfType<IUpdatable>().ToList().ForEach(u => u.OnUpdate());
 		}
 
 		/// <summary>

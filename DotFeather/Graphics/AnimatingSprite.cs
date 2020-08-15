@@ -57,7 +57,7 @@ namespace DotFeather
 			IsAnimating = false;
 		}
 
-		public void OnUpdate(GameBase game)
+		public void OnUpdate()
 		{
 			Texture = Textures[currentIndex];
 

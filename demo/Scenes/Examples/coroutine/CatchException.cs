@@ -8,24 +8,24 @@ namespace DotFeather.Demo
 	[Description("ja", "コルーチンで発生した例外をキャッチします")]
 	public class CatchExceptionExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
-			game.StartCoroutine(Coroutine())
+			CoroutineRunner.Start(Coroutine())
 				.Error(e =>
 				{
 					// Catch an exception
 					// 例外をキャッチ
-					game.Print(e.GetType().Name);
-					game.Print(e.Message);
-					game.Print(e.StackTrace!);
-					game.Print("Press [ESC] to return");
+					Print(e.GetType().Name);
+					Print(e.Message);
+					Print(e.StackTrace!);
+					Print("Press [ESC] to return");
 				});
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
 		IEnumerator Coroutine()

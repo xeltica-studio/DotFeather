@@ -31,15 +31,15 @@ namespace DotFeather
 			Primitive = primitive;
 		}
 
-		public virtual void Draw(GameBase game, Vector location)
+		public virtual void Draw(Vector location)
 		{
 			if (Buffer == null)
 				throw new InvalidOperationException("Buffer is null(It seems be a bug.)");
 			if (Buffer.Length == 0)
 				return;
 
-			var hw = game.ActualWidth / 2;
-			var hh = game.ActualHeight / 2;
+			var hw = DotFeather.Window.ActualWidth / 2;
+			var hh = DotFeather.Window.ActualHeight / 2;
 
 			GL.Enable(EnableCap.Blend);
 			GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);

@@ -8,35 +8,37 @@ namespace DotFeather
 	/// </summary>
 	public class Router
 	{
-		/// <summary>
-		/// Get the parent game class.
-		/// </summary>
-		/// <value></value>
-		public GameBase Game { get; }
 
 		/// <summary>
 		/// Initialize a new instance of <see cref="Router"/> class with the specified parent game class.
 		/// </summary>
-		/// <param name="gameBase"></param>
-		public Router(GameBase gameBase)
+		public Router()
 		{
-			Game = gameBase;
+			DotFeather.Window.Update += Update;
+			DotFeather.Window.Render += Render;
 		}
 
 		/// <summary>
 		/// Please call when updating the game class.
 		/// </summary>
-		public void Update(DFEventArgs e)
+		private void Update()
 		{
-			if (current != null)
-			{
-				current.OnUpdate(this, Game, e);
-				if (current.BackgroundColor != null)
-					Game.BackgroundColor = current.BackgroundColor.Value;
+			if (current == null) return;
 
-				if (current.Title != null)
-					Game.Title = current.Title;
-			}
+			current.OnUpdate();
+			if (current.BackgroundColor != null)
+				DotFeather.Window.BackgroundColor = current.BackgroundColor.Value;
+
+			if (current.Title != null)
+				DotFeather.Window.Title = current.Title;
+		}
+
+		/// <summary>
+		/// Please call when rendering the game class.
+		/// </summary>
+		private void Render()
+		{
+			current?.OnRender();
 		}
 
 		/// <summary>
@@ -86,15 +88,15 @@ namespace DotFeather
 		{
 			if (current != null)
 			{
-				current.OnDestroy(this);
-				Game.Root.Remove(current.Root);
+				current.OnDestroy();
+				DotFeather.Root.Remove(current.Root);
 				current = null;
 			}
-			Game.Cls();
+			DotFeather.Console.Cls();
 			CoroutineRunner.Clear();
 			current = scene;
-			current.OnStart(this, Game, args ?? new Dictionary<string, object>());
-			Game.Root.Add(current.Root);
+			current.OnStart(args ?? new Dictionary<string, object>());
+			DotFeather.Root.Add(current.Root);
 		}
 
 		private Scene? current;

@@ -8,9 +8,8 @@ namespace DotFeather
 		/// <summary>
 		/// Start drawing on the screen.
 		/// </summary>
-		/// <param name="game">Game.</param>
 		/// <param name="location"></param>
-		void Draw(GameBase game, Vector location);
+		void Draw(Vector location);
 
 		/// <summary>
 		/// Get or set z order of this <see cref="IDrawable"/>. The higher the value, the object will be drawn in the foreground.

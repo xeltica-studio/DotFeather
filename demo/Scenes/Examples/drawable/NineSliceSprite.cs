@@ -8,23 +8,23 @@ namespace DotFeather.Demo
 	[Description("ja", "9スライススプライトを生成し、伸び縮みさせます")]
 	public class NineSliceSpriteExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
-			game.Print("Press ESC to return");
+			Print("Press ESC to return");
 			Root.Add(sprite);
 			Root.Add(nineslice);
 			Root.Add(t1);
 			Root.Add(t2);
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 
 			// sprites location
-			sprite.Location = new Vector(game.Width / 4 - 128, 64);
-			nineslice.Location = new Vector(game.Width / 4 + 32, 64);
+			sprite.Location = new Vector(Window.Width / 4 - 128, 64);
+			nineslice.Location = new Vector(Window.Width / 4 + 32, 64);
 
 			// text location
 			t1.Location = new Vector(sprite.Location.X, sprite.Location.Y - 24);

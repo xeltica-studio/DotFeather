@@ -8,31 +8,31 @@ namespace DotFeather.Demo
 	[Description("ja", "タイルマップを作成し動かします")]
 	public class TilemapExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
-			game.StartCoroutine(Main(game));
+			CoroutineRunner.Start(Main());
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		IEnumerator Main(GameBase game)
+		IEnumerator Main()
 		{
 			var tile = Tile.LoadFrom("./ichigo.png");
 			var map = new Tilemap(Vector.One * 16);
 			Root.Add(map);
-			game.Print("Initialized a tilemap.");
+			Print("Initialized a tilemap.");
 			yield return new WaitForSeconds(1);
 
-			game.Print("Put tiles randomly...");
+			Print("Put tiles randomly...");
 			for (var i = 0; i < 512; i++)
 			{
 				map.SetTile(
 					// Determine the random position
-					Random.NextVectorInt(game.Width / 16, game.Height / 16),
+					Random.NextVectorInt(Window.Width / 16, Window.Height / 16),
 					tile,
 					// Specify tint color with 50% probability
 					Random.Next(10) < 5 ? default(Color?) : Random.NextColor()
@@ -42,25 +42,25 @@ namespace DotFeather.Demo
 			}
 			yield return new WaitForSeconds(0.8f);
 
-			game.Print("Set map's location to (64, 64)");
+			Print("Set map's location to (64, 64)");
 			map.Location = Vector.One * 64;
 			yield return new WaitForSeconds(1);
 
-			game.Print("Set map's scale to (0.5, 0.5)");
+			Print("Set map's scale to (0.5, 0.5)");
 			map.Scale = Vector.One * 0.5f;
 			yield return new WaitForSeconds(1);
 
 			map.Clear();
-			map.Line(0, 0, game.Width / 16, game.Height / 16, tile);
-			game.Print("Drew line.");
+			map.Line(0, 0, Window.Width / 16, Window.Height / 16, tile);
+			Print("Drew line.");
 			yield return new WaitForSeconds(1);
 
 			map.Clear();
 			map.Fill(3, 6, 24, 16, tile);
-			game.Print("Filled.");
+			Print("Filled.");
 			yield return new WaitForSeconds(1);
 
-			game.Print("Press ESC to return");
+			Print("Press ESC to return");
 		}
 	}
 }

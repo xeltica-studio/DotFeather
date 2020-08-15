@@ -78,7 +78,7 @@ namespace DotFeather
 			set => SetTile(point, value);
 		}
 
-		public void Draw(GameBase game, Vector location)
+		public void Draw(Vector location)
 		{
 			// カリング
 			bool filter(KeyValuePair<(int, int), (ITile, Color?)> kv)
@@ -87,7 +87,7 @@ namespace DotFeather
 				var (left, top) = Location + location + new Vector(x, y) * TileSize * Scale;
 				var right = left + TileSize.X * Scale.X;
 				var bottom = top + TileSize.Y * Scale.Y;
-				return left <= game.ActualWidth && top <= game.ActualHeight && right >= 0 && bottom >= 0;
+				return left <= DotFeather.Window.ActualWidth && top <= DotFeather.Window.ActualHeight && right >= 0 && bottom >= 0;
 			}
 
 			foreach (var kv in tiles.Where(filter))
@@ -95,7 +95,7 @@ namespace DotFeather
 				var (x, y) = kv.Key;
 				var loc = new Vector(x, y) * TileSize * Scale;
 				CurrentDrawingPosition = new VectorInt(x, y);
-				kv.Value.tile.Draw(game, this, Location + location + loc, kv.Value.color);
+				kv.Value.tile.Draw(this, Location + location + loc, kv.Value.color);
 			}
 			CurrentDrawingPosition = null;
 		}

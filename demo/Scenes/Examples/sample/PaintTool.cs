@@ -8,16 +8,16 @@ namespace DotFeather.Demo
 	[Description("ja", "簡単なお絵かきツール")]
 	public class Sample2ExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
-			game.Print("PAINT EXAMPLE");
-			game.Print("Mouse Left: Paint");
-			game.Print("Mouse Right: Clear");
-			game.Print("Keyboard [ESC]: Quit");
+			Print("PAINT EXAMPLE");
+			Print("Mouse Left: Paint");
+			Print("Mouse Right: Clear");
+			Print("Keyboard [ESC]: Quit");
 			Root.Add(g);
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			var mouse = DFMouse.Position;
 			if (DFMouse.IsRightDown)
@@ -27,7 +27,7 @@ namespace DotFeather.Demo
 				g.Line(prevMouse, mouse, Color.White);
 
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 
 			prevMouse = mouse;
 		}

@@ -6,7 +6,7 @@ namespace DotFeather.Demo
 	[Description("en", "A debug scene for https://github.com/Xeltica/DotFeather/issues/105")]
 	public class Fix105DebugScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
 			var text = new TextDrawable("test", DFFont.GetDefault(18, DFFontStyle.Bold))
 			{
@@ -24,10 +24,10 @@ namespace DotFeather.Demo
 			Root.Add(text);
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
 	}

@@ -480,6 +480,14 @@ namespace DotFeather
 			});
 		}
 
+		internal static void OnKeyPress(DFKeyPressEventArgs e) => KeyPress?.Invoke(e);
+		internal static void OnKeyDown(DFKeyEventArgs e) => KeyDown?.Invoke(e);
+		internal static void OnKeyUp(DFKeyEventArgs e) => KeyUp?.Invoke(e);
+
+		public static event Action<DFKeyEventArgs>? KeyDown;
+		public static event Action<DFKeyPressEventArgs>? KeyPress;
+		public static event Action<DFKeyEventArgs>? KeyUp;
+
 		internal static readonly Queue<char> keychars = new Queue<char>();
 
 		private static readonly DFKeyCode[] allCodes = (Enum.GetValues(typeof(DFKeyCode)) as DFKeyCode[]).Distinct().ToArray();

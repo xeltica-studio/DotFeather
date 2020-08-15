@@ -5,19 +5,19 @@ namespace DotFeather.Demo
 	[Description("ja", "マウスのステートを表示します")]
 	public class MouseExampleScene : Scene
 	{
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
-			game.Cls();
-			game.Print("Mouse State");
-			game.Print($"Left: {Left()}");
-			game.Print($"Middle: {Middle()}");
-			game.Print($"Right: {Right()}");
-			game.Print($"Scroll: {DFMouse.Scroll}");
-			game.Print($"Pos: {DFMouse.Position}");
-			game.Print("Press [ESC] to return");
+			Cls();
+			Print("Mouse State");
+			Print($"Left: {Left()}");
+			Print($"Middle: {Middle()}");
+			Print($"Right: {Right()}");
+			Print($"Scroll: {DFMouse.Scroll}");
+			Print($"Pos: {DFMouse.Position}");
+			Print("Press [ESC] to return");
 
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
 		public string Left()

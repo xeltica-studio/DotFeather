@@ -59,16 +59,6 @@ namespace DotFeather
 			return LoadFrom(Image.Load(stream));
 		}
 
-		public static Texture2D LoadFrom(Image bmp)
-		{
-			using (bmp)
-			using (var img = bmp.CloneAs<Rgba32>())
-			{
-				var rgbaBytes = MemoryMarshal.AsBytes(img.GetPixelSpan()).ToArray();
-				return Create(rgbaBytes, img.Width, img.Height);
-			}
-		}
-
 		/// <summary>
 		/// Register a texture by a bitmap array.
 		/// </summary>
@@ -78,11 +68,11 @@ namespace DotFeather
 			var height = bmp.GetLength(1);
 			var arr = new byte[width * height * 4];
 			for (int y = 0, i = 0; y < height; y++)
-			for (var x = 0; x < width; x++)
-			{
-				for (var j = 0; j < 4; j++)
-					arr[i++] = bmp[x, y, j];
-			}
+				for (var x = 0; x < width; x++)
+				{
+					for (var j = 0; j < 4; j++)
+						arr[i++] = bmp[x, y, j];
+				}
 			return Create(arr, width, height);
 		}
 
@@ -109,13 +99,13 @@ namespace DotFeather
 			var arr = new byte[sizeX, sizeY, 4];
 
 			for (var y = 0; y < sizeY; y++)
-			for (var x = 0; x < sizeX; x++)
-			{
-				arr[x, y, 0] = color.R;
-				arr[x, y, 1] = color.G;
-				arr[x, y, 2] = color.B;
-				arr[x, y, 3] = color.A;
-			}
+				for (var x = 0; x < sizeX; x++)
+				{
+					arr[x, y, 0] = color.R;
+					arr[x, y, 1] = color.G;
+					arr[x, y, 2] = color.B;
+					arr[x, y, 3] = color.A;
+				}
 			return Create(arr);
 		}
 
@@ -175,6 +165,16 @@ namespace DotFeather
 		public static Texture2D[] LoadAndSplitFrom(Stream stream, int left, int top, int right, int bottom)
 		{
 			return LoadAndSplitFrom(Image.Load(stream), left, top, right, bottom);
+		}
+
+		internal static Texture2D LoadFrom(Image bmp)
+		{
+			using (bmp)
+			using (var img = bmp.CloneAs<Rgba32>())
+			{
+				var rgbaBytes = MemoryMarshal.AsBytes(img.GetPixelSpan()).ToArray();
+				return Create(rgbaBytes, img.Width, img.Height);
+			}
 		}
 
 		private static Texture2D[] LoadAndSplitFrom(Image bmp, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)

@@ -2,7 +2,7 @@ namespace DotFeather.Demo
 {
 	static class Entry
 	{
-		static void Main()
+		static int Main()
 		{
 			// この行は実際に使うときには無視してください
 			// Please ignore this line when you actually use.
@@ -10,12 +10,10 @@ namespace DotFeather.Demo
 
 			// ゲームを初期化して実行します
 			// Initialize and run the game
-			using var g = new RoutingGameBase<LauncherScene>(640, 480, followsDpi: true)
-			{
-				WindowMode = WindowMode.Resizable
-			};
+			DotFeather.Router.ChangeScene<LauncherScene>();
+			DotFeather.Window.Mode = WindowMode.Resizable;
 
-			g.Run();
+			return DotFeather.Run();
 		}
 	}
 }

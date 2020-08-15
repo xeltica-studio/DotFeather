@@ -11,7 +11,7 @@ namespace DotFeather.Demo
 	[Description("ja", @"10000スプライトを表示してFPSを計測します")]
 	public class BenchmarkScene : Scene
 	{
-		public override async void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override async void OnStart(Dictionary<string, object> args)
 		{
 			strawberry = Texture2D.LoadFrom("ichigo.png");
 			for (var i = 0; i < sprites.Length; i++)
@@ -19,7 +19,7 @@ namespace DotFeather.Demo
 				Title = $"Creating sprites {(int)((i + 1) / 200f)}%";
 				sprites[i] = new Sprite(strawberry)
 				{
-					Location = rnd.NextVector(game.Width - 16, game.Height - 16)
+					Location = rnd.NextVector(Window.Width - 16, Window.Height - 16)
 				};
 				if (i % 1000 == 0)
 					await Task.Delay(1);
@@ -30,16 +30,16 @@ namespace DotFeather.Demo
 			initialized = true;
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (!initialized) return;
 			Title = $"{Time.Fps} FPS";
 
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		public override void OnDestroy(Router router)
+		public override void OnDestroy()
 		{
 			strawberry.Dispose();
 		}

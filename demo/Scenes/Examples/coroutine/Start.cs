@@ -8,35 +8,35 @@ namespace DotFeather.Demo
 	[Description("ja", "複数のコルーチンを並行して実行します")]
 	public class StartExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
-			game.Print("Start Coroutines");
-			game.StartCoroutine(Coroutine(1, 0, game));
-			game.StartCoroutine(Coroutine(2, 1, game))
+			Print("Start Coroutines");
+			CoroutineRunner.Start(Coroutine(1, 0));
+			CoroutineRunner.Start(Coroutine(2, 1))
 				.Then(_ =>
 				{
-					game.Print("Press [ESC] to return");
+					Print("Press [ESC] to return");
 				});
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		IEnumerator Coroutine(int id, float delay, GameBase game)
+		IEnumerator Coroutine(int id, float delay)
 		{
-			game.Print($"Start Coroutine {id} after {delay}s!");
+			Print($"Start Coroutine {id} after {delay}s!");
 			yield return new WaitForSeconds(delay);
 			for (var i = 1; i <= 5; i++)
 			{
 				// Write count number
-				game.Print($"{id}: Count {i}");
+				Print($"{id}: Count {i}");
 				// Wait for 0.25s
 				yield return new WaitForSeconds(0.5f);
 			}
-			game.Print($"Coroutine {id} ended!");
+			Print($"Coroutine {id} ended!");
 		}
 	}
 

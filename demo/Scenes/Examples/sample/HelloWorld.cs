@@ -8,16 +8,16 @@ namespace DotFeather.Demo
 	[Description("ja", @"""Hello, world!""")]
 	public class Sample1ExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
-			game.Print("Hello, world!");
-			game.Print("Press [ESC] to exit");
+			Print("Hello, world!");
+			Print("Press [ESC] to exit");
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 	}
 
@@ -26,23 +26,23 @@ namespace DotFeather.Demo
 	[Description("ja", "相対座標と絶対座標を取得する例")]
 	public class Sample5ExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
 			container.Add(text);
 			text.Location = Vector.One * 32;
 			Root.Add(container);
-			game.Print("Press [ESC] to exit");
-			game.Print("Press [SHIFT] to pause animating");
+			Print("Press [ESC] to exit");
+			Print("Press [SHIFT] to pause animating");
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			text.Text = $@"Container: {(VectorInt)container.Location}
 Relative: {(VectorInt)text.Location}
 Absolute: {(VectorInt)text.AbsoluteLocation}";
 			if (!DFKeyboard.ShiftLeft)
 			{
-				container.Location += Vector.One * 32 * way * e.DeltaTime;
+				container.Location += Vector.One * 32 * way * Time.DeltaTime;
 				if (container.Location.X > 256)
 					way = -1;
 				if (container.Location.X < 0)
@@ -50,7 +50,7 @@ Absolute: {(VectorInt)text.AbsoluteLocation}";
 			}
 
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
 		private readonly Container container = new Container();

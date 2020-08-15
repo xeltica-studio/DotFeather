@@ -7,25 +7,25 @@ namespace DotFeather.Demo
 	[Description("ja", "画面上にテキストを描画します。")]
 	public class TextExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
-			game.Print("Press ESC to return");
+			Print("Press ESC to return");
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
-			time += e.DeltaTime;
+			time += Time.DeltaTime;
 			if (time > 0.125f)
 			{
 				var t = new TextDrawable($"Test {count++}", DFFont.GetDefault(Random.Next(8, 48)), Random.NextColor())
 				{
-					Location = Random.NextVector(game.Width, game.Height) / (int)game.Dpi
+					Location = Random.NextVector(Window.Width, Window.Height) / (int)Window.Dpi
 				};
 				Root.Add(t);
 				time = 0;
 			}
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
 		private float time;

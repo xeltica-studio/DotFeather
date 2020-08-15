@@ -16,16 +16,16 @@ namespace DotFeather.Demo
 			});
 		}
 
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
 			Title = "Delegate Example";
 			audio.Play(source);
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
-			game.Cls();
-			game.Print($@"Playing {freq}Hz Sine Wave
+			Cls();
+			Print($@"Playing {freq}Hz Sine Wave
 [←]:Down Frequency [→]: Up Frequency
 PRESS ESC TO RETURN");
 
@@ -39,10 +39,10 @@ PRESS ESC TO RETURN");
 			}
 
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		public override void OnDestroy(Router router)
+		public override void OnDestroy()
 		{
 			audio.Stop();
 			audio.Dispose();

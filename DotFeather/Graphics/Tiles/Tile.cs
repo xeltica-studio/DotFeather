@@ -61,9 +61,9 @@ namespace DotFeather
 		/// <summary>
 		///
 		/// </summary>
-		public void Draw(GameBase game, Tilemap map, Vector location, Color? color)
+		public void Draw(Tilemap map, Vector location, Color? color)
 		{
-			if (prevFrameCount != game.TotalFrame)
+			if (prevFrameCount != DotFeather.Window.TotalFrame)
 			{
 				if (timer > Interval)
 				{
@@ -76,8 +76,8 @@ namespace DotFeather
 				Texture = Animations[animationState];
 				timer += Time.DeltaTime;
 			}
-			prevFrameCount = game.TotalFrame;
-			TextureDrawer.Draw(game, Texture, location, map.Scale, map.Angle, color);
+			prevFrameCount = DotFeather.Window.TotalFrame;
+			TextureDrawer.Draw(Texture, location, map.Scale, map.Angle, color);
 		}
 
 		/// <summary>

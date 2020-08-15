@@ -36,7 +36,6 @@ namespace DotFeather
 			(X, Y) = (x, y);
 		}
 
-
 		public static VectorInt operator +(VectorInt v1, VectorInt v2) => new VectorInt(v1.X + v2.X, v1.Y + v2.Y);
 
 		public static VectorInt operator -(VectorInt v1, VectorInt v2) => new VectorInt(v1.X - v2.X, v1.Y - v2.Y);
@@ -56,6 +55,8 @@ namespace DotFeather
 		public static bool operator ==(VectorInt v1, VectorInt v2) => v1.X == v2.X && v1.Y == v2.Y;
 
 		public static bool operator !=(VectorInt v1, VectorInt v2) => v1.X != v2.X || v1.Y != v2.Y;
+
+		public static implicit operator VectorInt((int x, int y) v1) => new VectorInt(v1.x, v1.y);
 
 		/// <summary>
 		/// Get angle between 2 vectors.

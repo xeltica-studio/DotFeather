@@ -5,28 +5,28 @@ namespace DotFeather.Demo
 	[Description("ja", "ウィンドウのモードを切り替えます")]
 	public class WindowModeExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
-			game.Print("Window Mode");
-			game.Print("[1]: No Frame");
-			game.Print("[2]: Resizable");
-			game.Print("[3]: Fixed");
-			game.Print("[4]: Toggle FullScreen");
-			game.Print("[ESC]: Escape");
+			Print("Window Mode");
+			Print("[1]: No Frame");
+			Print("[2]: Resizable");
+			Print("[3]: Fixed");
+			Print("[4]: Toggle FullScreen");
+			Print("[ESC]: Escape");
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 			else if (DFKeyboard.Number1.IsKeyUp)
-				game.WindowMode = WindowMode.NoFrame;
+				Window.Mode = WindowMode.NoFrame;
 			else if (DFKeyboard.Number2.IsKeyUp)
-				game.WindowMode = WindowMode.Resizable;
+				Window.Mode = WindowMode.Resizable;
 			else if (DFKeyboard.Number3.IsKeyUp)
-				game.WindowMode = WindowMode.Fixed;
+				Window.Mode = WindowMode.Fixed;
 			else if (DFKeyboard.Number4.IsKeyUp)
-				game.IsFullScreen ^= true;
+				Window.IsFullScreen ^= true;
 		}
 	}
 }

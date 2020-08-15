@@ -5,24 +5,24 @@ namespace DotFeather.Demo
 	[Description("ja", "BGM を再生します")]
 	public class OggVorbisExampleScene : Scene
 	{
-		public override void OnStart(Router router, GameBase game, System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
 			Title = "Ogg Vorbis playback example";
-			game.Print("Ogg Vorbis playback Example");
+			DotFeather.Console.Print("Ogg Vorbis playback Example");
 			audio.Play(bgm);
 		}
 
-		public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
+		public override void OnUpdate()
 		{
-			game.ConsoleCursor += VectorInt.Up * 2;
-			game.Print($@"Location: {audio.Time / 1000f:0.000} / {audio.Length / 1000f:0.000}
+			ConsoleCursor += VectorInt.Up * 2;
+			Print($@"Location: {audio.Time / 1000f:0.000} / {audio.Length / 1000f:0.000}
 PRESS ESC TO RETURN");
 
 			if (DFKeyboard.Escape.IsKeyUp)
-				router.ChangeScene<LauncherScene>();
+				Router.ChangeScene<LauncherScene>();
 		}
 
-		public override void OnDestroy(Router router)
+		public override void OnDestroy()
 		{
 			audio.Stop();
 			audio.Dispose();

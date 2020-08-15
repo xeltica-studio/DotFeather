@@ -77,9 +77,9 @@ namespace DotFeather
 		/// <summary>
 		/// Draw the texture.
 		/// </summary>
-		public virtual void Draw(GameBase game, Vector location)
+		public virtual void Draw(Vector location)
 		{
-			TextureDrawer.Draw(game, Texture, location + Location, Scale, Angle, Color, Width, Height);
+			TextureDrawer.Draw(Texture, location + Location, Scale, Angle, Color, Width, Height);
 		}
 	}
 }

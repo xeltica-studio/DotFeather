@@ -242,14 +242,13 @@ namespace DotFeather.Internal
 			Time.Now += deltaTime;
 			Time.DeltaTime = deltaTime;
 
-
 			CalculateFps();
 			DFKeyboard.Update();
 			DFMouse.Update();
 			PreUpdate?.Invoke();
 			Update?.Invoke();
 
-			DotFeather.Root.OnUpdate();
+			DF.Root.Update();
 			CoroutineRunner.Update();
 
 			PostUpdate?.Invoke();

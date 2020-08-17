@@ -26,13 +26,13 @@ namespace DotFeather.Internal
 		{
 			renderer = new TextDrawable("", DFFont.GetDefault(), Color.White);
 			FontSize = 16;
-			DotFeather.Window.Render += () =>
+			DF.Window.Render += () =>
 			{
 				renderer.Color = TextColor;
 				renderer.Draw(Vector.Zero);
 			};
 
-			DotFeather.Window.PostUpdate += UpdateConsole;
+			DF.Window.PostUpdate += UpdateConsole;
 		}
 
 		public void Cls()
@@ -65,7 +65,7 @@ namespace DotFeather.Internal
 		private void UpdateConsole()
 		{
 			var f = renderer.Font;
-			var w = DotFeather.Window;
+			var w = DF.Window;
 			if (f.Size != FontSize * w.Dpi || prevFont != FontPath)
 				renderer.Font = FontPath == null ? DFFont.GetDefault(FontSize * w.Dpi) : new DFFont(FontPath, FontSize * w.Dpi);
 

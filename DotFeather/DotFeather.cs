@@ -6,7 +6,7 @@ using OpenTK;
 
 namespace DotFeather
 {
-	public static partial class DotFeather
+	public static class DF
 	{
 		public static IWindow Window { get; }
 		public static IConsole Console { get; }
@@ -36,7 +36,7 @@ namespace DotFeather
 			nextFrameQueue.Add(task);
 		}
 
-		static DotFeather()
+		static DF()
 		{
 			ctx = new DFSynchronizationContext();
 			SynchronizationContext.SetSynchronizationContext(ctx);

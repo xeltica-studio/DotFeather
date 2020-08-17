@@ -14,10 +14,10 @@ namespace DotFeather.Demo
 		public override void OnStart(Dictionary<string, object> args)
 		{
 			Print("Via OnStart() method. Frame:" + Window.TotalFrame);
-			DotFeather.NextFrame(() =>
+			DF.NextFrame(() =>
 			{
 				Print("Via NextFrame. Frame:" + Window.TotalFrame);
-				DotFeather.NextFrame(() =>
+				DF.NextFrame(() =>
 				{
 					Print("Via nested NextFrame. Frame:" + Window.TotalFrame);
 					Print("Press ESC key to return");

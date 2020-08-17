@@ -6,12 +6,12 @@ using TK = OpenTK;
 namespace DotFeather
 {
 	/// <summary>
-	/// <see cref="DotFeather"/> および <see cref="OpenTK"/> 間における類似した型の相互変換をする、拡張メソッドを追加します。
+	/// DotFeather および <see cref="OpenTK"/> 間における類似した型の相互変換をする、拡張メソッドを追加します。
 	/// </summary>
 	public static class TypesConverterExtension
 	{
 		/// <summary>
-		/// <see cref="DotFeather"/> 版に変換します。
+		/// DotFeather 版に変換します。
 		/// </summary>
 		public static DFKeyCode ToDF(this Key key) => (DFKeyCode)(int)key;
 

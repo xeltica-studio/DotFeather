@@ -32,30 +32,30 @@ namespace DotFeather
 		/// <summary>
 		/// Get a current window;
 		/// </summary>
-		public IWindow Window => DotFeather.Window;
+		public IWindow Window => DF.Window;
 
 		/// <summary>
 		/// Get a current router;
 		/// </summary>
-		public Router Router => DotFeather.Router;
+		public Router Router => DF.Router;
 
 		/// <summary>
-		/// Alias of <see cref="DotFeather.Console.Print"/>
+		/// Alias of <see cref="IConsole.Print"/>
 		/// </summary>
-		public void Print(object? obj) => DotFeather.Console.Print(obj);
+		public void Print(object? obj) => DF.Console.Print(obj);
 
 		/// <summary>
-		/// Alias of <see cref="DotFeather.Console.Cls"/>
+		/// Alias of <see cref="IConsole.Cls"/>
 		/// </summary>
-		public void Cls() => DotFeather.Console.Cls();
+		public void Cls() => DF.Console.Cls();
 
 		/// <summary>
-		/// Alias of <see cref="DotFeather.Console.ConsoleCursor"/>
+		/// Alias of <see cref="IConsole.Cursor"/>
 		/// </summary>
 		public VectorInt ConsoleCursor
 		{
-			get => DotFeather.Console.Cursor;
-			set => DotFeather.Console.Cursor = value;
+			get => DF.Console.Cursor;
+			set => DF.Console.Cursor = value;
 		}
 
 		/// <summary>

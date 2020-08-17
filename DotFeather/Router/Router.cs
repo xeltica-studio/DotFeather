@@ -14,8 +14,8 @@ namespace DotFeather
 		/// </summary>
 		public Router()
 		{
-			DotFeather.Window.Update += Update;
-			DotFeather.Window.Render += Render;
+			DF.Window.Update += Update;
+			DF.Window.Render += Render;
 		}
 
 		/// <summary>
@@ -27,10 +27,10 @@ namespace DotFeather
 
 			current.OnUpdate();
 			if (current.BackgroundColor != null)
-				DotFeather.Window.BackgroundColor = current.BackgroundColor.Value;
+				DF.Window.BackgroundColor = current.BackgroundColor.Value;
 
 			if (current.Title != null)
-				DotFeather.Window.Title = current.Title;
+				DF.Window.Title = current.Title;
 		}
 
 		/// <summary>
@@ -89,14 +89,14 @@ namespace DotFeather
 			if (current != null)
 			{
 				current.OnDestroy();
-				DotFeather.Root.Remove(current.Root);
+				DF.Root.Remove(current.Root);
 				current = null;
 			}
-			DotFeather.Console.Cls();
+			DF.Console.Cls();
 			CoroutineRunner.Clear();
 			current = scene;
 			current.OnStart(args ?? new Dictionary<string, object>());
-			DotFeather.Root.Add(current.Root);
+			DF.Root.Add(current.Root);
 		}
 
 		private Scene? current;

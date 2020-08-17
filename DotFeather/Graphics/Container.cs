@@ -160,13 +160,13 @@ namespace DotFeather
 				if (left.X < 0) left.X = 0;
 				if (left.Y < 0) left.Y = 0;
 
-				if (left.X + size.X > DotFeather.Window.ActualWidth)
-					size.X = left.X + size.X - DotFeather.Window.ActualWidth;
+				if (left.X + size.X > DF.Window.ActualWidth)
+					size.X = left.X + size.X - DF.Window.ActualWidth;
 
-				if (left.Y + size.Y > DotFeather.Window.ActualHeight)
-					size.Y = left.Y + size.Y - DotFeather.Window.ActualHeight;
+				if (left.Y + size.Y > DF.Window.ActualHeight)
+					size.Y = left.Y + size.Y - DF.Window.ActualHeight;
 
-				left.Y = DotFeather.Window.ActualHeight - left.Y - size.Y;
+				left.Y = DF.Window.ActualHeight - left.Y - size.Y;
 
 				GL.Scissor(left.X, left.Y, size.X, size.Y);
 			}
@@ -190,7 +190,7 @@ namespace DotFeather
 
 			if (IsTrimmable)
 			{
-				GL.Scissor(0, 0, DotFeather.Window.ActualWidth, DotFeather.Window.ActualHeight);
+				GL.Scissor(0, 0, DF.Window.ActualWidth, DF.Window.ActualHeight);
 				GL.Disable(EnableCap.ScissorTest);
 			}
 		}

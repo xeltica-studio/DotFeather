@@ -12,7 +12,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get a root container of this scene.
 		/// </summary>
-		public Container Root { get; } = new Container();
+		public Element Root { get; } = new Element("");
 
 		/// <summary>
 		/// Get a random generator.

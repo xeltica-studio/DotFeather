@@ -212,10 +212,11 @@ namespace DotFeather.Internal
 			GL.ClearColor(BackgroundColor);
 			GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-			var s = DotFeather.Root.Scale;
-			DotFeather.Root.Scale = s * (FollowsDpi ? Dpi : 1);
-			DotFeather.Root.Draw(Vector.Zero);
-			DotFeather.Root.Scale = s;
+			var transform = DF.Root.Transform;
+			var scale = transform.Scale;
+			transform.Scale = scale * (FollowsDpi ? Dpi : 1);
+			DF.Root.Update();
+			transform.Scale = scale;
 
 			Render?.Invoke();
 

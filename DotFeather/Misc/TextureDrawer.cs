@@ -25,11 +25,11 @@ namespace DotFeather
 			var right = left + w;
 			var bottom = top + h;
 
-			if (left > DotFeather.Window.ActualWidth || top > DotFeather.Window.ActualHeight || right < 0 || bottom < 0)
+			if (left > DF.Window.ActualWidth || top > DF.Window.ActualHeight || right < 0 || bottom < 0)
 				return;
 
-			var hw = DotFeather.Window.ActualWidth / 2;
-			var hh = DotFeather.Window.ActualHeight / 2;
+			var hw = DF.Window.ActualWidth / 2;
+			var hh = DF.Window.ActualHeight / 2;
 
 			var v0 = (left, top).ToViewportPoint(hw, hh);
 			var v1 = (right, top).ToViewportPoint(hw, hh);

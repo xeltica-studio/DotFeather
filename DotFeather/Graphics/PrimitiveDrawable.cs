@@ -38,8 +38,8 @@ namespace DotFeather
 			if (Buffer.Length == 0)
 				return;
 
-			var hw = DotFeather.Window.ActualWidth / 2;
-			var hh = DotFeather.Window.ActualHeight / 2;
+			var hw = DF.Window.ActualWidth / 2;
+			var hh = DF.Window.ActualHeight / 2;
 
 			GL.Enable(EnableCap.Blend);
 			GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);

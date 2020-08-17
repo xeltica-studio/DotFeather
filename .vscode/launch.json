@@ -9,7 +9,7 @@
 			"type": "coreclr",
 			"request": "launch",
 			"preLaunchTask": "build",
-			"program": "${workspaceFolder}/demo/bin/Debug/netcoreapp3.0/DotFeather.Demo.dll",
+			"program": "${workspaceFolder}/examples/Demo/bin/Debug/netcoreapp3.0/DotFeather.Demo.dll",
 			"args": [],
 			"cwd": "${workspaceFolder}/demo",
 			"console": "integratedTerminal",

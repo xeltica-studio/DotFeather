@@ -87,7 +87,7 @@ namespace DotFeather
 				var (left, top) = Location + location + new Vector(x, y) * TileSize * Scale;
 				var right = left + TileSize.X * Scale.X;
 				var bottom = top + TileSize.Y * Scale.Y;
-				return left <= DotFeather.Window.ActualWidth && top <= DotFeather.Window.ActualHeight && right >= 0 && bottom >= 0;
+				return left <= DF.Window.ActualWidth && top <= DF.Window.ActualHeight && right >= 0 && bottom >= 0;
 			}
 
 			foreach (var kv in tiles.Where(filter))

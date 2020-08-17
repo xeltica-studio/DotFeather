@@ -10,7 +10,7 @@ namespace DotFeather
 	{
 		public static IWindow Window { get; }
 		public static IConsole Console { get; }
-		public static Container Root { get; } = new Container();
+		public static Element Root { get; } = new Element("root");
 		public static Router Router { get; }
 
 		public static int Run()

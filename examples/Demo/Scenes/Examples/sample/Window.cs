@@ -11,12 +11,12 @@ namespace DotFeather.Demo
 	{
 		public override void OnStart(Dictionary<string, object> args)
 		{
-			DotFeather.Window.Mode = WindowMode.Resizable;
+			DF.Window.Mode = WindowMode.Resizable;
 		}
 
 		public override void OnUpdate()
 		{
-			var w = DotFeather.Window;
+			var w = DF.Window;
 
 			Cls();
 			Print($"Location {w.Location}");

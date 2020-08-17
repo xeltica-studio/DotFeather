@@ -8,7 +8,7 @@ namespace DotFeather.Demo
 		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
 			Title = "Ogg Vorbis playback example";
-			DotFeather.Console.Print("Ogg Vorbis playback Example");
+			DF.Console.Print("Ogg Vorbis playback Example");
 			audio.Play(bgm);
 		}
 

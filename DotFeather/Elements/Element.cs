@@ -51,6 +51,13 @@ namespace DotFeather
 			com.OnStart();
 		}
 
+		public Element With(params Component[] components)
+		{
+			foreach (var com in components)
+				AddComponent(com);
+			return this;
+		}
+
 		public Component? GetComponent<T>() where T : Component
 		{
 			return components.OfType<T>().FirstOrDefault();
@@ -75,7 +82,7 @@ namespace DotFeather
 			for (var i = 0; i < components.Count; i++)
 				components[i].OnUpdate();
 			for (var i = 0; i < children.Count; i++)
-				components[i].OnUpdate();
+				children[i].Update();
 		}
 
 		public void Render()

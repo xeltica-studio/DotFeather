@@ -15,6 +15,9 @@ namespace DotFeather
 		/// </summary>
 		public static void Draw(Texture2D texture, Vector location, Vector scale, float angle, Color? color = null, float? width = null, float? height = null)
 		{
+			location = location.ToDeviceCoord();
+			scale = scale.ToDeviceCoord();
+
 			var w = width ?? texture.Size.X;
 			var h = height ?? texture.Size.Y;
 

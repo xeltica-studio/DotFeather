@@ -3,7 +3,7 @@ namespace DotFeather
 	public class Transform : Component
 	{
 		public Vector Location { get; set; }
-		public Vector Scale { get; set; }
+		public Vector Scale { get; set; } = (1, 1);
 
 		public Vector GlobalLocation { get; private set; }
 		public Vector GlobalScale { get; private set; }

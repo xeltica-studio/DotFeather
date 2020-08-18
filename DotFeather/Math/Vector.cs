@@ -56,6 +56,8 @@ namespace DotFeather
 
 		public static explicit operator VectorInt(Vector v1) => new VectorInt((int)v1.X, (int)v1.Y);
 
+		public static implicit operator Vector((float x, float y) v1) => new Vector(v1.x, v1.y);
+
 		/// <summary>
 		/// Get angle between 2 vectors.
 		/// </summary>

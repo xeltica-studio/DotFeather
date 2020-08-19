@@ -13,7 +13,7 @@ namespace DotFeather
 		/// <summary>
 		/// テクスチャを描画します。
 		/// </summary>
-		public static void Draw(Texture2D texture, Vector location, Vector scale, float angle, Color? color = null, float? width = null, float? height = null)
+		public static void Draw(Texture2D texture, Vector location, Vector scale, Color? color = null, float? width = null, float? height = null)
 		{
 			location = location.ToDeviceCoord();
 			scale = scale.ToDeviceCoord();

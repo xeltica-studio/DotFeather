@@ -77,7 +77,7 @@ namespace DotFeather
 				timer += Time.DeltaTime;
 			}
 			prevFrameCount = DF.Window.TotalFrame;
-			TextureDrawer.Draw(Texture, location, map.Scale, map.Angle, color);
+			TextureDrawer.Draw(Texture, location, map.Scale, color);
 		}
 
 		/// <summary>

@@ -38,7 +38,7 @@ namespace DotFeather
 		public override void OnRender()
 		{
 			if (Transform == null) return;
-			TextureDrawer.Draw(Texture, Transform.GlobalLocation, Transform.GlobalScale, 0, TintColor, Width, Height);
+			TextureDrawer.Draw(Texture, Transform.GlobalLocation, Transform.GlobalScale, TintColor, Width, Height);
 		}
 
 		public override void OnDestroy()

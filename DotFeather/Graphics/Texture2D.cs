@@ -16,7 +16,7 @@ namespace DotFeather
 	/// <summary>
 	/// Wrap a handle of 2D texture.
 	/// </summary>
-	public struct Texture2D : IDisposable
+	public readonly struct Texture2D : IDisposable
 	{
 		/// <summary>
 		/// Get a OpenGL handle of this texture.

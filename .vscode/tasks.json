@@ -12,6 +12,16 @@
 			"problemMatcher": "$tsc"
 		},
 		{
+			"label": "build-example",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"${workspaceFolder}/examples/NineSlice/NineSlice.csproj"
+			],
+			"problemMatcher": "$tsc"
+		},
+		{
 			"label": "publish",
 			"command": "dotnet",
 			"type": "process",

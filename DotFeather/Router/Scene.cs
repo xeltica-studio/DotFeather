@@ -17,8 +17,9 @@ namespace DotFeather
 			get => root;
 			set
 			{
-				if (root != null) root.Destroy();
-				root = value;
+				if (root != null)
+					DF.Root.Remove(root);
+				DF.Root.Add(root = value);
 			}
 		}
 

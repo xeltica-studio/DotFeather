@@ -16,7 +16,7 @@ namespace DotFeather
 			set => Set(ref text, value);
 		}
 
-		public Color Color
+		public Color? Color
 		{
 			get => textColor;
 			set => Set(ref textColor, value);
@@ -44,9 +44,9 @@ namespace DotFeather
 
 		public TextRenderer(string text) : this(text, DFFont.GetDefault(16)) { }
 
-		public TextRenderer(string text, DFFont font) : this(text, font, Color.White) { }
+		public TextRenderer(string text, DFFont font) : this(text, font, null) { }
 
-		public TextRenderer(string text, DFFont font, Color color)
+		public TextRenderer(string text, DFFont font, Color? color)
 		{
 			this.text = text;
 			this.font = font;
@@ -83,7 +83,7 @@ namespace DotFeather
 
 		private Texture2D texture;
 		private string text = "";
-		private Color textColor;
+		private Color? textColor;
 		private Color? borderColor;
 		private int borderThickness;
 		private DFFont font;

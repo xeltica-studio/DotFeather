@@ -9,13 +9,13 @@ namespace DotFeather
 	/// <summary>
 	/// This is a graphic layer to draw shapes.
 	/// </summary>
-	public class Graphic : IContainable
+	public class Graphic
 	{
 		/// <summary>
 		/// Get the list of drawing objects that the current <see cref="Graphic"/> has.
 		/// </summary>
 		/// <value>A list of drawable objects</value>
-		public List<IDrawable> Drawables { get; } = new List<IDrawable>();
+		// public List<IDrawable> Drawables { get; } = new List<IDrawable>();
 
 		public Vector Location { get; set; }
 
@@ -27,30 +27,14 @@ namespace DotFeather
 
 		public string Name { get; set; } = "";
 
-		/// <summary>
-		/// Get a parent of this drawable.
-		/// </summary>
-		public IContainable? Parent { get; internal set; }
-
-		IContainable? IContainable.Parent
-		{
-			get => Parent;
-			set => Parent = value;
-		}
-
-		/// <summary>
-		/// Get absolute location.
-		/// </summary>
-		public Vector AbsoluteLocation => Location + (Parent?.AbsoluteLocation ?? Vector.Zero);
-
 		public void Draw(Vector location)
 		{
 			// Drawables を用いて毎フレーム描画を行う
-			for (var i = 0; i < Drawables.Count; i++)
-			{
-				Drawables[i].Scale = Scale;
-				Drawables[i].Draw(Location + location);
-			}
+			// for (var i = 0; i < Drawables.Count; i++)
+			// {
+			// 	Drawables[i].Scale = Scale;
+			// 	Drawables[i].Draw(Location + location);
+			// }
 		}
 
 		/// <summary>
@@ -58,7 +42,7 @@ namespace DotFeather
 		/// </summary>
 		public Graphic Pixel(VectorInt pos, Color color)
 		{
-			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Points, 0, null, pos));
+			// Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Points, 0, null, pos));
 			return this;
 		}
 
@@ -78,7 +62,7 @@ namespace DotFeather
 		/// <param name="color">color.</param>
 		public Graphic Line(VectorInt begin, VectorInt end, Color color)
 		{
-			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Lines, 0, null, begin, end));
+			// Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Lines, 0, null, begin, end));
 			return this;
 		}
 
@@ -120,11 +104,11 @@ namespace DotFeather
 		/// <param name="lineColor">Color of the outline.</param>
 		public Graphic Rect(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
-			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Quads, lineWidth, lineColor,
-				new Vector(x1, y1),
-				new Vector(x1, y2),
-				new Vector(x2, y2),
-				new Vector(x2, y1)));
+			// Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Quads, lineWidth, lineColor,
+			// 	new Vector(x1, y1),
+			// 	new Vector(x1, y2),
+			// 	new Vector(x2, y2),
+			// 	new Vector(x2, y1)));
 			return this;
 		}
 
@@ -133,10 +117,10 @@ namespace DotFeather
 		/// </summary>
 		public Graphic Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color, int lineWidth = 0, Color? lineColor = default)
 		{
-			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Triangles, lineWidth, lineColor,
-				new Vector(x1, y1),
-				new Vector(x2, y2),
-				new Vector(x3, y3)));
+			// Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Triangles, lineWidth, lineColor,
+			// 	new Vector(x1, y1),
+			// 	new Vector(x2, y2),
+			// 	new Vector(x3, y3)));
 			return this;
 		}
 
@@ -175,7 +159,7 @@ namespace DotFeather
 
 			}
 
-			Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Polygon, lineWidth, lineColor, list.ToArray()));
+			// Drawables.Add(new PrimitiveDrawable(color, PrimitiveType.Polygon, lineWidth, lineColor, list.ToArray()));
 			return this;
 		}
 
@@ -188,26 +172,11 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// Draw a texture.
-		/// </summary>
-		/// <param name="x">The first x value.</param>
-		/// <param name="y">The first y value.</param>
-		/// <param name="texture">A texture.</param>
-		public Graphic Texture(int x, int y, Texture2D texture)
-		{
-			Drawables.Add(new Sprite(texture)
-			{
-				Location = new Vector(x, y),
-			});
-			return this;
-		}
-
-		/// <summary>
 		/// Clear this graphic layer.
 		/// </summary>
 		public Graphic Clear()
 		{
-			Drawables.Clear();
+			// Drawables.Clear();
 			return this;
 		}
 

@@ -9,7 +9,7 @@ namespace DotFeather
 	/// <summary>
 	/// <see cref="Graphic"/> Internal drawable object.
 	/// </summary>
-	internal class PrimitiveDrawable : IDrawable
+	internal class PrimitiveDrawable
 	{
 		public Vector[] Buffer { get; }
 
@@ -33,8 +33,6 @@ namespace DotFeather
 
 		public virtual void Draw(Vector location)
 		{
-			if (Buffer == null)
-				throw new InvalidOperationException("Buffer is null(It seems be a bug.)");
 			if (Buffer.Length == 0)
 				return;
 

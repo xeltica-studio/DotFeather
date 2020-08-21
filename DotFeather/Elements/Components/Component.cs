@@ -11,6 +11,13 @@ namespace DotFeather
 			return (T?)(Element?.GetComponent<T>());
 		}
 
+		public T? AddComponent<T>(T com) where T : Component
+		{
+			if (Element == null) return null;
+			Element.AddComponent(com);
+			return com;
+		}
+
 		public virtual void OnStart() { }
 		public virtual void OnUpdate() { }
 		public virtual void OnDestroy() { }

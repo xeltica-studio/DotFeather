@@ -18,6 +18,22 @@ namespace DotFeather
 		}
 
 		/// <summary>
+		/// Register a scene by name.
+		/// </summary>
+		public void RegisterScene<T>(string name) where T : Scene
+		{
+			dic[name] = New<T>.Instance;
+		}
+
+		/// <summary>
+		/// Register a scene by name.
+		/// </summary>
+		public void RegisterScene(Type t, string name)
+		{
+			dic[name] = New<Scene>.InstanceOf(t);
+		}
+
+		/// <summary>
 		/// Change current scene by type.
 		/// </summary>
 		public void ChangeScene<T>(Dictionary<string, object>? args = null) where T : Scene
@@ -25,25 +41,17 @@ namespace DotFeather
 			ChangeScene(New<T>.Instance(), args);
 		}
 
-		[Obsolete("This method will be deleted after v3.1. Please don't use it.")]
-		public void RegisterScene<T>(string name) where T : Scene
-		{
-			dic[name] = New<T>.Instance;
-		}
-
-		[Obsolete("This method will be deleted after v3.1. Please don't use it.")]
-		public void RegisterScene(Type t, string name)
-		{
-			dic[name] = New<Scene>.InstanceOf(t);
-		}
-
-		[Obsolete("This method will be deleted after v3.1. Please use " + nameof(ChangeScene) + "<T>() instead.")]
+		/// <summary>
+		/// Change current scene by type.
+		/// </summary>
 		public void ChangeScene(Type t, Dictionary<string, object>? args = null)
 		{
 			ChangeScene(New<Scene>.InstanceOf(t)(), args);
 		}
 
-		[Obsolete("This method will be deleted after v3.1. Please use " + nameof(ChangeScene) + "<T>() instead.")]
+		/// <summary>
+		/// Change current scene by specifying path.
+		/// </summary>
 		public void ChangeScene(string path, Dictionary<string, object>? args = null)
 		{
 			if (!dic.ContainsKey(path))

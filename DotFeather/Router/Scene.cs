@@ -12,7 +12,15 @@ namespace DotFeather
 		/// <summary>
 		/// Get a root container of this scene.
 		/// </summary>
-		public Element Root { get; } = new Element("");
+		public Element Root
+		{
+			get => root;
+			set
+			{
+				if (root != null) root.Destroy();
+				root = value;
+			}
+		}
 
 		/// <summary>
 		/// Get a random generator.
@@ -85,5 +93,7 @@ namespace DotFeather
 		/// Called when the scene is disposed.
 		/// </summary>
 		public virtual void OnDestroy() { }
+
+		private Element root;
 	}
 }

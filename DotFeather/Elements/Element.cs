@@ -58,6 +58,13 @@ namespace DotFeather
 			return this;
 		}
 
+		public Element With(Vector location, Vector scale)
+		{
+			Transform.Location = location;
+			Transform.Scale = scale;
+			return this;
+		}
+
 		public Component? GetComponent<T>() where T : Component
 		{
 			return components.OfType<T>().FirstOrDefault();
@@ -73,6 +80,11 @@ namespace DotFeather
 			com.OnDestroy();
 			com.SetParent(null);
 			components.Remove(com);
+		}
+
+		public void ClearComponents()
+		{
+			components.ForEach(RemoveComponent);
 		}
 
 		public void Update()
@@ -136,24 +148,31 @@ namespace DotFeather
 			foreach (var item in items) Add(item);
 		}
 
+		public void Destroy()
+		{
+			Parent = null;
+			ClearComponents();
+			Clear();
+		}
+
 		public void Clear()
 		{
+			children.ForEach(c => c.Destroy());
 			children.Clear();
 		}
 
 		public bool Remove(Element item)
 		{
 			if (!children.Contains(item)) return false;
-			item.Parent = null;
+			item.Destroy();
 			return children.Remove(item);
 		}
 
 		public void RemoveAt(int index)
 		{
 			if (children.Count <= index) throw new ArgumentOutOfRangeException();
-			children[index].Parent = null;
+			children[index].Destroy();
 			children.RemoveAt(index);
-
 		}
 
 		public int IndexOf(Element item) => children.IndexOf(item);

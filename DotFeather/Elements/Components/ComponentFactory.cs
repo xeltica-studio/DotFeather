@@ -1,3 +1,4 @@
+using System.Drawing;
 using System.IO;
 
 namespace DotFeather
@@ -17,6 +18,41 @@ namespace DotFeather
 		public static Element Sprite(string name, Stream stream, params Element[] children)
 		{
 			return new Element(name, children).With(new SpriteRenderer(stream));
+		}
+
+		public static Element NineSliceSprite(string name, Texture9Sliced texture, params Element[] children)
+		{
+			return new Element(name, children).With(new NineSliceSpriteRenderer(texture));
+		}
+
+		public static Element NineSliceSprite(string name, string path, int left, int top, int right, int bottom, params Element[] children)
+		{
+			return new Element(name, children).With(new NineSliceSpriteRenderer(path, left, top, right, bottom));
+		}
+
+		public static Element NineSliceSprite(string name, Stream stream, int left, int top, int right, int bottom, params Element[] children)
+		{
+			return new Element(name, children).With(new NineSliceSpriteRenderer(stream, left, top, right, bottom));
+		}
+
+		public static Element Text(string name, params Element[] children)
+		{
+			return new Element(name, children).With(new TextRenderer());
+		}
+
+		public static Element Text(string name, string text, params Element[] children)
+		{
+			return new Element(name, children).With(new TextRenderer(text));
+		}
+
+		public static Element Text(string name, string text, DFFont font, params Element[] children)
+		{
+			return new Element(name, children).With(new TextRenderer(text, font));
+		}
+
+		public static Element Text(string name, string text, DFFont font, Color color, params Element[] children)
+		{
+			return new Element(name, children).With(new TextRenderer(text, font, color));
 		}
 	}
 }

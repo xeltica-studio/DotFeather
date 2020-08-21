@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Globalization;
+using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
@@ -10,22 +11,17 @@ namespace DotFeather.Demo
 		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
 			BackgroundColor = Color.FromArgb(255, 32, 32, 32);
-			var titleText = new TextDrawable("DotFeather", 56, DFFontStyle.Normal, Color.White)
-			{
-				Location = new Vector(24, 24),
-			};
-			Root.Add(titleText);
+			var titleText = Text("title", "DotFeather", DFFont.GetDefault(56)).With(new Vector(24, 24)).GetComponent<TextRenderer>()!;
+			Root.Add(titleText.Element!);
 
-			var sampleProgramText = new TextDrawable($"Demo {DemoOS.VERSION}", 24, DFFontStyle.Normal, Color.White)
-			{
-				Location = new Vector(24 + titleText.Width + 8, 50),
-			};
-
+			var sampleProgramText = Text("version", $"Demo {DemoOS.VERSION}", DFFont.GetDefault(24), Color.White).With(new Vector(24 + titleText.Width + 8, 50));
 			Root.Add(sampleProgramText);
 
-			Root.Add(listView);
+			var lv = new Element("listView").With(listView);
+
+			Root.Add(lv);
 			listView.ItemSelected += ItemSelected;
-			listView.Location = new Vector(16, titleText.Location.Y + titleText.Height + 16);
+			lv.Transform.Location = new Vector(16, titleText.Transform!.Location.Y + titleText.Height + 16);
 
 			ChangeDirectory(DemoOS.CurrentDirectory);
 		}
@@ -34,7 +30,7 @@ namespace DotFeather.Demo
 		{
 			Title = $"DotFeather Demo - {DemoOS.CurrentDirectory.Name.ToUpperInvariant()}";
 			listView.Width = Window.Width - 32;
-			listView.Height = Window.Height - 16 - (int)listView.Location.Y;
+			listView.Height = Window.Height - 16 - (int)listView.Transform!.Location.Y;
 		}
 
 		public void ItemSelected(int i, ListViewItem item)
@@ -80,9 +76,12 @@ namespace DotFeather.Demo
 
 		private readonly ListView listView = new ListView();
 
-		public class ListView : Container
+		public class ListView : Component
 		{
 			public ObservableCollection<ListViewItem> Items { get; } = new ObservableCollection<ListViewItem>();
+
+			public int Width { get; set; }
+			public int Height { get; set; }
 
 			public int ItemHeight
 			{
@@ -106,18 +105,21 @@ namespace DotFeather.Demo
 
 			public ListView(IEnumerable<ListViewItem>? items = null)
 			{
-				this.IsTrimmable = true;
 				if (items != null)
 					Items = new ObservableCollection<ListViewItem>(items);
 				Items.CollectionChanged += (_, __) => UpdateList();
+			}
+
+			public override void OnStart()
+			{
 				var t = Texture2D.CreateSolid(Color.FromArgb(24, 24, 24), 1, 1);
-				backdrop = new Sprite(t)
-				{
-					ZOrder = -4
-				};
-				inner = new Container();
-				Add(backdrop);
-				Add(inner);
+				var bd = Sprite("backdrop", t);
+				backdrop = bd.GetComponent<SpriteRenderer>()!;
+				inner = new Element("inner");
+				Element!.Add(bd);
+				Element!.Add(inner);
+				trimmer = new Trimmer(Width, Height);
+				AddComponent(trimmer);
 			}
 
 			public void BeginUpdating() => isUpdating = true;
@@ -133,18 +135,19 @@ namespace DotFeather.Demo
 
 			public override void OnUpdate()
 			{
+				if (Transform == null) return;
 				base.OnUpdate();
 
-				backdrop.Width = Width;
-				backdrop.Height = Height;
+				backdrop.Width = trimmer.Width = Width;
+				backdrop.Height = trimmer.Height = Height;
 
 				var (mx, my) = DFMouse.Position;
-				var (x, y) = Location;
+				var (x, y) = Transform.Location;
 
 				// 範囲外なら無視
-				if (!Intersects(DFMouse.Position, Location, Location + new Vector(Width, Height))) return;
+				if (!Intersects(DFMouse.Position, Transform.Location, Transform.Location + (Width, Height))) return;
 
-				var innerY = inner.Location.Y;
+				var innerY = inner.Transform.Location.Y;
 
 				if (landingPoint == null)
 				{
@@ -154,7 +157,7 @@ namespace DotFeather.Demo
 				if (DFMouse.IsLeftDown)
 				{
 					landingPoint = DFMouse.Position;
-					landingScrollY = (int)inner.Location.Y;
+					landingScrollY = (int)inner.Transform.Location.Y;
 				}
 				if (landingPoint is Vector v)
 				{
@@ -168,7 +171,7 @@ namespace DotFeather.Demo
 							for (var i = 0; i < Items.Count; i++)
 							{
 								var elHeight = ItemHeight + padding + 16;
-								var ely = y + i * elHeight + padding + inner.Location.Y;
+								var ely = y + i * elHeight + padding + inner.Transform.Location.Y;
 								if (ely <= my && my <= ely + elHeight)
 									ItemSelected?.Invoke(i, Items[i]);
 							}
@@ -182,7 +185,7 @@ namespace DotFeather.Demo
 				if (innerY > 0)
 					innerY = 0;
 
-				inner.Location = new Vector(inner.Location.X, innerY);
+				inner.Transform.Location = new Vector(inner.Transform.Location.X, innerY);
 			}
 
 			private bool Intersects(Vector point, Vector topLeft, Vector bottomRight)
@@ -203,21 +206,7 @@ namespace DotFeather.Demo
 				var y = padding;
 				foreach (var item in Items)
 				{
-					if (item.Icon is Texture2D ico)
-					{
-						var icon = new Sprite(ico)
-						{
-							Location = new Vector(padding, ItemHeight),
-							Width = ItemHeight,
-							Height = ItemHeight
-						};
-
-						inner.Add(icon);
-					}
-					var text = new TextDrawable(item.Text, ItemHeight, DFFontStyle.Normal, Color.White)
-					{
-						Location = new Vector(padding + ItemHeight + padding, y)
-					};
+					var text = Text(item.Text, item.Text, DFFont.GetDefault(ItemHeight), Color.White).With(new Vector(padding + ItemHeight + padding, y));
 					inner.Add(text);
 
 					y += ItemHeight;
@@ -225,10 +214,7 @@ namespace DotFeather.Demo
 					if (item.Description != null)
 					{
 						y += 4;
-						var desc = new TextDrawable(item.Description, 12, DFFontStyle.Normal, Color.LightGray)
-						{
-							Location = new Vector(text.Location.X, y)
-						};
+						var desc = Text("a desc of " + item.Text, item.Description, DFFont.GetDefault(12), Color.LightGray).With(new Vector(text.Transform.Location.X, y));
 						inner.Add(desc);
 						y += 12;
 					}
@@ -245,20 +231,21 @@ namespace DotFeather.Demo
 			private Vector? landingPoint;
 			private int landingScrollY;
 			private bool isUpdating = false;
-			private readonly Sprite backdrop;
+			private SpriteRenderer backdrop;
 			private readonly int itemHeight = 24;
-			private readonly Container inner;
+			private Element inner;
+			private Trimmer trimmer;
 
 			public delegate void ItemSelectedEventHandler(int index, ListViewItem item);
 		}
 
 		public class ListViewItem
 		{
-			public Texture2D? Icon { get; set; }
+			// public Texture2D? Icon { get; set; }
 			public string Text { get; set; }
 			public string? Description { get; set; }
 
-			public ListViewItem(string text, string? description = null, Texture2D? icon = null) => (Text, Icon, Description) = (text, icon, description);
+			public ListViewItem(string text, string? description = null) => (Text, Description) = (text, description);
 		}
 	}
 }

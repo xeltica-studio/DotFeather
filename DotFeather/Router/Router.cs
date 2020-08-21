@@ -71,8 +71,8 @@ namespace DotFeather
 			DF.Console.Cls();
 			CoroutineRunner.Clear();
 			current = scene;
-			current.OnStart(args ?? new Dictionary<string, object>());
 			DF.Root.Add(current.Root);
+			current.OnStart(args ?? new Dictionary<string, object>());
 		}
 
 		private void Update()

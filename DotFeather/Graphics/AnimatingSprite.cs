@@ -3,7 +3,7 @@ namespace DotFeather
 	/// <summary>
 	/// A sprite with texture-animation feature.
 	/// </summary>
-	public class AnimatingSprite : Sprite, IUpdatable
+	public class AnimatingSprite
 	{
 		/// <summary>
 		/// Get an array of textures to animate.
@@ -31,7 +31,7 @@ namespace DotFeather
 		/// <param name="textures">An array of texture.</param>
 		/// <param name="loopTimes">Loop times. If -1, animation loops infinity, and if 0, animation won't loop.</param>
 		/// <param name="duration">Animation time in frame.</param>
-		public AnimatingSprite(Texture2D[] textures, int loopTimes, int duration) : base(textures[0])
+		public AnimatingSprite(Texture2D[] textures, int loopTimes, int duration)
 		{
 			Textures = textures;
 			LoopTimes = loopTimes;
@@ -59,7 +59,7 @@ namespace DotFeather
 
 		public void OnUpdate()
 		{
-			Texture = Textures[currentIndex];
+			// Texture = Textures[currentIndex];
 
 			if (IsAnimating)
 			{

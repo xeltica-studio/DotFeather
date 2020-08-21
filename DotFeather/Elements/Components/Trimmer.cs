@@ -38,8 +38,8 @@ namespace DotFeather
 				throw new InvalidOperationException($"{nameof(Trimmer)} component can not be nested.");
 
 			GL.Enable(EnableCap.ScissorTest);
-			var left = (VectorInt)Transform.GlobalLocation;
-			var size = (VectorInt)(new Vector(Width, Height) * Transform.GlobalScale);
+			var left = (VectorInt)Transform.GlobalLocation.ToDeviceCoord();
+			var size = (VectorInt)(new Vector(Width, Height) * Transform.GlobalScale).ToDeviceCoord();
 
 			if (left.X < 0) left.X = 0;
 			if (left.Y < 0) left.Y = 0;

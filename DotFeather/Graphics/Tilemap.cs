@@ -9,7 +9,7 @@ namespace DotFeather
 	/// <summary>
 	/// A <see cref="IDrawable"/> object to render <see cref="ITile"/> objects in a lattice.
 	/// </summary>
-	public class Tilemap : IContainable
+	public class Tilemap
 	{
 		public int ZOrder { get; set; }
 
@@ -28,22 +28,6 @@ namespace DotFeather
 		/// </summary>
 		/// <value></value>
 		public VectorInt? CurrentDrawingPosition { get; private set; }
-
-		/// <summary>
-		/// Get a parent of this drawable.
-		/// </summary>
-		public IContainable? Parent { get; internal set; }
-
-		IContainable? IContainable.Parent
-		{
-			get => Parent;
-			set => Parent = value;
-		}
-
-		/// <summary>
-		/// Get absolute location.
-		/// </summary>
-		public Vector AbsoluteLocation => Location + (Parent?.AbsoluteLocation ?? Vector.Zero);
 
 		/// <summary>
 		/// Get or set the size in pixels per tile.

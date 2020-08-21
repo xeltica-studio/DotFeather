@@ -58,6 +58,12 @@ namespace DotFeather
 			return this;
 		}
 
+		public Element With(Vector location)
+		{
+			Transform.Location = location;
+			return this;
+		}
+
 		public Element With(Vector location, Vector scale)
 		{
 			Transform.Location = location;
@@ -65,12 +71,12 @@ namespace DotFeather
 			return this;
 		}
 
-		public Component? GetComponent<T>() where T : Component
+		public T? GetComponent<T>() where T : Component
 		{
 			return components.OfType<T>().FirstOrDefault();
 		}
 
-		public Component[] GetComponents<T>() where T : Component
+		public T[] GetComponents<T>() where T : Component
 		{
 			return components.OfType<T>().ToArray();
 		}
@@ -84,7 +90,7 @@ namespace DotFeather
 
 		public void ClearComponents()
 		{
-			components.ForEach(RemoveComponent);
+			components.ToList().ForEach(RemoveComponent);
 		}
 
 		public void Update()
@@ -157,7 +163,7 @@ namespace DotFeather
 
 		public void Clear()
 		{
-			children.ForEach(c => c.Destroy());
+			children.ToList().ForEach(c => c.Destroy());
 			children.Clear();
 		}
 

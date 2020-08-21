@@ -94,6 +94,6 @@ namespace DotFeather
 		/// </summary>
 		public virtual void OnDestroy() { }
 
-		private Element root;
+		private Element root = new Element("root");
 	}
 }

@@ -7,7 +7,7 @@ namespace DotFeather
 	{
 		public Texture2D Texture { get; set; }
 
-		public Color TintColor { get; set; } = Color.White;
+		public Color? TintColor { get; set; }
 
 		public VectorInt? Size
 		{

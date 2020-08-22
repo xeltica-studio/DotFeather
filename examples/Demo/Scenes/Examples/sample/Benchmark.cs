@@ -7,7 +7,7 @@ using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
-	[DemoScene("/sample4")]
+	[DemoScene("/sample5")]
 	[Description("en", @"Display 10k sprites and measure fps")]
 	[Description("ja", @"10000スプライトを表示してFPSを計測します")]
 	public class BenchmarkScene : Scene

@@ -5,7 +5,6 @@ namespace DotFeather
 {
 	public class SpriteRenderer : Component
 	{
-		public Texture2D Texture { get; set; }
 
 		public Color? TintColor { get; set; }
 
@@ -25,28 +24,20 @@ namespace DotFeather
 
 		public SpriteRenderer(string path)
 		{
-			Texture = Texture2D.LoadFrom(path);
-			hasGeneratedTexture = true;
 		}
 
 		public SpriteRenderer(Stream stream)
 		{
-			Texture = Texture2D.LoadFrom(stream);
-			hasGeneratedTexture = true;
 		}
 
 		public override void OnRender()
 		{
 			if (Transform == null) return;
-			TextureDrawer.Draw(Texture, Transform.GlobalLocation, Transform.GlobalScale, TintColor, Width, Height);
 		}
 
 		public override void OnDestroy()
 		{
-			if (hasGeneratedTexture)
-				Texture.Dispose();
 		}
 
-		private readonly bool hasGeneratedTexture;
 	}
 }

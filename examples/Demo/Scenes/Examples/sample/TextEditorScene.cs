@@ -25,7 +25,7 @@ namespace DotFeather.Demo
 
 		public override void OnUpdate()
 		{
-			editorView.Text = buf.ToString() + '_';
+			editorView!.Text = buf.ToString() + '_';
 			if ((DFKeyboard.BackSpace.ElapsedFrameCount == 1 || DFKeyboard.BackSpace.ElapsedTime > 0.5f && DFKeyboard.BackSpace.ElapsedFrameCount % 3 == 0) && buf.Length > 0) buf.Length--;
 			if (DFKeyboard.Enter.ElapsedFrameCount == 1 || DFKeyboard.Enter.ElapsedTime > 0.5f && DFKeyboard.Enter.ElapsedFrameCount % 3 == 0) buf.Append('\n');
 
@@ -36,6 +36,6 @@ namespace DotFeather.Demo
 		}
 
 		private readonly StringBuilder buf = new StringBuilder();
-		private TextRenderer editorView;
+		private TextRenderer? editorView;
 	}
 }

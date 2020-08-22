@@ -61,7 +61,7 @@ namespace DotFeather
 		/// <summary>
 		///
 		/// </summary>
-		public void Draw(Tilemap map, Vector location, Color? color)
+		public void Draw(ITilemap map, VectorInt tileLocation, Vector locationToDraw, Color? color)
 		{
 			if (prevFrameCount != DF.Window.TotalFrame)
 			{
@@ -77,7 +77,7 @@ namespace DotFeather
 				timer += Time.DeltaTime;
 			}
 			prevFrameCount = DF.Window.TotalFrame;
-			TextureDrawer.Draw(Texture, location, map.Scale, color);
+			TextureDrawer.Draw(Texture, locationToDraw, map.Scale, color);
 		}
 
 		/// <summary>

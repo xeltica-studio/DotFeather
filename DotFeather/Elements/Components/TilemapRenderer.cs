@@ -6,42 +6,38 @@ using static DotFeather.MiscUtility;
 
 namespace DotFeather
 {
-	/// <summary>
-	/// A <see cref="IDrawable"/> object to render <see cref="ITile"/> objects in a lattice.
-	/// </summary>
-	public class Tilemap
+	public class TilemapRenderer : Component, ITilemap
 	{
-		public int ZOrder { get; set; }
-
-		public string Name { get; set; } = "";
-
-		public Vector Location { get; set; }
-
-		public float Angle { get; set; }
-
-		public Vector Scale { get; set; } = Vector.One;
+		public VectorInt TileSize { get; set; }
 
 		public Color? DefaultColor { get; set; }
 
-		/// <summary>
-		/// Get current drawing position. <c>null</c> when not in ITile.Draw()
-		/// </summary>
-		/// <value></value>
-		public VectorInt? CurrentDrawingPosition { get; private set; }
+		Vector ITilemap.Location
+		{
+			get => Transform?.Location ?? Vector.Zero;
+			set
+			{
+				if (Transform != null)
+					Transform.Location = value;
+			}
+		}
 
-		/// <summary>
-		/// Get or set the size in pixels per tile.
-		/// </summary>
-		public Vector TileSize { get; set; }
+		Vector ITilemap.Scale
+		{
+			get => Transform?.Scale ?? (1, 1);
+			set
+			{
+				if (Transform != null)
+					Transform.Scale = value;
+			}
+		}
 
-		/// <summary>
-		/// Initialize a new instance of <see cref="Tilemap"/> class.
-		/// </summary>
-		/// <param name="tileSize">Size per the tile.</param>
-		public Tilemap(Vector tileSize)
+		float ITilemap.Angle { get; set; }
+
+		public TilemapRenderer(VectorInt tileSize)
 		{
 			TileSize = tileSize;
-			tiles = new Dictionary<(int, int), (ITile, Color?)>();
+			tiles = new Dictionary<VectorInt, (ITile tile, Color? color)>();
 		}
 
 		/// <summary>
@@ -56,49 +52,71 @@ namespace DotFeather
 		/// <summary>
 		/// Get or set the tile at the specified position.
 		/// </summary>
-		public ITile? this[Vector point]
+		public ITile? this[VectorInt point]
 		{
 			get => GetTileAt(point);
 			set => SetTile(point, value);
 		}
 
-		public void Draw(Vector location)
+		public override void OnRender()
 		{
+			if (Transform == null) return;
+			var gl = Transform.GlobalLocation;
+			var gs = Transform.GlobalScale;
+			// カリング
+			bool filter(KeyValuePair<VectorInt, (ITile, Color?)> kv)
+			{
+				var (left, top) = gl + kv.Key * TileSize * gs;
+				var right = left + TileSize.X * gs.X;
+				var bottom = top + TileSize.Y * gs.Y;
+				return left <= DF.Window.ActualWidth && top <= DF.Window.ActualHeight && right >= 0 && bottom >= 0;
+			}
+
+			foreach (var (tl, (tile, color)) in tiles.Where(filter))
+			{
+				var dest = gl + tl * TileSize * Transform.GlobalScale;
+				tile.Draw(this, tl, dest, color);
+			}
+		}
+
+		public override void OnDestroy()
+		{
+			Clear();
 		}
 
 		/// <summary>
 		///  Get the tile at the specified position.
 		/// </summary>
-		public ITile? GetTileAt(Vector point) => GetTileAt((int)point.X, (int)point.Y);
+		public ITile? GetTileAt(VectorInt point) => tiles.ContainsKey(point) ? tiles[point].tile : default;
 		/// <summary>
 		///  Get the tile at the specified position.
 		/// </summary>
-		public ITile? GetTileAt(int x, int y) => tiles.ContainsKey((x, y)) ? tiles[(x, y)].tile : default;
+		public ITile? GetTileAt(int x, int y) => GetTileAt((x, y));
 
 		/// <summary>
 		/// Get color of the tile at the specified position.
 		/// </summary>
-		public Color? GetTileColorAt(Vector point) => GetTileColorAt((int)point.X, (int)point.Y);
+		public Color? GetTileColorAt(VectorInt point) => tiles.ContainsKey(point) ? tiles[point].color : default;
 		/// <summary>
 		/// Get color of the tile at the specified position.
 		/// </summary>
-		public Color? GetTileColorAt(int x, int y) => tiles.ContainsKey((x, y)) ? tiles[(x, y)].color : default;
+		public Color? GetTileColorAt(int x, int y) => GetTileColorAt((x, y));
 
 		/// <summary>
 		/// Set the tile at the specified position.
 		/// </summary>
-		public void SetTile(Vector point, ITile? tile, Color? color = null) => SetTile((int)point.X, (int)point.Y, tile, color);
-
-		/// <summary>
-		/// Set the tile at the specified position.
-		/// </summary>
-		public void SetTile(int x, int y, ITile? tile, Color? color = null)
+		public void SetTile(VectorInt point, ITile? tile, Color? color = null)
 		{
 			if (tile == null)
-				tiles.Remove((x, y));
+				tiles.Remove(point);
 			else
-				tiles[(x, y)] = (tile, color ?? DefaultColor);
+				tiles[point] = (tile, color ?? DefaultColor);
 		}
+
+		/// <summary>
+		/// Set the tile at the specified position.
+		/// </summary>
+		public void SetTile(int x, int y, ITile? tile, Color? color = null) => SetTile((x, y), tile, color);
 
 		/// <summary>
 		/// Remove all tiles.
@@ -165,29 +183,21 @@ namespace DotFeather
 		/// <summary>
 		/// Draw a line with specified tile.
 		/// </summary>
-		public void Line(Vector start, Vector end, ITile tile)
-			=> Line((int)start.X, (int)start.Y, (int)end.X, (int)end.Y, tile);
+		public void Line(VectorInt start, VectorInt end, ITile tile)
+			=> Line(start.X, start.Y, end.X, end.Y, tile);
 
 		/// <summary>
 		/// Fill the specified rectangle with the specified tile.
 		/// </summary>
-		public void Fill(Vector position, Vector size, ITile tile)
-			=> Fill((int)position.X, (int)position.Y, (int)size.X, (int)size.Y, tile);
+		public void Fill(VectorInt position, VectorInt size, ITile tile)
+			=> Fill(position.X, position.Y, size.X, size.Y, tile);
 
-		/// <summary>
-		/// Destroy this <see cref="Tilemap"/>.
-		/// </summary>
-		public virtual void Destroy()
-		{
-			tiles.Clear();
-		}
-
-		public IEnumerator<(int x, int y, ITile tile, Color? color)> GetEnumerator()
+		public IEnumerator<(VectorInt loc, ITile tile, Color? color)> GetEnumerator()
 		{
 			foreach (var t in tiles)
-				yield return (t.Key.x, t.Key.y, t.Value.tile, t.Value.color);
+				yield return (t.Key, t.Value.tile, t.Value.color);
 		}
 
-		private readonly Dictionary<(int x, int y), (ITile tile, Color? color)> tiles;
+		private readonly Dictionary<VectorInt, (ITile tile, Color? color)> tiles;
 	}
 }

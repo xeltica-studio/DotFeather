@@ -10,6 +10,7 @@ namespace DotFeather
 		/// Get the time since the game started.
 		/// </summary>
 		public static float Now { get; internal set; }
+
 		/// <summary>
 		/// Get the delta time from the previous frame.
 		/// </summary>

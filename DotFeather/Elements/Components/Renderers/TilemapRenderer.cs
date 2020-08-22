@@ -8,8 +8,14 @@ namespace DotFeather
 {
 	public class TilemapRenderer : Component, ITilemap
 	{
+		/// <summary>
+		/// Get or set size of grid.
+		/// </summary>
 		public VectorInt TileSize { get; set; }
 
+		/// <summary>
+		/// Get or set default tint color of tiles.
+		/// </summary>
 		public Color? DefaultColor { get; set; }
 
 		Vector ITilemap.Location
@@ -88,6 +94,7 @@ namespace DotFeather
 		///  Get the tile at the specified position.
 		/// </summary>
 		public ITile? GetTileAt(VectorInt point) => tiles.ContainsKey(point) ? tiles[point].tile : default;
+
 		/// <summary>
 		///  Get the tile at the specified position.
 		/// </summary>

@@ -3,6 +3,9 @@ using System.IO;
 
 namespace DotFeather
 {
+	/// <summary>
+	/// Provide rendering a texture.
+	/// </summary>
 	public class SpriteRenderer : Component
 	{
 		public Texture2D? Texture { get; set; }

@@ -5,6 +5,12 @@ namespace DotFeather
 		public Vector Location { get; set; }
 		public Vector Scale { get; set; } = (1, 1);
 
+		public override bool IsEnabled
+		{
+			get => true;
+			set { /* Transform cannot be disabled */ }
+		}
+
 		public Vector GlobalLocation { get; private set; }
 		public Vector GlobalScale { get; private set; }
 

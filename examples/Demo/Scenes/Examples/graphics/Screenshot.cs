@@ -5,7 +5,7 @@ using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
-	[DemoScene("/drawable/screenshot")]
+	[DemoScene("/graphics/screenshot")]
 	[Description("en", "An example to take a screenshot and use it")]
 	[Description("ja", "スクリーンショットを撮影し利用する例")]
 	public class ScreenshotExampleScene : Scene

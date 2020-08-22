@@ -3,7 +3,7 @@ using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
-	[DemoScene("/drawable/text")]
+	[DemoScene("/graphics/text")]
 	[Description("en", "Draw text on the screen.")]
 	[Description("ja", "画面上にテキストを描画します。")]
 	public class TextExampleScene : Scene

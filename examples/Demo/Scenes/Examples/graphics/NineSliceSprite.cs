@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace DotFeather.Demo
 {
-	[DemoScene("/drawable/9 slice sprite")]
+	[DemoScene("/graphics/9 slice sprite")]
 	[Description("en", "Display and resize 9slice sprite")]
 	[Description("ja", "9スライススプライトを生成し、伸び縮みさせます")]
 	public class NineSliceSpriteExampleScene : Scene

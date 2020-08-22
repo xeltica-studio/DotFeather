@@ -4,7 +4,7 @@ using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
-	[DemoScene("/drawable/sprite")]
+	[DemoScene("/graphics/sprite")]
 	[Description("en", "Generate, display and move sprites")]
 	[Description("ja", "スプライトを生成して表示し、動かします")]
 	public class SpriteExampleScene : Scene

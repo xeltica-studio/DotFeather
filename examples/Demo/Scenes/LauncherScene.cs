@@ -12,12 +12,12 @@ namespace DotFeather.Demo
 		{
 			BackgroundColor = Color.FromArgb(255, 32, 32, 32);
 			var titleText = Text("title", "DotFeather", DFFont.GetDefault(56), Color.White)
-				.With((24, 24))
+				.Translate((24, 24))
 				.GetComponent<TextRenderer>()!;
 			Root.Add(titleText.Element!);
 
 			var sampleProgramText = Text("version", $"Demo {DemoOS.VERSION}", DFFont.GetDefault(24), Color.White)
-				.With((24 + titleText.Width + 8, 50));
+				.Translate((24 + titleText.Width + 8, 50));
 			Root.Add(sampleProgramText);
 
 			var lv = new Element("listView").With(listView);
@@ -209,7 +209,7 @@ namespace DotFeather.Demo
 				var y = padding;
 				foreach (var item in Items)
 				{
-					var text = Text(item.Text, item.Text, DFFont.GetDefault(ItemHeight), Color.White).With(new Vector(padding + ItemHeight + padding, y));
+					var text = Text(item.Text, item.Text, DFFont.GetDefault(ItemHeight), Color.White).Translate(new Vector(padding + ItemHeight + padding, y));
 					inner.Add(text);
 
 					y += ItemHeight;
@@ -217,7 +217,7 @@ namespace DotFeather.Demo
 					if (item.Description != null)
 					{
 						y += 4;
-						var desc = Text("a desc of " + item.Text, item.Description, DFFont.GetDefault(12), Color.LightGray).With(new Vector(text.Transform.Location.X, y));
+						var desc = Text("a desc of " + item.Text, item.Description, DFFont.GetDefault(12), Color.LightGray).Translate(new Vector(text.Transform.Location.X, y));
 						inner.Add(desc);
 						y += 12;
 					}

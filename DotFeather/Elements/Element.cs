@@ -65,13 +65,19 @@ namespace DotFeather
 			return this;
 		}
 
-		public Element With(Vector location)
+		public Element Translate(Vector location)
 		{
 			Transform.Location = location;
 			return this;
 		}
 
-		public Element With(Vector location, Vector scale)
+		public Element Scale(Vector scale)
+		{
+			Transform.Scale = scale;
+			return this;
+		}
+
+		public Element TranslateAndScale(Vector location, Vector scale)
 		{
 			Transform.Location = location;
 			Transform.Scale = scale;

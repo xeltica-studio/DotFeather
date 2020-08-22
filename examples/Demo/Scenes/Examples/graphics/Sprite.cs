@@ -24,6 +24,7 @@ namespace DotFeather.Demo
 		{
 			var sprite = Sprite("ichigo", "./ichigo.png");
 			var renderer = sprite.GetComponent<SpriteRenderer>();
+			if (renderer == null) yield break;
 			Print("Generated sprite.");
 			yield return new WaitForSeconds(0.5f);
 

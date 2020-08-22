@@ -27,11 +27,11 @@ namespace DotFeather.Demo
 
 		public override void OnUpdate()
 		{
-			sprite.Transform.Location = (DF.Window.Width / 4 - 128, 64);
-			nineslice.Transform.Location = (DF.Window.Width / 4 + 32, 64);
+			sprite!.Transform!.Location = (DF.Window.Width / 4 - 128, 64);
+			nineslice!.Transform!.Location = (DF.Window.Width / 4 + 32, 64);
 
-			t1.Transform.Location = (sprite.Transform.Location.X, sprite.Transform.Location.Y - 24);
-			t2.Transform.Location = (nineslice.Transform.Location.X, nineslice.Transform.Location.Y - 24);
+			t1!.Transform!.Location = (sprite.Transform.Location.X, sprite.Transform.Location.Y - 24);
+			t2!.Transform!.Location = (nineslice.Transform.Location.X, nineslice.Transform.Location.Y - 24);
 
 			sprite.Width = nineslice.Width = (int)(64 + 64 * Math.Abs(Math.Sin(Time.Now * 2)));
 			sprite.Height = nineslice.Height = (int)(64 + 256 * Math.Abs(Math.Sin(Time.Now * 2)));
@@ -40,10 +40,10 @@ namespace DotFeather.Demo
 				Router.ChangeScene<LauncherScene>();
 		}
 
-		private static SpriteRenderer sprite;
-		private static NineSliceSpriteRenderer nineslice;
-		private static TextRenderer t1;
-		private static TextRenderer t2;
+		private static SpriteRenderer? sprite;
+		private static NineSliceSpriteRenderer? nineslice;
+		private static TextRenderer? t1;
+		private static TextRenderer? t2;
 	}
 
 }

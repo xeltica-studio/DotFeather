@@ -133,8 +133,6 @@ namespace DotFeather
 			GL.Disable(EnableCap.Blend);
 		}
 
-		public virtual void Destroy() { }
-
 		private void Vertex(Color col, Vector vec)
 		{
 			GL.Color4(col);

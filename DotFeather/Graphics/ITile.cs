@@ -3,7 +3,7 @@ using System.Drawing;
 namespace DotFeather
 {
 	/// <summary>
-	/// <see cref="Tilemap"/> が扱えるタイルを定義します。
+	/// <see cref="TilemapRenderer"/> が扱えるタイルを定義します。
 	/// </summary>
 	public interface ITile
 	{

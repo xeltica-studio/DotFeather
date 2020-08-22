@@ -67,22 +67,35 @@ namespace DotFeather
 
 		public Element Translate(Vector location)
 		{
+			Transform.Location += location;
+			return this;
+		}
+
+		public Element TranslateTo(Vector location)
+		{
 			Transform.Location = location;
 			return this;
 		}
 
 		public Element Scale(Vector scale)
 		{
+			Transform.Scale *= scale;
+			return this;
+		}
+
+		public Element ScaleTo(Vector scale)
+		{
 			Transform.Scale = scale;
 			return this;
 		}
 
-		public Element TranslateAndScale(Vector location, Vector scale)
-		{
-			Transform.Location = location;
-			Transform.Scale = scale;
-			return this;
-		}
+		public Element Translate(float x, float y) => Translate((x, y));
+
+		public Element TranslateTo(float x, float y) => TranslateTo((x, y));
+
+		public Element Scale(float x, float y) => Scale((x, y));
+
+		public Element ScaleTo(float x, float y) => ScaleTo((x, y));
 
 		public T? GetComponent<T>() where T : Component
 		{

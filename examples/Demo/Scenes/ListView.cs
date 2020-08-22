@@ -142,7 +142,7 @@ namespace DotFeather.Demo
 				var y = padding;
 				foreach (var item in Items)
 				{
-					var text = Text(item.Text, item.Text, DFFont.GetDefault(ItemHeight), Color.White).Translate(new Vector(padding + ItemHeight + padding, y));
+					var text = Text(item.Text, item.Text, DFFont.GetDefault(ItemHeight), Color.White).TranslateTo(new Vector(padding + ItemHeight + padding, y));
 					inner?.Add(text);
 
 					y += ItemHeight;
@@ -150,7 +150,7 @@ namespace DotFeather.Demo
 					if (item.Description != null)
 					{
 						y += 4;
-						var desc = Text("a desc of " + item.Text, item.Description, DFFont.GetDefault(12), Color.LightGray).Translate(new Vector(text.Transform.Location.X, y));
+						var desc = Text("a desc of " + item.Text, item.Description, DFFont.GetDefault(12), Color.LightGray).TranslateTo(new Vector(text.Transform.Location.X, y));
 						inner?.Add(desc);
 						y += 12;
 					}

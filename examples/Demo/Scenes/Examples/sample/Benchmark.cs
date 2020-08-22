@@ -18,7 +18,7 @@ namespace DotFeather.Demo
 			for (var i = 0; i < 10000; i++)
 			{
 				Title = $"Creating sprites {(int)((i + 1) / 10000f)}%";
-				Root.Add(Sprite("sprite " + i, strawberry).Translate(rnd.NextVector(Window.Width - 16, Window.Height - 16)));
+				Root.Add(Sprite("sprite " + i, strawberry).TranslateTo(rnd.NextVector(Window.Width - 16, Window.Height - 16)));
 				if (i % 1000 == 0)
 					await Task.Delay(1);
 			}

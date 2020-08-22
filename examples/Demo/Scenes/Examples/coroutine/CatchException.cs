@@ -30,13 +30,9 @@ namespace DotFeather.Demo
 
 		IEnumerator Coroutine()
 		{
-			var a = 4;
-			var b = 0;
 			yield return new WaitForSeconds(0.5f);
 
-			// 0 除算エラーを引き起こす
-			// This causes a division-by-zero exception
-			_ = a / b;
+			throw new System.Exception("TEST");
 		}
 	}
 

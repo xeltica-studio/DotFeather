@@ -10,7 +10,7 @@ namespace DotFeather.Demo
 			qbox = Texture2D.LoadAndSplitFrom("qbox.png", 8, 1, (16, 16));
 			Root.Add(
 				new Element("Question Box")
-					.With((128, 128))
+					.Translate((128, 128))
 					.With(new SpriteRenderer())
 					.With(new SpriteAnimator(qbox, true, -1, 8))
 			);

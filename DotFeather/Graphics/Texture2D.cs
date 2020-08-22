@@ -141,32 +141,6 @@ namespace DotFeather
 			return LoadAndSplitFrom(Image.Load(stream), horizonalCount, verticalCount, sizeOfCroppedImage);
 		}
 
-		/// <summary>
-		/// 画像ファイルを読み込み、9スライス用に切り抜きます。
-		/// </summary>
-		/// <param name="path">File path.</param>
-		/// <param name="left">Pixel value from left.</param>
-		/// <param name="top">Pixel value from top.</param>
-		/// <param name="right">Pixel value from right.</param>
-		/// <param name="bottom">Pixel value from bottom.</param>
-		public static Texture2D[] LoadAndSplitFrom(string path, int left, int top, int right, int bottom)
-		{
-			return LoadAndSplitFrom(Image.Load(path), left, top, right, bottom);
-		}
-
-		/// <summary>
-		/// Load an image file and cut it out for 9 slices.
-		/// </summary>
-		/// /// <param name="stream">File stream.</param>
-		/// <param name="left">Pixel value from left.</param>
-		/// <param name="top">Pixel value from top.</param>
-		/// <param name="right">Pixel value from right.</param>
-		/// <param name="bottom">Pixel value from bottom.</param>
-		public static Texture2D[] LoadAndSplitFrom(Stream stream, int left, int top, int right, int bottom)
-		{
-			return LoadAndSplitFrom(Image.Load(stream), left, top, right, bottom);
-		}
-
 		internal static Texture2D LoadFrom(Image bmp)
 		{
 			using (bmp)
@@ -202,40 +176,6 @@ namespace DotFeather
 					}
 				}
 				return datas.ToArray();
-			}
-		}
-
-		private static Texture2D[] LoadAndSplitFrom(Image bitmap, int left, int top, int right, int bottom)
-		{
-			using (bitmap)
-			using (var img = bitmap.CloneAs<Rgba32>())
-			{
-				if (left > img.Width)
-					throw new ArgumentException(nameof(left));
-				if (top > img.Height)
-					throw new ArgumentException(nameof(top));
-				if (right > img.Width - left)
-					throw new ArgumentException(nameof(right));
-				if (bottom > img.Height - top)
-					throw new ArgumentException(nameof(bottom));
-				Rectangle[] atlas =
-				{
-					new Rectangle(0, 0, left, top),
-					new Rectangle(left, 0, img.Width - left - right, top),
-					new Rectangle(img.Width - right, 0, right, top),
-					new Rectangle(0, top, left, img.Height - top - bottom),
-					new Rectangle(left, top, img.Width - left - right, img.Height - top - bottom),
-					new Rectangle(img.Width - right, top, right, img.Height - top - bottom),
-					new Rectangle(0, img.Height - bottom, left, bottom),
-					new Rectangle(left, img.Height - bottom, img.Width - left - right, bottom),
-					new Rectangle(img.Width - right, img.Height - bottom, right, bottom),
-				};
-				return atlas.Select(a =>
-				{
-					using var locked = img.Clone(ctx => ctx.Crop(a));
-					var tex = LoadFrom(locked);
-					return tex;
-				}).ToArray();
 			}
 		}
 

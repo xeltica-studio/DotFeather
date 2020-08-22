@@ -29,8 +29,6 @@ namespace DotFeather.Demo
 			if (map.Transform == null) yield break;
 
 			Print("Initialized a tilemap.");
-			yield return new WaitForSeconds(1);
-
 			Print("Put tiles randomly...");
 			for (var i = 0; i < 512; i++)
 			{
@@ -41,7 +39,7 @@ namespace DotFeather.Demo
 					// Specify tint color with 50% probability
 					Random.Next(10) < 5 ? default(Color?) : Random.NextColor()
 				);
-				if (i % 4 == 0)
+				if (i % 8 == 0)
 					yield return null;
 			}
 			yield return new WaitForSeconds(0.8f);

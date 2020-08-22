@@ -16,7 +16,7 @@ namespace DotFeather.Demo
 		public override void OnUpdate()
 		{
 			time += Time.DeltaTime;
-			if (time > 0.125f)
+			if (time > 0.0625f)
 			{
 				Root.Add(
 					Text($"test{count}", $"Test {count}", DFFont.GetDefault(Random.Next(8, 48)), Random.NextColor())

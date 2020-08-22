@@ -212,10 +212,7 @@ namespace DotFeather.Internal
 			GL.ClearColor(BackgroundColor);
 			GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-			var s = DotFeather.Root.Scale;
-			DotFeather.Root.Scale = s * (FollowsDpi ? Dpi : 1);
-			DotFeather.Root.Draw(Vector.Zero);
-			DotFeather.Root.Scale = s;
+			DF.Root.Render();
 
 			Render?.Invoke();
 
@@ -242,14 +239,13 @@ namespace DotFeather.Internal
 			Time.Now += deltaTime;
 			Time.DeltaTime = deltaTime;
 
-
 			CalculateFps();
 			DFKeyboard.Update();
 			DFMouse.Update();
 			PreUpdate?.Invoke();
 			Update?.Invoke();
 
-			DotFeather.Root.OnUpdate();
+			DF.Root.Update();
 			CoroutineRunner.Update();
 
 			PostUpdate?.Invoke();

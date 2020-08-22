@@ -13,8 +13,11 @@ namespace DotFeather
 		/// <summary>
 		/// テクスチャを描画します。
 		/// </summary>
-		public static void Draw(Texture2D texture, Vector location, Vector scale, float angle, Color? color = null, float? width = null, float? height = null)
+		public static void Draw(Texture2D texture, Vector location, Vector scale, Color? color = null, float? width = null, float? height = null)
 		{
+			location = location.ToDeviceCoord();
+			scale = scale.ToDeviceCoord();
+
 			var w = width ?? texture.Size.X;
 			var h = height ?? texture.Size.Y;
 
@@ -25,11 +28,11 @@ namespace DotFeather
 			var right = left + w;
 			var bottom = top + h;
 
-			if (left > DotFeather.Window.ActualWidth || top > DotFeather.Window.ActualHeight || right < 0 || bottom < 0)
+			if (left > DF.Window.ActualWidth || top > DF.Window.ActualHeight || right < 0 || bottom < 0)
 				return;
 
-			var hw = DotFeather.Window.ActualWidth / 2;
-			var hh = DotFeather.Window.ActualHeight / 2;
+			var hw = DF.Window.ActualWidth / 2;
+			var hh = DF.Window.ActualHeight / 2;
 
 			var v0 = (left, top).ToViewportPoint(hw, hh);
 			var v1 = (right, top).ToViewportPoint(hw, hh);

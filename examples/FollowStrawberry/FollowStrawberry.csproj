@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DotFeather\DotFeather.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+	<OutputType>Exe</OutputType>
+	<Nullable>Enable</Nullable>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>

@@ -1,9 +1,8 @@
+using System;
+
 namespace DotFeather
 {
-	/// <summary>
-	/// A sprite with texture-animation feature.
-	/// </summary>
-	public class AnimatingSprite
+	public class SpriteAnimator : Component
 	{
 		/// <summary>
 		/// Get an array of textures to animate.
@@ -13,7 +12,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get whether this sprite is animating.
 		/// </summary>
-		public bool IsAnimating { get; private set; }
+		public bool IsPlaying { get; protected set; }
 
 		/// <summary>
 		/// Get and set loop times. If -1, animation loops infinity, and if 0, animation won't loop.
@@ -25,43 +24,47 @@ namespace DotFeather
 		/// </summary>
 		public int Duration { get; set; }
 
-		/// <summary>
-		/// Initialize a new instance of <see cref="AnimatingSprite"/> class by parameters.
-		/// </summary>
-		/// <param name="textures">An array of texture.</param>
-		/// <param name="loopTimes">Loop times. If -1, animation loops infinity, and if 0, animation won't loop.</param>
-		/// <param name="duration">Animation time in frame.</param>
-		public AnimatingSprite(Texture2D[] textures, int loopTimes, int duration)
+		public SpriteAnimator(Texture2D[] textures, bool autoPlay = true, int loopTimes = -1, int duration = 1)
 		{
 			Textures = textures;
 			LoopTimes = loopTimes;
 			Duration = duration;
+			if (autoPlay) Play();
 		}
 
 		/// <summary>
-		/// Start the animation.
+		/// Play the animation.
 		/// </summary>
-		public void StartAnimating()
+		public void Play()
 		{
 			currentIndex = 0;
 			count = 0;
 			loopCount = 0;
-			IsAnimating = true;
+			IsPlaying = true;
 		}
 
 		/// <summary>
 		/// Stop the animation.
 		/// </summary>
-		public void StopAnimating()
+		public void Stop()
 		{
-			IsAnimating = false;
+			IsPlaying = false;
 		}
 
-		public void OnUpdate()
+		public override void OnStart()
 		{
-			// Texture = Textures[currentIndex];
+			renderer = GetComponent<SpriteRenderer>();
+			if (renderer == null)
+				throw new InvalidOperationException($"{nameof(SpriteAnimator)} requires a {nameof(SpriteRenderer)} to animate sprites.");
+		}
 
-			if (IsAnimating)
+		public override void OnUpdate()
+		{
+			if (renderer == null) return;
+
+			renderer.Texture = Textures[currentIndex];
+
+			if (IsPlaying)
 			{
 				count++;
 				if (count >= Duration)
@@ -74,7 +77,7 @@ namespace DotFeather
 						loopCount++;
 						if (LoopTimes != -1 && loopCount > LoopTimes)
 						{
-							StopAnimating();
+							Stop();
 						}
 						else
 						{
@@ -86,6 +89,7 @@ namespace DotFeather
 			}
 		}
 
+		private SpriteRenderer? renderer;
 		private int currentIndex;
 		private int loopCount;
 		private int count;

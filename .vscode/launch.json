@@ -9,9 +9,20 @@
 			"type": "coreclr",
 			"request": "launch",
 			"preLaunchTask": "build",
-			"program": "${workspaceFolder}/demo/bin/Debug/netcoreapp3.0/DotFeather.Demo.dll",
+			"program": "${workspaceFolder}/examples/Demo/bin/Debug/netcoreapp3.1/DotFeather.Demo.dll",
 			"args": [],
-			"cwd": "${workspaceFolder}/demo",
+			"cwd": "${workspaceFolder}/examples/Demo",
+			"console": "integratedTerminal",
+			"stopAtEntry": false
+		},
+		{
+			"name": ".NET Core Launch (NineSlice)",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build-example",
+			"program": "${workspaceFolder}/examples/NineSlice/bin/Debug/netcoreapp3.1/NineSlice.dll",
+			"args": [],
+			"cwd": "${workspaceFolder}/examples/NineSlice",
 			"console": "integratedTerminal",
 			"stopAtEntry": false
 		},

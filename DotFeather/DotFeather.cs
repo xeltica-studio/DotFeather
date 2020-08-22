@@ -2,15 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using OpenTK;
 
 namespace DotFeather
 {
-	public static partial class DotFeather
+	public static class DF
 	{
 		public static IWindow Window { get; }
 		public static IConsole Console { get; }
-		public static Container Root { get; } = new Container();
+		public static Element Root { get; private set; } = new Element("root");
 		public static Router Router { get; }
 
 		public static int Run()
@@ -36,7 +35,7 @@ namespace DotFeather
 			nextFrameQueue.Add(task);
 		}
 
-		static DotFeather()
+		static DF()
 		{
 			ctx = new DFSynchronizationContext();
 			SynchronizationContext.SetSynchronizationContext(ctx);

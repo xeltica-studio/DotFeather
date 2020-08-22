@@ -8,37 +8,13 @@ namespace DotFeather
 	/// </summary>
 	public class Router
 	{
-
 		/// <summary>
 		/// Initialize a new instance of <see cref="Router"/> class with the specified parent game class.
 		/// </summary>
 		public Router()
 		{
-			DotFeather.Window.Update += Update;
-			DotFeather.Window.Render += Render;
-		}
-
-		/// <summary>
-		/// Please call when updating the game class.
-		/// </summary>
-		private void Update()
-		{
-			if (current == null) return;
-
-			current.OnUpdate();
-			if (current.BackgroundColor != null)
-				DotFeather.Window.BackgroundColor = current.BackgroundColor.Value;
-
-			if (current.Title != null)
-				DotFeather.Window.Title = current.Title;
-		}
-
-		/// <summary>
-		/// Please call when rendering the game class.
-		/// </summary>
-		private void Render()
-		{
-			current?.OnRender();
+			DF.Window.Update += Update;
+			DF.Window.Render += Render;
 		}
 
 		/// <summary>
@@ -89,14 +65,31 @@ namespace DotFeather
 			if (current != null)
 			{
 				current.OnDestroy();
-				DotFeather.Root.Remove(current.Root);
+				DF.Root.Remove(current.Root);
 				current = null;
 			}
-			DotFeather.Console.Cls();
+			DF.Console.Cls();
 			CoroutineRunner.Clear();
 			current = scene;
+			DF.Root.Add(current.Root);
 			current.OnStart(args ?? new Dictionary<string, object>());
-			DotFeather.Root.Add(current.Root);
+		}
+
+		private void Update()
+		{
+			if (current == null) return;
+
+			current.OnUpdate();
+			if (current.BackgroundColor != null)
+				DF.Window.BackgroundColor = current.BackgroundColor.Value;
+
+			if (current.Title != null)
+				DF.Window.Title = current.Title;
+		}
+
+		private void Render()
+		{
+			current?.OnRender();
 		}
 
 		private Scene? current;

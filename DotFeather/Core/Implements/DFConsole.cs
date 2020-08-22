@@ -24,15 +24,15 @@ namespace DotFeather.Internal
 
 		internal DFConsole()
 		{
-			renderer = new TextDrawable("", DFFont.GetDefault(), Color.White);
+			element = new Element("console").With(renderer = new TextRenderer("", DFFont.GetDefault(), Color.White));
 			FontSize = 16;
-			DotFeather.Window.Render += () =>
+			DF.Window.Render += () =>
 			{
 				renderer.Color = TextColor;
-				renderer.Draw(Vector.Zero);
+				element.Render();
 			};
 
-			DotFeather.Window.PostUpdate += UpdateConsole;
+			DF.Window.PostUpdate += UpdateConsole;
 		}
 
 		public void Cls()
@@ -65,9 +65,9 @@ namespace DotFeather.Internal
 		private void UpdateConsole()
 		{
 			var f = renderer.Font;
-			var w = DotFeather.Window;
-			if (f.Size != FontSize * w.Dpi || prevFont != FontPath)
-				renderer.Font = FontPath == null ? DFFont.GetDefault(FontSize * w.Dpi) : new DFFont(FontPath, FontSize * w.Dpi);
+			var w = DF.Window;
+			if (f.Size != FontSize || prevFont != FontPath)
+				renderer.Font = FontPath == null ? DFFont.GetDefault(FontSize) : new DFFont(FontPath, FontSize);
 
 			var maxLine = Math.Max(0, w.Height - 1) / FontSize;
 
@@ -78,7 +78,8 @@ namespace DotFeather.Internal
 			prevFont = FontPath;
 		}
 
-		private readonly TextDrawable renderer;
+		private readonly TextRenderer renderer;
+		private readonly Element element;
 		private readonly List<string> consoleBuffer = new List<string>();
 		private string? prevFont;
 	}

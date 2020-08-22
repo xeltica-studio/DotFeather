@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace DotFeather.Demo
 {
-	[DemoScene("/drawable/graphic")]
+	[DemoScene("/graphics/graphic")]
 	[Description("en", "Create graphic screen and draw shapes")]
 	[Description("ja", "グラフィック面を作成し図形描画を行います")]
 	public class GraphicExampleScene : Scene

@@ -4,10 +4,10 @@ using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
-	[DemoScene("/drawable/tilemap")]
+	[DemoScene("/graphics/tilemap2")]
 	[Description("en", "Generate tilemap and scroll")]
 	[Description("ja", "タイルマップを作成し動かします")]
-	public class TilemapExampleScene : Scene
+	public class Tilemap2ExampleScene : Scene
 	{
 		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
 		{
@@ -25,42 +25,62 @@ namespace DotFeather.Demo
 			var tile = Tile.LoadFrom("./ichigo.png");
 			var el = Tilemap("map", (16, 16));
 			Root.Add(el);
-			var map = el.GetComponent<TilemapRenderer>()!;
-			if (map.Transform == null) yield break;
+			var map = el.Transform;
+			var renderer = map.GetComponent<TilemapRenderer>()!;
 
-			Print("Initialized a tilemap.");
 			Print("Put tiles randomly...");
 			for (var i = 0; i < 512; i++)
 			{
-				map.SetTile(
+				renderer.SetTile(
 					// Determine the random position
 					Random.NextVectorInt(Window.Width / 16, Window.Height / 16),
 					tile,
 					// Specify tint color with 50% probability
 					Random.Next(10) < 5 ? default(Color?) : Random.NextColor()
 				);
-				if (i % 8 == 0)
-					yield return null;
 			}
 			yield return new WaitForSeconds(0.8f);
 
-			Print("Set map's location to (64, 64)");
-			map.Transform.Location = Vector.One * 64;
-			yield return new WaitForSeconds(1);
+			var dest = 48;
+			var speed = 16;
 
-			Print("Set map's scale to (0.5, 0.5)");
-			map.Transform.Scale = Vector.One * 0.5f;
-			yield return new WaitForSeconds(1);
+			Print($"Move map's location to (-{dest}, 0)");
 
-			map.Clear();
-			map.Line(0, 0, Window.Width / 16, Window.Height / 16, tile);
-			Print("Drew line.");
-			yield return new WaitForSeconds(1);
+			while (map.Location.X > -dest)
+			{
+				map.Location += Vector.Left * speed * Time.DeltaTime;
+				yield return null;
+			}
 
-			map.Clear();
-			map.Fill(3, 6, 24, 16, tile);
-			Print("Filled.");
-			yield return new WaitForSeconds(1);
+			map.Location = Vector.Zero;
+
+			Print($"Move map's location to ({dest}, 0)");
+
+			while (map.Location.X < dest)
+			{
+				map.Location += Vector.Right * speed * Time.DeltaTime;
+				yield return null;
+			}
+
+			map.Location = Vector.Zero;
+
+			Print($"Move map's location to (0, -{dest})");
+
+			while (map.Location.Y > -dest)
+			{
+				map.Location += Vector.Up * speed * Time.DeltaTime;
+				yield return null;
+			}
+
+			map.Location = Vector.Zero;
+
+			Print($"Move map's location to (0, {dest})");
+
+			while (map.Location.Y < dest)
+			{
+				map.Location += Vector.Down * speed * Time.DeltaTime;
+				yield return null;
+			}
 
 			Print("Press ESC to return");
 		}

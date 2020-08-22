@@ -4,7 +4,7 @@ using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
-	[DemoScene("/drawable/animated tile")]
+	[DemoScene("/graphics/animated tile")]
 	[Description("en", "Example of animated tile")]
 	[Description("ja", "アニメーションするタイルの例")]
 	public class AnimatedTileExampleScene : Scene

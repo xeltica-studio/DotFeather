@@ -8,13 +8,16 @@ namespace DotFeather.Demo
 {
 	public class LauncherScene : Scene
 	{
-		public override void OnStart(System.Collections.Generic.Dictionary<string, object> args)
+		public override void OnStart(Dictionary<string, object> args)
 		{
 			BackgroundColor = Color.FromArgb(255, 32, 32, 32);
-			var titleText = Text("title", "DotFeather", DFFont.GetDefault(56)).With(new Vector(24, 24)).GetComponent<TextRenderer>()!;
+			var titleText = Text("title", "DotFeather", DFFont.GetDefault(56), Color.White)
+				.With((24, 24))
+				.GetComponent<TextRenderer>()!;
 			Root.Add(titleText.Element!);
 
-			var sampleProgramText = Text("version", $"Demo {DemoOS.VERSION}", DFFont.GetDefault(24), Color.White).With(new Vector(24 + titleText.Width + 8, 50));
+			var sampleProgramText = Text("version", $"Demo {DemoOS.VERSION}", DFFont.GetDefault(24), Color.White)
+				.With((24 + titleText.Width + 8, 50));
 			Root.Add(sampleProgramText);
 
 			var lv = new Element("listView").With(listView);

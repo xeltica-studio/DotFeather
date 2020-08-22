@@ -23,6 +23,10 @@ namespace DotFeather
 		/// <value>Path to the font. If <c>null</c>, default font is used.</value>
 		string? FontPath { get; set; }
 
+		/// <summary>
+		/// Get or set a text color to render this console.
+		/// </summary>
+		/// <value></value>
 		Color TextColor { get; set; }
 
 		/// <summary>

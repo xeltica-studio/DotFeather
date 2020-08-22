@@ -3,12 +3,27 @@ using System.IO;
 
 namespace DotFeather
 {
+	/// <summary>
+	/// Provide rendering 9-sliced texture.
+	/// </summary>
 	public class NineSliceSpriteRenderer : Component
 	{
+		/// <summary>
+		/// Get or set the texture.
+		/// </summary>
+		/// <value></value>
 		public Texture9Sliced Texture { get; set; }
 
+		/// <summary>
+		/// Get or set the tint color.
+		/// </summary>
+		/// <value></value>
 		public Color TintColor { get; set; } = Color.White;
 
+		/// <summary>
+		/// Get or set size.
+		/// </summary>
+		/// <value></value>
 		public VectorInt Size
 		{
 			get => (Width is int w && Height is int h) ? (w, h) : default;

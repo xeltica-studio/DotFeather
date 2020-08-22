@@ -58,7 +58,6 @@ namespace DotFeather
 		public override void OnRender()
 		{
 			if (Transform == null) return;
-			System.Console.WriteLine(Transform.GlobalScale);
 			TextureDrawer.Draw(texture, Transform.GlobalLocation, Transform.GlobalScale);
 		}
 

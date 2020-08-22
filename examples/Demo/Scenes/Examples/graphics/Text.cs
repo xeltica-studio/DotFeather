@@ -20,7 +20,7 @@ namespace DotFeather.Demo
 			{
 				Root.Add(
 					Text($"test{count}", $"Test {count}", DFFont.GetDefault(Random.Next(8, 48)), Random.NextColor())
-						.Translate(Random.NextVector(Window.Width, Window.Height))
+						.TranslateTo(Random.NextVector(Window.Width, Window.Height))
 				);
 				time = 0;
 				count++;

@@ -44,7 +44,7 @@ namespace DotFeather.Demo
 
 			Print("Generate a sprite from the screenshot");
 
-			sprite = Sprite("ss", tex).TranslateAndScale((0, 0), (0.25f, 0.25f));
+			sprite = Sprite("ss", tex).TranslateTo(0, 0).ScaleTo(0.25f, 0.25f);
 			Root.Add(sprite);
 
 			Print("Move mouse cursor to move it");

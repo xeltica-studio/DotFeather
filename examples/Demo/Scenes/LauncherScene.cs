@@ -11,12 +11,12 @@ namespace DotFeather.Demo
 		{
 			BackgroundColor = Color.FromArgb(255, 32, 32, 32);
 			var titleText = Text("title", "DotFeather", DFFont.GetDefault(56), Color.White)
-				.Translate((24, 24))
+				.TranslateTo((24, 24))
 				.GetComponent<TextRenderer>()!;
 			Root.Add(titleText.Element!);
 
 			var sampleProgramText = Text("version", $"Demo {DemoOS.VERSION}", DFFont.GetDefault(24), Color.White)
-				.Translate((24 + titleText.Width + 8, 50));
+				.TranslateTo((24 + titleText.Width + 8, 50));
 			Root.Add(sampleProgramText);
 
 			var lv = new Element("listView").With(listView);

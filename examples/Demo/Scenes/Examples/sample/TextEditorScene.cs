@@ -15,7 +15,7 @@ namespace DotFeather.Demo
 			Print("DotFeather Text Editor");
 			Print("Press [ESC] to exit");
 
-			var el = Text("editor", "", DFFont.GetDefault(16), Color.White).Translate((8, 64));
+			var el = Text("editor", "", DFFont.GetDefault(16), Color.White).TranslateTo((8, 64));
 			Root.Add(el);
 			editorView = el.GetComponent<TextRenderer>()!;
 

@@ -54,5 +54,10 @@ namespace DotFeather
 		{
 			return new Element(name, children).With(new TextRenderer(text, font, color));
 		}
+
+		public static Element Tilemap(string name, VectorInt tileSize, params Element[] children)
+		{
+			return new Element(name, children).With(new TilemapRenderer(tileSize));
+		}
 	}
 }

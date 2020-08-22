@@ -6,9 +6,13 @@ namespace DotFeather
 
 		public Transform? Transform => Element?.Transform;
 
+		public virtual bool IsEnabled { get; set; } = true;
+
+		public bool IsDestroyed { get; private set; }
+
 		public T? GetComponent<T>() where T : Component
 		{
-			return (T?)(Element?.GetComponent<T>());
+			return Element?.GetComponent<T>();
 		}
 
 		public T? AddComponent<T>(T com) where T : Component
@@ -16,6 +20,13 @@ namespace DotFeather
 			if (Element == null) return null;
 			Element.AddComponent(com);
 			return com;
+		}
+
+		public void Destroy()
+		{
+			IsDestroyed = true;
+			if (Element != null) Element.components.Remove(this);
+			OnDestroy();
 		}
 
 		public virtual void OnStart() { }

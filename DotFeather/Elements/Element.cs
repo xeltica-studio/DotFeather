@@ -17,6 +17,10 @@ namespace DotFeather
 
 		public Element? Parent { get; private set; }
 
+		public bool IsVisible { get; set; } = true;
+
+		public bool IsDestroyed { get; private set; }
+
 		public Element(string key)
 		{
 			Key = key;
@@ -32,6 +36,9 @@ namespace DotFeather
 
 		public void AddComponent(Component com)
 		{
+			// 破棄されたコンポーネントを追加してはいけない
+			if (com.IsDestroyed) throw new ObjectDestroyedException();
+
 			if (com is Transform t)
 			{
 				// 他に親を持つ Transform を追加してはいけない
@@ -83,9 +90,9 @@ namespace DotFeather
 
 		public void RemoveComponent(Component com)
 		{
-			com.OnDestroy();
-			com.SetParent(null);
 			components.Remove(com);
+			com.Destroy();
+			com.SetParent(null);
 		}
 
 		public void ClearComponents()
@@ -98,27 +105,45 @@ namespace DotFeather
 			// 自分自身のコンポーネントをアップデートする
 			Transform.OnUpdate();
 			for (var i = 0; i < components.Count; i++)
+			{
+				if (!components[i].IsEnabled) continue;
 				components[i].OnUpdate();
+			}
 			for (var i = 0; i < children.Count; i++)
+			{
+				if (!children[i].IsVisible) continue;
 				children[i].Update();
+			}
 		}
 
 		public void Render()
 		{
 			Transform.OnPreRender();
 			for (var i = 0; i < components.Count; i++)
+			{
+				if (!components[i].IsEnabled) continue;
 				components[i].OnPreRender();
+			}
 
 			Transform.OnRender();
 			for (var i = 0; i < components.Count; i++)
+			{
+				if (!components[i].IsEnabled) continue;
 				components[i].OnRender();
+			}
 
 			for (var i = 0; i < children.Count; i++)
+			{
+				if (!children[i].IsVisible) continue;
 				children[i].Render();
+			}
 
 			Transform.OnPostRender();
 			for (var i = 0; i < components.Count; i++)
+			{
+				if (!components[i].IsEnabled) continue;
 				components[i].OnPostRender();
+			}
 		}
 
 		public void Insert(int index, Element item)
@@ -137,12 +162,15 @@ namespace DotFeather
 
 		public void Add(Element item)
 		{
+			if (item.IsDestroyed)
+				throw new ObjectDestroyedException();
+
 			if (children.Contains(item)) return;
 
 			if (item.Parent != null && item.Parent != this)
 			{
 				// 親が自分では無いElementの場合、元の親から削除する
-				item.Parent.Remove(item);
+				item.Parent.Remove(item, true);
 			}
 			item.Parent = this;
 
@@ -156,7 +184,9 @@ namespace DotFeather
 
 		public void Destroy()
 		{
+			if (Parent != null) Parent.children.Remove(this);
 			Parent = null;
+			IsDestroyed = true;
 			ClearComponents();
 			Clear();
 		}
@@ -169,16 +199,20 @@ namespace DotFeather
 
 		public bool Remove(Element item)
 		{
+			return Remove(item, false);
+		}
+
+		internal bool Remove(Element item, bool preserve)
+		{
 			if (!children.Contains(item)) return false;
-			item.Destroy();
-			return children.Remove(item);
+			if (!preserve) item.Destroy(); else children.Remove(item);
+			return true;
 		}
 
 		public void RemoveAt(int index)
 		{
 			if (children.Count <= index) throw new ArgumentOutOfRangeException();
-			children[index].Destroy();
-			children.RemoveAt(index);
+			Remove(children[index]);
 		}
 
 		public int IndexOf(Element item) => children.IndexOf(item);
@@ -187,6 +221,6 @@ namespace DotFeather
 		IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
 		private readonly List<Element> children = new List<Element>();
-		private readonly List<Component> components = new List<Component>();
+		internal readonly List<Component> components = new List<Component>();
 	}
 }

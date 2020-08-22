@@ -1,4 +1,4 @@
-version: 2.9.2.{build}
+version: 3.0.0.{build}
 image: Visual Studio 2019
 skip_non_tags: true
 
@@ -40,17 +40,18 @@ deploy:
   - provider: GitHub
     artifact: /.*\.nupkg/ # upload all NuGet packages to release assets
     draft: false
-    prerelease: false
+    prerelease: true
     description: |
-      ## 2.9.2
+      ## DotFeather v3 Public Beta 1
 
-      ### バグ修正
-      - ; キーを押すと画面が暗くなる不具合を修正しました
+      多くを刷新した、全く新しい DotFeather を体験しよう。
+      イベントベースの新たな Singleton Game API と、ゲームエンティティの効率的な管理を実現する、まったく新しい Element API で、新たなゲームアーキテクチャを体験しよう。
 
-      ----
+      **※このリリースはβ版です。動作が変更される可能性があります。**
 
-      ### Bug fixes
-      - Fixed a bug the screen goes dark when the ";" key was pressed.
+      まだドキュメントが整備されていない為、ドキュメントが無くても触って理解できるよという方のみ、試用目的でお使いください。
+
+      DotFeather v2 との API 互換性がほぼ無いのでご注意ください。
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

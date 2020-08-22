@@ -1,4 +1,4 @@
-version: 2.9.1.{build}
+version: 3.0.0.{build}
 image: Visual Studio 2019
 skip_non_tags: true
 
@@ -40,17 +40,18 @@ deploy:
   - provider: GitHub
     artifact: /.*\.nupkg/ # upload all NuGet packages to release assets
     draft: false
-    prerelease: false
+    prerelease: true
     description: |
-      ## 2.9.1
+      ## DotFeather v3 Public Beta 1
 
-      ### バグ修正
-      - `Container.Clear` メソッドが子要素を破棄する不具合を修正
+      多くを刷新した、全く新しい DotFeather を体験しよう。
+      イベントベースの新たな Singleton Game API と、ゲームエンティティの効率的な管理を実現する、まったく新しい Element API で、新たなゲームアーキテクチャを体験しよう。
 
-      ----
+      **※このリリースはβ版です。動作が変更される可能性があります。**
 
-      ### Bug fixes
-      - Fixed a bug that the `Container.Clear` method destroys its children
+      まだドキュメントが整備されていない為、ドキュメントが無くても触って理解できるよという方のみ、試用目的でお使いください。
+
+      DotFeather v2 との API 互換性がほぼ無いのでご注意ください。
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DotFeather\DotFeather.csproj" />
+    <ProjectReference Include="..\..\src\DotFeather.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

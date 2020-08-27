@@ -9,7 +9,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\DotFeather\DotFeather.csproj" />
+		<ProjectReference Include="..\..\src\DotFeather.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

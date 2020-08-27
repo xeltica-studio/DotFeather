@@ -6,7 +6,7 @@ namespace DotFeather
 	/// <summary>
 	/// 座標系変換の為のメソッドを提供します。
 	/// </summary>
-	public static class SpaceConverter
+	public static class CoordinateExtension
 	{
 		/// <summary>
 		/// スクリーン座標をViewport座標に変換します。

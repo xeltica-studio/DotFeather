@@ -42,16 +42,23 @@ deploy:
     draft: false
     prerelease: true
     description: |
-      ## DotFeather v3 Public Beta 1
+      ## DotFeather v3 Public Beta 2
 
-      多くを刷新した、全く新しい DotFeather を体験しよう。
-      イベントベースの新たな Singleton Game API と、ゲームエンティティの効率的な管理を実現する、まったく新しい Element API で、新たなゲームアーキテクチャを体験しよう。
-
-      **※このリリースはβ版です。動作が変更される可能性があります。**
-
-      まだドキュメントが整備されていない為、ドキュメントが無くても触って理解できるよという方のみ、試用目的でお使いください。
-
-      DotFeather v2 との API 互換性がほぼ無いのでご注意ください。
+      このアップデートには、DotFeather v2 以前との互換性を向上し、DotFeather v3 へのアップデートに伴う負担を軽減する新たな API が含まれます。
+      - ComponentFactory を廃止
+      - Element クラスを継承できるように
+      - Element クラスに次のメンバーを追加
+        - `Location` - `Transform.Location` と同じ
+        - `Scale` - `Transform.Scale` と同じ
+        - `GlobalLocation` - `Transform.GlobalLocation` と同じ
+        - `GlobalScale` - `Transform.GlobalScale` と同じ
+      - Element クラスを継承した新しいクラスを追加
+        - Sprite
+        - Tilemap
+        - Graphic
+        - NineSliceSprite
+        - TextElement
+      - `TextRenderer.RenderedTexture` プロパティを追加
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

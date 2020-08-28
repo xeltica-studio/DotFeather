@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using DotFeather;
-using static DotFeather.ComponentFactory;
 
 namespace FollowStrawberry
 {
@@ -10,7 +9,7 @@ namespace FollowStrawberry
 		static int Main()
 		{
 			DF.Root.Add(
-				Sprite("strawberry", "strawberry.png")
+				new Sprite("strawberry.png")
 					.With(new StrawberryController())
 			);
 

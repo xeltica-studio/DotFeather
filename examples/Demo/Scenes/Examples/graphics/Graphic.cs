@@ -25,28 +25,28 @@ namespace DotFeather.Demo
 				{
 					case 0:
 						DF.Console.Print($"Line from {v1} to {v2}");
-						canvas.AddComponent(ShapeRenderer.CreateLine(v1, v2, Random.NextColor()));
+						canvas.Line(v1, v2, Random.NextColor());
 						break;
 					case 1:
 						DF.Console.Print($"Rect from {v1} to {v2}");
-						canvas.AddComponent(ShapeRenderer.CreateRect(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor()));
+						canvas.Rect(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor());
 						break;
 					case 2:
 						DF.Console.Print($"Ellipse from {v1} to {v2}");
-						canvas.AddComponent(ShapeRenderer.CreateEllipse(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor()));
+						canvas.Ellipse(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor());
 						break;
 					case 3:
 						DF.Console.Print($"Pixel at {v1}");
-						canvas.AddComponent(ShapeRenderer.CreatePixel(v1, Random.NextColor()));
+						canvas.Pixel(v1, Random.NextColor());
 						break;
 					case 4:
 						DF.Console.Print($"Triangle of {v1}, {v2} and {v3}");
-						canvas.AddComponent(ShapeRenderer.CreateTriangle(v1, v2, v3, Random.NextColor(), Random.Next(4), Random.NextColor()));
+						canvas.Triangle(v1, v2, v3, Random.NextColor(), Random.Next(4), Random.NextColor());
 						break;
 					case 5:
 						DF.Console.Print($"Polygon");
 						var v = Enumerable.Repeat(5, 15).Select(_ => Rnd()).ToArray();
-						canvas.AddComponent(ShapeRenderer.CreatePolygon(Random.NextColor(), Random.Next(4), Random.NextColor(), v));
+						canvas.Polygon(Random.NextColor(), Random.Next(4), Random.NextColor(), v);
 						break;
 				}
 			}
@@ -54,6 +54,6 @@ namespace DotFeather.Demo
 				Router.ChangeScene<LauncherScene>();
 		}
 
-		private readonly Element canvas = new Element("canvas");
+		private readonly Graphic canvas = new Graphic();
 	}
 }

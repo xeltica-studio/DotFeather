@@ -1,6 +1,3 @@
-using System.Drawing;
-using static DotFeather.ComponentFactory;
-
 namespace DotFeather.Demo
 {
 	[DemoScene("/graphics/text")]
@@ -19,8 +16,10 @@ namespace DotFeather.Demo
 			if (time > 0.0625f)
 			{
 				Root.Add(
-					Text($"test{count}", $"Test {count}", DFFont.GetDefault(Random.Next(8, 48)), Random.NextColor())
-						.TranslateTo(Random.NextVector(Window.Width, Window.Height))
+					new TextElement($"Test {count}", DFFont.GetDefault(Random.Next(8, 48)), Random.NextColor())
+					{
+						Location = Random.NextVector(Window.Width, Window.Height)
+					}
 				);
 				time = 0;
 				count++;

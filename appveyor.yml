@@ -22,7 +22,7 @@ build:
 configuration: Release
 
 after_build:
-  - nuget pack -Prop Configuration=Release DotFeather -OutputDirectory src/bin/Release/
+  - nuget pack -Prop Configuration=Release src -OutputDirectory src/bin/Release/
 
 artifacts:
   - path: '**\*.nupkg'

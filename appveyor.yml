@@ -16,13 +16,13 @@ before_build:
       nuget restore
 
 build:
-  project: C:\projects\dotfeather\dotfeather\dotfeather.csproj
+  project: C:\projects\dotfeather\src\dotfeather.csproj
   publish_nuget: true
 
 configuration: Release
 
 after_build:
-  - nuget pack -Prop Configuration=Release DotFeather -OutputDirectory DotFeather/bin/Release/
+  - nuget pack -Prop Configuration=Release DotFeather -OutputDirectory src/bin/Release/
 
 artifacts:
   - path: '**\*.nupkg'

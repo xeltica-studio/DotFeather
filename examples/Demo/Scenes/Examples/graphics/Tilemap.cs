@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Drawing;
-using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
@@ -23,10 +22,8 @@ namespace DotFeather.Demo
 		IEnumerator Main()
 		{
 			var tile = Tile.LoadFrom("./ichigo.png");
-			var el = Tilemap("map", (16, 16));
-			Root.Add(el);
-			var map = el.GetComponent<TilemapRenderer>()!;
-			if (map.Transform == null) yield break;
+			var map = new Tilemap((16, 16));
+			Root.Add(map);
 
 			Print("Initialized a tilemap.");
 			Print("Put tiles randomly...");
@@ -45,11 +42,11 @@ namespace DotFeather.Demo
 			yield return new WaitForSeconds(0.8f);
 
 			Print("Set map's location to (64, 64)");
-			map.Transform.Location = Vector.One * 64;
+			map.Location = Vector.One * 64;
 			yield return new WaitForSeconds(1);
 
 			Print("Set map's scale to (0.5, 0.5)");
-			map.Transform.Scale = Vector.One * 0.5f;
+			map.Scale = Vector.One * 0.5f;
 			yield return new WaitForSeconds(1);
 
 			map.Clear();

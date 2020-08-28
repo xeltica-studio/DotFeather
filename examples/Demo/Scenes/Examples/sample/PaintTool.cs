@@ -24,7 +24,7 @@ namespace DotFeather.Demo
 				canvas.Clear();
 
 			if (DFMouse.IsLeft)
-				canvas.AddComponent(ShapeRenderer.CreateLine(prevMouse, mouse, Color.White));
+				canvas.Line(prevMouse, mouse, Color.White);
 
 			if (DFKeyboard.Escape.IsKeyUp)
 				Router.ChangeScene<LauncherScene>();
@@ -32,7 +32,7 @@ namespace DotFeather.Demo
 			prevMouse = mouse;
 		}
 
-		private readonly Element canvas = new Element("canvas");
+		private readonly Graphic canvas = new Graphic();
 		private VectorInt prevMouse;
 	}
 }

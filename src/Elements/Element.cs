@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace DotFeather
 {
-	public sealed class Element : IReadOnlyList<Element>
+	public class Element : IReadOnlyList<Element>
 	{
 		public string Key { get; set; }
 
@@ -21,6 +21,30 @@ namespace DotFeather
 
 		public bool IsDestroyed { get; private set; }
 
+		public Vector Location
+		{
+			get => Transform.Location;
+			set => Transform.Location = value;
+		}
+
+		public Vector Scale
+		{
+			get => Transform.Scale;
+			set => Transform.Scale = value;
+		}
+
+		public Vector GlobalLocation
+		{
+			get => Transform.GlobalLocation;
+		}
+
+		public Vector GlobalScale
+		{
+			get => Transform.GlobalScale;
+		}
+
+		public Element() : this(string.Empty) { }
+
 		public Element(string key)
 		{
 			Key = key;
@@ -34,7 +58,7 @@ namespace DotFeather
 			AddRange(children);
 		}
 
-		public void AddComponent(Component com)
+		public virtual void AddComponent(Component com)
 		{
 			// 破棄されたコンポーネントを追加してはいけない
 			if (com.IsDestroyed) throw new ObjectDestroyedException();
@@ -65,38 +89,6 @@ namespace DotFeather
 			return this;
 		}
 
-		public Element Translate(Vector location)
-		{
-			Transform.Location += location;
-			return this;
-		}
-
-		public Element TranslateTo(Vector location)
-		{
-			Transform.Location = location;
-			return this;
-		}
-
-		public Element Scale(Vector scale)
-		{
-			Transform.Scale *= scale;
-			return this;
-		}
-
-		public Element ScaleTo(Vector scale)
-		{
-			Transform.Scale = scale;
-			return this;
-		}
-
-		public Element Translate(float x, float y) => Translate((x, y));
-
-		public Element TranslateTo(float x, float y) => TranslateTo((x, y));
-
-		public Element Scale(float x, float y) => Scale((x, y));
-
-		public Element ScaleTo(float x, float y) => ScaleTo((x, y));
-
 		public T? GetComponent<T>() where T : Component
 		{
 			return components.OfType<T>().FirstOrDefault();
@@ -107,7 +99,7 @@ namespace DotFeather
 			return components.OfType<T>().ToArray();
 		}
 
-		public void RemoveComponent(Component com)
+		public virtual void RemoveComponent(Component com)
 		{
 			components.Remove(com);
 			com.Destroy();

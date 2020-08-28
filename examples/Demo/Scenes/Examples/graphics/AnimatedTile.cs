@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Drawing;
-using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
@@ -13,9 +12,9 @@ namespace DotFeather.Demo
 		{
 			qboxes = Texture2D.LoadAndSplitFrom("qbox.png", 8, 1, VectorInt.One * 16);
 			var tile = new Tile(qboxes, 0.125f);
-			var el = Tilemap("map", (16, 16));
+			var el = new Tilemap((16, 16));
 			Root.Add(el);
-			el.GetComponent<TilemapRenderer>()![8, 12] = tile;
+			el[8, 12] = tile;
 			Print("Press ESC to return");
 		}
 

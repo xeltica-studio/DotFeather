@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
@@ -33,7 +32,7 @@ namespace DotFeather.Demo
 				}
 			}
 			tex = Texture2D.Create(bitmap);
-			Root.Add(sp = Sprite("sprite", tex).Scale((4, 4)));
+			Root.Add(sp = new Sprite(tex) { Scale = (4, 4) });
 			Print("Generated! Press ESC to return");
 		}
 
@@ -47,7 +46,7 @@ namespace DotFeather.Demo
 
 			if (sp != null)
 			{
-				sp.Transform.Location = DFMouse.Position;
+				sp.Location = DFMouse.Position;
 			}
 		}
 
@@ -57,7 +56,7 @@ namespace DotFeather.Demo
 		}
 
 		readonly CancellationTokenSource cts = new CancellationTokenSource();
-		Element? sp;
+		Sprite? sp;
 		Texture2D tex;
 	}
 

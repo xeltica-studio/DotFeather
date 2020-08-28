@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
-using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
@@ -44,10 +43,9 @@ namespace DotFeather.Demo
 			public override void OnStart()
 			{
 				var t = Texture2D.CreateSolid(Color.FromArgb(24, 24, 24), 1, 1);
-				var bd = Sprite("backdrop", t);
-				backdrop = bd.GetComponent<SpriteRenderer>()!;
+				backdrop = new Sprite(t);
 				inner = new Element("inner");
-				Element!.Add(bd);
+				Element!.Add(backdrop);
 				Element!.Add(inner);
 				trimmer = new Trimmer(Width, Height);
 				AddComponent(trimmer);
@@ -91,7 +89,7 @@ namespace DotFeather.Demo
 				if (DFMouse.IsLeftDown)
 				{
 					landingPoint = DFMouse.Position;
-					landingScrollY = (int)(inner?.Transform.Location.Y ?? 0);
+					landingScrollY = (int)(inner?.Location.Y ?? 0);
 				}
 				if (landingPoint is Vector v)
 				{
@@ -105,7 +103,7 @@ namespace DotFeather.Demo
 							for (var i = 0; i < Items.Count; i++)
 							{
 								var elHeight = ItemHeight + padding + 16;
-								var ely = y + i * elHeight + padding + inner?.Transform.Location.Y ?? 0;
+								var ely = y + i * elHeight + padding + inner?.Location.Y ?? 0;
 								if (ely <= my && my <= ely + elHeight)
 									ItemSelected?.Invoke(i, Items[i]);
 							}
@@ -120,7 +118,7 @@ namespace DotFeather.Demo
 					innerY = 0;
 
 				if (inner != null)
-					inner.Transform.Location = new Vector(inner.Transform.Location.X, innerY);
+					inner.Location = new Vector(inner.Location.X, innerY);
 			}
 
 			private bool Intersects(Vector point, Vector topLeft, Vector bottomRight)
@@ -142,7 +140,7 @@ namespace DotFeather.Demo
 				var y = padding;
 				foreach (var item in Items)
 				{
-					var text = Text(item.Text, item.Text, DFFont.GetDefault(ItemHeight), Color.White).TranslateTo(new Vector(padding + ItemHeight + padding, y));
+					var text = new TextElement(item.Text, DFFont.GetDefault(ItemHeight), Color.White) { Location = (padding + ItemHeight + padding, y) };
 					inner?.Add(text);
 
 					y += ItemHeight;
@@ -150,7 +148,7 @@ namespace DotFeather.Demo
 					if (item.Description != null)
 					{
 						y += 4;
-						var desc = Text("a desc of " + item.Text, item.Description, DFFont.GetDefault(12), Color.LightGray).TranslateTo(new Vector(text.Transform.Location.X, y));
+						var desc = new TextElement(item.Description, DFFont.GetDefault(12), Color.LightGray) { Location = (text.Transform.Location.X, y) };
 						inner?.Add(desc);
 						y += 12;
 					}
@@ -170,8 +168,8 @@ namespace DotFeather.Demo
 			private Vector? landingPoint;
 			private int landingScrollY;
 			private bool isUpdating = false;
-			private SpriteRenderer? backdrop;
-			private Element? inner;
+			private Sprite? backdrop;
+			private Element inner;
 			private Trimmer? trimmer;
 
 			public delegate void ItemSelectedEventHandler(int index, ListViewItem item);

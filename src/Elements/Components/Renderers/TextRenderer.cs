@@ -4,6 +4,8 @@ namespace DotFeather
 {
 	public class TextRenderer : Component
 	{
+		public Texture2D RenderedTexture => texture;
+
 		public VectorInt Size => texture.Size;
 
 		public int Width => Size.X;

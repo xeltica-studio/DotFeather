@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Drawing;
-using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
@@ -22,9 +21,7 @@ namespace DotFeather.Demo
 
 		IEnumerator Main()
 		{
-			var sprite = Sprite("ichigo", "./ichigo.png");
-			var renderer = sprite.GetComponent<SpriteRenderer>();
-			if (renderer == null) yield break;
+			var sprite = new Sprite("./ichigo.png");
 			Print("Generated sprite.");
 			yield return new WaitForSeconds(0.5f);
 
@@ -32,22 +29,22 @@ namespace DotFeather.Demo
 			Print("Added it to the root container.");
 			yield return new WaitForSeconds(0.5f);
 
-			sprite.Transform.Location = new Vector(256, 256);
+			sprite.Location = (256, 256);
 			Print("Moved it to (256, 256).");
 			yield return new WaitForSeconds(2);
 
-			sprite.Transform.Scale = new Vector(2, 8);
+			sprite.Scale = (2, 8);
 			Print("Changed its scale, now the X is 2 times and the Y is 8 times.");
 			yield return new WaitForSeconds(2);
 
-			renderer.TintColor = Color.Blue;
+			sprite.TintColor = Color.Blue;
 			Print("Set the sprite's tint color to blue.");
 			yield return new WaitForSeconds(2);
 
-			sprite.Transform.Scale = Vector.One;
-			renderer.TintColor = null;
+			sprite.Scale = (1, 1);
+			sprite.TintColor = null;
 
-			renderer.Size = (256, 192);
+			sprite.Size = (256, 192);
 			Print("Set its width and height.");
 			yield return new WaitForSeconds(2);
 

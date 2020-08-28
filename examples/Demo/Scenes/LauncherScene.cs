@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
-using static DotFeather.ComponentFactory;
 
 namespace DotFeather.Demo
 {
@@ -10,20 +9,15 @@ namespace DotFeather.Demo
 		public override void OnStart(Dictionary<string, object> args)
 		{
 			BackgroundColor = Color.FromArgb(255, 32, 32, 32);
-			var titleText = Text("title", "DotFeather", DFFont.GetDefault(56), Color.White)
-				.TranslateTo((24, 24))
-				.GetComponent<TextRenderer>()!;
-			Root.Add(titleText.Element!);
+			TextElement titleText;
 
-			var sampleProgramText = Text("version", $"Demo {DemoOS.VERSION}", DFFont.GetDefault(24), Color.White)
-				.TranslateTo((24 + titleText.Width + 8, 50));
-			Root.Add(sampleProgramText);
+			Root = new Element("root",
+				titleText = new TextElement("DotFeather", DFFont.GetDefault(56), Color.White) { Location = (24, 24) },
+				new TextElement("Demo " + DemoOS.VERSION, DFFont.GetDefault(24), Color.White) { Location = (24 + titleText.Width + 8, 50) },
+				new Element { Location = (16, titleText.Transform!.Location.Y + titleText.Height + 16) }.With(listView)
+			);
 
-			var lv = new Element("listView").With(listView);
-
-			Root.Add(lv);
 			listView.ItemSelected += ItemSelected;
-			lv.Transform.Location = new Vector(16, titleText.Transform!.Location.Y + titleText.Height + 16);
 
 			ChangeDirectory(DemoOS.CurrentDirectory);
 		}

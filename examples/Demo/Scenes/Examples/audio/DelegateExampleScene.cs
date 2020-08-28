@@ -24,7 +24,7 @@ namespace DotFeather.Demo
 				}
 				return (s, s);
 			});
-			visualizer.TranslateTo((16, 96));
+			visualizer.Location = (16, 96);
 		}
 
 		public override void OnStart(Dictionary<string, object> args)
@@ -36,11 +36,11 @@ namespace DotFeather.Demo
 
 		public override void OnRender()
 		{
-			visualizer.ClearComponents();
-			visualizer.AddComponent(ShapeRenderer.CreateRect(0, 0, 512, 256, Color.FromArgb(64, 64, 64)));
+			visualizer.Clear();
+			visualizer.Rect(0, 0, 512, 256, Color.FromArgb(64, 64, 64));
 			int? p = null;
 			int x = 0;
-			visualizer.AddComponent(ShapeRenderer.CreateLine(0, 128, 512, 128, Color.FromArgb(48, 48, 48)));
+			visualizer.Line(0, 128, 512, 128, Color.FromArgb(48, 48, 48));
 			lock (l)
 			{
 				foreach (var sample in waveTable.ToArray())
@@ -49,7 +49,7 @@ namespace DotFeather.Demo
 					if (p is int ps)
 					{
 						var y1 = ps;
-						visualizer.AddComponent(ShapeRenderer.CreateLine(x - 2, y1, x, y2, Color.Lime));
+						visualizer.Line(x - 2, y1, x, y2, Color.Lime);
 					}
 					p = y2;
 					x += 2;
@@ -87,7 +87,7 @@ PRESS ESC TO RETURN");
 
 		private float freq = 440;
 		private readonly LinkedList<short> waveTable = new LinkedList<short>();
-		private readonly Element visualizer = new Element("visualizer");
+		private readonly Graphic visualizer = new Graphic();
 		private readonly AudioPlayer audio = new AudioPlayer();
 		private readonly IAudioSource source;
 		private object l = new object();

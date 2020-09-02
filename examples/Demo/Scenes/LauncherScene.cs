@@ -11,10 +11,10 @@ namespace DotFeather.Demo
 			BackgroundColor = Color.FromArgb(255, 32, 32, 32);
 			TextElement titleText;
 
-			Root = new Element("root",
+			Root.AddRange(
 				titleText = new TextElement("DotFeather", DFFont.GetDefault(56), Color.White) { Location = (24, 24) },
 				new TextElement("Demo " + DemoOS.VERSION, DFFont.GetDefault(24), Color.White) { Location = (24 + titleText.Width + 8, 50) },
-				new Element { Location = (16, titleText.Transform!.Location.Y + titleText.Height + 16) }.With(listView)
+				listView = new ListView { Location = (16, titleText.Location.Y + titleText.Height + 16) }
 			);
 
 			listView.ItemSelected += ItemSelected;
@@ -26,7 +26,7 @@ namespace DotFeather.Demo
 		{
 			Title = $"DotFeather Demo - {DemoOS.CurrentDirectory.Name.ToUpperInvariant()}";
 			listView.Width = Window.Width - 32;
-			listView.Height = Window.Height - 16 - (int)listView.Transform!.Location.Y;
+			listView.Height = Window.Height - 16 - (int)listView.Location.Y;
 		}
 
 		public void ItemSelected(int i, ListViewItem item)
@@ -70,6 +70,6 @@ namespace DotFeather.Demo
 			listView.EndUpdating();
 		}
 
-		private readonly ListView listView = new ListView();
+		private ListView listView;
 	}
 }

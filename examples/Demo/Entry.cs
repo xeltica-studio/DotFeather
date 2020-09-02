@@ -10,9 +10,11 @@ namespace DotFeather.Demo
 
 			// ゲームを初期化して実行します
 			// Initialize and run the game
-			DF.Router.ChangeScene<LauncherScene>();
-			DF.Window.Mode = WindowMode.Resizable;
-
+			DF.Window.Start += () =>
+			{
+				DF.Router.ChangeScene<LauncherScene>();
+				DF.Window.Mode = WindowMode.Resizable;
+			};
 			return DF.Run();
 		}
 	}

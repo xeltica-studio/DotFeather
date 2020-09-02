@@ -7,7 +7,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get an array of textures to animate.
 		/// </summary>
-		public Texture2D[] Textures { get; set; }
+		public Texture2D[] Textures { get; set; } = new Texture2D[0];
 
 		/// <summary>
 		/// Get whether this sprite is animating.
@@ -24,12 +24,9 @@ namespace DotFeather
 		/// </summary>
 		public int Duration { get; set; }
 
-		public SpriteAnimator(Texture2D[] textures, bool autoPlay = true, int loopTimes = -1, int duration = 1)
+		public SpriteAnimator()
 		{
-			Textures = textures;
-			LoopTimes = loopTimes;
-			Duration = duration;
-			if (autoPlay) Play();
+			Play();
 		}
 
 		/// <summary>
@@ -51,18 +48,11 @@ namespace DotFeather
 			IsPlaying = false;
 		}
 
-		public override void OnStart()
-		{
-			renderer = GetComponent<SpriteRenderer>();
-			if (renderer == null)
-				throw new InvalidOperationException($"{nameof(SpriteAnimator)} requires a {nameof(SpriteRenderer)} to animate sprites.");
-		}
-
 		public override void OnUpdate()
 		{
-			if (renderer == null) return;
+			var sprite = Element as Sprite ?? throw new InvalidOperationException($"{nameof(SpriteAnimator)} has to be attached to the {nameof(Sprite)} instance.");
 
-			renderer.Texture = Textures[currentIndex];
+			sprite.Texture = Textures[currentIndex];
 
 			if (IsPlaying)
 			{
@@ -89,7 +79,6 @@ namespace DotFeather
 			}
 		}
 
-		private SpriteRenderer? renderer;
 		private int currentIndex;
 		private int loopCount;
 		private int count;

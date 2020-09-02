@@ -24,12 +24,11 @@ namespace DotFeather.Internal
 
 		internal DFConsole()
 		{
-			element = new Element("console").With(renderer = new TextRenderer("", DFFont.GetDefault(), Color.White));
+			text = new TextElement("", DFFont.GetDefault(), Color.White);
 			FontSize = 16;
 			DF.Window.Render += () =>
 			{
-				renderer.Color = TextColor;
-				element.Render();
+				text.Render();
 			};
 
 			DF.Window.PostUpdate += UpdateConsole;
@@ -64,22 +63,21 @@ namespace DotFeather.Internal
 
 		private void UpdateConsole()
 		{
-			var f = renderer.Font;
+			var f = text.Font;
 			var w = DF.Window;
 			if (f.Size != FontSize || prevFont != FontPath)
-				renderer.Font = FontPath == null ? DFFont.GetDefault(FontSize) : new DFFont(FontPath, FontSize);
+				text.Font = FontPath == null ? DFFont.GetDefault(FontSize) : new DFFont(FontPath, FontSize);
 
 			var maxLine = Math.Max(0, w.Height - 1) / FontSize;
 
 			var buf = consoleBuffer.Count > maxLine ? consoleBuffer.Skip(consoleBuffer.Count - maxLine) : consoleBuffer;
 
-			renderer.Color = TextColor;
-			renderer.Text = string.Join('\n', buf);
+			text.Color = TextColor;
+			text.Text = string.Join('\n', buf);
 			prevFont = FontPath;
 		}
 
-		private readonly TextRenderer renderer;
-		private readonly Element element;
+		private readonly TextElement text;
 		private readonly List<string> consoleBuffer = new List<string>();
 		private string? prevFont;
 	}

@@ -90,6 +90,6 @@ PRESS ESC TO RETURN");
 		private readonly Graphic visualizer = new Graphic();
 		private readonly AudioPlayer audio = new AudioPlayer();
 		private readonly IAudioSource source;
-		private object l = new object();
+		private readonly object l = new object();
 	}
 }

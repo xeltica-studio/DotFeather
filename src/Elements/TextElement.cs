@@ -2,15 +2,11 @@ using System.Drawing;
 
 namespace DotFeather
 {
-	public class TextRenderer : Component
+	public class TextElement : ElementBase
 	{
 		public Texture2D RenderedTexture => texture;
 
-		public VectorInt Size => texture.Size;
-
-		public int Width => Size.X;
-
-		public int Height => Size.Y;
+		public override VectorInt Size { get => texture.Size; set { /* nop */ } }
 
 		public string Text
 		{
@@ -42,13 +38,13 @@ namespace DotFeather
 			set => Set(ref font, value);
 		}
 
-		public TextRenderer() : this("") { }
+		public TextElement() : this("") { }
 
-		public TextRenderer(string text) : this(text, DFFont.GetDefault(16)) { }
+		public TextElement(string text) : this(text, DFFont.GetDefault(16)) { }
 
-		public TextRenderer(string text, DFFont font) : this(text, font, null) { }
+		public TextElement(string text, DFFont font) : this(text, font, null) { }
 
-		public TextRenderer(string text, DFFont font, Color? color)
+		public TextElement(string text, DFFont font, Color? color)
 		{
 			this.text = text;
 			this.font = font;
@@ -57,13 +53,18 @@ namespace DotFeather
 			RenderTexture();
 		}
 
-		public override void OnRender()
+		public TextElement(string text, float fontSize) : this(text, fontSize, DFFontStyle.Normal) { }
+
+		public TextElement(string text, float fontSize, DFFontStyle fontStyle) : this(text, fontSize, fontStyle, null) { }
+
+		public TextElement(string text, float fontSize, DFFontStyle fontStyle, Color? color) : this(text, DFFont.GetDefault(fontSize, fontStyle), color) { }
+
+		protected override void OnRender()
 		{
-			if (Transform == null) return;
-			TextureDrawer.Draw(texture, Transform.GlobalLocation, Transform.GlobalScale);
+			TextureDrawer.Draw(texture, AbsoluteLocation, AbsoluteScale);
 		}
 
-		public override void OnDestroy()
+		protected override void OnDestroy()
 		{
 			texture.Dispose();
 		}

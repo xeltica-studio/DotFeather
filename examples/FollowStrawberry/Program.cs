@@ -8,10 +8,12 @@ namespace FollowStrawberry
 	{
 		static int Main()
 		{
-			DF.Root.Add(
-				new Sprite("strawberry.png")
-					.With(new StrawberryController())
-			);
+			DF.Window.Start += () =>
+			{
+				var strawberry = new Sprite("strawberry.png");
+				strawberry.AddComponent<StrawberryController>();
+				DF.Root.Add(strawberry);
+			};
 
 			return DF.Run();
 		}
@@ -22,19 +24,19 @@ namespace FollowStrawberry
 		public override void OnUpdate()
 		{
 			if (!DF.Window.IsFocused) return;
-			if (Transform == null) return;
-			Transform.Location = DFMouse.Position;
-			Transform.Scale = DFMouse.IsLeft ? (4, 4) : (1, 1);
+			Element.Location = DFMouse.Position;
+			Element.Scale = DFMouse.IsLeft ? (4, 4) : (1, 1);
 
-			renderer = GetComponent<SpriteRenderer>();
-			if (renderer == null) return;
+			if (!(Element is Sprite sprite)) throw new Exception("Strawberry must be a sprite");
 
-			renderer.Width = DFKeyboard.W.ElapsedFrameCount + renderer.Texture.Size.X;
-			renderer.Height = DFKeyboard.H.ElapsedFrameCount + renderer.Texture.Size.Y;
-			renderer.TintColor = DFKeyboard.C ? rnd.NextColor() : Color.White;
+			if (DFKeyboard.W) sprite.Width = 128;
+			if (DFKeyboard.H) sprite.Height = 256;
+
+			if (!DFKeyboard.W && !DFKeyboard.H) sprite.ResetSize();
+
+			sprite.TintColor = DFKeyboard.C ? rnd.NextColor() : Color.White;
 		}
 
 		private readonly Random rnd = new Random();
-		private SpriteRenderer? renderer;
 	}
 }

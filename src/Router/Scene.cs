@@ -12,7 +12,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get a root container of this scene.
 		/// </summary>
-		public Element Root
+		public Container Root
 		{
 			get => root;
 			set
@@ -95,6 +95,6 @@ namespace DotFeather
 		/// </summary>
 		public virtual void OnDestroy() { }
 
-		private Element root = new Element("root");
+		private Container root = new Container();
 	}
 }

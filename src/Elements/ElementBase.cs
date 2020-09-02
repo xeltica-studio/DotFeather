@@ -68,8 +68,9 @@ namespace DotFeather
 
 			var p = Parent;
 			if (p == null) return;
-			AbsoluteLocation += p.AbsoluteLocation;
 			AbsoluteScale *= p.AbsoluteScale;
+			AbsoluteLocation *= AbsoluteScale;
+			AbsoluteLocation += p.AbsoluteLocation;
 		}
 
 		internal virtual void Update()

@@ -11,12 +11,18 @@ namespace DotFeather.Demo
 		public override void OnStart(Dictionary<string, object> args)
 		{
 			Print("Left click to draw randomly");
+			Print("Scroll to move");
+			Print("Press ↑ to scale up");
+			Print("Press ↓ to scale down");
 			Print("Press ESC to return");
 			Root.Add(canvas);
 		}
 
 		public override void OnUpdate()
 		{
+			if (DFKeyboard.Up) canvas.Scale += Vector.One * Time.DeltaTime;
+			if (DFKeyboard.Down) canvas.Scale -= Vector.One * Time.DeltaTime;
+			canvas.Location += DFMouse.Scroll * (-1, 1);
 			if (DFMouse.IsLeftDown)
 			{
 				VectorInt Rnd() => Random.NextVectorInt(Window.Width, Window.Height);

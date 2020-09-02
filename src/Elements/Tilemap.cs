@@ -6,7 +6,7 @@ using static DotFeather.MiscUtility;
 
 namespace DotFeather
 {
-	public class TilemapRenderer : Component, ITilemap
+	public class Tilemap : ElementBase
 	{
 		/// <summary>
 		/// Get or set size of grid.
@@ -18,29 +18,7 @@ namespace DotFeather
 		/// </summary>
 		public Color? DefaultColor { get; set; }
 
-		Vector ITilemap.Location
-		{
-			get => Transform?.Location ?? Vector.Zero;
-			set
-			{
-				if (Transform != null)
-					Transform.Location = value;
-			}
-		}
-
-		Vector ITilemap.Scale
-		{
-			get => Transform?.Scale ?? (1, 1);
-			set
-			{
-				if (Transform != null)
-					Transform.Scale = value;
-			}
-		}
-
-		float ITilemap.Angle { get; set; }
-
-		public TilemapRenderer(VectorInt tileSize)
+		public Tilemap(VectorInt tileSize)
 		{
 			TileSize = tileSize;
 			tiles = new Dictionary<VectorInt, (ITile tile, Color? color)>();
@@ -64,11 +42,10 @@ namespace DotFeather
 			set => SetTile(point, value);
 		}
 
-		public override void OnRender()
+		protected override void OnRender()
 		{
-			if (Transform == null) return;
-			var gl = Transform.GlobalLocation;
-			var gs = Transform.GlobalScale;
+			var gl = AbsoluteLocation;
+			var gs = AbsoluteScale;
 			// カリング
 			bool filter(KeyValuePair<VectorInt, (ITile, Color?)> kv)
 			{
@@ -80,12 +57,12 @@ namespace DotFeather
 
 			foreach (var (tl, (tile, color)) in tiles.Where(filter))
 			{
-				var dest = gl + tl * TileSize * Transform.GlobalScale;
+				var dest = gl + tl * TileSize * AbsoluteScale;
 				tile.Draw(this, tl, dest, color);
 			}
 		}
 
-		public override void OnDestroy()
+		protected override void OnDestroy()
 		{
 			Clear();
 		}

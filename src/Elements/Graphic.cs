@@ -1,17 +1,19 @@
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace DotFeather
 {
-	public class Graphic : PrimitiveElement
+	public class Graphic : ElementBase
 	{
-		public new void Clear()
+		public void Clear()
 		{
-			ClearComponents();
+			shapes.ForEach(s => s.Parent = null);
+			shapes.Clear();
 		}
 
 		public Graphic Pixel(VectorInt p, Color color)
 		{
-			AddComponent(ShapeRenderer.CreatePixel(p, color));
+			Add(Shape.CreatePixel(p, color));
 			return this;
 		}
 
@@ -20,7 +22,7 @@ namespace DotFeather
 
 		public Graphic Line(VectorInt start, VectorInt end, Color color, int lineWidth = 1)
 		{
-			AddComponent(ShapeRenderer.CreateLine(start, end, color, lineWidth));
+			Add(Shape.CreateLine(start, end, color, lineWidth));
 			return this;
 		}
 
@@ -29,7 +31,7 @@ namespace DotFeather
 
 		public Graphic Rect(VectorInt start, VectorInt end, Color color, int lineWidth = 0, Color? lineColor = null)
 		{
-			AddComponent(ShapeRenderer.CreateRect(start, end, color, lineWidth, lineColor));
+			Add(Shape.CreateRect(start, end, color, lineWidth, lineColor));
 			return this;
 		}
 
@@ -38,7 +40,7 @@ namespace DotFeather
 
 		public Graphic Triangle(VectorInt v1, VectorInt v2, VectorInt v3, Color color, int lineWidth = 0, Color? lineColor = null)
 		{
-			AddComponent(ShapeRenderer.CreateTriangle(v1, v2, v3, color, lineWidth, lineColor));
+			Add(Shape.CreateTriangle(v1, v2, v3, color, lineWidth, lineColor));
 			return this;
 		}
 
@@ -50,14 +52,26 @@ namespace DotFeather
 
 		public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = null)
 		{
-			AddComponent(ShapeRenderer.CreateEllipse(x1, y1, x2, y2, color, lineWidth, lineColor));
+			Add(Shape.CreateEllipse(x1, y1, x2, y2, color, lineWidth, lineColor));
 			return this;
 		}
 
 		public Graphic Polygon(Color color, int lineWidth = 0, Color? lineColor = null, params VectorInt[] vertices)
 		{
-			AddComponent(ShapeRenderer.CreatePolygon(color, lineWidth, lineColor, vertices));
+			Add(Shape.CreatePolygon(color, lineWidth, lineColor, vertices));
 			return this;
 		}
+
+		protected override void OnRender()
+		{
+			shapes.ForEach(s => s.RenderTo(AbsoluteLocation + s.Location, AbsoluteScale * s.Scale));
+		}
+
+		private void Add(Shape shape)
+		{
+			shapes.Add(shape);
+		}
+
+		private readonly List<Shape> shapes = new List<Shape>();
 	}
 }

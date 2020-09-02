@@ -12,13 +12,12 @@ namespace DotFeather.Demo
 		{
 			Print("Press ESC to return");
 
-			Root =
-				new Element("root",
-					sprite = new Sprite("rect.png"),
-					nineslice = new NineSliceSprite("rect.png", 16, 16, 16, 16),
-					t1 = new TextElement("Sprite", 18, DFFontStyle.Normal, Color.Lime),
-					t2 = new TextElement("9-slice Sprite", 18, DFFontStyle.Normal, Color.Lime)
-				);
+			Root.AddRange(
+				sprite = new Sprite("rect.png"),
+				nineslice = new NineSliceSprite("rect.png", 16, 16, 16, 16),
+				t1 = new TextElement("Sprite", 18, DFFontStyle.Normal, Color.Lime),
+				t2 = new TextElement("9-slice Sprite", 18, DFFontStyle.Normal, Color.Lime)
+			);
 		}
 
 		public override void OnUpdate()

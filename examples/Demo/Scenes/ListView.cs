@@ -6,12 +6,9 @@ namespace DotFeather.Demo
 {
 	public partial class LauncherScene
 	{
-		public class ListView : Component
+		public class ListView : Container
 		{
 			public ObservableCollection<ListViewItem> Items { get; } = new ObservableCollection<ListViewItem>();
-
-			public int Width { get; set; }
-			public int Height { get; set; }
 
 			public int ItemHeight
 			{
@@ -38,17 +35,13 @@ namespace DotFeather.Demo
 				if (items != null)
 					Items = new ObservableCollection<ListViewItem>(items);
 				Items.CollectionChanged += (_, __) => UpdateList();
-			}
 
-			public override void OnStart()
-			{
 				var t = Texture2D.CreateSolid(Color.FromArgb(24, 24, 24), 1, 1);
 				backdrop = new Sprite(t);
-				inner = new Element("inner");
-				Element!.Add(backdrop);
-				Element!.Add(inner);
-				trimmer = new Trimmer(Width, Height);
-				AddComponent(trimmer);
+				inner = new Container();
+				Add(backdrop);
+				Add(inner);
+				IsTrimmable = true;
 			}
 
 			public void BeginUpdating() => isUpdating = true;
@@ -62,24 +55,19 @@ namespace DotFeather.Demo
 				}
 			}
 
-			public override void OnUpdate()
+			protected override void OnUpdate()
 			{
-				if (Transform == null) return;
 				base.OnUpdate();
 
-				if (backdrop != null && trimmer != null)
-				{
-					backdrop.Width = trimmer.Width = Width;
-					backdrop.Height = trimmer.Height = Height;
-				}
+				backdrop.Size = inner.Size = Size;
 
 				var (mx, my) = DFMouse.Position;
-				var (x, y) = Transform.Location;
+				var (x, y) = Location;
 
 				// 範囲外なら無視
-				if (!Intersects(DFMouse.Position, Transform.Location, Transform.Location + (Width, Height))) return;
+				if (!Intersects(DFMouse.Position, Location, Location + Size)) return;
 
-				var innerY = inner?.Transform.Location.Y ?? 0;
+				var innerY = inner.Location.Y; ;
 
 				if (landingPoint == null)
 				{
@@ -89,7 +77,7 @@ namespace DotFeather.Demo
 				if (DFMouse.IsLeftDown)
 				{
 					landingPoint = DFMouse.Position;
-					landingScrollY = (int)(inner?.Location.Y ?? 0);
+					landingScrollY = (int)inner.Location.Y;
 				}
 				if (landingPoint is Vector v)
 				{
@@ -103,7 +91,7 @@ namespace DotFeather.Demo
 							for (var i = 0; i < Items.Count; i++)
 							{
 								var elHeight = ItemHeight + padding + 16;
-								var ely = y + i * elHeight + padding + inner?.Location.Y ?? 0;
+								var ely = y + i * elHeight + padding + inner.Location.Y;
 								if (ely <= my && my <= ely + elHeight)
 									ItemSelected?.Invoke(i, Items[i]);
 							}
@@ -117,8 +105,7 @@ namespace DotFeather.Demo
 				if (innerY > 0)
 					innerY = 0;
 
-				if (inner != null)
-					inner.Location = new Vector(inner.Location.X, innerY);
+				inner.Location = new Vector(inner.Location.X, innerY);
 			}
 
 			private bool Intersects(Vector point, Vector topLeft, Vector bottomRight)
@@ -136,20 +123,20 @@ namespace DotFeather.Demo
 				if (isUpdating)
 					return;
 
-				inner?.Clear();
+				inner.Clear();
 				var y = padding;
 				foreach (var item in Items)
 				{
 					var text = new TextElement(item.Text, DFFont.GetDefault(ItemHeight), Color.White) { Location = (padding + ItemHeight + padding, y) };
-					inner?.Add(text);
+					inner.Add(text);
 
 					y += ItemHeight;
 
 					if (item.Description != null)
 					{
 						y += 4;
-						var desc = new TextElement(item.Description, DFFont.GetDefault(12), Color.LightGray) { Location = (text.Transform.Location.X, y) };
-						inner?.Add(desc);
+						var desc = new TextElement(item.Description, DFFont.GetDefault(12), Color.LightGray) { Location = (text.Location.X, y) };
+						inner.Add(desc);
 						y += 12;
 					}
 					else
@@ -168,9 +155,8 @@ namespace DotFeather.Demo
 			private Vector? landingPoint;
 			private int landingScrollY;
 			private bool isUpdating = false;
-			private Sprite? backdrop;
-			private Element inner;
-			private Trimmer? trimmer;
+			private readonly Sprite backdrop;
+			private readonly Container inner;
 
 			public delegate void ItemSelectedEventHandler(int index, ListViewItem item);
 		}

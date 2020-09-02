@@ -8,10 +8,12 @@ namespace DotFeather.Demo
 		public override void OnStart(System.Collections.Generic.Dictionary<string, object> _)
 		{
 			qbox = Texture2D.LoadAndSplitFrom("qbox.png", 8, 1, (16, 16));
-			Root.Add(
-				new Sprite() { Location = (128, 128) }
-					.With(new SpriteAnimator(qbox, true, -1, 8))
-			);
+			var sprite = new Sprite() { Location = (128, 128) };
+			Root.Add(sprite);
+			var animator = sprite.AddComponent<SpriteAnimator>();
+			animator.Textures = qbox;
+			animator.LoopTimes = -1;
+			animator.Duration = 8;
 			DF.Console.Print("Press ESC to return");
 		}
 

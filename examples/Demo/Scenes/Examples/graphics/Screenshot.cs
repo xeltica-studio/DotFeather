@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,31 +58,31 @@ namespace DotFeather.Demo
 
 		IEnumerator DrawAll()
 		{
-			VectorInt Rnd() => Random.NextVectorInt(Window.Width, Window.Height);
+			VectorInt Rnd() => random.NextVectorInt(Window.Width, Window.Height);
 
 			for (var i = 0; i < 120; i++)
 			{
 				var (v1, v2, v3) = (Rnd(), Rnd(), Rnd());
-				switch (Random.Next(6))
+				switch (random.Next(6))
 				{
 					case 0:
-						canvas.Line(v1, v2, Random.NextColor());
+						canvas.Line(v1, v2, random.NextColor());
 						break;
 					case 1:
-						canvas.Rect(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor());
+						canvas.Rect(v1, v2, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 2:
-						canvas.Ellipse(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor());
+						canvas.Ellipse(v1, v2, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 3:
-						canvas.Pixel(v1, Random.NextColor());
+						canvas.Pixel(v1, random.NextColor());
 						break;
 					case 4:
-						canvas.Triangle(v1, v2, v3, Random.NextColor(), Random.Next(4), Random.NextColor());
+						canvas.Triangle(v1, v2, v3, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 5:
 						var v = Enumerable.Repeat(5, 15).Select(_ => Rnd()).ToArray();
-						canvas.Polygon(Random.NextColor(), Random.Next(4), Random.NextColor(), v);
+						canvas.Polygon(random.NextColor(), random.Next(4), random.NextColor(), v);
 						break;
 				}
 				if (i % 8 == 0)
@@ -89,6 +90,7 @@ namespace DotFeather.Demo
 			}
 		}
 
+		private readonly Random random = new Random();
 		private readonly Graphic canvas = new Graphic();
 		private Texture2D tex;
 		private Sprite? sprite;

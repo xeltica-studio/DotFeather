@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -17,31 +18,33 @@ namespace DotFeather.Demo
 
 			var canvas = new Graphic() { Location = (400, 200) };
 
-			VectorInt Rnd() => Random.NextVectorInt(256, 256);
+			var random = new Random(300);
+
+			VectorInt Rnd() => random.NextVectorInt(256, 256);
 
 			Parallel.For(0, 120, (_) =>
 			{
 				var (v1, v2, v3) = (Rnd(), Rnd(), Rnd());
-				switch (Random.Next(6))
+				switch (random.Next(6))
 				{
 					case 0:
-						canvas.Line(v1, v2, Random.NextColor());
+						canvas.Line(v1, v2, random.NextColor());
 						break;
 					case 1:
-						canvas.Rect(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor());
+						canvas.Rect(v1, v2, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 2:
-						canvas.Ellipse(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor());
+						canvas.Ellipse(v1, v2, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 3:
-						canvas.Pixel(v1, Random.NextColor());
+						canvas.Pixel(v1, random.NextColor());
 						break;
 					case 4:
-						canvas.Triangle(v1, v2, v3, Random.NextColor(), Random.Next(4), Random.NextColor());
+						canvas.Triangle(v1, v2, v3, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 5:
 						var v = Enumerable.Repeat(5, 15).Select(_ => Rnd()).ToArray();
-						canvas.Polygon(Random.NextColor(), Random.Next(4), Random.NextColor(), v);
+						canvas.Polygon(random.NextColor(), random.Next(4), random.NextColor(), v);
 						break;
 				}
 			});
@@ -54,9 +57,9 @@ namespace DotFeather.Demo
 			{
 				container.Add(new Sprite(ichigo)
 				{
-					Location = Random.NextVector(Window.Width, Window.Height),
-					Scale = Vector.One + Random.NextVectorFloat() * 7,
-					TintColor = Random.NextColor(),
+					Location = random.NextVector(Window.Width, Window.Height),
+					Scale = Vector.One + random.NextVectorFloat() * 7,
+					TintColor = random.NextColor(),
 				});
 			});
 

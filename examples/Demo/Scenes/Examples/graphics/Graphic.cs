@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,34 +26,34 @@ namespace DotFeather.Demo
 			canvas.Location += DFMouse.Scroll * (-1, 1);
 			if (DFMouse.IsLeftDown)
 			{
-				VectorInt Rnd() => Random.NextVectorInt(Window.Width, Window.Height);
+				VectorInt Rnd() => random.NextVectorInt(Window.Width, Window.Height);
 				var (v1, v2, v3) = (Rnd(), Rnd(), Rnd());
-				switch (Random.Next(6))
+				switch (random.Next(6))
 				{
 					case 0:
 						DF.Console.Print($"Line from {v1} to {v2}");
-						canvas.Line(v1, v2, Random.NextColor());
+						canvas.Line(v1, v2, random.NextColor());
 						break;
 					case 1:
 						DF.Console.Print($"Rect from {v1} to {v2}");
-						canvas.Rect(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor());
+						canvas.Rect(v1, v2, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 2:
 						DF.Console.Print($"Ellipse from {v1} to {v2}");
-						canvas.Ellipse(v1, v2, Random.NextColor(), Random.Next(4), Random.NextColor());
+						canvas.Ellipse(v1, v2, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 3:
 						DF.Console.Print($"Pixel at {v1}");
-						canvas.Pixel(v1, Random.NextColor());
+						canvas.Pixel(v1, random.NextColor());
 						break;
 					case 4:
 						DF.Console.Print($"Triangle of {v1}, {v2} and {v3}");
-						canvas.Triangle(v1, v2, v3, Random.NextColor(), Random.Next(4), Random.NextColor());
+						canvas.Triangle(v1, v2, v3, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 5:
 						DF.Console.Print($"Polygon");
 						var v = Enumerable.Repeat(5, 15).Select(_ => Rnd()).ToArray();
-						canvas.Polygon(Random.NextColor(), Random.Next(4), Random.NextColor(), v);
+						canvas.Polygon(random.NextColor(), random.Next(4), random.NextColor(), v);
 						break;
 				}
 			}
@@ -61,5 +62,6 @@ namespace DotFeather.Demo
 		}
 
 		private readonly Graphic canvas = new Graphic();
+		private readonly Random random = new Random();
 	}
 }

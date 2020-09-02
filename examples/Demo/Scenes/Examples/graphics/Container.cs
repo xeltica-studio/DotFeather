@@ -68,8 +68,8 @@ namespace DotFeather.Demo
 
 		public override void OnUpdate()
 		{
-			if (DFKeyboard.Up) container.Scale += Vector.One * Time.DeltaTime;
-			if (DFKeyboard.Down) container.Scale -= Vector.One * Time.DeltaTime;
+			if (DFKeyboard.Up) container.Scale += Vector.One * 0.25f * Time.DeltaTime;
+			if (DFKeyboard.Down) container.Scale -= Vector.One * 0.25f * Time.DeltaTime;
 			container.Location += DFMouse.Scroll * (-1, 1);
 			if (DFKeyboard.Escape.IsKeyUp)
 				Router.ChangeScene<LauncherScene>();

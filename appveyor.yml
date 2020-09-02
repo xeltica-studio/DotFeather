@@ -42,71 +42,9 @@ deploy:
     draft: false
     prerelease: true
     description: |
-      ## DotFeather v3 Public Beta 3
+      ## DotFeather v3 Public Beta 3.1
 
-      このアップデートでは、Element API の大規模な仕様変更を行いました。
-
-      このバージョンの Element API は、v2 以前の Drawable と非常に似たシンプルなアーキテクチャにしました。
-
-      v3 PB1, PB2 と比較したチェンジログを書いてしまうとかえって混乱するので、改めて DotFeather 2.9.1 からの変更点を記載します。
-
-      ### 描画機能
-
-      - ElementBase 抽象クラスを追加しました
-        - ElementBase を継承するクラスをエレメントと呼び、DotFeather v3 における描画の基本単位とします
-      - Texture9Sliced 構造体を追加しました
-      - Component 抽象クラスを追加しました
-        - Component クラスを継承したコンポーネントをエレメントにアタッチすることで、新しいクラスを作ることなくエレメントを拡張できます
-      - 描画可能オブジェクト(IDrawable インターフェイスを実装するクラス)を全てエレメントとして再実装しました
-      - NineSliceSplite クラスは Texture2D 配列の代わりに Texture9Sliced 構造体を使うようになりました
-      - Shape エレメントを追加しました
-        - 従来 Graphic オブジェクトが描画する図形を表現していたクラスのリメイクです
-        - Shape エレメントを単独で生成することで、Graphic エレメント無しに図形描画ができるように
-      - Container クラスのインデクサは読み取り専用になりました
-      - 以下のインターフェイスを廃止しました。ElementBase 抽象クラスに置き換えてください
-        - IDrawable
-        - ISizedDrawable
-        - IContainable
-        - IUpdatable
-      - TextureDrawableBase 抽象クラスを廃止しました
-      - Sprite.LoadFrom メソッドを廃止しました。代わりにコンストラクタを用いてください
-      - NineSliceSplite.LoadFrom メソッドを廃止しました。代わりにコンストラクタを用いてください
-      - ITile インターフェイスの定義が変更されました。カスタムタイルを定義している場合はご注意ください
-      - Tilemap.CurrentDrawingPosition プロパティを廃止しました
-      - AnimatingSprite クラスは廃止しました。代わりに SpriteAnimator コンポーネントを Sprite クラスにアタッチしてください
-      - IDrawable インターフェイスに存在した Angle プロパティを廃止しました。もともと角度の設定機能は未実装のまま放置されていたので、角度を設定できるようになってから再実装します
-      - IDrawable インターフェイスに存在した ZOrder プロパティを廃止しました。使用していた場合、手動で並び替えるようにしてください
-
-      ### Singleton Game API
-
-      - GameBase 抽象クラスを廃止しました
-        - GameBase にあった API の多くは、新しいAPIを使うことで引き続きアクセスできます
-      - `IWindow` インターフェイス を追加
-        - ゲームのレンダリングを行う画面周りの機能を提供します
-        - `GameBase` の持っていたメンバーの多くが提供されます
-      - `IConsole` インターフェイスを追加
-        - `Gamebase` の `Print` `Cls` `ConsoleCursor` など、コンソール系の API はこちらです
-      - `Run` `Exit` `NextFrame` メソッド、`Root` プロパティは `DF` クラスからアクセスできます
-      - `DF.Window` で取得できる `IWindow` インターフェイスのインスタンスは、`GameBase` のインスタンスメンバーの多くを用意していますが、例外もあります
-        - `On` から始まるイベント系の仮想メソッドは、例外を除き全て `IWindow` インターフェイスのイベントとして再実装されています
-          - イベントハンドラーを使う形に書き換えてください
-        - `Visible` プロパティは名前を `IsVisible` に変更しました
-        - `Random` プロパティ、`Randomize` メソッドは廃止しました。`System.Random` をそのまま使用してください
-        - `StartCoroutine` `StopCoroutine` メソッドは廃止しました。 `CoroutineRunner.Start` `CoroutineRunner.Stop` を使用してください
-        - `Dispose` メソッドは廃止しました
-        - `KeyDown` `KeyUp` `KeyPress` イベントは廃止しました。`DFKeyboard` クラスに新設された同名のイベントハンドラーを使用してください
-        - 次のメンバーは `DF.Console` にあるのでそちらを使用してください
-          - `ConsoleCursor` プロパティ
-          - `ConsoleSize` プロパティ
-          - `Print` メソッド
-          - `Cls` メソッド
-      - `Scene` の `OnStart` `OnUpdate` `OnDestroy` メソッドから、 `Router router` `GameBase game` の引数を廃止しました
-
-      ### その他
-      - `Vector` クラスと `(float, float)` タプル間で暗黙的型変換されるようになりました
-        - 例えば `Location = (16, 48)` というシンプルな書き方ができます
-      - `VectorInt` クラスと `(int, int)` タプル間で暗黙的型変換されるようになりました
-      - `System.Drawing` 名前空間とのクラス名の衝突を防ぐため、`Font` `FontStyle` クラスをそれぞれ `DFFont` `DFFontStyle` クラスに名称変更しました
+      - Container をスケーリングした場合の挙動を修正（多分）
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

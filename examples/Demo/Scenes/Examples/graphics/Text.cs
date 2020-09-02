@@ -1,3 +1,5 @@
+using System;
+
 namespace DotFeather.Demo
 {
 	[DemoScene("/graphics/text")]
@@ -16,9 +18,9 @@ namespace DotFeather.Demo
 			if (time > 0.0625f)
 			{
 				Root.Add(
-					new TextElement($"Test {count}", DFFont.GetDefault(Random.Next(8, 48)), Random.NextColor())
+					new TextElement($"Test {count}", DFFont.GetDefault(random.Next(8, 48)), random.NextColor())
 					{
-						Location = Random.NextVector(Window.Width, Window.Height)
+						Location = random.NextVector(Window.Width, Window.Height)
 					}
 				);
 				time = 0;
@@ -30,5 +32,6 @@ namespace DotFeather.Demo
 
 		private float time;
 		private int count;
+		private readonly Random random = new Random();
 	}
 }

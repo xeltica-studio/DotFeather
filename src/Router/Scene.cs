@@ -24,11 +24,6 @@ namespace DotFeather
 		}
 
 		/// <summary>
-		/// Get a random generator.
-		/// </summary>
-		public Random Random { get; private set; } = new Random();
-
-		/// <summary>
 		/// Get or set background color.
 		/// </summary>
 		public Color? BackgroundColor { get; set; }
@@ -65,15 +60,6 @@ namespace DotFeather
 		{
 			get => DF.Console.Cursor;
 			set => DF.Console.Cursor = value;
-		}
-
-		/// <summary>
-		/// Initialize the random generator.
-		/// </summary>
-		/// <param name="seed">Seed value. If not specified, using a default constructor of <see cref="Random"/> to initialize. </param>
-		public void Randomize(int? seed = null)
-		{
-			Random = seed is int s ? new Random(s) : new Random();
 		}
 
 		/// <summary>

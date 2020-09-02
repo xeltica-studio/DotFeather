@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Drawing;
 
@@ -30,10 +31,10 @@ namespace DotFeather.Demo
 			{
 				map.SetTile(
 					// Determine the random position
-					Random.NextVectorInt(Window.Width / 16, Window.Height / 16),
+					random.NextVectorInt(Window.Width / 16, Window.Height / 16),
 					tile,
 					// Specify tint color with 50% probability
-					Random.Next(10) < 5 ? default(Color?) : Random.NextColor()
+					random.Next(10) < 5 ? default(Color?) : random.NextColor()
 				);
 			}
 			yield return new WaitForSeconds(0.8f);
@@ -81,5 +82,6 @@ namespace DotFeather.Demo
 
 			Print("Press ESC to return");
 		}
+		private readonly Random random = new Random();
 	}
 }

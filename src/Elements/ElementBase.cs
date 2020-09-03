@@ -69,7 +69,7 @@ namespace DotFeather
 			var p = Parent;
 			if (p == null) return;
 			AbsoluteScale *= p.AbsoluteScale;
-			AbsoluteLocation *= p.Scale;
+			AbsoluteLocation *= p.AbsoluteScale;
 			AbsoluteLocation += p.AbsoluteLocation;
 		}
 

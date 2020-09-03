@@ -42,10 +42,9 @@ deploy:
     draft: false
     prerelease: true
     description: |
-      ## DotFeather v3 Public Beta 3.2
+      ## DotFeather v3 Public Beta 3.3
 
       - Container をスケーリングした場合の挙動をもう一度修正
-      - **Scene.Random プロパティおよび Scene.Randomize メソッドを廃止**
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

@@ -35,6 +35,35 @@ namespace DotFeather
 			Size = Texture.Size;
 		}
 
+		protected override void OnRender()
+		{
+			var left = Texture.TopLeft.Size.X;
+			var right = Texture.TopRight.Size.X;
+			var top = Texture.TopLeft.Size.Y;
+			var bottom = Texture.BottomLeft.Size.Y;
+
+			var xSpan = Width - left - right;
+			var ySpan = Height - top - bottom;
+			var loc = AbsoluteLocation;
+			var scale = AbsoluteScale;
+
+			void Draw(Texture2D tex, Vector location, float? width = null, float? height = null)
+			{
+				DF.TextureDrawer.Draw(tex, loc + location * scale, scale, TintColor, width, height);
+			}
+
+			// 9枚を全て描画する
+			Draw(Texture.TopLeft, (0, 0));
+			Draw(Texture.TopCenter, Vector.Right * left, xSpan);
+			Draw(Texture.TopRight, Vector.Right * (left + xSpan));
+			Draw(Texture.MiddleLeft, Vector.Down * top, null, ySpan);
+			Draw(Texture.MiddleCenter, (left, top), xSpan, ySpan);
+			Draw(Texture.MiddleRight, (left + xSpan, top), null, ySpan);
+			Draw(Texture.BottomLeft, (0, top + ySpan), null);
+			Draw(Texture.BottomCenter, (left, top + ySpan), xSpan);
+			Draw(Texture.BottomRight, (left + xSpan, top + ySpan), null);
+		}
+
 		protected override void OnDestroy()
 		{
 			generatedTexture?.Dispose();

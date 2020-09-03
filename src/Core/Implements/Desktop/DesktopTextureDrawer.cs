@@ -1,19 +1,19 @@
-#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
+﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 using System;
 using System.Drawing;
 using OpenTK.Graphics.OpenGL;
 
-namespace DotFeather
+namespace DotFeather.Internal
 {
 	/// <summary>
 	/// <see cref="Texture2D"/> オブジェクトをバッファ上に描画する機能を提供します。
 	/// </summary>
-	public static class TextureDrawer
+	internal class DesktopTextureDrawer : ITextureDrawer
 	{
 		/// <summary>
 		/// テクスチャを描画します。
 		/// </summary>
-		public static void Draw(Texture2D texture, Vector location, Vector scale, Color? color = null, float? width = null, float? height = null)
+		public void Draw(Texture2D texture, Vector location, Vector scale, Color? color = null, float? width = null, float? height = null, float angle = 0)
 		{
 			location = location.ToDeviceCoord();
 			scale = scale.ToDeviceCoord();
@@ -60,7 +60,7 @@ namespace DotFeather
 			}
 		}
 
-		private static void Vertex(double tcx, double tcy, (float x, float y) vx, Color? color)
+		private void Vertex(double tcx, double tcy, (float x, float y) vx, Color? color)
 		{
 			var col = color ?? Color.White;
 

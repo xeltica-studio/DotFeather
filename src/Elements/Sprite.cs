@@ -40,7 +40,7 @@ namespace DotFeather
 		protected override void OnRender()
 		{
 			if (!(Texture is Texture2D tex)) return;
-			TextureDrawer.Draw(tex, AbsoluteLocation, AbsoluteScale, TintColor, Width, Height);
+			DF.TextureDrawer.Draw(tex, AbsoluteLocation, AbsoluteScale, TintColor, Width, Height);
 		}
 
 		protected override void OnDestroy()

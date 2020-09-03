@@ -61,7 +61,7 @@ namespace DotFeather
 
 		protected override void OnRender()
 		{
-			TextureDrawer.Draw(texture, AbsoluteLocation, AbsoluteScale);
+			DF.TextureDrawer.Draw(texture, AbsoluteLocation, AbsoluteScale);
 		}
 
 		protected override void OnDestroy()

@@ -1,7 +1,5 @@
 using System;
-using OpenTK;
 using System.Linq;
-using OpenTK.Graphics.OpenGL;
 using System.Drawing;
 using static DotFeather.MiscUtility;
 
@@ -12,7 +10,7 @@ namespace DotFeather
 	/// </summary>
 	public class Shape : ElementBase
 	{
-		private Shape(Color c, PrimitiveType type, int lineWidth, Color? lineColor, params VectorInt[] vertices)
+		private Shape(Color c, ShapeType type, int lineWidth, Color? lineColor, params VectorInt[] vertices)
 		{
 			color = c;
 			this.lineWidth = lineWidth;
@@ -23,19 +21,19 @@ namespace DotFeather
 		}
 
 		public static Shape CreatePixel(VectorInt p, Color color)
-			=> new Shape(color, PrimitiveType.Points, 0, null, p);
+			=> new Shape(color, ShapeType.Pixel, 0, null, p);
 
 		public static Shape CreatePixel(int x, int y, Color color)
 			=> CreatePixel((x, y), color);
 
 		public static Shape CreateLine(VectorInt start, VectorInt end, Color color, int lineWidth = 1)
-			=> new Shape(color, PrimitiveType.Lines, lineWidth, null, start, end);
+			=> new Shape(color, ShapeType.Line, lineWidth, null, start, end);
 
 		public static Shape CreateLine(int sx, int sy, int ex, int ey, Color color, int lineWidth = 1)
 			=> CreateLine((sx, sy), (ex, ey), color, lineWidth);
 
 		public static Shape CreateRect(VectorInt start, VectorInt end, Color color, int lineWidth = 0, Color? lineColor = null)
-			=> new Shape(color, PrimitiveType.Quads, lineWidth, lineColor,
+			=> new Shape(color, ShapeType.Rect, lineWidth, lineColor,
 				(start.X, start.Y),
 				(start.X, end.Y),
 				(end.X, end.Y),
@@ -46,7 +44,7 @@ namespace DotFeather
 			=> CreateRect((sx, sy), (ex, ey), color, lineWidth, lineColor);
 
 		public static Shape CreateTriangle(VectorInt v1, VectorInt v2, VectorInt v3, Color color, int lineWidth = 0, Color? lineColor = null)
-			=> new Shape(color, PrimitiveType.Triangles, lineWidth, lineColor, v1, v2, v3);
+			=> new Shape(color, ShapeType.Triangle, lineWidth, lineColor, v1, v2, v3);
 
 		public static Shape CreateTriangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color, int lineWidth = 0, Color? lineColor = null)
 			=> CreateTriangle((x1, y1), (x2, y2), (x3, y3), color, lineWidth, lineColor);
@@ -70,11 +68,11 @@ namespace DotFeather
 				var (ox, oy) = (x1 + rw, y1 + rh);
 				vertices[i] = ((int)(Math.Cos(rad) * rw + ox), (int)(Math.Sin(rad) * rh + oy));
 			}
-			return new Shape(color, PrimitiveType.Polygon, lineWidth, lineColor, vertices);
+			return new Shape(color, ShapeType.Polygon, lineWidth, lineColor, vertices);
 		}
 
 		public static Shape CreatePolygon(Color color, int lineWidth = 0, Color? lineColor = null, params VectorInt[] vertices)
-			=> new Shape(color, PrimitiveType.Polygon, lineWidth, lineColor, vertices);
+			=> new Shape(color, ShapeType.Polygon, lineWidth, lineColor, vertices);
 
 		protected override void OnRender()
 		{
@@ -86,69 +84,13 @@ namespace DotFeather
 			if (vertices.Length == 0)
 				return;
 
-			var hw = DF.Window.ActualWidth / 2;
-			var hh = DF.Window.ActualHeight / 2;
-
-			GL.Enable(EnableCap.Blend);
-			GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
-
-			if (color.A > 0)
-			{
-				using (new GLContext(type))
-				{
-					if (type == PrimitiveType.Lines) GL.LineWidth(lineWidth);
-					foreach (var vc in vertices)
-					{
-						var dest = absoluteLocation + vc * absoluteScale;
-						// Convert device point to viewport point
-						var vpp = dest.ToDeviceCoord().ToViewportPoint(hw, hh);
-						Vertex(color, vpp);
-					}
-				}
-			}
-
-			if (lineWidth > 0 && lineColor is Color lc)
-			{
-				using (new GLContext(PrimitiveType.Lines))
-				{
-					GL.LineWidth(lineWidth);
-					Vector? prevVertex = null;
-					Vector? first = null;
-					foreach (var vc in vertices)
-					{
-						var dest = absoluteLocation + vc * absoluteScale;
-						// Convert device point to viewport point
-						var vp = dest.ToDeviceCoord().ToViewportPoint(hw, hh);
-						if (first == null)
-							first = vp;
-
-						if (prevVertex is Vector pv)
-						{
-							var pVp = pv;
-							Vertex(lc, pVp);
-							Vertex(lc, vp);
-						}
-						prevVertex = vp;
-					}
-					Vertex(lc, prevVertex ?? Vector.One);
-					Vertex(lc, first ?? Vector.One);
-				}
-			}
-
-			GL.Disable(EnableCap.Blend);
-		}
-
-		private void Vertex(Color col, Vector vec)
-		{
-			GL.Color4(col);
-			GL.Vertex2(vec.X, vec.Y);
+			DF.PrimitiveDrawer.Draw(absoluteLocation, absoluteScale, vertices, type, color, lineWidth, lineColor);
 		}
 
 		private readonly Color color;
 		private readonly int lineWidth;
 		private readonly Color? lineColor;
 		private readonly VectorInt[] vertices;
-		private readonly PrimitiveType type;
+		private readonly ShapeType type;
 	}
-
 }

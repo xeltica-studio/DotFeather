@@ -42,9 +42,23 @@ deploy:
     draft: false
     prerelease: true
     description: |
-      ## DotFeather v3 Public Beta 3.3
+      ## DotFeather v3 Public Beta 4
 
-      - Container をスケーリングした場合の挙動をもう一度修正
+      ## 仕様変更
+      - `IWindow.Dpi` プロパティの名称を `IWindow.PixelRatio` に変更
+      - テクスチャ描画用低レベル API を、クロスプラットフォーム対応を視野に入れ仕様変更
+        - `TextureDrawer` 静的クラスを廃止
+        - `ITextureDrawer` インターフェイスを追加
+        - `DF.TextureDrawer` 読み取り専用プロパティを追加
+          - テクスチャを扱う標準のエレメントはこれを使うように
+          - テクスチャ描画プラグイン開発者はこちらに置き換えるようにしてください
+      - 図形描画用の低レベル API を追加
+        - `IPrimitiveDrawer` インターフェイスを追加
+        - `DF.PrimitiveDrawer` 読み取り専用プロパティを追加
+          - `Shape` エレメントはこの API を使うように
+
+      ## バグ修正
+      - NineSliceSprite エレメントが描画されない不具合を修正
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

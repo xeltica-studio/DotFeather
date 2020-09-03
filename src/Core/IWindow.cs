@@ -89,9 +89,9 @@ namespace DotFeather
 		int RefreshRate { get; }
 
 		/// <summary>
-		/// Get or set DPI of this game window.
+		/// Get or set pixel ratio of this game window.
 		/// </summary>
-		float Dpi { get; }
+		float PixelRatio { get; }
 
 		/// <summary>
 		/// Get or set a title of this game window.

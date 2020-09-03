@@ -24,7 +24,7 @@ namespace DotFeather.Demo
 			Print($"ActualSize {w.ActualSize}");
 			Print($"IsFullScreen {w.IsFullScreen}");
 			Print($"IsFocused {w.IsFocused}");
-			Print($"DPI {w.Dpi}");
+			Print($"DPI {w.PixelRatio}");
 			Print($"Title {w.Title}");
 
 			if (DFKeyboard.Escape.IsKeyUp)

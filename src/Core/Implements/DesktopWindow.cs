@@ -25,8 +25,8 @@ namespace DotFeather.Internal
 
 		public VectorInt Size
 		{
-			get => (VectorInt)((Vector)ActualSize / (FollowsDpi ? Dpi : 1));
-			set => ActualSize = (VectorInt)((Vector)value * (FollowsDpi ? Dpi : 1));
+			get => (VectorInt)((Vector)ActualSize / (FollowsDpi ? PixelRatio : 1));
+			set => ActualSize = (VectorInt)((Vector)value * (FollowsDpi ? PixelRatio : 1));
 		}
 
 		public VectorInt ActualSize
@@ -103,7 +103,7 @@ namespace DotFeather.Internal
 		// todo ゲーム起動前に変更可能にする
 		public int RefreshRate => 60;
 
-		public float Dpi => (float)window.ClientSize.Width / window.Size.Width;
+		public float PixelRatio => (float)window.ClientSize.Width / window.Size.Width;
 
 		public SDColor BackgroundColor { get; set; }
 
@@ -151,7 +151,7 @@ namespace DotFeather.Internal
 			window.KeyDown += (s, e) => DFKeyboard.OnKeyDown(new DFKeyEventArgs(e));
 			window.KeyUp += (s, e) => DFKeyboard.OnKeyUp(new DFKeyEventArgs(e));
 
-			window.MouseMove += (s, e) => DFMouse.Position = new VectorInt((int)(e.Position.X / (FollowsDpi ? Dpi : 1)), (int)(e.Position.Y / (FollowsDpi ? Dpi : 1)));
+			window.MouseMove += (s, e) => DFMouse.Position = new VectorInt((int)(e.Position.X / (FollowsDpi ? PixelRatio : 1)), (int)(e.Position.Y / (FollowsDpi ? PixelRatio : 1)));
 		}
 
 		public Texture2D TakeScreenshot()

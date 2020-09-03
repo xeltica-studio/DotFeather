@@ -8,6 +8,7 @@ namespace DotFeather
 	public static class DF
 	{
 		public static ITextureDrawer TextureDrawer { get; }
+		public static IPrimitiveDrawer PrimitiveDrawer { get; }
 		public static IWindow Window { get; }
 		public static IConsole Console { get; }
 		public static Container Root { get; private set; } = new Container();
@@ -41,10 +42,13 @@ namespace DotFeather
 			ctx = new DFSynchronizationContext();
 			SynchronizationContext.SetSynchronizationContext(ctx);
 
-			TextureDrawer = new Internal.DesktopTextureDrawer();
-			Window = new Internal.DesktopWindow();
 
 			// Add Plugins
+			TextureDrawer = new Internal.DesktopTextureDrawer();
+			PrimitiveDrawer = new Internal.DesktopPrimitiveDrawer();
+
+			Window = new Internal.DesktopWindow();
+
 			Console = new Internal.DFConsole();
 			Router = new Router();
 

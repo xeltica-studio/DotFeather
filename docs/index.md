@@ -14,7 +14,7 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
 	- [Inherit GameBase](gamebase.md)
 	- [Hello](hello.md)
 	- [Drawing](drawing.md)
-		- [Graphic](drawing/Graphic.md)
+		- [Graphic](drawing/graphic.md)
 		- [Sprite](drawing/sprite.md)
 		- [Tilemap](drawing/tilemap.md)
 		- [Text](drawing/text.md)

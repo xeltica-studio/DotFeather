@@ -42,23 +42,22 @@ deploy:
     draft: false
     prerelease: true
     description: |
-      ## DotFeather v3 Public Beta 4
+      ## DotFeather v3 Public Beta 5
 
-      ## 仕様変更
-      - `IWindow.Dpi` プロパティの名称を `IWindow.PixelRatio` に変更
-      - テクスチャ描画用低レベル API を、クロスプラットフォーム対応を視野に入れ仕様変更
-        - `TextureDrawer` 静的クラスを廃止
-        - `ITextureDrawer` インターフェイスを追加
-        - `DF.TextureDrawer` 読み取り専用プロパティを追加
-          - テクスチャを扱う標準のエレメントはこれを使うように
-          - テクスチャ描画プラグイン開発者はこちらに置き換えるようにしてください
-      - 図形描画用の低レベル API を追加
-        - `IPrimitiveDrawer` インターフェイスを追加
-        - `DF.PrimitiveDrawer` 読み取り専用プロパティを追加
-          - `Shape` エレメントはこの API を使うように
+      ## 新機能・改善
+      - Tilemap のレンダリング パフォーマンスを向上しました
+      - Tilemap#RenderingMode プロパティ（TilemapRenderingMode 型）を追加しました
+        - TilemapRenderingMode.RenderAll
+          - 全タイルのうち、画面に存在するものを毎回描画します（従来方式）
+        - TilemapRenderingMode.Scan
+          - 画面の左上から右下まで走査し、存在するタイルを描画します（新アルゴリズム）
+        - TilemapRenderingMode.Auto
+          - 画面に存在可能なタイル数よりも実際のタイル数が多い場合はScan, 少ない場合はRenderAllを意味します
+          - 標準はこれ
+          - どちらが最適なアルゴリズムかわかりきっている場合や、新方式で問題が発生する場合などは手動で設定してください
 
       ## バグ修正
-      - NineSliceSprite エレメントが描画されない不具合を修正
+      - ; キーを押すと画面が暗くなる不具合を修正しました
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

@@ -9,10 +9,10 @@ using Color = System.Drawing.Color;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.PixelFormats;
 using System.Threading;
-using OpenToolkit.Windowing.Desktop;
-using OpenToolkit.Windowing.Common;
-using OpenToolkit.Mathematics;
-using OpenToolkit.Graphics.OpenGL4;
+using OpenTK.Windowing.Desktop;
+using OpenTK.Windowing.Common;
+using OpenTK.Mathematics;
+using OpenTK.Graphics.OpenGL4;
 
 namespace DotFeather
 {
@@ -255,7 +255,7 @@ namespace DotFeather
 			nws.Size = new Vector2i(width, height);
 			nws.Title = title ?? "DotFeather Window";
 			nws.WindowBorder = WindowBorder.Fixed;
-			nws.APIVersion = new Version(4, 0);
+			nws.Flags = ContextFlags.ForwardCompatible;
 
 			window = new GameWindow(gws, nws);
 

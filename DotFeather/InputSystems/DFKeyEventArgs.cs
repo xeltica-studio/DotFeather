@@ -1,5 +1,6 @@
 using System;
-using OpenToolkit.Windowing.Common;
+using OpenTK.Windowing.Common;
+using OpenTK.Windowing.GraphicsLibraryFramework;
 
 namespace DotFeather
 {

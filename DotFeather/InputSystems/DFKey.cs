@@ -1,4 +1,4 @@
-using OpenToolkit.Input;
+using OpenTK.Input;
 
 namespace DotFeather
 {

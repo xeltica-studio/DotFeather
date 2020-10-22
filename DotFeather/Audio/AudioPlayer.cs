@@ -4,8 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using OpenToolkit.Audio;
-using OpenToolkit.Audio.OpenAL;
+using OpenTK.Audio.OpenAL;
+// using OpenTK.Audio;
 
 namespace DotFeather
 {
@@ -19,7 +19,9 @@ namespace DotFeather
 		/// </summary>
 		public AudioPlayer()
 		{
-			context = new AudioContext();
+			device = ALC.OpenDevice(null);
+			context = ALC.CreateContext(device, Span<int>.Empty);
+			ALC.MakeContextCurrent(context);
 			Gain = 1;
 		}
 
@@ -140,7 +142,7 @@ namespace DotFeather
 			using (var alSrc = new ALSource())
 			using (var alBuf = new ALBuffer())
 			{
-				AL.BufferData(alBuf, ALFormat.Stereo16, buffer, buffer.Length, source.SampleRate);
+				AL.BufferData(alBuf, ALFormat.Stereo16, buffer, source.SampleRate);
 				AL.BindBufferToSource(alSrc, alBuf);
 				AL.SourcePlay(alSrc);
 				while (AL.GetSourceState(alSrc) == ALSourceState.Playing)
@@ -153,7 +155,9 @@ namespace DotFeather
 		/// </summary>
 		public void Dispose()
 		{
-			context.Dispose();
+			ALC.MakeContextCurrent(ALContext.Null);
+			ALC.DestroyContext(context);
+			ALC.CloseDevice(device);
 		}
 
 		private async Task PlayAsync(IAudioSource source, int? loop = default, CancellationToken ct = default)
@@ -171,11 +175,11 @@ namespace DotFeather
 			using (alBuffers[1] = new ALBuffer())
 			{
 				var isFinished = !FillBuffer(arr, enumerator, ct);
-				AL.BufferData(alBuffers[0], ALFormat.Stereo16, arr, arr.Length * sizeof(short), source.SampleRate);
+				AL.BufferData(alBuffers[0], ALFormat.Stereo16, arr, source.SampleRate);
 				if (!isFinished)
 				{
 					isFinished = !FillBuffer(arr, enumerator, ct);
-					AL.BufferData(alBuffers[1], ALFormat.Stereo16, arr, arr.Length * sizeof(short), source.SampleRate);
+					AL.BufferData(alBuffers[1], ALFormat.Stereo16, arr, source.SampleRate);
 				}
 				AL.SourceQueueBuffer(alSrc, alBuffers[0]);
 				AL.SourceQueueBuffer(alSrc, alBuffers[1]);
@@ -211,7 +215,7 @@ namespace DotFeather
 						if (!isFinished)
 						{
 							isFinished = !FillBuffer(arr, enumerator, ct);
-							AL.BufferData(buffer, ALFormat.Stereo16, arr, arr.Length * sizeof(short), source.SampleRate);
+							AL.BufferData(buffer, ALFormat.Stereo16, arr, source.SampleRate);
 							AL.SourceQueueBuffer(alSrc, buffer);
 						}
 						processedCount--;
@@ -247,7 +251,8 @@ namespace DotFeather
 		}
 
 		private float gain;
-		private readonly AudioContext context;
+		private readonly ALDevice device;
+        private readonly ALContext context;
 		private CancellationTokenSource? cts;
 	}
 }

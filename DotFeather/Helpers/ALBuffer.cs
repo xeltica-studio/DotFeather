@@ -1,4 +1,4 @@
-using OpenToolkit.Audio.OpenAL;
+using OpenTK.Audio.OpenAL;
 
 namespace DotFeather
 {

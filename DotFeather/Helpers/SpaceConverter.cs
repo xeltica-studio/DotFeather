@@ -1,5 +1,5 @@
 using System;
-using OpenToolkit;
+using OpenTK;
 
 namespace DotFeather
 {

@@ -1,4 +1,4 @@
-version: 2.9.1.{build}
+version: 2.9.2.{build}
 image: Visual Studio 2019
 skip_non_tags: true
 
@@ -42,15 +42,15 @@ deploy:
     draft: false
     prerelease: false
     description: |
-      ## 2.9.1
+      ## 2.9.2
 
       ### バグ修正
-      - `Container.Clear` メソッドが子要素を破棄する不具合を修正
+      - ; キーを押すと画面が暗くなる不具合を修正しました
 
       ----
 
       ### Bug fixes
-      - Fixed a bug that the `Container.Clear` method destroys its children
+      - Fixed a bug the screen goes dark when the ";" key was pressed.
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

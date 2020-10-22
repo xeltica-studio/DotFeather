@@ -36,26 +36,22 @@ namespace DotFeather
 			var v2 = (left, bottom).ToViewportPoint(hw, hh);
 			var v3 = (right, bottom).ToViewportPoint(hw, hh);
 
-			if (!DFKeyboard.Semicolon)
+			GL.Enable(EnableCap.Blend);
+			GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
+			GL.BlendEquation(BlendEquationMode.FuncAdd);
+			GL.Enable(EnableCap.Texture2D);
+			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
+
+			using (new GLContext(PrimitiveType.Quads))
 			{
-
-				GL.Enable(EnableCap.Blend);
-				GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
-				GL.BlendEquation(BlendEquationMode.FuncAdd);
-				GL.Enable(EnableCap.Texture2D);
-				GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
-
-				using (new GLContext(PrimitiveType.Quads))
-				{
-					Vertex(1, 1, v3, color);
-					Vertex(0, 1, v2, color);
-					Vertex(0, 0, v0, color);
-					Vertex(1, 0, v1, color);
-				}
-
-				GL.Disable(EnableCap.Texture2D);
-				GL.Disable(EnableCap.Blend);
+				Vertex(1, 1, v3, color);
+				Vertex(0, 1, v2, color);
+				Vertex(0, 0, v0, color);
+				Vertex(1, 0, v1, color);
 			}
+
+			GL.Disable(EnableCap.Texture2D);
+			GL.Disable(EnableCap.Blend);
 		}
 
 		private static void Vertex(double tcx, double tcy, (float x, float y) vx, Color? color)

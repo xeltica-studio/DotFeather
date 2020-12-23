@@ -8,7 +8,6 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Advanced;
 using SixLabors.ImageSharp.Processing;
-using SixLabors.Primitives;
 using System.Runtime.InteropServices;
 
 namespace DotFeather
@@ -146,7 +145,12 @@ namespace DotFeather
 			using (bmp)
 			using (var img = bmp.CloneAs<Rgba32>())
 			{
-				var rgbaBytes = MemoryMarshal.AsBytes(img.GetPixelSpan()).ToArray();
+				// TODO: LINQ使うのでわりかし重い気がするのを解決したい
+				// テクスチャ読み込みは頻繁に行うし...
+				// 必要なバイト配列の長さを計算して配列のコピーをするのほうが早いかな？
+				var rgbaBytes = Enumerable.Range(0, img.Height)
+					.SelectMany(i => MemoryMarshal.AsBytes(img.GetPixelRowSpan(i)).ToArray())
+					.ToArray();
 				return Create(rgbaBytes, img.Width, img.Height);
 			}
 		}

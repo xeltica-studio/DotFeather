@@ -85,14 +85,14 @@ namespace DotFeather
 		/// </summary>
 		/// <param name="path">ファイルパス。</param>
 		/// <returns>生成されたタイル。</returns>
-		public static Tile LoadFrom(string path) => new Tile(Texture2D.LoadFrom(path), true);
+		public static Tile LoadFrom(string path) => new(Texture2D.LoadFrom(path), true);
 
 		/// <summary>
 		/// 画像ファイルを指定して、タイルを生成します。
 		/// </summary>
 		/// <param name="stream">ファイルを示すストリーム。</param>
 		/// <returns>生成されたタイル。</returns>
-		public static Tile LoadFrom(Stream stream) => new Tile(Texture2D.LoadFrom(stream), true);
+		public static Tile LoadFrom(Stream stream) => new(Texture2D.LoadFrom(stream), true);
 
 		/// <summary>
 		/// この <see cref="Tile"/> を削除します。

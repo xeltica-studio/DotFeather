@@ -24,7 +24,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get a unit vector with the same orientation as this vector.
 		/// </summary>
-		public Vector Normalized => new Vector(X / Magnitude, Y / Magnitude);
+		public Vector Normalized => (X / Magnitude, Y / Magnitude);
 
 		/// <summary>
 		/// Initialize a new instance of <see cref="Vector"/> class.
@@ -36,27 +36,27 @@ namespace DotFeather
 			(X, Y) = (x, y);
 		}
 
-		public static VectorInt operator +(VectorInt v1, VectorInt v2) => new VectorInt(v1.X + v2.X, v1.Y + v2.Y);
+		public static VectorInt operator +(VectorInt v1, VectorInt v2) => (v1.X + v2.X, v1.Y + v2.Y);
 
-		public static VectorInt operator -(VectorInt v1, VectorInt v2) => new VectorInt(v1.X - v2.X, v1.Y - v2.Y);
+		public static VectorInt operator -(VectorInt v1, VectorInt v2) => (v1.X - v2.X, v1.Y - v2.Y);
 
-		public static VectorInt operator *(VectorInt v1, int v2) => new VectorInt(v1.X * v2, v1.Y * v2);
+		public static VectorInt operator *(VectorInt v1, int v2) => (v1.X * v2, v1.Y * v2);
 
-		public static VectorInt operator *(VectorInt v1, VectorInt v2) => new VectorInt(v1.X * v2.X, v1.Y * v2.Y);
+		public static VectorInt operator *(VectorInt v1, VectorInt v2) => (v1.X * v2.X, v1.Y * v2.Y);
 
-		public static VectorInt operator /(VectorInt v1, int v2) => new VectorInt(v1.X / v2, v1.Y / v2);
+		public static VectorInt operator /(VectorInt v1, int v2) => (v1.X / v2, v1.Y / v2);
 
-		public static VectorInt operator /(VectorInt v1, VectorInt v2) => new VectorInt(v1.X / v2.X, v1.Y / v2.Y);
+		public static VectorInt operator /(VectorInt v1, VectorInt v2) => (v1.X / v2.X, v1.Y / v2.Y);
 
-		public static VectorInt operator -(VectorInt v1) => new VectorInt(-v1.X, -v1.Y);
+		public static VectorInt operator -(VectorInt v1) => (-v1.X, -v1.Y);
 
-		public static implicit operator Vector(VectorInt v1) => new Vector(v1.X, v1.Y);
+		public static implicit operator Vector(VectorInt v1) => (v1.X, v1.Y);
 
 		public static bool operator ==(VectorInt v1, VectorInt v2) => v1.X == v2.X && v1.Y == v2.Y;
 
 		public static bool operator !=(VectorInt v1, VectorInt v2) => v1.X != v2.X || v1.Y != v2.Y;
 
-		public static implicit operator VectorInt((int x, int y) v1) => new VectorInt(v1.x, v1.y);
+		public static implicit operator VectorInt((int x, int y) v1) => (v1.x, v1.y);
 
 		/// <summary>
 		/// Get angle between 2 vectors.
@@ -104,10 +104,7 @@ namespace DotFeather
 		/// </summary>
 		public override int GetHashCode()
 		{
-			var hashCode = 1861411795;
-			hashCode = hashCode * -1521134295 + X.GetHashCode();
-			hashCode = hashCode * -1521134295 + Y.GetHashCode();
-			return hashCode;
+			return HashCode.Combine(X, Y);
 		}
 
 		/// <summary>
@@ -139,31 +136,31 @@ namespace DotFeather
 		/// <summary>
 		/// Get <c>new VectorInt(0, 0)</c>.
 		/// </summary>
-		public static readonly VectorInt Zero = new VectorInt(0, 0);
+		public static readonly VectorInt Zero = (0, 0);
 
 		/// <summary>
 		/// Get <c>new VectorInt(1, 1)</c>.
 		/// </summary>
-		public static readonly VectorInt One = new VectorInt(1, 1);
+		public static readonly VectorInt One = (1, 1);
 
 		/// <summary>
 		/// Get <c>new VectorInt(-1, 0)</c>.
 		/// </summary>
-		public static readonly VectorInt Left = new VectorInt(-1, 0);
+		public static readonly VectorInt Left = (-1, 0);
 
 		/// <summary>
 		/// Get <c>new VectorInt(0, -1)</c>.
 		/// </summary>
-		public static readonly VectorInt Up = new VectorInt(0, -1);
+		public static readonly VectorInt Up = (0, -1);
 
 		/// <summary>
 		/// Get <c>new VectorInt(1, 0)</c>.
 		/// </summary>
-		public static readonly VectorInt Right = new VectorInt(1, 0);
+		public static readonly VectorInt Right = (1, 0);
 
 		/// <summary>
 		/// Get <c>new VectorInt(0, 1)</c>.
 		/// </summary>
-		public static readonly VectorInt Down = new VectorInt(0, 1);
+		public static readonly VectorInt Down = (0, 1);
 	}
 }

@@ -3,6 +3,7 @@
 		<TargetFramework>netstandard2.1</TargetFramework>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<Nullable>Enable</Nullable>
+		<LangVersion>9.0</LangVersion>
 		<NoWarn>CS1591</NoWarn>
 	</PropertyGroup>
 

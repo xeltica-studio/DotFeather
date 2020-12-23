@@ -85,12 +85,7 @@ namespace DotFeather
 
 		public override int GetHashCode()
 		{
-			var hashCode = -23843572;
-			hashCode = hashCode * -1521134295 + EqualityComparer<string?>.Default.GetHashCode(Path);
-			hashCode = hashCode * -1521134295 + EqualityComparer<Stream?>.Default.GetHashCode(Stream);
-			hashCode = hashCode * -1521134295 + Size.GetHashCode();
-			hashCode = hashCode * -1521134295 + FontStyle.GetHashCode();
-			return hashCode;
+			return System.HashCode.Combine(Path, Stream, Size, FontStyle);
 		}
 
 		private static readonly Stream defaultFont =

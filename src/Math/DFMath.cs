@@ -50,7 +50,7 @@ namespace DotFeather
 		/// <param name="time">Time.</param>
 		/// <param name="start">Start.</param>
 		/// <param name="end">End.</param>
-		public static Vector Lerp(float time, Vector start, Vector end) => new Vector(Lerp(time, start.X, end.X), Lerp(time, start.Y, end.Y));
+		public static Vector Lerp(float time, Vector start, Vector end) => (Lerp(time, start.X, end.X), Lerp(time, start.Y, end.Y));
 
 		/// <summary>
 		/// 減速移動を計算します。
@@ -59,7 +59,7 @@ namespace DotFeather
 		/// <param name="time">Time.</param>
 		/// <param name="start">Start.</param>
 		/// <param name="end">End.</param>
-		public static Vector EaseOut(float time, Vector start, Vector end) => new Vector(EaseOut(time, start.X, end.X), EaseOut(time, start.Y, end.Y));
+		public static Vector EaseOut(float time, Vector start, Vector end) => (EaseOut(time, start.X, end.X), EaseOut(time, start.Y, end.Y));
 
 		/// <summary>
 		/// 加速移動を計算します。
@@ -68,7 +68,7 @@ namespace DotFeather
 		/// <param name="time">Time.</param>
 		/// <param name="start">Start.</param>
 		/// <param name="end">End.</param>
-		public static Vector EaseIn(float time, Vector start, Vector end) => new Vector(EaseIn(time, start.X, end.X), EaseIn(time, start.Y, end.Y));
+		public static Vector EaseIn(float time, Vector start, Vector end) => (EaseIn(time, start.X, end.X), EaseIn(time, start.Y, end.Y));
 
 		/// <summary>
 		/// 角度を弧度に変換します。

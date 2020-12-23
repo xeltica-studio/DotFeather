@@ -80,13 +80,13 @@ namespace DotFeather
 
 			using var reader = new BinaryReader(stream);
 			// RIFF header
-			string riff = new string(reader.ReadChars(4));
+			string riff = new(reader.ReadChars(4));
 			if (riff != "RIFF")
 				throw new NotSupportedException("Specified stream is not a wave file.");
 
 			int riffChunkSize = reader.ReadInt32();
 
-			string format = new string(reader.ReadChars(4));
+			string format = new(reader.ReadChars(4));
 			if (format != "WAVE")
 				throw new NotSupportedException("Specified stream is not a wave file.");
 

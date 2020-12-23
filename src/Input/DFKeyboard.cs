@@ -488,7 +488,7 @@ namespace DotFeather
 		public static event Action<DFKeyPressEventArgs>? KeyPress;
 		public static event Action<DFKeyEventArgs>? KeyUp;
 
-		internal static readonly Queue<char> keychars = new Queue<char>();
+		internal static readonly Queue<char> keychars = new();
 
 		private static readonly DFKeyCode[] allCodes = (Enum.GetValues(typeof(DFKeyCode)) as DFKeyCode[]).Distinct().ToArray();
 		private static readonly bool[] prevState = new bool[(int)DFKeyCode.LastKey + 1];

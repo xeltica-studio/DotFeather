@@ -61,7 +61,7 @@ namespace DotFeather.Demo
 				Router.ChangeScene<LauncherScene>();
 		}
 
-		private readonly Graphic canvas = new Graphic();
-		private readonly Random random = new Random();
+		private readonly Graphic canvas = new();
+		private readonly Random random = new();
 	}
 }

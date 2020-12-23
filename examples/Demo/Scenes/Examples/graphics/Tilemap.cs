@@ -62,6 +62,6 @@ namespace DotFeather.Demo
 
 			Print("Press ESC to return");
 		}
-		private readonly Random random = new Random();
+		private readonly Random random = new();
 	}
 }

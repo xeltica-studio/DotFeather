@@ -78,7 +78,7 @@ namespace DotFeather.Internal
 		}
 
 		private readonly TextElement text;
-		private readonly List<string> consoleBuffer = new List<string>();
+		private readonly List<string> consoleBuffer = new();
 		private string? prevFont;
 	}
 }

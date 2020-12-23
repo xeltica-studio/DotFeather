@@ -80,7 +80,7 @@ namespace DotFeather.Demo
 			if (DFKeyboard.X.IsKeyDown) Root.Scale *= 0.5f;
 		}
 
-		private readonly Random random = new Random();
+		private readonly Random random = new();
 		private Tilemap map;
 		private bool hudVisible = true;
 	}

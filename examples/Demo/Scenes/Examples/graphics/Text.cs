@@ -32,6 +32,6 @@ namespace DotFeather.Demo
 
 		private float time;
 		private int count;
-		private readonly Random random = new Random();
+		private readonly Random random = new();
 	}
 }

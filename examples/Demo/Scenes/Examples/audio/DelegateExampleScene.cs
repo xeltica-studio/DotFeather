@@ -86,10 +86,10 @@ PRESS ESC TO RETURN");
 		private short GenerateSine(int sample, float freq, float sampleRate) => (short)(MathF.Sin(2 * MathF.PI * sample * freq / sampleRate) * 32000);
 
 		private float freq = 440;
-		private readonly LinkedList<short> waveTable = new LinkedList<short>();
-		private readonly Graphic visualizer = new Graphic();
-		private readonly AudioPlayer audio = new AudioPlayer();
+		private readonly LinkedList<short> waveTable = new();
+		private readonly Graphic visualizer = new();
+		private readonly AudioPlayer audio = new();
 		private readonly IAudioSource source;
-		private readonly object l = new object();
+		private readonly object l = new();
 	}
 }

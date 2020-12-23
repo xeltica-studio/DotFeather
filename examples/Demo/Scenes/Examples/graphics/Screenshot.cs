@@ -90,8 +90,8 @@ namespace DotFeather.Demo
 			}
 		}
 
-		private readonly Random random = new Random();
-		private readonly Graphic canvas = new Graphic();
+		private readonly Random random = new();
+		private readonly Graphic canvas = new();
 		private Texture2D tex;
 		private Sprite? sprite;
 	}

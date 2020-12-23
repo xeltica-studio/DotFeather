@@ -28,7 +28,7 @@ PRESS ESC TO RETURN");
 			audio.Dispose();
 		}
 
-		private readonly AudioPlayer audio = new AudioPlayer();
+		private readonly AudioPlayer audio = new();
 		private readonly IAudioSource bgm = new VorbisAudioSource("kagerou.ogg");
 	}
 

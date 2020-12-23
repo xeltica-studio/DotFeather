@@ -41,7 +41,7 @@ namespace DotFeather.Demo
 
 		private Texture2D strawberry;
 		private bool initialized;
-		private readonly Random rnd = new Random();
+		private readonly Random rnd = new();
 
 	}
 }

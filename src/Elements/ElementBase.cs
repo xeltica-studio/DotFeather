@@ -94,6 +94,6 @@ namespace DotFeather
 
 		protected virtual void OnDestroy() { }
 
-		private readonly List<Component> components = new List<Component>();
+		private readonly List<Component> components = new();
 	}
 }

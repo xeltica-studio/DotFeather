@@ -33,7 +33,7 @@ namespace DotFeather.Demo
 				Router.ChangeScene<LauncherScene>();
 		}
 
-		private readonly StringBuilder buf = new StringBuilder();
+		private readonly StringBuilder buf = new();
 		private TextElement? editorView;
 	}
 }

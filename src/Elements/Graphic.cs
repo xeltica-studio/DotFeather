@@ -72,6 +72,6 @@ namespace DotFeather
 			shapes.Add(shape);
 		}
 
-		private readonly List<Shape> shapes = new List<Shape>();
+		private readonly List<Shape> shapes = new();
 	}
 }

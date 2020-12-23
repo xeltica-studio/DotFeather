@@ -86,6 +86,6 @@ namespace DotFeather
 			};
 		}
 
-		private static readonly Dictionary<Coroutine, object?> coroutines = new Dictionary<Coroutine, object?>();
+		private static readonly Dictionary<Coroutine, object?> coroutines = new();
 	}
 }

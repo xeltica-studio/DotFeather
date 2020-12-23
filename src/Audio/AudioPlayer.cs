@@ -108,7 +108,7 @@ namespace DotFeather
 				Task.Run(async () =>
 				{
 					var firstGain = Gain;
-					Stopwatch w = new Stopwatch();
+					Stopwatch w = new();
 					w.Start();
 					while (Gain > 0)
 					{
@@ -134,7 +134,7 @@ namespace DotFeather
 		public async Task PlayOneShotAsync(IAudioSource source)
 		{
 			var buf = source.EnumerateSamples(null).GetEnumerator();
-			if (!(source.Samples is int samples))
+			if (source.Samples is not int samples)
 				throw new ArgumentException("PlayOneShot requires AudioSource which has determined length.");
 			var buffer = new short[samples];
 			FillBuffer(buffer, buf, default);

@@ -65,7 +65,7 @@ namespace DotFeather
 			};
 		}
 
-		private static readonly List<Action> nextFrameQueue = new List<Action>();
+		private static readonly List<Action> nextFrameQueue = new();
 		private static readonly DFSynchronizationContext ctx;
 		private static int statusCode;
 	}

@@ -17,16 +17,16 @@ namespace DotFeather
 		/// <summary>
 		/// Get a random vector. Both x and y coords are integers.
 		/// </summary>
-		public static Vector NextVector(this Random r, int xMax, int yMax) => new Vector(r.Next(xMax), r.Next(yMax));
+		public static Vector NextVector(this Random r, int xMax, int yMax) => (r.Next(xMax), r.Next(yMax));
 
 		/// <summary>
 		/// Get a random vector. Both x and y coords are integers.
 		/// </summary>
-		public static VectorInt NextVectorInt(this Random r, int xMax, int yMax) => new VectorInt(r.Next(xMax), r.Next(yMax));
+		public static VectorInt NextVectorInt(this Random r, int xMax, int yMax) => (r.Next(xMax), r.Next(yMax));
 
 		/// <summary>
 		/// Get a random vector. Both x and y coords are real numbers.
 		/// </summary>
-		public static Vector NextVectorFloat(this Random r, int xMax = 1, int yMax = 1) => new Vector((float)r.NextDouble() * xMax, (float)r.NextDouble() * yMax);
+		public static Vector NextVectorFloat(this Random r, int xMax = 1, int yMax = 1) => ((float)r.NextDouble() * xMax, (float)r.NextDouble() * yMax);
 	}
 }

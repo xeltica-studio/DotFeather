@@ -81,6 +81,6 @@ namespace DotFeather
 		/// </summary>
 		public virtual void OnDestroy() { }
 
-		private Container root = new Container();
+		private Container root = new();
 	}
 }

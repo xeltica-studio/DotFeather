@@ -55,7 +55,7 @@ namespace DotFeather.Demo
 			tex.Dispose();
 		}
 
-		readonly CancellationTokenSource cts = new CancellationTokenSource();
+		readonly CancellationTokenSource cts = new();
 		Sprite? sp;
 		Texture2D tex;
 	}

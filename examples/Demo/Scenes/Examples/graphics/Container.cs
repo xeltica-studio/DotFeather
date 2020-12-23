@@ -84,6 +84,6 @@ namespace DotFeather.Demo
 		}
 
 		private Texture2D ichigo;
-		private readonly Container container = new Container();
+		private readonly Container container = new();
 	}
 }

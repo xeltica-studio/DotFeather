@@ -118,6 +118,6 @@ namespace DotFeather
 			GL.Disable(EnableCap.ScissorTest);
 		}
 
-		private readonly List<ElementBase> children = new List<ElementBase>();
+		private readonly List<ElementBase> children = new();
 	}
 }

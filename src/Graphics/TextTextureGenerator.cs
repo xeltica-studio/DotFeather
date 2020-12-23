@@ -60,6 +60,6 @@ namespace DotFeather
 			return new Font(family, f.Size, (FontStyle)f.FontStyle);
 		}
 
-		private static readonly Dictionary<object, FontFamily> fontCache = new Dictionary<object, FontFamily>();
+		private static readonly Dictionary<object, FontFamily> fontCache = new();
 	}
 }

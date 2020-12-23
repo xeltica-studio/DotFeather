@@ -19,7 +19,7 @@ namespace DotFeather.Internal
 	{
 		public VectorInt Location
 		{
-			get => new VectorInt(window.Location.X, window.Location.Y);
+			get => (window.Location.X, window.Location.Y);
 			set => window.Location = new System.Drawing.Point(value.X, value.Y);
 		}
 
@@ -31,7 +31,7 @@ namespace DotFeather.Internal
 
 		public VectorInt ActualSize
 		{
-			get => new VectorInt(window.ClientSize.Width, window.ClientSize.Height);
+			get => (window.ClientSize.Width, window.ClientSize.Height);
 			set => window.ClientSize = new System.Drawing.Size(value.X, value.Y);
 		}
 

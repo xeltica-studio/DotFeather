@@ -50,13 +50,13 @@ namespace DotFeather
 
 		public static VectorInt operator -(VectorInt v1) => (-v1.X, -v1.Y);
 
-		public static implicit operator Vector(VectorInt v1) => (v1.X, v1.Y);
+		public static implicit operator Vector(VectorInt v1) => new(v1.X, v1.Y);
 
 		public static bool operator ==(VectorInt v1, VectorInt v2) => v1.X == v2.X && v1.Y == v2.Y;
 
 		public static bool operator !=(VectorInt v1, VectorInt v2) => v1.X != v2.X || v1.Y != v2.Y;
 
-		public static implicit operator VectorInt((int x, int y) v1) => (v1.x, v1.y);
+		public static implicit operator VectorInt((int x, int y) v1) => new(v1.x, v1.y);
 
 		/// <summary>
 		/// Get angle between 2 vectors.

@@ -42,9 +42,88 @@ deploy:
     draft: false
     prerelease: true
     description: |
-      ## DotFeather v3 Public Beta 5
+      # DotFeather v3 RC1
 
-      ## 新機能・改善
+      このバージョンは、DotFeather v3の最初のリリース候補版です。実際の製品開発にご利用頂けます。
+
+      DotFeather v3では、v2に比べて多くのAPIの廃止・作り直しが行われています。その数は非常に多いため、v2からの移行ガイドを近日中に用意します。
+
+      ## 3.0.0 Public Beta 5 からのチェンジログ
+
+      ### バグ修正
+      - テキストの描画がおかしい問題を修正
+
+      ## 2.9.2 からのチェンジログ
+
+      ### 描画機能
+
+      - ElementBase 抽象クラスを追加しました
+        - ElementBase を継承するクラスを Element と呼び、DotFeather v3 における描画の基本単位とします
+      - Texture9Sliced 構造体を追加しました
+      - Component 抽象クラスを追加しました
+        - Component クラスを継承したコンポーネントを Element にアタッチすることで、新しいクラスを作ることなくElementを拡張できます
+      - 描画可能オブジェクト(IDrawable インターフェイスを実装するクラス)を全て Element として再実装しました
+      - NineSliceSplite クラスは Texture2D 配列の代わりに Texture9Sliced 構造体を使うようになりました
+      - Shape Elementを追加しました
+        - 従来 Graphic オブジェクトが描画する図形を表現していたクラスのリメイクです
+        - Shape Elementを単独で生成することで、Graphic Element無しに図形描画ができるように
+      - Container クラスのインデクサは読み取り専用になりました
+      - 以下のインターフェイスを廃止しました。ElementBase 抽象クラスに置き換えてください
+        - IDrawable
+        - ISizedDrawable
+        - IContainable
+        - IUpdatable
+      - TextureDrawableBase 抽象クラスを廃止しました
+      - Sprite.LoadFrom メソッドを廃止しました。代わりにコンストラクタを用いてください
+      - NineSliceSplite.LoadFrom メソッドを廃止しました。代わりにコンストラクタを用いてください
+      - ITile インターフェイスの定義が変更されました。カスタムタイルを定義している場合はご注意ください
+      - Tilemap.CurrentDrawingPosition プロパティを廃止しました
+      - AnimatingSprite クラスは廃止しました。代わりに SpriteAnimator コンポーネントを Sprite クラスにアタッチしてください
+      - IDrawable インターフェイスに存在した Angle プロパティを廃止しました。もともと角度の設定機能は未実装のまま放置されていたので、角度を設定できるようになってから再実装します
+      - IDrawable インターフェイスに存在した ZOrder プロパティを廃止しました。使用していた場合、手動で並び替えるようにしてください
+
+      ### Singleton Game API
+
+      - GameBase 抽象クラスを廃止しました
+        - GameBase にあった API の多くは、新しいAPIを使うことで引き続きアクセスできます
+      - `IWindow` インターフェイス を追加
+        - ゲームのレンダリングを行う画面周りの機能を提供します
+        - `GameBase` の持っていたメンバーの多くが提供されます
+      - `IConsole` インターフェイスを追加
+        - `Gamebase` の `Print` `Cls` `ConsoleCursor` など、コンソール系の API はこちらです
+      - `Run` `Exit` `NextFrame` メソッド、`Root` プロパティは `DF` クラスからアクセスできます
+      - `DF.Window` で取得できる `IWindow` インターフェイスのインスタンスは、`GameBase` のインスタンスメンバーの多くを用意していますが、例外もあります
+        - `On` から始まるイベント系の仮想メソッドは、例外を除き全て `IWindow` インターフェイスのイベントとして再実装されています
+          - イベントハンドラーを使う形に書き換えてください
+        - `Visible` プロパティの名前を `IsVisible` に変更
+        - `Random` プロパティ、`Randomize` メソッドは廃止しました。`System.Random` をそのまま使用してください
+        - `StartCoroutine` `StopCoroutine` メソッドは廃止しました。 `CoroutineRunner.Start` `CoroutineRunner.Stop` を使用してください
+        - `Dispose` メソッドは廃止しました
+        - `KeyDown` `KeyUp` `KeyPress` イベントは廃止しました。`DFKeyboard` クラスに新設された同名のイベントハンドラーを使用してください
+        - 次のメンバーは `DF.Console` にあるのでそちらを使用してください
+          - `ConsoleCursor` プロパティ
+          - `ConsoleSize` プロパティ
+          - `Print` メソッド
+          - `Cls` メソッド
+      - `Scene` の `OnStart` `OnUpdate` `OnDestroy` メソッドから、 `Router router` `GameBase game` の引数を廃止
+
+      ### その他
+      - `Vector` クラスと `(float, float)` タプル間で暗黙的型変換されるように
+        - 例えば `Location = (16, 48)` というシンプルな書き方ができます
+      - `VectorInt` クラスと `(int, int)` タプル間で暗黙的型変換されるように
+      - `System.Drawing` 名前空間とのクラス名の衝突を防ぐため、`Font` `FontStyle` クラスをそれぞれ `DFFont` `DFFontStyle` クラスに名称変更
+      - Scene.Random プロパティおよび Scene.Randomize メソッドを廃止
+      - `IWindow.Dpi` プロパティの名称を `IWindow.PixelRatio` に変更
+      - テクスチャ描画用低レベル API を、クロスプラットフォーム対応を視野に入れ仕様変更
+        - `TextureDrawer` 静的クラスを廃止
+        - `ITextureDrawer` インターフェイスを追加
+        - `DF.TextureDrawer` 読み取り専用プロパティを追加
+          - テクスチャを扱う標準のエレメントはこれを使うように
+          - テクスチャ描画プラグイン開発者はこちらに置き換えるようにしてください
+      - 図形描画用の低レベル API を追加
+        - `IPrimitiveDrawer` インターフェイスを追加
+        - `DF.PrimitiveDrawer` 読み取り専用プロパティを追加
+          - `Shape` エレメントはこの API を使うように
       - Tilemap のレンダリング パフォーマンスを向上しました
       - Tilemap#RenderingMode プロパティ（TilemapRenderingMode 型）を追加しました
         - TilemapRenderingMode.RenderAll
@@ -55,9 +134,8 @@ deploy:
           - 画面に存在可能なタイル数よりも実際のタイル数が多い場合はScan, 少ない場合はRenderAllを意味します
           - 標準はこれ
           - どちらが最適なアルゴリズムかわかりきっている場合や、新方式で問題が発生する場合などは手動で設定してください
-
-      ## バグ修正
-      - ; キーを押すと画面が暗くなる不具合を修正しました
+      - テキストの描画がおかしい問題を修正
+      - 依存関係を更新
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

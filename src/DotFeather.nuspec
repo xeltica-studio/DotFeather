@@ -2,18 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>DotFeather</id>
-		<version>3.0.0-rc.1</version>
+		<version>3.0.0-rc.2</version>
 		<title>DotFeather</title>
 		<authors>Xeltica</authors>
 		<owners>Xeltica</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<projectUrl>https://github.com/xeltica/dotfeather</projectUrl>
 		<description>A lightweight, extensible and easy game engine.</description>
-		<copyright>(C)2018-2020 Xeltica</copyright>
+		<copyright>(C)2018-2021 Xeltica</copyright>
 		<tags>GameEngine</tags>
 			<license type="expression">MIT</license>
 		<releaseNotes>
-			See https://github.com/Xeltica/DotFeather/releases/tag/3.0.0-rc.1
+			See https://github.com/Xeltica/DotFeather/releases/tag/3.0.0-rc.2
 		</releaseNotes>
 		<dependencies>
 			<group targetFramework=".NETStandard2.1">

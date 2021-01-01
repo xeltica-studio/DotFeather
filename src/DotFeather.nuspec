@@ -19,7 +19,7 @@
 			<group targetFramework=".NETStandard2.1">
 				<dependency id="OpenTK.NetStandard" version="1.0.7-prerelease" />
 				<dependency id="SixLabors.ImageSharp.Drawing" version="1.0.0-beta11" />
-				<dependency id="NVorbis" version="0.8.6" />
+				<dependency id="NVorbis" version="0.10.1" />
 			</group>
 		</dependencies>
 	</metadata>

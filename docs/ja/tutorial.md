@@ -7,13 +7,9 @@
 
 - [エントリーポイント](entry.md)
 - [ハローワールドを出力する](hello.md)
-- [描画](drawing.md)
-	- [グラフィック](drawing/graphic.md)
-	- [スプライト](drawing/sprite.md)
-	- [タイルマップ](drawing/tilemap.md)
-	- [テキスト](drawing/text.md)
-	- [コンテナー](drawing/container.md)
-	- [9スライススプライト](drawing/9slice.md)
+- [テクスチャ](texture.md)
+- [エレメント](elements/index.md)
+- [コンポーネント](component.md)
 - インプット
 	- [マウス入力](input/mouse.md)
 	- [キーボード入力](input/keyboard.md)

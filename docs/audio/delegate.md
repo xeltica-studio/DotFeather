@@ -1,4 +1,4 @@
-# DelegateAudioSource
+# Use DelegateAudioSource
 
 `DelegateAudioSource` クラスを用いることで、コールバック関数を用いて生成した波形を再生できます。PCM音源レベルの低レイヤーな音声処理を行えます。
 

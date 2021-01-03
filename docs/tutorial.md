@@ -15,6 +15,7 @@ This is written for programmers who have something understanding of C#. Please c
 - [Audio](audio.md)
 	- [Load files](audio/load.md)
 	- [Play files](audio/play.md)
+	- [Use DelegateAudioSource](audio/delegate.md)
 - [Coroutine](coroutine.md)
 - [Router](router.md)
 - Create extensions

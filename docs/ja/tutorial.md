@@ -16,6 +16,7 @@
 - [オーディオ](audio.md)
 	- [ファイルの読み込み](audio/load.md)
 	- [ファイルの再生](audio/play.md)
+	- [DelegateAudioSource を使う](audio/delegate.md)
 - [コルーチン](coroutine.md)
 - [ルーター](router.md)
 - 機能拡張

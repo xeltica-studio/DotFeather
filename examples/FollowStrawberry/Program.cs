@@ -11,6 +11,7 @@ namespace FollowStrawberry
 			DF.Window.Start += () =>
 			{
 				var strawberry = new Sprite("strawberry.png");
+				DF.Console.Cls();
 				strawberry.AddComponent<StrawberryController>();
 				DF.Root.Add(strawberry);
 			};

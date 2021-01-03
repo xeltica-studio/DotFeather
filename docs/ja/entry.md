@@ -1,37 +1,33 @@
-# GameBase の継承
+# エントリーポイント
 
-DotFeather では、ゲームのメインループを GameBase 抽象クラスの派生クラスを定義し、その中に書きます。
+さっそくDotFeatherを使ったゲーム開発をはじめましょう。
 
-```cs
-public class Game : GameBase
-{
-	public Game(int width, int height, string title = null, int refreshRate = 60)
-		: base(width, height, title, refreshRate) { }
-}
-```
-
-**以降、こうして作った派生クラスを、ゲームクラスと呼びます。**
-
-## エントリーポイント
-
-他の C# プログラムと同様、 `Main()` メソッドからプログラムは開始します。 `Main()` メソッドに次のような文を記述し、作成したゲームクラスを起動させます。
+他の C# プログラムと同様、Mainメソッドからプログラムは開始します。まずは次のようなプログラムを記述します。
 
 ```cs
-static void Main()
+using DotFeather;
+class Program
 {
-	using (var g = new Game(320, 240))
+	static void Main()
 	{
-		g.Run();
+		return DF.Run();
 	}
 }
 ```
 
-## イベントフック
+C# 9 では、Main() メソッドを省略できます。従って、次のようなプログラムでも構いません。
 
-メインループや、アセットの読み込みなどは、 GameBase クラスが提供する仮想メソッドをオーバーライドし、その上で実行します。次に、 GameBase クラスが提供する仮想メソッドの表を示します。
+```cs
+using DotFeather;
 
+return DF.Run();
+```
 
-|メソッド|説明|
+本ドキュメントでは、Mainメソッドおよびそれを含むクラスの記述を省略します。使用する環境によって適度に読み替えてください。
+
+さて、上記のプログラムを普通に実行すると、真っ黒な画面が表示されると思います。これを**ベース**にいろいろ付け加えていくことで、ゲームを作っていきます。
+
+<!-- |メソッド|説明|
 |---|---|
 |OnLoad()|ゲーム開始時に呼び出されます。リソースやセーブデータの読み込みを書きます。|
 |OnUpdate()|フレーム更新時に呼び出されます。ゲームのメインループ処理を書きます。|
@@ -70,6 +66,6 @@ static void Main()
 
 ゲームを終了します。終了コードを指定することもできます。
 
-他にも多くの機能があります。詳しくは[API ドキュメント](https://dotfeather.netlify.com/api/dotfeather.gamebase)をご確認ください。
+他にも多くの機能があります。詳しくは[API ドキュメント](https://dotfeather.netlify.com/api/dotfeather.gamebase)をご確認ください。 -->
 
-次: [Hello](hello.md)
+次: [ハローワールドを出力する](hello.md)

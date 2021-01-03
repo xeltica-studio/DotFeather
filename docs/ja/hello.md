@@ -1,34 +1,45 @@
-# Hello!
+# ハローワールドを出力する
 
-さっそく、文字を描画してみます。`OnLoad()` メソッドの中に次の行を書いてください。
+真っ黒な画面ではつまらないので、とりあえず何かを表示したいところです。
+
+エントリーポイントをベースに、プログラムを足していきます。
 
 ```cs
-Print("Hello, world!");
+DF.Window.Start += () =>
+{
+	DF.Console.Print("Hello, world!");
+};
+
+return DF.Run();
 ```
 
-画面に `Hello, world!` と表示されていれば、成功です。Print メソッドは、値を **コンソールレイヤー** 上に表示します。
+画面に `Hello, world!` と表示されていれば、成功です。
 
-コンソールレイヤーは、常に最前面に表示されます。
+DotFeatherには、コンソールレイヤーという、簡単に文字列を出力するための機能が搭載されています。DF.Console プロパティはこのコンソールレイヤーを制御するためのAPIを含みます。
 
 Print メソッドは、値を出力した後、自動的に改行します。値の出力位置を変更するためには、 `ConsoleCursor` プロパティを設定します。
 
 ```cs
-ConsoleCursor = new VectorInt(4, 8);
-Print("Good afternoon.");
+DF.Console.Cursor = new VectorInt(4, 8);
+DF.Console.Print("Good afternoon.");
 ```
 
 上の例では、座標 (4, 8) に文字列を出力しています。
 
-コンソールの文字サイズや色も変更できます。
+コンソールレイヤーの文字サイズや色も変更できます。
 
 ```cs
-// コンソールの文字サイズを 48px に変更
-ConsoleSize = 48;
+// コンソールレイヤーの文字サイズを 48px に変更
+DF.Console.FontSize = 48;
 
-// コンソールに表示する文字を赤くする
-ForegroundColor = Red;
+// コンソールレイヤーに表示する文字を赤くする
+DF.Console.TextColor = Red;
 ```
 
-なお、この項目で登場した `Print` `ConsoleSize` `ConsoleCursor` `ForegroundColor` は全て `GameBase` クラスのメンバーです。
+コンソールレイヤーを消去する場合は、Clsメソッド(Clear the Screen の略)を使用します。
+
+```cs
+DF.Console.Cls();
+```
 
 次: [描画](drawing.md)

@@ -87,7 +87,7 @@ namespace DotFeather
 			Window = new Internal.DesktopWindow();
 
 			Console = new Internal.DFConsole();
-			Router = new Internal.Router();
+			Router = new Router();
 
 			Window.Update += () =>
 			{

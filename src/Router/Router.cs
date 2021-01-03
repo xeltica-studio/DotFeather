@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DotFeather.Internal
+namespace DotFeather
 {
 	/// <summary>
 	/// Scene Management class.

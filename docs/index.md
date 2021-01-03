@@ -1,6 +1,7 @@
 # DotFeather Docs
 
-[日本語](ja/index.md)
+- [日本語](ja/index.md)
+- [v2 docs](v2/index.md)
 
 Welcome to DotFeather Docs!
 

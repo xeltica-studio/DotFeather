@@ -1,6 +1,7 @@
 # DotFeather Docs
 
-[English](../index.md)
+- [English](../index.md)
+- [v2 ドキュメントはこちら](../v2/ja/index.md)
 
 DotFeather Docs へようこそ！
 

@@ -21,7 +21,6 @@
 - 機能拡張
 	- [独自レンダリング](plugin/render.md)
 	- [独自オーディオソース](plugin/audiosource.md)
-	- [IUpdatable](plugin/updatable.md)
 
 <!--
 - 公式プラグイン (執筆中)

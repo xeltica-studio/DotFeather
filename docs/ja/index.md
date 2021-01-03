@@ -12,3 +12,4 @@ DotFeather は、NuGet パッケージマネージャーを使用することで
 - API ドキュメント
 	- [API ドキュメントはこちら](https://dotfeather.netlify.com/api/)
 - [チュートリアル](tutorial.md)
+- [v2からのマイグレーションガイド](migrate/v2.md)

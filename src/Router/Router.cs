@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DotFeather
+namespace DotFeather.Internal
 {
 	/// <summary>
 	/// Scene Management class.
@@ -11,7 +11,7 @@ namespace DotFeather
 		/// <summary>
 		/// Initialize a new instance of <see cref="Router"/> class with the specified parent game class.
 		/// </summary>
-		public Router()
+		internal Router()
 		{
 			DF.Window.Update += Update;
 			DF.Window.Render += Render;

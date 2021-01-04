@@ -1,8 +1,8 @@
-# エントリーポイント
+# Entry Point
 
-さっそくDotFeatherを使ったゲーム開発をはじめましょう。
+Let's start creating a game using DotFeather.
 
-他の C# プログラムと同様、Mainメソッドからプログラムは開始します。まずは次のようなプログラムを記述します。
+As with any other C# program, the program will start from the Main method. First, write a program like the following:
 
 ```cs
 using DotFeather;
@@ -15,7 +15,7 @@ class Program
 }
 ```
 
-C# 9 では、Main() メソッドを省略できます。従って、次のようなプログラムでも構いません。
+In C# 9, the Main() method can be omitted. Therefore, the following program is acceptable:
 
 ```cs
 using DotFeather;
@@ -23,48 +23,7 @@ using DotFeather;
 return DF.Run();
 ```
 
-本ドキュメントでは、Mainメソッドおよびそれを含むクラスの記述を省略します。使用する環境によって適度に読み替えてください。
+This document omits the description of the Main method and the class that contains it.
+Please read them appropriately depending on the environment you use.
 
-さて、上記のプログラムを普通に実行すると、真っ黒な画面が表示されると思います。これを**ベース**にいろいろ付け加えていくことで、ゲームを作っていきます。
-
-<!-- |メソッド|説明|
-|---|---|
-|OnLoad()|ゲーム開始時に呼び出されます。リソースやセーブデータの読み込みを書きます。|
-|OnUpdate()|フレーム更新時に呼び出されます。ゲームのメインループ処理を書きます。|
-|OnResize()|ゲームウィンドウのサイズが変更された場合に呼び出されます。|
-|OnUnload()|ゲーム終了時に呼び出されます。オートセーブや独自に確保したリソースの破棄などを行ってください。|
-|OnDragDrop()|ファイルがドラッグドロップされたときに呼び出されます。|
-
-## プロパティ
-
-プロパティの設定により、ゲームウィンドウのカスタマイズなどを行えます。
-
-|プロパティ|説明|
-|---|---|
-|Title|ウィンドウのタイトル|
-|X|ウィンドウ X座標|
-|Y|ウィンドウ Y座標|
-|Width|ウィンドウの幅|
-|Height|ウィンドウの高さ|
-|Visible|ウィンドウが表示されているか|
-|BackgroundColor|ゲーム描画領域の背景色|
-|Dpi|現在のディスプレイのDPI|
-|RefreshRate|現在のディスプレイのリフレッシュレート|
-|Root|トップレベルのコンテナー。この中に描画オブジェクトを入れる。|
-
-## その他機能
-
-### Randomize() メソッド
-
-乱数を初期化します。シード値を指定できますが、省略すると現在時刻を乱数シード値として使用します。
-
-### Random プロパティ
-
-.NET Standard BCL の `Random` クラスのインスタンスが格納されます。
-
-### Exit() メソッド
-
-ゲームを終了します。終了コードを指定することもできます。
-
-他にも多くの機能があります。詳しくは[API ドキュメント](https://dotfeather.netlify.com/api/dotfeather.gamebase)をご確認ください。 -->
-
+Now, if you run the above program normally, you will see a black screen. We will now use this as a **base** to create the game.

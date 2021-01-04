@@ -1,15 +1,15 @@
-# コルーチン
+# Coroutines
 
-コルーチンは、バックグラウンドで非同期的に動作するルーチンです。
+A coroutine is a routine that runs asynchronously in the background.
 
-## 概要
+## Overview
 
-通常、ゲームのロジックは、DF.Window.Update イベントの中に記述します。しかしながら、パーティクルやローディング画面のように、非同期的な処理を必要とするケースにおいて、このアプローチは非効率です。コルーチンはこの問題を解決します。
+Normally, the logic of a game is written in the DF.Window.Update event. However, in cases that require asynchronous processing, such as particles or loading screens, this approach is inefficient. Coroutines solve this problem.
 
-コルーチンは、 `System.Collecitons.IEnumerator` インターフェイスを返すメソッドの形で記述します。コルーチンの定義例を次に示します。
+A coroutine can be written in the form of a method that returns a `System.Collections.IEnumerator`. An example of a coroutine definition is shown below.
 
 ```cs
-// あらかじめ次に示すエレメントが定義されているものとする
+// The following elements shall be defined
 TextElement text;
 
 IEnumerator CountDown()
@@ -25,34 +25,34 @@ IEnumerator CountDown()
 }
 ```
 
-このようにして定義したコルーチンは、次のようにして実行します。
+The coroutine defined in this way is executed as follows.
 
 ```cs
 var coroutine = CoroutineRunner.Start(CountDown));
 ```
 
-どちらのメソッドも、 [Coroutine クラス](https://dotfeather.netlify.com/api/dotfeather.coroutine) のインスタンスを返します。このインスタンスを操作することでコルーチンの制御ができます。
+Both methods return an instance of the [Coroutine class](https://dotfeather.netlify.com/api/dotfeather.coroutine). By manipulating this instance, the coroutine can be controlled.
 
-## コルーチンの停止
+## Stopping a Coroutine
 
-コルーチンを途中で停止する場合は `CoroutineRunner.Stop` メソッドを呼び出します。
+To stop a coroutine in the middle, call the `CoroutineRunner.Stop` method.
 
 ```cs
 CoroutineRunner.Stop(coroutine);
 ```
 
-## コルーチンコールバック
+## Coroutine Callbacks
 
-コルーチンが終了したとき、またコルーチン内部でハンドルされていない例外が発生した場合にコールバックを指定することもできます。
+You can also specify a callback when the coroutine exits, or when an unhandled exception occurs inside the coroutine.
 
 ```cs
-StartCoroutine(CountDown(false))
+CoroutineRunner.Start(CountDown(false))
 	.Then(_ =>
 	{
 		Console.WriteLine("Successfully finished!");
 	});
 
-StartCoroutine(CountDown(true))
+CoroutineRunner.Start(CountDown(true))
 	.Error(e =>
 	{
 		Console.WriteLine($"Something happened!!!\n{e.GetType().Name}: {e.Message}\n{e.StackTrace}");
@@ -72,35 +72,36 @@ IEnumerator CountDown(bool error)
 }
 ```
 
-## イールド命令
+## Yield Instructions
 
-コルーチンは C# の `yield` パターンを応用しています。特定のオブジェクトを返すことでコルーチンの実行を中断し、また再開できます。このときに渡すオブジェクトのことをイールド命令と呼びます。例えば、 `WaitForSeconds` イールド命令は指定した秒数だけコルーチンの実行を中断します。
+Coroutines apply C#'s `yield` pattern. You can suspend and resume coroutine execution by returning a specific object. The object passed at this time is called yield instructions. For example, the `WaitForSeconds` yield instruction suspends coroutine for a specified number of seconds.
 
-### 使い方
+### Usage
 
-イールド命令をコルーチン内で使用する方法を次に示します。
+The following shows how to use a yield instruction in a coroutine:
 
 ```cs
-// 3秒待機します。
+// Wait for 3 seconds.
 yield return new WaitForSeconds(3);
 
-// コルーチンの実行が終わるまで待機します。
+// Wait while the coroutine is running.
 yield return TheCoroutine();
 ```
 
-### ビルトイン
+### Builtins
 
-DotFeather には、あらかじめ次のイールド命令がビルトインされています。また、いくつかのオブジェクトも特別にイールド命令として扱われます。
+DotFeather has some builtin yield instructions, and some objects are also specially treated as yield instructions.
 
-|定義|概要|
+
+|Definitions|Summary|
 |---|---|
-|`WaitForSeconds(float seconds);`|seconds 秒だけ待機します。|
-|`WaitUntil(Func<bool> conditions);`|デリゲートで条件を渡して、満たされるまで待機します。|
-|`WaitWhile(Func<bool> conditions);`|WaitUntil の逆で、条件が満たされている間だけ待機します。|
-|`WaitUntilNextFrame();`|次のフレームまで待機します。|
-|`WaitForTask`|指定したタスクの実行が終わるまで待機します。|
-|`Task` および `ValueTask`|タスクが完了するまで待機します。|
-|`Coroutine`|コルーチンが終わるまで待機します。|
-|`IEnumerator`|コルーチンとして実行し、実行が終わるまで待機します。|
-|その他の Object 派生型および `null`|`WaitUntilNextFrame` として振る舞います。|
+|`WaitForSeconds(float seconds);`|Wait for `seconds` seconds.|
+|`WaitUntil(Func<bool> conditions);`|Wait until the condition is met.|
+|`WaitWhile(Func<bool> conditions);`|It's an opposite of WaitUntil. Wait while the condition is met.|
+|`WaitUntilNextFrame();`|Wait until the next frame is started.|
+|`WaitForTask`|Wait until the specified task finishes executing.|
+|`Task` and `ValueTask`|Wait for the task to complete.|
+|`Coroutine`|Wait until the coroutine is finished.|
+|`IEnumerator`|Run as a coroutine, and wail until the coroutine is finished.|
+|Other Object-inherited types and `null`|Work as a `WaitUntilNextFrame`.|
 

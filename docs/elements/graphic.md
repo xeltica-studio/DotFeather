@@ -1,18 +1,18 @@
 # Graphic
 
-Graphic エレメントを使うと、点、線、矩形、テクスチャといった要素を描画できます。
+Graphic elements can be used to draw elements such as points, lines, rectangles, and textures.
 
-## 使い方
+## Usage
 
-次のように、生成したインスタンスの、描画したい図形に対応するメソッドを呼び出します。
+Call the method corresponding to the graphic you want to draw in the generated instance as follows.
 
 ```cs
 var graphic = new Graphic();
 
-// 点
+// Pixel
 graphic.Pixel(32, 32, Color.Black);
-// 線
+// Line
 graphic.Line(0, 0, 64, 64, Color.Red);
-// 矩形
+// Rectangle
 graphic.Rect(0, 0, 64, 64, Color.Green);
 ```

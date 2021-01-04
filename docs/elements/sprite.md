@@ -1,10 +1,10 @@
 # Sprite
 
-Sprite を使うと、画面上の自由な位置にテクスチャを描画できます。ゲームキャラや弾丸の表示などに利用できます。
+Sprite allows you to draw a texture at any position on the screen. This can be used to display game characters, bullets, etc.
 
-## スプライト
+## Sprite
 
-テクスチャを読み込んだら、スプライトのインスタンスを生成して表示させられます。
+Once a texture has been loaded, a Sprite instance is created and displayed.
 
 ```cs
 Sprite title = new Sprite(texture) { Location = (0, 32) };
@@ -12,28 +12,28 @@ Sprite zombie = new Sprite(textures[0]) { Location = (64, 16) };
 DF.Root.Add(sprite);
 ```
 
-また、ファイル名を指定して直接スプライトを生成することも出来ます。
+You can also generate a sprite directly by specifying a file name.
 
 ```cs
 Sprite sprite = new Sprite("./assets/skeleton.png");
 ```
 
-## アニメーションするスプライト
+## Animating Sprites
 
-スプライトをアニメーションさせたい場合は、`SpriteAnimator` コンポーネントを使用します。コンポーネントについて詳しくは[コンポーネント](../component.md) を参照。
+If you want to animate a sprite, use the `SpriteAnimator` component. For more information about the component, see [Component](./component.md).
 
-`SpriteAnimator` コンポーネントをスプライトにアタッチすると、分割読み込みしたテクスチャ配列を読み込んで、自動的にテクスチャアニメーションを行うことができます。
+If you attach the `SpriteAnimator` component to a sprite, you can read a texture array that has been split-loaded and automatically animate the texture.
 
-実際に使ってみましょう。
+Let's try to use it in practice.
 
 ```cs
 var zombie = new Sprite();
 DF.Root.Add(zombie);
 var walker = zombie.AddComponent<SpriteAnimator>();
-// テクスチャの配列
+// Array of textures
 walker.Textures = textures;
-// ループ回数。-1を指定すると無限ループし、0を指定するとループしません。
+// Loop count. -1 means infinite looping, 0 means no looping
 walker.LoopTimes = -1;
-// 1枚の画像にかけるフレーム数。数値が小さいほど高速でアニメーションします。
+// Number of frames per image. The lower the number, the faster the animation
 walker.Duration = 4;
 ```

@@ -26,7 +26,7 @@ Texture2D[] textures = Texture2D.LoadAndSplitFrom("./assets/zombie.png", 16, 2, 
 
 ## Texture9Sliced
 
-Texture9Sliced は、9分割された2次元のビットマップ テクスチャされたを表す構造体です。
+Texture9Sliced は、9分割された2次元のビットマップ テクスチャを表す構造体です。
 現在は NineSliceSprite エレメントで用いられることを想定しています。
 
 詳しくは[NineSliceSprite](elements/9slice.md)を参照してください。

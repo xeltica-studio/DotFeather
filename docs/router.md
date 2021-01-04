@@ -1,17 +1,17 @@
-# ルーター
+# Router
 
-ルーターは、DotFeather のためのシーン管理機能です。
+Router is a scene manager for DotFeather.
 
-ルーターを用いてシーンA, シーンB, シーンCを切り替える手順を示します。
+This article shows how to change sceneA, sceneB, and sceneC by using router.
 
-## シーンを作成
+## Generate scenes
 
-シーンは、 `Scene` クラスを継承することで作成できます。
+A scene can be created by inheriting the `Scene` class. It's similar to the inheritance of `GameBase`.
 
 ```cs
 public class Root : Scene
 {
-	public override void OnStart(Dictionary<string, object> args)
+	public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
 	{
 		Print("Commands: ");
 		Print(" A: Go to the Scene A");
@@ -19,14 +19,14 @@ public class Root : Scene
 		Print(" C: Go to the Scene C");
 	}
 
-	public override void OnUpdate()
+	public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
 	{
 		if (DFKeyboard.A)
-			Router.ChangeScene<SceneA>();
+			router.ChangeScene<SceneA>();
 		if (DFKeyboard.B)
-			Router.ChangeScene<SceneB>();
+			router.ChangeScene<SceneB>();
 		if (DFKeyboard.C)
-			Router.ChangeScene<SceneC>();
+			router.ChangeScene<SceneC>();
 	}
 }
 ```
@@ -34,15 +34,15 @@ public class Root : Scene
 ```cs
 public class SceneA : Scene
 {
-	public override void OnStart(Dictionary<string, object> args)
+	public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
 	{
 		Print("A");
 		Print("Press ESC to return");
 	}
 
-	public override void OnUpdate()
+	public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
 	{
-		if (DFKeyboard.Escape) Router.ChangeScene<Root>();
+		if (DFKeyboard.Escape) router.ChangeScene<Root>();
 	}
 }
 ```
@@ -50,15 +50,15 @@ public class SceneA : Scene
 ```cs
 public class SceneB : Scene
 {
-	public override void OnStart(Dictionary<string, object> args)
+	public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
 	{
 		Print("B");
 		Print("Press ESC to return");
 	}
 
-	public override void OnUpdate()
+	public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
 	{
-		if (DFKeyboard.Escape) Router.ChangeScene<Root>();
+		if (DFKeyboard.Escape) router.ChangeScene<Root>();
 	}
 }
 ```
@@ -66,46 +66,46 @@ public class SceneB : Scene
 ```cs
 public class SceneC : Scene
 {
-	public override void OnStart(Dictionary<string, object> args)
+	public override void OnStart(Router router, GameBase game, Dictionary<string, object> args)
 	{
 		Print("C");
 		Print("Press ESC to return");
 	}
 
-	public override void OnUpdate()
+	public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
 	{
-		if (DFKeyboard.Escape) Router.ChangeScene<Root>();
+		if (DFKeyboard.Escape) router.ChangeScene<Root>();
 	}
 }
 ```
 
-`DF.Router.ChangeScene<T>()` メソッドを実行すると、シーンを遷移できます。第1引数に辞書型変数を渡すことで、次のシーンの `OnStart()` に値を渡せます。
+You can change scenes by executing the `DF.Router.ChangeScene<T>()` method. You can pass a value to `OnStart()` in the next scene by specifying a dictionary variable as the first argument.
 
-また、
-
-```cs
-DF.Router.ChangeScene(typeof(SceneA));
-```
-のように、`Type` 型を指定することもできます。
-
-## シーンを登録
-
-上記の例では、シーンの型を直接指定しましたが、シーンをあらかじめ登録し、パスを用いて呼び出すこともできます。
-
-パスを指定して上記の3つのシーンを登録する例を示します。
-```cs
-DF.Router.RegisterScene<SceneA>("a");
-DF.Router.RegisterScene<SceneB>("b");
-
-// Type 型でも指定できる
-DF.Router.RegisterScene(typeof(SceneC), "c");
-```
-
-登録したシーンへ遷移する例を示します。
+Also like
 
 ```cs
-DF.Router.ChangeScene("a");
+Router.ChangeScene(typeof(SceneA));
+```
+, you can specify `Type` object.
+
+## Register scenes
+
+In the above example, the scene type was specified directly, but you can also register the scene in advance and call it using a path.
+
+An example of registering the above three scenes by specifying the path:
+
+```cs
+Router.RegisterScene<SceneA>("a");
+Router.RegisterScene<SceneB>("b");
+
+// You can specify the type object.
+Router.RegisterScene(typeof(SceneC), "c");
 ```
 
-シンプルに、型を直接指定していた部分を、パスに置き換えただけです。もちろん、第２引数に辞書を渡せます。
+An example of transition to a registered scene:
 
+```cs
+Router.ChangeScene("a");
+```
+
+Simply replace the part that was directly specifying the type with a path. Of course, you can specify a dictionary variable as the second argument.

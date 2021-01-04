@@ -1,66 +1,66 @@
 # Tilemap
 
-Tilemap を使うと、テクスチャから生成したタイルを格子状に並べて描画できます。
-他の手段でもテクスチャを格子状に描画できますが、タイルマップは最適化されているため、ふつうはこれを使用するべきです。
+Tilemap allows you to draw a grid of tiles generated from a texture.
+Although other methods can be used to draw textures in a grid, Tilemap is optimized and should usually be used.
 
-## タイル
+## Tile
 
-タイルは、Tilemapにおける描画の最小単位です。タイルは `ITile` インターフェイスを実装したクラスで表現します。現在は `Tile` クラスというテクスチャから作成するタイルが組み込まれていますが、独自に `ITile` インターフェイスを実装したタイルを自作することで、複雑なレンダリングを実現できます。
+Tile is the smallest unit of drawing in Tilemap. A tile is represented by a class that implements the `ITile` interface. Currently, the `Tile` class, which creates tiles from textures, is built in, but you can create your own tiles that implement the `ITile` interface to achieve complex rendering.
 
-Tile クラスを読み込んでタイルマップに貼り付ける方法を次に示します。
+The following shows how to load the `Tile` class and paste it into a tile map.
 
 ```cs
-// マップを作る
+// Create a map
 var map = new Tilemap((16, 16));
-// テクスチャを読み込む
+// Loading textures
 var texture = Texture2D.LoadFrom("./grass.png");
-// タイルを生成する
+// Generate tiles
 var tile = new Tile(texture);
 
-// 2, 4 の位置にタイルを配置する
+// Place tiles at positions 2 and 4
 map[2, 4] = tile;
 
-// (1, 4) から (8, 8) へ直線を描画する
+// Draw a line from (1, 4) to (8, 8)
 map.Line(1, 4, 8, 8, tile);
 
-// (2, 16) にサイズ (16, 16) の矩形を描画する
+// Draw a rectangle of size (16, 16) at (2, 16)
 map.Rect(2, 16, 16, 16, tile);
 ```
 
-また、ファイル名を指定して直接タイルを生成することも出来ます。
+You can also generate tiles directly by specifying a file name.
 
 ```cs
 Tile sprite = Tile.LoadFrom("./assets/castle.png");
 ```
 
-## レンダリングモード
+## Rendering modes
 
-タイルマップは、状況に応じて2種類のレンダリングモードを使い分けます。
+Tile maps can use two different rendering modes depending on the situation.
 
-### RenderAll モード
+### RenderAll mode
 
-RenderAll モードでは、タイルマップに貼り付けられた全てのタイルのうち、画面内に存在するものを描画します。
+RenderAll mode draws all tiles attached to the tilemap that exist in the screen.
 
-### Scan モード
+### Scan mode
 
-Scan モードでは、画面を左上から右下まで走査しながら描画すべきタイルを見つけ、描画します。
+Scan mode scans the screen from top-left to bottom-right to find tiles and draws them.
 
-### Auto モード
+### Auto mode
 
-Auto モードでは、上記の2つのモードを次の条件で動的に切り替えます。
-- 画面に存在しうるタイル数　＞　実際のタイル数
-	- RenderAllモード
-- そうでない
-	- Scanモード
+Auto mode dynamically switches between the above two modes according to the following conditions.
+- Number of tiles that can exist on the screen > Actual number of tiles
+	- RenderAll mode
+- Not so.
+	- Scan mode
 
-**このモードがデフォルトです。**
+**This mode is the default. **
 
-### モードを切り替える
+### Switching modes
 
-通常はAutoモードの使用をおすすめしますが、片方のモードで問題が発生する場合などは切り替えることで改善する可能性があります。
+Normally, we recommend using Auto mode, but if you have problems in one mode or the other, switching may help.
 
 ```cs
 map.Renderingmode = TilemapRenderingMode.RenderAll;
 ```
 
-また、Autoモードで使用される実際のレンダリングモードは、`PreferredRenderingMode` プロパティを介して取得できます。
+You can also get the actual rendering mode used in Auto mode via the `PreferredRenderingMode` property.

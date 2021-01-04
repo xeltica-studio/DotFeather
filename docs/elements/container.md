@@ -1,25 +1,25 @@
 # Container
 
-Container を使用すると、他のエレメントを子要素としてグループ化できます。
+Containers can be used to group other elements as child elements.
 
-コンテナーの子要素は、コンテナーの座標を基準とした相対位置に描画されます。つまり、コンテナーを移動させることで、内包する全てのエレメントも同時に移動するということです。
+The children of a container are drawn relative to the coordinates of the container. This means that when you move a container, all the elements it contains will move at the same time.
 
-この仕組みを利用して、多関節キャラクターを作ったり、レイヤーのような仕組みを作ったりすることができます。
+This mechanism can be used to create articulated objects, or to create a layer-like structure.
 
-また、`DF.Root` プロパティの中身はContainerです。
+Also, the `DF.Root` property is a Container.
 
-コンテナーを生成し、スプライトを持たせて表示する例を次に示します。
+The following is an example of creating a container and displaying it with a sprite:
 
 ```cs
 var container = new Container();
 
-// スプライト生成
+// Generate sprites
 var left = new Sprite("./left.png") { Location = (-16, 0) };
 var right = new Sprite("./right.png") { Location = (16, 0) };
 var top = new Sprite("./top.png") { Location = (0, -16) };
 var bottom = new Sprite("./bottom.png") { Location = (0, 16) };
 
-// コンテナーへのスプライト追加
+// Add them to the container
 container.Add(left);
 container.Add(right);
 container.Add(top);
@@ -27,19 +27,19 @@ container.Add(bottom);
 
 DF.Root.Add(container);
 
-// コンテナーを動かす
+// Move it
 container.X = 128;
 container.Y = 96;
 ```
 
-子要素の、コンテナー領域からはみ出た部分をクリッピングするよう設定することもできます。次のように書くだけです。
+It is also possible to set the clipping of child elements that extend beyond the container area. Just write the following:
 
 ```cs
 container.IsTrimmable = true;
 
-// 幅、高さの指定を忘れずに
+// Don't forget to specify the width and height
 container.Width = 128;
 container.Height = 128;
 ```
 
-これにより、コンテナーの領域からはみ出たエレメントは、その部分がクリッピングされます。
+This will cause any elements that extend beyond the container's area to be clipped.

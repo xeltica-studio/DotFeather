@@ -1,26 +1,24 @@
-# キーボード入力
+# From Keyboard
 
-キーボードからの入力を取得するには、 `DFKeyBoard` プロパティを使用します。
+To get the input from the keyboard, use the `DFKeyBoard` property.
 
-Keyboard プロパティの子要素には、あらゆるキーの名前がプロパティとしてあります。
+The child elements of the Keyboard property have the names of any keys as properties.
 
-実際の使用例を述べます。
+Here is an example of its use in practice.
 
 ```cs
-// A を押したか判定する
 if (DFKeyBoard.A.IsPressed)
 {
-	Console.WriteLine("Aが押されている");
+	Console.WriteLine("A is pressed");
 }
-
 
 if (DFKeyBoard.B.IsKeyDown)
 {
-	Console.WriteLine("Bが押された");
+	Console.WriteLine("B has just been pressed");
 }
 
 if (DFKeyBoard.B.IsKeyUp)
 {
-	Console.WriteLine("Bが離された");
+	Console.WriteLine("B has just been released");
 }
 ```

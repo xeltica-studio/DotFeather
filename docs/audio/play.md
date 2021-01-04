@@ -1,32 +1,34 @@
-# ファイルの再生
+# Play Files
 
-読み込んだオーディオソースを実際に再生します。
+Actually play the loaded audio source.
 
-オーディオソースは、 `AudioPlayer` クラスを使用することでデバイス上で再生できます。
+You can play Audio sources on the device using the `AudioPlayer` class.
 
-その例を次に示します。
+Here is an example:
 
 ```cs
-// オーディオソースを読み込む
+// Load Audio Sources
 var bgm = new VorbisAudioSource("./assets/bgm/battle.ogg");
 var sfx1 = new VorbisAudioSource("./assets/sfx/attack.wav");
 var sfx2 = new VorbisAudioSource("./assets/sfx/hurt.wav");
 
-// インスタンスを初期化する
+// Instantiates
 var player = new AudioPlayer();
 
-// BGMの再生
+// Playing BGM
 player.Play(bgm);
 
-// 効果音を再生する
+// Playing SFX
 player.PlayOneShot(sfx1);
 
-// 効果音を再生する
+// Playing SFX
 player.PlayOneShot(sfx2);
 
-// 5秒フェードアウトして停止する
+// Fade out for 5s and stop
 player.Stop(5);
 
-// すぐに停止する
+// Stop soon
 player.Stop();
 ```
+
+Next: [Coroutine](../coroutine.md)

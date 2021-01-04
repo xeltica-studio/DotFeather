@@ -1,38 +1,38 @@
-# マウス入力
+# From Mouse
 
-マウスからの入力を取得するには、 `DFMouse` プロパティを使用します。
+To get the input from the mouse, use the `DFMouse` property.
 
-マウス入力に関わる全ての例を述べます。
+All examples related to mouse input are described below.
 
 ```cs
-// マウスの座標
+// Mouse coordinates
 var (px, py) = DFMouse.Position;
-// スクロールの移動量
+// Scroll movement amount
 var (scrX, scrY) = DFMouse.Scroll;
 
-// ボタン判定
+// Button judgment
 
-// -- クリックしているかどうか
+// -- Whether the button is clicked or not
 if (DFMouse.IsLeft)
-	Console.WriteLine("左クリック");
+	Console.WriteLine("Left click");
 if (DFMouse.IsMiddle)
-	Console.WriteLine("中クリック");
+	Console.WriteLine("Middle click");
 if (DFMouse.IsRight)
-	Console.WriteLine("右クリック");
+	Console.WriteLine("Right click");
 
-// -- たった今クリックしたかどうか
+// -- Whether the button was pressed or not
 if (DFMouse.IsLeftDown)
-	Console.WriteLine("左が今押された");
+	Console.WriteLine("Left is pressed");
 if (DFMouse.IsMiddleDown)
-	Console.WriteLine("中が今押された");
+	Console.WriteLine("Middle is pressed");
 if (DFMouse.IsRightDown)
-	Console.WriteLine("右が今押された");
+	Console.WriteLine("Right is pressed");
 
-// -- たった今クリックしたかどうか
+// -- Whether the button was released or not
 if (DFMouse.IsLeftUp)
-	Console.WriteLine("左が今離された");
+	Console.WriteLine("Left released now");
 if (DFMouse.IsMiddleUp)
-	Console.WriteLine("中が今離された");
+	Console.WriteLine("Middle released now");
 if (DFMouse.IsRightUp)
-	Console.WriteLine("右が今離された");
+	Console.WriteLine("Right released now");
 ```

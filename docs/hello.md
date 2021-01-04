@@ -1,8 +1,8 @@
-# ハローワールドを出力する
+# Print "Hello world"
 
-真っ黒な画面ではつまらないので、とりあえず何かを表示したいところです。
+Let's graduate from the boring black screen and display some great ideas.
 
-エントリーポイントをベースに、プログラムを足していきます。
+Write the following program:
 
 ```cs
 DF.Window.Start += () =>
@@ -13,32 +13,32 @@ DF.Window.Start += () =>
 return DF.Run();
 ```
 
-画面に `Hello, world!` と表示されていれば、成功です。
+If the screen displays `Hello, world!`, you have succeeded.
 
-`DF.Window.Start` イベントの中に、ゲーム起動時に実行するロジックを記述します。イベントの外に書くと、予期しない動作の原因となるので、必ずこの中に記載します。
+Write the logic to be executed when the game starts in the `DF.Window.Start` event. If you write it outside of the event, it may cause unexpected behavior, so be sure to put it in there.
 
-DotFeatherには、コンソールレイヤーという、簡単に文字列を出力するための機能が搭載されています。DF.Console プロパティはこのコンソールレイヤーを制御するためのAPIを含みます。
+DotFeather includes a console layer for easy string output, and the DF.Console property contains the API to control this console layer.
 
-Print メソッドは、値を出力した後、自動的に改行します。値の出力位置を変更するためには、 `ConsoleCursor` プロパティを設定します。
+The Print method automatically breaks the line after printing the value. To change the output position of the value, set the `DF.Console.Cursor` property.
 
 ```cs
 DF.Console.Cursor = (4, 8);
 DF.Console.Print("Good afternoon.");
 ```
 
-上の例では、座標 (4, 8) に文字列を出力しています。
+In the example above, the string will be output at (4, 8).
 
-コンソールレイヤーの文字サイズや色も変更できます。
+You can also change the text size and color of the console layer.
 
 ```cs
-// コンソールレイヤーの文字サイズを 48px に変更
+// Change text size of console layer to 48px
 DF.Console.FontSize = 48;
 
-// コンソールレイヤーに表示する文字を赤くする
+// Make the text displayed on the console layer red
 DF.Console.TextColor = Red;
 ```
 
-コンソールレイヤーを消去する場合は、Clsメソッド(Clear the Screen の略)を使用します。
+To clear the console layer, use the Cls method (short for Clear the Screen).
 
 ```cs
 DF.Console.Cls();

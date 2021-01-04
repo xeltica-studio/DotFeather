@@ -1,31 +1,33 @@
-# ファイルの読み込み
+# Load Files
 
-この記事では、音声ファイルを読み込む手順を示します。
+This article shows how to load audio files.
 
-## WaveAudioSource クラス
+## WaveAudioSource Class
 
-Wave ファイルを読み込むためには、 `IAudioSource` インターフェイスの実装である `WaveAudioSource` クラスを使用します。コンストラクターにファイルパスを指定するだけでファイルを読み込むことが出来ます。
+To load Wave files, use the `WaveAudioSource` class, which is an implementation of the` IAudioSource` interface. You can read a file simply by specifying the file path in the constructor.
 
-実際に Wave ファイルを読み込む例を次に示します。
+The following is an example of actually loading a Wave file.
 
 ```cs
 var source = new WaveAudioSource("./assets/voice/zombie/hurt.wav");
 ```
 
-## VorbisAudioSource クラス
+## VorbisAudioSource Class
 
-Ogg Vorbis ファイルを読み込むためには、 `IAudioSource` インターフェイスの実装である `VorbisAudioSource` クラスを使用します。コンストラクターにファイルパスを指定するだけでファイルを読み込むことが出来ます。
+To load Ogg Vorbis files, use the `VorbisAudioSource` class, which is an implementation of the` IAudioSource` interface. You can read a file simply by specifying the file path in the constructor.
 
-実際に Ogg Vorbis ファイルを読み込む例を次に示します。
+The following is an example of actually loading an Ogg Vorbis file.
 
 ```cs
 var source = new VorbisAudioSource("./assets/bgm/battle.ogg");
 ```
 
-これだけでファイルを読み込むことが出来ます。
+You can do only this.
 
 ----
 
-Wave ファイルはデコードが不要ですばやく再生できるため、効果音に向いています。一方で、全データをメモリにロードするため、長い音楽には向きません。
+Wave files are good for sound effects because they do not require decoding and can be played quickly. However, it loads all data into memory, so it is not suitable for long music.
 
-Ogg Vorbis ファイルはデコードに少し時間がかかるため、効果音などの短い音にとっては非効率です。一方で、データを少しずつメモリにロードしながら再生できるため、長い音楽に向いています。
+Ogg Vorbis files take a while to decode, so they are inefficient for short sounds such as sound effects. However, it is suitable for long music because it can be played while loading data into memory little by little.
+
+Next: [Play Files](play.md)

@@ -1,22 +1,22 @@
 # TextElement
 
-TextElement エレメントを用いると、文字列を描画できます。
+The TextElement element can be used to draw text strings.
 
-## 使い方
+## Usage
 
-`TextElement` クラスは次のように初期化し、使用できます。
+The `TextElement` class can be initialized and used as follows:
 
 ```cs
 var text = new TextElement("Hello, DotFeather!");
 ```
 
-オプションで、文字の大きさやフォントスタイル、色も指定できます。
+Optionally, you can specify the size, font style, and color of the text.
 
-### 独自のフォントを使う
+### Bring your own fonts
 
-標準では、TextElementは DotFeather システムのデフォルトフォントを使用します。必要に応じて、用意したフォントや OS が提供するフォントを使用することもできます。
+By default, TextElement uses the default font of the DotFeather system. You can use a prepared font or a font provided by your operating system if needed.
 
-フォントを変更するためには、`DFFont` クラスのインスタンスをまず初期化します。
+To change the font, you must first initialize an instance of the `DFFont` class.
 
 ```cs
 // Specify the font by path
@@ -29,7 +29,7 @@ var sans = new DFFont("Comic Sans MS", 16);
 var defaultFont = DFFont.GetDefault(24);
 ```
 
-インスタンスを初期化したら、`TextElement` のコンストラクターに渡して初期化します。
+Once the instance is initialized, pass it to the constructor of `TextElement` to initialize it.
 
 ```cs
 var text = new TextElement("* do you wanna have a bad time?", sans, Color.White);

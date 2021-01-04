@@ -12,3 +12,4 @@ Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
 - API Documents
 	- [API Docs is here](https://dotfeather.netlify.com/api/)
 - [Tutorial](tutorial.md)
+- [Migrate from v2](migrate/v2.md)

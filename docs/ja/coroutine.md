@@ -46,13 +46,13 @@ CoroutineRunner.Stop(coroutine);
 コルーチンが終了したとき、またコルーチン内部でハンドルされていない例外が発生した場合にコールバックを指定することもできます。
 
 ```cs
-StartCoroutine(CountDown(false))
+CoroutineRunner.Start(CountDown(false))
 	.Then(_ =>
 	{
 		Console.WriteLine("Successfully finished!");
 	});
 
-StartCoroutine(CountDown(true))
+CoroutineRunner.Start(CountDown(true))
 	.Error(e =>
 	{
 		Console.WriteLine($"Something happened!!!\n{e.GetType().Name}: {e.Message}\n{e.StackTrace}");

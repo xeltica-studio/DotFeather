@@ -1,7 +1,7 @@
 # Shape
 
-Shape エレメントは、点、線、矩形などの単純な図形を表すエレメントです。[Graphic](graphic.md)エレメントは内部的にこのShapeエレメントを使用しています。
+The Shape element is an element that represents a simple shape such as a point, line, or rectangle. The [Graphic](graphic.md) element uses this Shape element internally.
 
-Shape エレメントは、他のエレメントとは違い、静的メソッドを介してインスタンスを生成します。
+Unlike other elements, the Shape element is instantiated via a static method.
 
-詳しくは、APIドキュメントを参照してください。
+For more information, see the API documentation.

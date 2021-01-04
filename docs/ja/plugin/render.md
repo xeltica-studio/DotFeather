@@ -1,20 +1,20 @@
-# 独自レンダリング
+# Original Rendering
 
 **Note: この項目は DotFeather およびプログラミング上級者を対象としています。**
 
-## ElementBaseを継承
+## Inheriting from ElementBase
 
-`ElementBase` クラスを継承した新たなクラスを作成するだけで、DotFeather上で扱えるオブジェクトを実装できます。
+You can implement objects that can be handled on DotFeather by simply creating a new class that inherits from the `ElementBase` class.
 
-`ElementBase` クラスの詳しい定義は、[API ドキュメント](https://dotfeather.netlify.com/api/dotfeather.elementbase) をご参照ください。
+For a detailed definition of the `ElementBase` class, please refer to the [API documentation](https://dotfeather.netlify.com/api/dotfeather.elementbase).
 
-OnRender メソッドをオーバーライドして、実際の描画処理を記述します。描画以外の処理は OnUpdate メソッドをオーバーライドして記述してください。
+The `OnRender` method is overridden to do the actual drawing. Override the OnUpdate method to do anything other than drawing.
 
-## ITile の実装
+## Implementation of ITile
 
-`ITile` インターフェイスを実装するクラスを作成するだけで、タイルを自作できます。
+You can create your own tiles by simply creating a class that implements the `ITile` interface.
 
-最新版における `ITile` インターフェイスの定義を示します。
+Here is the definition of the `ITile` interface in the latest version.
 
 ```cs
 public interface ITile
@@ -24,4 +24,4 @@ public interface ITile
 }
 ```
 
-Draw メソッドを実装し、実際の描画処理を記述します。タイルは1つのインスタンスを複数の位置に設置することが想定されている為、描画位置や色情報を適宜引数として受け取ります。 locationToDraw 仮引数に入る座標情報はタイルマップの座標ではなく、スクリーンのピクセル座標です。何も算出処理を行う必要なく、そのままの位置に描画を行って下さい。
+Implement the Draw method and describe the actual drawing process. Since a single instance of a tile is supposed to be placed in multiple locations, it receives the drawing location and color information as arguments. The coordinate information in the locationToDraw temporary argument is not the coordinates of the tile map, but the pixel coordinates of the screen. There is no need to perform any calculation, just draw at the original location.

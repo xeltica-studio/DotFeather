@@ -1,10 +1,11 @@
-# オーディオ
+# Audio
 
-DotFeather には、音声をファイルなどのソースから読み込み、再生する機能があります。
+DotFeather has the ability to read and play audio from a file or other source.
 
-DotFeather が扱える音声データは、 **オーディオソース** として表現されます。 オーディオソースは`IAudioSource` インターフェイスを継承したクラスです。
+The audio data that DotFeather can handle is represented as an **audio source**. An audio source is a class that inherits from the `IAudioSource` interface.
 
-標準で、 Microsoft WAV フォーマットおよび Ogg Vorbis フォーマットを読み込めるオーディオソースおよび、コールバック関数を用いて波形をプログラマブルに生成できる[DelegateAudioSource](audio/delegate.md)が組み込まれています。また、 [オーディオソースを自作する](plugin/audiosource.md)ことによって、あらゆるオーディオファイルに対応できます。
+By default, DotFeather includes an audio source that can read Microsoft WAV and Ogg Vorbis formats, and a [DelegateAudioSource](audio/delegate.md) that can programmatically generate waveforms using callback functions. You can also [Create your own audio source](plugin/audiosource.md) to support any audio file.
 
-オーディオソースは、 `AudioPlayer` クラスを用いることで再生できます。
+
+The audio source can be played by using the `AudioPlayer` class.
 

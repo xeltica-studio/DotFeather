@@ -1,32 +1,32 @@
-# テクスチャ
+# Textures
 
-テクスチャとは、 DotFeather で使用できる画像データを指します。
+Texture refers to the image data that can be used in DotFeather.
 
-DotFeatherには、現在2種類のテクスチャフォーマットがあります。
+DotFeather currently has two different texture formats.
 
 ## Texture2D
 
-Texture2D は、2次元のビットマップ テクスチャを表す構造体です。DotFeather の多くの場面で用いられるテクスチャフォーマットです。
+Texture2D is a structure that represents a 2D bitmap texture, a texture format used in many aspects of DotFeather.
 
-次に示すとおり `Texture2D` 構造体の静的メソッドを呼ぶことで読み込めます。
+It can be loaded by calling the static method of the `Texture2D` structure as shown below.
 
 ```cs
 Texture2D texture = Texture2D.LoadFrom("./assets/title.png");
 ```
 
-### テクスチャの分割読み込み
+### Split Texture Import
 
-スプライトシートという、一枚の画像にアニメーション用の絵が格子状に配置されているような画像を簡単に読み込めるよう、 DotFeather には、テクスチャを分割して読み込む機能があります。
+DotFeather has the ability to import textures in separate sections so that you can easily import sprite sheets, which are images that contain a grid of pictures for animation.
 
 ```cs
 Texture2D[] textures = Texture2D.LoadAndSplitFrom("./assets/zombie.png", 16, 2, new Size(16, 16));
 ```
 
-このプログラムは、 ./assets/zombie.png にあるファイルを読み込み、16x16のテクスチャとして、横16個、縦2個、合計32個切り出します。
+This program reads the file in ./assets/zombie.png and cuts out 32 16x16 textures, 16 horizontal and 2 vertical, for a total of 32.
 
 ## Texture9Sliced
 
-Texture9Sliced は、9分割された2次元のビットマップ テクスチャされたを表す構造体です。
-現在は NineSliceSprite エレメントで用いられることを想定しています。
+Texture9Sliced is a structure that represents a two-dimensional bitmap texture that is divided into nine segments.
+It is currently intended to be used with the NineSliceSprite element.
 
-詳しくは[NineSliceSprite](elements/9slice.md)を参照してください。
+See [NineSliceSprite](elements/9slice.md) for details.

@@ -10,6 +10,6 @@ You can easily get DotFeather from NuGet Package Manager.
 Check [NuGet Package](https://www.nuget.org/packages/DotFeather/).
 
 - API Documents
-	- [API Docs is here](https://dotfeather.netlify.com/api/)
+	- coming soon
 - [Tutorial](tutorial.md)
 - [Migrate from v2](migrate/v2.md)

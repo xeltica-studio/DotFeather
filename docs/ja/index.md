@@ -10,6 +10,6 @@ DotFeather は、NuGet パッケージマネージャーを使用することで
 [NuGet パッケージ](https://www.nuget.org/packages/DotFeather/) をチェックして下さい。
 
 - API ドキュメント
-	- [API ドキュメントはこちら](https://dotfeather.netlify.com/api/)
+	- 近日公開
 - [チュートリアル](tutorial.md)
 - [v2から移行する](migrate/v2.md)

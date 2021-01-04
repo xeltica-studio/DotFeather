@@ -4,13 +4,13 @@
 
 ## 概要
 
-通常、ゲームのロジックは、 GameBase.OnUpdate() の中に記述します。しかしながら、パーティクルやローディング画面のように、非同期的な処理を必要とするケースにおいて、このアプローチは非効率です。コルーチンはこの問題を解決します。
+通常、ゲームのロジックは、DF.Window.Update イベントの中に記述します。しかしながら、パーティクルやローディング画面のように、非同期的な処理を必要とするケースにおいて、このアプローチは非効率です。コルーチンはこの問題を解決します。
 
 コルーチンは、 `System.Collecitons.IEnumerator` インターフェイスを返すメソッドの形で記述します。コルーチンの定義例を次に示します。
 
 ```cs
-// あらかじめ次に示す Drawables が定義されているものとする
-TextDrawable text;
+// あらかじめ次に示すエレメントが定義されているものとする
+TextElement text;
 
 IEnumerator CountDown()
 {
@@ -28,10 +28,6 @@ IEnumerator CountDown()
 このようにして定義したコルーチンは、次のようにして実行します。
 
 ```cs
-// ゲームクラス内からは次のようにして呼び出せます。
-var coroutine = StartCoroutine(CountDown());
-
-// その他のコンテキストからは次のようにして呼び出せます。
 var coroutine = CoroutineRunner.Start(CountDown));
 ```
 
@@ -39,28 +35,24 @@ var coroutine = CoroutineRunner.Start(CountDown));
 
 ## コルーチンの停止
 
-例えば、コルーチンを途中で停止する場合は `StopCoroutine` メソッドを呼び出します。
+コルーチンを途中で停止する場合は `CoroutineRunner.Stop` メソッドを呼び出します。
 
 ```cs
-// ゲームクラス内からは次のようにして呼び出せます。
-StopCoroutine(coroutine);
-
-// その他のコンテキストからは次のようにして呼び出せます。
 CoroutineRunner.Stop(coroutine);
 ```
 
 ## コルーチンコールバック
 
-コルーチンが終了したとき、またコルーチン内部でハンドルされていない例外が発生した場合にコールバックを指定することもできます。 JavaScript の Promise API に似た記法で書けます。
+コルーチンが終了したとき、またコルーチン内部でハンドルされていない例外が発生した場合にコールバックを指定することもできます。
 
 ```cs
-StartCoroutine(CountDown(false))
+CoroutineRunner.Start(CountDown(false))
 	.Then(_ =>
 	{
 		Console.WriteLine("Successfully finished!");
 	});
 
-StartCoroutine(CountDown(true))
+CoroutineRunner.Start(CountDown(true))
 	.Error(e =>
 	{
 		Console.WriteLine($"Something happened!!!\n{e.GetType().Name}: {e.Message}\n{e.StackTrace}");
@@ -112,4 +104,3 @@ DotFeather には、あらかじめ次のイールド命令がビルトインさ
 |`IEnumerator`|コルーチンとして実行し、実行が終わるまで待機します。|
 |その他の Object 派生型および `null`|`WaitUntilNextFrame` として振る舞います。|
 
-次: [ルーター](./router.md)

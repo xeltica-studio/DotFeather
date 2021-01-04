@@ -36,5 +36,3 @@ if (DFMouse.IsMiddleUp)
 if (DFMouse.IsRightUp)
 	Console.WriteLine("右が今離された");
 ```
-
-次: [キーボード入力](keyboard.md)

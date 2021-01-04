@@ -1,32 +1,27 @@
-# Original Rendering
+# 独自レンダリング
 
-**Note: This article is for Advanced Programmers.**
+**Note: この項目は DotFeather およびプログラミング上級者を対象としています。**
 
-## Implement IDrawable
+## ElementBaseを継承
 
-You can implement the objects that can be handled on DotFeather simply by creating a class that implements the `IDrawable` interface.
+`ElementBase` クラスを継承した新たなクラスを作成するだけで、DotFeather上で扱えるオブジェクトを実装できます。
 
-See [API document] (https://dotfeather.netlify.com/api/dotfeather.idrawable) for the detailed definition.
+`ElementBase` クラスの詳しい定義は、[API ドキュメント](https://dotfeather.netlify.com/api/dotfeather.elementbase) をご参照ください。
 
-We recommend that you implement properties under ZOrder as auto-implemented properties.
+OnRender メソッドをオーバーライドして、実際の描画処理を記述します。描画以外の処理は OnUpdate メソッドをオーバーライドして記述してください。
 
-Write the actual drawing process in the Draw method. Please draw in the location of the value which added location of argument and Location of property.
+## ITile の実装
 
-## Implements ITile
+`ITile` インターフェイスを実装するクラスを作成するだけで、タイルを自作できます。
 
-You can create your own tiles simply by creating a class that implements the `ITile` interface.
-
-Here is the definition of the `ITile` interface in the latest version.
+最新版における `ITile` インターフェイスの定義を示します。
 
 ```cs
 public interface ITile
 {
-	void Draw(GameBase game, Tilemap map, Vector location, Color? color);
+	void Draw(Tilemap map, VectorInt tileLocation, Vector locationToDraw, Color? color);
+	void Destroy();
 }
 ```
 
-Write the actual drawing process in the Draw method. Because tile instances are reused, it receives drawing position and color information as arguments for drawing. Coordinate information of `location` argument is not tile map coordinates, but screen pixel coordinates. Please draw at the same position.
-
-Drawables can receive draw-calls, but processing, which is not related to drawing such as collision detection, should not be written in the `Draw ()` method. If such processing is required, implement [IUpdatable interface](updatable.md) additionally.
-
-Next: [Original Audio Source](audiosource.md)
+Draw メソッドを実装し、実際の描画処理を記述します。タイルは1つのインスタンスを複数の位置に設置することが想定されている為、描画位置や色情報を適宜引数として受け取ります。 locationToDraw 仮引数に入る座標情報はタイルマップの座標ではなく、スクリーンのピクセル座標です。何も算出処理を行う必要なく、そのままの位置に描画を行って下さい。

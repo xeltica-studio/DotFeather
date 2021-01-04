@@ -30,6 +30,3 @@ player.Stop(5);
 // すぐに停止する
 player.Stop();
 ```
-
-
-次: [コルーチン](../coroutine.md)

@@ -1,14 +1,12 @@
-# Keyboard Input
+# From Keyboard
 
+To get the input from the keyboard, use the `DFKeyBoard` property.
 
-To get keyboard input, use `DFKeyboard` class.
+The child elements of the Keyboard property have the names of any keys as properties.
 
-It has all well-known keys as children.
-
-I'll show actual examples.
+Here is an example of its use in practice.
 
 ```cs
-// Check whether the user pressed A key
 if (DFKeyBoard.A.IsPressed)
 {
 	Console.WriteLine("A is pressed");
@@ -16,13 +14,11 @@ if (DFKeyBoard.A.IsPressed)
 
 if (DFKeyBoard.B.IsKeyDown)
 {
-	Console.WriteLine("B key is down");
+	Console.WriteLine("B has just been pressed");
 }
 
 if (DFKeyBoard.B.IsKeyUp)
 {
-	Console.WriteLine("B key is up");
+	Console.WriteLine("B has just been released");
 }
 ```
-
-Next: [Audio](../audio.md)

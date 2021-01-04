@@ -1,4 +1,4 @@
-version: 2.9.2.{build}
+version: 3.0.0.{build}
 image: Visual Studio 2019
 skip_non_tags: true
 
@@ -16,13 +16,13 @@ before_build:
       nuget restore
 
 build:
-  project: C:\projects\dotfeather\dotfeather\dotfeather.csproj
+  project: C:\projects\dotfeather\src\dotfeather.csproj
   publish_nuget: true
 
 configuration: Release
 
 after_build:
-  - nuget pack -Prop Configuration=Release DotFeather -OutputDirectory DotFeather/bin/Release/
+  - nuget pack -Prop Configuration=Release src -OutputDirectory src/bin/Release/
 
 artifacts:
   - path: '**\*.nupkg'
@@ -40,17 +40,14 @@ deploy:
   - provider: GitHub
     artifact: /.*\.nupkg/ # upload all NuGet packages to release assets
     draft: false
-    prerelease: false
+    prerelease: true
     description: |
-      ## 2.9.2
+      # DotFeather v3 RC2
+
+      ## RC1 からのチェンジログ
 
       ### バグ修正
-      - ; キーを押すと画面が暗くなる不具合を修正しました
-
-      ----
-
-      ### Bug fixes
-      - Fixed a bug the screen goes dark when the ";" key was pressed.
+      - NuGetでインストールしたときに正しいバージョンのNVorbisがインストールされない問題を修正
 
     auth_token:
       secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx

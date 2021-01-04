@@ -1,16 +1,16 @@
-# Coroutine
+# Coroutines
 
-Coroutine is a routine works asynchronously in background.
+A coroutine is a routine that runs asynchronously in the background.
 
-## Summary
+## Overview
 
-Usually, the game logic is written in GameBase.OnUpdate(). However, this approach is inefficient for cases that require asynchronous processing, such as particles and loading screens. Coroutines solve this problem.
+Normally, the logic of a game is written in the DF.Window.Update event. However, in cases that require asynchronous processing, such as particles or loading screens, this approach is inefficient. Coroutines solve this problem.
 
-Coroutines are written in as methods that return the `System.Collecitons.IEnumerator` interface. See the following example of coroutine definition:
+A coroutine can be written in the form of a method that returns a `System.Collections.IEnumerator`. An example of a coroutine definition is shown below.
 
 ```cs
-// The following drawables are defined
-TextDrawable text;
+// The following elements shall be defined
+TextElement text;
 
 IEnumerator CountDown()
 {
@@ -25,42 +25,34 @@ IEnumerator CountDown()
 }
 ```
 
-The defined coroutines are executed as follows:
+The coroutine defined in this way is executed as follows.
 
 ```cs
-// Call from the game-class
-var coroutine = StartCoroutine(CountDown());
-
-// Call from other contexts
 var coroutine = CoroutineRunner.Start(CountDown));
 ```
 
-Both `StartCoroutine ()` methods return an instance of the [Coroutine class](https://dotfeather.netlify.com/api/dotfeather.coroutine). You can control the coroutine by manipulating this instance.
+Both methods return an instance of the [Coroutine class](https://dotfeather.netlify.com/api/dotfeather.coroutine). By manipulating this instance, the coroutine can be controlled.
 
-## Stop Coroutine
+## Stopping a Coroutine
 
-For example, to interrupt the coroutine, call `StopCoroutine` method.
+To stop a coroutine in the middle, call the `CoroutineRunner.Stop` method.
 
 ```cs
-// Call from the game-class
-StopCoroutine(coroutine);
-
-// Call from other contexts
 CoroutineRunner.Stop(coroutine);
 ```
 
-## Callbacks
+## Coroutine Callbacks
 
-You can also specify a callback when the coroutine exits, and when an unhandled exception occurs inside the coroutine. It's similar to JavaScript Promise API.
+You can also specify a callback when the coroutine exits, or when an unhandled exception occurs inside the coroutine.
 
 ```cs
-StartCoroutine(CountDown(false))
+CoroutineRunner.Start(CountDown(false))
 	.Then(_ =>
 	{
 		Console.WriteLine("Successfully finished!");
 	});
 
-StartCoroutine(CountDown(true))
+CoroutineRunner.Start(CountDown(true))
 	.Error(e =>
 	{
 		Console.WriteLine($"Something happened!!!\n{e.GetType().Name}: {e.Message}\n{e.StackTrace}");
@@ -113,4 +105,3 @@ DotFeather has some builtin yield instructions, and some objects are also specia
 |`IEnumerator`|Run as a coroutine, and wail until the coroutine is finished.|
 |Other Object-inherited types and `null`|Work as a `WaitUntilNextFrame`.|
 
-Next: [Router](router.md)

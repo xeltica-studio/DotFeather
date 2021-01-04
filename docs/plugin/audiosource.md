@@ -1,10 +1,11 @@
-# Original Audio Source
+# 独自オーディオソース
 
-**Note: This article is for Advanced Programmers.**
+**Note: この項目は DotFeather およびプログラミング上級者を対象としています。**
 
-You can play audio of any format by creating a class that implements the `IAudioSource` interface.
+`IAudioSource` インターフェイスを実装するクラスを作成することで、あらゆるフォーマットの音声を再生できます。
 
-Here is the definition of the latest version of `IAudioSource`:
+
+最新版の `IAudioSource` の定義を次に示します:
 
 ```cs
 public interface IAudioSource
@@ -17,17 +18,15 @@ public interface IAudioSource
 }
 ```
 
-The `EnumerateSamples` method is an iterator that returns samples of audio data in the form of a tuple. Even if it is mono or 8 bit PCM, you have to convert it to 16 bit stereo.
+`EnumerateSamples` メソッドは、音声データのサンプルをタプル形式で返すイテレーターです。モノラルであっても、8bitPCMであっても、16bitのステレオに変換する必要があります。
 
-The `Samples` property is the number of samples in the audio source. Returns null if the number of samples is unknown, such as live streaming.
+`Samples` プロパティはオーディオソースのサンプル数です。ライブストリーミングなどのように、サンプル数が定かでない場合は null を返します。
 
-The `Channels` property is the number of channels in the audio source.
+`Channels` プロパティ、はオーディオソースのチャンネル数です。
 
-The `Bits` property is the number of quantization bits in the audio source.
+`Bits` プロパティは、オーディオソースの量子化ビット数です。
 
-The `SampleRate` property is the sampling frequency of the audio source.
+`SampleRate` プロパティは、オーディオソースのサンプリング周波数です。
 
 
-After creating that, you can play the audio source by using the `AudioPlayer` class.
-
-Next: [IUpdatable](updatable.md)
+これらを実装したオーディオソースは、実際に `AudioPlayer` クラスを用いて再生することが出来ます。

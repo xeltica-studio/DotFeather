@@ -24,5 +24,3 @@ if (DFKeyBoard.B.IsKeyUp)
 	Console.WriteLine("Bが離された");
 }
 ```
-
-次: [オーディオ](../audio.md)

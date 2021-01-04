@@ -1,40 +1,38 @@
-# Mouse Input
+# From Mouse
 
-To get mouse input, use `DFMouse` property.
+To get the input from the mouse, use the `DFMouse` property.
 
-I'll show all examples related to mouse input.
+All examples related to mouse input are described below.
 
 ```cs
-// Mouse Position
+// Mouse coordinates
 var (px, py) = DFMouse.Position;
-// Scroll Displacement
+// Scroll movement amount
 var (scrX, scrY) = DFMouse.Scroll;
 
-// Check Button
+// Button judgment
 
-// -- Check whether mouse buttons are clicked
+// -- Whether the button is clicked or not
 if (DFMouse.IsLeft)
-	Console.WriteLine("Left Clicked");
+	Console.WriteLine("Left click");
 if (DFMouse.IsMiddle)
-	Console.WriteLine("Middle Clicked");
+	Console.WriteLine("Middle click");
 if (DFMouse.IsRight)
-	Console.WriteLine("Right Clicked");
+	Console.WriteLine("Right click");
 
-// -- Check whether mouse buttons are just pressed
+// -- Whether the button was pressed or not
 if (DFMouse.IsLeftDown)
-	Console.WriteLine("Left pressed");
+	Console.WriteLine("Left is pressed");
 if (DFMouse.IsMiddleDown)
-	Console.WriteLine("Middle pressed");
+	Console.WriteLine("Middle is pressed");
 if (DFMouse.IsRightDown)
-	Console.WriteLine("Right pressed");
+	Console.WriteLine("Right is pressed");
 
-// -- Check whether mouse buttons are released
+// -- Whether the button was released or not
 if (DFMouse.IsLeftUp)
-	Console.WriteLine("Left released");
+	Console.WriteLine("Left released now");
 if (DFMouse.IsMiddleUp)
-	Console.WriteLine("Middle released");
+	Console.WriteLine("Middle released now");
 if (DFMouse.IsRightUp)
-	Console.WriteLine("Right released");
+	Console.WriteLine("Right released now");
 ```
-
-Next: [Keyboard Input](keyboard.md)

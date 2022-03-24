@@ -7,7 +7,7 @@
 
 DotFeather (ドットフェザー)は、 C# と .NET Standard 2.1 のための、軽量で汎用的な2Dゲームエンジンです。
 
-[English](README.md) ・ 日本語
+[README is also available in English!](README.md)
 
 ## ビルドの仕方
 
@@ -22,6 +22,7 @@ dotnet build
 
 - Windows
 - macOS
+  - 最新のmacOSで動作しないようです。現在原因を調査しています。
 - GNU/Linux
 
 ## 機能

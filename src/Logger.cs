@@ -17,9 +17,11 @@ public static class Debug
 		Log($"FixMe: {context} {desc}");
 	}
 
-	public static void DebugLog(string log)
+	public static void Info(string log)
 	{
-		System.Console.WriteLine($"Debug: {log}");
+		if (Logs.Contains(log)) return;
+		System.Console.WriteLine($"Info: {log}");
+		Logs.Add(log);
 	}
 
 	public static void Log(string log)

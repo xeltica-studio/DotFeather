@@ -24,11 +24,13 @@ namespace DotFeather.Internal
 
 		internal DFConsole()
 		{
-			text = new TextElement("", DFFont.GetDefault(), Color.White);
 			FontSize = 16;
+			DF.Window.Start += () => {
+				text = new TextElement("", DFFont.GetDefault(), Color.White);
+			};
 			DF.Window.Render += () =>
 			{
-				text.Render();
+				text?.Render();
 			};
 
 			DF.Window.PostUpdate += UpdateConsole;
@@ -63,6 +65,7 @@ namespace DotFeather.Internal
 
 		private void UpdateConsole()
 		{
+			if (text == null) return;
 			var f = text.Font;
 			var w = DF.Window;
 			if (f.Size != FontSize || prevFont != FontPath)
@@ -77,7 +80,7 @@ namespace DotFeather.Internal
 			prevFont = FontPath;
 		}
 
-		private readonly TextElement text;
+		private TextElement? text;
 		private readonly List<string> consoleBuffer = new();
 		private string? prevFont;
 	}

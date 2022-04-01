@@ -463,8 +463,9 @@ namespace DotFeather
 		/// <returns></returns>
 		public static bool HasChar() => keychars.Count > 0;
 
-		internal static void Update()
+		internal static void Update(Action<DFKeyCode> callback)
 		{
+			Parallel.ForEach(allCodes, callback);
 		}
 
 		internal static void OnKeyPress(DFKeyPressEventArgs e) => KeyPress?.Invoke(e);

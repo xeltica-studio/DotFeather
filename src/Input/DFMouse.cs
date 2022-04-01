@@ -64,25 +64,26 @@ namespace DotFeather
 		/// <value></value>
 		public static Vector Scroll { get; private set; }
 
-		internal static void Update()
+		internal static void Update(bool left, bool right, bool middle, Vector scroll)
 		{
 			// previous values
 			bool pl = IsLeft, pr = IsRight, pm = IsMiddle;
 
-			IsLeft = false;
-			IsRight = false;
-			IsMiddle = false;
-			Debug.NotImpl("DFMouse.Update: IsLeft, IsRight, IsMiddle");
+			IsLeft = left;
+			IsRight = right;
+			IsMiddle = middle;
 
 			IsLeftDown = IsLeft && !pl;
 			IsRightDown = IsRight && !pr;
 			IsMiddleDown = IsMiddle && !pm;
 
+			if (IsLeftDown) System.Console.WriteLine("mouse left");
+			if (IsRightDown) System.Console.WriteLine("mouse right");
+			if (IsMiddleDown) System.Console.WriteLine("mouse middle");
+
 			IsLeftUp = !IsLeft && pl;
 			IsRightUp = !IsRight && pr;
 			IsMiddleUp = !IsMiddle && pm;
-
-			var scroll = new Vector(0, 0);
 
 			Debug.NotImpl("DFMouse.Update: scroll");
 

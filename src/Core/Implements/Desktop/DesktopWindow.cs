@@ -145,8 +145,6 @@ namespace DotFeather.Internal
             options.Title = "DotFeather Window";
 			options.WindowBorder = WindowBorder.Fixed;
             window = Window.Create(options);
-			window.Initialize();
-			gl = GL.GetApi(window);
 
 			if (IsCaptureMode && !Directory.Exists("./shot"))
 			{
@@ -197,6 +195,7 @@ namespace DotFeather.Internal
 		private void OnLoad()
 		{
 			Debug.FixMe("DesktopWindow.Load");
+			gl = GL.GetApi(window);
 			gl.ClearColor(SDColor.Black);
 			gl.LineWidth(1);
 			gl.Disable(EnableCap.DepthTest);
@@ -242,7 +241,6 @@ namespace DotFeather.Internal
 					bmp.SaveAsPng(stream);
 				}
 			}
-			window.SwapBuffers();
 		}
 
 		private void OnUpdateFrame(double delta)
@@ -253,8 +251,33 @@ namespace DotFeather.Internal
 			Time.DeltaTime = deltaTime;
 
 			CalculateFps();
-			DFKeyboard.Update();
-			DFMouse.Update();
+			if (inputContext != null)
+			{
+
+				var kb = inputContext.Keyboards[0];
+				DFKeyboard.Update(code =>
+				{
+					var isPressed = kb.IsKeyPressed(code.ToSilk());
+					var prevIsPressed = prevState[(int)code];
+					var key = DFKeyboard.KeyOf(code);
+					key.IsPressed = isPressed;
+					key.IsKeyDown = isPressed && !prevIsPressed;
+					key.IsKeyUp = !isPressed && prevIsPressed;
+					key.ElapsedFrameCount = isPressed ? key.ElapsedFrameCount + 1 : 0;
+					key.ElapsedTime = isPressed ? key.ElapsedTime + Time.DeltaTime : 0;
+					prevState[(int)code] = isPressed;
+				});
+
+				var mouse = inputContext.Mice[0];
+				var wheel = mouse.ScrollWheels[0];
+				DFMouse.Update(
+					mouse.IsButtonPressed(MouseButton.Left),
+					mouse.IsButtonPressed(MouseButton.Right),
+					mouse.IsButtonPressed(MouseButton.Middle),
+					(wheel.X, wheel.Y)
+				);
+				DFMouse.Position = ((int)mouse.Position.X, (int)mouse.Position.Y);
+			}
 			PreUpdate?.Invoke();
 			Update?.Invoke();
 
@@ -283,7 +306,7 @@ namespace DotFeather.Internal
 		}
 
 		private readonly Silk.NET.Windowing.IWindow window;
-		internal readonly GL gl;
+		internal GL gl;
 		private IInputContext? inputContext;
 
 		private int frameCount;
@@ -297,5 +320,7 @@ namespace DotFeather.Internal
 		public event Action? Resize;
 		public event Action? PreUpdate;
 		public event Action? PostUpdate;
+
+		private static readonly bool[] prevState = new bool[(int)DFKeyCode.LastKey + 1];
 	}
 }

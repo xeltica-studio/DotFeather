@@ -1,5 +1,4 @@
 using System;
-using OpenTK.Graphics.OpenGL;
 namespace DotFeather
 {
 	/// <summary>
@@ -10,10 +9,8 @@ namespace DotFeather
 		/// <summary>
 		/// <see cref="GLContext"/> クラスの新しいインスタンスを初期化します。
 		/// </summary>
-		/// <param name="p"></param>
-		public GLContext(PrimitiveType p)
+		public GLContext()
 		{
-			GL.Begin(p);
 			disposedValue = false;
 		}
 
@@ -24,7 +21,6 @@ namespace DotFeather
 		{
 			if (!disposedValue)
 			{
-				GL.End();
 				disposedValue = true;
 			}
 		}

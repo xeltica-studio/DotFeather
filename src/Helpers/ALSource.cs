@@ -1,4 +1,3 @@
-using OpenTK.Audio.OpenAL;
 namespace DotFeather
 {
 	/// <summary>
@@ -9,11 +8,14 @@ namespace DotFeather
 		/// <summary>
 		/// ハンドルを生成します。
 		/// </summary>
-		public override int GenerateHandle() => AL.GenSource();
+		public override int GenerateHandle() => 0;
 
 		/// <summary>
 		/// ハンドルを削除します。
 		/// </summary>
-		public override void DisposeHandle() => AL.DeleteSource(Handle);
+		public override void DisposeHandle()
+		{
+
+		}
 	}
 }

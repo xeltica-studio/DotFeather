@@ -4,9 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using OpenTK;
-using OpenTK.Audio;
-using OpenTK.Audio.OpenAL;
 
 namespace DotFeather
 {
@@ -20,7 +17,7 @@ namespace DotFeather
 		/// </summary>
 		public AudioPlayer()
 		{
-			context = new AudioContext();
+			Debug.NotImpl("AudioPlayer.ctor");
 			Gain = 1;
 		}
 
@@ -34,8 +31,7 @@ namespace DotFeather
 			set
 			{
 				// 0...1の範囲に矯正
-				gain = Math.Max(0, Math.Min(1, value));
-				AL.Listener(ALListenerf.Gain, gain);
+				Debug.NotImpl("AudioPlayer.Gain set");
 			}
 		}
 
@@ -141,11 +137,7 @@ namespace DotFeather
 			using (var alSrc = new ALSource())
 			using (var alBuf = new ALBuffer())
 			{
-				AL.BufferData(alBuf, ALFormat.Stereo16, buffer, buffer.Length, source.SampleRate);
-				AL.BindBufferToSource(alSrc, alBuf);
-				AL.SourcePlay(alSrc);
-				while (AL.GetSourceState(alSrc) == ALSourceState.Playing)
-					await Task.Delay(10).ConfigureAwait(false);
+				Debug.NotImpl("AudioPlayer.PlayOneShotAsync");
 			};
 		}
 
@@ -154,7 +146,7 @@ namespace DotFeather
 		/// </summary>
 		public void Dispose()
 		{
-			context.Dispose();
+			Debug.NotImpl("AudioPlayer.Dispose");
 		}
 
 		private async Task PlayAsync(IAudioSource source, int? loop = default, CancellationToken ct = default)
@@ -167,70 +159,7 @@ namespace DotFeather
 			LengthInSamples = source.Samples ?? 0;
 			Length = (int)(LengthInSamples / (float)source.SampleRate * 1000);
 
-			using (var alSrc = new ALSource())
-			using (alBuffers[0] = new ALBuffer())
-			using (alBuffers[1] = new ALBuffer())
-			{
-				var isFinished = !FillBuffer(arr, enumerator, ct);
-				AL.BufferData(alBuffers[0], ALFormat.Stereo16, arr, arr.Length * sizeof(short), source.SampleRate);
-				if (!isFinished)
-				{
-					isFinished = !FillBuffer(arr, enumerator, ct);
-					AL.BufferData(alBuffers[1], ALFormat.Stereo16, arr, arr.Length * sizeof(short), source.SampleRate);
-				}
-				AL.SourceQueueBuffer(alSrc, alBuffers[0]);
-				AL.SourceQueueBuffer(alSrc, alBuffers[1]);
-				AL.SourcePlay(alSrc);
-				IsPlaying = true;
-				var prevOffset = 0;
-				var sampleCount = 1;
-				while (!ct.IsCancellationRequested)
-				{
-					int processedCount;
-
-					AL.Source(alSrc, ALSourcef.Pitch, Pitch);
-					do
-					{
-						AL.GetSource(alSrc, ALGetSourcei.BuffersProcessed, out processedCount);
-						AL.GetSource(alSrc, ALGetSourcei.SampleOffset, out var offset);
-						if (prevOffset > offset)
-						{
-							sampleCount++;
-							TimeInSamples = (arr.Length / 2) * sampleCount;
-						}
-						TimeInSamples += offset - prevOffset;
-						if (TimeInSamples > LengthInSamples) TimeInSamples = LengthInSamples;
-						Time = (int)(TimeInSamples / (float)source.SampleRate * 1000);
-						prevOffset = offset;
-						await Task.Delay(1);
-					}
-					while (processedCount == 0 && !ct.IsCancellationRequested);
-
-					while (processedCount > 0 && !ct.IsCancellationRequested)
-					{
-						int buffer = AL.SourceUnqueueBuffer(alSrc);
-						if (!isFinished)
-						{
-							isFinished = !FillBuffer(arr, enumerator, ct);
-							AL.BufferData(buffer, ALFormat.Stereo16, arr, arr.Length * sizeof(short), source.SampleRate);
-							AL.SourceQueueBuffer(alSrc, buffer);
-						}
-						processedCount--;
-					}
-
-					AL.GetSource(alSrc, ALGetSourcei.BuffersQueued, out int queuedCount);
-					if (queuedCount > 0)
-					{
-						AL.GetSource(alSrc, ALGetSourcei.SourceState, out var state);
-						if ((ALSourceState)state != ALSourceState.Playing)
-							AL.SourcePlay(alSrc);
-					}
-					else
-						break;
-					await Task.Delay(10).ConfigureAwait(false);
-				}
-				IsPlaying = false;
-			};
+			Debug.NotImpl("AudioPlayer.PlayAsync");
 		}
 
 		private bool FillBuffer(short[] buffer, IEnumerator<(short l, short r)> enumerator, CancellationToken ct)
@@ -248,7 +177,6 @@ namespace DotFeather
 		}
 
 		private float gain;
-		private readonly AudioContext context;
 		private CancellationTokenSource? cts;
 	}
 }

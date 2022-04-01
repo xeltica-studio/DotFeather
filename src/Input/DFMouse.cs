@@ -1,4 +1,3 @@
-using OpenTK.Input;
 
 
 namespace DotFeather
@@ -70,9 +69,10 @@ namespace DotFeather
 			// previous values
 			bool pl = IsLeft, pr = IsRight, pm = IsMiddle;
 
-			IsLeft = Mouse.GetState().LeftButton == ButtonState.Pressed;
-			IsRight = Mouse.GetState().RightButton == ButtonState.Pressed;
-			IsMiddle = Mouse.GetState().MiddleButton == ButtonState.Pressed;
+			IsLeft = false;
+			IsRight = false;
+			IsMiddle = false;
+			Debug.NotImpl("DFMouse.Update: IsLeft, IsRight, IsMiddle");
 
 			IsLeftDown = IsLeft && !pl;
 			IsRightDown = IsRight && !pr;
@@ -82,8 +82,8 @@ namespace DotFeather
 			IsRightUp = !IsRight && pr;
 			IsMiddleUp = !IsMiddle && pm;
 
-			var scr = Mouse.GetCursorState().Scroll;
-			var scroll = new Vector(scr.X, scr.Y);
+			var scroll = new Vector(0, 0);
+			Debug.NotImpl("DFMouse.Update: scroll");
 
 			Scroll = scroll - prevScroll;
 			prevScroll = scroll;

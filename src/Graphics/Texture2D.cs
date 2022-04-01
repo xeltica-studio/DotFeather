@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using SD = System.Drawing;
-using OpenTK.Graphics.OpenGL;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Advanced;
@@ -80,13 +79,8 @@ namespace DotFeather
 		/// </summary>
 		public static Texture2D Create(byte[] bmp, int width, int height)
 		{
-			var texture = GL.GenTexture();
-			GL.BindTexture(TextureTarget.Texture2D, texture);
-
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
-			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, width, height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Rgba, PixelType.UnsignedByte, bmp);
-			return new Texture2D(texture, new VectorInt(width, height));
+			Debug.NotImpl("Texture2D.Create");
+			return new Texture2D(0, new VectorInt(width, height));
 		}
 
 		/// <summary>
@@ -188,7 +182,7 @@ namespace DotFeather
 		/// </summary>
 		public void Dispose()
 		{
-			GL.DeleteTexture(Handle);
+			Debug.NotImpl("Texture2D.Dispose");
 		}
 	}
 }

@@ -1,6 +1,7 @@
 ﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 using System;
 using System.Drawing;
+using Silk.NET.OpenGL;
 
 namespace DotFeather.Internal
 {
@@ -31,6 +32,21 @@ namespace DotFeather.Internal
 				return;
 
 			Debug.NotImpl("DesktopTextureDrawer.Draw");
+		}
+
+		public unsafe int GenerateTexture(byte[] bmp, int width, int height)
+		{
+			fixed (byte* b = bmp)
+			{
+				var gl = (DF.Window as DesktopWindow)!.gl;
+				var texture = gl.GenTexture();
+				gl.BindTexture(GLEnum.Texture2D, texture);
+
+				gl.TexParameter(GLEnum.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
+				gl.TexParameter(GLEnum.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
+				gl.TexImage2D(GLEnum.Texture2D, 0, (int)GLEnum.Rgba, (uint)width, (uint)height, 0, GLEnum.Rgba, GLEnum.UnsignedByte, b);
+				return (int)texture;
+			}
 		}
 
 		private void Vertex(double tcx, double tcy, (float x, float y) vx, Color? color)

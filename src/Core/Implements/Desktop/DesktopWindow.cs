@@ -5,6 +5,11 @@ using System.IO;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp;
+using Silk.NET.Windowing;
+using Silk.NET.Maths;
+using Silk.NET.Input;
+using System.Linq;
+using Silk.NET.OpenGL;
 
 namespace DotFeather.Internal
 {
@@ -15,15 +20,8 @@ namespace DotFeather.Internal
 	{
 		public VectorInt Location
 		{
-			get
-			{
-				Debug.NotImpl("DesktopWindow.Location get");
-				return (0, 0);
-			}
-			set
-			{
-				Debug.NotImpl("DesktopWindow.Location set");
-			}
+			get => (window.Position.X, window.Position.Y);
+			set => window.Position = new Vector2D<int>(value.X, value.Y);
 		}
 
 		public VectorInt Size
@@ -34,15 +32,8 @@ namespace DotFeather.Internal
 
 		public VectorInt ActualSize
 		{
-			get
-			{
-				Debug.NotImpl("DesktopWindow.ActualSize get");
-				return (0, 0);
-			}
-			set
-			{
-				Debug.NotImpl("DesktopWindow.ActualSize set");
-			}
+			get => (window.Size.X, window.Size.Y);
+			set => window.Size = new Vector2D<int>(value.X, value.Y);
 		}
 
 		public int X
@@ -83,15 +74,8 @@ namespace DotFeather.Internal
 
 		public bool IsVisible
 		{
-			get
-			{
-				Debug.NotImpl("DesktopWindow.IsVisible get");
-				return true;
-			}
-			set
-			{
-				Debug.NotImpl("DesktopWindow.IsVisible set");
-			}
+			get => window.IsVisible;
+			set => window.IsVisible = value;
 		}
 
 		public bool IsFocused
@@ -99,34 +83,20 @@ namespace DotFeather.Internal
 			get
 			{
 				Debug.NotImpl("DesktopWindow.IsFocused get");
-				return false;
+				return true;
 			}
 		}
 
 		public bool IsFullScreen
 		{
-			get
-			{
-				Debug.NotImpl("DesktopWindow.IsFullScreen get");
-				return false;
-			}
-			set
-			{
-				Debug.NotImpl("DesktopWindow.IsFullScreen set");
-			}
+			get => window.WindowState == WindowState.Fullscreen;
+			set => window.WindowState = value ? WindowState.Fullscreen : WindowState.Normal;
 		}
 
 		public string Title
 		{
-			get
-			{
-				Debug.NotImpl("DesktopWindow.Title get");
-				return "";
-			}
-			set
-			{
-				Debug.NotImpl("DesktopWindow.Title set");
-			}
+			get => window.Title;
+			set => window.Title = value;
 		}
 
 		public bool IsCaptureMode { get; private set; }
@@ -142,7 +112,7 @@ namespace DotFeather.Internal
 		{
 			get
 			{
-				Debug.NotImpl("DesktopWindow.IsFullScreen get");
+				Debug.NotImpl("DesktopWindow.PixelRatio get");
 				return 1;
 			}
 		}
@@ -151,24 +121,44 @@ namespace DotFeather.Internal
 
 		public WindowMode Mode
 		{
-			get
+			get => window.WindowBorder switch
 			{
-				Debug.NotImpl("DesktopWindow.Mode get");
-				return WindowMode.Fixed;
-			}
-			set
+				WindowBorder.Fixed => WindowMode.Fixed,
+				WindowBorder.Hidden => WindowMode.NoFrame,
+				WindowBorder.Resizable => WindowMode.Resizable,
+				_ => throw new InvalidOperationException("unexpected window state"),
+			};
+			set => window.WindowBorder = value switch
 			{
-				Debug.NotImpl("DesktopWindow.Mode set");
-			}
+				WindowMode.Fixed => WindowBorder.Fixed,
+				WindowMode.NoFrame => WindowBorder.Hidden,
+				WindowMode.Resizable => WindowBorder.Resizable,
+				_ => throw new ArgumentException(null, nameof(value)),
+			};
 		}
 
 		internal DesktopWindow()
 		{
 			Debug.NotImpl("DesktopWindow.ctor");
+            var options = WindowOptions.Default;
+            options.Size = new Vector2D<int>(640, 480);
+            options.Title = "DotFeather Window";
+			options.WindowBorder = WindowBorder.Fixed;
+            window = Window.Create(options);
+			window.Initialize();
+			gl = GL.GetApi(window);
+
 			if (IsCaptureMode && !Directory.Exists("./shot"))
 			{
 				Directory.CreateDirectory("shot");
 			}
+
+			window.Load += OnLoad;
+			window.Resize += OnResize;
+			window.FileDrop += OnFileDrop;
+			window.Render += OnRenderFrame;
+			window.Update += OnUpdateFrame;
+			window.Closing += OnUnload;
 		}
 
 		public Texture2D TakeScreenshot()
@@ -179,18 +169,125 @@ namespace DotFeather.Internal
 
 		public void Run()
 		{
-			Debug.NotImpl("DesktopWindow.Run");
+			window.Run();
 		}
 
 		public void Exit()
 		{
-			Debug.NotImpl("DesktopWindow.Exit");
+			window.Close();
 		}
 
-		private void OnUnload(object s, EventArgs e)
+		private SixLabors.ImageSharp.Image TakeScreenshotAsImage()
+		{
+			Debug.FixMe("DesktopWindow.TakeScreenshotAsImage");
+			// if (GraphicsContext.CurrentContext == null)
+			//	throw new GraphicsContextMissingException();
+
+			// var arr = new byte[ActualWidth * ActualHeight * 4];
+
+			// GL.ReadPixels(0, 0, ActualWidth, ActualHeight, PixelFormat.Rgba, PixelType.UnsignedByte, arr);
+
+			// var img = SixLabors.ImageSharp.Image.LoadPixelData<Rgba32>(arr, ActualWidth, ActualHeight);
+
+			// img.Mutate(i => i.Flip(FlipMode.Vertical));
+
+			return null;
+		}
+
+		private void OnLoad()
+		{
+			Debug.FixMe("DesktopWindow.Load");
+			gl.ClearColor(SDColor.Black);
+			gl.LineWidth(1);
+			gl.Disable(EnableCap.DepthTest);
+
+			inputContext = window.CreateInput();
+
+			Start?.Invoke();
+		}
+
+		private void OnResize(Vector2D<int> vec)
+		{
+			Debug.FixMe("DesktopWindow.OnResize");
+			gl.Viewport(window.FramebufferSize);
+
+			Resize?.Invoke();
+		}
+
+		private void OnFileDrop(string[] files)
+		{
+			FileDropped?.Invoke(new DFFileDroppedEventArgs(files));
+		}
+
+		private void OnRenderFrame(double delta)
+		{
+			Debug.FixMe("DesktopWindow.OnRenderFrame");
+			// 画面の初期化
+			gl.ClearColor(BackgroundColor);
+			gl.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+
+			DF.Root.Render();
+
+			Render?.Invoke();
+
+			if (IsCaptureMode)
+			{
+				var path = $"./shot/{TotalFrame:00000000}.png";
+				if (!File.Exists(path))
+				{
+					Debug.FixMe("DesktopWindow.OnRenderFrame", "Capture");
+					gl.Flush();
+					using var bmp = TakeScreenshotAsImage();
+					using var stream = File.OpenWrite(path);
+					bmp.SaveAsPng(stream);
+				}
+			}
+			window.SwapBuffers();
+		}
+
+		private void OnUpdateFrame(double delta)
+		{
+			// キャプチャーモードであれば、デルタタイムは均一に
+			var deltaTime = IsCaptureMode ? 1f / RefreshRate : (float)delta;
+			Time.Now += deltaTime;
+			Time.DeltaTime = deltaTime;
+
+			CalculateFps();
+			DFKeyboard.Update();
+			DFMouse.Update();
+			PreUpdate?.Invoke();
+			Update?.Invoke();
+
+			DF.Root.Update();
+			CoroutineRunner.Update();
+
+			PostUpdate?.Invoke();
+
+			TotalFrame++;
+		}
+
+		private void OnUnload()
 		{
 			Destroy?.Invoke();
 		}
+
+		private void CalculateFps()
+		{
+			frameCount++;
+			if (Environment.TickCount - prevSecond > 1000)
+			{
+				Time.Fps = frameCount;
+				frameCount = 0;
+				prevSecond = Environment.TickCount;
+			}
+		}
+
+		private readonly Silk.NET.Windowing.IWindow window;
+		internal readonly GL gl;
+		private IInputContext? inputContext;
+
+		private int frameCount;
+		private int prevSecond;
 
 		public event Action? Start;
 		public event Action? Update;

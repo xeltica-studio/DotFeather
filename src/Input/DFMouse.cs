@@ -83,6 +83,7 @@ namespace DotFeather
 			IsMiddleUp = !IsMiddle && pm;
 
 			var scroll = new Vector(0, 0);
+
 			Debug.NotImpl("DFMouse.Update: scroll");
 
 			Scroll = scroll - prevScroll;

@@ -80,7 +80,7 @@ namespace DotFeather
 		public static Texture2D Create(byte[] bmp, int width, int height)
 		{
 			Debug.NotImpl("Texture2D.Create");
-			return new Texture2D(0, new VectorInt(width, height));
+			return new Texture2D(DF.TextureDrawer.GenerateTexture(bmp, width, height), new VectorInt(width, height));
 		}
 
 		/// <summary>
@@ -136,17 +136,11 @@ namespace DotFeather
 
 		internal static Texture2D LoadFrom(Image bmp)
 		{
-			using (bmp)
-			using (var img = bmp.CloneAs<Rgba32>())
-			{
-				// TODO: LINQ使うのでわりかし重い気がするのを解決したい
-				// テクスチャ読み込みは頻繁に行うし...
-				// 必要なバイト配列の長さを計算して配列のコピーをするのほうが早いかな？
-				var rgbaBytes = Enumerable.Range(0, img.Height)
-					.SelectMany(i => MemoryMarshal.AsBytes(img.GetPixelRowSpan(i)).ToArray())
-					.ToArray();
-				return Create(rgbaBytes, img.Width, img.Height);
-			}
+			using var img = bmp.CloneAs<Rgba32>();
+
+			var rgbaBytes = MemoryMarshal.AsBytes(img.GetPixelMemoryGroup().ToArray()[0].Span).ToArray();
+			bmp.Dispose();
+			return Create(rgbaBytes, img.Width, img.Height);
 		}
 
 		private static Texture2D[] LoadAndSplitFrom(Image bmp, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)

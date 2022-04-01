@@ -85,8 +85,6 @@ namespace DotFeather
 			IsRightUp = !IsRight && pr;
 			IsMiddleUp = !IsMiddle && pm;
 
-			Debug.NotImpl("DFMouse.Update: scroll");
-
 			Scroll = scroll - prevScroll;
 			prevScroll = scroll;
 		}

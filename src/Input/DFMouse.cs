@@ -81,10 +81,7 @@ namespace DotFeather
 			IsRightUp = !IsRight && pr;
 			IsMiddleUp = !IsMiddle && pm;
 
-			Scroll = scroll - prevScroll;
-			prevScroll = scroll;
+			Scroll = scroll;
 		}
-
-		private static Vector prevScroll;
 	}
 }

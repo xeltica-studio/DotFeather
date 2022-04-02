@@ -79,7 +79,6 @@ namespace DotFeather
 		/// </summary>
 		public static Texture2D Create(byte[] bmp, int width, int height)
 		{
-			Debug.NotImpl("Texture2D.Create");
 			return new Texture2D(DF.TextureDrawer.GenerateTexture(bmp, width, height), new VectorInt(width, height));
 		}
 
@@ -176,7 +175,7 @@ namespace DotFeather
 		/// </summary>
 		public void Dispose()
 		{
-			Debug.NotImpl("Texture2D.Dispose");
+			DF.GL.DeleteTexture((uint)Handle);
 		}
 	}
 }

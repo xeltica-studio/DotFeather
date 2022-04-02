@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Silk.NET.Input;
+using Silk.NET.OpenGL;
 
 namespace DotFeather
 {
@@ -73,6 +75,10 @@ namespace DotFeather
 		{
 			nextFrameQueue.Add(task);
 		}
+
+		internal static GL GL { get; set; }
+
+		internal static IInputContext InputContext { get; set; }
 
 		static DF()
 		{

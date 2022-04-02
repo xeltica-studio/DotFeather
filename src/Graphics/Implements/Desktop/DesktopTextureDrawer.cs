@@ -11,21 +11,30 @@ namespace DotFeather.Internal
 	internal class DesktopTextureDrawer : ITextureDrawer
 	{
         private static readonly string VertexShaderSource = @"
-			#version 330 core //Using version GLSL version 3.3
-			layout (location = 0) in vec4 vPos;
+			#version 330 core
+			layout (location = 0) in vec3 vPos;
+			layout (location = 1) in vec2 vUv;
+
+			out vec2 fUv;
 
 			void main()
 			{
-				gl_Position = vec4(vPos.x, vPos.y, vPos.z, 1.0);
+				gl_Position = vec4(vPos, 1.0);
+				fUv = vUv;
 			}
         ";
 
         private static readonly string FragmentShaderSource = @"
 			#version 330 core
+			in vec2 fUv;
+
+			uniform sampler2D uTexture0;
+
 			out vec4 FragColor;
+
 			void main()
 			{
-				FragColor = vec4(1.0f, 1.0f, 1.0f, 1.0f);
+				FragColor = texture(uTexture0, fUv);
 			}
         ";
 
@@ -47,12 +56,12 @@ namespace DotFeather.Internal
 			var right = left + w;
 			var bottom = top + h;
 
+			// カリング
 			if (left > DF.Window.ActualWidth || top > DF.Window.ActualHeight || right < 0 || bottom < 0)
 				return;
 
 			var hw = DF.Window.ActualWidth / 2;
 			var hh = DF.Window.ActualHeight / 2;
-			Debug.Info(texture.Size.ToString());
 
 			var (x0, y0) = (right, top).ToViewportPoint(hw, hh);
 			var (x1, y1) = (right, bottom).ToViewportPoint(hw, hh);
@@ -70,12 +79,12 @@ namespace DotFeather.Internal
 			gl.BindBuffer(GLEnum.ArrayBuffer, vbo);
             var vertices = stackalloc float[]
 			{
-				x0, y0, 0,
-				x1, y1, 0,
-				x2, y2, 0,
-				x3, y3, 0,
+				x0, y0, 0, 1f, 0f,
+				x1, y1, 0, 1f, 1f,
+				x2, y2, 0, 0f, 1f,
+				x3, y3, 0, 0f, 0f,
 			};
-			uint verticesSize = 3 * 4;
+			uint verticesSize = 5 * 4;
 			gl.BufferData(GLEnum.ArrayBuffer, verticesSize * sizeof(float), vertices, GLEnum.StaticDraw);
 
 			// --- EBO ---
@@ -108,19 +117,27 @@ namespace DotFeather.Internal
 			gl.AttachShader(program, fsh);
 			gl.LinkProgram(program);
 
+			// --- レンダリング ---
+			gl.Enable(GLEnum.Blend);
+			gl.BlendFunc(GLEnum.SrcAlpha, GLEnum.OneMinusSrcAlpha);
+			gl.VertexAttribPointer(0, 3, GLEnum.Float, false, 5 * sizeof(float), (void*)(0 * sizeof(float)));
+			gl.EnableVertexAttribArray(0);
+			gl.VertexAttribPointer(1, 2, GLEnum.Float, false, 5 * sizeof(float), (void*)(3 * sizeof(float)));
+			gl.EnableVertexAttribArray(1);
+			gl.BindVertexArray(vao);
+
+			gl.UseProgram(program);
+			gl.ActiveTexture(GLEnum.Texture0);
+            gl.BindTexture(GLEnum.Texture2D, (uint)texture.Handle);
+			var l = gl.GetUniformLocation((uint)texture.Handle, "uTexture0");
+			gl.Uniform1(l, 0);
+			gl.DrawElements(GLEnum.Triangles, indicesSize, GLEnum.UnsignedInt, null);
+
 			// --- 不要なデータを開放 ---
 			gl.DetachShader(program, vsh);
 			gl.DetachShader(program, fsh);
 			gl.DeleteShader(vsh);
 			gl.DeleteShader(fsh);
-			gl.VertexAttribPointer(0, 3, GLEnum.Float, false, 3 * sizeof(float), null);
-			gl.EnableVertexAttribArray(0);
-
-			// --- レンダリング ---
-			gl.BindVertexArray(vao);
-			gl.UseProgram(program);
-			gl.DrawElements(GLEnum.Triangles, indicesSize, GLEnum.UnsignedInt, null);
-
 			gl.DeleteBuffer(vbo);
 			gl.DeleteBuffer(ebo);
 			gl.DeleteVertexArray(vao);
@@ -134,6 +151,7 @@ namespace DotFeather.Internal
 			fixed (byte* b = bmp)
 			{
 				var texture = gl.GenTexture();
+				gl.ActiveTexture(GLEnum.Texture0);
 				gl.BindTexture(GLEnum.Texture2D, texture);
 
 				gl.TexParameter(GLEnum.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
@@ -143,6 +161,6 @@ namespace DotFeather.Internal
 			}
 		}
 
-		private static GL gl => (DF.Window as DesktopWindow)!.gl;
+		private static GL gl => DF.GL;
 	}
 }

@@ -195,12 +195,20 @@ namespace DotFeather.Internal
 		private void OnLoad()
 		{
 			Debug.FixMe("DesktopWindow.Load");
-			gl = GL.GetApi(window);
-			gl.ClearColor(SDColor.Black);
-			gl.LineWidth(1);
-			gl.Disable(EnableCap.DepthTest);
+			var gl = DF.GL = GL.GetApi(window);
 
-			inputContext = window.CreateInput();
+			DF.InputContext = window.CreateInput();
+
+			var kb = DF.InputContext.Keyboards[0];
+
+			kb.KeyChar += (_, e) =>
+			{
+				DFKeyboard.keychars.Enqueue(e);
+				DFKeyboard.OnKeyPress(new DFKeyPressEventArgs(e));
+			};
+
+			kb.KeyDown += (_, e, _) => DFKeyboard.OnKeyDown(new DFKeyEventArgs(e.ToDF(), false, false, false));
+			kb.KeyUp += (_, e, _) => DFKeyboard.OnKeyUp(new DFKeyEventArgs(e.ToDF(), false, false, false));
 
 			Start?.Invoke();
 		}
@@ -208,7 +216,7 @@ namespace DotFeather.Internal
 		private void OnResize(Vector2D<int> vec)
 		{
 			Debug.FixMe("DesktopWindow.OnResize");
-			gl.Viewport(window.FramebufferSize);
+			DF.GL.Viewport(window.FramebufferSize);
 
 			Resize?.Invoke();
 		}
@@ -222,8 +230,8 @@ namespace DotFeather.Internal
 		{
 			Debug.FixMe("DesktopWindow.OnRenderFrame");
 			// 画面の初期化
-			gl.ClearColor(BackgroundColor);
-			gl.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+			DF.GL.ClearColor(BackgroundColor);
+			DF.GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
 			DF.Root.Render();
 
@@ -235,7 +243,7 @@ namespace DotFeather.Internal
 				if (!File.Exists(path))
 				{
 					Debug.FixMe("DesktopWindow.OnRenderFrame", "Capture");
-					gl.Flush();
+					DF.GL.Flush();
 					using var bmp = TakeScreenshotAsImage();
 					using var stream = File.OpenWrite(path);
 					bmp.SaveAsPng(stream);
@@ -251,10 +259,10 @@ namespace DotFeather.Internal
 			Time.DeltaTime = deltaTime;
 
 			CalculateFps();
-			if (inputContext != null)
+			if (DF.InputContext != null)
 			{
 
-				var kb = inputContext.Keyboards[0];
+				var kb = DF.InputContext.Keyboards[0];
 				DFKeyboard.Update(code =>
 				{
 					var isPressed = kb.IsKeyPressed(code.ToSilk());
@@ -268,7 +276,7 @@ namespace DotFeather.Internal
 					prevState[(int)code] = isPressed;
 				});
 
-				var mouse = inputContext.Mice[0];
+				var mouse = DF.InputContext.Mice[0];
 				var wheel = mouse.ScrollWheels[0];
 				DFMouse.Update(
 					mouse.IsButtonPressed(MouseButton.Left),
@@ -306,8 +314,6 @@ namespace DotFeather.Internal
 		}
 
 		private readonly Silk.NET.Windowing.IWindow window;
-		internal GL gl;
-		private IInputContext? inputContext;
 
 		private int frameCount;
 		private int prevSecond;

@@ -15,6 +15,11 @@ namespace DotFeather.Demo
 				DF.Router.ChangeScene<LauncherScene>();
 				DF.Window.Mode = WindowMode.Resizable;
 			};
+			DF.Window.Update += () =>
+			{
+				DF.Router.ChangeScene<LauncherScene>();
+				DF.Window.Mode = WindowMode.Resizable;
+			};
 			return DF.Run();
 		}
 	}

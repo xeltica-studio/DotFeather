@@ -77,10 +77,6 @@ namespace DotFeather
 			IsRightDown = IsRight && !pr;
 			IsMiddleDown = IsMiddle && !pm;
 
-			if (IsLeftDown) System.Console.WriteLine("mouse left");
-			if (IsRightDown) System.Console.WriteLine("mouse right");
-			if (IsMiddleDown) System.Console.WriteLine("mouse middle");
-
 			IsLeftUp = !IsLeft && pl;
 			IsRightUp = !IsRight && pr;
 			IsMiddleUp = !IsMiddle && pm;

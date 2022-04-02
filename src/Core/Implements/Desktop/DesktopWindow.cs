@@ -139,7 +139,6 @@ namespace DotFeather.Internal
 
 		internal DesktopWindow()
 		{
-			Debug.NotImpl("DesktopWindow.ctor");
             var options = WindowOptions.Default;
             options.Size = new Vector2D<int>(640, 480);
             options.Title = "DotFeather Window";
@@ -175,7 +174,7 @@ namespace DotFeather.Internal
 			window.Close();
 		}
 
-		private SixLabors.ImageSharp.Image TakeScreenshotAsImage()
+		private Image TakeScreenshotAsImage()
 		{
 			Debug.FixMe("DesktopWindow.TakeScreenshotAsImage");
 			// if (GraphicsContext.CurrentContext == null)
@@ -215,7 +214,6 @@ namespace DotFeather.Internal
 
 		private void OnResize(Vector2D<int> vec)
 		{
-			Debug.FixMe("DesktopWindow.OnResize");
 			DF.GL.Viewport(window.FramebufferSize);
 
 			Resize?.Invoke();

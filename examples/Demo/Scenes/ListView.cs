@@ -15,7 +15,7 @@ namespace DotFeather.Demo
 				get => itemHeight;
 				set
 				{
-					ItemHeight = value;
+					itemHeight = value;
 					UpdateList();
 				}
 			}
@@ -113,8 +113,6 @@ namespace DotFeather.Demo
 				var (px, py) = point;
 				var (tlx, tly) = topLeft;
 				var (brx, bry) = bottomRight;
-
-
 				return tlx <= px && tly <= py && px <= brx && py <= bry;
 			}
 
@@ -149,7 +147,7 @@ namespace DotFeather.Demo
 
 			public event ItemSelectedEventHandler? ItemSelected;
 
-			private readonly int itemHeight = 24;
+			private int itemHeight = 24;
 
 			private int padding = 8;
 			private Vector? landingPoint;

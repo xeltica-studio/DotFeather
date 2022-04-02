@@ -85,13 +85,10 @@ namespace DotFeather
 			ctx = new DFSynchronizationContext();
 			SynchronizationContext.SetSynchronizationContext(ctx);
 
-
 			// Add Plugins
+			Window = new Internal.DesktopWindow();
 			TextureDrawer = new Internal.DesktopTextureDrawer();
 			PrimitiveDrawer = new Internal.DesktopPrimitiveDrawer();
-
-			Window = new Internal.DesktopWindow();
-
 			Console = new Internal.DFConsole();
 			Router = new Router();
 

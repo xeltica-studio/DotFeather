@@ -38,6 +38,32 @@ namespace DotFeather.Internal
 			}
         ";
 
+		public DesktopTextureDrawer()
+		{
+			DF.Window.Start += () => {
+				// --- 頂点シェーダー ---
+				var vsh = gl.CreateShader(GLEnum.VertexShader);
+				gl.ShaderSource(vsh, VertexShaderSource);
+				gl.CompileShader(vsh);
+
+				// --- フラグメントシェーダー ---
+				var fsh = gl.CreateShader(GLEnum.FragmentShader);
+				gl.ShaderSource(fsh, FragmentShaderSource);
+				gl.CompileShader(fsh);
+
+				// --- シェーダーを紐付ける ---
+				shader = gl.CreateProgram();
+				gl.AttachShader(shader, vsh);
+				gl.AttachShader(shader, fsh);
+				gl.LinkProgram(shader);
+				gl.DetachShader(shader, vsh);
+				gl.DetachShader(shader, fsh);
+
+				gl.DeleteShader(vsh);
+				gl.DeleteShader(fsh);
+			};
+		}
+
 		/// <summary>
 		/// テクスチャを描画します。
 		/// </summary>
@@ -101,22 +127,6 @@ namespace DotFeather.Internal
 			// --- EBI ---
 			var ebi = "えび";
 
-			// --- 頂点シェーダー ---
-			var vsh = gl.CreateShader(GLEnum.VertexShader);
-			gl.ShaderSource(vsh, VertexShaderSource);
-			gl.CompileShader(vsh);
-
-			// --- フラグメントシェーダー ---
-            var fsh = gl.CreateShader(GLEnum.FragmentShader);
-			gl.ShaderSource(fsh, FragmentShaderSource);
-			gl.CompileShader(fsh);
-
-			// --- シェーダーを紐付ける ---
-			var program = gl.CreateProgram();
-			gl.AttachShader(program, vsh);
-			gl.AttachShader(program, fsh);
-			gl.LinkProgram(program);
-
 			// --- レンダリング ---
 			gl.Enable(GLEnum.Blend);
 			gl.BlendFunc(GLEnum.SrcAlpha, GLEnum.OneMinusSrcAlpha);
@@ -126,7 +136,7 @@ namespace DotFeather.Internal
 			gl.EnableVertexAttribArray(1);
 			gl.BindVertexArray(vao);
 
-			gl.UseProgram(program);
+			gl.UseProgram(shader);
 			gl.ActiveTexture(GLEnum.Texture0);
             gl.BindTexture(GLEnum.Texture2D, (uint)texture.Handle);
 			var l = gl.GetUniformLocation((uint)texture.Handle, "uTexture0");
@@ -134,16 +144,9 @@ namespace DotFeather.Internal
 			gl.DrawElements(GLEnum.Triangles, indicesSize, GLEnum.UnsignedInt, null);
 
 			// --- 不要なデータを開放 ---
-			gl.DetachShader(program, vsh);
-			gl.DetachShader(program, fsh);
-			gl.DeleteShader(vsh);
-			gl.DeleteShader(fsh);
 			gl.DeleteBuffer(vbo);
 			gl.DeleteBuffer(ebo);
 			gl.DeleteVertexArray(vao);
-			gl.DeleteProgram(program);
-
-			Debug.FixMe("DesktopTextureDrawer.Draw", "Missing Texture");
 		}
 
 		public unsafe int GenerateTexture(byte[] bmp, int width, int height)
@@ -162,5 +165,7 @@ namespace DotFeather.Internal
 		}
 
 		private static GL gl => DF.GL;
+
+		private uint shader;
 	}
 }

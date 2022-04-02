@@ -1,14 +1,10 @@
 using System;
-using System.Drawing;
 using SDColor = System.Drawing.Color;
 using System.IO;
-using SixLabors.ImageSharp.Processing;
-using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp;
 using Silk.NET.Windowing;
 using Silk.NET.Maths;
 using Silk.NET.Input;
-using System.Linq;
 using Silk.NET.OpenGL;
 
 namespace DotFeather.Internal
@@ -174,7 +170,7 @@ namespace DotFeather.Internal
 			window.Close();
 		}
 
-		private Image TakeScreenshotAsImage()
+		private Image? TakeScreenshotAsImage()
 		{
 			Debug.FixMe("DesktopWindow.TakeScreenshotAsImage");
 			// if (GraphicsContext.CurrentContext == null)
@@ -261,17 +257,19 @@ namespace DotFeather.Internal
 			{
 
 				var kb = DF.InputContext.Keyboards[0];
-				DFKeyboard.Update(code =>
+				DFKeyboard.Update(keyCode =>
 				{
-					var isPressed = kb.IsKeyPressed(code.ToSilk());
-					var prevIsPressed = prevState[(int)code];
-					var key = DFKeyboard.KeyOf(code);
+					var silkKey = keyCode.ToSilk();
+					if (silkKey < 0) return;
+					var isPressed = kb.IsKeyPressed(silkKey);
+					var prevIsPressed = prevState[(int)keyCode];
+					var key = DFKeyboard.KeyOf(keyCode);
 					key.IsPressed = isPressed;
 					key.IsKeyDown = isPressed && !prevIsPressed;
 					key.IsKeyUp = !isPressed && prevIsPressed;
 					key.ElapsedFrameCount = isPressed ? key.ElapsedFrameCount + 1 : 0;
 					key.ElapsedTime = isPressed ? key.ElapsedTime + Time.DeltaTime : 0;
-					prevState[(int)code] = isPressed;
+					prevState[(int)keyCode] = isPressed;
 				});
 
 				var mouse = DF.InputContext.Mice[0];

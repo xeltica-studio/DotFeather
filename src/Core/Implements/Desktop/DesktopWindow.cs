@@ -6,6 +6,8 @@ using Silk.NET.Windowing;
 using Silk.NET.Maths;
 using Silk.NET.Input;
 using Silk.NET.OpenGL;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 
 namespace DotFeather.Internal
 {
@@ -23,7 +25,11 @@ namespace DotFeather.Internal
 		public VectorInt Size
 		{
 			get => (VectorInt)((Vector)ActualSize / (FollowsDpi ? PixelRatio : 1));
-			set => ActualSize = (VectorInt)((Vector)value * (FollowsDpi ? PixelRatio : 1));
+			set
+			{
+				ActualSize = (VectorInt)((Vector)value * (FollowsDpi ? PixelRatio : 1));
+				screenshotBuffer = new byte[ActualWidth * ActualHeight * 4];
+			}
 		}
 
 		public VectorInt ActualSize
@@ -156,8 +162,7 @@ namespace DotFeather.Internal
 
 		public Texture2D TakeScreenshot()
 		{
-			Debug.NotImpl("DesktopWindow.TakeScreenshot");
-			return default;
+			return Texture2D.LoadFrom(TakeScreenshotAsImage());
 		}
 
 		public void Run()
@@ -170,21 +175,15 @@ namespace DotFeather.Internal
 			window.Close();
 		}
 
-		private Image? TakeScreenshotAsImage()
+		private unsafe Image TakeScreenshotAsImage()
 		{
-			Debug.FixMe("DesktopWindow.TakeScreenshotAsImage");
-			// if (GraphicsContext.CurrentContext == null)
-			//	throw new GraphicsContextMissingException();
-
-			// var arr = new byte[ActualWidth * ActualHeight * 4];
-
-			// GL.ReadPixels(0, 0, ActualWidth, ActualHeight, PixelFormat.Rgba, PixelType.UnsignedByte, arr);
-
-			// var img = SixLabors.ImageSharp.Image.LoadPixelData<Rgba32>(arr, ActualWidth, ActualHeight);
-
-			// img.Mutate(i => i.Flip(FlipMode.Vertical));
-
-			return null;
+			fixed (byte* buffer = screenshotBuffer)
+			{
+				DF.GL.ReadPixels(0, 0, (uint)ActualWidth, (uint)ActualHeight, GLEnum.Rgba, GLEnum.UnsignedByte, buffer);
+			}
+			var img = SixLabors.ImageSharp.Image.LoadPixelData<Rgba32>(screenshotBuffer, ActualWidth, ActualHeight);
+			img.Mutate(i => i.Flip(FlipMode.Vertical));
+			return img;
 		}
 
 		private void OnLoad()
@@ -195,6 +194,8 @@ namespace DotFeather.Internal
 			DF.InputContext = window.CreateInput();
 
 			var kb = DF.InputContext.Keyboards[0];
+
+			screenshotBuffer = new byte[ActualWidth * ActualHeight * 4];
 
 			kb.KeyChar += (_, e) =>
 			{
@@ -313,6 +314,7 @@ namespace DotFeather.Internal
 
 		private int frameCount;
 		private int prevSecond;
+		private byte[] screenshotBuffer = new byte[0];
 
 		public event Action? Start;
 		public event Action? Update;

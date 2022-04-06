@@ -1,6 +1,7 @@
 ﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
 using System;
 using System.Drawing;
+using System.Numerics;
 using Silk.NET.OpenGL;
 
 namespace DotFeather.Internal
@@ -29,12 +30,13 @@ namespace DotFeather.Internal
 			in vec2 fUv;
 
 			uniform sampler2D uTexture0;
+			uniform vec4 uTintColor;
 
 			out vec4 FragColor;
 
 			void main()
 			{
-				FragColor = texture(uTexture0, fUv);
+				FragColor = texture(uTexture0, fUv) * uTintColor;
 			}
         ";
 
@@ -139,8 +141,11 @@ namespace DotFeather.Internal
 			gl.UseProgram(shader);
 			gl.ActiveTexture(GLEnum.Texture0);
             gl.BindTexture(GLEnum.Texture2D, (uint)texture.Handle);
-			var l = gl.GetUniformLocation((uint)texture.Handle, "uTexture0");
-			gl.Uniform1(l, 0);
+			var uTexture0 = gl.GetUniformLocation(shader, "uTexture0");
+			gl.Uniform1(uTexture0, 0);
+			var uTintColor = gl.GetUniformLocation(shader, "uTintColor");
+			var c = color ?? Color.White;
+			gl.Uniform4(uTintColor, new Vector4(c.R / 255f, c.G / 255f, c.B / 255f, c.A / 255f));
 			gl.DrawElements(GLEnum.Triangles, indicesSize, GLEnum.UnsignedInt, null);
 
 			// --- 不要なデータを開放 ---
@@ -160,6 +165,7 @@ namespace DotFeather.Internal
 				gl.TexParameter(GLEnum.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
 				gl.TexParameter(GLEnum.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
 				gl.TexImage2D(GLEnum.Texture2D, 0, (int)GLEnum.Rgba, (uint)width, (uint)height, 0, GLEnum.Rgba, GLEnum.UnsignedByte, b);
+				Debug.Info("Generated Texture ID:" + texture);
 				return (int)texture;
 			}
 		}

@@ -156,11 +156,11 @@ namespace DotFeather
 						(var px, var py) = (x * sizeOfCroppedImage.X, y * sizeOfCroppedImage.Y);
 						if (px + sizeOfCroppedImage.X > img.Width)
 						{
-							throw new ArgumentException(nameof(horizonalCount));
+							throw new ArgumentException(null, nameof(horizonalCount));
 						}
 						if (py + sizeOfCroppedImage.Y > img.Height)
 						{
-							throw new ArgumentException(nameof(verticalCount));
+							throw new ArgumentException(null, nameof(verticalCount));
 						}
 						using var cropped = img.Clone(ctx => ctx.Crop(new Rectangle(px, py, sizeOfCroppedImage.X, sizeOfCroppedImage.Y)));
 						datas.Add(LoadFrom(cropped));

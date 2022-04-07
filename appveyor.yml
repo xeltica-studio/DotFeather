@@ -89,6 +89,6 @@ deploy:
       - 依存関係を更新
 
     auth_token:
-      secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx
+      secure: 1k6f11E9bN8eBIzSz4tDjART0Nk5agF+JvR85X+w8Lb8GgJSJTr2uPlZrM+TyIja
     on:
       APPVEYOR_REPO_TAG: true # deploy on tag push only

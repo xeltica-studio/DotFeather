@@ -1,6 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using Silk.NET.OpenGL;
 
 namespace DotFeather
 {
@@ -93,7 +93,7 @@ namespace DotFeather
 
 		private void TrimStart()
 		{
-			Debug.NotImpl("Container.TrimStart");
+			DF.GL.Enable(GLEnum.ScissorTest);
 			var left = (VectorInt)AbsoluteLocation.ToDeviceCoord();
 			var size = (VectorInt)(Size * AbsoluteScale).ToDeviceCoord();
 
@@ -107,11 +107,14 @@ namespace DotFeather
 				size.Y = left.Y + size.Y - DF.Window.ActualHeight;
 
 			left.Y = DF.Window.ActualHeight - left.Y - size.Y;
+
+			DF.GL.Scissor(left.X, left.Y, (uint)size.X, (uint)size.Y);
 		}
 
 		private void TrimEnd()
 		{
-			Debug.NotImpl("Container.TrimEnd");
+			DF.GL.Scissor(0, 0, (uint)DF.Window.ActualWidth, (uint)DF.Window.ActualHeight);
+			DF.GL.Disable(GLEnum.ScissorTest);
 		}
 
 		private readonly List<ElementBase> children = new();

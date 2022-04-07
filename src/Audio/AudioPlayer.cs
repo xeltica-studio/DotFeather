@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Silk.NET.OpenAL;
-using Silk.NET.OpenAL.Extensions;
 
 namespace DotFeather
 {
@@ -21,8 +20,16 @@ namespace DotFeather
 		{
 			unsafe
 			{
-				al = AL.GetApi();
-				alc = ALContext.GetApi();
+				try
+				{
+					al = AL.GetApi();
+					alc = ALContext.GetApi();
+				}
+				catch (FileNotFoundException)
+				{
+					al = AL.GetApi(true);
+					alc = ALContext.GetApi(true);
+				}
 				var d = alc.OpenDevice("");
 				var c = alc.CreateContext(d, null);
 				alc.MakeContextCurrent(c);

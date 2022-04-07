@@ -6,7 +6,7 @@ namespace DotFeather
 {
 	public class DFSynchronizationContext : SynchronizationContext
 	{
-		readonly ConcurrentQueue<(SendOrPostCallback callback, object state)> continuations = new ConcurrentQueue<(SendOrPostCallback, object)>();
+		readonly ConcurrentQueue<(SendOrPostCallback callback, object state)> continuations = new();
 
 		public override void Post(SendOrPostCallback d, object state)
 		{

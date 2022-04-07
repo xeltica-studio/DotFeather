@@ -181,7 +181,7 @@ namespace DotFeather.Internal
 			{
 				DF.GL.ReadPixels(0, 0, (uint)ActualWidth, (uint)ActualHeight, GLEnum.Rgba, GLEnum.UnsignedByte, buffer);
 			}
-			var img = SixLabors.ImageSharp.Image.LoadPixelData<Rgba32>(screenshotBuffer, ActualWidth, ActualHeight);
+			var img = Image.LoadPixelData<Rgba32>(screenshotBuffer, ActualWidth, ActualHeight);
 			img.Mutate(i => i.Flip(FlipMode.Vertical));
 			return img;
 		}
@@ -190,21 +190,57 @@ namespace DotFeather.Internal
 		{
 			Debug.FixMe("DesktopWindow.Load");
 			var gl = DF.GL = GL.GetApi(window);
+			screenshotBuffer = new byte[ActualWidth * ActualHeight * 4];
 
 			DF.InputContext = window.CreateInput();
 
 			var kb = DF.InputContext.Keyboards[0];
-
-			screenshotBuffer = new byte[ActualWidth * ActualHeight * 4];
-
 			kb.KeyChar += (_, e) =>
 			{
 				DFKeyboard.keychars.Enqueue(e);
 				DFKeyboard.OnKeyPress(new DFKeyPressEventArgs(e));
 			};
-
-			kb.KeyDown += (_, e, _) => DFKeyboard.OnKeyDown(new DFKeyEventArgs(e.ToDF(), false, false, false));
-			kb.KeyUp += (_, e, _) => DFKeyboard.OnKeyUp(new DFKeyEventArgs(e.ToDF(), false, false, false));
+			kb.KeyDown += (_, e, _) =>
+			{
+				DFKeyboard.OnKeyDown(new DFKeyEventArgs(e.ToDF(), false, false, false));
+				DFKeyboard.KeyOf(e.ToDF()).IsKeyDown = true;
+			};
+			kb.KeyUp += (_, e, _) =>
+			{
+				DFKeyboard.OnKeyUp(new DFKeyEventArgs(e.ToDF(), false, false, false));
+				DFKeyboard.KeyOf(e.ToDF()).IsKeyUp = true;
+			};
+			var mouse = DF.InputContext.Mice[0];
+			mouse.MouseDown += (_, btn) =>
+			{
+				switch (btn)
+				{
+					case MouseButton.Left:
+						DFMouse.IsLeftDown = true;
+						break;
+					case MouseButton.Right:
+						DFMouse.IsRightDown = true;
+						break;
+					case MouseButton.Middle:
+						DFMouse.IsMiddleDown = true;
+						break;
+				}
+			};
+			mouse.MouseUp += (_, btn) =>
+			{
+				switch (btn)
+				{
+					case MouseButton.Left:
+						DFMouse.IsLeftUp = true;
+						break;
+					case MouseButton.Right:
+						DFMouse.IsRightUp = true;
+						break;
+					case MouseButton.Middle:
+						DFMouse.IsMiddleUp = true;
+						break;
+				}
+			};
 
 			Start?.Invoke();
 		}
@@ -229,7 +265,6 @@ namespace DotFeather.Internal
 			DF.GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
 			DF.Root.Render();
-
 			Render?.Invoke();
 
 			if (IsCaptureMode)
@@ -254,44 +289,58 @@ namespace DotFeather.Internal
 			Time.DeltaTime = deltaTime;
 
 			CalculateFps();
-			if (DF.InputContext != null)
-			{
+			UpdateInput();
 
-				var kb = DF.InputContext.Keyboards[0];
-				DFKeyboard.Update(keyCode =>
-				{
-					var silkKey = keyCode.ToSilk();
-					if (silkKey < 0) return;
-					var isPressed = kb.IsKeyPressed(silkKey);
-					var prevIsPressed = prevState[(int)keyCode];
-					var key = DFKeyboard.KeyOf(keyCode);
-					key.IsPressed = isPressed;
-					key.IsKeyDown = isPressed && !prevIsPressed;
-					key.IsKeyUp = !isPressed && prevIsPressed;
-					key.ElapsedFrameCount = isPressed ? key.ElapsedFrameCount + 1 : 0;
-					key.ElapsedTime = isPressed ? key.ElapsedTime + Time.DeltaTime : 0;
-					prevState[(int)keyCode] = isPressed;
-				});
-
-				var mouse = DF.InputContext.Mice[0];
-				var wheel = mouse.ScrollWheels[0];
-				DFMouse.Update(
-					mouse.IsButtonPressed(MouseButton.Left),
-					mouse.IsButtonPressed(MouseButton.Right),
-					mouse.IsButtonPressed(MouseButton.Middle),
-					(wheel.X, wheel.Y)
-				);
-				DFMouse.Position = ((int)mouse.Position.X, (int)mouse.Position.Y);
-			}
 			PreUpdate?.Invoke();
 			Update?.Invoke();
-
 			DF.Root.Update();
 			CoroutineRunner.Update();
-
 			PostUpdate?.Invoke();
 
+			ClearInput();
 			TotalFrame++;
+		}
+
+		private static void UpdateInput()
+		{
+			if (DF.InputContext is not IInputContext input) return;
+
+			var kb = input.Keyboards[0];
+			DFKeyboard.Update(keyCode =>
+			{
+				var silkKey = keyCode.ToSilk();
+				if (silkKey < 0) return;
+				var isPressed = kb.IsKeyPressed(silkKey);
+				var key = DFKeyboard.KeyOf(keyCode);
+				key.IsPressed = isPressed;
+				key.ElapsedFrameCount = isPressed ? key.ElapsedFrameCount + 1 : 0;
+				key.ElapsedTime = isPressed ? key.ElapsedTime + Time.DeltaTime : 0;
+			});
+
+			var mouse = input.Mice[0];
+			var wheel = mouse.ScrollWheels[0];
+			DFMouse.IsLeft = mouse.IsButtonPressed(MouseButton.Left);
+			DFMouse.IsRight = mouse.IsButtonPressed(MouseButton.Right);
+			DFMouse.IsMiddle = mouse.IsButtonPressed(MouseButton.Middle);
+			DFMouse.Scroll = (wheel.X, wheel.Y);
+			DFMouse.Position = ((int)mouse.Position.X, (int)mouse.Position.Y);
+		}
+
+		private static void ClearInput()
+		{
+			DFKeyboard.Update(code =>
+			{
+				var key = DFKeyboard.KeyOf(code);
+				key.IsKeyDown = false;
+				key.IsKeyUp = false;
+			});
+
+			DFMouse.IsLeftDown = false;
+			DFMouse.IsLeftUp = false;
+			DFMouse.IsRightDown = false;
+			DFMouse.IsRightUp = false;
+			DFMouse.IsMiddleDown = false;
+			DFMouse.IsMiddleUp = false;
 		}
 
 		private void OnUnload()
@@ -314,7 +363,7 @@ namespace DotFeather.Internal
 
 		private int frameCount;
 		private int prevSecond;
-		private byte[] screenshotBuffer = new byte[0];
+		private byte[] screenshotBuffer = Array.Empty<byte>();
 
 		public event Action? Start;
 		public event Action? Update;
@@ -324,7 +373,5 @@ namespace DotFeather.Internal
 		public event Action? Resize;
 		public event Action? PreUpdate;
 		public event Action? PostUpdate;
-
-		private static readonly bool[] prevState = new bool[(int)DFKeyCode.LastKey + 1];
 	}
 }

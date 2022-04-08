@@ -33,7 +33,7 @@ deploy:
     api_key:
       # Use encrypt tool
       # https://ci.appveyor.com/tools/encrypt
-      secure: 0p+A7xhW2Qex9C3sIr4LXPFBNUCxVd1NPvnKH0Yy6uETIpnSAa5q/DkQtOH9Sy9q
+      secure: 1k6f11E9bN8eBIzSz4tDjART0Nk5agF+JvR85X+w8Lb8GgJSJTr2uPlZrM+TyIja
     artifact: /.*\.nupkg/
     on:
       appveyor_repo_tag: true
@@ -60,6 +60,6 @@ deploy:
       * Input: macOSで日本語入力をすると、入力文字列よりも前に改行が挿入される
 
     auth_token:
-      secure: 1k6f11E9bN8eBIzSz4tDjART0Nk5agF+JvR85X+w8Lb8GgJSJTr2uPlZrM+TyIja
+      secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx
     on:
       APPVEYOR_REPO_TAG: true # deploy on tag push only

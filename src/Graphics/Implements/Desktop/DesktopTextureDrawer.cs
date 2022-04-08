@@ -1,5 +1,4 @@
 ﻿#pragma warning disable RECS0018 // 等値演算子による浮動小数点値の比較
-using System;
 using System.Drawing;
 using System.Numerics;
 using Silk.NET.OpenGL;
@@ -125,9 +124,6 @@ namespace DotFeather.Internal
 			};
 			uint indicesSize = 3 * 2;
 			gl.BufferData(GLEnum.ElementArrayBuffer, indicesSize * sizeof(uint), indices, GLEnum.StaticDraw);
-
-			// --- EBI ---
-			var ebi = "えび";
 
 			// --- レンダリング ---
 			gl.Enable(GLEnum.Blend);

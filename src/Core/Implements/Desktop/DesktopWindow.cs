@@ -141,11 +141,11 @@ namespace DotFeather.Internal
 
 		internal DesktopWindow()
 		{
-            var options = WindowOptions.Default;
-            options.Size = new Vector2D<int>(640, 480);
-            options.Title = "DotFeather Window";
+ 			var options = WindowOptions.Default;
+ 			options.Size = new Vector2D<int>(640, 480);
+ 			options.Title = "DotFeather Window";
 			options.WindowBorder = WindowBorder.Fixed;
-            window = Window.Create(options);
+			window = Window.Create(options);
 
 			if (IsCaptureMode && !Directory.Exists("./shot"))
 			{

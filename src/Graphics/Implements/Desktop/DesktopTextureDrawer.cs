@@ -136,7 +136,7 @@ namespace DotFeather.Internal
 
 			gl.UseProgram(shader);
 			gl.ActiveTexture(GLEnum.Texture0);
-            gl.BindTexture(GLEnum.Texture2D, (uint)texture.Handle);
+			gl.BindTexture(GLEnum.Texture2D, (uint)texture.Handle);
 			var uTexture0 = gl.GetUniformLocation(shader, "uTexture0");
 			gl.Uniform1(uTexture0, 0);
 			var uTintColor = gl.GetUniformLocation(shader, "uTintColor");

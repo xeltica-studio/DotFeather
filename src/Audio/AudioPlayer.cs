@@ -183,10 +183,10 @@ namespace DotFeather
 		/// </summary>
 		public unsafe void Dispose()
 		{
-            alc.DestroyContext((Context*)context);
-            alc.CloseDevice((Device*)device);
-            al.Dispose();
-            alc.Dispose();
+			alc.DestroyContext((Context*)context);
+			alc.CloseDevice((Device*)device);
+			al.Dispose();
+			alc.Dispose();
 		}
 
 		private async Task PlayAsync(IAudioSource source, int? loop = default, CancellationToken ct = default)

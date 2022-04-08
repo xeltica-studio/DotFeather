@@ -15,15 +15,6 @@ namespace DotFeather.Demo
 				DF.Router.ChangeScene<LauncherScene>();
 				DF.Window.Mode = WindowMode.Resizable;
 			};
-
-			// スクリーンショット撮影機能
-			DF.Window.Update += () =>
-			{
-				if (DFKeyboard.F12.IsKeyDown)
-				{
-
-				}
-			};
 			return DF.Run();
 		}
 	}

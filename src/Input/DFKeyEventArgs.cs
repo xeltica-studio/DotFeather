@@ -1,5 +1,4 @@
 using System;
-using OpenTK.Input;
 
 namespace DotFeather
 {
@@ -28,12 +27,12 @@ namespace DotFeather
 		/// </summary>
 		public bool ShiftPressed { get; }
 
-		internal DFKeyEventArgs(KeyboardKeyEventArgs e)
+		internal DFKeyEventArgs(DFKeyCode key, bool alt, bool ctrl, bool shift)
 		{
-			Key = e.Key.ToDF();
-			AltPressed = e.Alt;
-			CtrlPressed = e.Control;
-			ShiftPressed = e.Shift;
+			Key = key;
+			AltPressed = alt;
+			CtrlPressed = ctrl;
+			ShiftPressed = shift;
 		}
 	}
 }

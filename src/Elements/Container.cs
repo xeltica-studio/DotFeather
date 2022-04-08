@@ -1,7 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using OpenTK.Graphics.OpenGL;
+using Silk.NET.OpenGL;
 
 namespace DotFeather
 {
@@ -94,7 +93,7 @@ namespace DotFeather
 
 		private void TrimStart()
 		{
-			GL.Enable(EnableCap.ScissorTest);
+			DF.GL.Enable(GLEnum.ScissorTest);
 			var left = (VectorInt)AbsoluteLocation.ToDeviceCoord();
 			var size = (VectorInt)(Size * AbsoluteScale).ToDeviceCoord();
 
@@ -109,13 +108,13 @@ namespace DotFeather
 
 			left.Y = DF.Window.ActualHeight - left.Y - size.Y;
 
-			GL.Scissor(left.X, left.Y, size.X, size.Y);
+			DF.GL.Scissor(left.X, left.Y, (uint)size.X, (uint)size.Y);
 		}
 
 		private void TrimEnd()
 		{
-			GL.Scissor(0, 0, DF.Window.ActualWidth, DF.Window.ActualHeight);
-			GL.Disable(EnableCap.ScissorTest);
+			DF.GL.Scissor(0, 0, (uint)DF.Window.ActualWidth, (uint)DF.Window.ActualHeight);
+			DF.GL.Disable(GLEnum.ScissorTest);
 		}
 
 		private readonly List<ElementBase> children = new();

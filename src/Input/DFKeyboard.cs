@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OpenTK.Input;
 
 
 namespace DotFeather
@@ -464,20 +463,9 @@ namespace DotFeather
 		/// <returns></returns>
 		public static bool HasChar() => keychars.Count > 0;
 
-		internal static void Update()
+		internal static void Update(Action<DFKeyCode> callback)
 		{
-			Parallel.ForEach(allCodes, code =>
-			{
-				var isPressed = Keyboard.GetState()[code.ToTK()];
-				var prevIsPressed = prevState[(int)code];
-				var key = KeyOf(code);
-				key.IsPressed = isPressed;
-				key.IsKeyDown = isPressed && !prevIsPressed;
-				key.IsKeyUp = !isPressed && prevIsPressed;
-				key.ElapsedFrameCount = isPressed ? key.ElapsedFrameCount + 1 : 0;
-				key.ElapsedTime = isPressed ? key.ElapsedTime + Time.DeltaTime : 0;
-				prevState[(int)code] = isPressed;
-			});
+			Parallel.ForEach(allCodes, callback);
 		}
 
 		internal static void OnKeyPress(DFKeyPressEventArgs e) => KeyPress?.Invoke(e);
@@ -489,8 +477,6 @@ namespace DotFeather
 		public static event Action<DFKeyEventArgs>? KeyUp;
 
 		internal static readonly Queue<char> keychars = new();
-
-		private static readonly DFKeyCode[] allCodes = (Enum.GetValues(typeof(DFKeyCode)) as DFKeyCode[]).Distinct().ToArray();
-		private static readonly bool[] prevState = new bool[(int)DFKeyCode.LastKey + 1];
+		private static readonly DFKeyCode[] allCodes = Enum.GetValues<DFKeyCode>().Distinct().ToArray();
 	}
 }

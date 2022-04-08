@@ -28,7 +28,7 @@ namespace FollowStrawberry
 			Element.Location = DFMouse.Position;
 			Element.Scale = DFMouse.IsLeft ? (4, 4) : (1, 1);
 
-			if (!(Element is Sprite sprite)) throw new Exception("Strawberry must be a sprite");
+			if (Element is not Sprite sprite) throw new Exception("Strawberry must be a sprite");
 
 			if (DFKeyboard.W) sprite.Width = 128;
 			if (DFKeyboard.H) sprite.Height = 256;
@@ -38,6 +38,6 @@ namespace FollowStrawberry
 			sprite.TintColor = DFKeyboard.C ? rnd.NextColor() : Color.White;
 		}
 
-		private readonly Random rnd = new Random();
+		private readonly Random rnd = new();
 	}
 }

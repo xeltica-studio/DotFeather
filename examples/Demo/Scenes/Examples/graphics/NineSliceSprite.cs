@@ -12,15 +12,25 @@ namespace DotFeather.Demo
 		{
 			Print("Press ESC to return");
 
-			Root.AddRange(
-				sprite = new Sprite("rect.png"),
-				nineslice = new NineSliceSprite("rect.png", 16, 16, 16, 16),
-				t1 = new TextElement("Sprite", 18, DFFontStyle.Normal, Color.Lime),
-				t2 = new TextElement("9-slice Sprite", 18, DFFontStyle.Normal, Color.Lime)
-			);
+			sprite = new Sprite("rect.png");
+			nineslice = new NineSliceSprite("rect.png", 16, 16, 16, 16);
+			t1 = new TextElement("Sprite", 18, DFFontStyle.Normal, Color.Lime);
+			t2 = new TextElement("9-slice Sprite", 18, DFFontStyle.Normal, Color.Lime);
+
+			UpdateLocation();
+
+			Root.AddRange(sprite, nineslice, t1, t2);
 		}
 
 		public override void OnUpdate()
+		{
+			UpdateLocation();
+
+			if (DFKeyboard.Escape.IsKeyUp)
+				Router.ChangeScene<LauncherScene>();
+		}
+
+		private static void UpdateLocation()
 		{
 			sprite.Location = (DF.Window.Width / 4 - 128, 64);
 			nineslice.Location = (DF.Window.Width / 4 + 32, 64);
@@ -30,9 +40,6 @@ namespace DotFeather.Demo
 
 			sprite.Width = nineslice.Width = (int)(64 + 64 * Math.Abs(Math.Sin(Time.Now * 2)));
 			sprite.Height = nineslice.Height = (int)(64 + 256 * Math.Abs(Math.Sin(Time.Now * 2)));
-
-			if (DFKeyboard.Escape.IsKeyUp)
-				Router.ChangeScene<LauncherScene>();
 		}
 
 #pragma warning disable

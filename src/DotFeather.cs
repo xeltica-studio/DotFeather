@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Silk.NET.Input;
+using Silk.NET.OpenGL;
 
 namespace DotFeather
 {
@@ -74,18 +76,19 @@ namespace DotFeather
 			nextFrameQueue.Add(task);
 		}
 
+		internal static GL GL { get; set; }
+
+		internal static IInputContext InputContext { get; set; }
+
 		static DF()
 		{
 			ctx = new DFSynchronizationContext();
 			SynchronizationContext.SetSynchronizationContext(ctx);
 
-
 			// Add Plugins
+			Window = new Internal.DesktopWindow();
 			TextureDrawer = new Internal.DesktopTextureDrawer();
 			PrimitiveDrawer = new Internal.DesktopPrimitiveDrawer();
-
-			Window = new Internal.DesktopWindow();
-
 			Console = new Internal.DFConsole();
 			Router = new Router();
 

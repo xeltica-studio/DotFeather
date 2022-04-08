@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-using OpenTK;
-using OpenTK.Audio;
-using OpenTK.Audio.OpenAL;
+using Silk.NET.OpenAL;
 
 namespace DotFeather
 {
@@ -20,7 +18,24 @@ namespace DotFeather
 		/// </summary>
 		public AudioPlayer()
 		{
-			context = new AudioContext();
+			unsafe
+			{
+				try
+				{
+					al = AL.GetApi();
+					alc = ALContext.GetApi();
+				}
+				catch (FileNotFoundException)
+				{
+					al = AL.GetApi(true);
+					alc = ALContext.GetApi(true);
+				}
+				var d = alc.OpenDevice("");
+				var c = alc.CreateContext(d, null);
+				alc.MakeContextCurrent(c);
+				device = (nint)d;
+				context = (nint)c;
+			}
 			Gain = 1;
 		}
 
@@ -35,7 +50,7 @@ namespace DotFeather
 			{
 				// 0...1の範囲に矯正
 				gain = Math.Max(0, Math.Min(1, value));
-				AL.Listener(ALListenerf.Gain, gain);
+				al.SetListenerProperty(ListenerFloat.Gain, gain);
 			}
 		}
 
@@ -138,49 +153,67 @@ namespace DotFeather
 				throw new ArgumentException("PlayOneShot requires AudioSource which has determined length.");
 			var buffer = new short[samples];
 			FillBuffer(buffer, buf, default);
-			using (var alSrc = new ALSource())
-			using (var alBuf = new ALBuffer())
+			var alSrc = al.GenSource();
+			var alBuf = al.GenBuffer();
+			al.BufferData(alBuf, BufferFormat.Stereo16, buffer, source.SampleRate);
+			al.SetSourceProperty(alSrc, SourceInteger.Buffer, alBuf);
+			al.SourcePlay(alSrc);
+
+			while (GetState(al, alSrc) == (int)SourceState.Playing)
 			{
-				AL.BufferData(alBuf, ALFormat.Stereo16, buffer, buffer.Length, source.SampleRate);
-				AL.BindBufferToSource(alSrc, alBuf);
-				AL.SourcePlay(alSrc);
-				while (AL.GetSourceState(alSrc) == ALSourceState.Playing)
+				al.BufferData(alBuf, BufferFormat.Stereo16, buffer, source.SampleRate);
+				al.SetSourceProperty(alSrc, SourceInteger.Buffer, alBuf);
+				al.SourcePlay(alSrc);
+				while (GetState(al, alSrc) == (int)SourceState.Playing)
 					await Task.Delay(10).ConfigureAwait(false);
 			};
+
+			al.DeleteSource(alSrc);
+			al.DeleteBuffer(alBuf);
+
+			static int GetState(AL al, uint alSrc)
+			{
+				al.GetSourceProperty(alSrc, GetSourceInteger.SourceState, out var state);
+				return state;
+			}
 		}
 
 		/// <summary>
 		/// Dispose.
 		/// </summary>
-		public void Dispose()
+		public unsafe void Dispose()
 		{
-			context.Dispose();
+			alc.DestroyContext((Context*)context);
+			alc.CloseDevice((Device*)device);
+			al.Dispose();
+			alc.Dispose();
 		}
 
 		private async Task PlayAsync(IAudioSource source, int? loop = default, CancellationToken ct = default)
 		{
 			var enumerator = source.EnumerateSamples(loop).GetEnumerator();
-			var arr = new short[source.SampleRate / 2 * 2];
-			var alBuffers = new ALBuffer[2];
+			var arr = new short[source.SampleRate / 2];
 			TimeInSamples = Time = 0;
 
 			LengthInSamples = source.Samples ?? 0;
 			Length = (int)(LengthInSamples / (float)source.SampleRate * 1000);
 
-			using (var alSrc = new ALSource())
-			using (alBuffers[0] = new ALBuffer())
-			using (alBuffers[1] = new ALBuffer())
+			var alSrc = al.GenSource();
+			var alBuffersA = al.GenBuffers(1);
+			var alBuffersB = al.GenBuffers(1);
+			var current = false;
+
 			{
 				var isFinished = !FillBuffer(arr, enumerator, ct);
-				AL.BufferData(alBuffers[0], ALFormat.Stereo16, arr, arr.Length * sizeof(short), source.SampleRate);
+				al.BufferData(alBuffersA[0], BufferFormat.Stereo16, arr, source.SampleRate);
 				if (!isFinished)
 				{
 					isFinished = !FillBuffer(arr, enumerator, ct);
-					AL.BufferData(alBuffers[1], ALFormat.Stereo16, arr, arr.Length * sizeof(short), source.SampleRate);
+					al.BufferData(alBuffersB[0], BufferFormat.Stereo16, arr, source.SampleRate);
 				}
-				AL.SourceQueueBuffer(alSrc, alBuffers[0]);
-				AL.SourceQueueBuffer(alSrc, alBuffers[1]);
-				AL.SourcePlay(alSrc);
+				al.SourceQueueBuffers(alSrc, alBuffersA);
+				al.SourceQueueBuffers(alSrc, alBuffersB);
+				al.SourcePlay(alSrc);
 				IsPlaying = true;
 				var prevOffset = 0;
 				var sampleCount = 1;
@@ -188,11 +221,11 @@ namespace DotFeather
 				{
 					int processedCount;
 
-					AL.Source(alSrc, ALSourcef.Pitch, Pitch);
+					al.SetSourceProperty(alSrc, SourceFloat.Pitch, Pitch);
 					do
 					{
-						AL.GetSource(alSrc, ALGetSourcei.BuffersProcessed, out processedCount);
-						AL.GetSource(alSrc, ALGetSourcei.SampleOffset, out var offset);
+						al.GetSourceProperty(alSrc, GetSourceInteger.BuffersProcessed, out processedCount);
+						al.GetSourceProperty(alSrc, GetSourceInteger.SampleOffset, out var offset);
 						if (prevOffset > offset)
 						{
 							sampleCount++;
@@ -202,28 +235,30 @@ namespace DotFeather
 						if (TimeInSamples > LengthInSamples) TimeInSamples = LengthInSamples;
 						Time = (int)(TimeInSamples / (float)source.SampleRate * 1000);
 						prevOffset = offset;
-						await Task.Delay(1);
+						await Task.Delay(1).ConfigureAwait(false);
 					}
 					while (processedCount == 0 && !ct.IsCancellationRequested);
 
 					while (processedCount > 0 && !ct.IsCancellationRequested)
 					{
-						int buffer = AL.SourceUnqueueBuffer(alSrc);
+						var currentBuffer = current ? alBuffersA : alBuffersB;
+						al.SourceUnqueueBuffers(alSrc, currentBuffer);
 						if (!isFinished)
 						{
 							isFinished = !FillBuffer(arr, enumerator, ct);
-							AL.BufferData(buffer, ALFormat.Stereo16, arr, arr.Length * sizeof(short), source.SampleRate);
-							AL.SourceQueueBuffer(alSrc, buffer);
+							al.BufferData(currentBuffer[0], BufferFormat.Stereo16, arr, source.SampleRate);
+							al.SourceQueueBuffers(alSrc, currentBuffer);
 						}
 						processedCount--;
+						current ^= true;
 					}
 
-					AL.GetSource(alSrc, ALGetSourcei.BuffersQueued, out int queuedCount);
+					al.GetSourceProperty(alSrc, GetSourceInteger.BuffersQueued, out int queuedCount);
 					if (queuedCount > 0)
 					{
-						AL.GetSource(alSrc, ALGetSourcei.SourceState, out var state);
-						if ((ALSourceState)state != ALSourceState.Playing)
-							AL.SourcePlay(alSrc);
+						al.GetSourceProperty(alSrc, GetSourceInteger.SourceState, out var state);
+						if (state != (int)SourceState.Playing)
+							al.SourcePlay(alSrc);
 					}
 					else
 						break;
@@ -233,7 +268,7 @@ namespace DotFeather
 			};
 		}
 
-		private bool FillBuffer(short[] buffer, IEnumerator<(short l, short r)> enumerator, CancellationToken ct)
+		private static bool FillBuffer(short[] buffer, IEnumerator<(short l, short r)> enumerator, CancellationToken ct)
 		{
 			var res = true;
 			for (int i = 0; i < buffer.Length; i += 2)
@@ -248,7 +283,10 @@ namespace DotFeather
 		}
 
 		private float gain;
-		private readonly AudioContext context;
 		private CancellationTokenSource? cts;
+		private readonly AL al;
+		private readonly ALContext alc;
+		private readonly nint context;
+		private readonly nint device;
 	}
 }

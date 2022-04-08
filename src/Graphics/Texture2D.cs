@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using SD = System.Drawing;
-using OpenTK.Graphics.OpenGL;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Advanced;
@@ -80,13 +79,7 @@ namespace DotFeather
 		/// </summary>
 		public static Texture2D Create(byte[] bmp, int width, int height)
 		{
-			var texture = GL.GenTexture();
-			GL.BindTexture(TextureTarget.Texture2D, texture);
-
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
-			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, width, height, 0, OpenTK.Graphics.OpenGL.PixelFormat.Rgba, PixelType.UnsignedByte, bmp);
-			return new Texture2D(texture, new VectorInt(width, height));
+			return new Texture2D(DF.TextureDrawer.GenerateTexture(bmp, width, height), new VectorInt(width, height));
 		}
 
 		/// <summary>
@@ -142,17 +135,11 @@ namespace DotFeather
 
 		internal static Texture2D LoadFrom(Image bmp)
 		{
-			using (bmp)
-			using (var img = bmp.CloneAs<Rgba32>())
-			{
-				// TODO: LINQ使うのでわりかし重い気がするのを解決したい
-				// テクスチャ読み込みは頻繁に行うし...
-				// 必要なバイト配列の長さを計算して配列のコピーをするのほうが早いかな？
-				var rgbaBytes = Enumerable.Range(0, img.Height)
-					.SelectMany(i => MemoryMarshal.AsBytes(img.GetPixelRowSpan(i)).ToArray())
-					.ToArray();
-				return Create(rgbaBytes, img.Width, img.Height);
-			}
+			using var img = bmp.CloneAs<Rgba32>();
+
+			var rgbaBytes = MemoryMarshal.AsBytes(img.GetPixelMemoryGroup().ToArray()[0].Span).ToArray();
+			bmp.Dispose();
+			return Create(rgbaBytes, img.Width, img.Height);
 		}
 
 		private static Texture2D[] LoadAndSplitFrom(Image bmp, int horizonalCount, int verticalCount, VectorInt sizeOfCroppedImage)
@@ -169,11 +156,11 @@ namespace DotFeather
 						(var px, var py) = (x * sizeOfCroppedImage.X, y * sizeOfCroppedImage.Y);
 						if (px + sizeOfCroppedImage.X > img.Width)
 						{
-							throw new ArgumentException(nameof(horizonalCount));
+							throw new ArgumentException(null, nameof(horizonalCount));
 						}
 						if (py + sizeOfCroppedImage.Y > img.Height)
 						{
-							throw new ArgumentException(nameof(verticalCount));
+							throw new ArgumentException(null, nameof(verticalCount));
 						}
 						using var cropped = img.Clone(ctx => ctx.Crop(new Rectangle(px, py, sizeOfCroppedImage.X, sizeOfCroppedImage.Y)));
 						datas.Add(LoadFrom(cropped));
@@ -188,7 +175,7 @@ namespace DotFeather
 		/// </summary>
 		public void Dispose()
 		{
-			GL.DeleteTexture(Handle);
+			DF.GL.DeleteTexture((uint)Handle);
 		}
 	}
 }

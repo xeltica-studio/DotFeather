@@ -1,14 +1,13 @@
 using System;
-using System.Drawing;
 using SDColor = System.Drawing.Color;
 using System.IO;
-using OpenTK;
-using OpenTK.Graphics;
-using OpenTK.Graphics.OpenGL;
-using OpenTK.Input;
-using SixLabors.ImageSharp.Processing;
-using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp;
+using Silk.NET.Windowing;
+using Silk.NET.Maths;
+using Silk.NET.Input;
+using Silk.NET.OpenGL;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 
 namespace DotFeather.Internal
 {
@@ -19,20 +18,24 @@ namespace DotFeather.Internal
 	{
 		public VectorInt Location
 		{
-			get => (window.Location.X, window.Location.Y);
-			set => window.Location = new System.Drawing.Point(value.X, value.Y);
+			get => (window.Position.X, window.Position.Y);
+			set => window.Position = new Vector2D<int>(value.X, value.Y);
 		}
 
 		public VectorInt Size
 		{
 			get => (VectorInt)((Vector)ActualSize / (FollowsDpi ? PixelRatio : 1));
-			set => ActualSize = (VectorInt)((Vector)value * (FollowsDpi ? PixelRatio : 1));
+			set
+			{
+				ActualSize = (VectorInt)((Vector)value * (FollowsDpi ? PixelRatio : 1));
+				screenshotBuffer = new byte[ActualWidth * ActualHeight * 4];
+			}
 		}
 
 		public VectorInt ActualSize
 		{
-			get => (window.ClientSize.Width, window.ClientSize.Height);
-			set => window.ClientSize = new System.Drawing.Size(value.X, value.Y);
+			get => (window.Size.X, window.Size.Y);
+			set => window.Size = new Vector2D<int>(value.X, value.Y);
 		}
 
 		public int X
@@ -73,13 +76,17 @@ namespace DotFeather.Internal
 
 		public bool IsVisible
 		{
-			get => window.Visible;
-			set => window.Visible = value;
+			get => window.IsVisible;
+			set => window.IsVisible = value;
 		}
 
 		public bool IsFocused
 		{
-			get => window.Focused;
+			get
+			{
+				Debug.NotImpl("DesktopWindow.IsFocused get");
+				return true;
+			}
 		}
 
 		public bool IsFullScreen
@@ -103,7 +110,14 @@ namespace DotFeather.Internal
 		// todo ゲーム起動前に変更可能にする
 		public int RefreshRate => 60;
 
-		public float PixelRatio => (float)window.ClientSize.Width / window.Size.Width;
+		public float PixelRatio
+		{
+			get
+			{
+				Debug.NotImpl("DesktopWindow.PixelRatio get");
+				return 1;
+			}
+		}
 
 		public SDColor BackgroundColor { get; set; }
 
@@ -111,24 +125,27 @@ namespace DotFeather.Internal
 		{
 			get => window.WindowBorder switch
 			{
-				WindowBorder.Resizable => WindowMode.Resizable,
 				WindowBorder.Fixed => WindowMode.Fixed,
 				WindowBorder.Hidden => WindowMode.NoFrame,
+				WindowBorder.Resizable => WindowMode.Resizable,
 				_ => throw new InvalidOperationException("unexpected window state"),
 			};
-
 			set => window.WindowBorder = value switch
 			{
 				WindowMode.Fixed => WindowBorder.Fixed,
 				WindowMode.NoFrame => WindowBorder.Hidden,
 				WindowMode.Resizable => WindowBorder.Resizable,
-				_ => throw new ArgumentException(),
+				_ => throw new ArgumentException(null, nameof(value)),
 			};
 		}
 
 		internal DesktopWindow()
 		{
-			window = new GameWindow(640, 480, GraphicsMode.Default, "DotFeather Window", GameWindowFlags.FixedWindow);
+ 			var options = WindowOptions.Default;
+ 			options.Size = new Vector2D<int>(640, 480);
+ 			options.Title = "DotFeather Window";
+			options.WindowBorder = WindowBorder.Fixed;
+			window = Window.Create(options);
 
 			if (IsCaptureMode && !Directory.Exists("./shot"))
 			{
@@ -138,20 +155,9 @@ namespace DotFeather.Internal
 			window.Load += OnLoad;
 			window.Resize += OnResize;
 			window.FileDrop += OnFileDrop;
-			window.RenderFrame += OnRenderFrame;
-			window.UpdateFrame += OnUpdateFrame;
-			window.Unload += OnUnload;
-
-			window.KeyPress += (s, e) =>
-			{
-				DFKeyboard.keychars.Enqueue(e.KeyChar);
-				DFKeyboard.OnKeyPress(new DFKeyPressEventArgs(e.KeyChar));
-			};
-
-			window.KeyDown += (s, e) => DFKeyboard.OnKeyDown(new DFKeyEventArgs(e));
-			window.KeyUp += (s, e) => DFKeyboard.OnKeyUp(new DFKeyEventArgs(e));
-
-			window.MouseMove += (s, e) => DFMouse.Position = new VectorInt((int)(e.Position.X / (FollowsDpi ? PixelRatio : 1)), (int)(e.Position.Y / (FollowsDpi ? PixelRatio : 1)));
+			window.Render += OnRenderFrame;
+			window.Update += OnUpdateFrame;
+			window.Closing += OnUnload;
 		}
 
 		public Texture2D TakeScreenshot()
@@ -166,94 +172,178 @@ namespace DotFeather.Internal
 
 		public void Exit()
 		{
-			window.Exit();
+			window.Close();
 		}
 
-		private SixLabors.ImageSharp.Image TakeScreenshotAsImage()
+		private unsafe Image TakeScreenshotAsImage()
 		{
-			if (GraphicsContext.CurrentContext == null)
-				throw new GraphicsContextMissingException();
-
-			var arr = new byte[ActualWidth * ActualHeight * 4];
-
-			GL.ReadPixels(0, 0, ActualWidth, ActualHeight, PixelFormat.Rgba, PixelType.UnsignedByte, arr);
-
-			var img = SixLabors.ImageSharp.Image.LoadPixelData<Rgba32>(arr, ActualWidth, ActualHeight);
-
+			fixed (byte* buffer = screenshotBuffer)
+			{
+				DF.GL.ReadPixels(0, 0, (uint)ActualWidth, (uint)ActualHeight, GLEnum.Rgba, GLEnum.UnsignedByte, buffer);
+			}
+			var img = Image.LoadPixelData<Rgba32>(screenshotBuffer, ActualWidth, ActualHeight);
 			img.Mutate(i => i.Flip(FlipMode.Vertical));
-
 			return img;
 		}
 
-		private void OnLoad(object s, EventArgs e)
+		private void OnLoad()
 		{
-			GL.ClearColor(SDColor.Black);
-			GL.LineWidth(1);
-			GL.Disable(EnableCap.DepthTest);
+			Debug.FixMe("DesktopWindow.Load");
+			var gl = DF.GL = GL.GetApi(window);
+			screenshotBuffer = new byte[ActualWidth * ActualHeight * 4];
+
+			DF.InputContext = window.CreateInput();
+
+			var kb = DF.InputContext.Keyboards[0];
+			kb.KeyChar += (_, e) =>
+			{
+				DFKeyboard.keychars.Enqueue(e);
+				DFKeyboard.OnKeyPress(new DFKeyPressEventArgs(e));
+			};
+			kb.KeyDown += (_, e, _) =>
+			{
+				DFKeyboard.OnKeyDown(new DFKeyEventArgs(e.ToDF(), false, false, false));
+				DFKeyboard.KeyOf(e.ToDF()).IsKeyDown = true;
+			};
+			kb.KeyUp += (_, e, _) =>
+			{
+				DFKeyboard.OnKeyUp(new DFKeyEventArgs(e.ToDF(), false, false, false));
+				DFKeyboard.KeyOf(e.ToDF()).IsKeyUp = true;
+			};
+			var mouse = DF.InputContext.Mice[0];
+			mouse.MouseDown += (_, btn) =>
+			{
+				switch (btn)
+				{
+					case MouseButton.Left:
+						DFMouse.IsLeftDown = true;
+						break;
+					case MouseButton.Right:
+						DFMouse.IsRightDown = true;
+						break;
+					case MouseButton.Middle:
+						DFMouse.IsMiddleDown = true;
+						break;
+				}
+			};
+			mouse.MouseUp += (_, btn) =>
+			{
+				switch (btn)
+				{
+					case MouseButton.Left:
+						DFMouse.IsLeftUp = true;
+						break;
+					case MouseButton.Right:
+						DFMouse.IsRightUp = true;
+						break;
+					case MouseButton.Middle:
+						DFMouse.IsMiddleUp = true;
+						break;
+				}
+			};
 
 			Start?.Invoke();
 		}
 
-		private void OnResize(object s, EventArgs e)
+		private void OnResize(Vector2D<int> vec)
 		{
-			GL.Viewport(window.ClientRectangle);
+			DF.GL.Viewport(window.FramebufferSize);
 
 			Resize?.Invoke();
 		}
 
-		private void OnFileDrop(object s, FileDropEventArgs e)
+		private void OnFileDrop(string[] files)
 		{
-			FileDropped?.Invoke(new DFFileDroppedEventArgs(new[] { e.FileName }));
+			FileDropped?.Invoke(new DFFileDroppedEventArgs(files));
 		}
 
-		private void OnRenderFrame(object _, FrameEventArgs e)
+		private void OnRenderFrame(double delta)
 		{
+			Debug.FixMe("DesktopWindow.OnRenderFrame");
 			// 画面の初期化
-			GL.ClearColor(BackgroundColor);
-			GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+			DF.GL.ClearColor(BackgroundColor);
+			DF.GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
 			DF.Root.Render();
-
 			Render?.Invoke();
-
-			window.ProcessEvents();
 
 			if (IsCaptureMode)
 			{
 				var path = $"./shot/{TotalFrame:00000000}.png";
 				if (!File.Exists(path))
 				{
-					GL.Flush();
+					Debug.FixMe("DesktopWindow.OnRenderFrame", "Capture");
+					DF.GL.Flush();
 					using var bmp = TakeScreenshotAsImage();
 					using var stream = File.OpenWrite(path);
 					bmp.SaveAsPng(stream);
 				}
 			}
-			window.SwapBuffers();
 		}
 
-		private void OnUpdateFrame(object s, FrameEventArgs e)
+		private void OnUpdateFrame(double delta)
 		{
 			// キャプチャーモードであれば、デルタタイムは均一に
-			var deltaTime = IsCaptureMode ? 1f / RefreshRate : (float)e.Time;
+			var deltaTime = IsCaptureMode ? 1f / RefreshRate : (float)delta;
 			Time.Now += deltaTime;
 			Time.DeltaTime = deltaTime;
 
 			CalculateFps();
-			DFKeyboard.Update();
-			DFMouse.Update();
+			UpdateInput();
+
 			PreUpdate?.Invoke();
 			Update?.Invoke();
-
 			DF.Root.Update();
 			CoroutineRunner.Update();
-
 			PostUpdate?.Invoke();
 
+			ClearInput();
 			TotalFrame++;
 		}
 
-		private void OnUnload(object s, EventArgs e)
+		private static void UpdateInput()
+		{
+			if (DF.InputContext is not IInputContext input) return;
+
+			var kb = input.Keyboards[0];
+			DFKeyboard.Update(keyCode =>
+			{
+				var silkKey = keyCode.ToSilk();
+				if (silkKey < 0) return;
+				var isPressed = kb.IsKeyPressed(silkKey);
+				var key = DFKeyboard.KeyOf(keyCode);
+				key.IsPressed = isPressed;
+				key.ElapsedFrameCount = isPressed ? key.ElapsedFrameCount + 1 : 0;
+				key.ElapsedTime = isPressed ? key.ElapsedTime + Time.DeltaTime : 0;
+			});
+
+			var mouse = input.Mice[0];
+			var wheel = mouse.ScrollWheels[0];
+			DFMouse.IsLeft = mouse.IsButtonPressed(MouseButton.Left);
+			DFMouse.IsRight = mouse.IsButtonPressed(MouseButton.Right);
+			DFMouse.IsMiddle = mouse.IsButtonPressed(MouseButton.Middle);
+			DFMouse.Scroll = (wheel.X, wheel.Y);
+			DFMouse.Position = ((int)mouse.Position.X, (int)mouse.Position.Y);
+		}
+
+		private static void ClearInput()
+		{
+			DFKeyboard.Update(code =>
+			{
+				var key = DFKeyboard.KeyOf(code);
+				key.IsKeyDown = false;
+				key.IsKeyUp = false;
+			});
+
+			DFMouse.IsLeftDown = false;
+			DFMouse.IsLeftUp = false;
+			DFMouse.IsRightDown = false;
+			DFMouse.IsRightUp = false;
+			DFMouse.IsMiddleDown = false;
+			DFMouse.IsMiddleUp = false;
+		}
+
+		private void OnUnload()
 		{
 			Destroy?.Invoke();
 		}
@@ -269,6 +359,12 @@ namespace DotFeather.Internal
 			}
 		}
 
+		private readonly Silk.NET.Windowing.IWindow window;
+
+		private int frameCount;
+		private int prevSecond;
+		private byte[] screenshotBuffer = Array.Empty<byte>();
+
 		public event Action? Start;
 		public event Action? Update;
 		public event Action? Render;
@@ -277,10 +373,5 @@ namespace DotFeather.Internal
 		public event Action? Resize;
 		public event Action? PreUpdate;
 		public event Action? PostUpdate;
-
-		private readonly GameWindow window;
-
-		private int frameCount;
-		private int prevSecond;
 	}
 }

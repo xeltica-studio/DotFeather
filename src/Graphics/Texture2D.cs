@@ -14,7 +14,7 @@ namespace DotFeather
 	/// <summary>
 	/// Wrap a handle of 2D texture.
 	/// </summary>
-	public readonly struct Texture2D : IDisposable
+	public struct Texture2D : IDisposable
 	{
 		/// <summary>
 		/// Get a OpenGL handle of this texture.
@@ -27,6 +27,11 @@ namespace DotFeather
 		public VectorInt Size { get; }
 
 		/// <summary>
+		/// Get whether this texture has been destroyed.
+		/// </summary>
+		public bool IsDestroyed { get; private set; } = false;
+
+		/// <summary>
 		/// Initialize a new instance of  <see cref="Texture2D"/> with the specified handle and size.
 		/// </summary>
 		/// <param name="handle"></param>
@@ -36,7 +41,6 @@ namespace DotFeather
 			Handle = handle;
 			Size = size;
 		}
-
 		/// <summary>
 		/// Load an image file as a texture.
 		/// </summary>
@@ -176,6 +180,7 @@ namespace DotFeather
 		public void Dispose()
 		{
 			DF.GL.DeleteTexture((uint)Handle);
+			IsDestroyed = true;
 		}
 	}
 }

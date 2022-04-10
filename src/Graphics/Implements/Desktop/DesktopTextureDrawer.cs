@@ -70,6 +70,11 @@ namespace DotFeather.Internal
 		/// </summary>
 		public unsafe void Draw(Texture2D texture, Vector location, Vector scale, Color? color = null, float? width = null, float? height = null, float angle = 0)
 		{
+			if (texture.IsDestroyed)
+			{
+				LogHelper.Warn("This texture (Handle ID: " + texture.Handle + ") is destroyed");
+				return;
+			}
 			location = location.ToDeviceCoord();
 			scale = scale.ToDeviceCoord();
 

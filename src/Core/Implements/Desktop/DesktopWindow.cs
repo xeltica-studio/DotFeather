@@ -24,18 +24,18 @@ namespace DotFeather.Internal
 
 		public VectorInt Size
 		{
-			get => (VectorInt)((Vector)ActualSize / (FollowsDpi ? PixelRatio : 1));
+			get => (window.Size.X, window.Size.Y);
 			set
 			{
-				ActualSize = (VectorInt)((Vector)value * (FollowsDpi ? PixelRatio : 1));
+				window.Size = new(value.X, value.Y);
 				screenshotBuffer = new byte[ActualWidth * ActualHeight * 4];
 			}
 		}
 
 		public VectorInt ActualSize
 		{
-			get => (window.Size.X, window.Size.Y);
-			set => window.Size = new Vector2D<int>(value.X, value.Y);
+			get => (window.FramebufferSize.X, window.FramebufferSize.Y);
+			set { /* NOOP */ }
 		}
 
 		public int X
@@ -110,14 +110,7 @@ namespace DotFeather.Internal
 		// todo ゲーム起動前に変更可能にする
 		public int RefreshRate => 60;
 
-		public float PixelRatio
-		{
-			get
-			{
-				Debug.NotImpl("DesktopWindow.PixelRatio get");
-				return 1;
-			}
-		}
+		public float PixelRatio => window.FramebufferSize.X / window.Size.X;
 
 		public SDColor BackgroundColor { get; set; }
 

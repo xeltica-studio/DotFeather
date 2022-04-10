@@ -40,6 +40,16 @@ Basically I compliant [C# Coding Conventions (Official)](https://docs.microsoft.
 + Define an entrypoint method in a dedicated `static` class.
 + Make string-variables non-null, and initialize them with empty string.
 
+## Design Guideline
+
+### DO NOT make public API dependent on external libraries such as Silk.NET
+
+DotFeather API is designed to be backend (such as Silk.NET) independent.
+
+Do not use the type in the backend for arguments or return value of the newly added API.
+
+However, it is allowed to be used internally or for private or internal members.
+
 ## To deploy
 
 This project is always deployed by @Xeltica, a main developer. So this note is for forked projects' maintainers.

@@ -188,7 +188,6 @@ namespace DotFeather.Internal
 
 		private void OnLoad()
 		{
-			Debug.FixMe("DesktopWindow.Load");
 			var gl = DF.GL = GL.GetApi(window);
 			screenshotBuffer = new byte[ActualWidth * ActualHeight * 4];
 

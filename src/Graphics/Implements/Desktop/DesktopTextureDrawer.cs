@@ -12,14 +12,14 @@ namespace DotFeather.Internal
 	{
         private static readonly string VertexShaderSource = @"
 			#version 330 core
-			layout (location = 0) in vec3 vPos;
+			layout (location = 0) in vec2 vPos;
 			layout (location = 1) in vec2 vUv;
 
 			out vec2 fUv;
 
 			void main()
 			{
-				gl_Position = vec4(vPos, 1.0);
+				gl_Position = vec4(vPos.x, vPos.y, 0.0, 1.0);
 				fUv = vUv;
 			}
         ";
@@ -111,12 +111,12 @@ namespace DotFeather.Internal
 			gl.BindBuffer(GLEnum.ArrayBuffer, vbo);
             var vertices = stackalloc float[]
 			{
-				x0, y0, 0, 1f, 0f,
-				x1, y1, 0, 1f, 1f,
-				x2, y2, 0, 0f, 1f,
-				x3, y3, 0, 0f, 0f,
+				x0, y0, 1f, 0f,
+				x1, y1, 1f, 1f,
+				x2, y2, 0f, 1f,
+				x3, y3, 0f, 0f,
 			};
-			uint verticesSize = 5 * 4;
+			uint verticesSize = 4 * 4;
 			gl.BufferData(GLEnum.ArrayBuffer, verticesSize * sizeof(float), vertices, GLEnum.StaticDraw);
 
 			// --- EBO ---
@@ -133,9 +133,9 @@ namespace DotFeather.Internal
 			// --- レンダリング ---
 			gl.Enable(GLEnum.Blend);
 			gl.BlendFunc(GLEnum.SrcAlpha, GLEnum.OneMinusSrcAlpha);
-			gl.VertexAttribPointer(0, 3, GLEnum.Float, false, 5 * sizeof(float), (void*)(0 * sizeof(float)));
+			gl.VertexAttribPointer(0, 2, GLEnum.Float, false, 4 * sizeof(float), (void*)(0 * sizeof(float)));
 			gl.EnableVertexAttribArray(0);
-			gl.VertexAttribPointer(1, 2, GLEnum.Float, false, 5 * sizeof(float), (void*)(3 * sizeof(float)));
+			gl.VertexAttribPointer(1, 2, GLEnum.Float, false, 4 * sizeof(float), (void*)(2 * sizeof(float)));
 			gl.EnableVertexAttribArray(1);
 			gl.BindVertexArray(vao);
 

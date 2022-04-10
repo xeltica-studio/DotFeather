@@ -257,7 +257,6 @@ namespace DotFeather.Internal
 
 		private void OnRenderFrame(double delta)
 		{
-			LogHelper.FixMe("DesktopWindow.OnRenderFrame");
 			// 画面の初期化
 			DF.GL.ClearColor(BackgroundColor);
 			DF.GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);

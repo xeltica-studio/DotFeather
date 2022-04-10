@@ -97,7 +97,26 @@ namespace DotFeather.Internal
 				var uTintColor = gl.GetUniformLocation(shader, "uTintColor");
 				gl.Uniform4(uTintColor, new Vector4(color.R / 255f, color.G / 255f, color.B / 255f, color.A / 255f));
 
-				gl.DrawArrays(ToGLType(type), 0, (uint)vertices.Length);
+				if (type == ShapeType.Rect)
+				{
+					// --- EBO ---
+					var ebo = gl.GenBuffer();
+					gl.BindBuffer(GLEnum.ElementArrayBuffer, ebo);
+					var indices = stackalloc uint[]
+					{
+						0, 1, 2,
+						0, 2, 3,
+					};
+					uint indicesSize = 3 * 2;
+					gl.BufferData(GLEnum.ElementArrayBuffer, indicesSize * sizeof(uint), indices, GLEnum.StaticDraw);
+					gl.DrawElements(GLEnum.Triangles, indicesSize, GLEnum.UnsignedInt, null);
+
+					gl.DeleteBuffer(ebo);
+				}
+				else
+				{
+					gl.DrawArrays(ToGLType(type), 0, (uint)vertices.Length);
+				}
 
 				// --- 不要なデータを開放 ---
 				gl.DeleteBuffer(vbo);
@@ -142,9 +161,9 @@ namespace DotFeather.Internal
 			{
 				ShapeType.Pixel => PrimitiveType.Points,
 				ShapeType.Line => PrimitiveType.Lines,
-				ShapeType.Rect => PrimitiveType.Quads,
+				ShapeType.Rect => PrimitiveType.TriangleStrip,
 				ShapeType.Triangle => PrimitiveType.Triangles,
-				ShapeType.Polygon => PrimitiveType.Triangles,
+				ShapeType.Polygon => PrimitiveType.TriangleStrip,
 				_ => throw new ArgumentException(null, nameof(type)),
 			};
 		}

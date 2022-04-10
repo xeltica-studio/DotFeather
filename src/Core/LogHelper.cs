@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace DotFeather
+namespace DotFeather.Internal
 {
-	static class Debug
+	static class LogHelper
 	{
 		public static void NotImpl(string context)
 		{
@@ -16,23 +16,22 @@ namespace DotFeather
 
 		public static void Bug(string context, string desc = "")
 		{
-			Log($"FixMe: {context} {desc}");
+			Log($"Bug: {context} {desc}");
+		}
+
+		public static void Warn(string text)
+		{
+			Log($"Warn: {text}");
 		}
 
 		public static void Info(string log)
 		{
-			if (Logs.Contains(log)) return;
 			System.Console.WriteLine($"Info: {log}");
-			Logs.Add(log);
 		}
 
 		public static void Log(string log)
 		{
-			if (Logs.Contains(log)) return;
 			System.Console.Error.WriteLine(log);
-			Logs.Add(log);
 		}
-
-		private readonly static HashSet<string> Logs = new();
 	}
 }

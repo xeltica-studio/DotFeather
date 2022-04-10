@@ -41,7 +41,7 @@ namespace DotFeather
 		public IEnumerable<(short left, short right)> EnumerateSamples(int? loopStart)
 		{
 			var buf = new float[2];
-			reader.DecodedPosition = 0;
+			reader.SamplePosition = 0;
 			static short ToShort(float data) => (short)(data * short.MaxValue);
 			do
 			{
@@ -51,7 +51,7 @@ namespace DotFeather
 				}
 				if (loopStart is int a)
 				{
-					reader.DecodedPosition = a;
+					reader.SamplePosition = a;
 				}
 			} while (loopStart is int);
 		}

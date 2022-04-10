@@ -7,7 +7,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get an array of textures to animate.
 		/// </summary>
-		public Texture2D[] Textures { get; set; } = new Texture2D[0];
+		public Texture2D[] Textures { get; set; } = Array.Empty<Texture2D>();
 
 		/// <summary>
 		/// Get whether this sprite is animating.

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -91,6 +92,6 @@ namespace DotFeather
 		private static readonly Stream defaultFont =
 			typeof(DFFont).Assembly.GetManifestResourceStream(
 				typeof(DFFont).Assembly.GetManifestResourceNames().First(n => n.Contains("font.ttf"))
-			);
+			) ?? throw new InvalidOperationException("Internal Error of DotFeather: font.ttf does not exist in the manifest resource.");
 	}
 }

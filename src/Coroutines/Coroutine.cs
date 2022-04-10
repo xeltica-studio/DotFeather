@@ -18,7 +18,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get the callback to execute after exiting.
 		/// </summary>
-		public Action<object>? ThenAction { get; internal set; }
+		public Action<object?>? ThenAction { get; internal set; }
 
 		/// <summary>
 		/// Get the callback that executes when an unhandled exception occurs.
@@ -45,7 +45,7 @@ namespace DotFeather
 		/// </summary>
 		/// <param name="callback">Callback. The argument is the last <c>yield return</c>ed value of the coroutine.</param>
 		/// <returns></returns>
-		public Coroutine Then(Action<object> callback)
+		public Coroutine Then(Action<object?> callback)
 		{
 			ThenAction = callback;
 			return this;

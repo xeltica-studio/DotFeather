@@ -74,7 +74,7 @@ namespace DotFeather
 			}
 		}
 
-		private static YieldInstruction ToYieldInstruction(object obj)
+		private static YieldInstruction ToYieldInstruction(object? obj)
 		{
 			return obj switch
 			{

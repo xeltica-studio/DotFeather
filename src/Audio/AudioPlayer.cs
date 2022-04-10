@@ -235,7 +235,7 @@ namespace DotFeather
 						if (TimeInSamples > LengthInSamples) TimeInSamples = LengthInSamples;
 						Time = (int)(TimeInSamples / (float)source.SampleRate * 1000);
 						prevOffset = offset;
-						await Task.Delay(1).ConfigureAwait(false);
+						await Task.Delay(1, ct).ConfigureAwait(false);
 					}
 					while (processedCount == 0 && !ct.IsCancellationRequested);
 
@@ -262,7 +262,7 @@ namespace DotFeather
 					}
 					else
 						break;
-					await Task.Delay(10).ConfigureAwait(false);
+					await Task.Delay(10, ct).ConfigureAwait(false);
 				}
 				IsPlaying = false;
 			};

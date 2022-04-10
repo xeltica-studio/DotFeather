@@ -52,7 +52,7 @@ namespace DotFeather
 		public Tile(Texture2D[] animations, double interval)
 		{
 			if (animations.Length < 1)
-				throw new ArgumentException(nameof(animations));
+				throw new ArgumentException(null, nameof(animations));
 			Animations = animations;
 			Interval = interval;
 			Texture = Animations[0];

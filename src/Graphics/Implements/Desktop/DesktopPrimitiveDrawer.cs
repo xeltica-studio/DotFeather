@@ -136,7 +136,7 @@ namespace DotFeather.Internal
 			DF.GL.Disable(EnableCap.Blend);
 		}
 
-		private PrimitiveType ToGLType(ShapeType type)
+		private static PrimitiveType ToGLType(ShapeType type)
 		{
 			return type switch
 			{
@@ -145,7 +145,7 @@ namespace DotFeather.Internal
 				ShapeType.Rect => PrimitiveType.Quads,
 				ShapeType.Triangle => PrimitiveType.Triangles,
 				ShapeType.Polygon => PrimitiveType.Triangles,
-				_ => throw new ArgumentException(),
+				_ => throw new ArgumentException(null, nameof(type)),
 			};
 		}
 		private static GL gl => DF.GL;

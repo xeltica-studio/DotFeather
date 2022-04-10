@@ -72,13 +72,13 @@ namespace DotFeather
 			size = (img.Width, img.Height);
 
 			if (left > img.Width)
-				throw new ArgumentException(nameof(left));
+				throw new ArgumentException(null, nameof(left));
 			if (top > img.Height)
-				throw new ArgumentException(nameof(top));
+				throw new ArgumentException(null, nameof(top));
 			if (right > img.Width - left)
-				throw new ArgumentException(nameof(right));
+				throw new ArgumentException(null, nameof(right));
 			if (bottom > img.Height - top)
-				throw new ArgumentException(nameof(bottom));
+				throw new ArgumentException(null, nameof(bottom));
 
 			var atlas = new[]
 			{

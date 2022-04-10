@@ -258,7 +258,7 @@ namespace DotFeather.Internal
 
 		private void OnRenderFrame(double delta)
 		{
-			Debug.FixMe("DesktopWindow.OnRenderFrame");
+			LogHelper.FixMe("DesktopWindow.OnRenderFrame");
 			// 画面の初期化
 			DF.GL.ClearColor(BackgroundColor);
 			DF.GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
@@ -271,7 +271,7 @@ namespace DotFeather.Internal
 				var path = $"./shot/{TotalFrame:00000000}.png";
 				if (!File.Exists(path))
 				{
-					Debug.FixMe("DesktopWindow.OnRenderFrame", "Capture");
+					LogHelper.FixMe("DesktopWindow.OnRenderFrame", "Capture");
 					DF.GL.Flush();
 					using var bmp = TakeScreenshotAsImage();
 					using var stream = File.OpenWrite(path);

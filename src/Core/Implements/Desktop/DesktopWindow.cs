@@ -65,13 +65,13 @@ namespace DotFeather.Internal
 		public int ActualWidth
 		{
 			get => ActualSize.X;
-			set => ActualSize = (value, ActualHeight);
+			set { /* NOOP */ }
 		}
 
 		public int ActualHeight
 		{
 			get => ActualSize.Y;
-			set => ActualSize = (ActualWidth, value);
+			set { /* NOOP */ }
 		}
 
 		public bool IsVisible
@@ -84,7 +84,8 @@ namespace DotFeather.Internal
 		{
 			get
 			{
-				Debug.NotImpl("DesktopWindow.IsFocused get");
+				// TODO: Silk.NET でウィンドウがフォーカスされているかどうかを取る方法がわからない
+				LogHelper.NotImpl("DesktopWindow.IsFocused get");
 				return true;
 			}
 		}
@@ -103,11 +104,16 @@ namespace DotFeather.Internal
 
 		public bool IsCaptureMode { get; private set; }
 
-		public bool FollowsDpi { get; set; } = true;
+		[Obsolete("will be deleted in 4.0.0")]
+		public bool FollowsDpi
+		{
+			get => true;
+			set { /* NOOP */ }
+		}
 
 		public long TotalFrame { get; private set; }
 
-		// todo ゲーム起動前に変更可能にする
+		// TODO: ゲーム起動前に変更可能にする
 		public int RefreshRate => 60;
 
 		public float PixelRatio => window.FramebufferSize.X / window.Size.X;

@@ -21,7 +21,7 @@ namespace DotFeather
 		/// <summary>
 		/// Get or set device-unit size of this game window.
 		/// </summary>
-		VectorInt ActualSize { get; set; }
+		VectorInt ActualSize { get; [Obsolete("will be deleted in 4.0.0")] set; }
 
 		/// <summary>
 		/// Get or set X-coord location of this game window.
@@ -46,12 +46,12 @@ namespace DotFeather
 		/// <summary>
 		/// Get or set device-unit width of this game window.
 		/// </summary>
-		int ActualWidth { get; set; }
+		int ActualWidth { get; [Obsolete("will be deleted in 4.0.0")] set; }
 
 		/// <summary>
 		/// Get or set device-unit height of this game window.
 		/// </summary>
-		int ActualHeight { get; set; }
+		int ActualHeight { get; [Obsolete("will be deleted in 4.0.0")] set; }
 
 		/// <summary>
 		/// Get or set whether this game window is visible.
@@ -73,9 +73,7 @@ namespace DotFeather
 		/// </summary>
 		bool IsCaptureMode { get; }
 
-		/// <summary>
-		/// Get or set whether this game window supports HiDPI.
-		/// </summary>
+		[Obsolete("will be deleted in 4.0.0")]
 		bool FollowsDpi { get; set; }
 
 		/// <summary>

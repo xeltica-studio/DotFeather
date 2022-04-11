@@ -80,15 +80,7 @@ namespace DotFeather.Internal
 			set => window.IsVisible = value;
 		}
 
-		public bool IsFocused
-		{
-			get
-			{
-				// TODO: Silk.NET でウィンドウがフォーカスされているかどうかを取る方法がわからない
-				LogHelper.NotImpl("DesktopWindow.IsFocused get");
-				return true;
-			}
-		}
+		public bool IsFocused { get; private set; }
 
 		public bool IsFullScreen
 		{
@@ -157,6 +149,8 @@ namespace DotFeather.Internal
 			window.Render += OnRenderFrame;
 			window.Update += OnUpdateFrame;
 			window.Closing += OnUnload;
+
+			window.FocusChanged += v => IsFocused = v;
 		}
 
 		public Texture2D TakeScreenshot()

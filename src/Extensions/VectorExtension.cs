@@ -4,7 +4,7 @@ namespace DotFeather
 {
 	public static class VectorExtension
 	{
-		private static float Dpi => DF.Window.FollowsDpi ? DF.Window.PixelRatio : 1;
+		private static float Dpi => DF.Window.PixelRatio;
 		public static Vector ToDeviceCoord(this Vector v)
 			=> v * Dpi;
 

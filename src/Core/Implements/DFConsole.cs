@@ -27,6 +27,8 @@ namespace DotFeather.Internal
 			FontSize = 16;
 			DF.Window.Start += () => {
 				text = new TextElement("", DFFont.GetDefault(), Color.White);
+				heightCalculator = new TextElement("", DFFont.GetDefault(), Color.White);
+				maxLine = CalculateMaxLine();
 			};
 			DF.Window.Render += () =>
 			{
@@ -69,9 +71,10 @@ namespace DotFeather.Internal
 			var f = text.Font;
 			var w = DF.Window;
 			if (f.Size != FontSize || prevFont != FontPath)
-				text.Font = FontPath == null ? DFFont.GetDefault(FontSize) : new DFFont(FontPath, FontSize);
-
-			var maxLine = Math.Max(0, w.Height - 1) / FontSize;
+			{
+				heightCalculator.Font = text.Font = FontPath == null ? DFFont.GetDefault(FontSize) : new DFFont(FontPath, FontSize);
+				maxLine = CalculateMaxLine();
+			}
 
 			var buf = consoleBuffer.Count > maxLine ? consoleBuffer.Skip(consoleBuffer.Count - maxLine) : consoleBuffer;
 
@@ -80,8 +83,20 @@ namespace DotFeather.Internal
 			prevFont = FontPath;
 		}
 
+		private int CalculateMaxLine()
+		{
+			var l = 0;
+			do {
+				heightCalculator.Text += "A\n";
+				l++;
+			} while (heightCalculator.Height < DF.Window.Height);
+			return l - 1;
+		}
+
 		private TextElement? text;
 		private readonly List<string> consoleBuffer = new();
+		private TextElement heightCalculator;
 		private string? prevFont;
+		private int maxLine;
 	}
 }

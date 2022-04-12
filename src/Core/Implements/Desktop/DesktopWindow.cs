@@ -149,7 +149,6 @@ namespace DotFeather.Internal
 			window.Render += OnRenderFrame;
 			window.Update += OnUpdateFrame;
 			window.Closing += OnUnload;
-
 			window.FocusChanged += v => IsFocused = v;
 		}
 
@@ -203,36 +202,7 @@ namespace DotFeather.Internal
 				DFKeyboard.KeyOf(e.ToDF()).IsKeyUp = true;
 			};
 			var mouse = DF.InputContext.Mice[0];
-			mouse.MouseDown += (_, btn) =>
-			{
-				switch (btn)
-				{
-					case MouseButton.Left:
-						DFMouse.IsLeftDown = true;
-						break;
-					case MouseButton.Right:
-						DFMouse.IsRightDown = true;
-						break;
-					case MouseButton.Middle:
-						DFMouse.IsMiddleDown = true;
-						break;
-				}
-			};
-			mouse.MouseUp += (_, btn) =>
-			{
-				switch (btn)
-				{
-					case MouseButton.Left:
-						DFMouse.IsLeftUp = true;
-						break;
-					case MouseButton.Right:
-						DFMouse.IsRightUp = true;
-						break;
-					case MouseButton.Middle:
-						DFMouse.IsMiddleUp = true;
-						break;
-				}
-			};
+			DFMouse.Init(mouse);
 
 			Start?.Invoke();
 		}
@@ -310,9 +280,6 @@ namespace DotFeather.Internal
 
 			var mouse = input.Mice[0];
 			var wheel = mouse.ScrollWheels[0];
-			DFMouse.IsLeft = mouse.IsButtonPressed(MouseButton.Left);
-			DFMouse.IsRight = mouse.IsButtonPressed(MouseButton.Right);
-			DFMouse.IsMiddle = mouse.IsButtonPressed(MouseButton.Middle);
 			DFMouse.Scroll = (wheel.X, wheel.Y);
 			DFMouse.Position = ((int)mouse.Position.X, (int)mouse.Position.Y);
 		}

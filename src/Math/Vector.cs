@@ -1,4 +1,6 @@
 using System;
+using System.Numerics;
+
 namespace DotFeather
 {
 	/// <summary>
@@ -85,7 +87,7 @@ namespace DotFeather
 		/// <summary>
 		/// Compare this object.
 		/// </summary>
-		public override bool Equals(object obj)
+		public override bool Equals(object? obj)
 		{
 			return obj is Vector vector && Equals(vector);
 		}
@@ -163,6 +165,6 @@ namespace DotFeather
 		/// </summary>
 		public static readonly Vector Down = (0, 1);
 
-
+		public static Vector From(Vector2 vec) => (vec.X, vec.Y);
 	}
 }

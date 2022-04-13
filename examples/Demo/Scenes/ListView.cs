@@ -65,7 +65,7 @@ namespace DotFeather.Demo
 				var (x, y) = Location;
 
 				// 範囲外なら無視
-				if (!Intersects(DFMouse.Position, Location, Location + Size)) return;
+				if (!DFMouse.Position.In(Location, Size)) return;
 
 				var innerY = inner.Location.Y; ;
 
@@ -106,14 +106,6 @@ namespace DotFeather.Demo
 					innerY = 0;
 
 				inner.Location = new Vector(inner.Location.X, innerY);
-			}
-
-			private bool Intersects(Vector point, Vector topLeft, Vector bottomRight)
-			{
-				var (px, py) = point;
-				var (tlx, tly) = topLeft;
-				var (brx, bry) = bottomRight;
-				return tlx <= px && tly <= py && px <= brx && py <= bry;
 			}
 
 			private void UpdateList()

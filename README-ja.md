@@ -5,7 +5,7 @@
 [![Nuget](https://img.shields.io/nuget/vpre/DotFeather.svg?style=for-the-badge)](https://www.nuget.org/packages/DotFeather/)
 [![Discord](https://img.shields.io/discord/572071627991416851?label=discord&style=for-the-badge)](https://discord.gg/e2TCF4m)
 
-DotFeather (ドットフェザー)は、 C# と .NET Standard 2.1 のための、軽量で汎用的な2Dゲームエンジンです。
+DotFeather (ドットフェザー)は、 C# と .NET 6.0 のための、軽量で汎用的な2Dゲームエンジンです。
 
 [README is also available in English!](README.md)
 
@@ -14,7 +14,6 @@ DotFeather (ドットフェザー)は、 C# と .NET Standard 2.1 のための�
 ```shell
 git clone https://github.com/xeltica/DotFeather.git
 cd DotFeather
-nuget restore
 dotnet build
 ```
 
@@ -22,7 +21,6 @@ dotnet build
 
 - Windows
 - macOS
-  - 最新のmacOSで動作しないようです。現在原因を調査しています。
 - GNU/Linux
 
 ## 機能

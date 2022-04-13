@@ -40,22 +40,36 @@ deploy:
   - provider: GitHub
     artifact: /.*\.nupkg/ # upload all NuGet packages to release assets
     draft: false
-    prerelease: false
+    prerelease: true
     description: |
-      # 3.1.0-beta.1
+      # 3.1.0-beta.2
+
+      ## 追加
+      * `DFMouse` にイベントを追加
+        * Click - クリックした
+        * ButtonDown - ボタンを押した
+        * ButtonUp - ボタンを離した
+        * Move - カーソルが移動した
+        * Enter - カーソルがウィンドウに入った
+        * Leave - カーソルがウィンドウから離れた
+      * Vector型に、指定した矩形領域に接しているかを計算する `In()` メソッドを追加
 
       ## 変更
+      * Disposeされたテクスチャを描画しようと試みた場合、警告を発生させるように
+      * `DF.Window.FollowsDpi` プロパティを非推奨に
+      * `DF.Window.ActualSize`, `ActualWidth`, `ActualHeight` プロパティへの設定を非推奨に
 
-      * 本バージョンからバックエンドがOpenTKからSilk.NETに変更されます。
-        * バックエンドの移行に伴い、まだいくつか正常に動作しないコード、既知の不具合があります。
-      * APIに破壊的変更はありません。
-        * ⚠ DotFeatherだけでなくOpenTKのAPIも併用していた場合、ソースコード互換性は失われます。
+      ## 3.1.0-beta.1 からの改善・修正された不具合
+      * 高解像度ディスプレイでの挙動を改善
+      * Graphic: `ShapeType.Rect` を描画できない問題を修正
+      * `DF.Window.IsFocused` が機能していない問題を修正
+
+      ## 3.0.0 から修正された不具合
+      * コンソールが見切れる不具合を修正
 
       ## 既知の不具合
-
       * Texture: 特定の状況で大量のテクスチャを読み込んだ際に、途中でテクスチャを正常に読み込めなくなる
       * Graphic: ShapeType.Polygon を描画できない
-      * Graphic: ShapeType.Rect を描画できない
       * Audio: 停止にラグがある
       * Input: macOSで日本語入力をすると、入力文字列よりも前に改行が挿入される
 

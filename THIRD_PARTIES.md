@@ -2,11 +2,11 @@
 
 DotFeather uses third-party software. They are released under different licenses.
 
-## OpenTK.NetStandard
+## Silk.NET
 
-OpenTK.NetStandard is a DotFeather's core dependency.
+Silk.NET is a DotFeather's core dependency.
 
-See license: https://github.com/Ryujinx/Opentk/blob/master/License.txt
+See license: https://github.com/dotnet/Silk.NET/blob/main/LICENSE.md
 
 ## SixLabors.ImageSharp
 

@@ -69,11 +69,9 @@ namespace DotFeather
 
 		internal static void Init(IMouse mouse)
 		{
+			mouse.DoubleClickTime = 0;
 			mouse.Click += (_, btn, pos) => {
-				Click?.Invoke(new DFMouseClickEventArgs(GetButtonId(btn), (VectorInt)Vector.From(pos)));
-			};
-			mouse.DoubleClick += (_, btn, pos) => {
-				DoubleClick?.Invoke(new DFMouseClickEventArgs(GetButtonId(btn), (VectorInt)Vector.From(pos)));
+				Click?.Invoke(new DFMouseButtonEventArgs(GetButtonId(btn), (VectorInt)Vector.From(pos)));
 			};
 			mouse.MouseDown += (_, btn) =>
 			{
@@ -89,7 +87,7 @@ namespace DotFeather
 						IsMiddleDown = true;
 						break;
 				}
-				ButtonDown?.Invoke(new DFMouseClickEventArgs(GetButtonId(btn), VectorInt.From(mouse.Position)));
+				ButtonDown?.Invoke(new DFMouseButtonEventArgs(GetButtonId(btn), VectorInt.From(mouse.Position)));
 			};
 			mouse.MouseUp += (_, btn) =>
 			{
@@ -105,7 +103,7 @@ namespace DotFeather
 						IsMiddleUp = true;
 						break;
 				}
-				ButtonUp?.Invoke(new DFMouseClickEventArgs(GetButtonId(btn), VectorInt.From(mouse.Position)));
+				ButtonUp?.Invoke(new DFMouseButtonEventArgs(GetButtonId(btn), VectorInt.From(mouse.Position)));
 			};
 			mouse.MouseMove += (_, pos) => {
 				Move?.Invoke(new DFMouseEventArgs((VectorInt)Vector.From(pos)));
@@ -134,10 +132,9 @@ namespace DotFeather
 
 		private static bool IsEnter = false;
 
-		public static event Action<DFMouseClickEventArgs>? Click;
-		public static event Action<DFMouseClickEventArgs>? DoubleClick;
-		public static event Action<DFMouseClickEventArgs>? ButtonUp;
-		public static event Action<DFMouseClickEventArgs>? ButtonDown;
+		public static event Action<DFMouseButtonEventArgs>? Click;
+		public static event Action<DFMouseButtonEventArgs>? ButtonUp;
+		public static event Action<DFMouseButtonEventArgs>? ButtonDown;
 		public static event Action<DFMouseEventArgs>? Move;
 		public static event Action? Enter;
 		public static event Action? Leave;

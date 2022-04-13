@@ -9,34 +9,12 @@ namespace DotFeather.Demo
 	{
 		public override void OnStart(Dictionary<string, object> args)
 		{
-			DFMouse.Click += e =>
-			{
-				DF.Console.Print($"Click pos={e.Position} id={e.ButtonId}");
-			};
-			DFMouse.DoubleClick += e =>
-			{
-				DF.Console.Print($"DoubleClick pos={e.Position} id={e.ButtonId}");
-			};
-			DFMouse.ButtonDown += e =>
-			{
-				DF.Console.Print($"ButtonDown pos={e.Position} id={e.ButtonId}");
-			};
-			DFMouse.ButtonUp += e =>
-			{
-				DF.Console.Print($"ButtonUp pos={e.Position} id={e.ButtonId}");
-			};
-			DFMouse.Move += e =>
-			{
-				DF.Console.Print($"Move pos={e.Position}");
-			};
-			DFMouse.Enter += () =>
-			{
-				DF.Console.Print("Enter");
-			};
-			DFMouse.Leave += () =>
-			{
-				DF.Console.Print("Leave");
-			};
+			DFMouse.Click += OnClick;
+			DFMouse.ButtonDown += OnButtonDown;
+			DFMouse.ButtonUp += OnButtonUp;
+			DFMouse.Move += OnMove;
+			DFMouse.Enter += OnEnter;
+			DFMouse.Leave += OnLeave;
 		}
 
 		public override void OnUpdate()
@@ -46,5 +24,22 @@ namespace DotFeather.Demo
 				DF.Router.ChangeScene<LauncherScene>();
 			}
 		}
+
+		public override void OnDestroy()
+		{
+			DFMouse.Click -= OnClick;
+			DFMouse.ButtonDown -= OnButtonDown;
+			DFMouse.ButtonUp -= OnButtonUp;
+			DFMouse.Move -= OnMove;
+			DFMouse.Enter -= OnEnter;
+			DFMouse.Leave -= OnLeave;
+		}
+
+		private void OnClick(DFMouseButtonEventArgs e) => DF.Console.Print($"Click pos={e.Position} id={e.ButtonId}");
+		private void OnButtonDown(DFMouseButtonEventArgs e) => DF.Console.Print($"ButtonDown pos={e.Position} id={e.ButtonId}");
+		private void OnButtonUp(DFMouseButtonEventArgs e) => DF.Console.Print($"ButtonUp pos={e.Position} id={e.ButtonId}");
+		private void OnMove(DFMouseEventArgs e) => DF.Console.Print($"Move pos={e.Position}");
+		private void OnEnter() => DF.Console.Print("Enter");
+		private void OnLeave() => DF.Console.Print("Leave");
 	}
 }

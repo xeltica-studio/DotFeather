@@ -83,5 +83,19 @@ namespace DotFeather
 		/// </summary>
 		public Rect(float left, float top, float width, float height)
 			: this(new Vector(left, top), new Vector(width, height)) { }
+
+		public void Deconstruct(out float x, out float y, out float width, out float height)
+		{
+			x = Left;
+			y = Top;
+			width = Width;
+			height = Height;
+		}
+
+		public void Deconstruct(out Vector location, out Vector size)
+		{
+			location = Location;
+			size = Size;
+		}
 	}
 }

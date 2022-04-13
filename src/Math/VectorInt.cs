@@ -66,7 +66,6 @@ namespace DotFeather
 		/// <returns>Radian angle between 2 vectors.</returns>
 		public static float Angle(VectorInt from, VectorInt to) => MathF.Atan2(to.Y - from.Y, to.X - from.X);
 
-
 		/// <summary>
 		/// Get the distance between 2 vectors.
 		/// </summary>
@@ -114,7 +113,6 @@ namespace DotFeather
 		/// </summary>
 		public float Angle() => MathF.Atan2(Y, X);
 
-
 		/// <summary>
 		/// Get the direction of the specified vector relative to this vector.
 		/// </summary>
@@ -124,6 +122,24 @@ namespace DotFeather
 		/// Get the distance between two vectors.
 		/// </summary>
 		public float Distance(VectorInt to) => Distance(this, to);
+
+		/// <summary>
+		/// Check if this vector is in the specified range.
+		/// </summary>
+		public bool In(Rect rect)
+		{
+			return In(rect.Location, rect.Size);
+		}
+
+		/// <summary>
+		/// Check if this vector is in the specified range.
+		/// </summary>
+		public bool In(Vector location, Vector size)
+		{
+			var (rl, rt) = location;
+			var (rr, rb) = (rl + size.X, rt + size.Y);
+			return rl <= X && rt <= Y && X <= rr && Y <= rb;
+		}
 
 		/// <summary>
 		/// Deconstructs x and y.

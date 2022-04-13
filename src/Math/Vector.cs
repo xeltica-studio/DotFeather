@@ -126,6 +126,24 @@ namespace DotFeather
 		public float Distance(Vector to) => Distance(this, to);
 
 		/// <summary>
+		/// Check if this vector is in the specified range.
+		/// </summary>
+		public bool In(Rect rect)
+		{
+			return In(rect.Location, rect.Size);
+		}
+
+		/// <summary>
+		/// Check if this vector is in the specified range.
+		/// </summary>
+		public bool In(Vector location, Vector size)
+		{
+			var (rl, rt) = location;
+			var (rr, rb) = (rl + size.X, rt + size.Y);
+			return rl <= X && rt <= Y && X <= rr && Y <= rb;
+		}
+
+		/// <summary>
 		/// Deconstructs x and y.
 		/// </summary>
 		public void Deconstruct(out float x, out float y) => (x, y) = (X, Y);

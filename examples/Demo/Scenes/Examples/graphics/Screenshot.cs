@@ -72,17 +72,10 @@ namespace DotFeather.Demo
 						canvas.Rect(v1, v2, random.NextColor(), random.Next(4), random.NextColor());
 						break;
 					case 2:
-						canvas.Ellipse(v1, v2, random.NextColor(), random.Next(4), random.NextColor());
-						break;
-					case 3:
 						canvas.Pixel(v1, random.NextColor());
 						break;
-					case 4:
+					case 3:
 						canvas.Triangle(v1, v2, v3, random.NextColor(), random.Next(4), random.NextColor());
-						break;
-					case 5:
-						var v = Enumerable.Repeat(5, 15).Select(_ => Rnd()).ToArray();
-						canvas.Polygon(random.NextColor(), random.Next(4), random.NextColor(), v);
 						break;
 				}
 				if (i % 8 == 0)

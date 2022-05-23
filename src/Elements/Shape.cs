@@ -49,9 +49,11 @@ namespace DotFeather
 		public static Shape CreateTriangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color, int lineWidth = 0, Color? lineColor = null)
 			=> CreateTriangle((x1, y1), (x2, y2), (x3, y3), color, lineWidth, lineColor);
 
+		[Obsolete("will be deleted in 4.0.0")]
 		public static Shape CreateEllipse(VectorInt v1, VectorInt v2, Color color, int lineWidth = 0, Color? lineColor = null)
 			=> CreateEllipse(v1.X, v1.Y, v2.X, v2.Y, color, lineWidth, lineColor);
 
+		[Obsolete("will be deleted in 4.0.0")]
 		public static Shape CreateEllipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = null)
 		{
 			if (x1 > x2) Swap(ref x1, ref x2);
@@ -71,6 +73,7 @@ namespace DotFeather
 			return new Shape(color, ShapeType.Polygon, lineWidth, lineColor, vertices);
 		}
 
+		[Obsolete("will be deleted in 4.0.0")]
 		public static Shape CreatePolygon(Color color, int lineWidth = 0, Color? lineColor = null, params VectorInt[] vertices)
 			=> new(color, ShapeType.Polygon, lineWidth, lineColor, vertices);
 

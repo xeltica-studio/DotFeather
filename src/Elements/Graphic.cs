@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 
@@ -47,15 +48,18 @@ namespace DotFeather
 		public Graphic Triangle(int x1, int y1, int x2, int y2, int x3, int y3, Color color, int lineWidth = 0, Color? lineColor = null)
 			=> Triangle((x1, y1), (x2, y2), (x3, y3), color, lineWidth, lineColor);
 
+		[Obsolete("will be deleted in 4.0.0")]
 		public Graphic Ellipse(VectorInt v1, VectorInt v2, Color color, int lineWidth = 0, Color? lineColor = null)
 			=> Ellipse(v1.X, v1.Y, v2.X, v2.Y, color, lineWidth, lineColor);
 
+		[Obsolete("will be deleted in 4.0.0")]
 		public Graphic Ellipse(int x1, int y1, int x2, int y2, Color color, int lineWidth = 0, Color? lineColor = null)
 		{
 			Add(Shape.CreateEllipse(x1, y1, x2, y2, color, lineWidth, lineColor));
 			return this;
 		}
 
+		[Obsolete("will be deleted in 4.0.0")]
 		public Graphic Polygon(Color color, int lineWidth = 0, Color? lineColor = null, params VectorInt[] vertices)
 		{
 			Add(Shape.CreatePolygon(color, lineWidth, lineColor, vertices));

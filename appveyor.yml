@@ -40,9 +40,11 @@ deploy:
   - provider: GitHub
     artifact: /.*\.nupkg/ # upload all NuGet packages to release assets
     draft: false
-    prerelease: true
+    prerelease: false
     description: |
-      # 3.1.0-beta.2
+      # 3.1.0
+
+      本バージョンから .NET 6 が必須となります。
 
       ## 追加
       * `DFMouse` にイベントを追加
@@ -55,25 +57,24 @@ deploy:
       * Vector型に、指定した矩形領域に接しているかを計算する `In()` メソッドを追加
 
       ## 変更
+      * **バックエンドをOpenTK/OpenGL 1ベースからSilk.NET/OpenGL 3に変更**
+        * ⚠ DotFeatherだけでなくOpenTKのAPIも併用していた場合、ソースコード互換性は失われます。
       * Disposeされたテクスチャを描画しようと試みた場合、警告を発生させるように
       * `DF.Window.FollowsDpi` プロパティを非推奨に
       * `DF.Window.ActualSize`, `ActualWidth`, `ActualHeight` プロパティへの設定を非推奨に
+      * `Ellipse` および `Polygon` の描画（Graphic, Shape) を非推奨に
+        * 既に動作しなくなっています
 
-      ## 3.1.0-beta.1 からの改善・修正された不具合
-      * 高解像度ディスプレイでの挙動を改善
-      * Graphic: `ShapeType.Rect` を描画できない問題を修正
-      * `DF.Window.IsFocused` が機能していない問題を修正
-
-      ## 3.0.0 から修正された不具合
+      ## 不具合修正
+      * Windows 11およびmacOS Montereyで動作しない問題を修正
       * コンソールが見切れる不具合を修正
 
       ## 既知の不具合
       * Texture: 特定の状況で大量のテクスチャを読み込んだ際に、途中でテクスチャを正常に読み込めなくなる
-      * Graphic: ShapeType.Polygon を描画できない
       * Audio: 停止にラグがある
       * Input: macOSで日本語入力をすると、入力文字列よりも前に改行が挿入される
 
     auth_token:
-      secure: FUlGF4CyRZNM6jaGz2wlmsOIwZt4av2Cxn4lHbi5wU5lim3FixH9ZIhLGDRZftOx
+      secure: Cl90a4N9L02nmN2e45TxbRCOGAPa1SnO4A0IF6StuIZvUGz4gFvP+5TlPU70JlPp
     on:
       APPVEYOR_REPO_TAG: true # deploy on tag push only

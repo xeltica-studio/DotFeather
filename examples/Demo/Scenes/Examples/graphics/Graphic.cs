@@ -30,7 +30,7 @@ namespace DotFeather.Demo
 			if (DFKeyboard.Down) canvas.Scale -= Vector.One * Time.DeltaTime;
 			if (DFKeyboard.C.IsKeyDown)
 			{
-				mode = (mode + 1) % 6;
+				mode = (mode + 1) % 4;
 			}
 			canvas.Location += DFMouse.Scroll * (-1, 1);
 			if (DFMouse.IsLeftDown)
@@ -47,17 +47,10 @@ namespace DotFeather.Demo
 						canvas.Rect(v1, v2, random.NextColor(), lineWidth, random.NextColor());
 						break;
 					case 2:
-						canvas.Ellipse(v1, v2, random.NextColor(), lineWidth, random.NextColor());
-						break;
-					case 3:
 						canvas.Pixel(v1, random.NextColor());
 						break;
-					case 4:
+					case 3:
 						canvas.Triangle(v1, v2, v3, random.NextColor(), lineWidth, random.NextColor());
-						break;
-					case 5:
-						var v = Enumerable.Repeat(5, 15).Select(_ => random.NextVectorInt(DF.Window.Width, DF.Window.Height)).ToArray();
-						canvas.Polygon(random.NextColor(), lineWidth, random.NextColor(), v);
 						break;
 				}
 			}

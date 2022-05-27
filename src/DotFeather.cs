@@ -49,6 +49,18 @@ namespace DotFeather
 		}
 
 		/// <summary>
+		/// Open and run DotFeather Window with the specified Scene.
+		/// </summary>
+		public static int Run<T>() where T : Scene
+		{
+			Window.Start += () => {
+				Router.ChangeScene<T>();
+			};
+			Window.Run();
+			return statusCode;
+		}
+
+		/// <summary>
 		/// Close the window and exit this program.
 		/// </summary>
 		/// <param name="status">A status code. It will be a result of a <see cref="Run"/>() method.</param>

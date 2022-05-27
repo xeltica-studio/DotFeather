@@ -8,6 +8,7 @@ namespace DotFeather.Demo
 	{
 		public override void OnStart(Dictionary<string, object> args)
 		{
+			DF.Window.Mode = WindowMode.Resizable;
 			BackgroundColor = Color.FromArgb(255, 32, 32, 32);
 			TextElement titleText;
 
